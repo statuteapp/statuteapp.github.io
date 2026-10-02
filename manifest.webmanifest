@@ -1,0 +1,17 @@
+{
+  "name": "Statute — what the law asks of you, from when",
+  "short_name": "Statute",
+  "description": "UK legislation, council notices and public data, matched to your situations on your own device. England first.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0b0c0c",
+  "lang": "en-GB",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["government", "news", "education"]
+}

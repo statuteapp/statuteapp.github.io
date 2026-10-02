@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Statute feed",
+  "description": "One public JSON file every source normalises into. The phone does all matching; nothing about the reader is ever in this file.",
+  "type": "object",
+  "required": ["generated_at", "scope", "items"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "scope": { "type": "string", "enum": ["England"] },
+    "sources": { "type": "array", "items": { "type": "object", "properties": { "name": {"type":"string"}, "url": {"type":"string"}, "licence": {"type":"string"}, "fetched_at": {"type":"string"}, "ok": {"type":"boolean"} } } },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "level", "status", "date", "extent", "title", "sum", "tags", "src"],
+        "properties": {
+          "id": { "type": "string", "description": "Stable id: source prefix + identifier, e.g. leg:uksi/2026/1012, bill:3879, govuk:/government/news/..." },
+          "kind": { "type": "string", "enum": ["law", "guidance", "alert", "rates", "consult", "update", "record"] },
+          "level": { "type": "string", "enum": ["local", "county", "nation", "uk"] },
+          "status": { "type": "string", "enum": ["past", "now", "coming", "proposed"] },
+          "date": { "type": "string", "description": "The date that matters: commencement for law, closing date for consultations, publication otherwise. YYYY-MM-DD" },
+          "extent": { "type": "string", "description": "E, E+W, GB, UK, or a council name for local items" },
+          "council": { "type": "string" },
+          "title": { "type": "string" },
+          "sum": { "type": "string", "maxLength": 240 },
+          "tags": { "type": "array", "items": { "type": "string", "pattern": "^[0-9]{1,2}\\.[0-9]{1,2}$" }, "description": "Topic codes from the 55-category scheme. First is primary." },
+          "tiers": { "type": "object", "additionalProperties": { "type": "string", "enum": ["must", "affects", "notice"] } },
+          "spine": { "type": "object", "properties": { "adult": {"type":"string"}, "kid": {"type":"string"} } },
+          "foryou": { "type": "object", "additionalProperties": { "type": "string" } },
+          "src": { "type": "string" },
+          "link": { "type": "string", "format": "uri" },
+          "ribs": { "type": "array" }, "timeline": { "type": "array" }, "tables": { "type": "array" },
+          "lat": { "type": "number" }, "lng": { "type": "number" },
+          "sample": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
