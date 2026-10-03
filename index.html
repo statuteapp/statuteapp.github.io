@@ -513,8 +513,13 @@ const ABBR={
 const ABBR_RE=new RegExp("(^|[^A-Za-z0-9.])("+Object.keys(ABBR).filter(k=>!/^[A-Z]{1,2}$|^E\+W$|^GB$|^UK$/.test(k)).map(k=>k.replace(/[.+]/g,"\\$&")).sort((a,b)=>b.length-a.length).join("|")+")(?=$|[^A-Za-z0-9])","g");
 function abbrHTML(text){return esc(text).replace(ABBR_RE,(m,pre,k)=>`${pre}<abbr class="ab" data-ab="${esc(k)}" title="${esc(ABBR[k][0])}">${esc(k)}</abbr>`);}
 function bindAbbr(root){root.querySelectorAll("abbr.ab").forEach(a=>a.onclick=e=>{e.preventDefault();e.stopPropagation();renderLegend(a.dataset.ab);});}
+let legendReturn=null;
 function renderLegend(focus){
   const s=document.getElementById("s-detail");
+  const fromArticle=s.classList.contains("active")&&cur&&location.hash.startsWith("#item/");
+  legendReturn=fromArticle
+    ?{type:"item",id:cur.id,scrollY:window.scrollY,backCtx:detailBack}
+    :{type:"tab",tab:prevTab,scrollY:window.scrollY};
   s.dataset.detailContext="";
   s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button></div><h1>Legend.</h1><p class="lede">Every label, code and abbreviation the app uses, in one place. Tap any abbreviation anywhere in the app to land here.</p>
   <h2>What an item is</h2><div class="lgrid">${Object.entries(KINDS).map(([k,v])=>`<div class="lg"><span class="pill kind ${k}">${KIND_ICON[k]} ${v.l}</span><span>${esc(v.d)}</span></div>`).join("")}</div>
@@ -522,7 +527,12 @@ function renderLegend(focus){
   <h2>Where it is in time</h2><div class="lgrid"><div class="lg"><span class="pill inforce">In force</span><span>Law now.</span></div><div class="lg"><span class="pill coming">Coming</span><span>Law with a start date.</span></div><div class="lg"><span class="pill proposed">Proposed</span><span>A bill or consultation. Not law.</span></div><div class="lg"><span class="pill notice">Earlier</span><span>Already happened.</span></div></div>
   <h2>Who it affects</h2><div class="lgrid">${Object.entries(WHO).map(([k,v])=>`<div class="lg"><span class="pill who">${v.i} ${v.l}</span><span>${esc(v.d)}</span></div>`).join("")}</div>
   <h2>Abbreviations</h2><div class="lgrid">${Object.entries(ABBR).map(([k,v])=>`<div class="lg" id="ab-${esc(k).replace(/[^A-Za-z0-9]/g,"_")}"><b>${esc(k)}</b><span><b>${esc(v[0])}.</b> ${esc(v[1])}</span></div>`).join("")}</div>`;
-  s.querySelector("#back").onclick=()=>show(prevTab);show("detail");history.replaceState(null,"","#legend");
+  s.querySelector("#back").onclick=()=>{
+    const b=legendReturn;legendReturn=null;
+    if(b&&b.type==="item"){renderDetail(b.id,b.backCtx);requestAnimationFrame(()=>window.scrollTo(0,b.scrollY||0));return;}
+    if(b&&b.type==="tab"){show(b.tab||prevTab);requestAnimationFrame(()=>window.scrollTo(0,b.scrollY||0));return;}
+    show(prevTab);
+  };show("detail");history.replaceState(null,"","#legend");
   if(focus){const el=s.querySelector("#ab-"+focus.replace(/[^A-Za-z0-9]/g,"_"));if(el){el.classList.add("hi");setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),50);}}else window.scrollTo(0,0);
 }
 // Who an item lands on. Derived from tiers/level unless the item says.
@@ -2239,7 +2249,7 @@ function startLoL(){
   ask();
 }
 // award unlock on first read
-const _rd=renderDetail;renderDetail=function(id){_rd(id);badge("first");};
+const _rd=renderDetail;renderDetail=function(id,backCtx){_rd(id,backCtx);badge("first");};
 
 // Item IDs were malformed in older feeds when the legislation feed used HTTP.
 function migrateLegacyLegislationReferences(feedItems){
