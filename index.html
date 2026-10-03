@@ -1580,21 +1580,22 @@ function renderHorizon(){
 
 // ---------- Calendar ----------
 let calMonth=new Date(TODAY.getFullYear(),TODAY.getMonth(),1),calSel=null,horizonView="list";
-const KIND_COL={meeting:"var(--ink)",closes:"var(--purple)",commence:"var(--green)",term:"var(--blue)",hol:"var(--amber)",prep:"var(--mist)"};
+const KIND_COL={police:"var(--blue)",parliament:"var(--slate)",meeting:"var(--ink)",closes:"var(--purple)",commence:"var(--green)",term:"var(--blue)",hol:"var(--amber)",prep:"var(--mist)"};
 function followed(){profile.follow=profile.follow||[];return profile.follow;}
 function allEvents(){
   const out=[];
   EVENTS.forEach(e=>{if(e.council===profile.council||nbMode(e.council)==="full")out.push(Object.assign({},e));});
   ITEMS.forEach(it=>{if(!tierFor(it))return;if(it.level==="local"&&it.council&&it.council!==profile.council&&nbMode(it.council)!=="full")return;
-    if(it.kind==="consult"&&daysTo(it.date)>=0)out.push({id:"c:"+it.id,date:it.date,t:"Closes: "+it.title,kind:"closes",where:"Respond online",access:"online",link:it.link||null,src:"Consultation closing date",item:it.id});
-    else if(it.status==="coming")out.push({id:"k:"+it.id,date:it.date,t:"In force: "+it.title,kind:it.src==="school"?"term":"commence",where:it.extent,access:null,link:it.link||null,src:"Commencement date",item:it.id});});
+    if(it.event){const E=it.event;out.push({id:"ev:"+it.id,date:E.date||it.date,time:E.time||null,end:E.end||null,t:it.title.replace(/^(Council meeting|Police event|Parliament): /,""),kind:E.kind||"meeting",council:it.council,where:E.where||"",access:E.access||null,link:it.link||null,src:(it.src||"").split("·")[0].trim(),item:it.id});}
+    else if(it.kind==="consult"&&it.closes&&daysTo(it.closes)>=0)out.push({id:"c:"+it.id,date:it.closes,t:"Closes: "+it.title,kind:"closes",where:"Respond online",access:"online",link:it.link||null,src:"Consultation closing date",item:it.id});
+    else if(it.status==="coming"&&it.kind!=="consult")out.push({id:"k:"+it.id,date:it.date,t:"In force: "+it.title,kind:it.src==="school"?"term":"commence",where:it.extent,access:null,link:it.link||null,src:"Commencement date",item:it.id});});
   deadlineEvents().filter(e=>!e.undated).forEach(e=>out.push(e));
   (HOLIDAYS[profile.nation]||HOLIDAYS.England).forEach(([d,n])=>out.push({id:"h:"+d,date:d,t:n,kind:"hol",where:profile.nation+(profile.nation==="England"?" and Wales":""),access:null,link:"https://www.gov.uk/bank-holidays",src:"GOV.UK bank holidays"}));
   return out.sort((a,b)=>a.date.localeCompare(b.date)||(a.time||"").localeCompare(b.time||""));
 }
 function evHTML(e){
   const f=followed().includes(e.id);
-  return `<div class="ev ${e.kind}"><div class="row" style="justify-content:space-between"><span class="tm">${e.time?e.time+(e.end?"–"+e.end:""):e.kind==="hol"?"All day":e.kind==="prep"?"Prep":"Deadline"}</span>${e.access?`<span class="pill ${ACCESS[e.access].c}">${ACCESS[e.access].l}</span>`:e.kind==="hol"?'<span class="pill coming">Bank holiday</span>':""}</div>
+  return `<div class="ev ${e.kind}"><div class="row" style="justify-content:space-between"><span class="tm">${e.time?e.time+(e.end?"–"+e.end:""):e.kind==="hol"?"All day":e.kind==="prep"?"Prep":(e.kind==="meeting"||e.kind==="police"||e.kind==="parliament")?"Time tbc":"Deadline"}</span>${e.access?`<span class="pill ${ACCESS[e.access].c}">${ACCESS[e.access].l}</span>`:e.kind==="hol"?'<span class="pill coming">Bank holiday</span>':""}</div>
   <div class="t">${esc(e.t)}</div><div class="w">${esc(e.where||"")}${e.council&&e.council!==profile.council?" · "+esc(e.council):""}</div>
   ${e.agenda?`<ul>${e.agenda.map(a=>`<li>${esc(a)}</li>`).join("")}</ul>`:""}
   ${e.kind==="hol"?`<p style="font-size:14.5px;margin:0 0 4px">Banks, most offices and many services close. A bank holiday isn't a statutory day off: whether you get it depends on your contract. Deadlines that fall on one usually roll to the next working day.</p>`:""}
@@ -1609,11 +1610,11 @@ function renderCalendar(){
     cells+=`<button class="day ${d.getMonth()!==m?"out":""} ${k===tiso?"today":""} ${calSel===k?"sel":""} ${hol?"hol":""}" data-d="${k}" aria-label="${d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})}${es.length?", "+es.length+" events":""}"><span>${d.getDate()}</span><span class="dots">${es.slice(0,4).map(e=>`<i style="background:${KIND_COL[e.kind]}"></i>`).join("")}</span></button>`;}
   const fol=evs.filter(e=>followed().includes(e.id)&&e.date>=tiso);
   const sel=calSel?(byDay[calSel]||[]):evs.filter(e=>e.date>=tiso).slice(0,6);
-  s.innerHTML=`<h1>Everyone on the same page.</h1><p class="lede">Council meetings with where, when and who's allowed in; deadlines; the day a rule starts; term dates; and bank holidays for ${esc(profile.nation)}. Every entry links to the official page.</p>
+  s.innerHTML=`<h1>Everyone on the same page.</h1><p class="lede">Civic dates only, each from the public body that set it: council meetings with where, when and who's allowed in; consultation deadlines; the day a rule starts; police surgeries; Parliament's business on bills; term dates; bank holidays. Fetes and fun runs aren't on the record, so they aren't here.</p>
   <div class="seg" role="group"><button data-v="list" aria-pressed="false">Runway</button><button data-v="cal" aria-pressed="true">Calendar</button></div>
   <div class="cal"><div class="hd"><button class="btn ghost sm" id="pm" aria-label="Previous month">‹</button><b>${calMonth.toLocaleDateString("en-GB",{month:"long",year:"numeric"})}</b><button class="btn ghost sm" id="nm" aria-label="Next month">›</button></div>
   <div class="grid">${["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d=>`<div class="dow">${d}</div>`).join("")}${cells}</div>
-  <div class="keyrow"><span><i style="background:var(--ink)"></i>Meeting</span><span><i style="background:var(--purple)"></i>Deadline</span><span><i style="background:var(--green)"></i>Rule starts</span><span><i style="background:var(--blue)"></i>Term dates</span><span><i style="background:var(--amber)"></i>Bank holiday</span><span><i style="background:var(--mist)"></i>Start preparing</span></div></div>
+  <div class="keyrow"><span><i style="background:var(--ink)"></i>Meeting</span><span><i style="background:var(--purple)"></i>Deadline</span><span><i style="background:var(--green)"></i>Rule starts</span><span><i style="background:var(--blue)"></i>Term dates</span><span><i style="background:var(--amber)"></i>Bank holiday</span><span><i style="background:var(--mist)"></i>Start preparing</span><span><i style="background:var(--blue)"></i>Police</span><span><i style="background:var(--slate)"></i>Parliament</span></div></div>
   ${fol.length?`<h2>You're receiving updates on</h2>${fol.slice(0,3).map(e=>`<div class="lead" style="margin:0 0 4px">${fmt(e.date)}${e.time?" "+e.time:""} · ${esc(e.t)}</div>`).join("")}`:""}
   ${(()=>{const u=deadlineEvents().filter(e=>e.undated);return u.length?`<h2>Dates that come from your documents</h2>${u.map(e=>`<div class="ev closes"><div class="t">${esc(e.t)}</div><div class="w">${esc(e.where)}</div><div class="foot"><span class="lead">${esc(e.src)}</span><a href="${e.link}" target="_blank" rel="noopener" style="font-size:14px">Official page ↗</a></div></div>`).join("")}`:"";})()}
   <h2>${calSel?new Date(calSel+"T12:00:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}):"Next up"}</h2>
