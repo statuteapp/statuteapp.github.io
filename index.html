@@ -89,6 +89,10 @@ abbr.ab{text-decoration:underline dotted;text-underline-offset:2px;cursor:pointe
 .pdfb{font-size:0.8125rem;color:var(--slate)}
 .plain-label{font-size:.875rem;font-weight:700;margin:0 0 6px;color:var(--slate)}
 .plain-note{background:var(--amber-bg);border-left:4px solid var(--amber);color:var(--ink);padding:9px 11px;border-radius:0 6px 6px 0;font-size:.9375rem;margin:10px 0 0}
+.bill-progress{margin:18px 0;padding:12px;border:1px solid var(--paper-3);border-left:4px solid var(--blue);border-radius:6px;background:var(--paper-2)}
+.bill-progress h3{margin:0 0 8px}
+.bill-progress p{margin:0 0 8px}
+.bill-progress a{font-weight:700}
 .pill.near{background:var(--green-bg);color:var(--green)}
 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}.dot.ok{background:var(--green)}.dot.warn{background:var(--amber)}
 @media print{
@@ -1405,6 +1409,33 @@ function tierFor(it){ // highest tier that applies to this profile
   return best?{tier:best,who}:{tier:"notice",who:"topic"};
 }
 function foryou(it){const r=tierFor(it);if(!r)return null;return it.foryou[r.who]||it.foryou.all||null}
+function billProgressCopy(it){
+  if(!it||it.id!=="bill:4080")return null;
+  const stage=(it.sum||"").trim(),s=stage.toLowerCase();
+  let meaning="The current stage is listed above. Check Parliament's tracker for an explanation of any stage not covered here.";
+  let next="Check Parliament's tracker below for the next stage and any announced date.";
+  if(s.includes("committee")&&s.includes("lords")){
+    meaning="Members of the House of Lords examine the Bill line by line and can suggest changes.";
+    next="After Committee Stage, the Lords usually has Report Stage, when the whole House can consider more changes, then Third Reading, the final review. Check Parliament's tracker below for dates.";
+  }else if(s.includes("report")){
+    meaning="At Report Stage, the whole House can consider more changes after committee.";
+    next="The next stage is Third Reading, the final debate and decision in this House.";
+  }else if(s.includes("third reading")){
+    meaning="At Third Reading, members debate the final version of the Bill and decide whether it should pass this House.";
+    next="If approved, it goes to the other House. Any differences must be resolved before Royal Assent.";
+  }else if(s.includes("second reading")){
+    meaning="At Second Reading, the House debates the Bill's main ideas and decides whether it should continue.";
+    next="If it passes, it usually moves to Committee Stage for a line-by-line check.";
+  }else if(s.includes("first reading")){
+    meaning="First Reading is the Bill's formal introduction; there is no debate at this stage.";
+    next="The next stage is Second Reading, where the House debates the Bill's main ideas.";
+  }
+  return{stage:stage||"Not shown in the live feed",meaning,next};
+}
+function billProgressHTML(it){
+  const b=billProgressCopy(it);if(!b)return "";
+  return `<section class="bill-progress" aria-label="Bill progress"><h3>Where this Bill is now</h3><p><b>Current stage:</b> ${esc(b.stage)}</p><p>${esc(b.meaning)}</p><p><b>What happens next:</b> ${esc(b.next)}</p><p>A Bill becomes law only if both Houses agree on the same text and it receives Royal Assent.</p><a href="https://bills.parliament.uk/bills/4080/stages" target="_blank" rel="noopener">Follow the stages on Parliament ↗</a></section>`;
+}
 
 // ---------- Occupation search (SOC 2020) ----------
 function bindOcc(root){const inp=root.querySelector("#occ"),list=root.querySelector("#occlist"),hid=root.querySelector("#role");if(!inp)return;
@@ -1802,6 +1833,7 @@ function renderDetail(id,backCtx){
   <div class="row" style="margin-top:8px;align-items:center">${linkHTML(it.link,"Read the source document")}${it.pdf&&!isHome(it.pdf)?`<a class="btn sm ghost" href="${esc(it.pdf)}" target="_blank" rel="noopener">PDF ↗</a><span class="pdfb">${it.pdf_label?esc(it.pdf_label):"the document as published"}${it.pdf_size?` · ${(it.pdf_size/1048576).toFixed(it.pdf_size>10485760?0:1)} MB`:""}</span>`:""}</div>
   ${it.also&&it.also.length?`<div class="also"><span class="lead">Also published as</span>${it.also.map(a=>`<div>${KIND_ICON[a.kind]||""} ${esc(a.title)} <span class="lead">· ${esc((a.src||"").split("·")[0].trim())}</span>${a.link&&!isHome(a.link)?` <a href="${esc(a.link)}" target="_blank" rel="noopener">↗</a>`:""}</div>`).join("")}</div>`:""}</div>
   ${fy?`<h3>What this means for you</h3><p>${abbrHTML(fy)}</p>`:""}
+  ${billProgressHTML(it)}
   ${it.contact?contactHTML(it.contact):""}
   ${changeHTML(it,s)}
   ${it.calc?`<div class="calc" id="calc"><b>${esc(it.calc.title)}</b><div class="ins">${it.calc.ins.map(x=>`<div><label for="c_${x.id}">${esc(x.l)}</label><input id="c_${x.id}" type="number" inputmode="decimal" value="${x.v}" step="any" min="0"></div>`).join("")}</div><div class="out"><div><div class="v" id="c_b"></div><div class="l" id="c_lb"></div></div><div class="arrow">→</div><div><div class="v" id="c_a"></div><div class="l" id="c_la"></div></div></div><div class="diff" id="c_d"></div>${it.sample?`<p class="lead" style="margin:8px 0 0">Sample figures. The live app would take the real rates from the Budget and your own details from the profile.</p>`:""}</div>`:""}
@@ -1859,7 +1891,7 @@ function renderQuiz(it){
 function speak(it){
   if(!("speechSynthesis" in window)){document.getElementById("aud").textContent="Audio isn't available in this browser.";return;}
   const synth=window.speechSynthesis;if(synth.speaking){synth.cancel();document.getElementById("listen").textContent="Listen";return;}
-  const fy=foryou(it);const wordingNote=register==="kid"&&it._fromLiveFeed&&!it._kidPlainReady?"A simpler explanation is not available for this item yet. The text that follows is the official summary. ":"";const text=`${wordingNote}${it.title}. ${it.spine[register]||it.spine.adult} ${fy?"What this means for you. "+fy:""}`;
+  const fy=foryou(it);const wordingNote=register==="kid"&&it._fromLiveFeed&&!it._kidPlainReady?"A simpler explanation is not available for this item yet. The text that follows is the official summary. ":"";const bill=billProgressCopy(it);const billAudio=bill?`Current stage: ${bill.stage}. ${bill.meaning} What happens next: ${bill.next} A Bill becomes law only if both Houses agree on the same text and it receives Royal Assent.`:"";const text=`${wordingNote}${it.title}. ${it.spine[register]||it.spine.adult} ${fy?"What this means for you. "+fy:""} ${billAudio}`;
   const u=new SpeechSynthesisUtterance(text);const v=synth.getVoices().find(v=>/en-GB/i.test(v.lang));if(v)u.voice=v;u.lang="en-GB";u.rate=0.95;
   u.onend=()=>{document.getElementById("listen").textContent="Listen";};synth.speak(u);document.getElementById("listen").textContent="Stop";
 }
@@ -2342,6 +2374,10 @@ const LIVE_FEED_EXPLAINERS={
   "leg:ssi/2026/279/made":{
     adult:"These Scottish regulations set out the forms and information required for certain private-renting notices. They cover rent increases, notices to leave, sub-tenancy notices, and some applications to a rent officer or tribunal. They help say what a valid notice must include; they are not a notice sent to you and do not by themselves raise your rent or end your tenancy.",
     kid:"These rules say which forms and details have to be used for some notices about private renting in Scotland. Examples include a rent increase or asking a tenant to leave. The rules do not mean that your rent has gone up or that you have been told to leave. If you receive one of these notices, get help to check what it means and whether the right form was used."
+  },
+  "bill:4080":{
+    adult:"This Bill is a proposal, not a law. It would extend voting rights to 16- and 17-year-olds and change voter registration, election administration and political spending and donation rules. The current stage and next steps are shown below. It only becomes law if both Houses agree the final wording and it receives Royal Assent.",
+    kid:"This is a plan for a law, not a law yet. It would let 16- and 17-year-olds vote and change some rules about registering voters and running elections. The current stage and next steps are explained below. It only becomes law if both Houses agree and it receives Royal Assent."
   }
 };
 // ---------- Live feed: public JSON built by GitHub Actions; merged over the sample data ----------
