@@ -11,7 +11,10 @@ Sources (all free):
   GOV.UK              Search API (news, guidance, consultations) OGL v3
   gov.uk/bank-holidays.json                                  OGL v3
   Food Standards Agency ratings API                           OGL v3 (attribution required)
-  data.police.uk      street-level crime                      OGL v3
+  data.police.uk      street-level crime, neighbourhood events and priorities   OGL v3
+  data.food.gov.uk    food alerts and recalls                 OGL v3
+  environment.data.gov.uk  flood warnings                     OGL v3
+  thegazette.co.uk    official notices by postcode            OGL v3
 Add a source: write a fetch_* function returning a list of normalised items, append to SOURCES.
 """
 import json, re, sys, datetime as dt, urllib.request, urllib.parse, xml.etree.ElementTree as ET
@@ -19,6 +22,8 @@ import json, re, sys, datetime as dt, urllib.request, urllib.parse, xml.etree.El
 UA = {"User-Agent": "statute-feed/0.1 (+https://github.com/statuteapp/statuteapp.github.io)"}
 NOW = dt.datetime.now(dt.timezone.utc)
 OUT = "items.json"
+STATUS = "status.json"
+ALERT_AFTER_H = 24   # fail the workflow (GitHub emails the owner) when a source has been down this long
 GOVUK_DAYS = 14   # how far back to ask GOV.UK on each run
 KEEP_DAYS = 30    # items older than this (by date) are dropped from the rolling feed
 
@@ -165,6 +170,7 @@ def fetch_govuk():
     """GOV.UK Search API: news, guidance, consultations from the last 14 days (newest 100 per group)."""
     items = []
     since = (NOW - dt.timedelta(days=GOVUK_DAYS)).strftime("%Y-%m-%d")
+    failed = 0
     for group in ("news_and_communications", "guidance_and_regulation", "policy_and_engagement"):
         url = ("https://www.gov.uk/api/search.json?count=100&order=-public_timestamp"
                f"&filter_content_purpose_supergroup={group}&filter_public_timestamp=from:{since}"
@@ -172,7 +178,9 @@ def fetch_govuk():
         try:
             j = getj(url)
         except Exception as ex:
-            print("govuk", group, ex, file=sys.stderr); continue
+            print("govuk", group, ex, file=sys.stderr); failed += 1
+            if failed == 3: raise
+            continue
         for r in j.get("results", []):
             title, desc, fmt = r.get("title", ""), r.get("description", "") or "", r.get("format", "")
             k = kind_for(title, desc, fmt)
@@ -224,6 +232,90 @@ def fetch_police(lat=51.5105, lng=-0.5950, name="Slough"):
              "sum": "; ".join(f"{k.replace('-',' ')} {v}" for k, v in top)[:240], "tags": ["8.9", "10.1"],
              "src": "police.uk street-level data", "link": "https://www.police.uk", "crime_counts": dict(top), "lat": lat, "lng": lng}]
 
+# ---------- localities: one entry per council the feed covers; the phone narrows to the reader's street ----------
+LOCALITIES = [
+    {"name": "Slough", "council": "Slough Borough Council", "county": "Berkshire", "lat": 51.5105, "lng": -0.5950, "postcode": "SL1"},
+]
+
+def fetch_food_alerts():
+    """FSA allergy alerts, product recalls and withdrawals. UK-wide; kind alert."""
+    j = getj("https://data.food.gov.uk/food-alerts/id?_limit=60&_sort=-modified")
+    items = []
+    for a in j.get("items", []):
+        t = a.get("title") or ""
+        kind_code = (a.get("type") or [""])[0] if isinstance(a.get("type"), list) else str(a.get("type") or "")
+        label = "Allergy alert" if "AA" in kind_code.upper() or "allergy" in t.lower() else "Product recall" if "PRIN" in kind_code.upper() or "recall" in t.lower() else "Food alert"
+        items.append({"id": f"fsaalert:{a.get('notation') or a.get('@id','')}", "kind": "alert", "level": "uk", "status": "now",
+                      "date": (a.get("modified") or a.get("created") or "")[:10], "extent": "UK",
+                      "title": f"{label}: {t}"[:160], "sum": (a.get("description") or a.get("alertText") or "")[:240],
+                      "tags": ["33.5", "25.3"], "src": "Food Standards Agency alerts", "link": a.get("alertURL") or a.get("@id", ""),
+                      "who": ["household"]})
+    return items
+
+def fetch_flood_warnings():
+    """Environment Agency flood warnings and alerts in force near each locality (20 km)."""
+    items = []
+    for L in LOCALITIES:
+        j = getj(f"https://environment.data.gov.uk/flood-monitoring/id/floods?lat={L['lat']}&long={L['lng']}&dist=20")
+        for w in j.get("items", []):
+            sev = int(w.get("severityLevel") or 4)
+            items.append({"id": f"flood:{w.get('floodAreaID') or w.get('@id','')}", "kind": "alert", "level": "local", "status": "now",
+                          "date": (w.get("timeRaised") or "")[:10], "extent": L["name"], "council": L["council"],
+                          "title": f"{w.get('severity','Flood warning')}: {w.get('description') or (w.get('floodArea') or {}).get('riverOrSea','')}"[:160],
+                          "sum": (w.get("message") or "")[:240], "tags": ["47.2"], "src": "Environment Agency flood warnings",
+                          "link": "https://check-for-flooding.service.gov.uk/", "severity": sev,
+                          "lat": (w.get("floodArea") or {}).get("lat"), "lng": (w.get("floodArea") or {}).get("long"), "who": ["household", "council"]})
+    return items
+
+def fetch_police_neighbourhood():
+    """Neighbourhood policing team: upcoming events and current priorities, for each locality."""
+    items = []
+    for L in LOCALITIES:
+        loc = getj(f"https://data.police.uk/api/locate-neighbourhood?q={L['lat']},{L['lng']}")
+        force, nb = loc.get("force"), loc.get("neighbourhood")
+        if not force or not nb: continue
+        team = {}
+        try: team = getj(f"https://data.police.uk/api/{force}/{nb}")
+        except Exception: pass
+        tname = team.get("name") or nb
+        for e in getj(f"https://data.police.uk/api/{force}/{nb}/events") or []:
+            d = (e.get("start_date") or "")[:10]
+            items.append({"id": f"polev:{force}:{nb}:{d}:{(e.get('title') or '')[:30]}", "kind": "update", "level": "local",
+                          "status": "coming" if d >= NOW.date().isoformat() else "past", "date": d, "extent": L["name"], "council": L["council"],
+                          "title": f"Police event: {e.get('title','')}"[:160],
+                          "sum": (re.sub(r"<[^>]+>", " ", e.get("description") or "") + (" At " + e.get("address") if e.get("address") else "")).strip()[:240],
+                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["you", "everyone"]})
+        for pr in getj(f"https://data.police.uk/api/{force}/{nb}/priorities") or []:
+            if pr.get("action-date"): continue   # resolved
+            d = (pr.get("issue-date") or "")[:10]
+            items.append({"id": f"polpr:{force}:{nb}:{d}:{(pr.get('issue') or '')[:30]}", "kind": "update", "level": "local", "status": "now",
+                          "date": d, "extent": L["name"], "council": L["council"],
+                          "title": f"Policing priority: {re.sub(r'<[^>]+>', '', pr.get('issue') or '')[:120]}",
+                          "sum": re.sub(r"<[^>]+>", " ", pr.get("action") or pr.get("issue") or "").strip()[:240],
+                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["everyone", "council"]})
+    return items
+
+def fetch_gazette():
+    """The Gazette: official notices within 3 miles of each locality (Atom feed)."""
+    items = []
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    for L in LOCALITIES:
+        xml = get(f"https://www.thegazette.co.uk/all-notices/notice/data.feed?location-postcode-1={L['postcode']}&location-distance-1=3&results-page-size=50&sort-by=latest-date")
+        for e in ET.fromstring(xml).findall("a:entry", ns):
+            title = (e.findtext("a:title", default="", namespaces=ns) or "").strip()
+            link = next((l.get("href") for l in e.findall("a:link", ns) if l.get("rel") in (None, "alternate")), "")
+            summ = re.sub(r"<[^>]+>", " ", e.findtext("a:summary", default="", namespaces=ns) or e.findtext("a:content", default="", namespaces=ns) or "").strip()
+            d = (e.findtext("a:published", default="", namespaces=ns) or e.findtext("a:updated", default="", namespaces=ns) or "")[:10]
+            if not title or not link: continue
+            cat = " ".join(c.get("term", "") for c in e.findall("a:category", ns)).lower()
+            low = (title + " " + summ + " " + cat).lower()
+            kind = "law" if re.search(r"traffic|road|order|highway", low) else "update"
+            tags = ["51.4"] if kind == "law" else ["27.3"] if re.search(r"insolvenc|winding|liquidat|bankrupt|administrat", low) else ["29.4"] if re.search(r"deceased|estate|probate", low) else ["55.1"]
+            items.append({"id": f"gaz:{link.rstrip('/').split('/')[-1]}", "kind": kind, "level": "local", "status": "now", "date": d,
+                          "extent": L["name"], "council": L["council"], "title": title[:160], "sum": summ[:240], "tags": tags,
+                          "src": "The Gazette", "link": link, "who": ["everyone"]})
+    return items
+
 SOURCES = [
     ("legislation.gov.uk", "https://www.legislation.gov.uk/new/data.feed", "OGL v3", fetch_legislation),
     ("Bills API", "https://bills-api.parliament.uk", "Open Parliament Licence", fetch_bills),
@@ -231,6 +323,10 @@ SOURCES = [
     ("Bank holidays", "https://www.gov.uk/bank-holidays.json", "OGL v3", fetch_bank_holidays),
     ("Food Standards Agency", "https://api.ratings.food.gov.uk", "OGL v3, attribution", fetch_fsa),
     ("police.uk", "https://data.police.uk", "OGL v3", fetch_police),
+    ("FSA food alerts", "https://data.food.gov.uk/food-alerts", "OGL v3", fetch_food_alerts),
+    ("Environment Agency floods", "https://environment.data.gov.uk/flood-monitoring", "OGL v3", fetch_flood_warnings),
+    ("Police neighbourhood", "https://data.police.uk", "OGL v3", fetch_police_neighbourhood),
+    ("The Gazette", "https://www.thegazette.co.uk", "OGL v3", fetch_gazette),
 ]
 
 # ---------- source documents (PDFs) ----------
@@ -311,12 +407,13 @@ def dedupe(items):
 def main():
     items, sources = [], []
     for name, url, licence, fn in SOURCES:
+        err, got = "", []
         try:
             got = fn(); items += got; ok = True
             print(f"{name}: {len(got)}", file=sys.stderr)
         except Exception as ex:
-            ok = False; print(f"{name}: FAILED {ex}", file=sys.stderr)
-        sources.append({"name": name, "url": url, "licence": licence, "fetched_at": NOW.isoformat(), "ok": ok})
+            ok = False; err = f"{type(ex).__name__}: {ex}"; print(f"{name}: FAILED {err}", file=sys.stderr)
+        sources.append({"name": name, "url": url, "licence": licence, "fetched_at": NOW.isoformat(), "ok": ok, "count": len(got), "error": err})
     # Rolling feed: merge with the previous run so items persist beyond each source's own window.
     prev = {}
     try:
@@ -347,10 +444,44 @@ def main():
     out = attach_pdfs(out)
     out = dedupe(out)
     out.sort(key=lambda x: x.get("date", ""), reverse=True)
+    # Source health, carried across runs
+    st = {"sources": {}, "runs": []}
+    try:
+        with open(STATUS, encoding="utf-8") as f: st = json.load(f)
+    except Exception:
+        pass
+    down = []
+    for s in sources:
+        h = st["sources"].setdefault(s["name"], {"url": s["url"], "licence": s["licence"]})
+        h["url"] = s["url"]; h["licence"] = s["licence"]; h["last_run"] = NOW.isoformat(); h["ok"] = s["ok"]
+        h.setdefault("first_run", NOW.isoformat())
+        h["items"] = s.get("count", 0)
+        if s["ok"]:
+            h["last_ok"] = NOW.isoformat(); h.pop("error", None); h["fails"] = 0
+        else:
+            h["last_fail"] = NOW.isoformat(); h["error"] = s.get("error", "")[:300]; h["fails"] = h.get("fails", 0) + 1
+            try:
+                since = dt.datetime.fromisoformat(h.get("last_ok") or h["first_run"])
+                if (NOW - since).total_seconds() > ALERT_AFTER_H * 3600: down.append(s["name"])
+            except Exception:
+                down.append(s["name"])
+        s["last_ok"] = h.get("last_ok"); s["error"] = h.get("error")
+    by_level, by_day = {}, {}
+    for it in out:
+        by_level[it.get("level", "?")] = by_level.get(it.get("level", "?"), 0) + 1
+        d = it.get("date", "")[:10]
+        if d >= (NOW - dt.timedelta(days=14)).date().isoformat():
+            by_day.setdefault(d, {}); by_day[d][it.get("level", "?")] = by_day[d].get(it.get("level", "?"), 0) + 1
+    st["runs"] = (st.get("runs") or [])[-335:] + [{"at": NOW.isoformat(), "items": len(out), "failed": [s["name"] for s in sources if not s["ok"]]}]
+    st["generated_at"] = NOW.isoformat(); st["items"] = len(out); st["by_level"] = by_level; st["by_day"] = by_day; st["down"] = down
+    with open(STATUS, "w", encoding="utf-8") as f:
+        json.dump(st, f, ensure_ascii=False, indent=1)
     feed = {"generated_at": NOW.isoformat(), "scope": "England", "sources": sources, "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(feed, f, ensure_ascii=False, indent=1)
-    print(f"wrote {len(out)} items", file=sys.stderr)
+    print(f"wrote {len(out)} items; sources down >{ALERT_AFTER_H}h: {down or 'none'}", file=sys.stderr)
+    if down:
+        sys.exit(f"ALERT: source(s) failing for over {ALERT_AFTER_H} hours: {', '.join(down)}")
 
 if __name__ == "__main__":
     main()
