@@ -1,106 +1,126 @@
 {
- "generated_at": "2026-10-03T06:22:23.961756+00:00",
+ "generated_at": "2026-10-03T09:04:29.078714+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 256,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
-   "count": 15,
+   "count": 17,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 60,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T06:22:23.961756+00:00"
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+  },
+  {
+   "name": "Council meetings (Modern.Gov)",
+   "url": "https://democracy.slough.gov.uk",
+   "licence": "Council open data",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "ok": false,
+   "count": 0,
+   "error": "HTTPError: HTTP Error 403: Forbidden",
+   "last_ok": null
+  },
+  {
+   "name": "Parliament What's On",
+   "url": "https://whatson-api.parliament.uk",
+   "licence": "Open Parliament Licence",
+   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "ok": true,
+   "count": 36,
+   "error": null,
+   "last_ok": "2026-10-03T09:04:29.078714+00:00"
   }
  ],
  "items": [
@@ -383,6 +403,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say",
+   "event": {
+    "kind": "police",
+    "date": "2027-01-31",
+    "time": "17:00",
+    "end": "18:00",
+    "where": "Upton Court Park\nUpton Road\nSlough",
+    "access": "public"
+   },
    "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! C7573 Leedom  ",
    "tags": [
     "10.1"
@@ -404,6 +432,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Come down to the Salt Hill Activity Centre on Bath Road to meet your local PCSOs. We will be down for an hour to answer any questions or give out ",
+   "event": {
+    "kind": "police",
+    "date": "2027-01-18",
+    "time": "12:00",
+    "end": "13:00",
+    "where": "Salt Hill Activity Centre\nBath Road\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your Say  At Salt Hill Activity Centre\nBath Road\nSlough",
    "tags": [
     "10.1"
@@ -425,6 +461,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "event": {
+    "kind": "police",
+    "date": "2027-01-13",
+    "time": "20:00",
+    "end": "21:00",
+    "where": "Tesco Extra\nBrunel Way",
+    "access": "public"
+   },
    "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
    "tags": [
     "10.1"
@@ -446,6 +490,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say",
+   "event": {
+    "kind": "police",
+    "date": "2027-01-03",
+    "time": "17:00",
+    "end": "18:00",
+    "where": "Upton Court Park\nUpton Road\nSlough",
+    "access": "public"
+   },
    "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! C7573 Leedom  ",
    "tags": [
     "10.1"
@@ -521,6 +573,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "event": {
+    "kind": "police",
+    "date": "2026-12-16",
+    "time": "20:00",
+    "end": "21:00",
+    "where": "Tesco Extra\nBrunel Way",
+    "access": "public"
+   },
    "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
    "tags": [
     "10.1"
@@ -542,6 +602,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say",
+   "event": {
+    "kind": "police",
+    "date": "2026-12-06",
+    "time": "17:00",
+    "end": "18:00",
+    "where": "Upton Court Park, Upton Road,Slough",
+    "access": "public"
+   },
    "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! Officer: Beatr",
    "tags": [
     "10.1"
@@ -563,6 +631,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "event": {
+    "kind": "police",
+    "date": "2026-11-23",
+    "time": "10:30",
+    "end": "11:30",
+    "where": "Greggs\nHigh Street\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
    "tags": [
     "10.1"
@@ -594,6 +670,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "event": {
+    "kind": "police",
+    "date": "2026-11-18",
+    "time": "20:00",
+    "end": "21:00",
+    "where": "Tesco Extra\nBrunel Way",
+    "access": "public"
+   },
    "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
    "tags": [
     "10.1"
@@ -615,6 +699,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "event": {
+    "kind": "police",
+    "date": "2026-11-13",
+    "time": "10:30",
+    "end": "11:30",
+    "where": "Greggs\nHigh Street\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your say  At Greggs\nHigh Street\nSlough",
    "tags": [
     "10.1"
@@ -636,6 +728,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "event": {
+    "kind": "police",
+    "date": "2026-11-04",
+    "time": "10:30",
+    "end": "11:30",
+    "where": "Greggs \nHigh Street\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your say  At Greggs \nHigh Street\nSlough",
    "tags": [
     "10.1"
@@ -667,6 +767,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say",
+   "event": {
+    "kind": "police",
+    "date": "2026-10-26",
+    "time": "12:00",
+    "end": "13:00",
+    "where": "Salt Hill Activity Centre, Bath Road, Slough",
+    "access": "public"
+   },
    "sum": "Come down to the Salt Hill Activity Centre on Bath Road to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  Officer: Beatrix",
    "tags": [
     "10.1"
@@ -698,6 +806,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "event": {
+    "kind": "police",
+    "date": "2026-10-16",
+    "time": "09:30",
+    "end": "10:30",
+    "where": "Greggs\nHigh Street\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
    "tags": [
     "10.1"
@@ -721,6 +837,978 @@
    ]
   },
   {
+   "id": "pwo:55684:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Heritage Public Houses Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": "09:30",
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:55898:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Emergency and Life-saving Skills (Schools) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:55899:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Automated Online Software (Access and Transparency) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56002:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Chalk Streams (UNESCO Natural World Heritage Site) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56003:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Non-Domestic Rating (Retail, Hospitality and Leisure) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56004:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Public Sector Exit Payments (Limitation) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56005:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: BBC Licence Fee Non-Payment (Decriminalisation for Over-75s) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56006:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: British Broadcasting Corporation (Privatisation) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56007:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Dangerous Dogs Act 1991 (Amendment) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56008:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Domestic Abuse (Pets etc) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56206:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Medical Services (Rural Areas) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56207:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Outdoor Education Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56665:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Maximum Workplace Temperature Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56346:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Data Publication and Quality (Immigration, Nationality and Country of Birth) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56347:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Members of Parliament (Prohibition of Second Jobs) (Motion) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56491:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Road Safety Plans Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56532:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Ponds (Permitted Development) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56668:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Hospitality Services (Value Added Tax Exemption) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56669:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Sporting and Physical Education Services (Value Added Tax Exemption) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56670:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Meat (Information About Method of Killing) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56671:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Covid-19 Vaccine Damage Payments Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56672:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: European Convention on Human Rights (Notification of Withdrawal) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56676:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Controlled Drugs (Procedure for Specification) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56677:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Northern Ireland Troubles (Criminal Investigations etc) Bill: Adjourned debate on Second Reading [4 September]",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56678:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Multi-Storey Car Parks (Safety) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56679:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Sale and Supply of Glue Traps (Prohibition) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56680:2026-10-16",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Parliament: Rural Communities (Public Services and Energy) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-16",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56579:2026-10-15",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "Parliament: Second reading of the Highways (Financing) Bill",
+   "sum": "Commons · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-15",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56705:2026-10-15",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "Parliament: Office for Budget Responsibility’s forecast that welfare expenditure will reach £407 billion by 2030–31",
+   "sum": "Lords · Oral questions",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-15",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56570:2026-10-14",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-14",
+   "extent": "UK",
+   "title": "Parliament: Sovereign Grant Bill – second reading and remaining stages",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-14",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56576:2026-10-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-13",
+   "extent": "UK",
+   "title": "Parliament: Remaining stages of the Courts and Tribunals bill",
+   "sum": "Commons · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56645:2026-10-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-13",
+   "extent": "UK",
+   "title": "Parliament: Reintroducing the Diego Garcia Military Base and British Indian Ocean Territory Bill",
+   "sum": "Lords · Oral questions",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-13",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56577:2026-10-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-13",
+   "extent": "UK",
+   "title": "Parliament: Northern Ireland Troubles Bill: Carry-over extension",
+   "sum": "Commons · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56474:2026-10-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-13",
+   "extent": "UK",
+   "title": "Parliament: Health Bill - second reading",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-13",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56297:2026-10-12",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-12",
+   "extent": "UK",
+   "title": "Parliament: Railways Bill - committee stage (day 4)",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-12",
+    "time": "15:45",
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:56473:2026-10-12",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-12",
+   "extent": "UK",
+   "title": "Parliament: Public Office Accountability Bill - committee stage (day 1)",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-12",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "polev:thames-valley:N458:2026-10-07:Have Your Say meeting in Gregg",
    "kind": "update",
    "level": "local",
@@ -729,6 +1817,14 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "event": {
+    "kind": "police",
+    "date": "2026-10-07",
+    "time": "09:30",
+    "end": "10:30",
+    "where": "Greggs\nHigh Street\nSlough",
+    "access": "public"
+   },
    "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
    "tags": [
     "10.1"
@@ -6662,6 +7758,26 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsa:1893385",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Lakehouse Lounge",
+   "sum": "Mobile caterer · The Mill House SL3 9HX. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1893385",
+   "lat": 51.4780496,
+   "lng": -0.5646129,
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsaalert:FSA-PRIN-40-2026",
    "kind": "alert",
    "level": "uk",
@@ -6739,6 +7855,26 @@
    "who": [
     "household"
    ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1917122",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-07",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5: Foodlink Global Restaurants And Catering Services Limited",
+   "sum": "Other catering premises · Ditton Manor SL3 7JB. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1917122",
+   "lat": 51.4913578,
+   "lng": -0.5606293,
    "first_seen": "2026-10-03"
   },
   {
