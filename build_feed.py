@@ -140,6 +140,7 @@ def fetch_legislation():
             "date": updated or NOW.date().isoformat(), "extent": extent,
             "title": title, "sum": (summary or f"New {doctype or 'instrument'} on legislation.gov.uk.")[:240],
             "tags": tags_for(title + " " + summary), "src": "legislation.gov.uk", "link": link,
+            "pdf": f"https://www.legislation.gov.uk/{ident}/data.pdf", "pdf_label": "the instrument as made (PDF)",
         })
     return items
 
@@ -232,6 +233,37 @@ SOURCES = [
     ("police.uk", "https://data.police.uk", "OGL v3", fetch_police),
 ]
 
+# ---------- source documents (PDFs) ----------
+PDF_LOOKUPS_PER_RUN = 150   # GOV.UK Content API calls per run, new items only
+
+def attach_pdfs(items):
+    """For new GOV.UK items, ask the Content API for the published attachment (usually the real document)."""
+    n = 0
+    for it in items:
+        if n >= PDF_LOOKUPS_PER_RUN: break
+        if it.get("pdf") or it.get("pdf_checked"): continue
+        link = it.get("link", "")
+        if not link.startswith("https://www.gov.uk/"): continue
+        it["pdf_checked"] = True; n += 1
+        try:
+            j = getj("https://www.gov.uk/api/content" + link[len("https://www.gov.uk"):])
+        except Exception:
+            continue
+        d = j.get("details", {}) or {}
+        atts = list(d.get("attachments") or [])
+        for doc in d.get("documents") or []:          # older publication format: HTML snippets
+            m = re.search(r'href="([^"]+\.pdf)"', doc or "", re.I)
+            if m: atts.append({"url": m.group(1), "content_type": "application/pdf"})
+        pdfs = [a for a in atts if (a.get("content_type") == "application/pdf" or str(a.get("url", "")).lower().endswith(".pdf")) and a.get("url")]
+        if not pdfs: continue
+        a = pdfs[0]
+        it["pdf"] = a["url"] if a["url"].startswith("http") else "https://www.gov.uk" + a["url"]
+        it["pdf_label"] = (a.get("title") or "the document as published") + (" (PDF)" if "(PDF)" not in (a.get("title") or "") else "")
+        if a.get("file_size"): it["pdf_size"] = int(a["file_size"])
+        if len(pdfs) > 1: it["pdf_more"] = len(pdfs) - 1
+    print(f"pdf lookups: {n}", file=sys.stderr)
+    return items
+
 # ---------- de-duplication ----------
 KIND_RANK = {"law": 0, "alert": 1, "rates": 2, "consult": 3, "guidance": 4, "update": 5, "record": 6}
 STOP = set("the a an and of for to in on by with from under as at or is are new uk government regulations regulation order act bill 2024 2025 2026 2027 statement".split())
@@ -300,7 +332,10 @@ def main():
         if it.get("extent") in ("S", "W", "NI"): continue
         if it["id"] in seen: continue
         seen.add(it["id"])
-        it["first_seen"] = prev.get(it["id"], {}).get("first_seen") or today
+        p = prev.get(it["id"], {})
+        it["first_seen"] = p.get("first_seen") or today
+        for k in ("pdf", "pdf_label", "pdf_size", "pdf_more", "pdf_checked"):   # keep what an earlier run found
+            if k in p and k not in it: it[k] = p[k]
         out.append(it)
     for id_, it in prev.items():
         if id_ in seen: continue
@@ -309,6 +344,7 @@ def main():
         if d and d < cutoff and not it.get("holiday"): continue   # too old
         if it.get("sample"): continue
         seen.add(id_); out.append(it)
+    out = attach_pdfs(out)
     out = dedupe(out)
     out.sort(key=lambda x: x.get("date", ""), reverse=True)
     feed = {"generated_at": NOW.isoformat(), "scope": "England", "sources": sources, "items": out}
