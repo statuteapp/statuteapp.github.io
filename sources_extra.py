@@ -100,6 +100,9 @@ def fetch_police_neighbourhood():
         try: team = getj(f"https://data.police.uk/api/{force}/{nb}")
         except Exception: pass
         tname = team.get("name") or nb
+        ctr = team.get("centre") or {}
+        try: clat, clng = float(ctr.get("latitude")), float(ctr.get("longitude"))   # neighbourhood centre: events are placed here, flagged approx, unless the force gives an address we can't geocode
+        except Exception: clat, clng = L["lat"], L["lng"]
         for e in getj(f"https://data.police.uk/api/{force}/{nb}/events") or []:
             d = (e.get("start_date") or "")[:10]
             items.append({"id": f"polev:{force}:{nb}:{d}:{(e.get('title') or '')[:30]}", "kind": "update", "level": "local",
@@ -107,7 +110,8 @@ def fetch_police_neighbourhood():
                           "title": f"Police event: {e.get('title','')}"[:160],
                           "event": {"kind": "police", "date": d, "time": (e.get("start_date") or "")[11:16] or None, "end": (e.get("end_date") or "")[11:16] or None, "where": e.get("address") or "", "access": "public"},
                           "sum": (re.sub(r"<[^>]+>", " ", e.get("description") or "") + (" At " + e.get("address") if e.get("address") else "")).strip()[:240],
-                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["you", "everyone"]})
+                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["you", "everyone"],
+                          "lat": clat, "lng": clng, "approx": True})
         for pr in getj(f"https://data.police.uk/api/{force}/{nb}/priorities") or []:
             if pr.get("action-date"): continue   # resolved
             d = (pr.get("issue-date") or "")[:10]

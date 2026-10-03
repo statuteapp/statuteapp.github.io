@@ -198,22 +198,71 @@ def fetch_bank_holidays():
              "tags": ["55.6"], "src": "GOV.UK bank holidays", "link": "https://www.gov.uk/bank-holidays"}
             for e in j["england-and-wales"]["events"] if e["date"] >= (NOW - dt.timedelta(days=30)).date().isoformat()]
 
-def fetch_fsa(local_authority_id=None, name="Slough"):
-    """Food hygiene ratings changed recently. Attribution: 'Contains Food Standards Agency data'."""
+# The full FHRS register for each covered authority is kept in status.json under "fsa_register" (already committed each run); the diff between runs is the news.
+
+def _fsa_authority_id(name):
+    """Resolve a council name to its FHRS LocalAuthorityId (Slough -> 306 etc) via the Authorities endpoint."""
+    j = getj("https://api.ratings.food.gov.uk/Authorities/basic", {"x-api-version": "2", "accept": "application/json"})
+    for a in j.get("authorities", []):
+        if a.get("Name", "").lower().startswith(name.lower()): return a["LocalAuthorityId"]
+    return None
+
+def _fsa_register(laid):
+    """Every establishment in one authority, paged."""
+    out, page = {}, 1
+    while True:
+        j = getj(f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={laid}&pageSize=2000&pageNumber={page}", {"x-api-version": "2", "accept": "application/json"})
+        ests = j.get("establishments", [])
+        for e in ests:
+            g = e.get("geocode") or {}
+            out[str(e["FHRSID"])] = {"name": e.get("BusinessName", ""), "type": e.get("BusinessType", ""), "rating": str(e.get("RatingValue") or ""),
+                                     "date": (e.get("RatingDate") or "")[:10], "addr": f"{e.get('AddressLine1','')} {e.get('PostCode','')}".strip(),
+                                     "lat": float(g["latitude"]) if g.get("latitude") else None, "lng": float(g["longitude"]) if g.get("longitude") else None}
+        if len(ests) < 2000: break
+        page += 1
+        if page > 10: break
+    return out
+
+def fetch_fsa(name="Slough", council="Slough Borough Council"):
+    """Food businesses opening, closing and being re-rated, from the full FHRS register for the authority.
+    First run: ratings awarded in the last 90 days (so the map has something). Every later run: the diff against the saved register.
+    Attribution: 'Contains Food Standards Agency data'."""
+    laid = _fsa_authority_id(name)
+    if not laid: raise RuntimeError(f"no FHRS authority matching {name}")
+    cur = _fsa_register(laid)
+    if len(cur) < 50: raise RuntimeError(f"register for {name} looks truncated: {len(cur)}")
+    st = {}
+    try:
+        with open(STATUS, encoding="utf-8") as f: st = json.load(f)
+    except Exception: pass
+    prev = (st.get("fsa_register") or {}).get(str(laid), {})
+    today = NOW.date().isoformat()
+    def rating_txt(r): return {"AwaitingInspection": "awaiting inspection", "AwaitingPublication": "rating awaiting publication", "Exempt": "exempt from rating"}.get(r, f"rating {r}")
+    def base(fid, e, kind_id, title, summ, tags):
+        return {"id": f"fsa:{kind_id}:{fid}", "kind": "rates", "level": "local", "status": "now", "date": today, "extent": name, "council": council,
+                "title": title[:160], "sum": f"{e['type']} · {e['addr']}. {summ} Contains Food Standards Agency data."[:240],
+                "tags": tags, "src": "Food Standards Agency", "link": f"https://ratings.food.gov.uk/business/{fid}", "lat": e["lat"], "lng": e["lng"], "who": ["you", "everyone"]}
     items = []
-    url = f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={local_authority_id}&pageSize=200&sortOptionKey=rating" if local_authority_id else f"https://api.ratings.food.gov.uk/Establishments?address={urllib.parse.quote(name)}&pageSize=500"
-    j = getj(url, {"x-api-version": "2", "accept": "application/json"})
-    cutoff = (NOW - dt.timedelta(days=90)).date().isoformat()
-    for e in j.get("establishments", []):
-        d = (e.get("RatingDate") or "")[:10]
-        if not d or d < cutoff: continue
-        rv = e.get("RatingValue")
-        items.append({"id": f"fsa:{e['FHRSID']}", "kind": "rates", "level": "local", "status": "now", "date": d,
-                      "extent": name, "council": f"{name} Borough Council" if name == "Slough" else name,
-                      "title": f"Hygiene rating {rv}: {e.get('BusinessName','')}", "sum": f"{e.get('BusinessType','')} · {e.get('AddressLine1','')} {e.get('PostCode','')}. Contains Food Standards Agency data.",
-                      "tags": ["33.5", "46.5"], "src": "Food Standards Agency", "link": f"https://ratings.food.gov.uk/business/{e['FHRSID']}",
-                      "lat": float(e["geocode"]["latitude"]) if e.get("geocode", {}).get("latitude") else None,
-                      "lng": float(e["geocode"]["longitude"]) if e.get("geocode", {}).get("longitude") else None})
+    if prev:
+        for fid, e in cur.items():
+            p = prev.get(fid)
+            if p is None:
+                items.append(base(fid, e, "new", f"New food business: {e['name']}", f"Registered with the council, {rating_txt(e['rating'])}.", ["33.5", "46.5", "24.1"]))
+            elif e["rating"] != p["rating"]:
+                arrow = f"{p['rating']} → {e['rating']}" if p["rating"].isdigit() and e["rating"].isdigit() else rating_txt(e["rating"])
+                items.append(base(fid, e, f"rated:{e['date']}", f"Hygiene rating changed, {arrow}: {e['name']}", f"Was {rating_txt(p['rating'])}; inspected {e['date']}.", ["33.5", "46.5"]))
+            elif e["date"] != p["date"] and e["date"]:
+                items.append(base(fid, e, f"rated:{e['date']}", f"Hygiene rating {e['rating']} kept: {e['name']}", f"Re-inspected {e['date']}, same rating.", ["33.5", "46.5"]))
+        for fid, p in prev.items():
+            if fid not in cur:
+                items.append(base(fid, p, "closed", f"Closed or removed from the food register: {p['name']}", "No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered.", ["33.5", "46.5", "24.1"]))
+    else:   # first run: seed with recent ratings so the map isn't empty
+        cutoff = (NOW - dt.timedelta(days=90)).date().isoformat()
+        for fid, e in cur.items():
+            if e["date"] and e["date"] >= cutoff:
+                it = base(fid, e, "", f"Hygiene {rating_txt(e['rating'])}: {e['name']}", f"Inspected {e['date']}.", ["33.5", "46.5"]); it["id"] = f"fsa:{fid}"; it["date"] = e["date"]; items.append(it)
+    st.setdefault("fsa_register", {})[str(laid)] = cur
+    with open(STATUS, "w", encoding="utf-8") as f: json.dump(st, f, ensure_ascii=False, separators=(",", ":"))
     return items
 
 def fetch_police(lat=51.5105, lng=-0.5950, name="Slough"):

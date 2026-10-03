@@ -958,6 +958,9 @@ const DYK=[
 // Real base map: Ordnance Survey Maps API (free on the OS Data Hub OpenData plan) via Leaflet.
 // Set osKey after registering at osdatahub.os.uk; restrict the key to your Pages domain. Empty key = schematic map.
 const MAP_CONFIG={osKey:"qxsnR9K8DOgNEjeCvEeQDvzXUkA6LD2x",style:"Road_3857",center:[51.5105,-0.5950],zoom:13};
+// Feed items carry real lat/lng; the schematic map needs a 0-100 xy. Inverse of xyToLatLng, clamped to the drawing. Items with no coordinates are scattered near the council centre and flagged approx.
+function latLngToXy(lat,lng){const x=50+(lng-MAP_CONFIG.center[1])/0.0014,y=50-(lat-MAP_CONFIG.center[0])/0.0009;const cl=v=>Math.max(4,Math.min(96,v));return[cl(x),cl(y)];}
+function placeOnMap(it){if(it.xy||it.level!=="local")return;if(it.lat!=null&&it.lng!=null){it.xy=latLngToXy(it.lat,it.lng);return;}let h=0;for(const ch of String(it.id))h=(h*31+ch.charCodeAt(0))>>>0;it.xy=[44+(h%1300)/100,42+((h>>>8)%1600)/100];it.approx=true;}
 function xyToLatLng(xy){return [MAP_CONFIG.center[0]+(50-xy[1])*0.0009,MAP_CONFIG.center[1]+(xy[0]-50)*0.0014];}
 let leafletReady=null;
 function loadLeaflet(){if(leafletReady)return leafletReady;leafletReady=new Promise((res,rej)=>{const css=document.createElement("link");css.rel="stylesheet";css.href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";document.head.appendChild(css);const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";s.onload=res;s.onerror=rej;document.head.appendChild(s);});return leafletReady;}
@@ -1934,7 +1937,7 @@ function localItems(){return ITEMS.filter(it=>it.level==="local"&&it.council);}
 function renderMap(){
   const tgt=mapTarget;const s=document.getElementById(mapTarget);const again=()=>{mapTarget=tgt;renderMap();mapTarget="s-detail";};const M=mapFor(profile.council);
   const shown=[profile.council,...M.neighbours.filter(nb=>nbMode(nb.n)!=="off"||mapSel===nb.n).map(nb=>nb.n)];
-  const pins=localItems().filter(it=>shown.includes(it.council)&&tierFor(it));
+  const pins=localItems().filter(it=>{if(!it.xy)placeOnMap(it);return it.xy&&shown.includes(it.council)&&tierFor(it);});
   const cx=poly=>{const pts=poly.split(" ").map(p=>p.split(",").map(Number));return[pts.reduce((a,p)=>a+p[0],0)/pts.length,pts.reduce((a,p)=>a+p[1],0)/pts.length];};
   const hc=cx(M.home);
   const jobOk=P=>P.layer!=="jobs"||((!jobF.salary||P.salary>=jobF.salary)&&(!jobF.pattern||P.pattern===jobF.pattern)&&(!jobF.grade||P.grade===jobF.grade)&&(!jobF.type||P.type===jobF.type));
@@ -2200,7 +2203,7 @@ function startLoL(){
 const _rd=renderDetail;renderDetail=function(id){_rd(id);badge("first");};
 
 // ---------- Live feed: public JSON built by GitHub Actions; merged over the sample data ----------
-async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];ITEMS.push(it);n++;});
+async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];placeOnMap(it);ITEMS.push(it);n++;});
   window.FEED_META={generated:f.generated_at,sources:f.sources||[],added:n};if(profile){renderAll();if(hashPending){hashPending=!openHash();if(hashPending)toast("That item isn't in the feed any more");}}}catch(e){}}
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}
 loadFeed();
