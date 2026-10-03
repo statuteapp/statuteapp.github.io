@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-03T17:10:51.719516+00:00",
+ "generated_at": "2026-10-03T20:28:47.159314+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 256,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
-   "count": 60,
+   "count": 51,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T17:10:51.719516+00:00",
+   "fetched_at": "2026-10-03T20:28:47.159314+00:00",
    "ok": true,
    "count": 36,
    "error": null,
-   "last_ok": "2026-10-03T17:10:51.719516+00:00"
+   "last_ok": "2026-10-03T20:28:47.159314+00:00"
   }
  ],
  "items": [
@@ -1928,7 +1928,7 @@
    "date": "2026-10-03",
    "extent": "UK",
    "title": "Allergy alert: Lambertz recalls Lambertz Mini Spekulatius and Lambertz Christmas Tree Cookies because allergens are not declared in English on the label",
-   "sum": "",
+   "sum": "If you have bought this product and have coeliac disease, an allergy or intolerance to the allergens listed above, do not eat them. Instead, return them to your local Home Bargains store for a full refun Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -2266,7 +2266,7 @@
    "date": "2026-10-02",
    "extent": "UK",
    "title": "Allergy alert: Unilever recalls Pot Noodle Piri Piri Chicken Flavour because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to milk do not eat it. Instead, please return it to the store from where it was bought for a full refund. Alternatively please contact Unilever Co Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -6744,26 +6744,6 @@
    ]
   },
   {
-   "id": "fsaalert:FSA-PRIN-46-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-25",
-   "extent": "UK",
-   "title": "Product recall: Lucky Saint recalls Hazy IPA products because of risk of cans exploding",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-46-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "govuk:/government/publications/dcms-place-targeting",
    "kind": "update",
    "level": "uk",
@@ -6845,9 +6825,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-09-24",
-   "extent": "UK",
+   "extent": "E NI",
    "title": "Product recall: World of Sweets recalls Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because of contam",
-   "sum": "",
+   "sum": "If you have bought any of the above products do not eat it. Instead, return it to the store from where it was bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -6970,6 +6950,26 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4257",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-46-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-23",
+   "extent": "UK",
+   "title": "Product recall: Lucky Saint recalls Hazy IPA products because of risk of cans exploding",
+   "sum": "If you have bought any of the above product do not drink it. Instead, follow the guidance set down in the Point of Sale Notice (POSN) below. Do not return the item to store. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-46-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7097,7 +7097,7 @@
    "date": "2026-09-22",
    "extent": "UK",
    "title": "Product recall: Waitrose recalls Waitrose Essential Unsweetened Oat Drink because of poor temperature control",
-   "sum": "",
+   "sum": "If you have bought any of the above product, do not eat it. Instead, return it to the store from where it was bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7785,9 +7785,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-09-10",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Product recall: Waitrose recalls Waitrose Essential Pitted Black Olives because of contamination with Listeria monocytogenes",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to your nearest Waitrose store where you will be given a full refund. For further information, please contact Waitrose Customer Care Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7807,7 +7807,7 @@
    "date": "2026-09-04",
    "extent": "UK",
    "title": "Product recall: Sainsbury’s recalls Inspired to Cook by Sainsbury’s Pitted Black Olives because of contamination with Listeria monocytogenes",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to your nearest Sainsbury’s store from where you will be given a full refund. For further information, please visit the Sainsbury’s Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7827,7 +7827,7 @@
    "date": "2026-09-03",
    "extent": "UK",
    "title": "Allergy alert: Tesco recalls Tesco Finest Caesar & Smoked Bacon Coleslaw because of undeclared mustard",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to mustard do not eat it. Instead return it to any Tesco store for a full refund. For further details, please visit the contact page of Tesco’s we Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7845,35 +7845,15 @@
    "level": "uk",
    "status": "now",
    "date": "2026-09-03",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: Waitrose & Partners recalls Waitrose Rhubarb Crumble because of undeclared oats (gluten)",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to oats or gluten or have coeliac disease, do not eat it. Instead return it to the store from where it was bought for a full refund Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
    ],
    "src": "Food Standards Agency alerts",
    "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-41-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-42-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-08-28",
-   "extent": "UK",
-   "title": "Product recall: Macroom Buffalo Cheese Products recalls Macroom Buffalo Cheese Mozzarella and Macroom Buffalo Cheese Bocconcini because of contamination with Li",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-42-2026",
    "who": [
     "household"
    ],
@@ -7887,7 +7867,7 @@
    "date": "2026-08-25",
    "extent": "UK",
    "title": "Product recall: Tesco recalls Tesco Finest Mozzarella Pearls & Pesto Orzo Salad because of possible contamination with E. coli (STEC)",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to any Tesco store for a full refund. For further information, please visit Tesco’s customer services at: tesco.com/help/contact. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7905,9 +7885,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-08-21",
-   "extent": "UK",
-   "title": "Product recall: Summit Foods is recalling various products because of possible contamination with Shiga-toxin producing E. coli (STEC)",
-   "sum": "",
+   "extent": "E W S",
+   "title": "Product recall: Summit Foods is recalling various products because of possible contamination with Shiga-toxin producing E. coli (STEC)",
+   "sum": "If you have bought the above product, do not consume it. Instead, dispose of the product and provide proof of purchase on sales@summitfoods.co.uk, stating when and where it was purchased, for a refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7925,9 +7905,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-08-10",
-   "extent": "UK",
+   "extent": "E W",
    "title": "Product recall: A.Vogel Ltd recalls Rapunzel bioSnacky Das Original Red Clover – Seeds for Sprouts and Seedlings because of contamination with E. coli (STEC)",
-   "sum": "",
+   "sum": "If you have bought the above product, do not grow it or consume the sprouts or seedlings. Instead, return it to where you bought it from for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7944,10 +7924,10 @@
    "kind": "alert",
    "level": "uk",
    "status": "now",
-   "date": "2026-08-08",
-   "extent": "UK",
+   "date": "2026-08-07",
+   "extent": "E W S",
    "title": "Product recall: Greencore recalls three pasta products because of possible contamination with Listeria monocytogenes",
-   "sum": "",
+   "sum": "If you have bought the above product, do not eat it. Instead, return it to your nearest store where you will be given a full refund. You do not need your receipt. For further information Asda customers c Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -7995,7 +7975,7 @@
    "date": "2026-07-31",
    "extent": "UK",
    "title": "Allergy alert: ASR Solutions Ltd recalls Lay's Sour Cream & Dill Crisps because of undeclared allergens",
-   "sum": "",
+   "sum": "If you have bought this product, do not eat it. Instead, return it to the store from which you bought the product for a full refund or contact support@home.bargains if you require further information. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8013,9 +7993,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-07-25",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: Bon Bons Wholesale Ltd recalls various chocolate products because of undeclared milk and soya",
-   "sum": "",
+   "sum": "If you have bought the above products and have an allergy to milk and/or soya do not eat them. Instead, return them to the store you purchased them from for a full refund. For more information, or to rec Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8032,10 +8012,10 @@
    "kind": "alert",
    "level": "uk",
    "status": "now",
-   "date": "2026-07-23",
-   "extent": "UK",
+   "date": "2026-07-22",
+   "extent": "E S",
    "title": "Product recall: Graham’s Family Dairy recalls Graham’s Family Dairy Semi-Skimmed Milk due to the presence of veterinary medicines including antibiotics (penicil",
-   "sum": "",
+   "sum": "If you have bought the above product, do not consume it. Instead, return it to where you bought it from for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8053,9 +8033,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-07-21",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Product recall: Waitrose & Partners recall Waitrose & Partners 8 Chocolate Chip Brioche Rolls because they may contain pieces of hard plastic and metal",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to your nearest Waitrose & Partners branch for a full refund. For further information, please contact Waitrose customer care on 0800 Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8073,9 +8053,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-07-17",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: PepsiCo recalls Doritos Chilli Heatwave because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to milk or milk constituents, do not eat it. Instead return it to the store from where it was bought for a full refund. For more in Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8093,69 +8073,9 @@
      "title": "Allergy alert: Update 1: PepsiCo recalls Doritos Chilli Heatwave because of undeclared milk",
      "src": "Food Standards Agency alerts",
      "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-38-2026-update-1",
-     "date": "2026-07-20"
+     "date": "2026-07-18"
     }
    ]
-  },
-  {
-   "id": "fsaalert:FSA-AA-37-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-07-14",
-   "extent": "UK",
-   "title": "Allergy alert: Lidl Northern Ireland recalls 1001 Delights Dubai Style Pistachio Ice Cream because of undeclared cashew (nuts)",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-37-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-34-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-07-11",
-   "extent": "UK",
-   "title": "Product recall: Capri Sun UK recalls specific batches of Capri-Sun Orange 10 pack because they contain some cartons of Capri-Sun Zero which were filled with the",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-34-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-33-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-07-08",
-   "extent": "UK",
-   "title": "Product recall: M&S recalls M&S Food Truffle Gouda due to the presence of Listeria Monocytogenes",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-33-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
   },
   {
    "id": "fsaalert:FSA-AA-36-2026",
@@ -8163,9 +8083,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-07-03",
-   "extent": "UK",
+   "extent": "E W",
    "title": "Allergy alert: Capsicana recalls Capsicana Easy Going Mild Salsa because of undeclared barley (gluten) and mustard",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to mustard and/or and allergy or intolerance to barley or gluten, or with coeliac disease, do not eat it. Instead return it to the store from wher Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8183,9 +8103,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-07-03",
-   "extent": "UK",
+   "extent": "E W",
    "title": "Allergy alert: Dundeis UK Ltd recalls Minton & Donello Organic White Orzo because of undeclared wheat (gluten)",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to wheat or gluten or with coeliac disease, do not eat it. Instead return it to the store from where it was bought for a full refun Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8198,54 +8118,14 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "fsaalert:FSA-PRIN-32-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-07-01",
-   "extent": "UK",
-   "title": "Product recall: O’Brien Fine Foods recalls ham products because of possible contamination with Listeria monocytogenes",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-32-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-31-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-07-01",
-   "extent": "UK",
-   "title": "Product recall: Icesupp recalls icesupp mango & passionfruit and icesupp mixed berries as a precaution because of a packaging defect",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-31-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "fsaalert:FSA-AA-34-2026",
    "kind": "alert",
    "level": "uk",
    "status": "now",
    "date": "2026-06-30",
-   "extent": "UK",
-   "title": "Allergy alert: SPAR UK recalls Clayton Park Kitchen Chicken & Mushroom sauce because of undeclared soya  ",
-   "sum": "",
+   "extent": "E",
+   "title": "Allergy alert: SPAR UK recalls Clayton Park Kitchen Chicken & Mushroom sauce because of undeclared soya",
+   "sum": "If you have bought the above product and have an allergy to soya, do not eat it. Instead, return the product to the store you purchased it from for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8263,15 +8143,35 @@
    "level": "uk",
    "status": "now",
    "date": "2026-06-27",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: Morrisons recalls Morrisons Maple & Bacon Back of the Net because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to milk or milk constituents, do not eat it. Instead return it to the store from where it was bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
    ],
    "src": "Food Standards Agency alerts",
    "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-33-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-31-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-26",
+   "extent": "UK",
+   "title": "Product recall: Icesupp recalls icesupp mango & passionfruit and icesupp mixed berries as a precaution because of a packaging defect",
+   "sum": "If you have bought any of the above products do not consume them. Instead, return them to the store from where they were bought for a full refund with or without a receipt. For more information contact t Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-31-2026",
    "who": [
     "household"
    ],
@@ -8285,7 +8185,7 @@
    "date": "2026-06-25",
    "extent": "UK",
    "title": "Product recall: Ferrero UK recalls frozen Nutella Croissant because it may contain pieces of metal",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, dispose the product or return it to the store from where it was bought for a full refund. For more information, please contact Ferrero UK on 0 Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8305,7 +8205,7 @@
    "date": "2026-06-24",
    "extent": "UK",
    "title": "Allergy alert: Morrisons recalls Morrisons Coronation Chicken Pasta because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to milk do not eat it. Instead, please return it to the nearest Morrisons store to receive a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8325,7 +8225,7 @@
    "date": "2026-06-23",
    "extent": "UK",
    "title": "Product recall: Prepworld recalls fruit products because of possible contamination with Salmonella",
-   "sum": "",
+   "sum": "If you have bought any of the above products do not eat them. Instead, return them to the store from where they were bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8343,9 +8243,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-06-21",
-   "extent": "UK",
+   "extent": "E",
    "title": "Allergy alert: Krispy Kreme recalls Individual Pitch Perfect Doughnut & Match Day Dozen because of undeclared hazelnuts (nuts)",
-   "sum": "",
+   "sum": "If you have bought the above products and have an allergy to hazelnuts (nuts), do not eat them. Instead, return the products to the store you purchased them from for a full refund (with or without a rece Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8358,36 +8258,6 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "fsaalert:FSA-PRIN-28-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-06-19",
-   "extent": "UK",
-   "title": "Product recall: Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03",
-   "also": [
-    {
-     "id": "fsaalert:FSA-PRIN-28-2026-update-1",
-     "kind": "alert",
-     "title": "Product recall: Update 1: Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes",
-     "src": "Food Standards Agency alerts",
-     "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026-update-1",
-     "date": "2026-06-24"
-    }
-   ]
-  },
-  {
    "id": "fsaalert:FSA-AA-30-2026",
    "kind": "alert",
    "level": "uk",
@@ -8395,7 +8265,7 @@
    "date": "2026-06-11",
    "extent": "UK",
    "title": "Allergy alert: Buttermilk Confections is recalling Honeycomb Blast Choc Bar because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to milk or milk constituents, do not eat it. Instead return it to the store from where it was bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8413,9 +8283,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-06-05",
-   "extent": "UK",
+   "extent": "E S",
    "title": "Product recall: Dalston Soda Company recalls Dalston’s Pineapple Soda because the cans may break apart unexpectedly",
-   "sum": "",
+   "sum": "If you have bought any of the above product do not try and open it. Do not return it to the store, instead, avoid any unnecessary handling of the product and safely dispose of it in an external waste bin Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8433,9 +8303,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-06-04",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: Waitrose & Partners recalls Waitrose & Partners 4 Richly Fruited Hot Cross Buns because of undeclared barley",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to barley do not eat it. Instead return it to the store from where it was bought for a full refund. No receipt required. For more information, ple Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8453,9 +8323,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-06-04",
-   "extent": "UK",
+   "extent": "E W NI",
    "title": "Food alert: Food Alert \"For Action\": To: Food Businesses and Consumers who have purchased and sold frozen products supplied by Inarah’s Frozen Foods Ltd",
-   "sum": "",
+   "sum": "If you have bought any of the above products, do not eat them. Instead, dispose of them at home. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8473,9 +8343,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-05-28",
-   "extent": "UK",
+   "extent": "E",
    "title": "Allergy alert: Gü recalls Gü Double Sea Salted Caramel Frozen Dessert because of undeclared hazelnuts (nuts) and soya",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to hazelnuts (nuts) and/or soya do not eat it. Instead return it to the store from where it was bought for a full refund. No receipt required. For Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8495,7 +8365,7 @@
    "date": "2026-05-28",
    "extent": "UK",
    "title": "Product recall: Fox’s Burton’s Companies (FBC) UK recalls Arran Fine Foods Caramelised Red Onion Chutney because it may contain pieces of metal",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to the store from where it was purchased for a full refund. For more information, please contact careline@fbc-uk.com or telephone 08 Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8513,9 +8383,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-05-26",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Product recall: Morrisons recalls Morrisons Savers Cashews because of the possible presence of glass",
-   "sum": "",
+   "sum": "If you have bought the above product do not consume it. Instead, return it to the nearest store for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8535,7 +8405,7 @@
    "date": "2026-05-22",
    "extent": "UK",
    "title": "Product recall: One Living recalls One Living Organic Raspberry & Pomegranate Kombucha because the bottle caps may pop off unexpectedly",
-   "sum": "",
+   "sum": "If you have bought any of the above product do not try to open it. Do not return it to the store, instead, avoid any unnecessary handling of the product and safely dispose of it in an external waste bin. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8553,55 +8423,15 @@
    "level": "uk",
    "status": "now",
    "date": "2026-05-22",
-   "extent": "UK",
+   "extent": "E",
    "title": "Allergy alert: Sunrise International Foods Ltd recalls Shama Falooda Almond flavour drink because of undeclared milk",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to milk do not drink it. Instead, please return it to the store where it was bought from for a full refund. No receipt is required. For further in Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
    ],
    "src": "Food Standards Agency alerts",
    "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-27-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-AA-26-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-05-21",
-   "extent": "UK",
-   "title": "Allergy alert: Divilly’s recalls Divilly Brothers No Added Nitrite Crumbed Ham because of undeclared wheat (gluten)",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-26-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-23-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-05-20",
-   "extent": "UK",
-   "title": "Product recall: Glenisk recalls Organic Baby Fromage Frais due to the possible presence of mould",
-   "sum": "",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-23-2026",
    "who": [
     "household"
    ],
@@ -8615,7 +8445,7 @@
    "date": "2026-05-16",
    "extent": "UK",
    "title": "Allergy alert: Filippo Berio UK recalls Hot Chilli Pesto because of undeclared fish",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy to fish, do not eat it. Instead return it to the store from where it was bought for a full refund. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8633,9 +8463,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-05-06",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Allergy alert: Daylesford Organic Ltd recalls Daylesford Organic Minestrone Soup with Cannellini Beans, Pasta Shells & Olive Oil because wheat (gluten) is not e",
-   "sum": "",
+   "sum": "If you have bought this product and have an allergy or intolerance to wheat or gluten or have coeliac disease, do not eat it. Instead, return it to the store from which you bought the product for a full Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8655,7 +8485,7 @@
    "date": "2026-04-30",
    "extent": "UK",
    "title": "Product recall: ASDA recalls Exceptional by ASDA Beer Battered Cod Fishcakes because it may contain pieces of plastic or metal",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to your nearest ASDA store for a full refund. For further information, please contact ASDA’s customer relations team on 0330 053 011 Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8675,7 +8505,7 @@
    "date": "2026-04-30",
    "extent": "UK",
    "title": "Product recall: Goodlife recalls Goodlife Spicy Bean Burger because it may contain pieces of plastic",
-   "sum": "",
+   "sum": "If you have bought any of the above product do not eat it. Instead, return them to the store from where they were bought for a full refund. For more information please contact Goodlife’s customer service Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8695,7 +8525,7 @@
    "date": "2026-04-24",
    "extent": "UK",
    "title": "Allergy alert: HiPP Organic UK recalls 7+ months Vegetable Lasagne 190g jar because celeriac is not emphasised on the label",
-   "sum": "",
+   "sum": "If you have bought the above product and your baby has an allergy to celery do not eat it. Instead contact HiPP Organic’s customer services team on 0800 298 4477 or at hello@hipp.co.uk for reimbursement Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8715,7 +8545,7 @@
    "date": "2026-04-22",
    "extent": "UK",
    "title": "Product recall: Good4U recalls Super Sprouts Super Greens due to possible presence of Salmonella",
-   "sum": "",
+   "sum": "If you have bought the above product, do not eat it. Instead, return it to where you bought it. For more information, you can contact info@good4u.ie Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8735,7 +8565,7 @@
    "date": "2026-04-18",
    "extent": "UK",
    "title": "Allergy alert: Marks & Spencer is recalling Authentic Greek Yoghurt with Vanilla because of undeclared gluten",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or an intolerance to gluten or have coeliac disease, do not eat it. Instead return it to the store from where it was bought for a full refund. For Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8755,7 +8585,7 @@
    "date": "2026-04-17",
    "extent": "UK",
    "title": "Allergy alert: Loudwater Trade & Finance Ltd is recalling Millennium Peanuts Caramel Milk Chocolate because allergens are not declared in English on the label",
-   "sum": "",
+   "sum": "If you have bought the above product and have an allergy or intolerance to milk or milk constituents, an allergy to peanuts, soya, almonds, cashew nuts, an allergy or intolerance to cereals containing gl Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8773,9 +8603,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-04-16",
-   "extent": "UK",
+   "extent": "E",
    "title": "Product recall: Saffron Pastries recalls various Saffron Pastries products because of potential rodent contamination",
-   "sum": "",
+   "sum": "If you have bought the above products, do not eat them. Instead, return them to where you bought them from for a full refund. For more information email info@saffronpastries.com or call 01274 726101. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8793,7 +8623,7 @@
      "title": "Product recall: Update 1: Saffron Pastries recalls various Saffron Pastries products because of potential rodent contamination",
      "src": "Food Standards Agency alerts",
      "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-19-2026-update-1",
-     "date": "2026-04-21"
+     "date": "2026-04-20"
     }
    ]
   },
@@ -8803,9 +8633,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-04-14",
-   "extent": "UK",
+   "extent": "E W S",
    "title": "Product recall: ALDI recalls The Fishmonger Hot Smoked 2 Salmon Fillets – Honey Roasted because of incorrect use-by date.",
-   "sum": "",
+   "sum": "If you have bought the above product, please do not consume it. Instead, return it to the store from where it was purchased for a full refund. For further information, please visit: help.aldi.co.uk/s or Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8823,9 +8653,9 @@
    "level": "uk",
    "status": "now",
    "date": "2026-04-13",
-   "extent": "UK",
+   "extent": "E",
    "title": "Product recall: FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination",
-   "sum": "",
+   "sum": "If you have bought the above products, do not eat them. Instead, return them to where you bought them from for a full refund. For more information email Caribbean.bakers@yahoo.com or call 0121 553 5117. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
@@ -8845,7 +8675,7 @@
    "date": "2026-04-09",
    "extent": "UK",
    "title": "Product recall: Tesco recalls Tesco Finest Summer Edition Chocolate Affogato Dessert because it may contain pieces of plastic",
-   "sum": "",
+   "sum": "If you have bought the above product do not eat it. Instead, return it to any Tesco store for a full refund. For further information, please visit Tesco’s contact Tesco page at: tesco.com/help/contact Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "25.3"
