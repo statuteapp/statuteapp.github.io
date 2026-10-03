@@ -1,6 +1,6 @@
-// Statute service worker v2: everything network-first with cache fallback, so updates land on next open
+// Statute service worker v3: everything network-first with cache fallback, so updates land on next open
 // and the app still works offline on the last good copy.
-const CACHE = "statute-v2";
+const CACHE = "statute-v3";
 
 self.addEventListener("install", e => { self.skipWaiting(); });
 self.addEventListener("activate", e => {
