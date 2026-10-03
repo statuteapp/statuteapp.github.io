@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Statute feed builder. Runs on GitHub Actions hourly, writes feed/items.json.
+Statute feed builder. Runs on GitHub Actions hourly, writes items.json.
 
 Every source is a government or open-licence feed. The output never contains anything about a reader:
-the phone does all matching. See feed/schema.json.
+the phone does all matching. See schema.json.
 
 Sources (all free):
   legislation.gov.uk  new legislation Atom feed              OGL v3
@@ -30,6 +30,21 @@ def getj(url, headers=None):
 
 # ---------- topic tagging (keyword rules; replace with a classifier when ready) ----------
 RULES = [
+    (r"restriction of flying|drone|unmanned aircraft", ["52.4", "16.4"]),
+    (r"bluetongue|avian influenza|foot and mouth|animal disease|biosecurity", ["46.4"]),
+    (r"tenanc|private residential|landlord|renters|eviction|deposit", ["42.1"]),
+    (r"coastal margin|countryside|right of way|open access", ["49.3"]),
+    (r"\brailway|great british railways", ["52.1"]),
+    (r"representation of the people|electoral|election", ["2.2"]),
+    (r"armed forces|service law|veteran", ["15.1"]),
+    (r"financial services|markets bill|fca\b|prudential", ["23.2"]),
+    (r"civil aviation|airport|airspace", ["52.3"]),
+    (r"sovereign grant|royal household|regency", ["3.1"]),
+    (r"public office|accountability|duty of candour", ["4.2"]),
+    (r"commercial payments|late payment", ["27.2"]),
+    (r"medical services|gp\b|general practice|nhs", ["32.1"]),
+    (r"infants|parents and carers|parental leave|family leave", ["28.4"]),
+    (r"police service|police conduct|police \(", ["10.2"]),
     (r"\bvap|tobacco|smok|nicotine", ["33.4", "21.2"]),
     (r"\bexcise|alcohol duty|fuel duty", ["21.2"]),
     (r"\bvehicle excise|road tax|\bved\b", ["21.6"]),
@@ -38,11 +53,10 @@ RULES = [
     (r"\bpension", ["29.1"]),
     (r"\buniversal credit|benefit|pip\b|child benefit", ["30.1"]),
     (r"\bschool|pupil|teacher|ofsted", ["37.1"]),
-    (r"\btenan|landlord|renters|eviction|deposit", ["42.1"]),
     (r"\bplanning|development|housing", ["43.1"]),
     (r"\broad|driver|driving|speed|motor|vehicle", ["51.3"]),
     (r"\btraffic regulation|parking", ["51.4"]),
-    (r"\brail|train|aviation|airport|drone", ["52.1"]),
+    (r"\brail|train|aviation", ["52.1"]),
     (r"\bimmigration|visa|asylum|border", ["18.2"]),
     (r"\bsanction", ["23.7", "7.4"]),
     (r"\bterror|prevent duty|national security", ["16.1"]),
@@ -50,16 +64,15 @@ RULES = [
     (r"\bwaste|recycl|packaging", ["45.2"]),
     (r"\benergy|electricity|gas|ofgem|price cap", ["48.6"]),
     (r"\bwater|flood|reservoir|drought", ["47.2"]),
-    (r"\bnhs|hospital|gp\b|patient", ["32.1"]),
+    (r"\bhospital|patient", ["32.1"]),
     (r"\bpolice|crime|offence|sentenc", ["8.9", "10.1"]),
     (r"\bdata protection|gdpr|privacy|online safety", ["39.1"]),
     (r"\bcouncil tax|local government", ["5.3"]),
     (r"\btax|hmrc|income tax|corporation tax|vat\b", ["20.1"]),
     (r"\bconsumer|product safety|recall", ["25.3"]),
-    (r"\belection|referendum|electoral", ["2.2"]),
-    (r"\bdefence|armed forces|veteran", ["15.1"]),
+    (r"\bdefence", ["15.1"]),
 ]
-RECORD = re.compile(r"ambassador|statement at the un|g7|g20|summit|appoint|sworn in|honours|condolen|speech by|joint statement|bilateral|his majesty|royal visit|memorandum of understanding with|state visit", re.I)
+RECORD = re.compile(r" v .*: ?\d{3,}/\d{4}|employment tribunal|tribunal decision|foi release|freedom of information|transparency data|corporate report|annual report and accounts|ambassador|statement at the un|g7|g20|summit|appoint|sworn in|honours|condolen|speech by|joint statement|bilateral|his majesty|royal visit|memorandum of understanding with|state visit", re.I)
 INTERNATIONAL = re.compile(r"\b(un human rights council|nato|taiwan|ukraine|russia|israel|gaza|china|iran|india|pakistan|eu\b|united nations|foreign secretary|embassy)\b", re.I)
 
 def tags_for(text):
@@ -72,6 +85,7 @@ def tags_for(text):
 
 def kind_for(title, summary, fmt=None):
     s = f"{title} {summary}"
+    if fmt in ("decision", "foi_release", "transparency", "corporate_report", "speech"): return "record"
     if RECORD.search(s) or (INTERNATIONAL.search(s) and not re.search(r"sanction|immigration|visa|border", s, re.I)):
         return "record"
     if fmt in ("consultation", "open_consultation"): return "consult"
@@ -83,6 +97,15 @@ def kind_for(title, summary, fmt=None):
 def extent_for(code):  # legislation.gov.uk extent codes
     m = {"E": "E", "E+W": "E+W", "E+W+S": "GB", "E+W+S+N.I.": "UK", "E+W+N.I.": "E+W+NI"}
     return m.get(code, code or "UK")
+
+def extent_guess(ident, title):
+    t = title.lower(); kind = ident.split("/")[0]
+    if kind in ("ssi", "asp") or "(scotland)" in t: return "S"
+    if kind in ("wsi", "asc", "anaw", "mwa") or "(wales)" in t: return "W"
+    if kind in ("nisr", "nia") or "(northern ireland)" in t: return "NI"
+    if "(england and wales)" in t: return "E+W"
+    if "(england)" in t: return "E"
+    return "UK"
 
 def level_for(extent):
     return "nation" if extent in ("E", "E+W") else "uk"
@@ -100,14 +123,16 @@ def fetch_legislation():
         summary = (e.findtext("a:summary", default="", namespaces=ns) or "").strip()
         updated = (e.findtext("a:updated", default="", namespaces=ns) or "")[:10]
         doctype = (e.findtext("ukm:DocumentMainType", default="", namespaces=ns) or "")
-        # extent is not in the feed entry; fetch metadata lazily for SIs only
-        extent = "UK"
-        try:
-            meta = get(f"https://www.legislation.gov.uk/{ident}/data.xml", timeout=20).decode("utf-8", "ignore")
-            m = re.search(r'RestrictExtent="([^"]+)"', meta)
-            if m: extent = extent_for(m.group(1))
-        except Exception:
-            pass
+        if not title:
+            continue
+        extent = extent_guess(ident, title)
+        if extent == "UK":  # try the metadata; the feed entry doesn't carry extent
+            try:
+                meta = get(f"https://www.legislation.gov.uk/{ident}/data.xml", timeout=15).decode("utf-8", "ignore")
+                m = re.search(r'RestrictExtent="([^"]+)"', meta)
+                if m: extent = extent_for(m.group(1))
+            except Exception:
+                pass
         items.append({
             "id": f"leg:{ident}", "kind": "law", "level": level_for(extent), "status": "now",
             "date": updated or NOW.date().isoformat(), "extent": extent,
@@ -134,7 +159,7 @@ def fetch_bills():
     return items
 
 def fetch_govuk():
-    """GOV.UK Search API: news, guidance, consultations from the last day."""
+    """GOV.UK Search API: news, guidance, consultations from the last two days."""
     items = []
     since = (NOW - dt.timedelta(days=2)).strftime("%Y-%m-%d")
     for group in ("news_and_communications", "guidance_and_regulation", "policy_and_engagement"):
@@ -161,16 +186,16 @@ def fetch_govuk():
 def fetch_bank_holidays():
     j = getj("https://www.gov.uk/bank-holidays.json")
     return [{"id": f"hol:{e['date']}", "kind": "update", "level": "nation", "status": "coming" if e["date"] >= NOW.date().isoformat() else "past",
-             "date": e["date"], "extent": "E+W", "title": e["title"], "sum": "Bank holiday in England and Wales.",
-             "tags": ["55.6"], "src": "GOV.UK bank holidays", "link": "https://www.gov.uk/bank-holidays", "holiday": True}
+             "date": e["date"], "extent": "E+W", "title": e["title"], "sum": "Bank holiday in England and Wales.", "holiday": True,
+             "tags": ["55.6"], "src": "GOV.UK bank holidays", "link": "https://www.gov.uk/bank-holidays"}
             for e in j["england-and-wales"]["events"] if e["date"] >= (NOW - dt.timedelta(days=30)).date().isoformat()]
 
 def fetch_fsa(local_authority_id=None, name="Slough"):
     """Food hygiene ratings changed recently. Attribution: 'Contains Food Standards Agency data'."""
     items = []
-    url = f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={local_authority_id}&pageSize=200&sortOptionKey=rating" if local_authority_id else f"https://api.ratings.food.gov.uk/Establishments?address={urllib.parse.quote(name)}&pageSize=200"
+    url = f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={local_authority_id}&pageSize=200&sortOptionKey=rating" if local_authority_id else f"https://api.ratings.food.gov.uk/Establishments?address={urllib.parse.quote(name)}&pageSize=500"
     j = getj(url, {"x-api-version": "2", "accept": "application/json"})
-    cutoff = (NOW - dt.timedelta(days=14)).date().isoformat()
+    cutoff = (NOW - dt.timedelta(days=90)).date().isoformat()
     for e in j.get("establishments", []):
         d = (e.get("RatingDate") or "")[:10]
         if not d or d < cutoff: continue
@@ -216,6 +241,7 @@ def main():
         sources.append({"name": name, "url": url, "licence": licence, "fetched_at": NOW.isoformat(), "ok": ok})
     seen, out = set(), []
     for it in items:
+        if it.get("extent") in ("S", "W", "NI"): continue
         if it["id"] in seen: continue
         seen.add(it["id"]); out.append(it)
     out.sort(key=lambda x: x.get("date", ""), reverse=True)
