@@ -831,15 +831,28 @@ const ITEMS = [
  quiz:[{q:"Who does the Prevent duty legally bind?",o:["All UK residents","Specified authorities such as schools, councils and the NHS","Only the police","Faith groups"],a:1,e:"It's an institutional duty on listed public bodies, not on the public."}]
 },
 {
- id:"tvl", tags:["53.3","21.1"], kind:"law", level:"uk", status:"now", date:"2024-04-01", extent:"UK",
- title:"TV licence: when you need one, and the fee",
- sum:"Live TV on any channel or device, and anything on BBC iPlayer, needs a licence. £174.50 a year.",
+ id:"tvl", tags:["53.3","21.1"], kind:"law", level:"uk", status:"now", date:"2026-04-01", extent:"UK",
+ title:"TV licence: rules and fee history",
+ sum:"Live TV on any channel or device, and anything on BBC iPlayer, needs a licence. A colour licence costs £180 a year from 1 April 2026.",
+ link:"https://www.gov.uk/find-licences/tv-licence",
  tiers:{tv:"must"},
- tables:[{t:"TV licence fee",src:"GOV.UK / TV Licensing, as published",hd:["Licence","Annual fee"],rows:[["Colour","£174.50"],["Black and white","£58.50"],["Over 75 and receiving Pension Credit","Free"],["Blind or severely sight-impaired","50% off"]]}],
- spine:{adult:"You need a licence to watch or record live TV on any channel or service, and to use BBC iPlayer at all. You don't need one for other on-demand services, or for a TV that's never used for live broadcasts. The fee is set by the Culture Secretary and rises with inflation each April. Watching without a licence is a criminal offence prosecuted by TV Licensing on the BBC's behalf.",kid:"If your home watches live TV or BBC iPlayer, it needs a licence, which costs about £175 a year."},
+ tables:[{t:"Current annual TV licence fees",src:"GOV.UK, checked 3 October 2026",hd:["Licence","Annual fee"],rows:[["Colour","£180"],["Black and white","£60.50"],["Over 75 and receiving Pension Credit","Free"],["Blind or severely sight-impaired","50% off"]]}],
+ spine:{adult:"You need a licence to watch or record live TV on any channel or service, and to use BBC iPlayer. Other on-demand services do not need one. From 1 April 2026, a standard colour licence costs £180 a year; a black-and-white licence costs £60.50. Check the official page for the full rules and concessions. Watching or recording without a required licence is an offence.",kid:"A colour TV licence costs £180 a year from 1 April 2026. It was £174.50 before then. You need a licence for live TV or BBC iPlayer, but not for Netflix by itself."},
  foryou:{tv:"If you only use on-demand services other than iPlayer, you can declare you don't need a licence. Check before you cancel: 'live' includes live streams on YouTube and sports."},
- ribs:[{t:"Penalties",b:"Fine up to £1,000 plus costs; not imprisonable in itself.",s:"Communications Act 2003, s.363"},{t:"What's still coming",b:"The BBC Charter runs to the end of 2027; the government is reviewing the licence fee model.",s:"DCMS Charter review"}],
- timeline:[{d:"1 Jan 2017",t:"iPlayer brought in",s:"past",a:"Licence required for iPlayer on demand.",k:"iPlayer needs a licence.",src:"Communications (Television Licensing) (Amendment) Regs 2016"},{d:"1 Apr 2026",t:"Fee £174.50",s:"now",a:"Annual uprating.",k:"Current price.",src:"TV Licensing"}],
+ ribs:[{t:"Penalties",b:"Fine up to £1,000 plus costs; not imprisonable in itself.",s:"Communications Act 2003, s.363",link:"https://www.legislation.gov.uk/ukpga/2003/21/section/363"},{t:"What's still coming",b:"The current funding settlement provides for another CPI-linked fee rise in April 2027. The amount has not yet been announced. The Government is also reviewing BBC funding for the next Charter.",s:"DCMS: 2026/27 fee announcement",link:"https://www.gov.uk/government/news/cost-of-tv-licence-fee-set-for-202627"}],
+ timeline:[
+  {d:"2010–Mar 2017",t:"£145.50 held",s:"past",a:"The Government froze the annual colour fee at £145.50 from 2010; it stayed at that amount until March 2017.",k:"The price stayed at £145.50 for years, from 2010 to March 2017.",src:"UK Parliament, Treasury Minutes (2018)",link:"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/676345/CCS207_CCS0118804018-1_TM_2010-12_to_2016-17_Jan18_Accessible.pdf"},
+  {d:"1 Apr 2017",t:"£147",s:"past",a:"The annual colour licence fee rose to £147.",k:"The price went up to £147.",src:"UK Parliament, Treasury Minutes (2018)",link:"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/676345/CCS207_CCS0118804018-1_TM_2010-12_to_2016-17_Jan18_Accessible.pdf"},
+  {d:"1 Apr 2018",t:"£150.50",s:"past",a:"The annual colour fee rose to £150.50.",k:"The price went up to £150.50.",src:"Communications (Television Licensing) (Amendment) Regulations 2018",link:"https://www.legislation.gov.uk/uksi/2018/219/made"},
+  {d:"1 Apr 2019",t:"£154.50",s:"past",a:"The annual colour fee rose to £154.50.",k:"The price went up to £154.50.",src:"Communications (Television Licensing) (Amendment) Regulations 2019",link:"https://www.legislation.gov.uk/uksi/2019/151/made"},
+  {d:"1 Apr 2020",t:"£157.50",s:"past",a:"The annual colour fee rose to £157.50.",k:"The price went up to £157.50.",src:"Communications (Television Licensing) (Amendment) Regulations 2020, explanatory memorandum",link:"https://www.legislation.gov.uk/uksi/2020/160/pdfs/uksiem_20200160_en.pdf"},
+  {d:"1 Apr 2021",t:"£159",s:"past",a:"The annual colour fee rose to £159. The next settlement then froze the fee for two years.",k:"The price went up to £159. The Government then froze it for two years.",src:"Communications (Television Licensing) (Amendment) Regulations 2021",link:"https://www.legislation.gov.uk/uksi/2021/124/made"},
+  {d:"Apr 2022–Mar 2024",t:"Frozen at £159",s:"past",a:"The fee stayed at £159 for two years, until 1 April 2024.",k:"The price stayed at £159 for two years.",src:"DCMS: TV licence fee frozen for two years",link:"https://www.gov.uk/government/news/tv-licence-fee-frozen-for-two-years"},
+  {d:"1 Apr 2024",t:"£169.50",s:"past",a:"The annual colour fee rose to £169.50.",k:"The price went up to £169.50.",src:"Communications (Television Licensing) (Amendment) Regulations 2024",link:"https://www.legislation.gov.uk/uksi/2024/150/regulation/3/made"},
+  {d:"1 Apr 2025",t:"£174.50",s:"past",a:"The annual colour fee rose to £174.50.",k:"The price went up to £174.50.",src:"Communications (Television Licensing) (Amendment) Regulations 2025",link:"https://www.legislation.gov.uk/uksi/2025/133/made"},
+  {d:"1 Apr 2026",t:"£180",s:"now",a:"The annual colour fee is now £180. The black-and-white fee is £60.50.",k:"The current colour price is £180 a year.",src:"DCMS: cost of TV licence fee set for 2026/27",link:"https://www.gov.uk/government/news/cost-of-tv-licence-fee-set-for-202627"},
+  {d:"Apr 2027",t:"Further rise expected",s:"coming",a:"The current settlement provides for one more CPI-linked rise. The final amount has not been announced.",k:"Another rise is expected next April, but the new price has not been announced.",src:"DCMS: cost of TV licence fee set for 2026/27",link:"https://www.gov.uk/government/news/cost-of-tv-licence-fee-set-for-202627"}
+ ],
  quiz:[{q:"Do you need a licence to watch Netflix only?",o:["Yes","No","Only on a TV","Only in England"],a:1,e:"On-demand services other than BBC iPlayer don't need one."}]
 },
 {
@@ -1867,7 +1880,7 @@ function renderTimeline(it){
   // fix dot positions precisely once laid out
   const place=()=>{const w=el.querySelector(".tl-track").clientWidth-14;dots.forEach((d,i)=>d.style.left=(7+i/(ev.length-1||1)*w)+"px");};
   function go(i){const tlc=document.getElementById("tlc");if(!tlc||!el.isConnected)return;const e=ev[i];dots.forEach((d,j)=>d.setAttribute("aria-pressed",j===i));rng.value=i;award("tl:"+it.id+":"+i,2,"Timeline");
-    tlc.innerHTML=`<div class="d"><span class="pill ${e.s==="now"?"inforce":e.s==="coming"?"coming":e.s==="proposed"?"proposed":"notice"}">${e.s==="now"?"In force":e.s==="coming"?"Coming":e.s==="proposed"?"Proposed":"Earlier"}</span> ${esc(e.d)}</div><div class="t">${esc(e.t)}</div><p class="b">${abbrHTML(register==="kid"?e.k:e.a)}</p><div class="s">Source: ${abbrHTML(e.src)}</div>`;bindAbbr(document.getElementById("tlc"));}
+    tlc.innerHTML=`<div class="d"><span class="pill ${e.s==="now"?"inforce":e.s==="coming"?"coming":e.s==="proposed"?"proposed":"notice"}">${e.s==="now"?"In force":e.s==="coming"?"Coming":e.s==="proposed"?"Proposed":"Earlier"}</span> ${esc(e.d)}</div><div class="t">${esc(e.t)}</div><p class="b">${abbrHTML(register==="kid"?e.k:e.a)}</p><div class="s">Source: ${abbrHTML(e.src)}${e.link&&!isHome(e.link)?` · <a href="${esc(e.link)}" target="_blank" rel="noopener">open source ↗</a>`:""}</div>`;bindAbbr(document.getElementById("tlc"));}
   dots.forEach(d=>d.onclick=()=>go(+d.dataset.i));rng.oninput=()=>go(+rng.value);
   // drag anywhere on the track, snapping to the nearest point
   const track=el.querySelector(".tl-track");let drag=false;
