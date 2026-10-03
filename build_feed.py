@@ -19,6 +19,8 @@ import json, re, sys, datetime as dt, urllib.request, urllib.parse, xml.etree.El
 UA = {"User-Agent": "statute-feed/0.1 (+https://github.com/statuteapp/statuteapp.github.io)"}
 NOW = dt.datetime.now(dt.timezone.utc)
 OUT = "items.json"
+GOVUK_DAYS = 14   # how far back to ask GOV.UK on each run
+KEEP_DAYS = 30    # items older than this (by date) are dropped from the rolling feed
 
 def get(url, headers=None, timeout=30):
     req = urllib.request.Request(url, headers={**UA, **(headers or {})})
@@ -159,9 +161,9 @@ def fetch_bills():
     return items
 
 def fetch_govuk():
-    """GOV.UK Search API: news, guidance, consultations from the last two days."""
+    """GOV.UK Search API: news, guidance, consultations from the last 14 days (newest 100 per group)."""
     items = []
-    since = (NOW - dt.timedelta(days=2)).strftime("%Y-%m-%d")
+    since = (NOW - dt.timedelta(days=GOVUK_DAYS)).strftime("%Y-%m-%d")
     for group in ("news_and_communications", "guidance_and_regulation", "policy_and_engagement"):
         url = ("https://www.gov.uk/api/search.json?count=100&order=-public_timestamp"
                f"&filter_content_purpose_supergroup={group}&filter_public_timestamp=from:{since}"
@@ -239,11 +241,30 @@ def main():
         except Exception as ex:
             ok = False; print(f"{name}: FAILED {ex}", file=sys.stderr)
         sources.append({"name": name, "url": url, "licence": licence, "fetched_at": NOW.isoformat(), "ok": ok})
+    # Rolling feed: merge with the previous run so items persist beyond each source's own window.
+    prev = {}
+    try:
+        with open(OUT, encoding="utf-8") as f:
+            for it in json.load(f).get("items", []):
+                prev[it["id"]] = it
+    except Exception:
+        pass
     seen, out = set(), []
+    cutoff = (NOW - dt.timedelta(days=KEEP_DAYS)).date().isoformat()
+    today = NOW.date().isoformat()
     for it in items:
         if it.get("extent") in ("S", "W", "NI"): continue
         if it["id"] in seen: continue
-        seen.add(it["id"]); out.append(it)
+        seen.add(it["id"])
+        it["first_seen"] = prev.get(it["id"], {}).get("first_seen") or today
+        out.append(it)
+    for id_, it in prev.items():
+        if id_ in seen: continue
+        if it.get("extent") in ("S", "W", "NI"): continue
+        d = it.get("date", "")
+        if d and d < cutoff and not it.get("holiday"): continue   # too old
+        if it.get("sample"): continue
+        seen.add(id_); out.append(it)
     out.sort(key=lambda x: x.get("date", ""), reverse=True)
     feed = {"generated_at": NOW.isoformat(), "scope": "England", "sources": sources, "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
