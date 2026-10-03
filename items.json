@@ -1,52 +1,52 @@
 {
- "generated_at": "2026-10-03T21:06:31.903841+00:00",
+ "generated_at": "2026-10-03T23:44:50.786983+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 256,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": false,
    "count": 0,
    "error": "RuntimeError: FSA authority Slough did not provide an open-data file link",
@@ -56,57 +56,57 @@
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T21:06:31.903841+00:00",
+   "fetched_at": "2026-10-03T23:44:50.786983+00:00",
    "ok": true,
    "count": 36,
    "error": null,
-   "last_ok": "2026-10-03T21:06:31.903841+00:00"
+   "last_ok": "2026-10-03T23:44:50.786983+00:00"
   }
  ],
  "items": [
@@ -2022,6 +2022,23 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
    "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/justice-reforms-to-be-rolled-out-faster-as-justice-secretary-sets-out-changes-to-courts-bill",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-03",
+   "extent": "UK",
+   "title": "Justice reforms to be rolled out faster as Justice Secretary sets out changes to Courts Bill",
+   "sum": "Victims will get the fast and fair justice they deserve under changes to court reforms, the Justice Secretary has announced today.  \r\n\r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Ministry of Justice",
+   "link": "https://www.gov.uk/government/news/justice-reforms-to-be-rolled-out-faster-as-justice-secretary-sets-out-changes-to-courts-bill",
    "first_seen": "2026-10-03",
    "pdf_checked": true
   },
@@ -6147,6 +6164,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/software-security-ambassadors-scheme",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-01",
+   "extent": "UK",
+   "title": "Software Security Ambassadors Scheme",
+   "sum": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
+   "tags": [
+    "43.1"
+   ],
+   "src": "GOV.UK · Department for Digital, Culture, Media and Sport, Department for Science, Innovation and Technology",
+   "link": "https://www.gov.uk/government/publications/software-security-ambassadors-scheme",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/employment-tribunal-decisions/r-brown-v-evri-ltd-6047500-slash-2025",
    "kind": "record",
    "level": "uk",
@@ -6163,23 +6197,6 @@
    "first_seen": "2026-10-03",
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd10d2f04a15f5337227cc/R_Brown_v_Evri_Limited_-_6047500.2025_-_Final.pdf",
    "pdf_label": "R Brown v Evri Ltd: 6047500/2025 - Dismissal (PDF)",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/software-security-ambassadors-scheme",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-01",
-   "extent": "UK",
-   "title": "Software Security Ambassadors Scheme",
-   "sum": "A scheme to champion secure software development and support a resilient cyber ecosystem.",
-   "tags": [
-    "43.1"
-   ],
-   "src": "GOV.UK · Department for Digital, Culture, Media and Sport, Department for Science, Innovation and Technology",
-   "link": "https://www.gov.uk/government/publications/software-security-ambassadors-scheme",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
