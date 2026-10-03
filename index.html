@@ -60,7 +60,31 @@ p{margin:0 0 12px}
 .lg.hi{border-color:var(--amber);background:var(--amber-bg)}
 .lg>b{font-size:15px}
 abbr.ab{text-decoration:underline dotted;text-underline-offset:2px;cursor:pointer}
-.help{width:30px;height:30px;border-radius:50%;border:2px solid var(--ink);background:transparent;font-weight:700;cursor:pointer;flex:none}
+.hbtns{display:flex;gap:6px;flex:none}
+.hb{width:32px;height:32px;border-radius:50%;border:1.5px solid var(--paper-3);background:transparent;font-weight:700;cursor:pointer;font-size:15px;line-height:1}
+.hb.on{border-color:var(--ink);background:var(--paper-2)}
+.rank{min-width:0}.rank .bar{width:90px}
+.sheet{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:9;display:flex;align-items:flex-end;justify-content:center}
+.sheet[hidden]{display:none}
+.sheet-in{background:var(--paper);width:100%;max-width:560px;border-radius:14px 14px 0 0;padding:14px 18px calc(18px + env(safe-area-inset-bottom,0px))}
+.sheet-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.sheet .opt{display:block;width:100%;text-align:left;padding:12px 10px;border:0;border-top:1px solid var(--paper-3);background:transparent;cursor:pointer;font-size:16px}
+.sheet .opt .lead{display:block}
+.bm{border:1.5px solid var(--paper-3);background:transparent;border-radius:999px;padding:3px 10px;font-size:13px;cursor:pointer;margin-left:auto}
+.bm.on{border-color:var(--ink);background:var(--paper-2)}
+.card .meta .bmc{margin-left:6px;cursor:pointer;font-size:14px;opacity:.55}.card .meta .bmc.on{opacity:1}
+.pdfb{font-size:13px;color:var(--slate)}
+@media print{
+  header.top,nav.tabs,.hbtns,.sheet,.toast,#confetti,#padhud,.back,.bm,.audio,.chips,.btn,.bmc,.quiz,.brief,.clock,.meas,.areas,.setnav{display:none !important}
+  body,.app{background:#fff;color:#000}.app{max-width:none}
+  .screen{display:none}.screen.active{display:block;padding:0}
+  .card{break-inside:avoid;border:1px solid #999;border-left-width:6px;box-shadow:none}
+  a{color:#000;text-decoration:none}a[href^="http"]::after{content:" (" attr(href) ")";font-size:11px;color:#444}
+  details.rib{break-inside:avoid}
+  .printhead{display:block !important;font-size:12px;color:#444;border-bottom:1px solid #999;margin-bottom:12px;padding-bottom:6px}
+  .printfoot{display:block !important;font-size:11px;color:#444;border-top:1px solid #999;margin-top:16px;padding-top:6px}
+}
+.printhead,.printfoot{display:none}
 .pill.who{background:var(--paper-2);color:var(--ink);font-weight:600}
 .whorow{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
 .card .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}
@@ -412,8 +436,9 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
 <header class="top">
   <div class="brand"><span class="mark" aria-hidden="true"></span>Statute</div>
   <div class="rank" id="rank"><span class="r">Resident</span><span class="bar"><i style="width:0%"></i></span><span class="xp">0 XP</span></div>
-  <button class="help" id="help" aria-label="Legend">?</button>
+  <div class="hbtns"><button class="hb" id="savedbtn" aria-label="Saved">🔖</button><button class="hb" id="sharebtn" aria-label="Share this page">⤴</button><button class="hb" id="help" aria-label="Legend">?</button></div>
 </header>
+<div class="sheet" id="sheet" hidden><div class="sheet-in"><div class="sheet-h"><b id="sheet-t">Share</b><button class="back" id="sheet-x">Close</button></div><div id="sheet-b"></div></div></div>
 <main>
   <section class="screen active" id="s-today" aria-label="Today"></section>
   <section class="screen" id="s-map" aria-label="Map"></section>
@@ -467,7 +492,7 @@ function renderLegend(focus){
   <h2>Where it is in time</h2><div class="lgrid"><div class="lg"><span class="pill inforce">In force</span><span>Law now.</span></div><div class="lg"><span class="pill coming">Coming</span><span>Law with a start date.</span></div><div class="lg"><span class="pill proposed">Proposed</span><span>A bill or consultation. Not law.</span></div><div class="lg"><span class="pill notice">Earlier</span><span>Already happened.</span></div></div>
   <h2>Who it affects</h2><div class="lgrid">${Object.entries(WHO).map(([k,v])=>`<div class="lg"><span class="pill who">${v.i} ${v.l}</span><span>${esc(v.d)}</span></div>`).join("")}</div>
   <h2>Abbreviations</h2><div class="lgrid">${Object.entries(ABBR).map(([k,v])=>`<div class="lg" id="ab-${esc(k).replace(/[^A-Za-z0-9]/g,"_")}"><b>${esc(k)}</b><span><b>${esc(v[0])}.</b> ${esc(v[1])}</span></div>`).join("")}</div>`;
-  s.querySelector("#back").onclick=()=>show(prevTab);show("detail");
+  s.querySelector("#back").onclick=()=>show(prevTab);show("detail");history.replaceState(null,"","#legend");
   if(focus){const el=s.querySelector("#ab-"+focus.replace(/[^A-Za-z0-9]/g,"_"));if(el){el.classList.add("hi");setTimeout(()=>el.scrollIntoView({behavior:"smooth",block:"center"}),50);}}else window.scrollTo(0,0);
 }
 // Who an item lands on. Derived from tiers/level unless the item says.
@@ -1244,6 +1269,33 @@ function load(){try{const p=localStorage.getItem("statute.profile");if(p)profile
 function save(){try{localStorage.setItem("statute.profile",JSON.stringify(profile));localStorage.setItem("statute.register",register);localStorage.setItem("statute.done",JSON.stringify(done));localStorage.setItem("statute.quiz",JSON.stringify(quizDone));}catch(e){}}
 function minsFor(it){const w=((it.spine&&it.spine.adult)||"").split(/\s+/).length+((foryou(it)||"")).split(/\s+/).length;return Math.max(1,Math.round(w/180*2)/2+(it.quiz&&it.quiz.length?1:0));}
 function toCurrent(){const list=ITEMS.filter(it=>tierFor(it)&&it.status!=="past"&&!game.got["read:"+it.id]).sort((a,b)=>({must:3,affects:2,notice:1}[tierFor(b).tier]-{must:3,affects:2,notice:1}[tierFor(a).tier]));return{list,mins:list.reduce((n,it)=>n+minsFor(it),0)};}
+// ---------- Bookmarks (on device) ----------
+let saved=[];try{saved=JSON.parse(localStorage.getItem("statute.saved")||"[]");}catch(e){saved=[];}
+function isSaved(id){return saved.includes(id);}
+function toggleSaved(id){if(isSaved(id))saved=saved.filter(x=>x!==id);else saved.unshift(id);try{localStorage.setItem("statute.saved",JSON.stringify(saved));}catch(e){}toast(isSaved(id)?"Saved":"Removed from saved");document.querySelectorAll(`[data-bm="${id}"]`).forEach(b=>{b.classList.toggle("on",isSaved(id));b.setAttribute("aria-pressed",isSaved(id));b.textContent=isSaved(id)?"🔖 Saved":"🔖 Save";});document.querySelectorAll(`.bmc[data-bmc="${id}"]`).forEach(b=>b.classList.toggle("on",isSaved(id)));const sb=document.getElementById("savedbtn");if(sb)sb.classList.toggle("on",saved.length>0);}
+function bmBtn(id){return `<button class="bm ${isSaved(id)?"on":""}" data-bm="${id}" aria-pressed="${isSaved(id)}">${isSaved(id)?"🔖 Saved":"🔖 Save"}</button>`;}
+function bindBm(root){root.querySelectorAll("[data-bm]").forEach(b=>b.onclick=e=>{e.stopPropagation();toggleSaved(b.dataset.bm);});root.querySelectorAll(".bmc").forEach(b=>b.onclick=e=>{e.stopPropagation();e.preventDefault();toggleSaved(b.dataset.bmc);});}
+function renderSaved(){
+  const s=document.getElementById("s-detail");const its=saved.map(id=>ITEMS.find(x=>x.id===id)).filter(Boolean);
+  s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button></div><h1>Saved.</h1><p class="lede">${its.length?`${its.length} item${its.length>1?"s":""} you've kept to come back to. Stored on this device only.`:"Nothing saved yet. Tap 🔖 on any item to keep it here."}</p>${its.map(card).join("")}`;
+  s.querySelector("#back").onclick=()=>show(prevTab);bindCards(s);show("detail");history.replaceState(null,"","#saved");window.scrollTo(0,0);
+}
+// ---------- Share ----------
+function openSheet(title,opts){const sh=document.getElementById("sheet");sh.hidden=false;document.getElementById("sheet-t").textContent=title;document.getElementById("sheet-b").innerHTML=opts.map((o,i)=>`<button class="opt" data-i="${i}">${o.t}<span class="lead">${o.d||""}</span></button>`).join("");sh.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{sh.hidden=true;opts[+b.dataset.i].go();});document.getElementById("sheet-x").onclick=()=>sh.hidden=true;sh.onclick=e=>{if(e.target===sh)sh.hidden=true;};}
+function pageTitle(){const d=document.querySelector(".screen.active h1");return (d?d.textContent.replace(/\.$/,""):"Statute");}
+function shareURL(){return location.origin+location.pathname+(location.hash||"");}
+async function shareNative(title,text,url){try{if(navigator.share){await navigator.share({title,text,url});return true;}}catch(e){if(e&&e.name==="AbortError")return true;}try{await navigator.clipboard.writeText(url);toast("Link copied");return true;}catch(e){prompt("Copy this link",url);return true;}}
+function printPage(label){const act=document.querySelector(".screen.active");if(!act)return;const isItem=act.id==="s-detail"&&cur&&location.hash.startsWith("#item/");const src=isItem&&cur.link&&!isHome(cur.link)?cur.link:shareURL();
+  const head=document.createElement("div");head.className="printhead";head.textContent=`Statute · ${label} · ${new Date().toLocaleDateString("en-GB",{day:"numeric",month:"long",year:"numeric"})}`;
+  const foot=document.createElement("div");foot.className="printfoot";foot.textContent=`Every line cites a government document. Source: ${src}. Built from legislation.gov.uk, GOV.UK, parliament.uk and your council; contains public sector information licensed under the Open Government Licence v3.0.`;
+  act.prepend(head);act.append(foot);act.querySelectorAll("details.rib").forEach(d=>d.open=true);
+  const done=()=>{head.remove();foot.remove();window.removeEventListener("afterprint",done);};window.addEventListener("afterprint",done);setTimeout(()=>{try{window.print();}catch(e){}},50);}
+function sharePage(){const isItem=!!(cur&&document.querySelector("#s-detail.active")&&location.hash.startsWith("#item/"));const title=isItem?cur.title:pageTitle();const url=shareURL();
+  openSheet(isItem?"Share this item":"Share this page",[
+   {t:"Share link",d:isItem?"Opens straight to this item.":"Opens this page of the app.",go:()=>shareNative("Statute: "+title,isItem?(cur.sum||""):"",url)},
+   {t:"Save as PDF",d:"Everything shown here, with sources. Your phone's print sheet offers PDF.",go:()=>printPage(title)},
+   ...(isItem&&cur.link&&!isHome(cur.link)?[{t:"Share the source document",d:cur.link.replace(/^https?:\/\//,"").slice(0,60),go:()=>shareNative(title,"Source document",cur.link)}]:[])
+  ]);}
 function isHome(u){try{const x=new URL(u);return x.pathname.replace(/\/+$/,"")===""&&!x.search&&!x.hash;}catch(e){return true;}}
 function linkHTML(u,label,cls){if(!u||isHome(u))return `<span class="lead nolink">Source page not yet linked</span>`;return `<a class="${cls||"btn sm"}" href="${esc(u)}" target="_blank" rel="noopener">${esc(label||"Open the source")} ↗</a>`;}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
@@ -1339,7 +1391,7 @@ function card(it){
   const r=tierFor(it);const t=r?r.tier:"notice";
   const lead=it.status==="coming"?`in ${daysTo(it.date)} days`:it.status==="now"?`from ${fmt(it.date)}`:fmt(it.date);
   const dom=it.link?(it.link.match(/^https?:\/\/(?:www\.)?([^\/]+)/)||[])[1]:"";
-  return `<button class="card ${t}" data-id="${it.id}"><div class="meta"><span class="pill kind ${it.kind}">${KIND_ICON[it.kind]} ${KINDS[it.kind].l}</span><span class="pill ${t}">${TIER_ICON[t]} ${t==="must"?"Must":t==="affects"?"Affects you":"Notice"}</span>${it.status!=="now"?`<span class="pill ${it.status==="coming"?"coming":it.status==="proposed"?"proposed":"notice"}">${it.status==="coming"?"Coming":it.status==="proposed"?"Proposed":"Earlier"}</span>`:""}${r&&r.override?'<span class="pill override">Muted topic, still a duty</span>':""}${it.sample?'<span class="pill sample">Sample</span>':""}<span class="when">${lead}</span></div><p class="ttl">${esc(it.title)}</p><p class="sum">${esc(it.sum)}</p><div class="foot"><span class="src">${esc(((it.src||(it.timeline&&it.timeline.length?it.timeline[it.timeline.length-1].src:"")||"")).split("·")[0].trim())}${dom&&!isHome(it.link)?` · <span class="lnkd">${esc(dom)} ↗</span>`:""}</span><span class="tags">${(it.tags||[]).slice(0,2).map((t,i)=>tagHTML(t,i===0)).join("")}</span></div></button>`;
+  return `<button class="card ${t}" data-id="${it.id}"><div class="meta"><span class="pill kind ${it.kind}">${KIND_ICON[it.kind]} ${KINDS[it.kind].l}</span><span class="pill ${t}">${TIER_ICON[t]} ${t==="must"?"Must":t==="affects"?"Affects you":"Notice"}</span>${it.status!=="now"?`<span class="pill ${it.status==="coming"?"coming":it.status==="proposed"?"proposed":"notice"}">${it.status==="coming"?"Coming":it.status==="proposed"?"Proposed":"Earlier"}</span>`:""}${r&&r.override?'<span class="pill override">Muted topic, still a duty</span>':""}${it.sample?'<span class="pill sample">Sample</span>':""}<span class="when">${lead}</span><span class="bmc ${isSaved(it.id)?"on":""}" data-bmc="${it.id}" role="button" aria-label="Save">🔖</span></div><p class="ttl">${esc(it.title)}</p><p class="sum">${esc(it.sum)}</p><div class="foot"><span class="src">${esc(((it.src||(it.timeline&&it.timeline.length?it.timeline[it.timeline.length-1].src:"")||"")).split("·")[0].trim())}${dom&&!isHome(it.link)?` · <span class="lnkd">${esc(dom)} ↗</span>`:""}</span><span class="tags">${(it.tags||[]).slice(0,2).map((t,i)=>tagHTML(t,i===0)).join("")}</span></div></button>`;
 }
 function renderToday(){
   const s=document.getElementById("s-today");
@@ -1367,13 +1419,14 @@ function renderToday(){
     h+=`</div>`;
   }
   h+=`<h2>Something to sort out</h2><button class="card notice" id="nuis" style="border-left-color:var(--purple)"><div class="meta"><span class="pill kind guidance">Guidance</span><span class="lead">Which body, under what law</span></div><p class="ttl">${esc(NUISANCE.t)}</p><p class="sum">Seven routes, from a council abatement notice to the magistrates' court. Contact buttons on each.</p></button>`;
+  if(saved.length)h+=`<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="opensaved">🔖 Saved (${saved.length})</button></div>`;
   h+=`<p class="lead" style="margin:14px 0 0">Every item carries two labels: what it is, and what it asks of you. <a href="#" id="leg">Open the legend</a> for every label and abbreviation.</p>`;
   h+=`<p class="mantra">${esc(mantra())}</p><p class="note">Feed ${window.FEED_META?"built "+new Date(window.FEED_META.generated).toLocaleString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"})+", "+window.FEED_META.added+" live items":"not loaded; showing sample data"}. Local sources are illustrative in this prototype.</p>`;
   s.innerHTML=h;bindCards(s);bindBrief(s);
   s.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{todayFilter=b.dataset.f;renderToday();});
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
   s.querySelector("#brief").onclick=briefing;
-  s.querySelector("#nuis").onclick=renderNuisance;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
+  s.querySelector("#nuis").onclick=renderNuisance;const os=s.querySelector("#opensaved");if(os)os.onclick=renderSaved;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
   s.querySelector("#toareas").onclick=e=>{e.preventDefault();show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
   s.querySelectorAll(".areas .asi").forEach(b=>b.onclick=()=>renderASI(b.dataset.asi));
   s.querySelectorAll("[data-meas]").forEach(b=>b.onclick=()=>renderMeasure(b.dataset.meas));
@@ -1508,7 +1561,7 @@ function renderDetail(id){
   const r=tierFor(it);const t=r?r.tier:"notice";
   const fy=foryou(it);
   const s=document.getElementById("s-detail");
-  s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button><span class="pill kind ${it.kind}">${KINDS[it.kind].l}</span><span class="pill ${t}">${t==="must"?"Must":t==="affects"?"Affects you":"Notice"}</span><span class="pill ${it.status==="now"?"inforce":it.status==="coming"?"coming":"notice"}">${it.status==="now"?"In force":it.status==="coming"?"Coming":"Earlier"}</span></div>
+  s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button><span class="pill kind ${it.kind}">${KINDS[it.kind].l}</span><span class="pill ${t}">${t==="must"?"Must":t==="affects"?"Affects you":"Notice"}</span><span class="pill ${it.status==="now"?"inforce":it.status==="coming"?"coming":"notice"}">${it.status==="now"?"In force":it.status==="coming"?"Coming":"Earlier"}</span>${bmBtn(it.id)}</div>
   ${fromSession?`<div class="timer"><span>Catch-up running</span><b id="left"></b></div>`:""}
   <h1>${esc(it.title)}</h1>
   ${whoHTML(it)}
@@ -1516,7 +1569,7 @@ function renderDetail(id){
   <div class="spine ${t}"><p>${abbrHTML(it.spine[register]||it.spine.adult)}</p>
   <div class="row" style="gap:4px;margin:6px 0 2px" aria-label="Extent">${["E","W","S","NI"].map(c=>{const ex=(it.extent||"UK").toUpperCase();const on=it.level==="local"?c==="E":ex==="UK"||(ex==="GB"&&c!=="NI")||((ex==="E+W"||ex==="E W")&&(c==="E"||c==="W"))||((ex==="E"||ex==="ENGLAND")&&c==="E")||(ex==="E W S"&&c!=="NI")||(!["UK","GB","E+W","E W","E","ENGLAND","E W S"].includes(ex)&&c==="E");return `<abbr class="pill ab ${on?"inforce":"notice"}" data-ab="${c}" title="${ABBR[c][0]}" style="min-width:34px;text-align:center;text-decoration:none;cursor:pointer;${on?"":"opacity:.45"}">${c}</abbr>`;}).join("")}<span class="lead" style="margin-left:6px">${it.level==="local"?"your council only":"extent "+esc(it.extent)}</span></div>
   <dl class="kv"><dt>Applies from</dt><dd>${fmt(it.date)}${it.status==="coming"?` (${daysTo(it.date)} days)`:""}</dd><dt>Extent</dt><dd>${esc(it.extent)}</dd><dt>Source</dt><dd>${abbrHTML(it.timeline[it.timeline.length-1].src)}</dd></dl>
-  <div class="row" style="margin-top:8px">${linkHTML(it.link,"Read the source document")}</div>
+  <div class="row" style="margin-top:8px;align-items:center">${linkHTML(it.link,"Read the source document")}${it.pdf&&!isHome(it.pdf)?`<a class="btn sm ghost" href="${esc(it.pdf)}" target="_blank" rel="noopener">PDF ↗</a><span class="pdfb">${it.pdf_label?esc(it.pdf_label):"the document as published"}${it.pdf_size?` · ${(it.pdf_size/1048576).toFixed(it.pdf_size>10485760?0:1)} MB`:""}</span>`:""}</div>
   ${it.also&&it.also.length?`<div class="also"><span class="lead">Also published as</span>${it.also.map(a=>`<div>${KIND_ICON[a.kind]||""} ${esc(a.title)} <span class="lead">· ${esc((a.src||"").split("·")[0].trim())}</span>${a.link&&!isHome(a.link)?` <a href="${esc(a.link)}" target="_blank" rel="noopener">↗</a>`:""}</div>`).join("")}</div>`:""}</div>
   ${fy?`<h3>What this means for you</h3><p>${abbrHTML(fy)}</p>`:""}
   ${it.contact?contactHTML(it.contact):""}
@@ -1535,7 +1588,7 @@ function renderDetail(id){
   s.querySelector("#listen").onclick=()=>speak(it);
   bindChange(it,s);
   if(it.calc){const run=()=>{const i={};it.calc.ins.forEach(x=>i[x.id]=parseFloat(s.querySelector("#c_"+x.id).value)||0);const r=it.calc.fn(i);const gbp=n=>"£"+n.toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});s.querySelector("#c_b").textContent=gbp(r.before);s.querySelector("#c_a").textContent=gbp(r.after);s.querySelector("#c_lb").textContent=r.lb;s.querySelector("#c_la").textContent=r.la;const d=r.after-r.before;const el=s.querySelector("#c_d");el.textContent=(d>0?"+":d<0?"−":"")+gbp(Math.abs(d))+(d>0?" more":d<0?" less":" no change");el.className="diff "+(d>0?"up":d<0?"down":"");};s.querySelectorAll("#calc input").forEach(x=>x.oninput=run);run();award("calc:"+it.id,5,"Worked it out");}
-  show("detail");window.scrollTo(0,0);
+  bindBm(s);show("detail");window.scrollTo(0,0);history.replaceState(null,"","#item/"+encodeURIComponent(it.id));
   award("read:"+it.id,10,"Read");
 }
 function renderTimeline(it){
@@ -1853,16 +1906,19 @@ function renderTopics(){
 let prevTab="today";
 function show(t){
   if(t==="map"){renderMapTab();}
+  if(t!=="detail")history.replaceState(null,"","#"+t);
   if(t!=="detail"){prevTab=t;try{window.speechSynthesis&&window.speechSynthesis.cancel();}catch(e){}}
   document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id==="s-"+t));
   document.querySelectorAll("nav.tabs button").forEach(b=>{if(b.dataset.t===t)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   window.scrollTo(0,0);
 }
-function bindCards(root){root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest(".tag")||c.dataset.pin!==undefined)return;e.preventDefault();renderDetail(c.dataset.id);}));bindTags(root);}
+function bindCards(root){root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined)return;e.preventDefault();renderDetail(c.dataset.id);}));bindTags(root);bindBm(root);}
 function bindTags(root){root.querySelectorAll(".tag").forEach(t=>t.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();renderTopic(t.dataset.tag);}));}
 function renderAll(){renderToday();renderHorizon();renderCatchup();renderPlay();renderMe();renderRank();if(document.querySelector("nav.tabs button[data-t=map][aria-current]"))renderMapTab();}
 document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(b.dataset.t));
 document.getElementById("help").onclick=()=>renderLegend();
+document.getElementById("savedbtn").onclick=renderSaved;document.getElementById("sharebtn").onclick=sharePage;
+document.getElementById("savedbtn").classList.toggle("on",saved.length>0);
 // ---------- Game layer ----------
 let game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};
 try{const g=localStorage.getItem("statute.game");if(g)game=Object.assign(game,JSON.parse(g));}catch(e){}
@@ -1978,13 +2034,19 @@ function startLoL(){
 const _rd=renderDetail;renderDetail=function(id){_rd(id);badge("first");};
 
 // ---------- Live feed: public JSON built by GitHub Actions; merged over the sample data ----------
-async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-store"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];ITEMS.push(it);n++;});
-  window.FEED_META={generated:f.generated_at,sources:f.sources||[],added:n};if(profile)renderAll();}catch(e){}}
+async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];ITEMS.push(it);n++;});
+  window.FEED_META={generated:f.generated_at,sources:f.sources||[],added:n};if(profile){renderAll();if(hashPending){hashPending=!openHash();if(hashPending)toast("That item isn't in the feed any more");}}}catch(e){}}
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}
 loadFeed();
 load();
 if(profile&&!profile.council)profile=null;
 if(profile){renderAll();}else{renderOnb();}
+function openHash(){const h=decodeURIComponent(location.hash||"");if(!profile)return true;
+  if(h.startsWith("#item/")){const id=h.slice(6);const it=ITEMS.find(x=>x.id===id);if(it){renderDetail(id);return true;}return false;}
+  if(h==="#saved"){renderSaved();return true;}if(h==="#legend"){renderLegend();return true;}
+  const t=h.slice(1);if(["today","map","horizon","catchup","play","me"].includes(t)){show(t);return true;}return true;}
+let hashPending=!openHash();
+window.addEventListener("hashchange",()=>{if(location.hash.startsWith("#item/")&&!(cur&&"#item/"+encodeURIComponent(cur.id)===location.hash))openHash();});
 
 // ---------- Gamepad (Backbone One and other standard-mapping pads) ----------
 (function(){
