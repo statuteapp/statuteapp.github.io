@@ -1708,7 +1708,9 @@ function renderMe(){
 let cur=null;
 function renderDetail(id,backCtx){
   const it=ITEMS.find(x=>x.id===id);cur=it;detailBack=backCtx||null;
-  const fromSession=sessionLive()&&!!document.querySelector("#s-detail.active .timer");
+  // The session object is authoritative. Do not infer session state from the DOM:
+  // renderDetail replaces #s-detail, so the timer element is deliberately gone while reading.
+  const fromSession=sessionLive();
   const r=tierFor(it);const t=r?r.tier:"notice";
   const fy=foryou(it);
   const s=document.getElementById("s-detail");
