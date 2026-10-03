@@ -32,6 +32,53 @@ def get(url, headers=None, timeout=30):
 def getj(url, headers=None):
     return json.loads(get(url, headers).decode("utf-8"))
 
+def legislation_path(value):
+    """Return a path only for an official legislation.gov.uk URL or relative identifier."""
+    raw = str(value or "").strip()
+    parsed = urllib.parse.urlsplit(raw)
+    host = parsed.hostname.lower() if parsed.hostname else ""
+    if host and host not in ("legislation.gov.uk", "www.legislation.gov.uk"):
+        return ""
+    path = parsed.path if host else raw.split("#", 1)[0].split("?", 1)[0]
+    return path.lstrip("/").split("/contents", 1)[0].rstrip("/")
+
+def legislation_url(value):
+    """Canonical HTTPS URL for an official legislation path."""
+    path = legislation_path(value)
+    if not path:
+        return ""
+    parsed = urllib.parse.urlsplit(str(value or ""))
+    suffix = ("?" + parsed.query) if parsed.query else ""
+    return "https://www.legislation.gov.uk/" + path + suffix
+
+def legislation_pdf_url(value):
+    """Use a direct linked PDF where supplied; otherwise use the instrument's PDF endpoint."""
+    path = legislation_path(value)
+    if not path:
+        return ""
+    url = legislation_url(value)
+    if path.lower().endswith(".pdf"):
+        return url
+    return "https://www.legislation.gov.uk/" + path + "/data.pdf"
+
+def normalise_legislation_item(item):
+    """Repair legacy absolute IDs and malformed/missing PDF links in the rolling feed."""
+    ident = str(item.get("id", ""))
+    link = str(item.get("link", ""))
+    candidate = ident[4:] if ident.startswith("leg:") else link
+    path = legislation_path(link) or legislation_path(candidate)
+    if not path:
+        return item
+    item["id"] = "leg:" + path
+    item["link"] = legislation_url(link or candidate) or item.get("link", "")
+    old_pdf = str(item.get("pdf", ""))
+    if not old_pdf or "legislation.gov.uk/http" in old_pdf.lower():
+        pdf = legislation_pdf_url(item["link"])
+        if pdf:
+            item["pdf"] = pdf
+            item.setdefault("pdf_label", "official document (PDF)" if path.lower().endswith(".pdf") else "the instrument as made (PDF)")
+    return item
+
 # ---------- topic tagging (keyword rules; replace with a classifier when ready) ----------
 RULES = [
     (r"restriction of flying|drone|unmanned aircraft", ["52.4", "16.4"]),
@@ -122,8 +169,9 @@ def fetch_legislation():
     ns = {"a": "http://www.w3.org/2005/Atom", "ukm": "http://www.legislation.gov.uk/namespaces/metadata"}
     for e in ET.fromstring(xml).findall("a:entry", ns):
         title = (e.findtext("a:title", default="", namespaces=ns) or "").strip()
-        link = next((l.get("href") for l in e.findall("a:link", ns) if l.get("rel") in (None, "alternate")), "")
-        ident = link.replace("https://www.legislation.gov.uk/", "").split("/contents")[0]
+        raw_link = next((l.get("href") for l in e.findall("a:link", ns) if l.get("rel") in (None, "alternate")), "")
+        ident = legislation_path(raw_link)
+        link = legislation_url(raw_link) or raw_link
         summary = (e.findtext("a:summary", default="", namespaces=ns) or "").strip()
         updated = (e.findtext("a:updated", default="", namespaces=ns) or "")[:10]
         doctype = (e.findtext("ukm:DocumentMainType", default="", namespaces=ns) or "")
@@ -137,12 +185,15 @@ def fetch_legislation():
                 if m: extent = extent_for(m.group(1))
             except Exception:
                 pass
+        if not ident:
+            continue
+        pdf = legislation_pdf_url(link)
         items.append({
             "id": f"leg:{ident}", "kind": "law", "level": level_for(extent), "status": "now",
             "date": updated or NOW.date().isoformat(), "extent": extent,
             "title": title, "sum": (summary or f"New {doctype or 'instrument'} on legislation.gov.uk.")[:240],
             "tags": tags_for(title + " " + summary), "src": "legislation.gov.uk", "link": link,
-            "pdf": f"https://www.legislation.gov.uk/{ident}/data.pdf", "pdf_label": "the instrument as made (PDF)",
+            **({"pdf": pdf, "pdf_label": "official document (PDF)" if ident.lower().endswith(".pdf") else "the instrument as made (PDF)"} if pdf else {}),
         })
     return items
 
@@ -382,6 +433,7 @@ def main():
     try:
         with open(OUT, encoding="utf-8") as f:
             for it in json.load(f).get("items", []):
+                it = normalise_legislation_item(it)
                 prev[it["id"]] = it
     except Exception:
         pass
