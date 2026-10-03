@@ -1,21 +1,18 @@
 #!/usr/bin/env python3
 """
-Statute feed builder. Runs on GitHub Actions hourly, writes items.json.
+Statute feed builder. Runs on GitHub Actions hourly, writes items.json and status.json.
 
 Every source is a government or open-licence feed. The output never contains anything about a reader:
 the phone does all matching. See schema.json.
 
-Sources (all free):
+Core sources here; street-level and calendar sources are in sources_extra.py.
   legislation.gov.uk  new legislation Atom feed              OGL v3
   bills.parliament.uk Bills API                               Open Parliament Licence
   GOV.UK              Search API (news, guidance, consultations) OGL v3
   gov.uk/bank-holidays.json                                  OGL v3
   Food Standards Agency ratings API                           OGL v3 (attribution required)
-  data.police.uk      street-level crime, neighbourhood events and priorities   OGL v3
-  data.food.gov.uk    food alerts and recalls                 OGL v3
-  environment.data.gov.uk  flood warnings                     OGL v3
-  thegazette.co.uk    official notices by postcode            OGL v3
-Add a source: write a fetch_* function returning a list of normalised items, append to SOURCES.
+  data.police.uk      street-level crime                      OGL v3
+Add a source: write a fetch_* function returning a list of normalised items, append to SOURCES (or sources_extra.SOURCES).
 """
 import json, re, sys, datetime as dt, urllib.request, urllib.parse, xml.etree.ElementTree as ET
 
@@ -232,90 +229,6 @@ def fetch_police(lat=51.5105, lng=-0.5950, name="Slough"):
              "sum": "; ".join(f"{k.replace('-',' ')} {v}" for k, v in top)[:240], "tags": ["8.9", "10.1"],
              "src": "police.uk street-level data", "link": "https://www.police.uk", "crime_counts": dict(top), "lat": lat, "lng": lng}]
 
-# ---------- localities: one entry per council the feed covers; the phone narrows to the reader's street ----------
-LOCALITIES = [
-    {"name": "Slough", "council": "Slough Borough Council", "county": "Berkshire", "lat": 51.5105, "lng": -0.5950, "postcode": "SL1"},
-]
-
-def fetch_food_alerts():
-    """FSA allergy alerts, product recalls and withdrawals. UK-wide; kind alert."""
-    j = getj("https://data.food.gov.uk/food-alerts/id?_limit=60&_sort=-modified")
-    items = []
-    for a in j.get("items", []):
-        t = a.get("title") or ""
-        kind_code = (a.get("type") or [""])[0] if isinstance(a.get("type"), list) else str(a.get("type") or "")
-        label = "Allergy alert" if "AA" in kind_code.upper() or "allergy" in t.lower() else "Product recall" if "PRIN" in kind_code.upper() or "recall" in t.lower() else "Food alert"
-        items.append({"id": f"fsaalert:{a.get('notation') or a.get('@id','')}", "kind": "alert", "level": "uk", "status": "now",
-                      "date": (a.get("modified") or a.get("created") or "")[:10], "extent": "UK",
-                      "title": f"{label}: {t}"[:160], "sum": (a.get("description") or a.get("alertText") or "")[:240],
-                      "tags": ["33.5", "25.3"], "src": "Food Standards Agency alerts", "link": a.get("alertURL") or a.get("@id", ""),
-                      "who": ["household"]})
-    return items
-
-def fetch_flood_warnings():
-    """Environment Agency flood warnings and alerts in force near each locality (20 km)."""
-    items = []
-    for L in LOCALITIES:
-        j = getj(f"https://environment.data.gov.uk/flood-monitoring/id/floods?lat={L['lat']}&long={L['lng']}&dist=20")
-        for w in j.get("items", []):
-            sev = int(w.get("severityLevel") or 4)
-            items.append({"id": f"flood:{w.get('floodAreaID') or w.get('@id','')}", "kind": "alert", "level": "local", "status": "now",
-                          "date": (w.get("timeRaised") or "")[:10], "extent": L["name"], "council": L["council"],
-                          "title": f"{w.get('severity','Flood warning')}: {w.get('description') or (w.get('floodArea') or {}).get('riverOrSea','')}"[:160],
-                          "sum": (w.get("message") or "")[:240], "tags": ["47.2"], "src": "Environment Agency flood warnings",
-                          "link": "https://check-for-flooding.service.gov.uk/", "severity": sev,
-                          "lat": (w.get("floodArea") or {}).get("lat"), "lng": (w.get("floodArea") or {}).get("long"), "who": ["household", "council"]})
-    return items
-
-def fetch_police_neighbourhood():
-    """Neighbourhood policing team: upcoming events and current priorities, for each locality."""
-    items = []
-    for L in LOCALITIES:
-        loc = getj(f"https://data.police.uk/api/locate-neighbourhood?q={L['lat']},{L['lng']}")
-        force, nb = loc.get("force"), loc.get("neighbourhood")
-        if not force or not nb: continue
-        team = {}
-        try: team = getj(f"https://data.police.uk/api/{force}/{nb}")
-        except Exception: pass
-        tname = team.get("name") or nb
-        for e in getj(f"https://data.police.uk/api/{force}/{nb}/events") or []:
-            d = (e.get("start_date") or "")[:10]
-            items.append({"id": f"polev:{force}:{nb}:{d}:{(e.get('title') or '')[:30]}", "kind": "update", "level": "local",
-                          "status": "coming" if d >= NOW.date().isoformat() else "past", "date": d, "extent": L["name"], "council": L["council"],
-                          "title": f"Police event: {e.get('title','')}"[:160],
-                          "sum": (re.sub(r"<[^>]+>", " ", e.get("description") or "") + (" At " + e.get("address") if e.get("address") else "")).strip()[:240],
-                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["you", "everyone"]})
-        for pr in getj(f"https://data.police.uk/api/{force}/{nb}/priorities") or []:
-            if pr.get("action-date"): continue   # resolved
-            d = (pr.get("issue-date") or "")[:10]
-            items.append({"id": f"polpr:{force}:{nb}:{d}:{(pr.get('issue') or '')[:30]}", "kind": "update", "level": "local", "status": "now",
-                          "date": d, "extent": L["name"], "council": L["council"],
-                          "title": f"Policing priority: {re.sub(r'<[^>]+>', '', pr.get('issue') or '')[:120]}",
-                          "sum": re.sub(r"<[^>]+>", " ", pr.get("action") or pr.get("issue") or "").strip()[:240],
-                          "tags": ["10.1"], "src": f"{tname} neighbourhood team, police.uk", "link": team.get("url_force") or "https://www.police.uk", "who": ["everyone", "council"]})
-    return items
-
-def fetch_gazette():
-    """The Gazette: official notices within 3 miles of each locality (Atom feed)."""
-    items = []
-    ns = {"a": "http://www.w3.org/2005/Atom"}
-    for L in LOCALITIES:
-        xml = get(f"https://www.thegazette.co.uk/all-notices/notice/data.feed?location-postcode-1={L['postcode']}&location-distance-1=3&results-page-size=50&sort-by=latest-date")
-        for e in ET.fromstring(xml).findall("a:entry", ns):
-            title = (e.findtext("a:title", default="", namespaces=ns) or "").strip()
-            link = next((l.get("href") for l in e.findall("a:link", ns) if l.get("rel") in (None, "alternate")), "")
-            summ = re.sub(r"<[^>]+>", " ", e.findtext("a:summary", default="", namespaces=ns) or e.findtext("a:content", default="", namespaces=ns) or "").strip()
-            d = (e.findtext("a:published", default="", namespaces=ns) or e.findtext("a:updated", default="", namespaces=ns) or "")[:10]
-            if not title or not link: continue
-            cat = " ".join(c.get("term", "") for c in e.findall("a:category", ns)).lower()
-            low = (title + " " + summ + " " + cat).lower()
-            kind = "law" if re.search(r"traffic|road|order|highway", low) else "update"
-            tags = ["51.4"] if kind == "law" else ["27.3"] if re.search(r"insolvenc|winding|liquidat|bankrupt|administrat", low) else ["29.4"] if re.search(r"deceased|estate|probate", low) else ["55.1"]
-            items.append({"id": f"gaz:{link.rstrip('/').split('/')[-1]}", "kind": kind, "level": "local", "status": "now", "date": d,
-                          "extent": L["name"], "council": L["council"], "title": title[:160], "sum": summ[:240], "tags": tags,
-                          "src": "The Gazette", "link": link, "who": ["everyone"]})
-    return items
-
 SOURCES = [
     ("legislation.gov.uk", "https://www.legislation.gov.uk/new/data.feed", "OGL v3", fetch_legislation),
     ("Bills API", "https://bills-api.parliament.uk", "Open Parliament Licence", fetch_bills),
@@ -323,11 +236,10 @@ SOURCES = [
     ("Bank holidays", "https://www.gov.uk/bank-holidays.json", "OGL v3", fetch_bank_holidays),
     ("Food Standards Agency", "https://api.ratings.food.gov.uk", "OGL v3, attribution", fetch_fsa),
     ("police.uk", "https://data.police.uk", "OGL v3", fetch_police),
-    ("FSA food alerts", "https://data.food.gov.uk/food-alerts", "OGL v3", fetch_food_alerts),
-    ("Environment Agency floods", "https://environment.data.gov.uk/flood-monitoring", "OGL v3", fetch_flood_warnings),
-    ("Police neighbourhood", "https://data.police.uk", "OGL v3", fetch_police_neighbourhood),
-    ("The Gazette", "https://www.thegazette.co.uk", "OGL v3", fetch_gazette),
 ]
+def all_sources():
+    import sources_extra   # street-level and calendar sources live in sources_extra.py so the core stays small
+    return SOURCES + sources_extra.SOURCES
 
 # ---------- source documents (PDFs) ----------
 PDF_LOOKUPS_PER_RUN = 150   # GOV.UK Content API calls per run, new items only
@@ -337,7 +249,7 @@ def attach_pdfs(items):
     n = 0
     for it in items:
         if n >= PDF_LOOKUPS_PER_RUN: break
-        if it.get("pdf") or it.get("pdf_checked"): continue
+        if it.get("pdf_checked") or (it.get("pdf") and it.get("kind") != "consult"): continue
         link = it.get("link", "")
         if not link.startswith("https://www.gov.uk/"): continue
         it["pdf_checked"] = True; n += 1
@@ -346,6 +258,8 @@ def attach_pdfs(items):
         except Exception:
             continue
         d = j.get("details", {}) or {}
+        if d.get("closing_date"): it["closes"] = str(d["closing_date"])[:10]
+        if d.get("opening_date"): it["opens"] = str(d["opening_date"])[:10]
         atts = list(d.get("attachments") or [])
         for doc in d.get("documents") or []:          # older publication format: HTML snippets
             m = re.search(r'href="([^"]+\.pdf)"', doc or "", re.I)
@@ -406,7 +320,7 @@ def dedupe(items):
 
 def main():
     items, sources = [], []
-    for name, url, licence, fn in SOURCES:
+    for name, url, licence, fn in all_sources():
         err, got = "", []
         try:
             got = fn(); items += got; ok = True
@@ -431,7 +345,7 @@ def main():
         seen.add(it["id"])
         p = prev.get(it["id"], {})
         it["first_seen"] = p.get("first_seen") or today
-        for k in ("pdf", "pdf_label", "pdf_size", "pdf_more", "pdf_checked"):   # keep what an earlier run found
+        for k in ("pdf", "pdf_label", "pdf_size", "pdf_more", "pdf_checked", "closes", "opens"):   # keep what an earlier run found
             if k in p and k not in it: it[k] = p[k]
         out.append(it)
     for id_, it in prev.items():
