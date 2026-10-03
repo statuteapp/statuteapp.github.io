@@ -59,17 +59,102 @@ def fetch_parliament_whatson():
                       "event": {"kind": "parliament", "date": d, "time": str(ev.get("StartTime") or "")[:5] or None, "end": str(ev.get("EndTime") or "")[:5] or None, "where": ev.get("Location") or house, "access": "online"}, "who": ["government"]})
     return items
 
+def _fsa_text(value):
+    """Pull one useful display string from the FSA's plain or structured fields."""
+    if isinstance(value, str):
+        return re.sub(r"\s+", " ", value).strip()
+    if isinstance(value, list):
+        return next((text for text in (_fsa_text(v) for v in value) if text), "")
+    if isinstance(value, dict):
+        for key in ("value", "label", "prefLabel", "riskStatement", "description", "text", "title", "name"):
+            text = _fsa_text(value.get(key))
+            if text:
+                return text
+    return ""
+
+def _fsa_extent(alert):
+    """Translate FSA country codes to the feed's existing national extent labels."""
+    countries = alert.get("country")
+    if not countries:
+        return "UK"
+    if isinstance(countries, (str, dict)):
+        countries = [countries]
+    codes = []
+    for country in countries:
+        if isinstance(country, dict):
+            code = str(country.get("notation") or country.get("@id") or "").upper()
+            label = _fsa_text(country.get("label") or country.get("prefLabel")).lower()
+        else:
+            code = str(country).upper()
+            label = code.lower()
+        value = code + " " + label
+        found = []
+        if "GB-ENG" in value or "england" in value:
+            found.append("E")
+        if "GB-WLS" in value or "GB-WAL" in value or "wales" in value:
+            found.append("W")
+        if "GB-SCT" in value or "scotland" in value:
+            found.append("S")
+        if "GB-NIR" in value or "northern ireland" in value:
+            found.append("NI")
+        if code.endswith("/GB") or code.strip() == "GB" or "great britain" in value:
+            found.extend(("E", "W", "S"))
+        elif "united kingdom" in value:
+            return "UK"
+        if not found:
+            # Unknown explicit geography must not accidentally hide an alert.
+            return "UK"
+        for nation in found:
+            if nation not in codes:
+                codes.append(nation)
+    order = [code for code in ("E", "W", "S", "NI") if code in codes]
+    return "UK" if len(order) == 4 else " ".join(order) if order else "UK"
+
+def _fsa_status(alert):
+    status = alert.get("status") or ""
+    if isinstance(status, dict):
+        status = status.get("label") or status.get("prefLabel") or status.get("@id") or ""
+    return str(status).lower()
+
+def _fsa_summary(alert):
+    advice = _fsa_text(alert.get("consumerAdvice"))
+    if not advice:
+        problems = alert.get("problem") or []
+        if isinstance(problems, dict):
+            problems = [problems]
+        advice = next((_fsa_text(p.get("riskStatement") or p.get("description")) for p in problems
+                       if isinstance(p, dict) and _fsa_text(p.get("riskStatement") or p.get("description"))), "")
+    if not advice:
+        advice = _fsa_text(alert.get("description") or alert.get("alertText") or alert.get("actionTaken") or alert.get("SMStext"))
+    if not advice:
+        products = alert.get("productDetails") or []
+        if isinstance(products, dict):
+            products = [products]
+        name = next((_fsa_text(p.get("productName") or p.get("brandName") or p.get("name")) for p in products
+                     if isinstance(p, dict) and _fsa_text(p.get("productName") or p.get("brandName") or p.get("name"))), "")
+        advice = ("Affected product: " + name) if name else "See the FSA notice for product details and advice."
+    attribution = " Contains Food Standards Agency data."
+    return advice[:240 - len(attribution)].rstrip() + attribution
+
 def fetch_food_alerts():
-    """FSA allergy alerts, product recalls and withdrawals. UK-wide; kind alert."""
-    j = getj("https://data.food.gov.uk/food-alerts/id?_limit=60&_sort=-modified")
+    """FSA allergy alerts, product recalls and food alerts; scope and advice follow the official record."""
+    j = getj("https://data.food.gov.uk/food-alerts/id?_limit=60&_sort=-modified&_view=full")
     items = []
     for a in j.get("items", []):
-        t = a.get("title") or ""
+        if "withdrawn" in _fsa_status(a):
+            continue
+        title = _fsa_text(a.get("title")) or _fsa_text(a.get("notation")) or "Food alert"
         kind_code = (a.get("type") or [""])[0] if isinstance(a.get("type"), list) else str(a.get("type") or "")
-        label = "Allergy alert" if "AA" in kind_code.upper() or "allergy" in t.lower() else "Product recall" if "PRIN" in kind_code.upper() or "recall" in t.lower() else "Food alert"
+        kind_code = str(kind_code).upper()
+        label = "Allergy alert" if "AA" in kind_code or "allergy" in title.lower() else "Product recall" if "PRIN" in kind_code or "recall" in title.lower() else "Food alert"
+        extent = _fsa_extent(a)
+        # The live feed is currently England-scoped; retain UK-wide or England-applicable alerts only.
+        if extent != "UK" and "E" not in extent.split():
+            continue
+        created = a.get("created") or a.get("modified") or ""
         items.append({"id": f"fsaalert:{a.get('notation') or a.get('@id','')}", "kind": "alert", "level": "uk", "status": "now",
-                      "date": (a.get("modified") or a.get("created") or "")[:10], "extent": "UK",
-                      "title": f"{label}: {t}"[:160], "sum": (a.get("description") or a.get("alertText") or "")[:240],
+                      "date": str(created)[:10], "extent": extent,
+                      "title": f"{label}: {title}"[:160], "sum": _fsa_summary(a),
                       "tags": ["33.5", "25.3"], "src": "Food Standards Agency alerts", "link": a.get("alertURL") or a.get("@id", ""),
                       "who": ["household"]})
     return items
