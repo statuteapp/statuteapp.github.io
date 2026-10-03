@@ -1540,7 +1540,7 @@ function renderToday(){
   h+=`<div class="row" style="margin:0 0 12px"><button class="btn sm" id="brief">▶ Morning briefing</button><span class="lead" id="briefnote">Today's items read aloud, duties first. About ${Math.max(1,Math.round(tc.list.length*0.7))} min.</span></div>`;
   h+=`<div class="meas">${MEASURES.map(m=>`<button data-meas="${m.k}" aria-label="${esc(m.l)}: ${esc(m.v)}"><div class="l">${esc(m.l)}</div><div class="v ${m.ok?"":"warn"}">${esc(m.v)}</div></button>`).join("")}</div>`;
   h+=`<div class="dyk"><span class="pill kind law" style="margin-bottom:4px">Still on the books</span><div class="t">${esc(dyk.t)}</div><div>${esc(dyk.b)}</div><div class="src">${esc(dyk.src)}</div></div>`;
-  h+=`<div class="clock">${session&&!session.done&&session.end>Date.now()?`<div class="big">Catch-up in progress<small>Time remaining · the original end time is unchanged</small><b id="today-session-left" style="display:block;font-size:24px;margin-top:4px">--:--</b></div><div class="row"><button class="btn sm" id="resume-session">Continue catch-up</button></div>`:`<div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div>`}</div>`;
+  h+=`<div class="clock">${session&&!session.done&&session.end>Date.now()?`<div class="big">Catch-up in progress<small>Time remaining · the original end time is unchanged</small><b id="today-session-left" style="display:block;font-size:24px;margin-top:4px">--:--</b></div><div class="row"><button class="btn sm" id="resume-session">Continue catch-up</button><button class="btn ghost sm" id="cancel-session">Cancel catch-up</button></div>`:`<div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div>`}</div>`;
   h+=briefHTML(relevant);
   const myA=(profile.asis||[]).map(id=>ASIS.find(a=>a.id===id)).filter(Boolean);
   h+=`<div class="areas"><div class="h"><span>Going deep</span><a href="#" id="toareas" class="lead">${myA.length?"change":"choose up to three"}</a></div>${myA.length?`<div class="asigrid">${myA.map(a=>`<button class="asi on" data-asi="${a.id}" data-open><div class="h"><span>${esc(a.t)}</span><span class="lead">${asiXP(a)} XP</span></div></button>`).join("")}</div>`:`<p class="lead" style="margin:0">Pick areas of specific interest under Settings. Each shows the extra minutes it adds to your week.</p>`}</div>`;
@@ -1563,6 +1563,7 @@ function renderToday(){
   s.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{todayFilter=b.dataset.f;renderToday();});
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
   const resume=s.querySelector("#resume-session");if(resume)resume.onclick=()=>{drawSession();};
+  const cancel=s.querySelector("#cancel-session");if(cancel)cancel.onclick=()=>cancelSession(session);
   s.querySelector("#brief").onclick=briefing;
   s.querySelector("#nuis").onclick=renderNuisance;const os=s.querySelector("#opensaved");if(os)os.onclick=renderSaved;s.querySelector("#opensubs").onclick=renderSubs;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
   s.querySelector("#toareas").onclick=e=>{e.preventDefault();show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
@@ -1905,6 +1906,7 @@ function renderSession(mins){
   drawSession();
 }
 function returnFromSession(S){if(S.from==="today"){renderToday();show("today");requestAnimationFrame(()=>window.scrollTo(0,S.fromScroll||0));}else show(S.from);}
+function cancelSession(S){if(!S)return;clearInterval(sessT);session=null;returnFromSession(S);}
 function drawSession(){
   const S=session;if(!S)return;const s=document.getElementById("s-detail");
   const pick=S.ids.map(id=>ITEMS.find(x=>x.id===id)).filter(Boolean);const read=pick.filter(it=>game.got["read:"+it.id]);
@@ -1914,10 +1916,10 @@ function drawSession(){
   ${pick.map(it=>card(it).replace('<div class="meta">',`<div class="meta"><span class="lead">${minsFor(it)} min${game.got["read:"+it.id]?" · ✓ read":""}</span>`)).join("")}
   ${S.more>0?`<p class="note">${S.more} more unread after this session; about ${S.moreMins} minutes.</p>`:""}
   <h2>If there's time left</h2>${extra.map(e=>`<div class="live"><div class="st"><span>${esc(e.t)}</span><span class="lead">${e.m} min</span></div></div>`).join("")}
-  <div class="row" style="margin-top:12px"><button class="btn ghost sm" id="endsess">End session</button></div>
+  <div class="row" style="margin-top:12px"><button class="btn ghost sm" id="endsess">Cancel catch-up</button></div>
   <p class="mantra">${esc(mantra())}</p>`;
   s.querySelector("#back").onclick=()=>returnFromSession(S);
-  s.querySelector("#endsess").onclick=()=>{clearInterval(sessT);session=null;returnFromSession(S);};
+  s.querySelector("#endsess").onclick=()=>cancelSession(S);
   bindCards(s);tickSession();
   clearInterval(sessT);sessT=setInterval(tickSession,500);
   show("detail");window.scrollTo(0,0);
