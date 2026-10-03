@@ -1748,8 +1748,8 @@ function renderTimeline(it){
   const dots=el.querySelectorAll(".tl-dot"),rng=el.querySelector("input");
   // fix dot positions precisely once laid out
   const place=()=>{const w=el.querySelector(".tl-track").clientWidth-14;dots.forEach((d,i)=>d.style.left=(7+i/(ev.length-1||1)*w)+"px");};
-  function go(i){const e=ev[i];dots.forEach((d,j)=>d.setAttribute("aria-pressed",j===i));rng.value=i;award("tl:"+it.id+":"+i,2,"Timeline");
-    document.getElementById("tlc").innerHTML=`<div class="d"><span class="pill ${e.s==="now"?"inforce":e.s==="coming"?"coming":e.s==="proposed"?"proposed":"notice"}">${e.s==="now"?"In force":e.s==="coming"?"Coming":e.s==="proposed"?"Proposed":"Earlier"}</span> ${esc(e.d)}</div><div class="t">${esc(e.t)}</div><p class="b">${abbrHTML(register==="kid"?e.k:e.a)}</p><div class="s">Source: ${abbrHTML(e.src)}</div>`;bindAbbr(document.getElementById("tlc"));}
+  function go(i){const tlc=document.getElementById("tlc");if(!tlc||!el.isConnected)return;const e=ev[i];dots.forEach((d,j)=>d.setAttribute("aria-pressed",j===i));rng.value=i;award("tl:"+it.id+":"+i,2,"Timeline");
+    tlc.innerHTML=`<div class="d"><span class="pill ${e.s==="now"?"inforce":e.s==="coming"?"coming":e.s==="proposed"?"proposed":"notice"}">${e.s==="now"?"In force":e.s==="coming"?"Coming":e.s==="proposed"?"Proposed":"Earlier"}</span> ${esc(e.d)}</div><div class="t">${esc(e.t)}</div><p class="b">${abbrHTML(register==="kid"?e.k:e.a)}</p><div class="s">Source: ${abbrHTML(e.src)}</div>`;bindAbbr(document.getElementById("tlc"));}
   dots.forEach(d=>d.onclick=()=>go(+d.dataset.i));rng.oninput=()=>go(+rng.value);
   // drag anywhere on the track, snapping to the nearest point
   const track=el.querySelector(".tl-track");let drag=false;
@@ -1757,7 +1757,7 @@ function renderTimeline(it){
   track.addEventListener("pointerdown",e=>{drag=true;track.setPointerCapture(e.pointerId);const i=at(e.clientX);if(+rng.value!==i)go(i);e.preventDefault();});
   track.addEventListener("pointermove",e=>{if(!drag)return;const i=at(e.clientX);if(+rng.value!==i)go(i);});
   const stop=()=>{drag=false};track.addEventListener("pointerup",stop);track.addEventListener("pointercancel",stop);
-  requestAnimationFrame(()=>{place();go(idx);});window.addEventListener("resize",place);
+  requestAnimationFrame(()=>{if(!el.isConnected)return;place();go(idx);});window.addEventListener("resize",()=>{if(el.isConnected)place();});
 }
 function renderQuiz(it){
   const q=document.getElementById("quiz");let i=0,score=0;
