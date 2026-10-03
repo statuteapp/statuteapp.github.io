@@ -130,6 +130,17 @@ p{margin:0 0 12px}
 .asi.on{border-color:var(--ink)}
 .asi .h{font-weight:700;display:flex;justify-content:space-between;gap:8px}
 .asi .why{font-size:14px;color:var(--slate);margin:2px 0 0}
+.asigrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:8px 0}
+.asigrid .asi{margin:0;padding:10px 12px;height:100%}
+.asigrid .asi .h{flex-direction:column;align-items:flex-start;gap:2px}
+.budgetline{display:flex;justify-content:space-between;gap:8px;font-size:14.5px;padding:6px 0;border-bottom:1px solid var(--paper-3)}
+.areas{border:1.5px solid var(--paper-3);border-radius:8px;padding:10px 12px;margin:0 0 14px}
+.areas>.h{display:flex;justify-content:space-between;font-weight:700;margin-bottom:4px}
+.set{border-top:1px solid var(--paper-3);padding:14px 0 6px;margin-top:6px;scroll-margin-top:calc(70px + env(safe-area-inset-top,0px))}
+.set h2{margin-top:0}
+.setnav{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 10px}
+.setnav a{font-size:13px;font-weight:700;text-decoration:none;color:var(--ink);border:1.5px solid var(--paper-3);border-radius:999px;padding:4px 10px}
+.chkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:0 10px}
 .live{background:var(--paper-2);border-radius:8px;padding:10px 12px;margin:0 0 8px;font-size:15px}
 .live .st{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .live .ok{color:var(--green);font-weight:700}.live .warn{color:var(--amber);font-weight:700}
@@ -373,7 +384,6 @@ nav.tabs .inner{grid-template-columns:repeat(7,1fr)}
 nav.tabs button{font-size:10.5px;padding:9px 1px 7px;gap:2px}
 nav.tabs button span.ico{width:20px;height:20px}
 nav.tabs button[data-t="map"] span.ico{border-radius:50% 50% 50% 0;transform:rotate(-45deg);width:16px;height:16px;margin:2px}
-nav.tabs button[data-t="depth"] span.ico{border-radius:2px;border-width:2px;background:linear-gradient(transparent 55%,currentColor 55%)}
 nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg);width:18px;height:18px;margin:2px}
 @media (prefers-reduced-motion: no-preference){.screen.active{animation:in .18s ease-out}@keyframes in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}}
 </style>
@@ -389,9 +399,8 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
   <section class="screen" id="s-map" aria-label="Map"></section>
   <section class="screen" id="s-horizon" aria-label="Horizon"></section>
   <section class="screen" id="s-catchup" aria-label="Catch up"></section>
-  <section class="screen" id="s-depth" aria-label="Depth"></section>
   <section class="screen" id="s-play" aria-label="Play"></section>
-  <section class="screen" id="s-me" aria-label="Me"></section>
+  <section class="screen" id="s-me" aria-label="Settings"></section>
   <section class="screen" id="s-detail" aria-label="Item"></section>
 </main>
 <nav class="tabs" aria-label="Sections"><div class="inner">
@@ -399,9 +408,8 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
   <button data-t="map"><span class="ico"></span>Map</button>
   <button data-t="horizon"><span class="ico"></span>Horizon</button>
   <button data-t="catchup"><span class="ico"></span>Catch up</button>
-  <button data-t="depth"><span class="ico"></span>Depth</button>
   <button data-t="play"><span class="ico"></span>Play</button>
-  <button data-t="me"><span class="ico"></span>Me</button>
+  <button data-t="me"><span class="ico"></span>Settings</button>
 </div></nav>
 <div class="onb" id="onb" hidden></div>
 <div class="toast" id="toast" aria-live="polite"></div>
@@ -409,7 +417,7 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
 </div>
 <script>
 // ---------- Data: situations, items, history ----------
-const TODAY = new Date("2026-10-02T09:00:00+01:00");
+const TODAY = new Date();
 const SITS = [
  ["driver","I drive"],["passenger","I use buses, trains or taxis"],["vaper","I vape or smoke"],["employee","I'm employed"],["selfemp","I'm self-employed or run a business"],
  ["tenant","I rent my home"],["owner","I own my home"],["landlord","I let out property"],["parent_infant","I have a baby (under 1)"],["parent_child","I have children (1–17)"],
@@ -1223,7 +1231,9 @@ function renderOnb(){
   <div class="modes">${Object.entries(MODES).map(([k,m],i)=>`<button type="button" data-mode="${k}" aria-pressed="${i===0}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div>
   <h3>Who's reading</h3>
   <div class="seg" role="group" aria-label="Register"><button data-r="adult" aria-pressed="true">Adult</button><button data-r="kid" aria-pressed="false">Under 16</button></div>
-  <p class="note">Everyone gets energy, council and UK-wide items regardless of situations. Nothing here is sent anywhere; it stays in your browser.</p>
+  <h3>You, as a mini government</h3><p class="lede" style="margin-bottom:4px">Optional. Your take-home against the UK budget's proportions: a mirror for what you've decided matters, and the base for the "what if you got caught" figures. Stays on this device.</p>
+  <div class="field"><label for="inc0">Monthly take-home, £</label><input id="inc0" type="number" inputmode="decimal" placeholder="e.g. 2400" step="50"></div>
+  <p class="note">Everyone gets energy, council and UK-wide items regardless of situations. Nothing here is sent anywhere; it stays in your browser. You can change all of this later under Settings.</p>
   <button class="btn" id="go">Build my feed</button>`;
   let mode="keep";o.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{o.querySelectorAll(".modes button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");mode=b.dataset.mode;});
   o.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{o.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");register=b.dataset.r;});
@@ -1241,7 +1251,7 @@ function renderOnb(){
     const sits=[...o.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(i=>i.value);const interests=[...o.querySelectorAll("input[data-int]:checked")].map(i=>i.value);
     const arr=o.querySelector("#arr").value; if(arr&&!sits.includes("newcomer"))sits.push("newcomer");
     const pc=pcIn.value.trim().toUpperCase();const hits=o._pcHits();const g=hits.length===1?hits[0]:null;const role=(o.querySelector("#role")||{}).value||"none";
-    confirmCouncil(g,pc,c=>{profile={postcode:pc.split(" ")[0]||pc,council:c.n,region:c.r,nation:c.nat,arrived:arr||null,sits,interests,role,mode,asis:[]};save();o.hidden=true;renderAll();show("today");},hits);
+    confirmCouncil(g,pc,c=>{profile={postcode:pc.split(" ")[0]||pc,council:c.n,region:c.r,nation:c.nat,arrived:arr||null,sits,interests,role,mode,asis:[],income:+(o.querySelector("#inc0").value)||0};save();o.hidden=true;renderAll();show("today");},hits);
   };
 }
 function confirmCouncil(g,pc,cb,hits){
@@ -1289,6 +1299,8 @@ function renderToday(){
   h+=`<div class="dyk"><span class="pill kind law" style="margin-bottom:4px">Still on the books</span><div class="t">${esc(dyk.t)}</div><div>${esc(dyk.b)}</div><div class="src">${esc(dyk.src)}</div></div>`;
   h+=`<div class="clock"><div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div></div>`;
   h+=briefHTML(relevant);
+  const myA=(profile.asis||[]).map(id=>ASIS.find(a=>a.id===id)).filter(Boolean);
+  h+=`<div class="areas"><div class="h"><span>Going deep</span><a href="#" id="toareas" class="lead">${myA.length?"change":"choose up to three"}</a></div>${myA.length?`<div class="asigrid">${myA.map(a=>`<button class="asi on" data-asi="${a.id}" data-open><div class="h"><span>${esc(a.t)}</span><span class="lead">${asiXP(a)} XP</span></div></button>`).join("")}</div>`:`<p class="lead" style="margin:0">Pick areas of specific interest under Settings. Each shows the extra minutes it adds to your week.</p>`}</div>`;
   h+=`<div class="chips" role="group" aria-label="Show"><button data-f="all" aria-pressed="${todayFilter==="all"}">Everything</button><button data-f="law" aria-pressed="${todayFilter==="law"}">Law only</button><button data-f="act" aria-pressed="${todayFilter==="act"}">Needs action</button><button data-f="update" aria-pressed="${todayFilter==="update"}">Just updates</button></div>`;
   const pass=it=>todayFilter==="all"||(todayFilter==="law"&&it.kind==="law")||(todayFilter==="act"&&tierFor(it).tier==="must")||(todayFilter==="update"&&["update","rates","consult","alert"].includes(it.kind));
   for(const L of LEVELS){
@@ -1308,6 +1320,8 @@ function renderToday(){
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
   s.querySelector("#brief").onclick=briefing;
   s.querySelector("#nuis").onclick=renderNuisance;
+  s.querySelector("#toareas").onclick=e=>{e.preventDefault();show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
+  s.querySelectorAll(".areas .asi").forEach(b=>b.onclick=()=>renderASI(b.dataset.asi));
   s.querySelectorAll("[data-meas]").forEach(b=>b.onclick=()=>renderMeasure(b.dataset.meas));
   s.querySelectorAll("[data-map]").forEach(b=>b.onclick=e=>{e.stopPropagation();zoneSel=null;b.dataset.map==="local"?renderMap():renderZoneMap(b.dataset.map);});
 }
@@ -1398,26 +1412,34 @@ function renderCatchup(){
 
 // ---------- Me ----------
 function renderMe(){
-  const s=document.getElementById("s-me");
-  s.innerHTML=`<h1>Your situations.</h1><p class="lede">Facts, not preferences. Change these when life changes and the feed changes with it.</p>
-  <div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><button class="btn ghost sm" id="chgc" style="margin-top:8px">Change council</button> <button class="btn ghost sm" id="omap" style="margin-top:8px">Local map</button></div>
-  <div class="field"><label for="occ">Your work</label><div class="lead" style="margin-bottom:4px">Now: <b>${esc(ROLES[profile.role||"none"].title)}</b></div><input id="occ" placeholder="Change: type a job" autocomplete="off"><div id="occlist"></div><input type="hidden" id="role" value="${profile.role||"none"}"></div>
-  ${SITS.map(([k,l])=>`<label class="chk"><input type="checkbox" value="${k}" ${has(k)?"checked":""}>${l}</label>`).join("")}
-  <h3>Interests</h3>${INTERESTS.map(([k,l])=>`<label class="chk"><input type="checkbox" data-int value="${k}" ${(profile.interests||[]).includes(k)?"checked":""}>${l}</label>`).join("")}
-  <div class="field" style="margin-top:14px"><label>Topics</label><div>${Object.keys(TOPIC).length-muted().length} of ${Object.keys(TOPIC).length} on</div><button class="btn ghost sm" id="mtop" style="margin-top:8px">Choose what to mute</button></div>
-  <h3>Who's reading</h3><div class="seg" role="group"><button data-r="adult" aria-pressed="${register==="adult"}">Adult</button><button data-r="kid" aria-pressed="${register==="kid"}">Under 16</button></div>
-  <div class="field"><label>Scope</label><div>England<span class="lead" style="display:block">Scotland, Wales and Northern Ireland follow once the England feeds are solid. Devolved law, separate courts and registers mean each is its own build, not a toggle.</span></div></div>
-  <h2>Sources</h2><div class="tw"><table><tr><th>Source</th><th>Used for</th></tr><tr><td>legislation.gov.uk</td><td>Acts, regulations, extent, commencement, explanatory notes. Atom and XML feeds.</td></tr><tr><td>bills.parliament.uk</td><td>Bills in progress, stages, amendments. JSON API.</td></tr><tr><td>GOV.UK</td><td>Guidance, rate tables, alerts and announcements. The Content API returns each page as structured data, so tables render inside the card rather than as a link.</td></tr><tr><td>Your council</td><td>Traffic and protection orders, byelaws, licensing. Public Notice Portal.</td></tr></table></div>
-  <h2>Where your data lives</h2><p style="font-size:15px">Only here, on this device. The feed is public and the same for everyone; your phone does the matching. Nothing about you is sent to a server, so there is no account, no profile held by anyone else, and nothing to request or delete. If you back up your phone, that backup is yours. The app never asks for religion, ethnicity or sexual orientation because no obligation depends on them.</p>
-  <p class="note">Nothing you enter leaves your device in this prototype. A future version could verify facts with GOV.UK One Login or the GOV.UK Wallet where those open to third parties.</p>
-  <div class="row"><button class="btn ghost" id="reset">Start again</button></div>`;
-  s.querySelectorAll("input[type=checkbox]:not([data-int])").forEach(i=>i.onchange=()=>{profile.sits=[...s.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(x=>x.value);save();renderAll();renderMe();});
-  s.querySelectorAll("input[data-int]").forEach(i=>i.onchange=()=>{profile.interests=[...s.querySelectorAll("input[data-int]:checked")].map(x=>x.value);save();renderAll();renderMe();});
-  s.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{register=b.dataset.r;save();renderAll();renderMe();});
-  s.querySelector("#mtop").onclick=renderTopics;s.querySelector("#omap").onclick=renderMap;
-  bindOcc(s);s.querySelector("#role").onchange=()=>{profile.role=s.querySelector("#role").value;save();renderAll();renderMe();};
+  const s=document.getElementById("s-me");profile.asis=profile.asis||[];profile.mode=profile.mode||"keep";
+  const sec=(id,t,d,body)=>`<section class="set" id="${id}"><h2>${t}</h2>${d?`<p class="lede">${d}</p>`:""}${body}</section>`;
+  s.innerHTML=`<h1>Settings.</h1><p class="lede">Facts, not preferences. Change these when life changes and the feed changes with it. Everything here stays on this device.</p>
+  <div class="setnav">${[["where","Where you live"],["work","Work & situations"],["reading","Reading"],["topics","Topics"],["deep","Go deep"],["gov","Mini government"],["data","Your data"]].map(([k,l])=>`<a href="#${k}">${l}</a>`).join("")}</div>
+  ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div></div>
+  <div class="field"><label>Scope</label><div>England<span class="lead" style="display:block">Scotland, Wales and Northern Ireland follow once the England feeds are solid.</span></div></div>`)}
+  ${sec("work","Work & situations","Tick everything that's true. Each one carries its own rules.",`<div class="field"><label for="occ">Your work</label><div class="lead" style="margin-bottom:4px">Now: <b>${esc(ROLES[profile.role||"none"].title)}</b></div><input id="occ" placeholder="Change: type a job" autocomplete="off"><div id="occlist"></div><input type="hidden" id="role" value="${profile.role||"none"}"></div>
+  <div class="chkgrid">${SITS.map(([k,l])=>`<label class="chk"><input type="checkbox" value="${k}" ${has(k)?"checked":""}>${l}</label>`).join("")}</div>
+  <h3>Interests</h3><div class="chkgrid">${INTERESTS.map(([k,l])=>`<label class="chk"><input type="checkbox" data-int value="${k}" ${(profile.interests||[]).includes(k)?"checked":""}>${l}</label>`).join("")}</div>`)}
+  ${sec("reading","Reading","",`<div class="field"><label>Who's reading</label><div class="seg" role="group"><button data-r="adult" aria-pressed="${register==="adult"}">Adult</button><button data-r="kid" aria-pressed="${register==="kid"}">Under 16</button></div></div>
+  <div class="field"><label>What you want from this</label><div class="modes">${Object.entries(MODES).map(([k,m])=>`<button data-mode="${k}" aria-pressed="${profile.mode===k}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div></div>`)}
+  ${sec("topics","Topics","All topics are on by default. Anything that places a duty on you gets through regardless of what you mute.",`<div class="field"><div>${Object.keys(TOPIC).length-muted().length} of ${Object.keys(TOPIC).length} on</div><button class="btn ghost sm" id="mtop" style="margin-top:8px">Choose what to mute</button></div>`)}
+  ${sec("deep","Go deep","Choose up to three areas of specific interest. Each adds reading time on top of your general updates, so the cost is shown before you pick.",`<div id="asipick">${asiPickerHTML({openable:true})}</div>`)}
+  ${sec("gov","You, as a mini government","Your take-home against the UK budget's proportions. A lens, not advice. The figure never leaves this device.",`<div class="field"><label for="inc">Your monthly take-home, £</label><input id="inc" type="number" inputmode="decimal" value="${profile.income||""}" placeholder="e.g. 2400" step="50"></div><button class="btn ghost sm" id="budget">Open the mirror</button>`)}
+  ${sec("data","Your data","",`<p style="font-size:15px">Only here, on this device. The feed is public and the same for everyone; your phone does the matching. Nothing about you is sent to a server, so there is no account, no profile held by anyone else, and nothing to request or delete. The app never asks for religion, ethnicity or sexual orientation because no obligation depends on them.</p>
+  <h3>Sources</h3><div class="tw"><table><tr><th>Source</th><th>Used for</th></tr><tr><td>legislation.gov.uk</td><td>Acts, regulations, extent, commencement, explanatory notes.</td></tr><tr><td>bills.parliament.uk</td><td>Bills in progress, stages, amendments.</td></tr><tr><td>GOV.UK</td><td>Guidance, rate tables, alerts and announcements.</td></tr><tr><td>Your council</td><td>Traffic and protection orders, byelaws, licensing. Public Notice Portal.</td></tr><tr><td>postcodes.io</td><td>ONS Postcode Directory, to find your council from a postcode.</td></tr></table></div>
+  <div class="row" style="margin-top:12px"><button class="btn ghost" id="reset">Start again</button></div>`)}`;
+  s.querySelectorAll("input[type=checkbox]:not([data-int])").forEach(i=>i.onchange=()=>{profile.sits=[...s.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(x=>x.value);save();renderAll();});
+  s.querySelectorAll("input[data-int]").forEach(i=>i.onchange=()=>{profile.interests=[...s.querySelectorAll("input[data-int]:checked")].map(x=>x.value);save();renderAll();});
+  s.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{register=b.dataset.r;save();renderAll();});
+  s.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{profile.mode=b.dataset.mode;save();renderAll();});
+  s.querySelector("#mtop").onclick=renderTopics;s.querySelector("#omap").onclick=renderMap;s.querySelector("#budget").onclick=renderBudget;
+  s.querySelector("#inc").onchange=e=>{profile.income=+e.target.value||0;save();};
+  const refreshPick=()=>{s.querySelector("#asipick").innerHTML=asiPickerHTML({openable:true});bindAsiPick(s,refreshPick);renderToday();};bindAsiPick(s,refreshPick);
+  bindOcc(s);s.querySelector("#role").onchange=()=>{profile.role=s.querySelector("#role").value;save();renderAll();};
   s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;save();document.getElementById("onb").hidden=true;renderAll();show("me");});
-  s.querySelector("#reset").onclick=()=>{profile=null;done={};quizDone={};game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};try{localStorage.clear()}catch(e){}renderOnb();};
+  s.querySelector("#reset").onclick=()=>{if(!confirm("Clear everything on this device and start again?"))return;profile=null;done={};quizDone={};game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};try{localStorage.clear()}catch(e){}renderOnb();};
+  s.querySelectorAll(".setnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=s.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});
 }
 
 // ---------- Detail ----------
@@ -1495,20 +1517,17 @@ function speak(it){
 // ---------- Depth: ASIs ----------
 function asiXP(a){return Object.keys(game.got).filter(k=>k.startsWith("asi:"+a.id+":")).length*10+a.law.filter(id=>game.got["read:"+id]).length*10;}
 function rungOpen(a,i){const x=asiXP(a);return [0,20,40,60,80][i]<=x;}
-function renderDepth(){
-  const s=document.getElementById("s-depth");profile.asis=profile.asis||[];profile.mode=profile.mode||"keep";
-  const mine=ASIS.filter(a=>profile.asis.includes(a.id));
-  const reads={};ITEMS.forEach(it=>{if(game.got["read:"+it.id])(it.tags||[]).forEach(t=>reads[t]=(reads[t]||0)+1);});
-  const why=a=>{const f=a.fit.filter(k=>has(k)||profile.role===k);const r=a.tags.reduce((n,t)=>n+(reads[t]||0),0);if(f.length)return "Fits "+f.map(k=>SIT_LABEL[k]||ROLES[k].title).join(", ").toLowerCase();if(r)return "You've read "+r+" item"+(r>1?"s":"")+" here";return profile.mode==="next"?"Leads to work near you":"Something new";};
-  let h2=`<h1>Go deep on something.</h1><p class="lede">An area of specific interest is a ladder: the law, then what's live, then where the data comes from, then the science behind it, then the work it leads to. Every rung is a government source.</p>
-  <h3>What you want from this</h3><div class="modes">${Object.entries(MODES).map(([k,m])=>`<button data-mode="${k}" aria-pressed="${profile.mode===k}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div>
-  <h3>The nation as a mirror</h3><button class="asi" id="budget"><div class="h"><span>You, as a mini government</span><span class="lead">open</span></div><p class="why">Your take-home against the UK budget's proportions. A lens, not advice.</p></button>
-  <h3>${mine.length?"Your areas":"Choose up to three"}</h3>${ASIS.map(a=>`<button class="asi ${profile.asis.includes(a.id)?"on":""}" data-asi="${a.id}"><div class="h"><span>${esc(a.t)}</span><span class="lead">${profile.asis.includes(a.id)?asiXP(a)+" XP · open":"choose"}</span></div><p class="why">${esc(why(a))}</p></button>`).join("")}`;
-  s.innerHTML=h2;
-  s.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{profile.mode=b.dataset.mode;save();renderDepth();});
-  s.querySelector("#budget").onclick=renderBudget;
-  s.querySelectorAll(".asi").forEach(b=>b.onclick=()=>{const id=b.dataset.asi;if(profile.asis.includes(id)){renderASI(id);return;}if(profile.asis.length>=3){toast("Three at a time. Drop one first.");return;}profile.asis.push(id);save();award("asi:"+id+":chosen",10,"New area");renderDepth();renderASI(id);});
-}
+// Time cost: what an area adds to the week, on top of the general feed
+function asiCost(a){return Math.round((a.live||[]).length*1+(a.learn||[]).length*3+(a.sources||[]).length*0.5+((a.law||[]).length*1));}
+function weeklyGeneral(){const wk=ITEMS.filter(it=>tierFor(it)&&it.status!=="past"&&daysTo(it.date)>-7&&daysTo(it.date)<=0);return Math.max(3,wk.reduce((n,it)=>n+minsFor(it),0));}
+function asiWhy(a){const reads={};ITEMS.forEach(it=>{if(game.got["read:"+it.id])(it.tags||[]).forEach(t=>reads[t]=(reads[t]||0)+1);});const f=a.fit.filter(k=>has(k)||profile.role===k);const r=a.tags.reduce((n,t)=>n+(reads[t]||0),0);if(f.length)return "Fits: "+f.map(k=>SIT_LABEL[k]||(ROLES[k]||{}).title||k).join(", ");if(r)return "You've read "+r+" item"+(r>1?"s":"")+" here";return (profile.mode||"keep")==="next"?"Leads to work near you":"Something new";}
+function bindAsiPick(root,after){root.querySelectorAll(".asi[data-asi]").forEach(b=>b.onclick=()=>{const id=b.dataset.asi;profile.asis=profile.asis||[];
+  if(profile.asis.includes(id)){if(b.dataset.open!==undefined){renderASI(id);return;}profile.asis=profile.asis.filter(z=>z!==id);save();after();return;}
+  if(profile.asis.length>=3){toast("Three at a time. Drop one first.");return;}profile.asis.push(id);save();award("asi:"+id+":chosen",10,"New area");after();});}
+function asiPickerHTML(opts){opts=opts||{};profile.asis=profile.asis||[];const gen=weeklyGeneral();const extra=profile.asis.reduce((n,id)=>{const a=ASIS.find(x=>x.id===id);return n+(a?asiCost(a):0);},0);
+  return `<div class="budgetline"><span>Your general updates</span><b>about ${gen} min a week</b></div><div class="budgetline"><span>Going deep (${profile.asis.length} of 3)</span><b>+${extra} min a week</b></div>
+  <div class="asigrid">${ASIS.map(a=>{const on=profile.asis.includes(a.id);return `<button class="asi ${on?"on":""}" data-asi="${a.id}" ${on&&opts.openable?"data-open":""}><div class="h"><span>${esc(a.t)}</span><span class="lead">${on?(opts.openable?asiXP(a)+" XP · open":"✓ chosen"):"+"+asiCost(a)+" min/wk"}</span></div><p class="why">${esc(asiWhy(a))}</p></button>`;}).join("")}</div>
+  <p class="note">Each area is a ladder: the law, what's live, the sources, the mechanism, the work it leads to. The minutes are a reading estimate for one pass a week; nothing is pushed to you unless it places a duty on you.</p>`;}
 function renderASI(id){
   const a=ASIS.find(x=>x.id===id);const s=document.getElementById("s-detail");const next=profile.mode==="next";
   const rungs=[
@@ -1527,7 +1546,7 @@ function renderASI(id){
   s.querySelectorAll("[data-aw]").forEach(b=>b.onclick=()=>{award("asi:"+a.id+":"+b.dataset.aw,10,"Deeper");renderASI(id);});
   a.learn.forEach((L,i)=>{const q=s.querySelector("#lq"+i);if(!q)return;const Q=L.q;q.innerHTML=`<p class="q">${esc(Q.q)}</p>`+Q.o.map((o,j)=>`<button class="opt" data-j="${j}">${esc(o)}</button>`).join("")+`<div class="exp"></div>`;
     q.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{q.querySelectorAll(".opt").forEach(x=>x.disabled=true);if(+b.dataset.j===Q.a){b.classList.add("correct");sfx("ok");award("asi:"+a.id+":lesson"+i,10,"Lesson");}else{b.classList.add("wrong");q.querySelector(`.opt[data-j="${Q.a}"]`).classList.add("correct");sfx("no");}q.querySelector(".exp").textContent=Q.e;setTimeout(()=>renderASI(id),1200);});});
-  s.querySelector("#drop").onclick=()=>{profile.asis=profile.asis.filter(z=>z!==id);save();renderDepth();show("depth");};
+  s.querySelector("#drop").onclick=()=>{profile.asis=profile.asis.filter(z=>z!==id);save();renderAll();show("me");};
   show("detail");window.scrollTo(0,0);
 }
 
@@ -1780,7 +1799,7 @@ function show(t){
 }
 function bindCards(root){root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest(".tag")||c.dataset.pin!==undefined)return;e.preventDefault();renderDetail(c.dataset.id);}));bindTags(root);}
 function bindTags(root){root.querySelectorAll(".tag").forEach(t=>t.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();renderTopic(t.dataset.tag);}));}
-function renderAll(){renderToday();renderHorizon();renderCatchup();renderDepth();renderPlay();renderMe();renderRank();if(document.querySelector("nav.tabs button[data-t=map][aria-current]"))renderMapTab();}
+function renderAll(){renderToday();renderHorizon();renderCatchup();renderPlay();renderMe();renderRank();if(document.querySelector("nav.tabs button[data-t=map][aria-current]"))renderMapTab();}
 document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(b.dataset.t));
 // ---------- Game layer ----------
 let game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};
@@ -1816,7 +1835,7 @@ function briefMissions(relevant){
   return [
    {id:"read",t:top?`Read "${top.title}"`:"Read one item",x:"+10",done:()=>top?game.got["read:"+top.id]:false,go:()=>top&&renderDetail(top.id)},
    {id:"tl",t:"Scrub a timeline end to end",x:"+2 a step",done:()=>ITEMS.some(it=>it.timeline.every((_,i)=>game.got["tl:"+it.id+":"+i])),go:()=>top&&renderDetail(top.id)},
-   {id:"asi",t:(profile.asis&&profile.asis.length)?"Climb a rung in "+ASIS.find(a=>a.id===profile.asis[0]).t:"Choose an area of specific interest",x:"+10",done:()=>!!(profile.asis&&profile.asis.length&&Object.keys(game.got).some(k=>k.startsWith("asi:")&&!k.endsWith("chosen"))),go:()=>{show("depth");}},
+   {id:"asi",t:(profile.asis&&profile.asis.length)?"Climb a rung in "+ASIS.find(a=>a.id===profile.asis[0]).t:"Choose an area of specific interest",x:"+10",done:()=>!!(profile.asis&&profile.asis.length&&Object.keys(game.got).some(k=>k.startsWith("asi:")&&!k.endsWith("chosen"))),go:()=>{if(profile.asis&&profile.asis.length)renderASI(profile.asis[0]);else{show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);}}},
    {id:"lol",t:"Play a round of Law or Lore",x:"+10 a hit",done:()=>!!game.brief.lol,go:()=>{show("play");startLoL();}}
   ];
 }
@@ -1913,8 +1932,8 @@ if(profile){renderAll();}else{renderOnb();}
   document.body.appendChild(hud);
   const style=document.createElement("style");style.textContent=".pad-focus{outline:3px solid #ffdd00 !important;outline-offset:0;box-shadow:0 0 0 6px var(--ink) !important}";document.head.appendChild(style);
   let active=false,prev={},rep={},focusEl=null,lastMove=0;
-  const TABS=["today","map","horizon","catchup","depth","play","me"];
-  const tabName={today:"Today",map:"Map",horizon:"Horizon",catchup:"Catch up",depth:"Depth",play:"Play",me:"Me"};
+  const TABS=["today","map","horizon","catchup","play","me"];
+  const tabName={today:"Today",map:"Map",horizon:"Horizon",catchup:"Catch up",play:"Play",me:"Settings"};
   function focusables(){
     const root=document.getElementById("onb").hidden?document.querySelector(".screen.active"):document.getElementById("onb");
     const list=[...root.querySelectorAll("button,a[href],input,select,summary,[role=button]")].filter(el=>!el.disabled&&el.offsetParent!==null);
