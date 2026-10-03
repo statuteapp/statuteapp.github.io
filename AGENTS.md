@@ -30,5 +30,5 @@
 ## Current priorities
 
 - The full 36-page pilot review is in the owner-provided test plan; treat it as the product backlog, including ideas, blocked rows and untested features.
-- Main through Round 18 includes Today/Catch-up, status wording, legislation PDF, return-path, selection readability, accessibility text-size and full-history print/PDF updates. Check the latest private round notes for exact status and retests.
+- Main through Round 19 includes Today/Catch-up, status wording, legislation PDF, return-path, selection readability, accessibility text-size, full-history print/PDF and local/GOV.UK global search. The browser API request and phone behavior still need retesting. Check the latest private round notes for exact status and retests.
 - Continue with small, documented rounds. The public-service directory must cover relevant councils, police, NHS/hospitals, fire and rescue, schools, libraries and other selected local services across England, Scotland, Wales and Northern Ireland in that order.
