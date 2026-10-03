@@ -82,12 +82,12 @@ abbr.ab{text-decoration:underline dotted;text-underline-offset:2px;cursor:pointe
   body,.app{background:#fff;color:#000}.app{max-width:none}
   .screen{display:none}.screen.active{display:block;padding:0}
   .card{break-inside:avoid;border:1px solid #999;border-left-width:6px;box-shadow:none}
-  a{color:#000;text-decoration:none}a[href^="http"]::after{content:" (" attr(href) ")";font-size:0.6875rem;color:#444}
+  a{color:#000;text-decoration:none}a[href^="http"]::after{content:" [link: " attr(href) "]";font-size:.6875rem;color:#333;word-break:break-all}.tl-track,.tl-hint,.tl-years,.tl-card{display:none !important}.print-timeline{display:block !important}.print-event{break-inside:avoid;border-top:1px solid #999;padding:8px 0}.print-event h3{font-size:1rem;margin:4px 0}.print-event p{font-size:.875rem;margin:3px 0}
   details.rib{break-inside:avoid}
   .printhead{display:block !important;font-size:0.75rem;color:#444;border-bottom:1px solid #999;margin-bottom:12px;padding-bottom:6px}
   .printfoot{display:block !important;font-size:0.6875rem;color:#444;border-top:1px solid #999;margin-top:16px;padding-top:6px}
 }
-.printhead,.printfoot{display:none}
+.printhead,.printfoot,.print-timeline{display:none}
 .skip{position:absolute;left:-999px;top:8px;z-index:20;background:var(--ink);color:var(--paper);padding:8px 12px;border-radius:4px}.skip:focus{left:8px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 h1:focus{outline:none}
@@ -1766,7 +1766,7 @@ function renderDetail(id,backCtx){
 function renderTimeline(it){
   const el=document.getElementById("tl");const ev=it.timeline;let idx=Math.max(0,ev.findIndex(e=>e.s==="now"));if(ev[idx]&&ev[idx].s!=="now")idx=ev.length-1;
   el.innerHTML=`<div class="tl-track"><div class="line"></div>${ev.map((e,i)=>`<button class="tl-dot ${e.s}" style="left:calc(7px + ${i/(ev.length-1||1)*100}% * ${(1-14/300)})" data-i="${i}" aria-label="${esc(e.d)} ${esc(e.t)}" aria-pressed="false" tabindex="-1"></button>`).join("")}<input type="range" class="tl-range" min="0" max="${ev.length-1}" value="${idx}" aria-label="Move along the timeline"></div>
-  <div class="tl-hint">${ev.length>1?"Drag along the line, or tap a point":""}</div><div class="tl-years"><span>${esc(ev[0].d.split(" ").pop())}</span><span>${esc(ev[ev.length-1].d.split(" ").pop())}</span></div><div class="tl-card" id="tlc"></div>`;
+  <div class="tl-hint">${ev.length>1?"Drag along the line, or tap a point":""}</div><div class="tl-years"><span>${esc(ev[0].d.split(" ").pop())}</span><span>${esc(ev[ev.length-1].d.split(" ").pop())}</span></div><div class="tl-card" id="tlc"></div><div class="print-timeline"><h3>Full history</h3>${ev.map(e=>`<article class="print-event"><h3>${esc(e.d)} · ${esc(e.t)}</h3><p>${abbrHTML(register==="kid"?(e.k||e.a||""):(e.a||e.k||""))}</p><p>Source: ${esc(e.src||"")}${e.link&&!isHome(e.link)?` · <a href="${esc(e.link)}">open source</a>`:""}</p></article>`).join("")}</div>`;
   const dots=el.querySelectorAll(".tl-dot"),rng=el.querySelector("input");
   // fix dot positions precisely once laid out
   const place=()=>{const w=el.querySelector(".tl-track").clientWidth-14;dots.forEach((d,i)=>d.style.left=(7+i/(ev.length-1||1)*w)+"px");};
