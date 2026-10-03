@@ -2241,8 +2241,24 @@ function startLoL(){
 // award unlock on first read
 const _rd=renderDetail;renderDetail=function(id){_rd(id);badge("first");};
 
+// Item IDs were malformed in older feeds when the legislation feed used HTTP.
+function migrateLegacyLegislationReferences(feedItems){
+  const aliases={};
+  (feedItems||[]).forEach(it=>{
+    if(!it.id||!it.id.startsWith("leg:")||it.id.slice(4).startsWith("http"))return;
+    const path=it.id.slice(4);
+    ["http://www.legislation.gov.uk/","http://legislation.gov.uk/"].forEach(base=>{aliases["leg:"+base+path]=it.id;});
+  });
+  const oldIds=Object.keys(aliases);if(!oldIds.length)return;
+  const remapKey=k=>oldIds.reduce((value,old)=>value.split(old).join(aliases[old]),String(k));
+  const remapObject=o=>{const n={};Object.entries(o||{}).forEach(([k,v])=>{const key=remapKey(k);n[key]=Object.prototype.hasOwnProperty.call(n,key)?(n[key]||v):v;});return n;};
+  saved=(saved||[]).map(id=>aliases[id]||id);
+  done=remapObject(done);quizDone=remapObject(quizDone);
+  game.got=remapObject(game.got);
+  try{localStorage.setItem("statute.saved",JSON.stringify(saved));save();gsave();}catch(e){}
+}
 // ---------- Live feed: public JSON built by GitHub Actions; merged over the sample data ----------
-async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];placeOnMap(it);ITEMS.push(it);n++;});
+async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};it.spine=it.spine||{adult:it.sum,kid:it.sum};it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];placeOnMap(it);ITEMS.push(it);n++;});migrateLegacyLegislationReferences(f.items);
   window.FEED_META={generated:f.generated_at,sources:f.sources||[],added:n};if(profile){renderAll();if(hashPending){hashPending=!openHash();if(hashPending)toast("That item isn't in the feed any more");}}}catch(e){}}
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}
 loadFeed();
