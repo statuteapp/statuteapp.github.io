@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-03T09:04:29.078714+00:00",
+ "generated_at": "2026-10-03T09:33:01.822081+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 256,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
-   "count": 17,
+   "count": 35,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 60,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 403: Forbidden",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T09:04:29.078714+00:00",
+   "fetched_at": "2026-10-03T09:33:01.822081+00:00",
    "ok": true,
    "count": 36,
    "error": null,
-   "last_ok": "2026-10-03T09:04:29.078714+00:00"
+   "last_ok": "2026-10-03T09:33:01.822081+00:00"
   }
  ],
  "items": [
@@ -421,6 +421,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -450,6 +453,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -479,6 +485,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -508,6 +517,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -591,6 +603,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -620,6 +635,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -649,6 +667,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03",
    "also": [
     {
@@ -688,6 +709,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -717,6 +741,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03"
   },
   {
@@ -746,6 +773,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03",
    "also": [
     {
@@ -785,6 +815,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03",
    "also": [
     {
@@ -824,6 +857,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03",
    "also": [
     {
@@ -1835,6 +1871,9 @@
     "you",
     "everyone"
    ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
    "first_seen": "2026-10-03",
    "also": [
     {
@@ -7726,7 +7765,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Faraday Social Club",
-   "sum": "Pub/bar/nightclub · FARADAY EX SERVICEMANS CLUB FARADAY ROAD SL2 1RP. Contains Food Standards Agency data.",
+   "sum": "Pub/bar/nightclub · FARADAY EX SERVICEMANS CLUB FARADAY ROAD SL2 1RP. Inspected 2026-08-28. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -7735,6 +7774,34 @@
    "link": "https://ratings.food.gov.uk/business/511518",
    "lat": 51.5277462,
    "lng": -0.6228047,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1291352",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-27",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 1: Lucky House",
+   "sum": "Takeaway/sandwich shop · 17 BAYLIS PARADE SL1 3LF. Inspected 2026-08-27. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1291352",
+   "lat": 51.5203314,
+   "lng": -0.5996064,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7758,23 +7825,27 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "fsa:1893385",
+   "id": "fsa:960022",
    "kind": "rates",
    "level": "local",
    "status": "now",
-   "date": "2026-08-24",
+   "date": "2026-08-25",
    "extent": "Slough",
    "council": "Slough Borough Council",
-   "title": "Hygiene rating 3: Lakehouse Lounge",
-   "sum": "Mobile caterer · The Mill House SL3 9HX. Contains Food Standards Agency data.",
+   "title": "Hygiene rating 4: SFC Peri Peri Chicken Original",
+   "sum": "Restaurant/Cafe/Canteen · 1A BAYLIS PARADE SL1 3LF. Inspected 2026-08-25. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
    ],
    "src": "Food Standards Agency",
-   "link": "https://ratings.food.gov.uk/business/1893385",
-   "lat": 51.4780496,
-   "lng": -0.5646129,
+   "link": "https://ratings.food.gov.uk/business/960022",
+   "lat": 51.5199743,
+   "lng": -0.6005831,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7806,7 +7877,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Atom Coffee",
-   "sum": "Restaurant/Cafe/Canteen · 296 TRELAWNEY AVENUE SL3 7UB. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · 296 TRELAWNEY AVENUE SL3 7UB. Inspected 2026-08-18. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -7815,6 +7886,154 @@
    "link": "https://ratings.food.gov.uk/business/1960545",
    "lat": 51.5023735,
    "lng": -0.5558233,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1963388",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-18",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5: Dessertology Slough",
+   "sum": "Other catering premises · SL3. Inspected 2026-08-18. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1963388",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1172605",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-14",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Nawal",
+   "sum": "Retailers - other · 300 FARNHAM ROAD SL1 4XL. Inspected 2026-08-14. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1172605",
+   "lat": 51.5254189,
+   "lng": -0.6153215,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1804547",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-14",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 1: Peshawar Zaiqa",
+   "sum": "Restaurant/Cafe/Canteen · 113 HIGH STREET SL1 1DH. Inspected 2026-08-14. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1804547",
+   "lat": 51.5094641,
+   "lng": -0.5947234,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1087166",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Rumi Pizza",
+   "sum": "Takeaway/sandwich shop · 37-38 HERSCHEL STREET SL1 1PB. Inspected 2026-08-13. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1087166",
+   "lat": 51.5070933,
+   "lng": -0.590488,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1285196",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 0: Zaiitoon",
+   "sum": "Other catering premises · 302-304 HIGH STREET SL1 1NB. Inspected 2026-08-13. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1285196",
+   "lat": 51.5070134,
+   "lng": -0.5853462,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:512125",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-12",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 0: Amans Off Licence",
+   "sum": "Retailers - other · 310 HIGH STREET SL1 1NB. Inspected 2026-08-12. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/512125",
+   "lat": 51.5069471,
+   "lng": -0.5850745,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7858,23 +8077,27 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "fsa:1917122",
+   "id": "fsa:1341021",
    "kind": "rates",
    "level": "local",
    "status": "now",
-   "date": "2026-08-07",
+   "date": "2026-08-05",
    "extent": "Slough",
    "council": "Slough Borough Council",
-   "title": "Hygiene rating 5: Foodlink Global Restaurants And Catering Services Limited",
-   "sum": "Other catering premises · Ditton Manor SL3 7JB. Contains Food Standards Agency data.",
+   "title": "Hygiene rating 0: Rakuk Limited",
+   "sum": "Manufacturers/packers · Unit A and B 37 New Road SL3 8JJ. Inspected 2026-08-05. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
    ],
    "src": "Food Standards Agency",
-   "link": "https://ratings.food.gov.uk/business/1917122",
-   "lat": 51.4913578,
-   "lng": -0.5606293,
+   "link": "https://ratings.food.gov.uk/business/1341021",
+   "lat": 51.5042012,
+   "lng": -0.5392961,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7934,7 +8157,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Mega City",
-   "sum": "Restaurant/Cafe/Canteen · Mega City 233-249 High Street SL1 1BY. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · Mega City 233-249 High Street SL1 1BY. Inspected 2026-07-28. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -7943,6 +8166,10 @@
    "link": "https://ratings.food.gov.uk/business/1932571",
    "lat": 51.5078725,
    "lng": -0.5887347,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -7974,7 +8201,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Windmill Care Centre",
-   "sum": "Caring Premises · THE WINDMILL BATH ROAD SL1 3SY. Contains Food Standards Agency data.",
+   "sum": "Caring Premises · THE WINDMILL BATH ROAD SL1 3SY. Inspected 2026-07-24. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -7983,6 +8210,34 @@
    "link": "https://ratings.food.gov.uk/business/511802",
    "lat": null,
    "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:512095",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: Woodlands Bakery",
+   "sum": "Takeaway/sandwich shop · 5 HARROW MARKET SL3 8HJ. Inspected 2026-07-24. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/512095",
+   "lat": 51.5045886,
+   "lng": -0.5429723,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8014,7 +8269,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Langley Haven Care Home Ltd",
-   "sum": "Restaurant/Cafe/Canteen · LANGLEY HAVEN CARE HOME 30 RAMBLER LANE SL3 7RR. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · LANGLEY HAVEN CARE HOME 30 RAMBLER LANE SL3 7RR. Inspected 2026-07-23. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8023,6 +8278,10 @@
    "link": "https://ratings.food.gov.uk/business/512133",
    "lat": 51.5048371,
    "lng": -0.5682812,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8054,7 +8313,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Taste Of Village",
-   "sum": "Restaurant/Cafe/Canteen · 260 FARNHAM ROAD SL1 4XL. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · 260 FARNHAM ROAD SL1 4XL. Inspected 2026-07-21. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8063,6 +8322,10 @@
    "link": "https://ratings.food.gov.uk/business/1963386",
    "lat": 51.5242732,
    "lng": -0.6150103,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8104,7 +8367,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Chalvey Grove Children's Centre",
-   "sum": "Caring Premises · SURE START CHILDRENS CENTRE MONTEM PRIMARY SCHOOL CHALVEY GROVE SL1 2TE. Contains Food Standards Agency data.",
+   "sum": "Caring Premises · SURE START CHILDRENS CENTRE MONTEM PRIMARY SCHOOL CHALVEY GROVE SL1 2TE. Inspected 2026-07-17. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8113,6 +8376,10 @@
    "link": "https://ratings.food.gov.uk/business/656374",
    "lat": 51.507086,
    "lng": -0.6193213,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8124,7 +8391,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: The Red Lion",
-   "sum": "Pub/bar/nightclub · THE RED LION ST MARYS ROAD SL3 7EN. Contains Food Standards Agency data.",
+   "sum": "Pub/bar/nightclub · THE RED LION ST MARYS ROAD SL3 7EN. Inspected 2026-07-17. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8133,6 +8400,58 @@
    "link": "https://ratings.food.gov.uk/business/511555",
    "lat": 51.5054287,
    "lng": -0.5541847,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1092893",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: Lujan Sandwiches and Coffee",
+   "sum": "Restaurant/Cafe/Canteen · UNIT 8 SAPPHIRE COURT 274-276 HIGH STREET SL1 1NB. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1092893",
+   "lat": 51.5072693,
+   "lng": -0.5864334,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:816858",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: The Ostrich",
+   "sum": "Restaurant/Cafe/Canteen · THE OSTRICH INN HIGH STREET SL3 0JZ. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/816858",
+   "lat": 51.4835043,
+   "lng": -0.5230492,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8144,7 +8463,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 4: Warrens Bakery",
-   "sum": "Other catering premises · SLOUGH RAILWAY STATION BRUNEL WAY SL1 1XW. Contains Food Standards Agency data.",
+   "sum": "Other catering premises · SLOUGH RAILWAY STATION BRUNEL WAY SL1 1XW. Inspected 2026-07-16. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8153,6 +8472,106 @@
    "link": "https://ratings.food.gov.uk/business/1787274",
    "lat": 51.5118319,
    "lng": -0.5912062,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1907600",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Five Akhis",
+   "sum": "Takeaway/sandwich shop · 38 HERSCHEL STREET SL1 1PB. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1907600",
+   "lat": 51.5070933,
+   "lng": -0.590488,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1975305",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 2: Gali Grill",
+   "sum": "Restaurant/Cafe/Canteen · 222-224 HIGH STREET SL1 1JS. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1975305",
+   "lat": 51.5077361,
+   "lng": -0.5893586,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1979731",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 2: Le Damas",
+   "sum": "Restaurant/Cafe/Canteen · 277 HIGH STREET SL1 1BN. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1979731",
+   "lat": 51.5078487,
+   "lng": -0.5875106,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:511764",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 0: Kenya Halal Butchers",
+   "sum": "Retailers - other · 50 HERSCHEL STREET SL1 1PB. Inspected 2026-07-16. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/511764",
+   "lat": 51.5073808,
+   "lng": -0.5919633,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8164,7 +8583,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: The Renaizance",
-   "sum": "Other catering premises · 181 BEDFORD AVENUE SL1 4RA. Contains Food Standards Agency data.",
+   "sum": "Other catering premises · 181 BEDFORD AVENUE SL1 4RA. Inspected 2026-07-15. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8173,6 +8592,10 @@
    "link": "https://ratings.food.gov.uk/business/1204447",
    "lat": 51.5207944,
    "lng": -0.6250414,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8184,7 +8607,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 4: Ann's Pantry",
-   "sum": "Restaurant/Cafe/Canteen · 34 BUCKINGHAM AVENUE SL1 4QA. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · 34 BUCKINGHAM AVENUE SL1 4QA. Inspected 2026-07-15. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8193,6 +8616,58 @@
    "link": "https://ratings.food.gov.uk/business/512178",
    "lat": 51.5211042,
    "lng": -0.6246195,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1630184",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-15",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: Grillogy",
+   "sum": "Takeaway/sandwich shop · 256-258 FARNHAM ROAD SL1 4XL. Inspected 2026-07-15. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1630184",
+   "lat": 51.5241933,
+   "lng": -0.6150992,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1979730",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-15",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Flame House",
+   "sum": "Takeaway/sandwich shop · 33A ELMSHOTT LANE SL1 5QS. Inspected 2026-07-15. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1979730",
+   "lat": 51.5177373,
+   "lng": -0.645129,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8236,6 +8711,30 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsa:1845734",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-10",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: Steakout",
+   "sum": "Restaurant/Cafe/Canteen · GROUND FLOOR 295-297 HIGH STREET SL1 1BD. Inspected 2026-07-10. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1845734",
+   "lat": 51.507684,
+   "lng": -0.5865214,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:1915249",
    "kind": "rates",
    "level": "local",
@@ -8244,7 +8743,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: Dawat",
-   "sum": "Restaurant/Cafe/Canteen · THE CROWN PUBLIC HOUSE LONDON ROAD SL3 0LU. Contains Food Standards Agency data.",
+   "sum": "Restaurant/Cafe/Canteen · THE CROWN PUBLIC HOUSE LONDON ROAD SL3 0LU. Inspected 2026-07-09. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8253,6 +8752,58 @@
    "link": "https://ratings.food.gov.uk/business/1915249",
    "lat": null,
    "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1197931",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4: G T Road Punjabi Cusine",
+   "sum": "Restaurant/Cafe/Canteen · 260 TRELAWNEY AVENUE SL3 7UD. Inspected 2026-07-09. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1197931",
+   "lat": 51.5023946,
+   "lng": -0.5553472,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1760662",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 1: Rooster Point",
+   "sum": "Takeaway/sandwich shop · 37 ELMSHOTT LANE SL1 5QS. Inspected 2026-07-09. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1760662",
+   "lat": 51.5175224,
+   "lng": -0.6452075,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -8284,7 +8835,7 @@
    "extent": "Slough",
    "council": "Slough Borough Council",
    "title": "Hygiene rating 5: HFC",
-   "sum": "Takeaway/sandwich shop · 49 CHALVEY ROAD WEST SL1 2NJ. Contains Food Standards Agency data.",
+   "sum": "Takeaway/sandwich shop · 49 CHALVEY ROAD WEST SL1 2NJ. Inspected 2026-07-08. Contains Food Standards Agency data.",
    "tags": [
     "33.5",
     "46.5"
@@ -8293,6 +8844,34 @@
    "link": "https://ratings.food.gov.uk/business/1087160",
    "lat": 51.506529,
    "lng": -0.6064564,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1979736",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-07-08",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 1: Rocky's",
+   "sum": "Takeaway/sandwich shop · 158 BURNHAM LANE SL1 6LE. Inspected 2026-07-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1979736",
+   "lat": 51.5274119,
+   "lng": -0.6489503,
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
