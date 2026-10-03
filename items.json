@@ -1,106 +1,106 @@
 {
- "generated_at": "2026-10-03T02:25:58.880616+00:00",
+ "generated_at": "2026-10-03T06:22:23.961756+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 256,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
-   "count": 17,
+   "count": 15,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 60,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "fetched_at": "2026-10-03T06:22:23.961756+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+   "last_ok": "2026-10-03T06:22:23.961756+00:00"
   }
  ],
  "items": [
@@ -1879,11 +1879,11 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/medicines-apply-for-a-variation-to-your-marketing-authorisation",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/5ff2f52dd3bf7f08a202459b/CCC__updated_guidance__29.12.20.pdf",
    "pdf_label": "guidance for CCC application (PDF)",
    "pdf_size": 551381,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/apply-for-a-licence-to-market-a-medicine-in-the-uk",
@@ -1900,11 +1900,11 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/apply-for-a-licence-to-market-a-medicine-in-the-uk",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/5a7d4fc640f0b60aaa293abe/naming_of_medicines_guidance.pdf",
    "pdf_label": "naming of medicines guidance (PDF)",
    "pdf_size": 240764,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/electronic-application-forms-eaf-for-uk-medicines-licensing-applications",
@@ -1921,11 +1921,11 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/electronic-application-forms-eaf-for-uk-medicines-licensing-applications",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab5134a734e2435f202eff5/maa_human_v1.26.0.0.pdf",
    "pdf_label": "Initial Marketing Authorisation Application (MAA) - Version 1.26.0.0 (PDF)",
    "pdf_size": 908713,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/multi-factor-authentication-for-uk-visa-sponsors-sms-manual-13",
@@ -1942,10 +1942,10 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/multi-factor-authentication-for-uk-visa-sponsors-sms-manual-13",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf765455bc01d752a7f2a8/13._Multi-Factor_Authentication.pdf",
    "pdf_label": "SMS guide 13: Multi-factor authentification (MFA) (PDF)",
-   "pdf_size": 1495526
+   "pdf_size": 1495526,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/code-confident-pack",
@@ -1962,10 +1962,10 @@
    "src": "GOV.UK · Groceries Code Adjudicator",
    "link": "https://www.gov.uk/government/publications/code-confident-pack",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe7698f04a15f5337228a2/2_October_26_Code_Confident_pack.pdf",
    "pdf_label": "Code Confident pack (PDF)",
-   "pdf_size": 795586
+   "pdf_size": 795586,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/river-thames-lock-keeper-service",
@@ -2044,11 +2044,11 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/palestine-country-policy-and-information-notes",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf5f2e943e890cb55e5e45/PSE_CPIN_Humanitarian_situation__1_.pdf",
    "pdf_label": "Country policy and information note: humanitarian situation in Gaza, Palestine, September 2026 (PDF)",
    "pdf_size": 1404376,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/kinship-care-guidance-for-local-authorities",
@@ -2065,10 +2065,10 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/publications/kinship-care-guidance-for-local-authorities",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf6a8defad0f1df672290c/kinship_care_statutory_guidance_for_local_authorities_october_2026.pdf",
    "pdf_label": "Kinship care: statutory guidance for local authorities (PDF)",
-   "pdf_size": 670141
+   "pdf_size": 670141,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/russia-list-of-designations-and-sanctions-notices",
@@ -2086,11 +2086,11 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/russia-list-of-designations-and-sanctions-notices",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6985d59b4cff1c70a3b6e45e/Sanctions_Notice__Russia__6_February_2026.pdf",
    "pdf_label": "Sanctions Notice, Russia: 6 February 2026 (PDF)",
    "pdf_size": 186060,
-   "pdf_more": 31
+   "pdf_more": 31,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/the-uk-sanctions-list",
@@ -2108,9 +2108,9 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.pdf",
-   "pdf_label": "PDF format UK Sanctions List (PDF)"
+   "pdf_label": "PDF format UK Sanctions List (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/external-temporary-storage-facilities-codes-for-data-element-523-of-the-customs-declaration-service",
@@ -2144,11 +2144,11 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/when-someone-dies-in-italy",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5b9a9c196f81005e5e08/Informative_Note_transfer_of_remains_ashes_certificate_ENG_ITA.pdf",
    "pdf_label": "Transfer of remains letter (in English and Italian) (PDF)",
    "pdf_size": 732032,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/social-care-ofsteds-enforcement-policy",
@@ -2234,11 +2234,11 @@
    "src": "GOV.UK · Marine Management Organisation",
    "link": "https://www.gov.uk/government/publications/evidence-and-the-marine-management-organisation-mmo",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/645e44386539660011bd3e81/MMO_Evidence_Strategy_2021-2025.pdf",
    "pdf_label": "Evidence Strategy (PDF)",
    "pdf_size": 1175323,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/pre-16-schools-funding-local-authority-guidance-for-2027-to-2028",
@@ -2961,10 +2961,10 @@
    "src": "GOV.UK · Department of Health and Social Care, NHS England",
    "link": "https://www.gov.uk/government/publications/cardiovascular-disease-modern-service-framework",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abfa9461ef3e896de9792ef/cardiovascular-disease-modern-service-framework.pdf",
    "pdf_label": "Cardiovascular disease (CVD) modern service framework (MSF): a cardiovascular-kidney-metabolic approach - the strategic vision and delivery model (PDF)",
    "pdf_size": 1227014,
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/publications/equality-impact-assessment-cardiovascular-disease-modern-service-framework",
@@ -2991,11 +2991,11 @@
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/treasury-minutes-for-august-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abfbeb6b2822d8ebf1ec96c/E03677598_-_CP_1668_Treasury_Minutes_v01_Elay.pdf",
    "pdf_label": "Treasury Minutes – August 2026 (Web) (PDF)",
    "pdf_size": 637507,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/women-in-defence-charter",
@@ -4106,11 +4106,11 @@
    "src": "GOV.UK · Home Office",
    "link": "https://www.gov.uk/government/consultations/amendments-to-the-poisons-act-1972-framework",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abcc8817f89d9ff24aff297/PA_Consultation_Document_Welsh.pdf",
    "pdf_label": "Amendments to the Poisons Act 1972 Framework: consultation document (Welsh version) (PDF)",
    "pdf_size": 381239,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/connect-fund-to-offer-up-to-500k-for-northern-ireland-and-gb-voluntary-and-community-groups",
@@ -4301,10 +4301,10 @@
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/king-charles-iii-england-coast-path-plan-of-the-kimmeridge-bay-to-highcliffe-stretch",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6839bb8c5150d70c85aafb64/kimmeridge-bay-highcliffe-index-map.pdf",
    "pdf_label": "Kimmeridge Bay to Highcliffe stretch map (PDF)",
-   "pdf_size": 465489
+   "pdf_size": 465489,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/king-charles-iii-england-coast-path-from-lulworth-cove-to-kimmeridge-bay-natural-englands-proposals",
@@ -4321,11 +4321,11 @@
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/king-charles-iii-england-coast-path-from-lulworth-cove-to-kimmeridge-bay-natural-englands-proposals",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/687f792ef2ecaeb756d0e1de/lulworth-cove-kimmeridge-bay-overview.pdf",
    "pdf_label": "Lulworth Cove to Kimmeridge Bay overview (PDF)",
    "pdf_size": 3076236,
-   "pdf_more": 5
+   "pdf_more": 5,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/england-coast-path-overview-of-progress",
@@ -4342,10 +4342,10 @@
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/england-coast-path-overview-of-progress",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe2c96efad0f1df6722865/coastal-access-england-map.pdf",
    "pdf_label": "King Charles III England Coast Path stretch map (PDF)",
-   "pdf_size": 816162
+   "pdf_size": 816162,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/project-gigabit-national-rolling-open-market-review-september-2026",
@@ -4414,10 +4414,10 @@
    "src": "GOV.UK · HM Prison and Probation Service",
    "link": "https://www.gov.uk/government/publications/independent-restraint-review-panel-irrp-summary-report-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abbf9593fe1a15db6aff2b7/Response_to_the_Annual_Independent_Review_Restraint_Panel_report_2025.pdf",
    "pdf_label": "Response letter from Minister Richards (PDF)",
-   "pdf_size": 242287
+   "pdf_size": 242287,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/coastal-access-section-52-notice-for-lulworth-cove-to-kimmeridge-bay",
@@ -5052,11 +5052,11 @@
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/treasury-minutes-september-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd283f26660e5f62a7f18d/E03693244_-_CP_1681_-_Government_Response_to_the_Committee_of_Public_Accounts_on_the_Ninth_to_Eleventh_reports_from_Session_2026.pdf",
    "pdf_label": "Treasury Minutes - September 2026 (PDF)",
    "pdf_size": 2474736,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/river-arun-internal-drainage-district-idd",
@@ -5073,11 +5073,11 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/river-arun-internal-drainage-district-idd",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a3bfbceda47783d877239e1/Arun_IDB_AGAR_p3_Internal_Audit_Report.pdf",
    "pdf_label": "River Arun: annual internal audit report 2025 to 2026 - form 3, page 3 (PDF)",
    "pdf_size": 1251985,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/defras-small-and-medium-sized-enterprise-sme-action-plan-2026-to-2027",
@@ -5111,10 +5111,10 @@
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/government/publications/traffic-commissioner-strategic-objectives-2026-2029",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abce0c255bc01d752a7f118/Traffic_Commissioner_Strategic_Objectives_2026_to_2029.pdf",
    "pdf_label": "Traffic Commissioner  Strategic Objectives 2026 to 2029 (PDF)",
-   "pdf_size": 666159
+   "pdf_size": 666159,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/calls-for-evidence/marine-non-licensable-activities",
@@ -5131,11 +5131,11 @@
    "src": "GOV.UK · Marine Management Organisation",
    "link": "https://www.gov.uk/government/calls-for-evidence/marine-non-licensable-activities",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab921edfe72ed1e2b02f0d9/DRAFT_Marine_Non-Licensable_Activities_Impacts_Evidence_Summary.pdf",
    "pdf_label": "Marine Non-Licensable Activities Impacts Evidence: Summary  (DRAFT)  (PDF)",
    "pdf_size": 934742,
-   "pdf_more": 6
+   "pdf_more": 6,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/crime-and-policing-act-2026-factsheets",
@@ -5242,11 +5242,11 @@
    "src": "GOV.UK · Home Office, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/crime-and-policing-act-2026-impact-assessments",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab62ba6734e2435f202f08b/CPA_Abortion_Economic_IA.pdf",
    "pdf_label": "Crime and Policing Act: abortion measures economic impact assessment (PDF)",
    "pdf_size": 231673,
    "pdf_more": 2,
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/publications/crime-and-policing-act-2026-equality-impact-assessments",
@@ -5273,11 +5273,11 @@
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/risley-prison-action-plan--2",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aba2111a9c3d267bcccef5d/HMP_Risley_action_plan_-_September_2026.pdf",
    "pdf_label": "HMP Risley action plan - September 2026 (PDF)",
    "pdf_size": 227696,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/somerset-levels-and-moors-reducing-the-risk-of-flooding",
@@ -5311,11 +5311,11 @@
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/lindholme-prison-action-plan",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aba26028cb3c0580e50122e/HMP_Lindholme_action_plan_-_September_2026.pdf",
    "pdf_label": "HMP Lindholme action plan - September 2026 (PDF)",
    "pdf_size": 242684,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/solar-radiation-modification-approaches-the-governments-view",
@@ -5397,10 +5397,10 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/calls-for-evidence/national-professional-qualifications-npq-framework-review",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/686f911710d550c668de3d99/National_professional_qualifications_framework_review_call_for_evidence_response.pdf",
    "pdf_label": "National Professional Qualifications framework review: call for evidence government response (PDF)",
-   "pdf_size": 577690
+   "pdf_size": 577690,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/journey-to-great-british-railways-policy-publication-timetable",
@@ -5435,11 +5435,11 @@
    "src": "GOV.UK · DfT Operator Limited, Department for Transport",
    "link": "https://www.gov.uk/government/publications/rolling-stock-and-infrastructure-strategy",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aba4b47997a4b2950ccefc0/gbr-rolling-stock-infrastructure-strategy.pdf",
    "pdf_label": "Great British Railways' (GBR) rolling stock and infrastructure strategy (PDF)",
    "pdf_size": 11667925,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/dcms-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028",
@@ -5537,11 +5537,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/consultations/make-work-pay-duty-to-inform-workers-of-right-to-join-a-union",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6909ba62c0dc8f12484175ef/Consultation_on_duty_to_inform_workers_of_their_right_to_join_a_trade_union.pdf",
    "pdf_label": "Consultation on duty to inform workers of their right to join a trade union (PDF)",
    "pdf_size": 485014,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act",
@@ -5558,10 +5558,10 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6981e6e4e833d031a3158f87/implementing-the-employment-rights-bill-roadmap.pdf",
    "pdf_label": "Implementing the Employment Rights Bill: roadmap (PDF)",
-   "pdf_size": 1154341
+   "pdf_size": 1154341,
+   "pdf_checked": true
   },
   {
    "id": "bill:4125",
@@ -5643,10 +5643,10 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/charter-for-uk-government-engagement-with-the-overseas-territories",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aacf5880420ac660805fa1d/UK_Government_Charter_on_Engagement_with_the_Overseas_Territories.pdf",
    "pdf_label": "Charter for UK Government Engagement with the Overseas Territories (PDF)",
-   "pdf_size": 211074
+   "pdf_size": 211074,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/dbs-barring-privacy-notice",
@@ -5746,11 +5746,11 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab29c76fe72ed1e2b02eebe/consultation_user_choice_conduct_requirement.pdf",
    "pdf_label": "Consultation: User choice conduct requirement (PDF)",
    "pdf_size": 632397,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
@@ -5767,10 +5767,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aaa71b1f1f8d2a39605f89c/Revised_guidance_-_reducing_the_risk_of_vulnerable_groups_contracting_listeriosis.pdf",
    "pdf_label": "Revised guidance: reducing the risk of vulnerable groups contracting listeriosis (PDF)",
-   "pdf_size": 525236
+   "pdf_size": 525236,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/bus-services-act-2025-improving-information-about-local-services",
@@ -5804,11 +5804,11 @@
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/high-down-prison-action-plan",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab3c110fe72ed1e2b02ef2a/HMP_High_Down_action_plan_-_Sep_2026.pdf",
    "pdf_label": "HMP High Down action plan - Sep 2026 (PDF)",
    "pdf_size": 197106,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/googles-general-search-services-proposed-conduct-requirements",
@@ -5825,11 +5825,11 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-conduct-requirements",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6979ce781c24881f40a4d6dc/Introduction_to_the_consultation.pdf",
    "pdf_label": "Introduction to the consultation (PDF)",
    "pdf_size": 284883,
-   "pdf_more": 89
+   "pdf_more": 89,
+   "pdf_checked": true
   },
   {
    "id": "fsaalert:FSA-PRIN-45-2026",
@@ -5920,10 +5920,10 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/calls-for-evidence/national-professional-qualifications-npqs-call-for-insights-and-evidence",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aad0b03ce3f006bd4346c85/NPQ_framework_review_call_for_evidence_and_insights_government_response.pdf",
    "pdf_label": "National Professional Qualifications framework review: call for insights and evidence government response (PDF)",
-   "pdf_size": 691329
+   "pdf_size": 691329,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/calls-for-evidence/beyond-admet-ai-for-medicines-safety-survey",
@@ -5957,11 +5957,11 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/vets-market-investigation-draft-substantive-order-and-undertakings",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a5f61834876beea7ee04a57/Draft_substantive_order_notice.pdf",
    "pdf_label": "Draft substantive order notice (PDF)",
    "pdf_size": 225802,
-   "pdf_more": 74
+   "pdf_more": 74,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/make-work-pay-leave-for-bereavement-including-pregnancy-loss",
@@ -5978,11 +5978,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/consultations/make-work-pay-leave-for-bereavement-including-pregnancy-loss",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6928700bce50d215cae96164/make-work-pay-consultation-on-leave-for-bereavement-including-pregnancy-loss.pdf",
    "pdf_label": "Consultation on leave for bereavement including pregnancy loss (PDF)",
    "pdf_size": 734247,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/updating-the-safety-at-street-works-and-road-works-code-of-practice",
@@ -5999,10 +5999,10 @@
    "src": "GOV.UK · Department for Transport",
    "link": "https://www.gov.uk/government/consultations/updating-the-safety-at-street-works-and-road-works-code-of-practice",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aaa5caaf1f8d2a39605f885/safety-at-street-works-and-road-works-a-code-of-practice-draft.pdf",
    "pdf_label": "Safety at street works and road works: a code of practice (draft) (PDF)",
-   "pdf_size": 4815027
+   "pdf_size": 4815027,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/consultation-on-the-authorisation-of-16-regulated-products-2026",
@@ -6662,26 +6662,6 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "fsa:1893385",
-   "kind": "rates",
-   "level": "local",
-   "status": "now",
-   "date": "2026-08-24",
-   "extent": "Slough",
-   "council": "Slough Borough Council",
-   "title": "Hygiene rating 3: Lakehouse Lounge",
-   "sum": "Mobile caterer · The Mill House SL3 9HX. Contains Food Standards Agency data.",
-   "tags": [
-    "33.5",
-    "46.5"
-   ],
-   "src": "Food Standards Agency",
-   "link": "https://ratings.food.gov.uk/business/1893385",
-   "lat": 51.4780496,
-   "lng": -0.5646129,
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "fsaalert:FSA-PRIN-40-2026",
    "kind": "alert",
    "level": "uk",
@@ -6759,26 +6739,6 @@
    "who": [
     "household"
    ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsa:1917122",
-   "kind": "rates",
-   "level": "local",
-   "status": "now",
-   "date": "2026-08-07",
-   "extent": "Slough",
-   "council": "Slough Borough Council",
-   "title": "Hygiene rating 5: Foodlink Global Restaurants And Catering Services Limited",
-   "sum": "Other catering premises · Ditton Manor SL3 7JB. Contains Food Standards Agency data.",
-   "tags": [
-    "33.5",
-    "46.5"
-   ],
-   "src": "Food Standards Agency",
-   "link": "https://ratings.food.gov.uk/business/1917122",
-   "lat": 51.4913578,
-   "lng": -0.5606293,
    "first_seen": "2026-10-03"
   },
   {
