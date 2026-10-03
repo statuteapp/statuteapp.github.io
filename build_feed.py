@@ -20,6 +20,7 @@ UA = {"User-Agent": "statute-feed/0.1 (+https://github.com/statuteapp/statuteapp
 NOW = dt.datetime.now(dt.timezone.utc)
 OUT = "items.json"
 STATUS = "status.json"
+FSA_PLACES = "fsa_places.json"
 ALERT_AFTER_H = 24   # fail the workflow (GitHub emails the owner) when a source has been down this long
 GOVUK_DAYS = 14   # how far back to ask GOV.UK on each run
 KEEP_DAYS = 30    # items older than this (by date) are dropped from the rolling feed
@@ -259,35 +260,57 @@ def _fsa_authority_id(name):
     return None
 
 def _fsa_register(laid):
-    """Every establishment in one authority, paged."""
+    """Fetch one authority's current FHRS register in FSA-recommended pages of 200."""
     out, page = {}, 1
     while True:
-        j = getj(f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={laid}&pageSize=2000&pageNumber={page}", {"x-api-version": "2", "accept": "application/json"})
+        j = getj(f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={laid}&pageSize=200&pageNumber={page}", {"x-api-version": "2", "accept": "application/json"})
         ests = j.get("establishments", [])
         for e in ests:
             g = e.get("geocode") or {}
-            out[str(e["FHRSID"])] = {"name": e.get("BusinessName", ""), "type": e.get("BusinessType", ""), "rating": str(e.get("RatingValue") or ""),
-                                     "date": (e.get("RatingDate") or "")[:10], "addr": f"{e.get('AddressLine1','')} {e.get('PostCode','')}".strip(),
-                                     "lat": float(g["latitude"]) if g.get("latitude") else None, "lng": float(g["longitude"]) if g.get("longitude") else None}
-        if len(ests) < 2000: break
+            sc = e.get("scores") or {}
+            lines = [e.get(f"AddressLine{i}", "") for i in range(1, 5)] + [e.get("PostCode", "")]
+            addr = " ".join(x.strip() for x in lines if x and x.strip())
+            def num(v):
+                try: return float(v) if v not in (None, "") else None
+                except (TypeError, ValueError): return None
+            out[str(e["FHRSID"])] = {
+                "name": e.get("BusinessName", "") or "", "type": e.get("BusinessType", "") or "",
+                "rating": str(e.get("RatingValue") or ""), "date": (e.get("RatingDate") or "")[:10],
+                "addr": addr, "postcode": e.get("PostCode", "") or "",
+                "lat": num(g.get("latitude")), "lng": num(g.get("longitude")),
+                "pending": bool(e.get("NewRatingPending")),
+                "scores": {"hygiene": sc.get("Hygiene"), "structural": sc.get("Structural"),
+                           "management": sc.get("ConfidenceInManagement")},
+                "right_to_reply": e.get("RightToReply", "") or ""
+            }
+        total_pages = (j.get("meta") or {}).get("totalPages")
+        if (total_pages and page >= int(total_pages)) or len(ests) < 200: break
         page += 1
-        if page > 10: break
+        if page > 100: raise RuntimeError(f"register for authority {laid} exceeded 100 pages")
     return out
 
 def fetch_fsa(name="Slough", council="Slough Borough Council"):
     """Food businesses opening, closing and being re-rated, from the full FHRS register for the authority.
     First run: ratings awarded in the last 90 days (so the map has something). Every later run: the diff against the saved register.
     Attribution: 'Contains Food Standards Agency data'."""
-    laid = _fsa_authority_id(name)
-    if not laid: raise RuntimeError(f"no FHRS authority matching {name}")
-    cur = _fsa_register(laid)
-    if len(cur) < 50: raise RuntimeError(f"register for {name} looks truncated: {len(cur)}")
     st = {}
     try:
         with open(STATUS, encoding="utf-8") as f: st = json.load(f)
     except Exception: pass
+    authority_key = name.casefold()
+    laid = (st.get("fsa_authority_ids") or {}).get(authority_key)
+    if not laid:
+        laid = _fsa_authority_id(name)
+        if not laid: raise RuntimeError(f"no FHRS authority matching {name}")
+        st.setdefault("fsa_authority_ids", {})[authority_key] = laid
     prev = (st.get("fsa_register") or {}).get(str(laid), {})
     today = NOW.date().isoformat()
+    checked = (st.get("fsa_last_fetched") or {}).get(str(laid), "")
+    # Ratings are published from a daily-updated dataset. Fetch a full authority register once per UTC day,
+    # not once per hourly feed build; pages stay within the FSA's recommended maximum of 200.
+    cur = prev if prev and checked == today else _fsa_register(laid)
+    if len(cur) < 50: raise RuntimeError(f"register for {name} looks truncated: {len(cur)}")
+    st.setdefault("fsa_last_fetched", {})[str(laid)] = today
     def rating_txt(r): return {"AwaitingInspection": "awaiting inspection", "AwaitingPublication": "rating awaiting publication", "Exempt": "exempt from rating"}.get(r, f"rating {r}")
     def base(fid, e, kind_id, title, summ, tags):
         return {"id": f"fsa:{kind_id}:{fid}", "kind": "rates", "level": "local", "status": "now", "date": today, "extent": name, "council": council,
@@ -312,6 +335,28 @@ def fetch_fsa(name="Slough", council="Slough Borough Council"):
         for fid, e in cur.items():
             if e["date"] and e["date"] >= cutoff:
                 it = base(fid, e, "", f"Hygiene {rating_txt(e['rating'])}: {e['name']}", f"Inspected {e['date']}.", ["33.5", "46.5"]); it["id"] = f"fsa:{fid}"; it["date"] = e["date"]; items.append(it)
+    # The API exposes current ratings, not a complete inspection-history collection. Keep the snapshots Statute
+    # actually observes so the UI can show a truthful history from the first capture onward.
+    started = st.setdefault("fsa_history_started", {}).setdefault(str(laid), today)
+    history = st.setdefault("fsa_history", {}).setdefault(str(laid), {})
+    places = []
+    for fid, e in cur.items():
+        snap = {"rating": e["rating"], "ratingDate": e["date"], "recorded": today, "scores": e.get("scores", {})}
+        rows = history.setdefault(fid, [])
+        if not rows or any(rows[-1].get(k) != snap.get(k) for k in ("rating", "ratingDate", "scores")):
+            rows.append(snap)
+            history[fid] = rows[-25:]
+        places.append({
+            "id": fid, "name": e["name"], "type": e["type"], "address": e["addr"], "postcode": e["postcode"],
+            "rating": e["rating"], "ratingDate": e["date"], "pending": e["pending"], "scores": e["scores"],
+            "rightToReply": e["right_to_reply"], "lat": e["lat"], "lng": e["lng"],
+            "officialUrl": f"https://ratings.food.gov.uk/business/{fid}", "history": history[fid]
+        })
+    with open(FSA_PLACES, "w", encoding="utf-8") as f:
+        json.dump({"council": council, "authorityId": laid, "checkedAt": checked if checked == today else today,
+                   "historyTrackedFrom": started, "attribution": "Contains Food Standards Agency data.",
+                   "source": "Food Standards Agency Food Hygiene Rating API", "places": places},
+                  f, ensure_ascii=False, separators=(",", ":"))
     st.setdefault("fsa_register", {})[str(laid)] = cur
     with open(STATUS, "w", encoding="utf-8") as f: json.dump(st, f, ensure_ascii=False, separators=(",", ":"))
     return items
