@@ -415,7 +415,7 @@ th{color:var(--slate);font-weight:400}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 .brief{background:var(--ink);color:var(--paper);border-radius:8px;padding:14px 16px;margin:0 0 18px}
 .brief h2{margin:0 0 4px;font-size:17px;color:var(--paper)}
-.brief .sub{font-size:13.5px;opacity:.75;margin:0 0 10px}
+.brief .sub{font-size:13.5px;color:var(--paper);opacity:1;margin:0 0 10px;font-weight:700}
 .brief .m{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid rgba(255,255,255,.15);font-size:15px}
 .brief .m .dot{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.5);flex:none;display:grid;place-items:center;font-size:12px}
 .brief .m.done .dot{background:var(--green);border-color:var(--green)}
@@ -515,6 +515,7 @@ function abbrHTML(text){return esc(text).replace(ABBR_RE,(m,pre,k)=>`${pre}<abbr
 function bindAbbr(root){root.querySelectorAll("abbr.ab").forEach(a=>a.onclick=e=>{e.preventDefault();e.stopPropagation();renderLegend(a.dataset.ab);});}
 function renderLegend(focus){
   const s=document.getElementById("s-detail");
+  s.dataset.detailContext="";
   s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button></div><h1>Legend.</h1><p class="lede">Every label, code and abbreviation the app uses, in one place. Tap any abbreviation anywhere in the app to land here.</p>
   <h2>What an item is</h2><div class="lgrid">${Object.entries(KINDS).map(([k,v])=>`<div class="lg"><span class="pill kind ${k}">${KIND_ICON[k]} ${v.l}</span><span>${esc(v.d)}</span></div>`).join("")}</div>
   <h2>What it asks of you</h2><div class="lgrid"><div class="lg"><span class="pill must">${TIER_ICON.must} Must</span><span>Places a duty on you. Always delivered, even from a muted topic.</span></div><div class="lg"><span class="pill affects">${TIER_ICON.affects} Affects you</span><span>Changes a cost, right or process you're part of.</span></div><div class="lg"><span class="pill notice">${TIER_ICON.notice} Notice</span><span>Your environment. No duty.</span></div></div>
@@ -1705,8 +1706,8 @@ function renderMe(){
 
 // ---------- Detail ----------
 let cur=null;
-function renderDetail(id){
-  const it=ITEMS.find(x=>x.id===id);cur=it;
+function renderDetail(id,backCtx){
+  const it=ITEMS.find(x=>x.id===id);cur=it;detailBack=backCtx||null;
   const fromSession=sessionLive()&&!!document.querySelector("#s-detail.active .timer");
   const r=tierFor(it);const t=r?r.tier:"notice";
   const fy=foryou(it);
@@ -1732,7 +1733,12 @@ function renderDetail(id){
   ${it.ribs.map(rb=>`<details class="rib"><summary>${esc(rb.t)}</summary><div class="body">${abbrHTML(rb.b)}<div class="src">Source: ${abbrHTML(rb.s)}${rb.link&&!isHome(rb.link)?` · <a href="${rb.link}" target="_blank" rel="noopener">open ↗</a>`:""}</div></div></details>`).join("")}
   ${it.quiz.length?`<h2>Test yourself</h2><div class="quiz" id="quiz"></div>`:""}
   <p class="note">Every line above cites a government document. Where no source exists, the thread is left out rather than filled in.</p>`;
-  s.querySelector("#back").onclick=()=>{if(fromSession&&sessionLive())drawSession();else show(prevTab);};bindTags(s);bindAbbr(s);
+  s.querySelector("#back").onclick=()=>{
+    if(fromSession&&sessionLive()){detailBack=null;drawSession();return;}
+    const b=detailBack;detailBack=null;
+    if(b&&b.type==="asi"){renderASI(b.id);return;}
+    show(prevTab);
+  };bindTags(s);bindAbbr(s);
   s.querySelectorAll("details.rib").forEach((d,i)=>d.addEventListener("toggle",()=>{if(d.open)award("rib:"+it.id+":"+i,3,"Thread");}));
   renderTimeline(it);if(it.quiz.length)renderQuiz(it);
   s.querySelector("#listen").onclick=()=>speak(it);
@@ -1803,11 +1809,25 @@ function renderASI(id){
   ];
   if(next){const w=rungs.pop();rungs.splice(1,0,w);}
   const x=asiXP(a);
+  s.dataset.detailContext="asi:"+id;
   s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button><span class="lead">Area of specific interest · ${x} XP</span></div><h1>${esc(a.t)}</h1>
-  <div class="ladder">${rungs.map((r,i)=>{const open=next&&i===1?true:rungOpen(a,i);return `<div class="rung ${open?"open":"locked"}"><div class="n">${i+1}</div><div class="b"><div class="t">${esc(r.t)}</div><div class="d">${esc(r.d)}</div>${open?r.body():`<span class="lead">Unlocks at ${[0,20,40,60,80][i]} XP in this area. Read the rung above.</span>`}</div></div>`;}).join("")}</div>
+  <div class="ladder">${rungs.map((r,i)=>{const open=next&&i===1?true:rungOpen(a,i);const rid=r.t==="What's live"?" id=\"asi-live-rung\"":"";return `<div class="rung ${open?"open":"locked"}"${rid}><div class="n">${i+1}</div><div class="b"><div class="t">${esc(r.t)}</div><div class="d">${esc(r.d)}</div>${open?r.body():`<span class="lead">Unlocks at ${[0,20,40,60,80][i]} XP in this area. Read the rung above.</span>`}</div></div>`;}).join("")}</div>
   <div class="row"><button class="btn ghost sm" id="drop">Drop this area</button></div>`;
-  s.querySelector("#back").onclick=()=>show(prevTab);bindCards(s);
-  s.querySelectorAll("[data-aw]").forEach(b=>b.onclick=()=>{award("asi:"+a.id+":"+b.dataset.aw,10,"Deeper");renderASI(id);});
+  s.querySelector("#back").onclick=()=>{detailBack=null;show(prevTab);};bindCards(s);
+  s.querySelectorAll("[data-aw]").forEach(b=>b.onclick=()=>{
+    const key="asi:"+a.id+":"+b.dataset.aw;
+    if(b.dataset.aw==="live"){
+      openSheet("Mark “What's live” checked?",[
+        {t:"I've checked these",d:"This records that you have checked the live items. It does not mean every linked article has been read.",go:()=>{
+          award(key,10,"Live checked");renderASI(id);
+          setTimeout(()=>document.getElementById("asi-live-rung")?.scrollIntoView({behavior:reduceMotion()?"auto":"smooth",block:"start"}),40);
+        }},
+        {t:"Not yet",d:"Keep this rung open so you can come back to it.",go:()=>{}}
+      ]);
+      return;
+    }
+    award(key,10,"Deeper");renderASI(id);
+  });
   a.learn.forEach((L,i)=>{const q=s.querySelector("#lq"+i);if(!q)return;const Q=L.q;q.innerHTML=`<p class="q">${esc(Q.q)}</p>`+Q.o.map((o,j)=>`<button class="opt" data-j="${j}">${esc(o)}</button>`).join("")+`<div class="exp"></div>`;
     q.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{q.querySelectorAll(".opt").forEach(x=>x.disabled=true);if(+b.dataset.j===Q.a){b.classList.add("correct");sfx("ok");award("asi:"+a.id+":lesson"+i,10,"Lesson");}else{b.classList.add("wrong");q.querySelector(`.opt[data-j="${Q.a}"]`).classList.add("correct");sfx("no");}q.querySelector(".exp").textContent=Q.e;setTimeout(()=>renderASI(id),1200);});});
   s.querySelector("#drop").onclick=()=>{profile.asis=profile.asis.filter(z=>z!==id);save();renderAll();show("me");};
@@ -2069,6 +2089,7 @@ function renderTopics(){
 
 // ---------- Navigation ----------
 let prevTab="today";
+let detailBack=null; // explicit return target when opening an item from another detail view
 function show(t){
   if(t==="map"){renderMapTab();}
   if(t!=="detail")history.replaceState(null,"","#"+t);
@@ -2080,7 +2101,16 @@ function show(t){
   const live=document.getElementById("live");if(live)live.textContent=(h?h.textContent:t);
 }
 function padActive(){return !!document.querySelector(".pad-focus");}
-function bindCards(root){root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined)return;e.preventDefault();renderDetail(c.dataset.id);}));bindTags(root);bindBm(root);}
+function bindCards(root){
+  root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{
+    if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined)return;
+    e.preventDefault();
+    const ctx=root.id==="s-detail"&&root.dataset.detailContext;
+    if(ctx&&ctx.startsWith("asi:"))renderDetail(c.dataset.id,{type:"asi",id:ctx.slice(4)});
+    else renderDetail(c.dataset.id);
+  }));
+  bindTags(root);bindBm(root);
+}
 function bindTags(root){root.querySelectorAll(".tag").forEach(t=>t.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();renderTopic(t.dataset.tag);}));}
 function renderAll(){renderToday();renderHorizon();renderCatchup();renderPlay();renderMe();renderRank();if(document.querySelector("nav.tabs button[data-t=map][aria-current]"))renderMapTab();}
 document.querySelectorAll("nav.tabs button").forEach(b=>b.onclick=()=>show(b.dataset.t));
@@ -2175,13 +2205,13 @@ let lol=null;
 function renderPlay(){
   const s=document.getElementById("s-play");const got=Object.keys(game.badges).length;const {r,n}=rankOf(game.xp);
   s.innerHTML=`<h1>Play.</h1><p class="lede">Every point here is a fact you'd otherwise have found out the hard way.</p>
-  <div class="game" id="lolbox"><div class="score"><span>Best run <b>${game.best}</b></span><span>Rank <b>${r[0]}</b></span></div><div class="big">Law or Lore<br><span style="font-size:15px;font-weight:400;color:var(--slate)">Is the statement actually the law? Eight seconds each. Press A for law, B for lore.</span></div><button class="btn" id="lolstart">Start a run</button></div>
+  <div class="game" id="lolbox"><div class="score"><span>Best run <b>${game.best}</b></span><span>Rank <b>${r[0]}</b></span></div><div class="big">Law or Lore<br><span style="font-size:15px;font-weight:400;color:var(--slate)">Is the statement actually the law? Ten questions, eight seconds each. Press A for law, B for lore.</span></div><button class="btn" id="lolstart">Start a run</button></div>
   <h2>Badges <span class="lead">${got} of ${BADGES.length}</span></h2><div class="badges">${BADGES.map(b=>`<div class="badge ${game.badges[b.id]?"on":""}" title="${esc(b.d)}"><div class="ico">${b.i}</div>${esc(b.n)}</div>`).join("")}</div>
   <h2>Ranks</h2><ul class="ranks">${RANKS.map(([nm,x])=>`<li class="${r[0]===nm?"cur":""}"><span>${nm}</span><span class="lead">${x} XP</span></li>`).join("")}</ul>`;
   s.querySelector("#lolstart").onclick=startLoL;
 }
 function startLoL(){
-  const box=document.getElementById("lolbox");const deck=[...LOL].sort(()=>Math.random()-.5);let i=0,run=0,streak=0,timer=null,t0=0;lol={answer};
+  const box=document.getElementById("lolbox");const deck=[...LOL].sort(()=>Math.random()-.5).slice(0,10);let i=0,run=0,streak=0,timer=null,t0=0;lol={answer};
   function ask(){
     if(i>=deck.length){end();return;}
     const Q=deck[i];t0=performance.now();
