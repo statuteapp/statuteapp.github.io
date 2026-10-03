@@ -1,47 +1,47 @@
 {
- "generated_at": "2026-10-02T22:23:25.883430+00:00",
+ "generated_at": "2026-10-03T01:03:30.048075+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-02T22:23:25.883430+00:00",
+   "fetched_at": "2026-10-03T01:03:30.048075+00:00",
    "ok": true
   }
  ],
@@ -339,7 +339,7 @@
    "kind": "law",
    "level": "uk",
    "status": "now",
-   "date": "2026-10-02",
+   "date": "2026-10-03",
    "extent": "UK",
    "title": "The Bluetongue (Scotland) Amendment Order 2026",
    "sum": "This Order amends the Bluetongue (Scotland) Order 2012 (“the Order”).",
@@ -3867,142 +3867,6 @@
    ],
    "src": "GOV.UK · Intellectual Property Office",
    "link": "https://www.gov.uk/government/calls-for-evidence/review-of-the-ip-enforcement-framework-call-for-evidence"
-  },
-  {
-   "id": "govuk:/government/consultations/british-industrial-competitiveness-scheme-consultation-on-scheme-eligibility-and-approach",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "British Industrial Competitiveness Scheme: consultation on scheme eligibility and approach",
-   "sum": "We are seeking views on the proposed approach to the new British Industrial Competitiveness Scheme (BICS) and how eligible businesses should be selected.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Business and Trade",
-   "link": "https://www.gov.uk/government/consultations/british-industrial-competitiveness-scheme-consultation-on-scheme-eligibility-and-approach"
-  },
-  {
-   "id": "govuk:/government/publications/treasury-minutes-september-2026",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "Treasury Minutes – September 2026",
-   "sum": "Government departments respond to the Public Accounts Committee reports through a Treasury minute.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Treasury",
-   "link": "https://www.gov.uk/government/publications/treasury-minutes-september-2026"
-  },
-  {
-   "id": "govuk:/government/publications/river-arun-internal-drainage-district-idd",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "River Arun internal drainage district (IDD)",
-   "sum": "Arrangements on how to manage flood risk in the River Arun internal drainage district (IDD).",
-   "tags": [
-    "47.2"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/government/publications/river-arun-internal-drainage-district-idd"
-  },
-  {
-   "id": "govuk:/government/publications/dfe-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028--2",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "DfE small and medium-sized enterprise (SME) action plan: 2025 to 2028",
-   "sum": "The Department for Education (DfE) is backing your business by making it easier for small businesses to access public sector supply chains, removing unnecessary burdens and costs.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Education",
-   "link": "https://www.gov.uk/government/publications/dfe-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028--2"
-  },
-  {
-   "id": "govuk:/government/publications/defras-small-and-medium-sized-enterprise-sme-action-plan-2026-to-2027",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "Defra's small and medium-sized enterprise (SME) action plan: 2026 to 2027",
-   "sum": "Defra is backing your business by making it easier for small businesses to access public sector supply chains, removing unnecessary burdens and costs.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
-   "link": "https://www.gov.uk/government/publications/defras-small-and-medium-sized-enterprise-sme-action-plan-2026-to-2027"
-  },
-  {
-   "id": "govuk:/government/publications/traffic-commissioner-strategic-objectives-2026-2029",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "Traffic Commissioner Strategic Objectives 2026 – 2029",
-   "sum": "Traffic Commissioners have set out their key objectives for 2026 to 2029.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Traffic Commissioners for Great Britain",
-   "link": "https://www.gov.uk/government/publications/traffic-commissioner-strategic-objectives-2026-2029"
-  },
-  {
-   "id": "govuk:/government/publications/hmrc-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "HMRC small and medium-sized enterprise (SME) action plan: 2025 to 2028",
-   "sum": "HM Revenue and Customs (HMRC) is backing your business by making it easier for small businesses to access public sector supply chains, removing unnecessary burdens and costs",
-   "tags": [
-    "20.1"
-   ],
-   "src": "GOV.UK · HM Revenue & Customs",
-   "link": "https://www.gov.uk/government/publications/hmrc-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028"
-  },
-  {
-   "id": "govuk:/government/calls-for-evidence/marine-non-licensable-activities",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "Marine non licensable activities",
-   "sum": "Marine Management Organisation (MMO) is seeking information about the impacts of marine recreational activity and anchoring on habitats and species within England's marine protected areas (MPAs).",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Marine Management Organisation",
-   "link": "https://www.gov.uk/government/calls-for-evidence/marine-non-licensable-activities"
-  },
-  {
-   "id": "govuk:/government/publications/crime-and-policing-act-2026-factsheets",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-30",
-   "extent": "UK",
-   "title": "Crime and Policing Act 2026: factsheets",
-   "sum": "These factsheets provide more information about the Crime and Policing Act 2026.",
-   "tags": [
-    "8.9",
-    "10.1"
-   ],
-   "src": "GOV.UK · Home Office, Ministry of Justice",
-   "link": "https://www.gov.uk/government/publications/crime-and-policing-act-2026-factsheets"
   },
   {
    "id": "leg:http://www.legislation.gov.uk/uksi/2026/1057/made",
