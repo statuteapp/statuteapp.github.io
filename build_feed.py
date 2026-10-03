@@ -250,48 +250,88 @@ def fetch_bank_holidays():
              "tags": ["55.6"], "src": "GOV.UK bank holidays", "link": "https://www.gov.uk/bank-holidays"}
             for e in j["england-and-wales"]["events"] if e["date"] >= (NOW - dt.timedelta(days=30)).date().isoformat()]
 
-# The full FHRS register for each covered authority is kept in status.json under "fsa_register" (already committed each run); the diff between runs is the news.
+# The current FHRS register is kept in status.json; daily changes become feed items.
+# Bulk snapshots come from FSA's per-authority open-data files. The authorities endpoint supplies
+# current file links and LastPublishedDate, so Statute only downloads a full file when that authority changes.
 
-def _fsa_authority_id(name):
-    """Resolve a council name to its FHRS LocalAuthorityId (Slough -> 306 etc) via the Authorities endpoint."""
-    j = getj("https://api.ratings.food.gov.uk/Authorities/basic", {"x-api-version": "2", "accept": "application/json"})
-    for a in j.get("authorities", []):
-        if a.get("Name", "").lower().startswith(name.lower()): return a["LocalAuthorityId"]
-    return None
+def _fsa_authorities():
+    """Return the official authority list, including publication dates and current open-data links."""
+    return getj("https://api.ratings.food.gov.uk/Authorities", {"x-api-version": "2", "accept": "application/json"}).get("authorities", [])
 
-def _fsa_register(laid):
-    """Fetch one authority's current FHRS register in FSA-recommended pages of 200."""
-    out, page = {}, 1
-    while True:
-        j = getj(f"https://api.ratings.food.gov.uk/Establishments?localAuthorityId={laid}&pageSize=200&pageNumber={page}", {"x-api-version": "2", "accept": "application/json"})
-        ests = j.get("establishments", [])
-        for e in ests:
-            g = e.get("geocode") or {}
-            sc = e.get("scores") or {}
-            lines = [e.get(f"AddressLine{i}", "") for i in range(1, 5)] + [e.get("PostCode", "")]
-            addr = " ".join(x.strip() for x in lines if x and x.strip())
-            def num(v):
-                try: return float(v) if v not in (None, "") else None
-                except (TypeError, ValueError): return None
-            out[str(e["FHRSID"])] = {
-                "name": e.get("BusinessName", "") or "", "type": e.get("BusinessType", "") or "",
-                "rating": str(e.get("RatingValue") or ""), "date": (e.get("RatingDate") or "")[:10],
-                "addr": addr, "postcode": e.get("PostCode", "") or "",
-                "lat": num(g.get("latitude")), "lng": num(g.get("longitude")),
-                "pending": bool(e.get("NewRatingPending")),
-                "scores": {"hygiene": sc.get("Hygiene"), "structural": sc.get("Structural"),
-                           "management": sc.get("ConfidenceInManagement")},
-                "right_to_reply": e.get("RightToReply", "") or ""
-            }
-        total_pages = (j.get("meta") or {}).get("totalPages")
-        if (total_pages and page >= int(total_pages)) or len(ests) < 200: break
-        page += 1
-        if page > 100: raise RuntimeError(f"register for authority {laid} exceeded 100 pages")
-    return out
+def _fsa_authority_info(authorities, name, authority_id=None):
+    """Resolve an authority from the current FSA list, preferring its previously saved stable ID."""
+    if authority_id:
+        for a in authorities:
+            if str(a.get("LocalAuthorityId")) == str(authority_id):
+                return a
+    exact = [a for a in authorities if str(a.get("Name", "")).strip().casefold() == name.strip().casefold()]
+    if exact: return exact[0]
+    return next((a for a in authorities if str(a.get("Name", "")).strip().casefold().startswith(name.strip().casefold())), None)
+
+def _fsa_open_data_url(authority):
+    """Use the current open-data URL linked by the FSA authority endpoint; do not assemble a guessed URL."""
+    for link in authority.get("links", []) or []:
+        href = str(link.get("href", "")).strip()
+        rel = str(link.get("rel", "")).casefold()
+        path = urllib.parse.urlsplit(href).path.casefold()
+        if "/open-data-files/" in path or ("open-data" in rel and path.endswith((".xml", ".json"))):
+            url = urllib.parse.urljoin("https://ratings.food.gov.uk", href)
+            if urllib.parse.urlsplit(url).scheme == "https":
+                return url
+    raise RuntimeError(f"FSA authority {authority.get('Name', '')} did not provide an open-data file link")
+
+def _fsa_register(authority):
+    """Download and normalise one authority's official nightly open-data XML file."""
+    name = authority.get("Name", "unknown")
+    url = _fsa_open_data_url(authority)
+    root = ET.fromstring(get(url, timeout=120))
+
+    def tag_name(element):
+        return str(element.tag).rsplit("}", 1)[-1].casefold()
+
+    def field(element, wanted):
+        wanted = wanted.casefold()
+        return next(((node.text or "").strip() for node in element.iter() if tag_name(node) == wanted), "")
+
+    extract_date = field(root, "ExtractDate")[:10]
+    records = [node for node in root.iter() if tag_name(node) == "establishmentdetail"]
+    if not extract_date or not records:
+        raise RuntimeError(f"FSA open-data file for {name} is missing its extract date or establishment records")
+    declared_count = field(root, "ItemCount")
+    if declared_count:
+        try:
+            if int(declared_count) != len(records):
+                raise RuntimeError(f"FSA open-data file for {name} declared {declared_count} records but contained {len(records)}")
+        except ValueError:
+            raise RuntimeError(f"FSA open-data file for {name} has an invalid item count")
+
+    out = {}
+    for e in records:
+        fid = field(e, "FHRSID")
+        if not fid: continue
+        lines = [field(e, f"AddressLine{i}") for i in range(1, 5)] + [field(e, "PostCode")]
+        addr = " ".join(x for x in lines if x)
+        def num(v):
+            try: return float(v) if v not in (None, "") else None
+            except (TypeError, ValueError): return None
+        pending = field(e, "NewRatingPending").casefold() in ("true", "1")
+        out[fid] = {
+            "name": field(e, "BusinessName"), "type": field(e, "BusinessType"),
+            "rating": field(e, "RatingValue"), "date": field(e, "RatingDate")[:10],
+            "addr": addr, "postcode": field(e, "PostCode"),
+            "lat": num(field(e, "Latitude")), "lng": num(field(e, "Longitude")),
+            "pending": pending,
+            "scores": {"hygiene": field(e, "Hygiene") or None, "structural": field(e, "Structural") or None,
+                       "management": field(e, "ConfidenceInManagement") or None},
+            "right_to_reply": field(e, "RightToReply")
+        }
+    if declared_count and len(out) != int(declared_count):
+        raise RuntimeError(f"FSA open-data file for {name} contained duplicate or unidentified businesses")
+    return out, extract_date
 
 def fetch_fsa(name="Slough", council="Slough Borough Council"):
-    """Food businesses opening, closing and being re-rated, from the full FHRS register for the authority.
-    First run: ratings awarded in the last 90 days (so the map has something). Every later run: the diff against the saved register.
+    """Food businesses opening, closing and being re-rated, from the FSA's nightly authority file.
+    The authority publication date is checked each feed run, but the full data file is downloaded only when it changes.
     Attribution: 'Contains Food Standards Agency data'."""
     st = {}
     try:
@@ -299,18 +339,28 @@ def fetch_fsa(name="Slough", council="Slough Borough Council"):
     except Exception: pass
     authority_key = name.casefold()
     laid = (st.get("fsa_authority_ids") or {}).get(authority_key)
-    if not laid:
-        laid = _fsa_authority_id(name)
-        if not laid: raise RuntimeError(f"no FHRS authority matching {name}")
-        st.setdefault("fsa_authority_ids", {})[authority_key] = laid
+    authorities = _fsa_authorities()
+    authority = _fsa_authority_info(authorities, name, laid)
+    if not authority: raise RuntimeError(f"no FHRS authority matching {name}")
+    laid = authority.get("LocalAuthorityId")
+    if not laid: raise RuntimeError(f"FSA authority for {name} has no LocalAuthorityId")
+    st.setdefault("fsa_authority_ids", {})[authority_key] = laid
     prev = (st.get("fsa_register") or {}).get(str(laid), {})
     today = NOW.date().isoformat()
-    checked = (st.get("fsa_last_fetched") or {}).get(str(laid), "")
-    # Ratings are published from a daily-updated dataset. Fetch a full authority register once per UTC day,
-    # not once per hourly feed build; pages stay within the FSA's recommended maximum of 200.
-    cur = prev if prev and checked == today else _fsa_register(laid)
+    published = str(authority.get("LastPublishedDate") or "")
+    if not published: raise RuntimeError(f"FSA authority for {name} has no LastPublishedDate")
+    previous_published = (st.get("fsa_source_published") or {}).get(str(laid), "")
+    should_download = not prev or published != previous_published
+    if should_download:
+        cur, extract_date = _fsa_register(authority)
+        st.setdefault("fsa_last_fetched", {})[str(laid)] = today
+        st.setdefault("fsa_source_published", {})[str(laid)] = published
+        st.setdefault("fsa_source_extract_dates", {})[str(laid)] = extract_date
+    else:
+        cur = prev
+        extract_date = (st.get("fsa_source_extract_dates") or {}).get(str(laid), "")
     if len(cur) < 50: raise RuntimeError(f"register for {name} looks truncated: {len(cur)}")
-    st.setdefault("fsa_last_fetched", {})[str(laid)] = today
+    checked = (st.get("fsa_last_fetched") or {}).get(str(laid), today)
     def rating_txt(r): return {"AwaitingInspection": "awaiting inspection", "AwaitingPublication": "rating awaiting publication", "Exempt": "exempt from rating"}.get(r, f"rating {r}")
     def base(fid, e, kind_id, title, summ, tags):
         return {"id": f"fsa:{kind_id}:{fid}", "kind": "rates", "level": "local", "status": "now", "date": today, "extent": name, "council": council,
@@ -335,8 +385,7 @@ def fetch_fsa(name="Slough", council="Slough Borough Council"):
         for fid, e in cur.items():
             if e["date"] and e["date"] >= cutoff:
                 it = base(fid, e, "", f"Hygiene {rating_txt(e['rating'])}: {e['name']}", f"Inspected {e['date']}.", ["33.5", "46.5"]); it["id"] = f"fsa:{fid}"; it["date"] = e["date"]; items.append(it)
-    # The API exposes current ratings, not a complete inspection-history collection. Keep the snapshots Statute
-    # actually observes so the UI can show a truthful history from the first capture onward.
+    # Snapshot history is prospective only; the FSA file provides current ratings, not every former inspection.
     started = st.setdefault("fsa_history_started", {}).setdefault(str(laid), today)
     history = st.setdefault("fsa_history", {}).setdefault(str(laid), {})
     places = []
@@ -353,9 +402,9 @@ def fetch_fsa(name="Slough", council="Slough Borough Council"):
             "officialUrl": f"https://ratings.food.gov.uk/business/{fid}", "history": history[fid]
         })
     with open(FSA_PLACES, "w", encoding="utf-8") as f:
-        json.dump({"council": council, "authorityId": laid, "checkedAt": checked if checked == today else today,
+        json.dump({"council": council, "authorityId": laid, "checkedAt": checked, "sourceUpdatedAt": extract_date,
                    "historyTrackedFrom": started, "attribution": "Contains Food Standards Agency data.",
-                   "source": "Food Standards Agency Food Hygiene Rating API", "places": places},
+                   "source": "Food Standards Agency per-authority open data", "places": places},
                   f, ensure_ascii=False, separators=(",", ":"))
     st.setdefault("fsa_register", {})[str(laid)] = cur
     with open(STATUS, "w", encoding="utf-8") as f: json.dump(st, f, ensure_ascii=False, separators=(",", ":"))
