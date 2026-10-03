@@ -102,9 +102,9 @@ def extent_for(code):  # legislation.gov.uk extent codes
 
 def extent_guess(ident, title):
     t = title.lower(); kind = ident.split("/")[0]
-    if kind in ("ssi", "asp") or "(scotland)" in t: return "S"
-    if kind in ("wsi", "asc", "anaw", "mwa") or "(wales)" in t: return "W"
-    if kind in ("nisr", "nia") or "(northern ireland)" in t: return "NI"
+    if kind in ("ssi", "asp") or re.search(r"\bscotland\b|\bscottish\b", t): return "S"
+    if kind in ("wsi", "asc", "anaw", "mwa") or re.search(r"\bwales\b|\bwelsh\b", t): return "W"
+    if kind in ("nisr", "nia") or "northern ireland" in t: return "NI"
     if "(england and wales)" in t: return "E+W"
     if "(england)" in t: return "E"
     return "UK"
@@ -232,6 +232,50 @@ SOURCES = [
     ("police.uk", "https://data.police.uk", "OGL v3", fetch_police),
 ]
 
+# ---------- de-duplication ----------
+KIND_RANK = {"law": 0, "alert": 1, "rates": 2, "consult": 3, "guidance": 4, "update": 5, "record": 6}
+STOP = set("the a an and of for to in on by with from under as at or is are new uk government regulations regulation order act bill 2024 2025 2026 2027 statement".split())
+
+def _tokens(title, keep_parens=False):
+    t = (title or "").lower()
+    if not keep_parens: t = re.sub(r"\(.*?\)", " ", t)
+    t = re.sub(r"[^a-z0-9 ]+", " ", t)
+    return {w for w in t.split() if len(w) > 2 and w not in STOP}
+
+def _close(a, b):
+    law = a.get("kind") == "law" and b.get("kind") == "law"
+    ta, tb = _tokens(a["title"], law), _tokens(b["title"], law)
+    if len(ta) < 3 or len(tb) < 3: return False
+    j = len(ta & tb) / len(ta | tb)
+    subset = (ta <= tb or tb <= ta) and min(len(ta), len(tb)) >= 4
+    both_law = a.get("kind") == "law" and b.get("kind") == "law"
+    if both_law and j < 0.95: return False   # every instrument is its own law; only near-identical titles merge
+    if j < 0.7 and not subset: return False
+    try:
+        da = dt.date.fromisoformat(a.get("date", "")[:10]); db = dt.date.fromisoformat(b.get("date", "")[:10])
+        if abs((da - db).days) > 7: return False
+    except Exception:
+        pass
+    return True
+
+def dedupe(items):
+    """Collapse the same thing published several ways (press release + instrument + bill) into one card.
+    The survivor is the most binding kind; the others are kept on it as `also`."""
+    items = sorted(items, key=lambda x: (KIND_RANK.get(x.get("kind"), 9), x.get("date", "")))
+    kept = []
+    for it in items:
+        if it.get("holiday") or it.get("kind") == "record":
+            kept.append(it); continue
+        host = next((k for k in kept if not k.get("holiday") and k.get("kind") != "record" and _close(k, it)), None)
+        if host is None:
+            kept.append(it); continue
+        host.setdefault("also", [])
+        if len(host["also"]) < 5:
+            host["also"].append({"id": it["id"], "kind": it.get("kind"), "title": it.get("title"), "src": it.get("src"), "link": it.get("link"), "date": it.get("date")})
+        for tg in it.get("tags", []):
+            if tg not in host.setdefault("tags", []): host["tags"].append(tg)
+    return kept
+
 def main():
     items, sources = [], []
     for name, url, licence, fn in SOURCES:
@@ -265,6 +309,7 @@ def main():
         if d and d < cutoff and not it.get("holiday"): continue   # too old
         if it.get("sample"): continue
         seen.add(id_); out.append(it)
+    out = dedupe(out)
     out.sort(key=lambda x: x.get("date", ""), reverse=True)
     feed = {"generated_at": NOW.isoformat(), "scope": "England", "sources": sources, "items": out}
     with open(OUT, "w", encoding="utf-8") as f:
