@@ -413,15 +413,15 @@ th{color:var(--slate);font-weight:400}
 .rank .xp{font-size:11.5px;color:var(--slate)}
 .toast{position:fixed;top:calc(70px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%) translateY(-8px);background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:20px;font-weight:700;font-size:15px;z-index:9;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-.brief{background:var(--ink);color:var(--paper);border-radius:8px;padding:14px 16px;margin:0 0 18px}
-.brief h2{margin:0 0 4px;font-size:17px;color:var(--paper)}
-.brief .sub{font-size:13.5px;color:var(--paper);opacity:1;margin:0 0 10px;font-weight:700}
-.brief .m{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid rgba(255,255,255,.15);font-size:15px}
-.brief .m .dot{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.5);flex:none;display:grid;place-items:center;font-size:12px}
+.brief{background:var(--paper-2);color:var(--ink);border:2px solid var(--ink);border-radius:8px;padding:14px 16px;margin:0 0 18px}
+.brief h2{margin:0 0 4px;font-size:17px;color:var(--ink)}
+.brief .sub{font-size:13.5px;color:var(--ink);opacity:1;margin:0 0 10px;font-weight:700}
+.brief .m{display:flex;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--paper-3);font-size:15px;color:var(--ink)}
+.brief .m .dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--slate);flex:none;display:grid;place-items:center;font-size:12px}
 .brief .m.done .dot{background:var(--green);border-color:var(--green)}
-.brief .m.done{opacity:.6;text-decoration:line-through}
-.brief .m .x{margin-left:auto;font-size:13px;opacity:.75;white-space:nowrap}
-.brief button.m{width:100%;background:transparent;border:0;border-top:1px solid rgba(255,255,255,.15);color:inherit;text-align:left;cursor:pointer}
+.brief .m.done{opacity:.78;text-decoration:line-through}
+.brief .m .x{margin-left:auto;font-size:13px;opacity:1;white-space:nowrap;color:var(--ink)}
+.brief button.m{width:100%;background:transparent;border:0;border-top:1px solid var(--paper-3);color:var(--ink);text-align:left;cursor:pointer}
 .game{background:var(--paper-2);border-radius:8px;padding:16px;margin:0 0 14px}
 .game .big{font-size:22px;font-weight:700;line-height:1.3;margin:8px 0 14px;min-height:90px}
 .game .meter{height:8px;background:var(--paper-3);border-radius:4px;overflow:hidden;margin:0 0 12px}
@@ -1540,7 +1540,7 @@ function renderToday(){
   h+=`<div class="row" style="margin:0 0 12px"><button class="btn sm" id="brief">▶ Morning briefing</button><span class="lead" id="briefnote">Today's items read aloud, duties first. About ${Math.max(1,Math.round(tc.list.length*0.7))} min.</span></div>`;
   h+=`<div class="meas">${MEASURES.map(m=>`<button data-meas="${m.k}" aria-label="${esc(m.l)}: ${esc(m.v)}"><div class="l">${esc(m.l)}</div><div class="v ${m.ok?"":"warn"}">${esc(m.v)}</div></button>`).join("")}</div>`;
   h+=`<div class="dyk"><span class="pill kind law" style="margin-bottom:4px">Still on the books</span><div class="t">${esc(dyk.t)}</div><div>${esc(dyk.b)}</div><div class="src">${esc(dyk.src)}</div></div>`;
-  h+=`<div class="clock"><div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div></div>`;
+  h+=`<div class="clock">${session&&!session.done&&session.end>Date.now()?`<div class="big">Catch-up in progress<small>Time remaining · the original end time is unchanged</small><b id="today-session-left" style="display:block;font-size:24px;margin-top:4px">--:--</b></div><div class="row"><button class="btn sm" id="resume-session">Continue catch-up</button></div>`:`<div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div>`}</div>`;
   h+=briefHTML(relevant);
   const myA=(profile.asis||[]).map(id=>ASIS.find(a=>a.id===id)).filter(Boolean);
   h+=`<div class="areas"><div class="h"><span>Going deep</span><a href="#" id="toareas" class="lead">${myA.length?"change":"choose up to three"}</a></div>${myA.length?`<div class="asigrid">${myA.map(a=>`<button class="asi on" data-asi="${a.id}" data-open><div class="h"><span>${esc(a.t)}</span><span class="lead">${asiXP(a)} XP</span></div></button>`).join("")}</div>`:`<p class="lead" style="margin:0">Pick areas of specific interest under Settings. Each shows the extra minutes it adds to your week.</p>`}</div>`;
@@ -1562,6 +1562,7 @@ function renderToday(){
   s.innerHTML=h;bindCards(s);bindBrief(s);
   s.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{todayFilter=b.dataset.f;renderToday();});
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
+  const resume=s.querySelector("#resume-session");if(resume)resume.onclick=()=>{drawSession();};
   s.querySelector("#brief").onclick=briefing;
   s.querySelector("#nuis").onclick=renderNuisance;const os=s.querySelector("#opensaved");if(os)os.onclick=renderSaved;s.querySelector("#opensubs").onclick=renderSubs;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
   s.querySelector("#toareas").onclick=e=>{e.preventDefault();show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
@@ -1739,6 +1740,7 @@ function renderDetail(id,backCtx){
     if(fromSession&&sessionLive()){detailBack=null;drawSession();return;}
     const b=detailBack;detailBack=null;
     if(b&&b.type==="asi"){renderASI(b.id);return;}
+    if(b&&b.type==="screen"){show(b.tab);requestAnimationFrame(()=>window.scrollTo(0,b.scrollY||0));return;}
     show(prevTab);
   };bindTags(s);bindAbbr(s);
   s.querySelectorAll("details.rib").forEach((d,i)=>d.addEventListener("toggle",()=>{if(d.open)award("rib:"+it.id+":"+i,3,"Thread");}));
@@ -1804,7 +1806,7 @@ function renderASI(id){
   const a=ASIS.find(x=>x.id===id);const s=document.getElementById("s-detail");const next=profile.mode==="next";
   const rungs=[
    {t:"The law",d:"What the state can hold you to here.",body:()=>a.law.map(i=>ITEMS.find(it=>it.id===i)).filter(Boolean).map(card).join("")+`<div class="tags">${a.tags.map(t=>tagHTML(t)).join("")}</div>`},
-   {t:"What's live",d:"The same area, right now. From government operators, not news.",body:()=>a.live.map(L=>`<div class="live"><div class="st"><span>${esc(L.l)}</span><span class="${L.ok?"ok":"warn"}">${L.ok?"Clear":"Active"}</span></div><div>${esc(L.v)}</div><div class="lead">${esc(L.src)}</div></div>`).join("")+`<button class="btn sm" data-aw="live">I've checked these (+10)</button>`},
+   {t:"What's live",d:"The same area, right now. From government operators, not news.",body:()=>a.live.map(L=>`<div class="live"><div class="st"><span>${esc(L.l)}</span><span class="${L.ok?"ok":"warn"}">${L.ok?"Clear":"Active"}</span></div><div>${esc(L.v)}</div><div class="lead">${esc(L.src)}</div></div>`).join("")+`<p class="lead">This button records that you checked the live conditions above. It does not mark linked articles as read.</p><button class="btn sm" data-aw="live">I've checked the live information (+10)</button>`},
    {t:"Where it comes from",d:"Government-approved sources you can use directly. No forums, no aggregators.",body:()=>a.sources.map(S=>`<div class="live"><b>${esc(S.l)}</b><div>${esc(S.d)}</div><div class="lead">${esc(S.who)}</div></div>`).join("")+`<button class="btn sm" data-aw="src">Noted (+10)</button>`},
    {t:"The science and the mechanism",d:"Go granular. Why the rule exists and how the thing actually works.",body:()=>a.learn.map((L,i)=>`<div class="lesson"><div class="t">${esc(L.t)}</div>${L.steps.map((st,j)=>`<div class="step"><b>${j+1}.</b> ${esc(st)}</div>`).join("")}<div class="lead" style="margin-top:8px">Source: ${esc(L.src)}</div><div class="quiz" style="margin-top:10px" id="lq${i}"></div></div>`).join("")},
    {t:next?"Work, first":"Where it leads",d:next?"You said you're looking for your next thing, so this rung is open from the start. Vacancies from Find a job, Civil Service Jobs, council sites and Find an apprenticeship, matched to this area.":"Jobs and apprenticeships in this area, from government job boards, including neighbouring councils.",body:()=>a.work.map(J=>`<div class="job"><div class="t">${esc(J.t)} ${J.nb?'<span class="pill coming">Neighbouring council</span>':""}</div><div class="m">${esc(J.o)} · ${esc(J.m)}</div><div class="req"><b>What the law expects you to know:</b> ${esc(J.req)}</div><div class="lead">${esc(J.src)} · sample listing</div></div>`).join("")+`<p class="note">Job notifications would arrive on Today as an Update when a matching vacancy opens within your travel distance, with the legislation you'd be working under linked back to this ladder.</p>`}
@@ -1899,9 +1901,10 @@ let sessT=null;
 let session=null; // {mins,end,ids,done}
 function renderSession(mins){
   const tc=toCurrent();let budget=mins,pick=[];for(const it of tc.list){const m=minsFor(it);if(budget-m>=0){pick.push(it);budget-=m;}}
-  session={mins,end:Date.now()+mins*60000,ids:pick.map(it=>it.id),more:tc.list.length-pick.length,moreMins:tc.list.slice(pick.length).reduce((n,it)=>n+minsFor(it),0),from:prevTab,done:false};
+  session={mins,end:Date.now()+mins*60000,ids:pick.map(it=>it.id),more:tc.list.length-pick.length,moreMins:tc.list.slice(pick.length).reduce((n,it)=>n+minsFor(it),0),from:document.querySelector(".screen.active")?.id?.replace("s-","")||prevTab,fromScroll:window.scrollY,done:false};
   drawSession();
 }
+function returnFromSession(S){if(S.from==="today"){renderToday();show("today");requestAnimationFrame(()=>window.scrollTo(0,S.fromScroll||0));}else show(S.from);}
 function drawSession(){
   const S=session;if(!S)return;const s=document.getElementById("s-detail");
   const pick=S.ids.map(id=>ITEMS.find(x=>x.id===id)).filter(Boolean);const read=pick.filter(it=>game.got["read:"+it.id]);
@@ -1913,13 +1916,13 @@ function drawSession(){
   <h2>If there's time left</h2>${extra.map(e=>`<div class="live"><div class="st"><span>${esc(e.t)}</span><span class="lead">${e.m} min</span></div></div>`).join("")}
   <div class="row" style="margin-top:12px"><button class="btn ghost sm" id="endsess">End session</button></div>
   <p class="mantra">${esc(mantra())}</p>`;
-  s.querySelector("#back").onclick=()=>{show(S.from);};
-  s.querySelector("#endsess").onclick=()=>{clearInterval(sessT);session=null;show(S.from);};
+  s.querySelector("#back").onclick=()=>returnFromSession(S);
+  s.querySelector("#endsess").onclick=()=>{clearInterval(sessT);session=null;returnFromSession(S);};
   bindCards(s);tickSession();
   clearInterval(sessT);sessT=setInterval(tickSession,500);
   show("detail");window.scrollTo(0,0);
 }
-function tickSession(){const S=session;if(!S){clearInterval(sessT);return;}const l=Math.max(0,S.end-Date.now());const el=document.getElementById("left");if(el)el.textContent=Math.floor(l/60000)+":"+String(Math.floor(l%60000/1000)).padStart(2,"0");
+function tickSession(){const S=session;if(!S){clearInterval(sessT);return;}const l=Math.max(0,S.end-Date.now());const text=Math.floor(l/60000)+":"+String(Math.floor(l%60000/1000)).padStart(2,"0");const el=document.getElementById("left");if(el)el.textContent=text;const todayLeft=document.getElementById("today-session-left");if(todayLeft)todayLeft.textContent=text;
   if(l<=0&&!S.done){S.done=true;clearInterval(sessT);sfx("rank");award("sess:"+TODAY.toDateString()+":"+S.mins,S.mins>=30?30:10,"Session");toast("Time's up");}}
 function sessionLive(){return session&&!session.done&&session.end>Date.now();}
 
@@ -2109,6 +2112,8 @@ function bindCards(root){
     e.preventDefault();
     const ctx=root.id==="s-detail"&&root.dataset.detailContext;
     if(ctx&&ctx.startsWith("asi:"))renderDetail(c.dataset.id,{type:"asi",id:ctx.slice(4)});
+    else if(root.id==="s-detail"&&sessionLive())renderDetail(c.dataset.id);
+    else if(root.id!=="s-detail"&&root.id&&root.id.startsWith("s-"))renderDetail(c.dataset.id,{type:"screen",tab:root.id.slice(2),scrollY:window.scrollY});
     else renderDetail(c.dataset.id);
   }));
   bindTags(root);bindBm(root);
@@ -2151,7 +2156,7 @@ function badge(id){if(game.badges[id])return;game.badges[id]=1;gsave();const b=B
 function briefMissions(relevant){
   const top=relevant.filter(it=>it.status!=="past").sort((a,b)=>({must:3,affects:2,notice:1}[tierFor(b).tier]-{must:3,affects:2,notice:1}[tierFor(a).tier]))[0];
   return [
-   {id:"read",t:top?`Read "${top.title}"`:"Read one item",x:"+10",done:()=>top?game.got["read:"+top.id]:false,go:()=>top&&renderDetail(top.id)},
+   {id:"read",t:top?`Read "${top.title}"`:"Read one item",x:"+10",done:()=>top?game.got["read:"+top.id]:false,go:()=>top&&renderDetail(top.id,{type:"screen",tab:"today",scrollY:window.scrollY})},
    {id:"tl",t:"Scrub a timeline end to end",x:"+2 a step",done:()=>ITEMS.some(it=>it.timeline.every((_,i)=>game.got["tl:"+it.id+":"+i])),go:()=>top&&renderDetail(top.id)},
    {id:"asi",t:(profile.asis&&profile.asis.length)?"Climb a rung in "+ASIS.find(a=>a.id===profile.asis[0]).t:"Choose an area of specific interest",x:"+10",done:()=>!!(profile.asis&&profile.asis.length&&Object.keys(game.got).some(k=>k.startsWith("asi:")&&!k.endsWith("chosen"))),go:()=>{if(profile.asis&&profile.asis.length)renderASI(profile.asis[0]);else{show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);}}},
    {id:"lol",t:"Play a round of Law or Lore",x:"+10 a hit",done:()=>!!game.brief.lol,go:()=>{show("play");startLoL();}}
