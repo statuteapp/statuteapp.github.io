@@ -1,48 +1,106 @@
 {
- "generated_at": "2026-10-03T02:14:12.539323+00:00",
+ "generated_at": "2026-10-03T02:25:58.880616+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 18,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 40,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 256,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 18,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 17,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-03T02:14:12.539323+00:00",
-   "ok": true
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 1,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+  },
+  {
+   "name": "FSA food alerts",
+   "url": "https://data.food.gov.uk/food-alerts",
+   "licence": "OGL v3",
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 60,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+  },
+  {
+   "name": "Environment Agency floods",
+   "url": "https://environment.data.gov.uk/flood-monitoring",
+   "licence": "OGL v3",
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 0,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+  },
+  {
+   "name": "Police neighbourhood",
+   "url": "https://data.police.uk",
+   "licence": "OGL v3",
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 20,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
+  },
+  {
+   "name": "The Gazette",
+   "url": "https://www.thegazette.co.uk",
+   "licence": "OGL v3",
+   "fetched_at": "2026-10-03T02:25:58.880616+00:00",
+   "ok": true,
+   "count": 0,
+   "error": null,
+   "last_ok": "2026-10-03T02:25:58.880616+00:00"
   }
  ],
  "items": [
@@ -61,7 +119,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-12-25",
@@ -78,7 +137,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-08-28",
@@ -95,7 +155,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-05-29",
@@ -112,7 +173,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-05-01",
@@ -129,7 +191,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-04-17",
@@ -146,7 +209,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-04-14",
@@ -163,7 +227,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2028-01-03",
@@ -180,7 +245,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-12-28",
@@ -197,7 +263,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-12-27",
@@ -214,7 +281,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-08-30",
@@ -231,7 +299,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-05-31",
@@ -248,7 +317,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-05-03",
@@ -265,7 +335,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-03-29",
@@ -282,7 +353,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2027-03-26",
@@ -299,6 +371,91 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "polev:thames-valley:N458:2027-01-31:Have Your Say",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2027-01-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say",
+   "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! C7573 Leedom  ",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2027-01-18:Come down to the Salt Hill Act",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2027-01-18",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Come down to the Salt Hill Activity Centre on Bath Road to meet your local PCSOs. We will be down for an hour to answer any questions or give out ",
+   "sum": "Have Your Say  At Salt Hill Activity Centre\nBath Road\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2027-01-13:Come down to the Tesco Extra o",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2027-01-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2027-01-03:Have Your Say",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2027-01-03",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say",
+   "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! C7573 Leedom  ",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -316,7 +473,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2026-12-28",
@@ -333,7 +491,8 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "hol:2026-12-25",
@@ -350,7 +509,247 @@
    ],
    "src": "GOV.UK bank holidays",
    "link": "https://www.gov.uk/bank-holidays",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-12-16:Come down to the Tesco Extra o",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-12-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-12-06:Have Your Say",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-12-06",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say",
+   "sum": "Come on down to Upton Court Park and join our regular patrols. We’ll be around to speak about any issues regarding vehicle anti-social behaviour or answer any queries you have in your area. Don’t hesitate to come speak to us! Officer: Beatr",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-11-23:Have Your Say meeting in Gregg",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-11-23",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-11-23:Have Your Say",
+     "kind": "update",
+     "title": "Police event: Have Your Say",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-11-23"
+    }
+   ]
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-11-18:Come down to the Tesco Extra o",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-11-18",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for an",
+   "sum": "Come down to the Tesco Extra on Brunel Way to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  At Tesco Extra\nBrunel Way",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-11-13:Have Your Say meeting in Gregg",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "sum": "Have Your say  At Greggs\nHigh Street\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-11-04:Have Your Say meeting in Gregg",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-11-04",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "sum": "Have Your say  At Greggs \nHigh Street\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-11-08:Have Your Say",
+     "kind": "update",
+     "title": "Police event: Have Your Say",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-11-08"
+    }
+   ]
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-10-26:Have Your Say",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-10-26",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say",
+   "sum": "Come down to the Salt Hill Activity Centre on Bath Road to meet your local PCSOs. We will be down for an hour to answer any questions or give out advice for any issues you may be having. Don't hesitate to come speak to us!  Officer: Beatrix",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-10-28:Have Your Say meeting in Gregg",
+     "kind": "update",
+     "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-10-16:Have Your Say meeting in Gregg",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-10-16",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-10-21:Have Your Say",
+     "kind": "update",
+     "title": "Police event: Have Your Say",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-10-07:Have Your Say meeting in Gregg",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-10-07",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have Your Say meeting in Greggs. Feel free to come and say hello and let me know of any queries, concerns or issues you may have regarding crime o",
+   "sum": "Have Your Say  At Greggs\nHigh Street\nSlough",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-10-11:Have Your Say",
+     "kind": "update",
+     "title": "Police event: Have Your Say",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-10-11"
+    }
+   ]
   },
   {
    "id": "leg:http://www.legislation.gov.uk/ssi/2026/281/made",
@@ -550,10 +949,10 @@
    "src": "GOV.UK · Regional Department for Education (DfE) Directors ",
    "link": "https://www.gov.uk/government/publications/the-royal-harbour-academy-ramsgate-warning-notice",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd267026660e5f62a7f184/The_Royal_Harbour_Academy_-_warning_notice.pdf",
    "pdf_label": "The Royal Harbour Academy: warning notice (PDF)",
-   "pdf_size": 242416
+   "pdf_size": 242416,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/fulston-manor-school-sittingbourne-warning-notice",
@@ -570,10 +969,10 @@
    "src": "GOV.UK · Regional Department for Education (DfE) Directors ",
    "link": "https://www.gov.uk/government/publications/fulston-manor-school-sittingbourne-warning-notice",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe7993943e890cb55e5e28/Fulston_Manor_School_Termination_Warning_Notice.pdf",
    "pdf_label": "Fulston Manor School: warning notice (PDF)",
-   "pdf_size": 271071
+   "pdf_size": 271071,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/river-thames-current-river-conditions",
@@ -589,6 +988,27 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "fsaalert:FSA-AA-43-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-02",
+   "extent": "UK",
+   "title": "Allergy alert: Unilever recalls Pot Noodle Piri Piri Chicken Flavour because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-43-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -605,7 +1025,8 @@
    ],
    "src": "GOV.UK · Office for National Statistics",
    "link": "https://www.gov.uk/government/consultations/consultation-on-release-times-for-market-sensitive-economic-statistics",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/bluetongue-latest-situation",
@@ -690,10 +1111,10 @@
    "src": "GOV.UK · Biometrics and Surveillance Camera Commissioner",
    "link": "https://www.gov.uk/government/publications/bc2-application-to-the-biometrics-commissioner-explanatory-notes",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abfa736241ecad55a9792ef/BC2_Guidance_Version_6_-_FINAL_-_Sept_2026.pdf",
    "pdf_label": "BC2 application to the Biometrics Commissioner: explanatory notes for completion  (PDF)",
-   "pdf_size": 1424680
+   "pdf_size": 1424680,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/excise-movement-and-control-system-commercial-software-suppliers",
@@ -812,11 +1233,11 @@
    "src": "GOV.UK · Marine Management Organisation",
    "link": "https://www.gov.uk/guidance/united-kingdom-single-issuing-authority-uksia",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/675c2c260fb02bbe4853eefe/SIA_Application_to_fish_in_Third_Country_Waters_EU_20241213.pdf",
    "pdf_label": "SIA Application to fish in European Union Waters (PDF)",
    "pdf_size": 401322,
-   "pdf_more": 177
+   "pdf_more": 177,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/notices-and-proceedings-for-the-north-east-of-england",
@@ -833,11 +1254,11 @@
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-east-of-england",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69579e816a4ea67a402a83be/np_2717_02_January_2026.pdf",
    "pdf_label": "NP - 2717 02 January 2026 (objection deadline 23 January 2026) (PDF)",
    "pdf_size": 233607,
-   "pdf_more": 39
+   "pdf_more": 39,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/applications-and-decisions-for-the-north-west-of-england",
@@ -854,11 +1275,11 @@
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-west-of-england",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69579f59a2fb6c15f98d1911/ad_7137_02_January_2026.pdf",
    "pdf_label": "AD - 7137 02 January 2026 (objection deadline 23 January 2026) (PDF)",
    "pdf_size": 245429,
-   "pdf_more": 39
+   "pdf_more": 39,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/civil-legal-aid-application-forms-supporting-guidance",
@@ -875,11 +1296,11 @@
    "src": "GOV.UK · Legal Aid Agency",
    "link": "https://www.gov.uk/government/publications/civil-legal-aid-application-forms-supporting-guidance",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/5a7e3de4ed915d74e622507f/legal-aid-checklist.pdf",
    "pdf_label": "Civil representation checklist for new applications (PDF)",
    "pdf_size": 157341,
-   "pdf_more": 7
+   "pdf_more": 7,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/place-based-philanthropy-community-of-practice-programme-grant-competiton",
@@ -914,11 +1335,11 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/living-in-france",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/60dc7d768fa8f50ab737ff60/20210421_-_S._Gaudin_-_Droit_des_ressortissants_britanniques_r%C3%A9sidant_en....pdf",
    "pdf_label": "Informative note about workers’ rights  (PDF)",
    "pdf_size": 91327,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/document-storage-retention-and-destruction-caseworker-guidance",
@@ -986,11 +1407,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade",
    "link": "https://www.gov.uk/government/publications/british-industrial-competitiveness-scheme-business-guidance",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd263e55bc01d752a7f17a/annex-a-british-industrial-competitiveness-scheme-evidence-requirements.pdf",
    "pdf_label": "Annex A: British Industrial Competitiveness Scheme evidence requirements (PDF)",
    "pdf_size": 194080,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/eligibility-for-the-british-industrial-competitiveness-scheme",
@@ -1068,11 +1489,11 @@
    "src": "GOV.UK · Intellectual Property Office",
    "link": "https://www.gov.uk/guidance/requests-for-opinions-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69f339be4b0f7395324fbb60/Opinion-0326.pdf",
    "pdf_label": "Opinion 03/26 (PDF)",
    "pdf_size": 1234240,
-   "pdf_more": 10
+   "pdf_more": 10,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/bbnj-forms-and-downloadable-resources",
@@ -1157,11 +1578,11 @@
    "src": "GOV.UK · Ministry of Defence",
    "link": "https://www.gov.uk/government/publications/veterans-of-the-lgbt-ban-financial-recognition-scheme",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a2fcf2bc39255c595b50852/46.40_MOD_LGBTFinancialRecognitionScheme_V3.pdf",
    "pdf_label": "LGBT Financial Recognition Scheme guide: How to apply for a Financial Recognition Payment (PDF)",
    "pdf_size": 4375361,
-   "pdf_more": 5
+   "pdf_more": 5,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/managing-people-and-public-access-in-your-woodland",
@@ -1196,10 +1617,10 @@
    "src": "GOV.UK · UK Visas and Immigration, Home Office",
    "link": "https://www.gov.uk/government/publications/licensing-authority-guide-to-right-to-work-checks",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe6f06f04a15f533722886/01.10.2026_-_Guidance_for_licensing_authorities_to_prevent_illegal_working_in_the_taxi_and_private_hire_sector_in_the_UK_updated__1_.pdf",
    "pdf_label": "Guidance for licensing authorities to prevent illegal working in the taxi and private hire sector in the UK: 1 October 2026 (PDF)",
-   "pdf_size": 722818
+   "pdf_size": 722818,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/section-62a-planning-application-s62a20260159-maple-house-nos-8-16-even-30-32-high-street-and-nos-1-7-princes-parade-potters-bar-en6-5ba",
@@ -1216,11 +1637,11 @@
    "src": "GOV.UK · Planning Inspectorate",
    "link": "https://www.gov.uk/guidance/section-62a-planning-application-s62a20260159-maple-house-nos-8-16-even-30-32-high-street-and-nos-1-7-princes-parade-potters-bar-en6-5ba",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a7c5dc4423b0bdba0290f5b/Application_Form_updated_August_2026_Redacted.pdf",
    "pdf_label": "Application Form updated August 2026 Redacted (PDF)",
    "pdf_size": 6161821,
-   "pdf_more": 254
+   "pdf_more": 254,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/healthcare-education-and-training-tariffs-2026-to-2027",
@@ -1253,7 +1674,8 @@
    ],
    "src": "GOV.UK · Ministry of Justice, HM Prison and Probation Service",
    "link": "https://www.gov.uk/guidance/low-newton-prison",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/child-benefit-service-availability-and-issues",
@@ -1269,7 +1691,8 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/child-benefit-service-availability-and-issues",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/get-customs-data-for-import-and-export-declarations",
@@ -1285,7 +1708,8 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/guidance/get-customs-data-for-import-and-export-declarations",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/mod-war-detectives-the-joint-casualty-and-compassionate-centre-commemorations-team-our-future-services-current-appeals-and-past-cases",
@@ -1301,7 +1725,8 @@
    ],
    "src": "GOV.UK · Ministry of Defence, Veterans UK",
    "link": "https://www.gov.uk/guidance/mod-war-detectives-the-joint-casualty-and-compassionate-centre-commemorations-team-our-future-services-current-appeals-and-past-cases",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/make-a-whistleblower-report",
@@ -1317,7 +1742,8 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/guidance/make-a-whistleblower-report",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/report-a-cartel-to-the-cma",
@@ -1333,7 +1759,8 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/guidance/report-a-cartel-to-the-cma",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/tell-the-cma-about-a-competition-or-market-problem",
@@ -1349,7 +1776,8 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/guidance/tell-the-cma-about-a-competition-or-market-problem",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/whistleblowing-to-the-cma",
@@ -1365,7 +1793,8 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/guidance/whistleblowing-to-the-cma",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/public-health-grants-to-local-authorities-2026-to-2027",
@@ -1381,7 +1810,8 @@
    ],
    "src": "GOV.UK · Department of Health and Social Care",
    "link": "https://www.gov.uk/government/publications/public-health-grants-to-local-authorities-2026-to-2027",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/ring-fenced-public-health-grant-to-local-authorities",
@@ -1397,7 +1827,8 @@
    ],
    "src": "GOV.UK · Department of Health and Social Care",
    "link": "https://www.gov.uk/government/publications/ring-fenced-public-health-grant-to-local-authorities",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/providing-healthcare-public-health-advice-to-integrated-care-boards",
@@ -1413,7 +1844,8 @@
    ],
    "src": "GOV.UK · Department of Health and Social Care",
    "link": "https://www.gov.uk/government/publications/providing-healthcare-public-health-advice-to-integrated-care-boards",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/renewing-marketing-authorisations-for-medicines",
@@ -1429,7 +1861,8 @@
    ],
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/renewing-marketing-authorisations-for-medicines",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/medicines-apply-for-a-variation-to-your-marketing-authorisation",
@@ -1445,7 +1878,12 @@
    ],
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/medicines-apply-for-a-variation-to-your-marketing-authorisation",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/5ff2f52dd3bf7f08a202459b/CCC__updated_guidance__29.12.20.pdf",
+   "pdf_label": "guidance for CCC application (PDF)",
+   "pdf_size": 551381,
+   "pdf_more": 3
   },
   {
    "id": "govuk:/guidance/apply-for-a-licence-to-market-a-medicine-in-the-uk",
@@ -1461,7 +1899,12 @@
    ],
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/apply-for-a-licence-to-market-a-medicine-in-the-uk",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/5a7d4fc640f0b60aaa293abe/naming_of_medicines_guidance.pdf",
+   "pdf_label": "naming of medicines guidance (PDF)",
+   "pdf_size": 240764,
+   "pdf_more": 3
   },
   {
    "id": "govuk:/guidance/electronic-application-forms-eaf-for-uk-medicines-licensing-applications",
@@ -1477,7 +1920,12 @@
    ],
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/guidance/electronic-application-forms-eaf-for-uk-medicines-licensing-applications",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ab5134a734e2435f202eff5/maa_human_v1.26.0.0.pdf",
+   "pdf_label": "Initial Marketing Authorisation Application (MAA) - Version 1.26.0.0 (PDF)",
+   "pdf_size": 908713,
+   "pdf_more": 2
   },
   {
    "id": "govuk:/government/publications/multi-factor-authentication-for-uk-visa-sponsors-sms-manual-13",
@@ -1493,7 +1941,11 @@
    ],
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/multi-factor-authentication-for-uk-visa-sponsors-sms-manual-13",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abf765455bc01d752a7f2a8/13._Multi-Factor_Authentication.pdf",
+   "pdf_label": "SMS guide 13: Multi-factor authentification (MFA) (PDF)",
+   "pdf_size": 1495526
   },
   {
    "id": "govuk:/government/publications/code-confident-pack",
@@ -1509,7 +1961,11 @@
    ],
    "src": "GOV.UK · Groceries Code Adjudicator",
    "link": "https://www.gov.uk/government/publications/code-confident-pack",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abe7698f04a15f5337228a2/2_October_26_Code_Confident_pack.pdf",
+   "pdf_label": "Code Confident pack (PDF)",
+   "pdf_size": 795586
   },
   {
    "id": "govuk:/guidance/river-thames-lock-keeper-service",
@@ -1525,7 +1981,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/guidance/river-thames-lock-keeper-service",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/naturalisation-and-registration-certificates",
@@ -1541,7 +1998,8 @@
    ],
    "src": "GOV.UK · HM Passport Office",
    "link": "https://www.gov.uk/government/publications/naturalisation-and-registration-certificates",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/liverpool-city-region-place-delivery-agreement",
@@ -1559,6 +2017,7 @@
    "src": "GOV.UK · Homes England, National Housing Bank",
    "link": "https://www.gov.uk/government/publications/liverpool-city-region-place-delivery-agreement",
    "first_seen": "2026-10-03",
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/news/liverpool-city-region-and-homes-england-sign-first-place-delivery-agreement",
@@ -1584,7 +2043,12 @@
    ],
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/palestine-country-policy-and-information-notes",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abf5f2e943e890cb55e5e45/PSE_CPIN_Humanitarian_situation__1_.pdf",
+   "pdf_label": "Country policy and information note: humanitarian situation in Gaza, Palestine, September 2026 (PDF)",
+   "pdf_size": 1404376,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/kinship-care-guidance-for-local-authorities",
@@ -1600,7 +2064,11 @@
    ],
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/publications/kinship-care-guidance-for-local-authorities",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abf6a8defad0f1df672290c/kinship_care_statutory_guidance_for_local_authorities_october_2026.pdf",
+   "pdf_label": "Kinship care: statutory guidance for local authorities (PDF)",
+   "pdf_size": 670141
   },
   {
    "id": "govuk:/guidance/russia-list-of-designations-and-sanctions-notices",
@@ -1617,7 +2085,12 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/russia-list-of-designations-and-sanctions-notices",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6985d59b4cff1c70a3b6e45e/Sanctions_Notice__Russia__6_February_2026.pdf",
+   "pdf_label": "Sanctions Notice, Russia: 6 February 2026 (PDF)",
+   "pdf_size": 186060,
+   "pdf_more": 31
   },
   {
    "id": "govuk:/government/publications/the-uk-sanctions-list",
@@ -1634,7 +2107,10 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.pdf",
+   "pdf_label": "PDF format UK Sanctions List (PDF)"
   },
   {
    "id": "govuk:/government/publications/external-temporary-storage-facilities-codes-for-data-element-523-of-the-customs-declaration-service",
@@ -1650,7 +2126,8 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/external-temporary-storage-facilities-codes-for-data-element-523-of-the-customs-declaration-service",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/when-someone-dies-in-italy",
@@ -1666,7 +2143,12 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/when-someone-dies-in-italy",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abe5b9a9c196f81005e5e08/Informative_Note_transfer_of_remains_ashes_certificate_ENG_ITA.pdf",
+   "pdf_label": "Transfer of remains letter (in English and Italian) (PDF)",
+   "pdf_size": 732032,
+   "pdf_more": 2
   },
   {
    "id": "govuk:/government/publications/social-care-ofsteds-enforcement-policy",
@@ -1682,7 +2164,8 @@
    ],
    "src": "GOV.UK · Ofsted",
    "link": "https://www.gov.uk/government/publications/social-care-ofsteds-enforcement-policy",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/forestry-project-checks-constraints",
@@ -1698,7 +2181,8 @@
    ],
    "src": "GOV.UK · Forestry Commission",
    "link": "https://www.gov.uk/guidance/forestry-project-checks-constraints",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/register-of-licensed-sponsors-workers",
@@ -1715,7 +2199,8 @@
    ],
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/register-of-licensed-sponsors-students",
@@ -1731,7 +2216,8 @@
    ],
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/register-of-licensed-sponsors-students",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/evidence-and-the-marine-management-organisation-mmo",
@@ -1747,7 +2233,12 @@
    ],
    "src": "GOV.UK · Marine Management Organisation",
    "link": "https://www.gov.uk/government/publications/evidence-and-the-marine-management-organisation-mmo",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/645e44386539660011bd3e81/MMO_Evidence_Strategy_2021-2025.pdf",
+   "pdf_label": "Evidence Strategy (PDF)",
+   "pdf_size": 1175323,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/pre-16-schools-funding-local-authority-guidance-for-2027-to-2028",
@@ -1763,7 +2254,8 @@
    ],
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/publications/pre-16-schools-funding-local-authority-guidance-for-2027-to-2028",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/how-to-make-a-capital-or-revenue-claim-for-countryside-stewardship",
@@ -1779,7 +2271,8 @@
    ],
    "src": "GOV.UK · Rural Payments Agency, Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/guidance/how-to-make-a-capital-or-revenue-claim-for-countryside-stewardship",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/how-to-complete-a-countryside-stewardship-capital-claim-by-email-or-post",
@@ -1795,7 +2288,8 @@
    ],
    "src": "GOV.UK · Rural Payments Agency",
    "link": "https://www.gov.uk/government/publications/how-to-complete-a-countryside-stewardship-capital-claim-by-email-or-post",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/madagascar-information-for-victims-of-rape-and-sexual-assault",
@@ -1811,7 +2305,8 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/madagascar-information-for-victims-of-rape-and-sexual-assault",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/crackdown-on-chemicals-used-to-make-dangerous-weapons",
@@ -1845,9 +2340,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Upper Tribunal (Administrative Appeals Chamber)",
    "link": "https://www.gov.uk/administrative-appeals-tribunal-decisions/mr-steven-ball-deceased-v-the-secretary-of-state-for-work-and-pensions-uc-2026-ukut-352-aac",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abfbff0241ecad55a97930a/UA-2023-000666-UOTH.pdf",
-   "pdf_label": "UA-2023-000666-UOTH (PDF)"
+   "pdf_label": "UA-2023-000666-UOTH (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/notice-to-improve-mighty-oaks-academy-trust",
@@ -1864,10 +2359,10 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/publications/notice-to-improve-mighty-oaks-academy-trust",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe3846f04a15f533722855/Mighty_Oaks_Academy_Trust.pdf",
    "pdf_label": "Notice to improve: Mighty Oaks Academy Trust (PDF)",
-   "pdf_size": 279914
+   "pdf_size": 279914,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/englands-reservoirs-continue-to-feel-drought-strain-after-sixth-dry-month-of-2026",
@@ -1919,9 +2414,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Appeal Tribunal",
    "link": "https://www.gov.uk/employment-appeal-tribunal-decisions/ms-z-chowdhury-v-secretary-of-state-for-health-and-social-care-2026-eat-151",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf8810915e5b104a919320/Ms._Z._Chowdhury_v_Secretary_of_State_for_Health_and_Social_Care__2026__EAT_151.pdf",
-   "pdf_label": "Ms. Z. Chowdhury v Secretary of State for Health and Social Care [2026] EAT 151 (PDF)"
+   "pdf_label": "Ms. Z. Chowdhury v Secretary of State for Health and Social Care [2026] EAT 151 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/six-scottish-soldiers-buried-in-france-108-years-after-their-deaths",
@@ -2040,10 +2535,10 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/cma-cases/nexfibre-slash-substantial-merger-inquiry",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a44a217167a99cf0018d9e8/Decision_to_refer_1_July_2026__1_.pdf",
    "pdf_label": "Decision to refer (PDF, 110KB) (PDF)",
-   "pdf_more": 14
+   "pdf_more": 14,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/drought-permit-granted-to-help-ardingly-reservoir",
@@ -2128,10 +2623,10 @@
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/publications/authorisation-for-the-acidification-of-fresh-grapes-for-2026-harvest",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd19baefad0f1df67227e2/Acidification_Derogation_Notice_2026harvest.pdf",
    "pdf_label": "Authorisation under Annex VIII to assimilated Regulation (EU) No 1308/2013 exceptionally allowing the acidification of fresh grapes, grape must, grape must in fermentation, new wine still in fermentation and wine due to climate conditions in 2026 (PDF)",
-   "pdf_size": 78799
+   "pdf_size": 78799,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/hmrc-internal-manuals/paye-manual",
@@ -2319,7 +2814,8 @@
    ],
    "src": "GOV.UK · Cabinet Office",
    "link": "https://www.gov.uk/government/publications/government-car-service-driver-licence-check-privacy-notice",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/hmrc-internal-manuals/vat-exports-of-goods-from-the-uk",
@@ -2335,7 +2831,8 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/hmrc-internal-manuals/vat-exports-of-goods-from-the-uk",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/sustainable-water-services-ltd-npswr047769-application-made-to-abstract-water",
@@ -2351,7 +2848,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/sustainable-water-services-ltd-npswr047769-application-made-to-abstract-water",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/suffolk-wildlife-trust-npswr047665-application-made-to-abstract-water",
@@ -2367,7 +2865,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/suffolk-wildlife-trust-npswr047665-application-made-to-abstract-water",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/landlark-investments-limited-npswr046899-application-made-to-abstract-water",
@@ -2384,6 +2883,7 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/landlark-investments-limited-npswr046899-application-made-to-abstract-water",
    "first_seen": "2026-10-03",
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/publications/landlark-investments-limited-npswr046900-application-made-to-abstract-water",
@@ -2409,7 +2909,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/the-national-trust-npswr047365-application-made-to-impound-water",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/riverford-organic-farmers-limited-npswr040454-and-npswr047893-applications-made-to-abstract-water",
@@ -2425,7 +2926,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/riverford-organic-farmers-limited-npswr040454-and-npswr047893-applications-made-to-abstract-water",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/international-development-funding/partnering-for-health-equality-and-rights-p4her",
@@ -2441,7 +2943,8 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/international-development-funding/partnering-for-health-equality-and-rights-p4her",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cardiovascular-disease-modern-service-framework",
@@ -2458,6 +2961,10 @@
    "src": "GOV.UK · Department of Health and Social Care, NHS England",
    "link": "https://www.gov.uk/government/publications/cardiovascular-disease-modern-service-framework",
    "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abfa9461ef3e896de9792ef/cardiovascular-disease-modern-service-framework.pdf",
+   "pdf_label": "Cardiovascular disease (CVD) modern service framework (MSF): a cardiovascular-kidney-metabolic approach - the strategic vision and delivery model (PDF)",
+   "pdf_size": 1227014,
    "also": [
     {
      "id": "govuk:/government/publications/equality-impact-assessment-cardiovascular-disease-modern-service-framework",
@@ -2483,7 +2990,12 @@
    ],
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/treasury-minutes-for-august-2026",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abfbeb6b2822d8ebf1ec96c/E03677598_-_CP_1668_Treasury_Minutes_v01_Elay.pdf",
+   "pdf_label": "Treasury Minutes – August 2026 (Web) (PDF)",
+   "pdf_size": 637507,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/women-in-defence-charter",
@@ -2499,7 +3011,8 @@
    ],
    "src": "GOV.UK · Ministry of Defence",
    "link": "https://www.gov.uk/government/publications/women-in-defence-charter",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/air-pollution-awareness-coalition-apac",
@@ -2515,7 +3028,8 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Department of Health and Social Care",
    "link": "https://www.gov.uk/government/publications/air-pollution-awareness-coalition-apac",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/it-reuse-for-good-charter",
@@ -2531,7 +3045,8 @@
    ],
    "src": "GOV.UK · Department for Digital, Culture, Media and Sport, Department for Science, Innovation and Technology",
    "link": "https://www.gov.uk/government/publications/it-reuse-for-good-charter",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/n-stares-v-kent-and-medway-mental-health-nhs-trust-6005001-slash-2026",
@@ -2549,9 +3064,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/n-stares-v-kent-and-medway-mental-health-nhs-trust-6005001-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe747726660e5f62a7f25b/Ms_N_Stares_v_Kent___Medway_Mental_Health_NHS_Trust_Judgment_2_6005001-2026.pdf",
-   "pdf_label": "N Stares v Kent and Medway Mental Health NHS Trust: 6005001/2026 - Partial Strike Out (PDF)"
+   "pdf_label": "N Stares v Kent and Medway Mental Health NHS Trust: 6005001/2026 - Partial Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/uk-and-taiwan-deepen-trade-and-technology-cooperation",
@@ -2585,9 +3100,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/r-l-dumitrescu-v-sopar-so-good-ltd-6007583-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe7398f04a15f53372289f/R_L_Dumitrescu_v_SOPAR_SO_GOOD_LTD_Judgment_2__6007583-2026.pdf",
-   "pdf_label": "R L Dumitrescu v Sopar So Good Ltd: 6007583/2026 - Partial Strike Out (PDF)"
+   "pdf_label": "R L Dumitrescu v Sopar So Good Ltd: 6007583/2026 - Partial Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-m-stempczynski-v-cleanco-cleaning-services-ltd-6036295-slash-2025",
@@ -2604,10 +3119,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-m-stempczynski-v-cleanco-cleaning-services-ltd-6036295-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a38fe5825c5199bda1178c9/Mr_Mateusz_Stempczynski_v_Cleanco_Cleaning_Services_Ltd_6036295-2025_Judgment_22-05-2026.pdf",
    "pdf_label": "Mr M Stempczynski v Cleanco Cleaning Services Ltd: 6036295/2025 - Judgment (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/un-human-rights-council-63-uk-statement-for-the-interactive-dialogue-with-the-high-commissioner-on-the-oral-update-on-ukraine",
@@ -2641,10 +3156,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/r-javian-lennard-v-mind-in-croydon-ltd-6002910-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6914a358493305b49ce6e6c3/R_Lennard_v_Mind_In_Croydon_LTD_Judgment_2_6002910-2024.pdf",
    "pdf_label": "R Javian-Lennard v Mind In Croydon Ltd: 6002910/2024 - Withdrawal (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-n-fernandez-v-guys-and-st-thomas-nhs-foundation-trust-2304390-slash-2023",
@@ -2662,10 +3177,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-n-fernandez-v-guys-and-st-thomas-nhs-foundation-trust-2304390-slash-2023",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/698c866b547c54ae7c02365a/Ms_N_Fernandez_v_Guys___St_Thomas__NHS_Foundation_Trust_2304390-2023_reserved_judgment_21-01-26.pdf",
    "pdf_label": "Ms N Fernandez v Guy's and St Thomas' NHS Foundation Trust: 2304390/2023 - Reserved Judgment (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/attorney-general-swearing-in-speech-rt-hon-ellie-reeves-kc-mp",
@@ -2699,9 +3214,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-l-chapman-v-agacia-care-ltd-6017393-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe69e855bc01d752a7f24c/Ms_L_Chapman_v_Agacia_Care_Ltd_6017393-2025_Judgment_01-06-2026.pdf",
-   "pdf_label": "Ms L Chapman v Agacia Care Ltd: 6017393/2025 - Judgment (PDF)"
+   "pdf_label": "Ms L Chapman v Agacia Care Ltd: 6017393/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/n-ghezali-v-coco-and-nut-coffee-westfield-ltd-6014347-slash-2026",
@@ -2718,9 +3233,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/n-ghezali-v-coco-and-nut-coffee-westfield-ltd-6014347-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe69329c196f81005e5e21/Nacer_Ghezali_v_COCO_AND_NUT_COFFEE_WESTFIELD_LTD_6014347-2026_Judgment_21-09-2026.pdf",
-   "pdf_label": "N Ghezali v Coco and Nut Coffee Westfield Ltd: 6014347/2026 - Rule 22 (PDF)"
+   "pdf_label": "N Ghezali v Coco and Nut Coffee Westfield Ltd: 6014347/2026 - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-minin-v-ringway-hounslow-highway-ltd-6006553-slash-2025",
@@ -2737,10 +3252,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-minin-v-ringway-hounslow-highway-ltd-6006553-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69ea37d1606c20d41216333e/Mr_A_Minin_v_Ringway_Hounslow_Highway_Ltd_Judgment__2_6006553-2025.pdf",
    "pdf_label": "Mr A Minin v Ringway Hounslow Highway Ltd: 6006553/2025 - Reserved Judgment (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/the-uk-will-defend-universal-rights-without-fear-or-favour-uk-statement-at-the-un-third-committee",
@@ -2774,10 +3289,10 @@
    "src": "GOV.UK · Teaching Regulation Agency",
    "link": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-james-mcmurray",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abfb6491ef3e896de9792f8/TRATMPO_James_McMurray_Conduct_Panel_Outcome.pdf",
    "pdf_label": "Prohibition order: Mr James McMurray (PDF)",
-   "pdf_size": 309784
+   "pdf_size": 309784,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/g7-leaders-statement-on-global-energy-security-and-market-stability",
@@ -2862,11 +3377,11 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/ca14-2js-recycling-lives-compliance-services-limited-environmental-permit-issued-eprfb3807sxv003",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf99ce915e5b104a919332/Application_Variation_V003_-_permit_issued_-_29092026.pdf",
    "pdf_label": "Permit: Recycling Lives Compliance Services Limited (PDF)",
    "pdf_size": 394314,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cv23-0uy-land-recovery-north-west-arden-ltd-environmental-permit-refused-eprbw1416iqv009",
@@ -2883,11 +3398,11 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/cv23-0uy-land-recovery-north-west-arden-ltd-environmental-permit-refused-eprbw1416iqv009",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe65dd9c196f81005e5e1b/Application_Variation_V009_-_Refusal_notice_Arden_-_29092026.pdf",
    "pdf_label": "Refusal notice: Land Recovery North West (Arden) Ltd (PDF)",
    "pdf_size": 141990,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/a-devine-v-flint-office-space-ltd-6011633-slash-2024",
@@ -2904,10 +3419,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/a-devine-v-flint-office-space-ltd-6011633-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69f0be9ec42061e837e3abb0/Anthony_Devine_v_Flint_Office_Space_Ltd_6011633-2024.pdf",
    "pdf_label": "A Devine v Flint Office Space Ltd: 6011633/2024 - Reserved Judgment (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-j-hamid-v-kent-county-council-2307642-slash-2023",
@@ -2924,10 +3439,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-j-hamid-v-kent-county-council-2307642-slash-2023",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69bac3a9bfd6895605dad81e/Ms_J_Hamid_v_Kent_County_Council_2307642-2023_Reserved_Judgment_and_Reasons_-_27-Feb-26.pdf",
    "pdf_label": "Ms J Hamid v Kent County Council: 2307642/2023 - Reserved Judgment (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-w-harvey-v-thor-companies-ltd-2300182-slash-2026",
@@ -2944,10 +3459,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-w-harvey-v-thor-companies-ltd-2300182-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a18556b916cd732dcdaaca9/Mr_William_Harvey_v_Thor_Companies_Ltd_2300182-2026.pdf",
    "pdf_label": "Mr W Harvey v Thor Companies Ltd: 2300182/2026 - Judgment with Reasons (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-quirke-v-dpd-group-uk-ltd-3201090-slash-2024",
@@ -2964,9 +3479,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-quirke-v-dpd-group-uk-ltd-3201090-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe7d6c943e890cb55e5e2c/Mr_J_Quirke_v_DPD_Group_UK_Ltd_3201090_2024_-_Judgment___Reasons_.pdf",
-   "pdf_label": "Mr J Quirke v DPD Group UK Ltd: 3201090/2024 - Reserved Judgment (PDF)"
+   "pdf_label": "Mr J Quirke v DPD Group UK Ltd: 3201090/2024 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mrs-f-gammon-v-ms-l-cutmore-and-ms-p-hinton-6011285-slash-2025",
@@ -2983,9 +3498,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mrs-f-gammon-v-ms-l-cutmore-and-ms-p-hinton-6011285-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe79a926660e5f62a7f264/Mrs_F_Gammon_v_Ms_L_Cutmore___Ms_P_Hinton_-_6011285.2025__Judgment_only_.pdf",
-   "pdf_label": "Mrs F Gammon v Ms L Cutmore and Ms P Hinton: 6011285/2025 - Dismissal (PDF)"
+   "pdf_label": "Mrs F Gammon v Ms L Cutmore and Ms P Hinton: 6011285/2025 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/sy5-0uf-yockleton-growers-ltd-environmental-permit-issued-epryp3621sev003",
@@ -3002,11 +3517,11 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/sy5-0uf-yockleton-growers-ltd-environmental-permit-issued-epryp3621sev003",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf89a2aaf78183860fed39/Variation_Notice_EPR_YP3621SE_V003.pdf",
    "pdf_label": "Variation notice: Yockleton Growers Ltd (PDF)",
    "pdf_size": 353832,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-n-m-d-moghrabi-v-refugee-and-migrant-forum-of-essex-ramfel-3203915-slash-2022",
@@ -3023,10 +3538,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-n-m-d-moghrabi-v-refugee-and-migrant-forum-of-essex-ramfel-3203915-slash-2022",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/66cde4a31aaf41b21139cf60/Mr_N_Makhlouf_Dit_Moghrabi_-v-_RAMFEL_-_3203915_2022_-_Prelim_Judgment.pdf",
    "pdf_label": "Mr N M D Moghrabi v Refugee and Migrant Forum of Essex (RAMFEL): 3203915/2022 - Judgment (PDF)",
-   "pdf_more": 7
+   "pdf_more": 7,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/a-r-sahih-el-islam-tayar-v-london-and-quadrant-housing-trust-6039494-slash-2025",
@@ -3044,10 +3559,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/a-r-sahih-el-islam-tayar-v-london-and-quadrant-housing-trust-6039494-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69fb28e28cc72d2f863ea50d/Abdul-Raheem_Sahih_EL-Islam_Tayar_v_London___Quadrant_Housing_Trust_-_6039494_2025_-_Judgment.pdf",
    "pdf_label": "A-R Sahih El‑Islam Tayar v London & Quadrant Housing Trust: 6039494/2025 - Dismissal (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/s-w-k-shum-v-age-uk-east-london-6040145-slash-2025",
@@ -3064,10 +3579,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/s-w-k-shum-v-age-uk-east-london-6040145-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a3bda7f30b491f55b3c48a2/Simon_Wai_Keung_Shum_v_Age_UK_East_London_-_6040145_2025_-_Judgment.pdf",
    "pdf_label": "S W K Shum v Age UK East London: 6040145/2025 - Judgment (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-l-james-v-biotalent-ltd-and-investigo-ltd-3201144-slash-2025",
@@ -3084,9 +3599,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-l-james-v-biotalent-ltd-and-investigo-ltd-3201144-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe505255bc01d752a7f22c/Miss_L_James_v_Bio_Talent_Ltd___Investigo_Ltd_-_3201144.2025.pdf",
-   "pdf_label": "Miss L James v BioTalent Ltd and Investigo Ltd: 3201144/2025 - Dismissal (PDF)"
+   "pdf_label": "Miss L James v BioTalent Ltd and Investigo Ltd: 3201144/2025 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mrs-k-adams-v-filers-travel-ltd-6035138-slash-2025",
@@ -3103,9 +3618,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mrs-k-adams-v-filers-travel-ltd-6035138-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe617355bc01d752a7f244/Mrs_K_Adams_-vs-_Filers_Travel_Ltd_-_6035138.2025_-_Judgment.pdf",
-   "pdf_label": "Mrs K Adams v Filers Travel Ltd: 6035138/2025 - Dismissal (PDF)"
+   "pdf_label": "Mrs K Adams v Filers Travel Ltd: 6035138/2025 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-f-yurday-v-ka-didmarton-ltd-6028452-slash-2025",
@@ -3122,9 +3637,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-f-yurday-v-ka-didmarton-ltd-6028452-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe6062943e890cb55e5e08/Mr_F_Yurday_-vs-_KA_Didmarton_Limited_-_6028452.2025_-_Judgment.pdf",
-   "pdf_label": "Mr F Yurday v KA Didmarton Ltd: 6028452/2025 - Judgment (PDF)"
+   "pdf_label": "Mr F Yurday v KA Didmarton Ltd: 6028452/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cil-appeal-1852181-27-february-25-upper-floor-use-changed",
@@ -3141,10 +3656,10 @@
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/cil-appeal-1852181-27-february-25-upper-floor-use-changed",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe3e5befad0f1df672289a/CIL_Appeal_1852181_-_27_Feb_25.pdf",
    "pdf_label": "CIL Appeal 1852181 — 27 February 25 (PDF)",
-   "pdf_size": 361524
+   "pdf_size": 361524,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-b-keene-v-taylor-price-ltd-6025959-slash-2025",
@@ -3161,9 +3676,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-b-keene-v-taylor-price-ltd-6025959-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5f219c196f81005e5e15/Mr_Bradley_Keene_-vs-_Taylor_Price_Ltd_-_6025959.2025_-_Judgment.pdf",
-   "pdf_label": "Mr B Keene v Taylor Price Ltd: 6025959/2025 - Judgment (PDF)"
+   "pdf_label": "Mr B Keene v Taylor Price Ltd: 6025959/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/a-stone-v-roke-manor-research-ltd-6045049-slash-2025",
@@ -3180,9 +3695,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/a-stone-v-roke-manor-research-ltd-6045049-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5e59f04a15f533722873/Alexandra_Stone_-vs-_Roke_Manor_Research_Limited_-_6045049.2025_-_Judgment.pdf",
-   "pdf_label": "A Stone v Roke Manor Research Ltd: 6045049/2025 - Partial Strike Out (PDF)"
+   "pdf_label": "A Stone v Roke Manor Research Ltd: 6045049/2025 - Partial Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-l-simon-v-goldcrest-guarding-security-services-6027551-slash-2025",
@@ -3199,9 +3714,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-l-simon-v-goldcrest-guarding-security-services-6027551-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5c1befad0f1df67228b6/Mr_Logan_Simon_-vs-_Goldcrest_Guarding_Security_Services_-_6027551.2025_-_Judgment.pdf",
-   "pdf_label": "Mr L Simon v Goldcrest Guarding Security Services: 6027551/2025 - Strike Out (PDF)"
+   "pdf_label": "Mr L Simon v Goldcrest Guarding Security Services: 6027551/2025 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-m-a-paez-v-paco-tapas-ltd-in-creditors-voluntary-liquidation-6036740-slash-2025",
@@ -3218,9 +3733,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-m-a-paez-v-paco-tapas-ltd-in-creditors-voluntary-liquidation-6036740-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5b21943e890cb55e5dfc/Ms_Maria_Angeles_Paez_-vs-_Paco_Tapas_Limited__In_Creditor_s_Voluntary_Liquidation__-_6036740.2025_-_Judgment.pdf",
-   "pdf_label": "Ms M A Paez v Paco Tapas Ltd (In Creditor’s Voluntary Liquidation): 6036740/2025 - Judgment (PDF)"
+   "pdf_label": "Ms M A Paez v Paco Tapas Ltd (In Creditor’s Voluntary Liquidation): 6036740/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-s-balu-v-rudra-sai-ltd-t-and-l-store-6002199-slash-2025",
@@ -3237,10 +3752,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-s-balu-v-rudra-sai-ltd-t-and-l-store-6002199-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a50cd489e9c95844ae64ca9/Mr_S_Balu_-vs-_Rudra_Sai_Ltd_T___L_Store_-_Judgment.pdf",
    "pdf_label": "Mr S Balu v Rudra Sai Ltd T and L Store: 6002199/2025 - Preliminary (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-t-langston-v-historic-england-6002213-slash-2024",
@@ -3257,10 +3772,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-t-langston-v-historic-england-6002213-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a5782bf9e63154454413720/Miss_Tanya_Langston_-vs-_Historic_England_-_6002213.2024_-_Judgment.pdf",
    "pdf_label": "Miss T Langston v Historic England: 6002213/2024 - Judgment (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/advertising-investigations-september-2026",
@@ -3294,9 +3809,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-m-brain-v-rose-care-group-ltd-1401120-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe581f26660e5f62a7f228/Ms_Michelle_Brain_-vs-_Rose_Care_Group_Limited_-_1401120.2025_-_Reasons.pdf",
-   "pdf_label": "Ms M Brain v Rose Care Group Ltd: 1401120/2025 - Reasons (PDF)"
+   "pdf_label": "Ms M Brain v Rose Care Group Ltd: 1401120/2025 - Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/human-medicines-register-of-electronic-export-certificates",
@@ -3313,11 +3828,11 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/government/publications/human-medicines-register-of-electronic-export-certificates",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abf6f8f55bc01d752a7f297/Export_Register_September_26.pdf",
    "pdf_label": "Register of electronic export certificates issued by MHRA (Human) - September 2026 (PDF)",
    "pdf_size": 293984,
-   "pdf_more": 46
+   "pdf_more": 46,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/un-human-rights-council-63-uk-statement-for-the-interactive-dialogue-on-somalia",
@@ -3452,7 +3967,8 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/foreign-travel-advice/ukraine",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/malaysia-knowledge-base-profile",
@@ -3468,7 +3984,8 @@
    ],
    "src": "GOV.UK · HM Passport Office",
    "link": "https://www.gov.uk/government/publications/malaysia-knowledge-base-profile",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "leg:http://www.legislation.gov.uk/ssi/2026/259/pdfs/ssics_20260259_en_001.pdf",
@@ -3588,7 +4105,12 @@
    ],
    "src": "GOV.UK · Home Office",
    "link": "https://www.gov.uk/government/consultations/amendments-to-the-poisons-act-1972-framework",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abcc8817f89d9ff24aff297/PA_Consultation_Document_Welsh.pdf",
+   "pdf_label": "Amendments to the Poisons Act 1972 Framework: consultation document (Welsh version) (PDF)",
+   "pdf_size": 381239,
+   "pdf_more": 2
   },
   {
    "id": "govuk:/government/news/connect-fund-to-offer-up-to-500k-for-northern-ireland-and-gb-voluntary-and-community-groups",
@@ -3759,10 +4281,10 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/drug-device-alerts/class-4-medicines-defect-notification-neuraxpharm-uk-limited-levetiracetam-neuraxpharm-granules-for-oral-solution-in-sachet-el-26-a-slash-40",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe27859c196f81005e5dba/Class_4_Medicines_Defect_Notification_Neuraxpharm_UK_Limited__Levetiracetam_Neuraxpharm_granules_for_oral_solution_in_sachet___EL26A40.pdf",
    "pdf_label": "Class 4 Medicines Defect Notification: Neuraxpharm UK Limited, Levetiracetam Neuraxpharm granules for oral solution in sachet, EL(26)A/40 (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/king-charles-iii-england-coast-path-plan-of-the-kimmeridge-bay-to-highcliffe-stretch",
@@ -3778,7 +4300,11 @@
    ],
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/king-charles-iii-england-coast-path-plan-of-the-kimmeridge-bay-to-highcliffe-stretch",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6839bb8c5150d70c85aafb64/kimmeridge-bay-highcliffe-index-map.pdf",
+   "pdf_label": "Kimmeridge Bay to Highcliffe stretch map (PDF)",
+   "pdf_size": 465489
   },
   {
    "id": "govuk:/government/publications/king-charles-iii-england-coast-path-from-lulworth-cove-to-kimmeridge-bay-natural-englands-proposals",
@@ -3794,7 +4320,12 @@
    ],
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/king-charles-iii-england-coast-path-from-lulworth-cove-to-kimmeridge-bay-natural-englands-proposals",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/687f792ef2ecaeb756d0e1de/lulworth-cove-kimmeridge-bay-overview.pdf",
+   "pdf_label": "Lulworth Cove to Kimmeridge Bay overview (PDF)",
+   "pdf_size": 3076236,
+   "pdf_more": 5
   },
   {
    "id": "govuk:/government/publications/england-coast-path-overview-of-progress",
@@ -3810,7 +4341,11 @@
    ],
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/england-coast-path-overview-of-progress",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abe2c96efad0f1df6722865/coastal-access-england-map.pdf",
+   "pdf_label": "King Charles III England Coast Path stretch map (PDF)",
+   "pdf_size": 816162
   },
   {
    "id": "govuk:/government/consultations/project-gigabit-national-rolling-open-market-review-september-2026",
@@ -3826,7 +4361,8 @@
    ],
    "src": "GOV.UK · Building Digital UK, Department for Digital, Culture, Media and Sport",
    "link": "https://www.gov.uk/government/consultations/project-gigabit-national-rolling-open-market-review-september-2026",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/natural-england-operational-statement",
@@ -3842,7 +4378,8 @@
    ],
    "src": "GOV.UK · Natural England",
    "link": "https://www.gov.uk/government/publications/natural-england-operational-statement",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/digital-waste-tracking-service",
@@ -3859,7 +4396,8 @@
    ],
    "src": "GOV.UK · Environment Agency, Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/publications/digital-waste-tracking-service",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/independent-restraint-review-panel-irrp-summary-report-2025",
@@ -3875,7 +4413,11 @@
    ],
    "src": "GOV.UK · HM Prison and Probation Service",
    "link": "https://www.gov.uk/government/publications/independent-restraint-review-panel-irrp-summary-report-2025",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abbf9593fe1a15db6aff2b7/Response_to_the_Annual_Independent_Review_Restraint_Panel_report_2025.pdf",
+   "pdf_label": "Response letter from Minister Richards (PDF)",
+   "pdf_size": 242287
   },
   {
    "id": "govuk:/government/publications/coastal-access-section-52-notice-for-lulworth-cove-to-kimmeridge-bay",
@@ -3892,10 +4434,10 @@
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Natural England",
    "link": "https://www.gov.uk/government/publications/coastal-access-section-52-notice-for-lulworth-cove-to-kimmeridge-bay",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab3f080734e2435f202ef62/representations-ne-comments-lck1-lck3.pdf",
    "pdf_label": "Coastal access report – Lulworth Cove to Kimmeridge Bay, lengths LCK1 and LCK3: representations with Natural England’s comments (PDF)",
-   "pdf_size": 251963
+   "pdf_size": 251963,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/attorney-general-and-solicitor-general-sworn-in-to-their-roles-as-law-officers-today",
@@ -3964,9 +4506,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/k-mitchell-v-dhl-ecommerce-uk-ltd-6022412-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd260a26660e5f62a7f183/Mr_K_Mitchell_v_DHL_eCommerce_UK_Limited_6022412_2026_IR_Judgment.pdf",
-   "pdf_label": "K Mitchell v DHL eCommerce UK Ltd: 6022412/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "K Mitchell v DHL eCommerce UK Ltd: 6022412/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/intervention-from-his-majestys-ambassador-to-montenegro-nerys-jones-at-the-2026-berlin-process-foreign-ministers-meeting",
@@ -4017,11 +4559,11 @@
    "src": "GOV.UK · Offshore Petroleum Regulator for Environment and Decommissioning",
    "link": "https://www.gov.uk/government/publications/deep-drilling-screening-directions-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe5b52f04a15f533722869/DR-2667.pdf",
    "pdf_label": "SCHIEHALLION, Noble Innovator DRILLING PRODUCER WELL 204/20a- PX2303 planned well - BP Exploration Operating Company Limited - DR/2667/0 - Decision Date 29/09/2026 (PDF)",
    "pdf_size": 117272,
-   "pdf_more": 70
+   "pdf_more": 70,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-s-nyangena-v-the-estate-of-m-banks-deceased-t-slash-a-mi-banks-solicitors-6040955-slash-2025",
@@ -4038,9 +4580,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-s-nyangena-v-the-estate-of-m-banks-deceased-t-slash-a-mi-banks-solicitors-6040955-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd0c52efad0f1df67227d6/Ms_S_Nyangena_v_The_Estate_of_Margaret_Banks__deceased__trading_as_MI_Banks_Solicitors_-_6040955_2025_-_Judgment.pdf",
-   "pdf_label": "Ms S Nyangena v The Estate of M Banks (deceased) T/a MI Banks Solicitors: 6040955/2025 - Judgment (PDF)"
+   "pdf_label": "Ms S Nyangena v The Estate of M Banks (deceased) T/a MI Banks Solicitors: 6040955/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-r-leach-v-the-lowry-hotel-ltd-6004933-slash-2024",
@@ -4057,9 +4599,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-r-leach-v-the-lowry-hotel-ltd-6004933-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abcff88943e890cb55e5d16/Miss_R_Leach_v_The_Lowry_Hotel_Ltd_-_6004933_2024_-_Judgment.pdf",
-   "pdf_label": "Miss R Leach v The Lowry Hotel Ltd: 6004933/2024 - Judgment On Liability and Remedy (PDF)"
+   "pdf_label": "Miss R Leach v The Lowry Hotel Ltd: 6004933/2024 - Judgment On Liability and Remedy (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-s-greenidge-v-manchester-city-council-6011408-slash-2024",
@@ -4076,9 +4618,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-s-greenidge-v-manchester-city-council-6011408-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abcecf4efad0f1df67227a1/Miss_S_Greenidge_v_Manchester_City_Council_6011408_2024.pdf",
-   "pdf_label": "Miss S Greenidge v Manchester City Council: 6011408/2024 - Reserved Judgment  (PDF)"
+   "pdf_label": "Miss S Greenidge v Manchester City Council: 6011408/2024 - Reserved Judgment  (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/address-by-un-special-representative-for-children-and-armed-conflict-uk-statement-to-the-osce",
@@ -4129,9 +4671,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/p-gkounidis-v-basingstoke-and-deane-borough-council-6011655-slash-2025-and-6021713-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abbda1c4b347e3c7c99e9dd/Panagiotis_Gkounidis_v_Basingstoke_and_Deane_Borough_Council___6011655.2025___6021713.2025___Judgment___23.9.26.pdf",
-   "pdf_label": "P Gkounidis v Basingstoke and Deane Borough Council: 6011655/2025 and 6021713/2025 - Judgment (PDF)"
+   "pdf_label": "P Gkounidis v Basingstoke and Deane Borough Council: 6011655/2025 and 6021713/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-c-gore-v-fairline-yachts-ltd-in-administration-and-secretary-of-state-for-business-and-trade-6004787-slash-2025",
@@ -4148,9 +4690,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-c-gore-v-fairline-yachts-ltd-in-administration-and-secretary-of-state-for-business-and-trade-6004787-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe1900efad0f1df672282e/Mr_Chris_Gore_-vs-_Fairline_Yachts_Limited__in_Administration____1_other_-_6004787.2025_-_Judgment.pdf",
-   "pdf_label": "Mr C Gore v Fairline Yachts Ltd (in Administration) and Secretary of State for Business and Trade: 6004787/2025 -  Judgment with Reasons (PDF)"
+   "pdf_label": "Mr C Gore v Fairline Yachts Ltd (in Administration) and Secretary of State for Business and Trade: 6004787/2025 -  Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-w-o-valdez-v-newsteam-group-ltd-6023758-slash-2025",
@@ -4167,9 +4709,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-w-o-valdez-v-newsteam-group-ltd-6023758-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe1546f04a15f53372281a/Mr_W_Olivo_Valdez_-vs-_NewsTeam_Group_Ltd_-_6023758.2025_-_Judgment.pdf",
-   "pdf_label": "Mr W O Valdez v NewsTeam Group Ltd: 6023758/2025 - Judgment (PDF)"
+   "pdf_label": "Mr W O Valdez v NewsTeam Group Ltd: 6023758/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-p-sterling-v-octopus-energy-ltd-6007951-slash-2025",
@@ -4187,9 +4729,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-p-sterling-v-octopus-energy-ltd-6007951-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe117b55bc01d752a7f1b5/Mr_Paul_Sterling_-vs-_Octopus_Energy_Ltd_-_6007951.2025_-_Judgment.pdf",
-   "pdf_label": "Mr P Sterling v Octopus Energy Ltd: 6007951/2025 - Reserved Judgment (PDF)"
+   "pdf_label": "Mr P Sterling v Octopus Energy Ltd: 6007951/2025 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/teacher-misconduct-panel-outcome-mr-christopher-shepherd",
@@ -4206,10 +4748,10 @@
    "src": "GOV.UK · Teaching Regulation Agency",
    "link": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-christopher-shepherd",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd213326660e5f62a7f17f/TRATMPO_Christopher_Shepherd_Conduct_Panel_Outcome.pdf",
    "pdf_label": "Prohibition order: Mr Christopher Shepherd (PDF)",
-   "pdf_size": 243380
+   "pdf_size": 243380,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/w-fox-v-automotive-repair-systems-6025319-slash-2026",
@@ -4226,9 +4768,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/w-fox-v-automotive-repair-systems-6025319-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd3480943e890cb55e5d74/Wayne_Fox_v_Automotive_Repair_Systems_60253192026_Strike_Out_Judgment_UDL.pdf",
-   "pdf_label": "W Fox v Automotive Repair Systems: 6025319/2026 - Partial Strike Out (PDF)"
+   "pdf_label": "W Fox v Automotive Repair Systems: 6025319/2026 - Partial Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-lascelles-v-king-edward-vi-education-trust-2601833-slash-2024",
@@ -4245,10 +4787,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-lascelles-v-king-edward-vi-education-trust-2601833-slash-2024",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a6a1ec137f830b6071c024b/2601833.2024_James_Lascelles_v_King_Edward_VI_Education_Trust_Reconsideration_Judgment_28.07.2026.pdf",
    "pdf_label": "Mr J Lascelles v King Edward VI Education Trust: 2601833/2024 - Reconsideration (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-s-faulconbridge-v-imperial-stampings-ltd-6026090-slash-2025",
@@ -4265,9 +4807,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-s-faulconbridge-v-imperial-stampings-ltd-6026090-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd301555bc01d752a7f190/Mr_S_Faulconbridge_v_Imperial_Stampings_Limited_6026090_2025_Final.pdf",
-   "pdf_label": "Mr S Faulconbridge v Imperial Stampings Ltd: 6026090/2025 - Dismissal (PDF)"
+   "pdf_label": "Mr S Faulconbridge v Imperial Stampings Ltd: 6026090/2025 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-t-channell-and-others-v-ashbys-wholesale-ltd-2600475-slash-2026-and-others",
@@ -4284,9 +4826,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-t-channell-and-others-v-ashbys-wholesale-ltd-2600475-slash-2026-and-others",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd2868943e890cb55e5d54/Mr_Terence_Channell_Mrs_Lisa_Channell_Mrs_Claire_Fox_v_Ashbys_Wholesale_Limited_2600475.2026_2600476.2026_2601381.2026_Default_judgment.pdf",
-   "pdf_label": "Mr T Channell and Others v Ashbys Wholesale Ltd: 2600475/2026 and Others - Rule 22 (PDF)"
+   "pdf_label": "Mr T Channell and Others v Ashbys Wholesale Ltd: 2600475/2026 and Others - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/d-moore-v-brake-caliper-specialists-ltd-6004043-slash-2026",
@@ -4303,9 +4845,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/d-moore-v-brake-caliper-specialists-ltd-6004043-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd276426660e5f62a7f187/Ms_D_Moore_v_Brake_Caliper_Specialists_Limited_6004043_2026_Final.pdf",
-   "pdf_label": "D Moore v Brake Caliper Specialists Ltd: 6004043/2026 - Dismissal (PDF)"
+   "pdf_label": "D Moore v Brake Caliper Specialists Ltd: 6004043/2026 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-c-wells-v-life-multi-academy-trust-2600754-slash-2023",
@@ -4322,9 +4864,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-c-wells-v-life-multi-academy-trust-2600754-slash-2023",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd24f0943e890cb55e5d4a/2600754.2023_-_Christina_Wells_-v-_LIFE_Multi-Academy_Trust_-Reserved.pdf",
-   "pdf_label": "Ms C Wells v LIFE Multi Academy Trust: 2600754/2023 - Judgment with Reasons (PDF)"
+   "pdf_label": "Ms C Wells v LIFE Multi Academy Trust: 2600754/2023 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-r-mccormack-v-torbay-and-south-devon-nhs-foundation-trust-6046309-slash-2025",
@@ -4342,9 +4884,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-r-mccormack-v-torbay-and-south-devon-nhs-foundation-trust-6046309-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abcbf3e4b347e3c7c99e9f2/Miss_R_McCormack_v_Torbay_and_South_Devon_NHS_Foundation_Trust_-_6046309.2025_-_Judgment___Reasons.pdf",
-   "pdf_label": "Ms R McCormack v Torbay and South Devon NHS Foundation Trust: 6046309/2025 - Reserved Judgment (PDF)"
+   "pdf_label": "Ms R McCormack v Torbay and South Devon NHS Foundation Trust: 6046309/2025 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/r-brown-v-evri-ltd-6047500-slash-2025",
@@ -4361,9 +4903,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/r-brown-v-evri-ltd-6047500-slash-2025",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abd10d2f04a15f5337227cc/R_Brown_v_Evri_Limited_-_6047500.2025_-_Final.pdf",
-   "pdf_label": "R Brown v Evri Ltd: 6047500/2025 - Dismissal (PDF)"
+   "pdf_label": "R Brown v Evri Ltd: 6047500/2025 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-mullen-v-baker-hughes-energy-technology-uk-ltd-2500313-slash-2026-and-2500314-slash-2026",
@@ -4381,9 +4923,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-mullen-v-baker-hughes-energy-technology-uk-ltd-2500313-slash-2026-and-2500314-slash-2026",
    "first_seen": "2026-10-03",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abcf01ff04a15f5337227a7/Mr_A_Mullen_v_Baker_Hughes_Energy_Technology_UK_Limited__-_2500313-2026_-_Certificate_of_Correction_and_Corrected_Judgment.pdf",
-   "pdf_label": "Mr A Mullen v Baker Hughes Energy Technology UK Ltd: 2500313/2026 and 2500314/2026 - Certificate of Correction and Corrected Judgment with Reasons (PDF)"
+   "pdf_label": "Mr A Mullen v Baker Hughes Energy Technology UK Ltd: 2500313/2026 and 2500314/2026 - Certificate of Correction and Corrected Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/software-security-ambassadors-scheme",
@@ -4399,7 +4941,8 @@
    ],
    "src": "GOV.UK · Department for Digital, Culture, Media and Sport, Department for Science, Innovation and Technology",
    "link": "https://www.gov.uk/government/publications/software-security-ambassadors-scheme",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "leg:http://www.legislation.gov.uk/uksi/2026/1061/made",
@@ -4473,8 +5016,8 @@
    ],
    "src": "Food Standards Agency",
    "link": "https://ratings.food.gov.uk/business/544109",
-   "lat": null,
-   "lng": null,
+   "lat": 51.483227,
+   "lng": -0.579242,
    "first_seen": "2026-10-03"
   },
   {
@@ -4491,7 +5034,8 @@
    ],
    "src": "GOV.UK · Intellectual Property Office",
    "link": "https://www.gov.uk/government/calls-for-evidence/review-of-the-ip-enforcement-framework-call-for-evidence",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/treasury-minutes-september-2026",
@@ -4507,7 +5051,12 @@
    ],
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/treasury-minutes-september-2026",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abd283f26660e5f62a7f18d/E03693244_-_CP_1681_-_Government_Response_to_the_Committee_of_Public_Accounts_on_the_Ninth_to_Eleventh_reports_from_Session_2026.pdf",
+   "pdf_label": "Treasury Minutes - September 2026 (PDF)",
+   "pdf_size": 2474736,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/river-arun-internal-drainage-district-idd",
@@ -4523,7 +5072,12 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/river-arun-internal-drainage-district-idd",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6a3bfbceda47783d877239e1/Arun_IDB_AGAR_p3_Internal_Audit_Report.pdf",
+   "pdf_label": "River Arun: annual internal audit report 2025 to 2026 - form 3, page 3 (PDF)",
+   "pdf_size": 1251985,
+   "pdf_more": 3
   },
   {
    "id": "govuk:/government/publications/defras-small-and-medium-sized-enterprise-sme-action-plan-2026-to-2027",
@@ -4539,7 +5093,8 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/publications/defras-small-and-medium-sized-enterprise-sme-action-plan-2026-to-2027",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/traffic-commissioner-strategic-objectives-2026-2029",
@@ -4555,7 +5110,11 @@
    ],
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/government/publications/traffic-commissioner-strategic-objectives-2026-2029",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6abce0c255bc01d752a7f118/Traffic_Commissioner_Strategic_Objectives_2026_to_2029.pdf",
+   "pdf_label": "Traffic Commissioner  Strategic Objectives 2026 to 2029 (PDF)",
+   "pdf_size": 666159
   },
   {
    "id": "govuk:/government/calls-for-evidence/marine-non-licensable-activities",
@@ -4571,7 +5130,12 @@
    ],
    "src": "GOV.UK · Marine Management Organisation",
    "link": "https://www.gov.uk/government/calls-for-evidence/marine-non-licensable-activities",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ab921edfe72ed1e2b02f0d9/DRAFT_Marine_Non-Licensable_Activities_Impacts_Evidence_Summary.pdf",
+   "pdf_label": "Marine Non-Licensable Activities Impacts Evidence: Summary  (DRAFT)  (PDF)",
+   "pdf_size": 934742,
+   "pdf_more": 6
   },
   {
    "id": "govuk:/government/publications/crime-and-policing-act-2026-factsheets",
@@ -4588,7 +5152,8 @@
    ],
    "src": "GOV.UK · Home Office, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/crime-and-policing-act-2026-factsheets",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "leg:http://www.legislation.gov.uk/uksi/2026/1057/made",
@@ -4677,6 +5242,11 @@
    "src": "GOV.UK · Home Office, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/crime-and-policing-act-2026-impact-assessments",
    "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ab62ba6734e2435f202f08b/CPA_Abortion_Economic_IA.pdf",
+   "pdf_label": "Crime and Policing Act: abortion measures economic impact assessment (PDF)",
+   "pdf_size": 231673,
+   "pdf_more": 2,
    "also": [
     {
      "id": "govuk:/government/publications/crime-and-policing-act-2026-equality-impact-assessments",
@@ -4702,7 +5272,12 @@
    ],
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/risley-prison-action-plan--2",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aba2111a9c3d267bcccef5d/HMP_Risley_action_plan_-_September_2026.pdf",
+   "pdf_label": "HMP Risley action plan - September 2026 (PDF)",
+   "pdf_size": 227696,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/somerset-levels-and-moors-reducing-the-risk-of-flooding",
@@ -4718,7 +5293,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/somerset-levels-and-moors-reducing-the-risk-of-flooding",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/lindholme-prison-action-plan",
@@ -4734,7 +5310,12 @@
    ],
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/lindholme-prison-action-plan",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aba26028cb3c0580e50122e/HMP_Lindholme_action_plan_-_September_2026.pdf",
+   "pdf_label": "HMP Lindholme action plan - September 2026 (PDF)",
+   "pdf_size": 242684,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/publications/solar-radiation-modification-approaches-the-governments-view",
@@ -4750,7 +5331,8 @@
    ],
    "src": "GOV.UK · Department for Energy Security and Net Zero",
    "link": "https://www.gov.uk/government/publications/solar-radiation-modification-approaches-the-governments-view",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "bill:4280",
@@ -4814,7 +5396,11 @@
    ],
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/calls-for-evidence/national-professional-qualifications-npq-framework-review",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/686f911710d550c668de3d99/National_professional_qualifications_framework_review_call_for_evidence_response.pdf",
+   "pdf_label": "National Professional Qualifications framework review: call for evidence government response (PDF)",
+   "pdf_size": 577690
   },
   {
    "id": "govuk:/government/publications/journey-to-great-british-railways-policy-publication-timetable",
@@ -4830,7 +5416,8 @@
    ],
    "src": "GOV.UK · Department for Transport",
    "link": "https://www.gov.uk/government/publications/journey-to-great-british-railways-policy-publication-timetable",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/rolling-stock-and-infrastructure-strategy",
@@ -4847,7 +5434,12 @@
    ],
    "src": "GOV.UK · DfT Operator Limited, Department for Transport",
    "link": "https://www.gov.uk/government/publications/rolling-stock-and-infrastructure-strategy",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aba4b47997a4b2950ccefc0/gbr-rolling-stock-infrastructure-strategy.pdf",
+   "pdf_label": "Great British Railways' (GBR) rolling stock and infrastructure strategy (PDF)",
+   "pdf_size": 11667925,
+   "pdf_more": 2
   },
   {
    "id": "govuk:/government/publications/dcms-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028",
@@ -4865,6 +5457,7 @@
    "src": "GOV.UK · Department for Culture, Media and Sport",
    "link": "https://www.gov.uk/government/publications/dcms-small-and-medium-sized-enterprise-sme-action-plan-2025-to-2028",
    "first_seen": "2026-10-03",
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/publications/moj-small-and-medium-sized-enterprise-sme-and-vcse-action-plan-2025-to-2028",
@@ -4893,6 +5486,26 @@
    ]
   },
   {
+   "id": "fsaalert:FSA-PRIN-46-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-25",
+   "extent": "UK",
+   "title": "Product recall: Lucky Saint recalls Hazy IPA products because of risk of cans exploding",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-46-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "govuk:/government/publications/dcms-place-targeting",
    "kind": "update",
    "level": "uk",
@@ -4906,7 +5519,8 @@
    ],
    "src": "GOV.UK · Department for Culture, Media and Sport",
    "link": "https://www.gov.uk/government/publications/dcms-place-targeting",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/make-work-pay-duty-to-inform-workers-of-right-to-join-a-union",
@@ -4922,7 +5536,12 @@
    ],
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/consultations/make-work-pay-duty-to-inform-workers-of-right-to-join-a-union",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6909ba62c0dc8f12484175ef/Consultation_on_duty_to_inform_workers_of_their_right_to_join_a_trade_union.pdf",
+   "pdf_label": "Consultation on duty to inform workers of their right to join a trade union (PDF)",
+   "pdf_size": 485014,
+   "pdf_more": 3
   },
   {
    "id": "govuk:/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act",
@@ -4938,7 +5557,11 @@
    ],
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/publications/implementing-the-plan-to-make-work-pay-and-employment-rights-act",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6981e6e4e833d031a3158f87/implementing-the-employment-rights-bill-roadmap.pdf",
+   "pdf_label": "Implementing the Employment Rights Bill: roadmap (PDF)",
+   "pdf_size": 1154341
   },
   {
    "id": "bill:4125",
@@ -4959,6 +5582,36 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-PRIN-47-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-24",
+   "extent": "UK",
+   "title": "Product recall: World of Sweets recalls Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because of contam",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-47-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "fsaalert:FSA-PRIN-47-2026-update-1",
+     "kind": "alert",
+     "title": "Product recall: Updated: World of Sweets recalls Alyan Dubai Style Crunchy Knafeh and Pistachio Milk Chocolate and Alyan Dubai Style Chocolate Truffles because ",
+     "src": "Food Standards Agency alerts",
+     "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-47-2026-update-1",
+     "date": "2026-09-25"
+    }
+   ]
+  },
+  {
    "id": "govuk:/government/consultations/uk-reach-alternative-transitional-registration-technical-consultation",
    "kind": "consult",
    "level": "uk",
@@ -4972,7 +5625,8 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/consultations/uk-reach-alternative-transitional-registration-technical-consultation",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/charter-for-uk-government-engagement-with-the-overseas-territories",
@@ -4988,7 +5642,11 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/charter-for-uk-government-engagement-with-the-overseas-territories",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aacf5880420ac660805fa1d/UK_Government_Charter_on_Engagement_with_the_Overseas_Territories.pdf",
+   "pdf_label": "Charter for UK Government Engagement with the Overseas Territories (PDF)",
+   "pdf_size": 211074
   },
   {
    "id": "govuk:/government/publications/dbs-barring-privacy-notice",
@@ -5004,7 +5662,8 @@
    ],
    "src": "GOV.UK · Disclosure and Barring Service",
    "link": "https://www.gov.uk/government/publications/dbs-barring-privacy-notice",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/ai-action-plan-for-justice-one-year-on",
@@ -5020,7 +5679,8 @@
    ],
    "src": "GOV.UK · Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/ai-action-plan-for-justice-one-year-on",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "bill:4156",
@@ -5068,7 +5728,8 @@
    ],
    "src": "GOV.UK · Department for Digital, Culture, Media and Sport",
    "link": "https://www.gov.uk/government/consultations/consultation-on-prohibiting-third-party-betting-on-powerball",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
@@ -5084,7 +5745,12 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ab29c76fe72ed1e2b02eebe/consultation_user_choice_conduct_requirement.pdf",
+   "pdf_label": "Consultation: User choice conduct requirement (PDF)",
+   "pdf_size": 632397,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
@@ -5100,7 +5766,11 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aaa71b1f1f8d2a39605f89c/Revised_guidance_-_reducing_the_risk_of_vulnerable_groups_contracting_listeriosis.pdf",
+   "pdf_label": "Revised guidance: reducing the risk of vulnerable groups contracting listeriosis (PDF)",
+   "pdf_size": 525236
   },
   {
    "id": "govuk:/government/consultations/bus-services-act-2025-improving-information-about-local-services",
@@ -5116,7 +5786,8 @@
    ],
    "src": "GOV.UK · Department for Transport",
    "link": "https://www.gov.uk/government/consultations/bus-services-act-2025-improving-information-about-local-services",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/high-down-prison-action-plan",
@@ -5132,7 +5803,12 @@
    ],
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/high-down-prison-action-plan",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ab3c110fe72ed1e2b02ef2a/HMP_High_Down_action_plan_-_Sep_2026.pdf",
+   "pdf_label": "HMP High Down action plan - Sep 2026 (PDF)",
+   "pdf_size": 197106,
+   "pdf_more": 1
   },
   {
    "id": "govuk:/government/consultations/googles-general-search-services-proposed-conduct-requirements",
@@ -5148,6 +5824,31 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-conduct-requirements",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6979ce781c24881f40a4d6dc/Introduction_to_the_consultation.pdf",
+   "pdf_label": "Introduction to the consultation (PDF)",
+   "pdf_size": 284883,
+   "pdf_more": 89
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-45-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-22",
+   "extent": "UK",
+   "title": "Product recall: Waitrose recalls Waitrose Essential Unsweetened Oat Drink because of poor temperature control",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-45-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -5184,7 +5885,8 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/consultations/animal-health-and-welfare-pathway-mandatory-proposals",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/project-gigabit-progress-update-september-2026",
@@ -5200,7 +5902,8 @@
    ],
    "src": "GOV.UK · Building Digital UK, Department for Digital, Culture, Media and Sport",
    "link": "https://www.gov.uk/government/publications/project-gigabit-progress-update-september-2026",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/calls-for-evidence/national-professional-qualifications-npqs-call-for-insights-and-evidence",
@@ -5216,7 +5919,11 @@
    ],
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/calls-for-evidence/national-professional-qualifications-npqs-call-for-insights-and-evidence",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aad0b03ce3f006bd4346c85/NPQ_framework_review_call_for_evidence_and_insights_government_response.pdf",
+   "pdf_label": "National Professional Qualifications framework review: call for insights and evidence government response (PDF)",
+   "pdf_size": 691329
   },
   {
    "id": "govuk:/government/calls-for-evidence/beyond-admet-ai-for-medicines-safety-survey",
@@ -5232,7 +5939,8 @@
    ],
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/government/calls-for-evidence/beyond-admet-ai-for-medicines-safety-survey",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/vets-market-investigation-draft-substantive-order-and-undertakings",
@@ -5248,7 +5956,12 @@
    ],
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/government/consultations/vets-market-investigation-draft-substantive-order-and-undertakings",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6a5f61834876beea7ee04a57/Draft_substantive_order_notice.pdf",
+   "pdf_label": "Draft substantive order notice (PDF)",
+   "pdf_size": 225802,
+   "pdf_more": 74
   },
   {
    "id": "govuk:/government/consultations/make-work-pay-leave-for-bereavement-including-pregnancy-loss",
@@ -5264,7 +5977,12 @@
    ],
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/consultations/make-work-pay-leave-for-bereavement-including-pregnancy-loss",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6928700bce50d215cae96164/make-work-pay-consultation-on-leave-for-bereavement-including-pregnancy-loss.pdf",
+   "pdf_label": "Consultation on leave for bereavement including pregnancy loss (PDF)",
+   "pdf_size": 734247,
+   "pdf_more": 2
   },
   {
    "id": "govuk:/government/consultations/updating-the-safety-at-street-works-and-road-works-code-of-practice",
@@ -5280,7 +5998,11 @@
    ],
    "src": "GOV.UK · Department for Transport",
    "link": "https://www.gov.uk/government/consultations/updating-the-safety-at-street-works-and-road-works-code-of-practice",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aaa5caaf1f8d2a39605f885/safety-at-street-works-and-road-works-a-code-of-practice-draft.pdf",
+   "pdf_label": "Safety at street works and road works: a code of practice (draft) (PDF)",
+   "pdf_size": 4815027
   },
   {
    "id": "govuk:/government/consultations/consultation-on-the-authorisation-of-16-regulated-products-2026",
@@ -5297,7 +6019,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/consultations/consultation-on-the-authorisation-of-16-regulated-products-2026",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/mhclg-small-and-medium-enterprises-sme-action-plan-2025-to-2028",
@@ -5314,7 +6037,8 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/publications/mhclg-small-and-medium-enterprises-sme-action-plan-2025-to-2028",
-   "first_seen": "2026-10-03"
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "bill:4302",
@@ -5798,6 +6522,106 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-PRIN-44-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-10",
+   "extent": "UK",
+   "title": "Product recall: Waitrose recalls Waitrose Essential Pitted Black Olives because of contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-44-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-43-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-04",
+   "extent": "UK",
+   "title": "Product recall: Sainsbury’s recalls Inspired to Cook by Sainsbury’s Pitted Black Olives because of contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-43-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-42-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-03",
+   "extent": "UK",
+   "title": "Allergy alert: Tesco recalls Tesco Finest Caesar & Smoked Bacon Coleslaw because of undeclared mustard",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-42-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-41-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-09-03",
+   "extent": "UK",
+   "title": "Allergy alert: Waitrose & Partners recalls Waitrose Rhubarb Crumble because of undeclared oats (gluten)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-41-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-42-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-08-28",
+   "extent": "UK",
+   "title": "Product recall: Macroom Buffalo Cheese Products recalls Macroom Buffalo Cheese Mozzarella and Macroom Buffalo Cheese Bocconcini because of contamination with Li",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-42-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:511518",
    "kind": "rates",
    "level": "local",
@@ -5818,6 +6642,66 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-PRIN-41-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-08-25",
+   "extent": "UK",
+   "title": "Product recall: Tesco recalls Tesco Finest Mozzarella Pearls & Pesto Orzo Salad because of possible contamination with E. coli (STEC)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-41-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1893385",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3: Lakehouse Lounge",
+   "sum": "Mobile caterer · The Mill House SL3 9HX. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1893385",
+   "lat": 51.4780496,
+   "lng": -0.5646129,
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-40-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-08-21",
+   "extent": "UK",
+   "title": "Product recall: Summit Foods is recalling various products because of possible contamination with Shiga-toxin producing E. coli (STEC)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-40-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:1960545",
    "kind": "rates",
    "level": "local",
@@ -5835,6 +6719,66 @@
    "link": "https://ratings.food.gov.uk/business/1960545",
    "lat": 51.5023735,
    "lng": -0.5558233,
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-39-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-08-10",
+   "extent": "UK",
+   "title": "Product recall: A.Vogel Ltd recalls Rapunzel bioSnacky Das Original Red Clover – Seeds for Sprouts and Seedlings because of contamination with E. coli (STEC)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-39-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-38-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-08-08",
+   "extent": "UK",
+   "title": "Product recall: Greencore recalls three pasta products because of possible contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-38-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:1917122",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-08-07",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5: Foodlink Global Restaurants And Catering Services Limited",
+   "sum": "Other catering premises · Ditton Manor SL3 7JB. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1917122",
+   "lat": 51.4913578,
+   "lng": -0.5606293,
    "first_seen": "2026-10-03"
   },
   {
@@ -5866,6 +6810,26 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-AA-40-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-31",
+   "extent": "UK",
+   "title": "Allergy alert: ASR Solutions Ltd recalls Lay's Sour Cream & Dill Crisps because of undeclared allergens",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-40-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:1932571",
    "kind": "rates",
    "level": "local",
@@ -5883,6 +6847,26 @@
    "link": "https://ratings.food.gov.uk/business/1932571",
    "lat": 51.5078725,
    "lng": -0.5887347,
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-39-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-25",
+   "extent": "UK",
+   "title": "Allergy alert: Bon Bons Wholesale Ltd recalls various chocolate products because of undeclared milk and soya",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-39-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -5906,6 +6890,26 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-PRIN-37-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-23",
+   "extent": "UK",
+   "title": "Product recall: Graham’s Family Dairy recalls Graham’s Family Dairy Semi-Skimmed Milk due to the presence of veterinary medicines including antibiotics (penicil",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-37-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:512133",
    "kind": "rates",
    "level": "local",
@@ -5923,6 +6927,26 @@
    "link": "https://ratings.food.gov.uk/business/512133",
    "lat": 51.5048371,
    "lng": -0.5682812,
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-36-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-21",
+   "extent": "UK",
+   "title": "Product recall: Waitrose & Partners recall Waitrose & Partners 8 Chocolate Chip Brioche Rolls because they may contain pieces of hard plastic and metal",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-36-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   },
   {
@@ -5944,6 +6968,36 @@
    "lat": 51.5242732,
    "lng": -0.6150103,
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-38-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-17",
+   "extent": "UK",
+   "title": "Allergy alert: PepsiCo recalls Doritos Chilli Heatwave because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-38-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "fsaalert:FSA-AA-38-2026-update-1",
+     "kind": "alert",
+     "title": "Allergy alert: Update 1: PepsiCo recalls Doritos Chilli Heatwave because of undeclared milk",
+     "src": "Food Standards Agency alerts",
+     "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-38-2026-update-1",
+     "date": "2026-07-20"
+    }
+   ]
   },
   {
    "id": "fsa:656374",
@@ -6046,6 +7100,46 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-AA-37-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-14",
+   "extent": "UK",
+   "title": "Allergy alert: Lidl Northern Ireland recalls 1001 Delights Dubai Style Pistachio Ice Cream because of undeclared cashew (nuts)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-37-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-34-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-11",
+   "extent": "UK",
+   "title": "Product recall: Capri Sun UK recalls specific batches of Capri-Sun Orange 10 pack because they contain some cartons of Capri-Sun Zero which were filled with the",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-34-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:1915249",
    "kind": "rates",
    "level": "local",
@@ -6066,6 +7160,26 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsaalert:FSA-PRIN-33-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-08",
+   "extent": "UK",
+   "title": "Product recall: M&S recalls M&S Food Truffle Gouda due to the presence of Listeria Monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-33-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "fsa:1087160",
    "kind": "rates",
    "level": "local",
@@ -6083,6 +7197,726 @@
    "link": "https://ratings.food.gov.uk/business/1087160",
    "lat": 51.506529,
    "lng": -0.6064564,
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-36-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-03",
+   "extent": "UK",
+   "title": "Allergy alert: Capsicana recalls Capsicana Easy Going Mild Salsa because of undeclared barley (gluten) and mustard",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-36-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-35-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-03",
+   "extent": "UK",
+   "title": "Allergy alert: Dundeis UK Ltd recalls Minton & Donello Organic White Orzo because of undeclared wheat (gluten)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-35-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-32-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-01",
+   "extent": "UK",
+   "title": "Product recall: O’Brien Fine Foods recalls ham products because of possible contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-32-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-31-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-07-01",
+   "extent": "UK",
+   "title": "Product recall: Icesupp recalls icesupp mango & passionfruit and icesupp mixed berries as a precaution because of a packaging defect",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-31-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-34-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-30",
+   "extent": "UK",
+   "title": "Allergy alert: SPAR UK recalls Clayton Park Kitchen Chicken & Mushroom sauce because of undeclared soya  ",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-34-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-33-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-27",
+   "extent": "UK",
+   "title": "Allergy alert: Morrisons recalls Morrisons Maple & Bacon Back of the Net because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-33-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-30-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-25",
+   "extent": "UK",
+   "title": "Product recall: Ferrero UK recalls frozen Nutella Croissant because it may contain pieces of metal",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-30-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-32-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-24",
+   "extent": "UK",
+   "title": "Allergy alert: Morrisons recalls Morrisons Coronation Chicken Pasta because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-32-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-29-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-23",
+   "extent": "UK",
+   "title": "Product recall: Prepworld recalls fruit products because of possible contamination with Salmonella",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-29-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-31-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-21",
+   "extent": "UK",
+   "title": "Allergy alert: Krispy Kreme recalls Individual Pitch Perfect Doughnut & Match Day Dozen because of undeclared hazelnuts (nuts)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-31-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-28-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-19",
+   "extent": "UK",
+   "title": "Product recall: Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "fsaalert:FSA-PRIN-28-2026-update-1",
+     "kind": "alert",
+     "title": "Product recall: Update 1: Traditional Cheese Company recalls French Bries because of contamination with Listeria monocytogenes",
+     "src": "Food Standards Agency alerts",
+     "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-28-2026-update-1",
+     "date": "2026-06-24"
+    }
+   ]
+  },
+  {
+   "id": "fsaalert:FSA-AA-30-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-11",
+   "extent": "UK",
+   "title": "Allergy alert: Buttermilk Confections is recalling Honeycomb Blast Choc Bar because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-30-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-27-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-05",
+   "extent": "UK",
+   "title": "Product recall: Dalston Soda Company recalls Dalston’s Pineapple Soda because the cans may break apart unexpectedly",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-prin-27-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-29-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-04",
+   "extent": "UK",
+   "title": "Allergy alert: Waitrose & Partners recalls Waitrose & Partners 4 Richly Fruited Hot Cross Buns because of undeclared barley",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-29-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-FAFA-01-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-06-04",
+   "extent": "UK",
+   "title": "Food alert: Food Alert \"For Action\": To: Food Businesses and Consumers who have purchased and sold frozen products supplied by Inarah’s Frozen Foods Ltd",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-fafa-01-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-28-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-28",
+   "extent": "UK",
+   "title": "Allergy alert: Gü recalls Gü Double Sea Salted Caramel Frozen Dessert because of undeclared hazelnuts (nuts) and soya",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-28-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-26-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-28",
+   "extent": "UK",
+   "title": "Product recall: Fox’s Burton’s Companies (FBC) UK recalls Arran Fine Foods Caramelised Red Onion Chutney because it may contain pieces of metal",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-26-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-25-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-26",
+   "extent": "UK",
+   "title": "Product recall: Morrisons recalls Morrisons Savers Cashews because of the possible presence of glass",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-25-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-24-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-22",
+   "extent": "UK",
+   "title": "Product recall: One Living recalls One Living Organic Raspberry & Pomegranate Kombucha because the bottle caps may pop off unexpectedly",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-24-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-27-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-22",
+   "extent": "UK",
+   "title": "Allergy alert: Sunrise International Foods Ltd recalls Shama Falooda Almond flavour drink because of undeclared milk",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-27-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-26-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-21",
+   "extent": "UK",
+   "title": "Allergy alert: Divilly’s recalls Divilly Brothers No Added Nitrite Crumbed Ham because of undeclared wheat (gluten)",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-26-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-23-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-20",
+   "extent": "UK",
+   "title": "Product recall: Glenisk recalls Organic Baby Fromage Frais due to the possible presence of mould",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-23-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-25-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-16",
+   "extent": "UK",
+   "title": "Allergy alert: Filippo Berio UK recalls Hot Chilli Pesto because of undeclared fish",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-25-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-24-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-05-06",
+   "extent": "UK",
+   "title": "Allergy alert: Daylesford Organic Ltd recalls Daylesford Organic Minestrone Soup with Cannellini Beans, Pasta Shells & Olive Oil because wheat (gluten) is not e",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-24-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-22-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-30",
+   "extent": "UK",
+   "title": "Product recall: ASDA recalls Exceptional by ASDA Beer Battered Cod Fishcakes because it may contain pieces of plastic or metal",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-22-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-21-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-30",
+   "extent": "UK",
+   "title": "Product recall: Goodlife recalls Goodlife Spicy Bean Burger because it may contain pieces of plastic",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-21-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-23-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-24",
+   "extent": "UK",
+   "title": "Allergy alert: HiPP Organic UK recalls 7+ months Vegetable Lasagne 190g jar because celeriac is not emphasised on the label",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-23-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-20-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-22",
+   "extent": "UK",
+   "title": "Product recall: Good4U recalls Super Sprouts Super Greens due to possible presence of Salmonella",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-20-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-22-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-18",
+   "extent": "UK",
+   "title": "Allergy alert: Marks & Spencer is recalling Authentic Greek Yoghurt with Vanilla because of undeclared gluten",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-22-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-AA-21-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-17",
+   "extent": "UK",
+   "title": "Allergy alert: Loudwater Trade & Finance Ltd is recalling Millennium Peanuts Caramel Milk Chocolate because allergens are not declared in English on the label",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-21-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-19-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-16",
+   "extent": "UK",
+   "title": "Product recall: Saffron Pastries recalls various Saffron Pastries products because of potential rodent contamination",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-19-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03",
+   "also": [
+    {
+     "id": "fsaalert:FSA-PRIN-19-2026-update-1",
+     "kind": "alert",
+     "title": "Product recall: Update 1: Saffron Pastries recalls various Saffron Pastries products because of potential rodent contamination",
+     "src": "Food Standards Agency alerts",
+     "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-19-2026-update-1",
+     "date": "2026-04-21"
+    }
+   ]
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-18-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-14",
+   "extent": "UK",
+   "title": "Product recall: ALDI recalls The Fishmonger Hot Smoked 2 Salmon Fillets – Honey Roasted because of incorrect use-by date.",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-18-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-17-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-13",
+   "extent": "UK",
+   "title": "Product recall: FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-17-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-16-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-09",
+   "extent": "UK",
+   "title": "Product recall: Tesco recalls Tesco Finest Summer Edition Chocolate Affogato Dessert because it may contain pieces of plastic",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-16-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsaalert:FSA-PRIN-15-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-04-05",
+   "extent": "UK",
+   "title": "Product recall: The Curing Barn recalls British Bresaola because of contamination with Listeria monocytogenes",
+   "sum": "",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-15-2026",
+   "who": [
+    "household"
+   ],
    "first_seen": "2026-10-03"
   }
  ]
