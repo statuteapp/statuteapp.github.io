@@ -5,6 +5,7 @@
 - This is a static GitHub Pages progressive web app. The app is primarily one file: `index.html`, with HTML, CSS and vanilla JavaScript. Do not introduce a framework or build step without a specific product need.
 - The hourly public feed is built by GitHub Actions from `build_feed.py` and `sources_extra.py`; the resulting `items.json` is shared and public.
 - The service worker is `sw.js`. The app is designed to match the shared feed against a resident's profile on their device.
+- Product model: official organisations remain the source of truth; Statute is the last-mile information delivery layer that finds relevant updates, explains them plainly, preserves provenance/freshness, and hands residents back to the official source for authoritative detail or action. Separate required delivery (verified applicable duties and safety-critical alerts) from chosen updates; interests and mutes must not hide an applicable duty.
 - No frontend package manager/build command is configured. The Python feed builder currently uses the Python standard library; inspect imports and workflow before adding dependencies.
 - The sample council is Slough. Coverage is incomplete and must not be described as UK-wide until real source coverage is built and verified.
 
