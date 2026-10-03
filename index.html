@@ -74,6 +74,8 @@ abbr.ab{text-decoration:underline dotted;text-underline-offset:2px;cursor:pointe
 .bm.on{border-color:var(--ink);background:var(--paper-2)}
 .card .meta .bmc{margin-left:6px;cursor:pointer;font-size:14px;opacity:.55}.card .meta .bmc.on{opacity:1}
 .pdfb{font-size:13px;color:var(--slate)}
+.pill.near{background:var(--green-bg);color:var(--green)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}.dot.ok{background:var(--green)}.dot.warn{background:var(--amber)}
 @media print{
   header.top,nav.tabs,.hbtns,.sheet,.toast,#confetti,#padhud,.back,.bm,.audio,.chips,.btn,.bmc,.quiz,.brief,.clock,.meas,.areas,.setnav{display:none !important}
   body,.app{background:#fff;color:#000}.app{max-width:none}
@@ -85,6 +87,20 @@ abbr.ab{text-decoration:underline dotted;text-underline-offset:2px;cursor:pointe
   .printfoot{display:block !important;font-size:11px;color:#444;border-top:1px solid #999;margin-top:16px;padding-top:6px}
 }
 .printhead,.printfoot{display:none}
+.skip{position:absolute;left:-999px;top:8px;z-index:20;background:var(--ink);color:var(--paper);padding:8px 12px;border-radius:4px}.skip:focus{left:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+h1:focus{outline:none}
+.onbhead{margin:0 0 14px}.onbhead .prog{height:6px;background:var(--paper-3);border-radius:3px;overflow:hidden;margin-top:4px}.onbhead .prog i{display:block;height:100%;background:var(--ink)}
+.cq{border:0;padding:0;margin:0 0 18px}.cq legend{font-weight:700;margin-bottom:6px;padding:0}.cq legend .lead{font-weight:400}
+.copt{display:grid;grid-template-columns:24px 1fr;gap:2px 10px;align-items:start;border:1.5px solid var(--paper-3);border-radius:10px;padding:10px 12px;margin:0 0 6px;cursor:pointer;background:var(--paper)}
+.copt.on{border-color:var(--ink);background:var(--paper-2)}.copt input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--ink)}.copt .l{font-size:16px}.copt .r{grid-column:2;font-size:13px;color:var(--green)}
+.reduce-motion *,.reduce-motion *::before,.reduce-motion *::after{transition:none !important;animation:none !important;scroll-behavior:auto !important}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{transition:none !important;animation:none !important}}
+.high-contrast{--paper:#fff;--paper-2:#f4f4f4;--paper-3:#8a8a8a;--ink:#000;--slate:#1a1a1a;--mist:#444;--blue:#0000d0;--green:#005a2b;--red:#b00000;--amber:#8a3b00;--purple:#3a1a80;--blue-bg:#dbe6ff;--green-bg:#d6f0df;--red-bg:#ffd9d9;--amber-bg:#ffe4cc;--purple-bg:#e4dbff}
+.high-contrast[data-theme="dark"],.high-contrast.dark{--paper:#000;--paper-2:#111;--paper-3:#9a9a9a;--ink:#fff;--slate:#f0f0f0;--mist:#bbb;--blue:#8ab4ff;--green:#7fe0a6;--red:#ff8d8d;--amber:#ffbf80;--purple:#c9b3ff}
+.high-contrast .card,.high-contrast .asi,.high-contrast .syltile,.high-contrast .lg,.high-contrast .copt{border-color:var(--ink)}
+button,.card,.tag,.hb,.bm,.chips button,.seg button{min-height:44px}.tag,.chips button,.seg button,.bm{min-height:36px}.hb{min-width:44px;min-height:44px;width:44px;height:44px}
+nav.tabs button{min-height:52px}
 .pill.who{background:var(--paper-2);color:var(--ink);font-weight:600}
 .whorow{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px}
 .card .foot{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}
@@ -432,6 +448,7 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <div class="app" id="app">
 <header class="top">
   <div class="brand"><span class="mark" aria-hidden="true"></span>Statute</div>
@@ -439,7 +456,7 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
   <div class="hbtns"><button class="hb" id="savedbtn" aria-label="Saved">🔖</button><button class="hb" id="sharebtn" aria-label="Share this page">⤴</button><button class="hb" id="help" aria-label="Legend">?</button></div>
 </header>
 <div class="sheet" id="sheet" hidden><div class="sheet-in"><div class="sheet-h"><b id="sheet-t">Share</b><button class="back" id="sheet-x">Close</button></div><div id="sheet-b"></div></div></div>
-<main>
+<main id="main" tabindex="-1">
   <section class="screen active" id="s-today" aria-label="Today"></section>
   <section class="screen" id="s-map" aria-label="Map"></section>
   <section class="screen" id="s-horizon" aria-label="Horizon"></section>
@@ -458,6 +475,7 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
 </div></nav>
 <div class="onb" id="onb" hidden></div>
 <div class="toast" id="toast" aria-live="polite"></div>
+<div id="live" class="sr" aria-live="polite" aria-atomic="true"></div>
 <canvas id="confetti"></canvas>
 </div>
 <script>
@@ -466,8 +484,13 @@ const TODAY = new Date();
 const SITS = [
  ["driver","I drive"],["passenger","I use buses, trains or taxis"],["vaper","I vape or smoke"],["employee","I'm employed"],["selfemp","I'm self-employed or run a business"],
  ["tenant","I rent my home"],["owner","I own my home"],["landlord","I let out property"],["parent_infant","I have a baby (under 1)"],["parent_child","I have children (1–17)"],
- ["dog","I keep a dog"],["benefits","I receive benefits or pension"],["newcomer","I arrived in the UK recently"]
+ ["dog","I keep a dog"],["benefits","I receive benefits or pension"],["newcomer","I arrived in the UK recently"],
+ // Census-derived (2021 household questionnaire); each carries its own rules
+ ["flat","I live in a flat or converted building"],["shared","I share rooms with another household"],["social_tenant","My landlord is the council or a housing association"],["shared_owner","Shared ownership"],["lodger_host","I have lodgers or housemates"],
+ ["student","I'm a student"],["second_home","I have a second address"],["disabled","I have a long-term health condition"],["carer","I care for someone"],["veteran","I served in the Armed Forces"],
+ ["jobseeker","I'm looking for work"],["retired","I'm retired"],["leave","I'm on maternity or paternity leave"],["manager","I supervise other people at work"],["homeworker","I mainly work from home"],["gas","My home uses mains gas"],["oil","My home uses oil or bottled gas"],["heatnet","My home is on a heat network"]
 ];
+const SIT_ICON_X={flat:"🏢",shared:"🚪",social_tenant:"🏘️",shared_owner:"🔑",lodger_host:"🛏️",student:"📚",second_home:"🏠",disabled:"♿",carer:"🤝",veteran:"🎖️",jobseeker:"🔎",retired:"🧓",leave:"🍼",manager:"👔",homeworker:"💻",gas:"🔥",oil:"🛢️",heatnet:"♨️"};
 const INTERESTS=[["tv","I watch TV or BBC iPlayer"],["drone","I fly a drone or model aircraft"],["fishing","I fish"],["escooter","I ride an e-scooter or e-bike"],["detect","I metal-detect"],["cycle","I cycle"],["boat","I own a boat or paddleboard"]];
 const INT_LABEL=Object.fromEntries(INTERESTS);
 const SIT_LABEL = Object.fromEntries(SITS);
@@ -538,9 +561,9 @@ const REGION_OF={"North East":"North East","North West":"North West","Yorkshire 
 async function lookupCouncils(pcRaw){
   const pc=(pcRaw||"").toUpperCase().replace(/\s+/g,"");if(pc.length<2)return [];
   const full=/^[A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2}$/.test(pc);
-  const mk=(n,r,nat)=>({n,r:REGION_OF[r]||r||"",nat:nat||"England"});
+  const mk=(n,r,nat,extra)=>Object.assign({n,r:REGION_OF[r]||r||"",nat:nat||"England"},extra||{});
   try{
-    if(full){const r=await fetch("https://api.postcodes.io/postcodes/"+pc);if(r.ok){const j=await r.json();const d=j.result;if(d&&d.admin_district)return [mk(d.admin_district,d.region||d.country,d.country)];}}
+    if(full){const r=await fetch("https://api.postcodes.io/postcodes/"+pc);if(r.ok){const j=await r.json();const d=j.result;if(d&&d.admin_district)return [mk(d.admin_district,d.region||d.country,d.country,{lat:d.latitude,lng:d.longitude,pcfull:d.postcode,ward:d.admin_ward})];}}
     const out=full?pc.slice(0,-3):pc;
     const r=await fetch("https://api.postcodes.io/outcodes/"+out);if(r.ok){const j=await r.json();const d=j.result;if(d&&d.admin_district&&d.admin_district.length)return d.admin_district.map((n,i)=>mk(n,(d.region||[])[0]||(d.country||[])[0],(d.country||[])[i]||(d.country||[])[0]));}
   }catch(e){}
@@ -1265,6 +1288,12 @@ const SYLLABUS = {
 };
 // ---------- State ----------
 let profile=null, register="adult", done={}, quizDone={};
+// Accessibility preferences (on device)
+let a11y={size:1,motion:"auto",contrast:"auto",theme:"auto"};
+try{const x=localStorage.getItem("statute.a11y");if(x)a11y=Object.assign(a11y,JSON.parse(x));}catch(e){}
+function applyA11y(){const r=document.documentElement;r.style.fontSize=(a11y.size*100)+"%";r.classList.toggle("reduce-motion",a11y.motion==="reduce");r.classList.toggle("high-contrast",a11y.contrast==="high");if(a11y.theme==="auto")r.removeAttribute("data-theme");else r.setAttribute("data-theme",a11y.theme);try{localStorage.setItem("statute.a11y",JSON.stringify(a11y));}catch(e){}}
+applyA11y();
+function reduceMotion(){return a11y.motion==="reduce"||(a11y.motion==="auto"&&window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches);}
 function load(){try{const p=localStorage.getItem("statute.profile");if(p)profile=JSON.parse(p);const r=localStorage.getItem("statute.register");if(r)register=r;const d=localStorage.getItem("statute.done");if(d)done=JSON.parse(d);const q=localStorage.getItem("statute.quiz");if(q)quizDone=JSON.parse(q);}catch(e){}}
 function save(){try{localStorage.setItem("statute.profile",JSON.stringify(profile));localStorage.setItem("statute.register",register);localStorage.setItem("statute.done",JSON.stringify(done));localStorage.setItem("statute.quiz",JSON.stringify(quizDone));}catch(e){}}
 function minsFor(it){const w=((it.spine&&it.spine.adult)||"").split(/\s+/).length+((foryou(it)||"")).split(/\s+/).length;return Math.max(1,Math.round(w/180*2)/2+(it.quiz&&it.quiz.length?1:0));}
@@ -1296,6 +1325,12 @@ function sharePage(){const isItem=!!(cur&&document.querySelector("#s-detail.acti
    {t:"Save as PDF",d:"Everything shown here, with sources. Your phone's print sheet offers PDF.",go:()=>printPage(title)},
    ...(isItem&&cur.link&&!isHome(cur.link)?[{t:"Share the source document",d:cur.link.replace(/^https?:\/\//,"").slice(0,60),go:()=>shareNative(title,"Source document",cur.link)}]:[])
   ]);}
+// ---------- Street level ----------
+function milesTo(it){if(!profile||profile.lat==null||it.lat==null||it.lng==null)return null;const R=3958.8,toR=x=>x*Math.PI/180;const dLat=toR(it.lat-profile.lat),dLng=toR(it.lng-profile.lng);const a=Math.sin(dLat/2)**2+Math.cos(toR(profile.lat))*Math.cos(toR(it.lat))*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(a));}
+function nearLabel(it){const m=milesTo(it);if(m==null)return "";return m<0.1?"on your street":m<1?`${Math.round(m*10)/10} mi`:`${Math.round(m)} mi`;}
+function inRadius(it){const m=milesTo(it);const r=(profile&&profile.radius)||1;return m==null?true:m<=r;}
+function feedHealth(){const F=window.FEED_META;if(!F)return {txt:"Feed not loaded; showing sample data",cls:"warn"};const bad=(F.sources||[]).filter(s=>!s.ok);const m=Math.round((Date.now()-new Date(F.generated))/60000);const age=m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago";
+  return {txt:`Feed built ${age} · ${bad.length?bad.length+" of "+F.sources.length+" sources failing":"all "+F.sources.length+" sources healthy"}`,cls:bad.length?"warn":"ok",bad};}
 function isHome(u){try{const x=new URL(u);return x.pathname.replace(/\/+$/,"")===""&&!x.search&&!x.hash;}catch(e){return true;}}
 function linkHTML(u,label,cls){if(!u||isHome(u))return `<span class="lead nolink">Source page not yet linked</span>`;return `<a class="${cls||"btn sm"}" href="${esc(u)}" target="_blank" rel="noopener">${esc(label||"Open the source")} ↗</a>`;}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
@@ -1319,45 +1354,113 @@ function bindOcc(root){const inp=root.querySelector("#occ"),list=root.querySelec
     list.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{inp.value=b.textContent.split("SOC")[0].trim();hid.value=b.dataset.role;list.innerHTML="";if(hid.onchange)hid.onchange();});};}
 
 // ---------- Onboarding ----------
-function renderOnb(){
+// Onboarding follows the Census 2021 household questionnaire (ONS, OGL): the state's own list of which facts change which rules.
+// Not asked, by design: religion, ethnicity, national identity, sexual orientation, gender identity, passports. No obligation depends on them.
+const CENSUS=[
+ {id:"home",t:"Your home",ref:"Census H7, H8, H12, H13, H10",q:[
+  {k:"acc",t:"What type of accommodation is this?",one:true,o:[["house","A whole house or bungalow",""],["flat","A flat in a purpose-built block","Fire and building safety duties on the building owner; leasehold rules"],["conv","A flat in a converted or shared house","HMO licensing; fire safety"],["comm","A flat in a commercial building","Fire safety; planning use class"],["mobile","A caravan or mobile home","Mobile Homes Act 2013; site licensing"]]},
+  {k:"sharedrooms",t:"Are all rooms, including kitchen and bathroom, behind a door only your household can use?",one:true,o:[["yes","Yes",""],["no","No, some are shared with another household","HMO licensing; council inspections"]]},
+  {k:"tenure",t:"Does your household own or rent this accommodation?",one:true,o:[["own","Owns outright","Council tax; planning; building regulations"],["mort","Owns with a mortgage or loan","Mortgage charter; FCA rules"],["shared","Part-owns and part-rents (shared ownership)","Leasehold and rent rules both apply"],["rent","Rents","Tenancy law, deposits, repairs"],["free","Lives here rent-free",""]]},
+  {k:"landlord",t:"Who is your landlord?",one:true,when:a=>a.tenure==="rent"||a.tenure==="shared",o:[["social","Housing association or housing co-operative","Social tenancy rights; Regulator of Social Housing"],["council","Council or local authority","Secure tenancy; Right to Buy"],["private","Private landlord or letting agency","Renters' Rights Act; deposit protection; How to Rent"],["employer","Employer of a household member","Service occupancy"],["relative","Relative or friend","Licence to occupy"],["other","Other",""]]},
+  {k:"heat",t:"What type of heating does this accommodation have?",o:[["gas","Mains gas","Gas safety checks; price cap"],["elec","Electric","Price cap; Economy 7"],["oil","Oil, tank or bottled gas","Oil storage rules; no price cap"],["wood","Wood or solid fuel","Smoke control areas; Ready to Burn"],["renew","Heat pump or solar","Boiler Upgrade Scheme; planning rules"],["net","District or communal heat network","Heat network regulation (Energy Act 2023)"],["none","No central heating","Cold-weather payments; decent homes standard"]]}
+ ]},
+ {id:"who",t:"Who usually lives here",ref:"Census H1, H2, H14",q:[
+  {k:"people",t:"Who usually lives here with you?",o:[["partner","A partner","Marriage allowance; next of kin"],["baby","A baby under 1","Registration; child benefit; vaccinations"],["child","Children aged 1 to 17","School admissions; child benefit"],["student","Students who live here in term time","Council tax disregard"],["lodger","Housemates, tenants or lodgers","Rent a Room; HMO rules; right to rent checks"],["forces","Someone in the Armed Forces","Armed Forces Covenant"],["alone","No one, I live alone","Single person council tax discount"]]},
+  {k:"cars",t:"How many cars or vans are owned, or available for use, by your household?",one:true,o:[["0","None","Public transport; e-scooter rules"],["1","1","VED, MOT, insurance, clean-air zones"],["2","2","As 1; parking permits"],["3","3 or more","As 1; parking permits"]]}
+ ]},
+ {id:"you",t:"About you",ref:"Census 2, 6, 8, 11, 22–24, 32",q:[
+  {k:"age",t:"How old are you?",one:true,o:[["u16","Under 16","Simpler wording; school-age rules"],["16_17","16 or 17","Work hours; voting registration"],["18_65","18 to 65",""],["66","66 or over","State Pension; free bus pass; winter fuel"]]},
+  {k:"second",t:"Do you stay at another address for more than 30 days a year?",one:true,o:[["no","No",""],["yes","Yes","Council tax second-home premium; electoral registration"]]},
+  {k:"student",t:"Are you a student in full-time education?",one:true,o:[["no","No",""],["yes","Yes","Council tax exemption; student finance; tuition rules"]]},
+  {k:"arrived",t:"If you were not born in the UK, when did you most recently arrive to live here?",month:true,hint:"Leave blank if born here or arrived long ago. Unlocks the newcomer syllabus."},
+  {k:"health",t:"Do you have a physical or mental health condition lasting 12 months or more?",one:true,o:[["no","No",""],["little","Yes, and it limits me a little","Equality Act reasonable adjustments; Access to Work"],["lot","Yes, and it limits me a lot","PIP; Blue Badge; Equality Act"]]},
+  {k:"care",t:"Do you look after, or help, anyone because of long-term illness, disability or old age?",one:true,o:[["no","No",""],["some","Yes, under 35 hours a week","Carer's Leave Act; carer's assessment"],["full","Yes, 35 hours a week or more","Carer's Allowance; carer's credit"]]},
+  {k:"forces",t:"Have you previously served in the UK Armed Forces?",one:true,o:[["no","No",""],["yes","Yes","Armed Forces Covenant; veterans' services"]]}
+ ]},
+ {id:"work",t:"Your work",ref:"Census 33–34, 42, 45, 47, 49",q:[
+  {k:"status",t:"In the last seven days, were you doing any of the following?",o:[["emp","Working as an employee","Minimum wage; working time; PAYE"],["self","Self-employed or freelance","Self Assessment; Making Tax Digital"],["leave","On maternity or paternity leave","Statutory pay; leave rights"],["retired","Retired","State Pension; winter fuel"],["studying","Studying",""],["home","Looking after home or family","Child benefit; carer's credit"],["sick","Long-term sick or disabled","ESA; PIP"],["looking","Looking for work","Universal Credit conditions; Jobcentre"]]},
+  {k:"job",t:"What is your job title?",occ:true,hint:"Matched to the ONS job classification. Each job carries the rules you're expected to know."},
+  {k:"super",t:"Do you supervise the work of other people?",one:true,when:a=>(a.status||[]).includes("emp")||(a.status||[]).includes("self"),o:[["no","No",""],["yes","Yes","Health and safety duties; employer obligations"]]},
+  {k:"hours",t:"How many hours a week do you usually work?",one:true,when:a=>(a.status||[]).includes("emp")||(a.status||[]).includes("self"),o:[["0_15","0 to 15","Universal Credit thresholds"],["16_30","16 to 30","Working-time limits"],["31_48","31 to 48","Working-time limits"],["49","49 or more","48-hour opt-out"]]},
+  {k:"where",t:"Where do you mainly work?",one:true,when:a=>(a.status||[]).includes("emp")||(a.status||[]).includes("self"),o:[["site","At a workplace or depot",""],["home","At or from home","Home-working tax relief"],["nofix","No fixed place","Travel expenses"]]},
+  {k:"travel",t:"How do you usually travel to work?",one:true,when:a=>(a.status||[]).includes("emp")||(a.status||[]).includes("self"),o:[["car","Driving a car or van","VED, MOT, insurance"],["pass","Passenger in a car or van",""],["pt","Bus, train, tube or tram","Fares; passenger rights"],["bike","Bicycle","Highway Code; cycle lanes"],["moto","Motorcycle, scooter or moped","CBT; helmet law"],["walk","On foot",""],["none","I work from home",""]]}
+ ]},
+ {id:"also",t:"Also true",ref:"Not on the census, but the law cares",q:[
+  {k:"extra",t:"Tick anything that applies.",o:[["dog","I keep a dog","Microchipping; XL Bully rules"],["vaper","I vape or smoke","Tobacco and Vapes Act"],["landlord","I let out property","Landlord duties"],["benefits","I receive benefits or a pension","Uprating; reporting changes"],["tv","I watch TV or BBC iPlayer","TV licence"],["drone","I fly a drone or model aircraft","CAA registration"],["fishing","I fish","Rod licence"],["escooter","I ride an e-scooter or e-bike","Trial zones; e-bike limits"],["detect","I metal-detect","Treasure Act"],["cycle","I cycle","Highway Code"],["boat","I own a boat or paddleboard","Waterways licence"]]}
+ ]},
+ {id:"reading",t:"Reading",ref:"",q:[
+  {k:"mode",t:"What do you want from this?",one:true,o:[["keep","Keep the life I have","Go deeper on what already applies to me"],["explore","Try new areas","Follow interests the feed opens up"],["next","Find my next thing","Show me where interest leads to work"]]},
+  {k:"income",t:"You, as a mini government (optional)",num:true,hint:"Monthly take-home, £. Your spending against the UK budget's proportions, and the base for the penalties figures. Stays on this device."}
+ ]}
+];
+function sitsFromCensus(a){const s=new Set();const has=(k,v)=>Array.isArray(a[k])?a[k].includes(v):a[k]===v;
+  if(["flat","conv","comm"].includes(a.acc))s.add("flat");if(a.sharedrooms==="no")s.add("shared");
+  if(a.tenure==="rent")s.add("tenant");if(a.tenure==="own"||a.tenure==="mort")s.add("owner");if(a.tenure==="shared"){s.add("shared_owner");s.add("tenant");}
+  if(a.landlord==="social"||a.landlord==="council")s.add("social_tenant");
+  if(has("heat","gas"))s.add("gas");if(has("heat","oil"))s.add("oil");if(has("heat","net"))s.add("heatnet");
+  if(has("people","baby"))s.add("parent_infant");if(has("people","child"))s.add("parent_child");if(has("people","lodger"))s.add("lodger_host");
+  if(a.cars&&a.cars!=="0")s.add("driver");if(a.travel==="car")s.add("driver");if(a.travel==="pt"||a.travel==="pass")s.add("passenger");if(a.travel==="bike")s.add("cycle");
+  if(a.second==="yes")s.add("second_home");if(a.student==="yes"||has("status","studying"))s.add("student");
+  if(a.health==="little"||a.health==="lot")s.add("disabled");if(a.care==="some"||a.care==="full")s.add("carer");if(a.forces==="yes")s.add("veteran");
+  if(has("status","emp"))s.add("employee");if(has("status","self"))s.add("selfemp");if(has("status","leave"))s.add("leave");if(has("status","retired")){s.add("retired");s.add("benefits");}
+  if(has("status","looking"))s.add("jobseeker");if(has("status","sick"))s.add("benefits");if(a.super==="yes")s.add("manager");if(a.where==="home")s.add("homeworker");
+  if(a.age==="66"){s.add("retired");s.add("benefits");}
+  if(a.arrived)s.add("newcomer");
+  (a.extra||[]).forEach(x=>s.add(x));
+  return [...s];}
+function renderOnb(prefill){
   const o=document.getElementById("onb");o.hidden=false;
-  o.innerHTML=`<h1>What the law asks of you, from when.</h1>
-  <p class="lede">Answer a few facts and Statute builds your feed from government sources only: legislation.gov.uk, bills.parliament.uk, GOV.UK and your council. No opinions, no likes. Just what applies to you.</p>
-  <div class="field"><label for="pc">Your postcode</label><input id="pc" inputmode="text" autocomplete="postal-code" placeholder="e.g. SL1 1AA" maxlength="8"><span class="lead">Only the first part is used, to find your council. It isn't stored anywhere but this device.</span></div>
-  <div id="pcguess"></div>
-  <div class="field"><label for="arr">If you arrived in the UK recently, when?</label><input id="arr" type="month" min="2015-01" max="2026-10"></div>
-  <div class="field"><label for="occ">What do you do for work?</label><input id="occ" placeholder="Type a job, e.g. plumber, bus driver, car sales" autocomplete="off"><div id="occlist"></div><input type="hidden" id="role" value="none"><span class="lead">Jobs are matched on the ONS Standard Occupational Classification, so every job in the country has a place. Each one carries the rules you're expected to know.</span></div>
-  <h3>Your situations</h3>
-  <p class="lede" style="margin-bottom:4px">Tick everything that's true. Each one carries its own rules.</p>
-  ${SITS.map(([k,l])=>`<label class="chk"><input type="checkbox" value="${k}" ${["driver","employee","tenant"].includes(k)?"checked":""}>${l}</label>`).join("")}
-  <h3>Interests</h3><p class="lede" style="margin-bottom:4px">The census doesn't ask these, but the law cares about each one.</p>
-  ${INTERESTS.map(([k,l])=>`<label class="chk"><input type="checkbox" data-int value="${k}">${l}</label>`).join("")}
-  <h3>What do you want from this?</h3>
-  <div class="modes">${Object.entries(MODES).map(([k,m],i)=>`<button type="button" data-mode="${k}" aria-pressed="${i===0}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div>
-  <h3>Who's reading</h3>
-  <div class="seg" role="group" aria-label="Register"><button data-r="adult" aria-pressed="true">Adult</button><button data-r="kid" aria-pressed="false">Under 16</button></div>
-  <h3>You, as a mini government</h3><p class="lede" style="margin-bottom:4px">Optional. Your take-home against the UK budget's proportions: a mirror for what you've decided matters, and the base for the "what if you got caught" figures. Stays on this device.</p>
-  <div class="field"><label for="inc0">Monthly take-home, £</label><input id="inc0" type="number" inputmode="decimal" placeholder="e.g. 2400" step="50"></div>
-  <p class="note">Everyone gets energy, council and UK-wide items regardless of situations. Nothing here is sent anywhere; it stays in your browser. You can change all of this later under Settings.</p>
-  <button class="btn" id="go">Build my feed</button>`;
-  let mode="keep";o.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{o.querySelectorAll(".modes button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");mode=b.dataset.mode;});
-  o.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{o.querySelectorAll(".seg button").forEach(x=>x.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");register=b.dataset.r;});
-  bindOcc(o);
-  const pcIn=o.querySelector("#pc"),pg=o.querySelector("#pcguess");
-  let pcT=null,pcHits=[];
-  pcIn.oninput=()=>{clearTimeout(pcT);const v=pcIn.value.trim();if(v.length<2){pg.innerHTML="";pcHits=[];return;}
-    pg.innerHTML=`<div class="confirm"><span class="lead">Looking up ${esc(v.toUpperCase())}…</span></div>`;
-    pcT=setTimeout(async()=>{const hits=await lookupCouncils(v);if(pcIn.value.trim()!==v)return;pcHits=hits;
-      pg.innerHTML=hits.length===1?`<div class="confirm"><span class="lead">From ${esc(v.toUpperCase())} your council is</span><div class="big">${esc(hits[0].n)}</div><span class="lead">${esc(hits[0].r)} · ${esc(hits[0].nat)}. You'll confirm this on the next step.</span></div>`
-      :hits.length>1?`<div class="confirm"><span class="lead">${esc(v.toUpperCase())} covers ${hits.length} councils: ${hits.map(h=>esc(h.n)).join(", ")}. Add the rest of your postcode, or choose on the next step.</span></div>`
-      :`<div class="confirm"><span class="lead">We can't find that postcode. Check it, or pick your council on the next step.</span></div>`;},350);};
-  o._pcHits=()=>pcHits;
-  o.querySelector("#go").onclick=()=>{
-    const sits=[...o.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(i=>i.value);const interests=[...o.querySelectorAll("input[data-int]:checked")].map(i=>i.value);
-    const arr=o.querySelector("#arr").value; if(arr&&!sits.includes("newcomer"))sits.push("newcomer");
-    const pc=pcIn.value.trim().toUpperCase();const hits=o._pcHits();const g=hits.length===1?hits[0]:null;const role=(o.querySelector("#role")||{}).value||"none";
-    confirmCouncil(g,pc,c=>{profile={postcode:pc.split(" ")[0]||pc,council:c.n,region:c.r,nation:c.nat,arrived:arr||null,sits,interests,role,mode,asis:[],income:+(o.querySelector("#inc0").value)||0};save();o.hidden=true;renderAll();show("today");},hits);
+  const a=Object.assign({},(prefill&&profile&&profile.census)||{});let step=0;const total=CENSUS.length+1;
+  const draw=()=>{
+    if(step===0){
+      o.innerHTML=`<div class="onbhead"><span class="lead">Step 1 of ${total}</span><div class="prog" aria-hidden="true"><i style="width:${Math.round(100/total)}%"></i></div></div>
+      <h1>What the law asks of you, from when.</h1>
+      <p class="lede">Answer the same questions the census asks, and Statute builds your feed from government sources only. Nothing you enter leaves this phone.</p>
+      <div class="field"><label for="pc">Your full postcode</label><input id="pc" inputmode="text" autocomplete="postal-code" placeholder="e.g. SL1 1AA" maxlength="8" value="${esc(a.pc||"")}"><span class="lead">Finds your council and ward, and lets street-level notices be sorted by distance from your door. Stored only on this device.</span></div>
+      <div id="pcguess" aria-live="polite"></div>
+      <p class="note">We never ask your religion, ethnicity, national identity, sexual orientation or gender identity. No rule depends on them.</p>
+      <div class="row"><button class="btn" id="next">Continue</button></div>`;
+      const pcIn=o.querySelector("#pc"),pg=o.querySelector("#pcguess");let pcT=null;o._pcHits=[];
+      pcIn.oninput=()=>{clearTimeout(pcT);const v=pcIn.value.trim();a.pc=v;if(v.length<2){pg.innerHTML="";o._pcHits=[];return;}
+        pg.innerHTML=`<div class="confirm"><span class="lead">Looking up ${esc(v.toUpperCase())}…</span></div>`;
+        pcT=setTimeout(async()=>{const hits=await lookupCouncils(v);if(pcIn.value.trim()!==v)return;o._pcHits=hits;
+          pg.innerHTML=hits.length===1?`<div class="confirm"><span class="lead">Your council</span><div class="big">${esc(hits[0].n)}</div><span class="lead">${esc(hits[0].r)} · ${esc(hits[0].nat)}${hits[0].ward?" · "+esc(hits[0].ward)+" ward":""}</span></div>`
+          :hits.length>1?`<div class="confirm"><span class="lead">${esc(v.toUpperCase())} covers ${hits.length} councils: ${hits.map(h=>esc(h.n)).join(", ")}. Add the rest of your postcode, or choose at the end.</span></div>`
+          :`<div class="confirm"><span class="lead">We can't find that postcode. Check it, or pick your council at the end.</span></div>`;},350);};
+      if(a.pc)pcIn.oninput();
+      o.querySelector("#next").onclick=()=>{step=1;draw();};
+    } else {
+      const S=CENSUS[step-1];
+      o.innerHTML=`<div class="onbhead"><span class="lead">Step ${step+1} of ${total} · ${esc(S.t)}</span><div class="prog" aria-hidden="true"><i style="width:${Math.round((step+1)/total*100)}%"></i></div></div>
+      <h1>${esc(S.t)}.</h1>${S.ref?`<p class="lede">${esc(S.ref)}. Each answer shows the rules it switches on.</p>`:""}
+      ${S.q.filter(q=>!q.when||q.when(a)).map(q=>{
+        if(q.month)return `<div class="field"><label for="q_${q.k}">${esc(q.t)}</label><input id="q_${q.k}" type="month" min="2010-01" value="${esc(a[q.k]||"")}">${q.hint?`<span class="lead">${esc(q.hint)}</span>`:""}</div>`;
+        if(q.num)return `<div class="field"><label for="q_${q.k}">${esc(q.t)}</label><input id="q_${q.k}" type="number" inputmode="decimal" step="50" placeholder="e.g. 2400" value="${a[q.k]||""}">${q.hint?`<span class="lead">${esc(q.hint)}</span>`:""}</div>`;
+        if(q.occ)return `<div class="field"><label for="occ">${esc(q.t)}</label><input id="occ" placeholder="Type a job, e.g. plumber, bus driver, car sales" autocomplete="off" value="${esc(a.jobtitle||"")}"><div id="occlist"></div><input type="hidden" id="role" value="${esc(a.role||"none")}"><span class="lead">${esc(q.hint||"")}${a.role&&a.role!=="none"&&ROLES[a.role]?" Now: "+esc(ROLES[a.role].title):""}</span></div>`;
+        return `<fieldset class="cq"><legend>${esc(q.t)}${q.one?"":" <span class=\"lead\">Tick all that apply</span>"}</legend>${q.o.map(([v,l,r])=>{const on=q.one?a[q.k]===v:(a[q.k]||[]).includes(v);return `<label class="copt ${on?"on":""}"><input type="${q.one?"radio":"checkbox"}" name="q_${q.k}" value="${v}" ${on?"checked":""}><span class="l">${esc(l)}</span>${r?`<span class="r">${esc(r)}</span>`:""}</label>`;}).join("")}</fieldset>`;
+      }).join("")}
+      <div class="row"><button class="btn ghost" id="prev">Back</button><button class="btn" id="next">${step===total-1?"Build my feed":"Continue"}</button></div>
+      <p class="note">Nothing here is sent anywhere. You can change all of this later under Settings.</p>`;
+      o.querySelectorAll(".cq").forEach(fs=>{const k=fs.querySelector("input").name.slice(2);const q=S.q.find(x=>x.k===k);
+        fs.querySelectorAll("input").forEach(i=>i.onchange=()=>{if(q.one)a[k]=i.value;else a[k]=[...fs.querySelectorAll("input:checked")].map(x=>x.value);fs.querySelectorAll(".copt").forEach(l=>l.classList.toggle("on",l.querySelector("input").checked));
+          if(q.k==="status"||q.k==="tenure")draw();});});
+      const occ=o.querySelector("#occ");if(occ){bindOcc(o);o.querySelector("#role").onchange=()=>{a.role=o.querySelector("#role").value;a.jobtitle=occ.value;};occ.addEventListener("input",()=>{a.jobtitle=occ.value;});}
+      const ar=o.querySelector("#q_arrived");if(ar)ar.onchange=()=>a.arrived=ar.value;const inc=o.querySelector("#q_income");if(inc)inc.onchange=()=>a.income=+inc.value||0;
+      o.querySelector("#prev").onclick=()=>{step--;draw();window.scrollTo(0,0);};
+      o.querySelector("#next").onclick=()=>{if(step<total-1){step++;draw();window.scrollTo(0,0);return;}finish();};
+    }
+    const h=o.querySelector("h1");if(h){h.setAttribute("tabindex","-1");h.focus({preventScroll:true});}
   };
+  const finish=()=>{
+    const pc=(a.pc||"").trim().toUpperCase();const hits=o._pcHits||[];const g=hits.length===1?hits[0]:(prefill&&profile?{n:profile.council,r:profile.region,nat:profile.nation,lat:profile.lat,lng:profile.lng,pcfull:profile.pcfull,ward:profile.ward}:null);
+    const sits=sitsFromCensus(a);const interests=[...new Set(sits.filter(x=>INT_LABEL[x]))];
+    confirmCouncil(g,pc,c=>{
+      const keep=prefill&&profile?profile:{asis:[],muted:[],radius:1};
+      profile=Object.assign({},keep,{postcode:pc.split(" ")[0]||pc,pcfull:c.pcfull||null,lat:c.lat||null,lng:c.lng||null,ward:c.ward||null,council:c.n,region:c.r,nation:c.nat,
+        arrived:a.arrived||null,sits:sits.filter(s=>!INT_LABEL[s]),interests,role:a.role||"none",mode:a.mode||"keep",income:a.income||keep.income||0,census:a,radius:keep.radius||1});
+      register=a.age==="u16"?"kid":"adult";save();o.hidden=true;renderAll();show("today");},hits);
+  };
+  draw();
 }
 function confirmCouncil(g,pc,cb,hits){
   const o=document.getElementById("onb");o.hidden=false;
@@ -1410,18 +1513,18 @@ function renderToday(){
   h+=`<div class="chips" role="group" aria-label="Show"><button data-f="all" aria-pressed="${todayFilter==="all"}">Everything</button><button data-f="law" aria-pressed="${todayFilter==="law"}">⚖️ Law only</button><button data-f="act" aria-pressed="${todayFilter==="act"}">❗ Needs action</button><button data-f="update" aria-pressed="${todayFilter==="update"}">📰 Just updates</button></div>`;
   const pass=it=>todayFilter==="all"||(todayFilter==="law"&&it.kind==="law")||(todayFilter==="act"&&tierFor(it).tier==="must")||(todayFilter==="update"&&["update","rates","consult","alert"].includes(it.kind));
   for(const L of LEVELS){
-    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&((daysTo(it.date)<=0&&daysTo(it.date)>-30)||(it.kind==='consult'&&daysTo(it.date)>0)||(it.level==="local"&&daysTo(it.date)>0&&daysTo(it.date)<=30))).sort((a,b)=>new Date(b.date)-new Date(a.date));
-    h+=`<div class="band"><div class="band-head"><span class="lvl">${esc(L.lbl(profile))} <button class="btn ghost sm" data-map="${L.k}" style="margin-left:8px;padding:2px 10px;font-size:13px">Map</button></span><span class="cad">${L.cad}</span></div>`;
+    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&((daysTo(it.date)<=0&&daysTo(it.date)>-30)||(it.kind==='consult'&&daysTo(it.date)>0)||(it.level==="local"&&daysTo(it.date)>0&&daysTo(it.date)<=30))).sort((a,b)=>{if(L.k==="local"){const da=milesTo(a),db=milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
+    h+=`<div class="band"><div class="band-head"><span class="lvl">${esc(L.lbl(profile))} <button class="btn ghost sm" data-map="${L.k}" style="margin-left:8px;padding:2px 10px;font-size:13px">Map</button></span><span class="cad">${L.k==="local"&&profile.lat!=null?`within ${profile.radius||1} mi of ${esc(profile.pcfull||profile.postcode)}`:L.cad}</span></div>`;
     if(!items.length){
       const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)).sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
       h+=`<div class="allclear"><span class="tick" aria-hidden="true">✓</span><div>Nothing new. ${typeof L.why==="function"?L.why(profile):L.why}${last?` Last change: <a href="#" data-id="${last.id}" class="lnk">${esc(last.title)}</a>, ${fmt(last.date)}.`:""}</div></div>`;
-    } else h+=items.map(it=>it.council&&it.council!==profile.council?card(it).replace('<div class="meta">',`<div class="meta"><span class="lead">${esc(it.council)}</span>`):card(it)).join("");
+    } else h+=items.map(it=>{let c=card(it);if(it.council&&it.council!==profile.council)c=c.replace('<div class="meta">',`<div class="meta"><span class="lead">${esc(it.council)}</span>`);const nl=L.k==="local"?nearLabel(it):"";if(nl)c=c.replace('<span class="when">',`<span class="pill near">📍 ${esc(nl)}</span><span class="when">`);return c;}).join("");
     h+=`</div>`;
   }
   h+=`<h2>Something to sort out</h2><button class="card notice" id="nuis" style="border-left-color:var(--purple)"><div class="meta"><span class="pill kind guidance">Guidance</span><span class="lead">Which body, under what law</span></div><p class="ttl">${esc(NUISANCE.t)}</p><p class="sum">Seven routes, from a council abatement notice to the magistrates' court. Contact buttons on each.</p></button>`;
   if(saved.length)h+=`<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="opensaved">🔖 Saved (${saved.length})</button></div>`;
   h+=`<p class="lead" style="margin:14px 0 0">Every item carries two labels: what it is, and what it asks of you. <a href="#" id="leg">Open the legend</a> for every label and abbreviation.</p>`;
-  h+=`<p class="mantra">${esc(mantra())}</p><p class="note">Feed ${window.FEED_META?"built "+new Date(window.FEED_META.generated).toLocaleString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"})+", "+window.FEED_META.added+" live items":"not loaded; showing sample data"}. Local sources are illustrative in this prototype.</p>`;
+  const fh=feedHealth();h+=`<p class="mantra">${esc(mantra())}</p><p class="note"><span class="dot ${fh.cls}"></span>${esc(fh.txt)}${fh.bad&&fh.bad.length?": "+esc(fh.bad.map(s=>s.name).join(", ")):""}. <a href="./status.html" target="_blank" rel="noopener">Status page ↗</a></p>`;
   s.innerHTML=h;bindCards(s);bindBrief(s);
   s.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{todayFilter=b.dataset.f;renderToday();});
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
@@ -1495,7 +1598,7 @@ function bindFollow(root){root.querySelectorAll("[data-follow]").forEach(b=>b.on
 
 // ---------- Catch up ----------
 let catOpen=null;
-const SIT_ICON={driver:"🚗",passenger:"🚌",vaper:"🚬",employee:"💼",selfemp:"🧾",tenant:"🏠",owner:"🏡",landlord:"🔑",parent_infant:"🍼",parent_child:"🎒",dog:"🐕",benefits:"💷",newcomer:"🛬",tv:"📺",drone:"🛸",fishing:"🎣",escooter:"🛴",detect:"🧭",cycle:"🚲",boat:"⛵"};
+const SIT_ICON={...SIT_ICON_X,driver:"🚗",passenger:"🚌",vaper:"🚬",employee:"💼",selfemp:"🧾",tenant:"🏠",owner:"🏡",landlord:"🔑",parent_infant:"🍼",parent_child:"🎒",dog:"🐕",benefits:"💷",newcomer:"🛬",tv:"📺",drone:"🛸",fishing:"🎣",escooter:"🛴",detect:"🧭",cycle:"🚲",boat:"⛵"};
 function renderCatchup(){
   const s=document.getElementById("s-catchup");
   const keys=Object.keys(SYLLABUS).filter(k=>has(k));
@@ -1528,27 +1631,39 @@ function renderMe(){
   s.innerHTML=`<h1>Settings.</h1><p class="lede">Facts, not preferences. Change these when life changes and the feed changes with it. Everything here stays on this device.</p>
   <div class="setnav">${[["where","Where you live"],["work","Work & situations"],["reading","Reading"],["topics","Topics"],["deep","Go deep"],["gov","Mini government"],["data","Your data"]].map(([k,l])=>`<a href="#${k}">${l}</a>`).join("")}</div>
   ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div></div>
+  <div class="field"><label>Your street</label><div>${profile.lat!=null?`${esc(profile.pcfull||profile.postcode)}${profile.ward?" · "+esc(profile.ward)+" ward":""}<span class="lead" style="display:block">Street-level notices are matched on this device against your full postcode. It never leaves the phone.</span>`:`<span class="lead">Add your full postcode (Change council) to see notices by distance from your door.</span>`}</div>
+  <div class="chips" role="group" aria-label="Near you" style="margin-top:8px">${[0.5,1,2,5].map(r=>`<button data-rad="${r}" aria-pressed="${(profile.radius||1)===r}">${r} mi</button>`).join("")}</div></div>
   <div class="field"><label>Scope</label><div>England<span class="lead" style="display:block">Scotland, Wales and Northern Ireland follow once the England feeds are solid.</span></div></div>`)}
-  ${sec("work","Work & situations","Tick everything that's true. Each one carries its own rules.",`<div class="field"><label for="occ">Your work</label><div class="lead" style="margin-bottom:4px">Now: <b>${esc(ROLES[profile.role||"none"].title)}</b></div><input id="occ" placeholder="Change: type a job" autocomplete="off"><div id="occlist"></div><input type="hidden" id="role" value="${profile.role||"none"}"></div>
+  ${sec("work","Work & situations","Built from your census-style answers. Tick or untick anything; each one carries its own rules.",`<div class="row" style="margin:0 0 10px"><button class="btn ghost sm" id="editcensus">Edit your answers</button></div><div class="field"><label for="occ">Your work</label><div class="lead" style="margin-bottom:4px">Now: <b>${esc(ROLES[profile.role||"none"].title)}</b></div><input id="occ" placeholder="Change: type a job" autocomplete="off"><div id="occlist"></div><input type="hidden" id="role" value="${profile.role||"none"}"></div>
   <div class="chkgrid">${SITS.map(([k,l])=>`<label class="chk"><input type="checkbox" value="${k}" ${has(k)?"checked":""}>${SIT_ICON[k]||""} ${l}</label>`).join("")}</div>
   <h3>Interests</h3><div class="chkgrid">${INTERESTS.map(([k,l])=>`<label class="chk"><input type="checkbox" data-int value="${k}" ${(profile.interests||[]).includes(k)?"checked":""}>${SIT_ICON[k]||""} ${l}</label>`).join("")}</div>`)}
-  ${sec("reading","Reading","",`<div class="field"><label>Who's reading</label><div class="seg" role="group"><button data-r="adult" aria-pressed="${register==="adult"}">Adult</button><button data-r="kid" aria-pressed="${register==="kid"}">Under 16</button></div></div>
-  <div class="field"><label>What you want from this</label><div class="modes">${Object.entries(MODES).map(([k,m])=>`<button data-mode="${k}" aria-pressed="${profile.mode===k}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div></div>`)}
+  ${sec("reading","Reading","",`<div class="field"><label>What you want from this</label><div class="modes">${Object.entries(MODES).map(([k,m])=>`<button data-mode="${k}" aria-pressed="${profile.mode===k}"><b>${m.t}</b><span class="lead">${m.d}</span></button>`).join("")}</div></div>`)}
   ${sec("topics","Topics","All topics are on by default. Anything that places a duty on you gets through regardless of what you mute.",`<div class="field"><div>${Object.keys(TOPIC).length-muted().length} of ${Object.keys(TOPIC).length} on</div><button class="btn ghost sm" id="mtop" style="margin-top:8px">Choose what to mute</button></div>`)}
   ${sec("deep","Go deep","Choose up to three areas of specific interest. Each adds reading time on top of your general updates, so the cost is shown before you pick.",`<div id="asipick">${asiPickerHTML({openable:true})}</div>`)}
   ${sec("gov","You, as a mini government","Your take-home against the UK budget's proportions. A lens, not advice. The figure never leaves this device.",`<div class="field"><label for="inc">Your monthly take-home, £</label><input id="inc" type="number" inputmode="decimal" value="${profile.income||""}" placeholder="e.g. 2400" step="50"></div><button class="btn ghost sm" id="budget">Open the mirror</button>`)}
+  ${sec("access","Accessibility","Everything here applies at once and is remembered on this device.",`<div class="field"><label>Text size</label><div class="seg" role="group" aria-label="Text size">${[[0.9,"A−"],[1,"A"],[1.2,"A+"],[1.45,"A++"]].map(([v,l])=>`<button data-size="${v}" aria-pressed="${a11y.size===v}">${l}</button>`).join("")}</div></div>
+  <div class="field"><label>Colours</label><div class="seg" role="group" aria-label="Theme">${[["auto","Match phone"],["light","Light"],["dark","Dark"]].map(([v,l])=>`<button data-theme="${v}" aria-pressed="${a11y.theme===v}">${l}</button>`).join("")}</div> <div class="seg" role="group" aria-label="Contrast" style="margin-top:6px">${[["auto","Normal contrast"],["high","High contrast"]].map(([v,l])=>`<button data-contrast="${v}" aria-pressed="${a11y.contrast===v}">${l}</button>`).join("")}</div></div>
+  <div class="field"><label>Motion</label><div class="seg" role="group" aria-label="Motion">${[["auto","Match phone"],["reduce","Reduce motion"]].map(([v,l])=>`<button data-motion="${v}" aria-pressed="${a11y.motion===v}">${l}</button>`).join("")}</div><span class="lead">Turns off confetti and sliding; the timeline still works by tapping.</span></div>
+  <div class="field"><label>Wording</label><div class="seg" role="group" aria-label="Wording"><button data-r="adult" aria-pressed="${register==="adult"}">Standard</button><button data-r="kid" aria-pressed="${register==="kid"}">Simpler words</button></div><span class="lead">Simpler words is the under-16 version: shorter sentences, no jargon, same facts.</span></div>
+  <p class="lead">Also built in: every screen works with a keyboard or game controller (arrows, Enter, Escape, [ and ] for tabs), every item can be read aloud with Listen, the font is Atkinson Hyperlegible, and every abbreviation is tappable.</p>`)}
   ${sec("data","Your data","",`<p style="font-size:15px">Only here, on this device. The feed is public and the same for everyone; your phone does the matching. Nothing about you is sent to a server, so there is no account, no profile held by anyone else, and nothing to request or delete. The app never asks for religion, ethnicity or sexual orientation because no obligation depends on them.</p>
-  <h3>Sources</h3><div class="tw"><table><tr><th>Source</th><th>Used for</th></tr><tr><td>legislation.gov.uk</td><td>Acts, regulations, extent, commencement, explanatory notes.</td></tr><tr><td>bills.parliament.uk</td><td>Bills in progress, stages, amendments.</td></tr><tr><td>GOV.UK</td><td>Guidance, rate tables, alerts and announcements.</td></tr><tr><td>Your council</td><td>Traffic and protection orders, byelaws, licensing. Public Notice Portal.</td></tr><tr><td>postcodes.io</td><td>ONS Postcode Directory, to find your council from a postcode.</td></tr></table></div>
+  <h3>Sources</h3><p class="lead">${esc(feedHealth().txt)}. <a href="./status.html" target="_blank" rel="noopener">Full status page ↗</a></p><div class="tw"><table><tr><th>Source</th><th>Status</th><th>Licence</th></tr>${(window.FEED_META&&window.FEED_META.sources||[]).map(s=>`<tr><td>${esc(s.name)}<span class="lead" style="display:block">${esc((s.url||"").replace(/^https?:\/\//,""))}</span></td><td><span class="dot ${s.ok?"ok":"warn"}"></span>${s.ok?"OK · "+(s.count||0)+" items":"Failing"}${s.error?`<span class="lead" style="display:block">${esc(s.error).slice(0,80)}</span>`:""}</td><td class="lead">${esc(s.licence||"")}</td></tr>`).join("")}<tr><td>postcodes.io<span class="lead" style="display:block">on this device</span></td><td><span class="dot ok"></span>Council and street lookup</td><td class="lead">OGL v3</td></tr></table></div>
   <div class="row" style="margin-top:12px"><button class="btn ghost" id="reset">Start again</button></div>`)}`;
   s.querySelectorAll("input[type=checkbox]:not([data-int])").forEach(i=>i.onchange=()=>{profile.sits=[...s.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(x=>x.value);save();renderAll();});
   s.querySelectorAll("input[data-int]").forEach(i=>i.onchange=()=>{profile.interests=[...s.querySelectorAll("input[data-int]:checked")].map(x=>x.value);save();renderAll();});
   s.querySelectorAll(".seg button").forEach(b=>b.onclick=()=>{register=b.dataset.r;save();renderAll();});
   s.querySelectorAll(".modes button").forEach(b=>b.onclick=()=>{profile.mode=b.dataset.mode;save();renderAll();});
+  s.querySelectorAll("[data-rad]").forEach(b=>b.onclick=()=>{profile.radius=+b.dataset.rad;save();renderAll();});
+  s.querySelectorAll("[data-size]").forEach(b=>b.onclick=()=>{a11y.size=+b.dataset.size;applyA11y();renderMe();});
+  s.querySelectorAll("[data-theme]").forEach(b=>b.onclick=()=>{a11y.theme=b.dataset.theme;applyA11y();renderMe();});
+  s.querySelectorAll("[data-contrast]").forEach(b=>b.onclick=()=>{a11y.contrast=b.dataset.contrast;applyA11y();renderMe();});
+  s.querySelectorAll("[data-motion]").forEach(b=>b.onclick=()=>{a11y.motion=b.dataset.motion;applyA11y();renderMe();});
   s.querySelector("#mtop").onclick=renderTopics;s.querySelector("#omap").onclick=renderMap;s.querySelector("#budget").onclick=renderBudget;
   s.querySelector("#inc").onchange=e=>{profile.income=+e.target.value||0;save();};
   const refreshPick=()=>{s.querySelector("#asipick").innerHTML=asiPickerHTML({openable:true});bindAsiPick(s,refreshPick);renderToday();};bindAsiPick(s,refreshPick);
   bindOcc(s);s.querySelector("#role").onchange=()=>{profile.role=s.querySelector("#role").value;save();renderAll();};
-  s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;save();document.getElementById("onb").hidden=true;renderAll();show("me");});
+  s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;if(c.lat){profile.lat=c.lat;profile.lng=c.lng;profile.pcfull=c.pcfull||null;profile.ward=c.ward||null;}save();document.getElementById("onb").hidden=true;renderAll();show("me");});
+  s.querySelector("#editcensus").onclick=()=>renderOnb(true);
   s.querySelector("#reset").onclick=()=>{if(!confirm("Clear everything on this device and start again?"))return;profile=null;done={};quizDone={};game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};try{localStorage.clear()}catch(e){}renderOnb();};
   s.querySelectorAll(".setnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=s.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});
 }
@@ -1911,7 +2026,10 @@ function show(t){
   document.querySelectorAll(".screen").forEach(s=>s.classList.toggle("active",s.id==="s-"+t));
   document.querySelectorAll("nav.tabs button").forEach(b=>{if(b.dataset.t===t)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");});
   window.scrollTo(0,0);
+  const h=document.querySelector(".screen.active h1");if(h&&!padActive()){h.setAttribute("tabindex","-1");h.focus({preventScroll:true});}
+  const live=document.getElementById("live");if(live)live.textContent=(h?h.textContent:t);
 }
+function padActive(){return !!document.querySelector(".pad-focus");}
 function bindCards(root){root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined)return;e.preventDefault();renderDetail(c.dataset.id);}));bindTags(root);bindBm(root);}
 function bindTags(root){root.querySelectorAll(".tag").forEach(t=>t.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();renderTopic(t.dataset.tag);}));}
 function renderAll(){renderToday();renderHorizon();renderCatchup();renderPlay();renderMe();renderRank();if(document.querySelector("nav.tabs button[data-t=map][aria-current]"))renderMapTab();}
@@ -1970,7 +2088,8 @@ let actx=null;
 function sfx(kind){try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();const o=actx.createOscillator(),g=actx.createGain();o.connect(g);g.connect(actx.destination);const t=actx.currentTime;
   const seq={ok:[[660,0],[880,.08]],no:[[220,0],[180,.1]],tick:[[880,0]],rank:[[523,0],[659,.1],[784,.2],[1047,.3]],tock:[[440,0]]}[kind]||[[600,0]];
   o.type="triangle";seq.forEach(([f,dt])=>o.frequency.setValueAtTime(f,t+dt));g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+.12+seq.length*.08);o.start(t);o.stop(t+.15+seq.length*.08);}catch(e){}}
-function confetti(){const c=document.getElementById("confetti");if(!c||matchMedia("(prefers-reduced-motion: reduce)").matches)return;c.width=innerWidth;c.height=innerHeight;const x=c.getContext("2d");
+function confetti(){if(reduceMotion())return;return confettiRun.apply(this,arguments);}
+function confettiRun(){const c=document.getElementById("confetti");if(!c||matchMedia("(prefers-reduced-motion: reduce)").matches)return;c.width=innerWidth;c.height=innerHeight;const x=c.getContext("2d");
   const cols=["#00703c","#1d70b8","#f47738","#d4351c","#ffdd00"];const ps=Array.from({length:90},()=>({x:innerWidth/2,y:innerHeight*0.35,vx:(Math.random()-.5)*14,vy:-Math.random()*12-4,c:cols[Math.random()*5|0],r:Math.random()*6+3,a:Math.random()*6}));
   let f=0;(function step(){x.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.45;p.a+=.1;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.6);x.restore();});if(++f<70)requestAnimationFrame(step);else x.clearRect(0,0,c.width,c.height);})();}
 
