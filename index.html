@@ -109,6 +109,9 @@ nav.tabs button{min-height:52px}
 .card .meta .when{margin-left:auto}
 .nolink{font-style:italic}
 .also{margin-top:10px;font-size:14px;border-top:1px dashed var(--paper-3);padding-top:8px}.also>div{padding:2px 0}
+.subgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:6px;margin:6px 0 4px}
+.sub{display:flex;gap:8px;align-items:flex-start;border:1px solid var(--paper-3);border-radius:8px;padding:8px 10px;font-size:14.5px;background:var(--paper)}.sub .ic{font-size:18px;line-height:1.2}.sub.muted{opacity:.7}
+h2 a[data-go]{color:inherit;text-decoration:underline dotted;text-underline-offset:3px}
 .sylgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin:8px 0 12px}
 .syltile{text-align:left;border:1.5px solid var(--paper-3);border-radius:10px;padding:10px 12px;background:var(--paper);cursor:pointer;display:flex;flex-direction:column;gap:2px}
 .syltile[aria-expanded="true"]{border-color:var(--ink)}.syltile.done{border-color:var(--green)}
@@ -292,6 +295,8 @@ nav.tabs button{min-height:52px}
 .dyk .src{font-size:13px;color:var(--slate);margin-top:4px}
 .realmap{height:380px;border-radius:8px;overflow:hidden;background:var(--paper-2);margin:10px 0 8px}
 .realmap .leaflet-container{font-family:inherit}
+.mapmsg{padding:14px;font-size:14px;color:var(--slate)}.mapmsg.over{position:absolute;left:8px;right:8px;bottom:8px;z-index:800;background:var(--paper);border:1.5px solid var(--amber);border-radius:8px}
+.realmap{position:relative}
 .pinhtml{width:28px;height:28px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:grid;place-items:center;font-size:15px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
 .pinhtml.must{border-color:var(--red);background:var(--red-bg)}.pinhtml.affects{border-color:var(--blue);background:var(--blue-bg)}
 .zoomctl{position:absolute;right:8px;top:8px;display:flex;flex-direction:column;gap:4px;z-index:2}
@@ -488,9 +493,10 @@ const SITS = [
  // Census-derived (2021 household questionnaire); each carries its own rules
  ["flat","I live in a flat or converted building"],["shared","I share rooms with another household"],["social_tenant","My landlord is the council or a housing association"],["shared_owner","Shared ownership"],["lodger_host","I have lodgers or housemates"],
  ["student","I'm a student"],["second_home","I have a second address"],["disabled","I have a long-term health condition"],["carer","I care for someone"],["veteran","I served in the Armed Forces"],
- ["jobseeker","I'm looking for work"],["retired","I'm retired"],["leave","I'm on maternity or paternity leave"],["manager","I supervise other people at work"],["homeworker","I mainly work from home"],["gas","My home uses mains gas"],["oil","My home uses oil or bottled gas"],["heatnet","My home is on a heat network"]
+ ["jobseeker","I'm looking for work"],["retired","I'm retired"],["leave","I'm on maternity or paternity leave"],["manager","I supervise other people at work"],["homeworker","I mainly work from home"],["gas","My home uses mains gas"],["oil","My home uses oil or bottled gas"],["heatnet","My home is on a heat network"],
+ ["with_elders","I live with my parents or grandparents"],["multi_adult","Other adults live with me"],["foster","I foster"]
 ];
-const SIT_ICON_X={flat:"🏢",shared:"🚪",social_tenant:"🏘️",shared_owner:"🔑",lodger_host:"🛏️",student:"📚",second_home:"🏠",disabled:"♿",carer:"🤝",veteran:"🎖️",jobseeker:"🔎",retired:"🧓",leave:"🍼",manager:"👔",homeworker:"💻",gas:"🔥",oil:"🛢️",heatnet:"♨️"};
+const SIT_ICON_X={with_elders:"👵",multi_adult:"👥",foster:"🧒",flat:"🏢",shared:"🚪",social_tenant:"🏘️",shared_owner:"🔑",lodger_host:"🛏️",student:"📚",second_home:"🏠",disabled:"♿",carer:"🤝",veteran:"🎖️",jobseeker:"🔎",retired:"🧓",leave:"🍼",manager:"👔",homeworker:"💻",gas:"🔥",oil:"🛢️",heatnet:"♨️"};
 const INTERESTS=[["tv","I watch TV or BBC iPlayer"],["drone","I fly a drone or model aircraft"],["fishing","I fish"],["escooter","I ride an e-scooter or e-bike"],["detect","I metal-detect"],["cycle","I cycle"],["boat","I own a boat or paddleboard"]];
 const INT_LABEL=Object.fromEntries(INTERESTS);
 const SIT_LABEL = Object.fromEntries(SITS);
@@ -1309,6 +1315,29 @@ function renderSaved(){
   s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button></div><h1>Saved.</h1><p class="lede">${its.length?`${its.length} item${its.length>1?"s":""} you've kept to come back to. Stored on this device only.`:"Nothing saved yet. Tap 🔖 on any item to keep it here."}</p>${its.map(card).join("")}`;
   s.querySelector("#back").onclick=()=>show(prevTab);bindCards(s);show("detail");history.replaceState(null,"","#saved");window.scrollTo(0,0);
 }
+// ---------- What you're signed up to ----------
+function renderSubs(){
+  const s=document.getElementById("s-detail");profile.asis=profile.asis||[];const mu=muted();const allT=Object.keys(TOPIC);
+  const sits=(profile.sits||[]).map(k=>[k,SIT_LABEL[k]||k]);const ints=(profile.interests||[]).map(k=>[k,INT_LABEL[k]||k]);
+  const areas=profile.asis.map(id=>ASIS.find(a=>a.id===id)).filter(Boolean);
+  const fol=(followed()||[]).map(id=>{try{return EVENTS.find(e=>e.id===id);}catch(e){return null;}}).filter(Boolean);
+  const M=mapFor(profile.council);const nbs=(M.neighbours||[]).filter(nb=>nbMode(nb.n)!=="off");
+  const grid=(rows,empty)=>rows.length?`<div class="subgrid">${rows.map(([k,l,ic])=>`<div class="sub"><span class="ic">${ic||SIT_ICON[k]||"•"}</span><span>${esc(l)}</span></div>`).join("")}</div>`:`<p class="lead">${empty}</p>`;
+  s.innerHTML=`<div class="detail-head"><button class="back" id="back">‹ Back</button><button class="bm" id="toset">Change in Settings</button></div>
+  <h1>What you're signed up to.</h1><p class="lede">Everything the feed is built from, in one place. Tap a section heading to change it.</p>
+  <h2><a href="#where" data-go="where">Where</a></h2><div class="subgrid"><div class="sub"><span class="ic">🏛️</span><span>${esc(profile.council)}${profile.ward?" · "+esc(profile.ward)+" ward":""}</span></div><div class="sub"><span class="ic">📍</span><span>${profile.lat!=null?`Street notices within ${profile.radius||1} mi of ${esc(profile.pcfull||profile.postcode)}`:"No full postcode: council-wide notices"}</span></div>${nbs.map(nb=>`<div class="sub"><span class="ic">🗺️</span><span>${esc(nb.n)} · ${nbMode(nb.n)==="full"?"full updates":"on the map"}</span></div>`).join("")}</div>
+  <h2><a href="#work" data-go="work">Situations (${sits.length})</a></h2>${grid(sits,"None yet. Answer the census-style questions under Settings.")}
+  <h2><a href="#work" data-go="work">Interests (${ints.length})</a></h2>${grid(ints,"None ticked.")}
+  <h2><a href="#deep" data-go="deep">Going deep (${areas.length} of 3)</a></h2>${grid(areas.map(a=>[a.id,a.t+" · +"+asiCost(a)+" min/wk","🔎"]),"No areas chosen.")}
+  <h2>Events you follow (${fol.length})</h2>${grid(fol.map(e=>[e.id,e.t+" · "+fmt(e.date),"📅"]),"Nothing followed. Follow any date on Horizon.")}
+  <h2><a href="#topics" data-go="topics">Topics</a></h2><p class="lead">${allT.length-mu.length} of ${allT.length} on. Anything that places a duty on you gets through regardless.</p>${mu.length?`<div class="subgrid">${mu.map(t=>`<div class="sub muted"><span class="ic">🔕</span><span>${esc((TOPIC[t]||{}).t||t)}</span></div>`).join("")}</div>`:""}
+  <h2>Delivery</h2><div class="subgrid"><div class="sub"><span class="ic">${a11y.size>1?"🔍":"🔤"}</span><span>Text ${Math.round(a11y.size*100)}% · ${register==="kid"?"simpler words":"standard wording"}</span></div><div class="sub"><span class="ic">📰</span><span>${esc((MODES[profile.mode||"keep"]||{}).t||"")}</span></div><div class="sub"><span class="ic">💷</span><span>${profile.income?"Mini government set":"Mini government not set"}</span></div></div>
+  <p class="note">All of this lives on this device. Nothing is sent to a server; there's no account.</p>`;
+  const goSet=k=>{show("me");const t=document.getElementById(k);if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
+  s.querySelector("#back").onclick=()=>show(prevTab);s.querySelector("#toset").onclick=()=>goSet("where");
+  s.querySelectorAll("[data-go]").forEach(a=>a.onclick=e=>{e.preventDefault();goSet(a.dataset.go);});
+  show("detail");history.replaceState(null,"","#subs");window.scrollTo(0,0);
+}
 // ---------- Share ----------
 function openSheet(title,opts){const sh=document.getElementById("sheet");sh.hidden=false;document.getElementById("sheet-t").textContent=title;document.getElementById("sheet-b").innerHTML=opts.map((o,i)=>`<button class="opt" data-i="${i}">${o.t}<span class="lead">${o.d||""}</span></button>`).join("");sh.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{sh.hidden=true;opts[+b.dataset.i].go();});document.getElementById("sheet-x").onclick=()=>sh.hidden=true;sh.onclick=e=>{if(e.target===sh)sh.hidden=true;};}
 function pageTitle(){const d=document.querySelector(".screen.active h1");return (d?d.textContent.replace(/\.$/,""):"Statute");}
@@ -1365,7 +1394,7 @@ const CENSUS=[
   {k:"heat",t:"What type of heating does this accommodation have?",o:[["gas","Mains gas","Gas safety checks; price cap"],["elec","Electric","Price cap; Economy 7"],["oil","Oil, tank or bottled gas","Oil storage rules; no price cap"],["wood","Wood or solid fuel","Smoke control areas; Ready to Burn"],["renew","Heat pump or solar","Boiler Upgrade Scheme; planning rules"],["net","District or communal heat network","Heat network regulation (Energy Act 2023)"],["none","No central heating","Cold-weather payments; decent homes standard"]]}
  ]},
  {id:"who",t:"Who usually lives here",ref:"Census H1, H2, H14",q:[
-  {k:"people",t:"Who usually lives here with you?",o:[["partner","A partner","Marriage allowance; next of kin"],["baby","A baby under 1","Registration; child benefit; vaccinations"],["child","Children aged 1 to 17","School admissions; child benefit"],["student","Students who live here in term time","Council tax disregard"],["lodger","Housemates, tenants or lodgers","Rent a Room; HMO rules; right to rent checks"],["forces","Someone in the Armed Forces","Armed Forces Covenant"],["alone","No one, I live alone","Single person council tax discount"]]},
+  {k:"people",t:"Who usually lives here with you?",o:[["partner","Husband, wife, civil partner or partner","Marriage allowance; next of kin; joint liability for council tax"],["baby","A baby under 1","Birth registration; child benefit; vaccinations"],["child","Children aged 1 to 17","School admissions; child benefit; council tax disregard at 16–17 in education"],["adultchild","Adult children (18+)","Non-dependant deductions from benefits; no single-person discount"],["parent","Mother, father, stepmother or stepfather","Carer's rights if you help them; Attendance Allowance; council tax if they're 'severely mentally impaired'"],["grand","Grandparent or grandchild","Kinship care; specified adult childcare credits; Pension Credit"],["sibling","Brother or sister (including half or step)","Joint tenancy or council tax liability"],["relative","Other relatives","Non-dependant deductions; carer links"],["student","Students who live here in term time","Council tax disregard"],["lodger","Housemates, friends, tenants or lodgers","Rent a Room; HMO rules; right to rent checks"],["forces","Someone in the Armed Forces","Armed Forces Covenant"],["foster","A foster child","Fostering allowances; Qualifying Care Relief"],["alone","No one, I live alone","Single person council tax discount"]]},
   {k:"cars",t:"How many cars or vans are owned, or available for use, by your household?",one:true,o:[["0","None","Public transport; e-scooter rules"],["1","1","VED, MOT, insurance, clean-air zones"],["2","2","As 1; parking permits"],["3","3 or more","As 1; parking permits"]]}
  ]},
  {id:"you",t:"About you",ref:"Census 2, 6, 8, 11, 22–24, 32",q:[
@@ -1399,6 +1428,7 @@ function sitsFromCensus(a){const s=new Set();const has=(k,v)=>Array.isArray(a[k]
   if(a.landlord==="social"||a.landlord==="council")s.add("social_tenant");
   if(has("heat","gas"))s.add("gas");if(has("heat","oil"))s.add("oil");if(has("heat","net"))s.add("heatnet");
   if(has("people","baby"))s.add("parent_infant");if(has("people","child"))s.add("parent_child");if(has("people","lodger"))s.add("lodger_host");
+  if(has("people","parent")||has("people","grand"))s.add("with_elders");if(has("people","adultchild")||has("people","relative")||has("people","sibling"))s.add("multi_adult");if(has("people","foster"))s.add("foster");
   if(a.cars&&a.cars!=="0")s.add("driver");if(a.travel==="car")s.add("driver");if(a.travel==="pt"||a.travel==="pass")s.add("passenger");if(a.travel==="bike")s.add("cycle");
   if(a.second==="yes")s.add("second_home");if(a.student==="yes"||has("status","studying"))s.add("student");
   if(a.health==="little"||a.health==="lot")s.add("disabled");if(a.care==="some"||a.care==="full")s.add("carer");if(a.forces==="yes")s.add("veteran");
@@ -1522,14 +1552,14 @@ function renderToday(){
     h+=`</div>`;
   }
   h+=`<h2>Something to sort out</h2><button class="card notice" id="nuis" style="border-left-color:var(--purple)"><div class="meta"><span class="pill kind guidance">Guidance</span><span class="lead">Which body, under what law</span></div><p class="ttl">${esc(NUISANCE.t)}</p><p class="sum">Seven routes, from a council abatement notice to the magistrates' court. Contact buttons on each.</p></button>`;
-  if(saved.length)h+=`<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="opensaved">🔖 Saved (${saved.length})</button></div>`;
+  h+=`<div class="row" style="margin:0 0 12px"><button class="btn ghost sm" id="opensubs">📋 Signed up to: ${(profile.sits||[]).length} situations · ${(profile.asis||[]).length} areas · ${(followed()||[]).length} events</button>${saved.length?`<button class="btn ghost sm" id="opensaved">🔖 Saved (${saved.length})</button>`:""}</div>`;
   h+=`<p class="lead" style="margin:14px 0 0">Every item carries two labels: what it is, and what it asks of you. <a href="#" id="leg">Open the legend</a> for every label and abbreviation.</p>`;
   const fh=feedHealth();h+=`<p class="mantra">${esc(mantra())}</p><p class="note"><span class="dot ${fh.cls}"></span>${esc(fh.txt)}${fh.bad&&fh.bad.length?": "+esc(fh.bad.map(s=>s.name).join(", ")):""}. <a href="./status.html" target="_blank" rel="noopener">Status page ↗</a></p>`;
   s.innerHTML=h;bindCards(s);bindBrief(s);
   s.querySelectorAll(".chips button").forEach(b=>b.onclick=()=>{todayFilter=b.dataset.f;renderToday();});
   s.querySelectorAll("[data-session]").forEach(b=>b.onclick=()=>renderSession(+b.dataset.session));
   s.querySelector("#brief").onclick=briefing;
-  s.querySelector("#nuis").onclick=renderNuisance;const os=s.querySelector("#opensaved");if(os)os.onclick=renderSaved;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
+  s.querySelector("#nuis").onclick=renderNuisance;const os=s.querySelector("#opensaved");if(os)os.onclick=renderSaved;s.querySelector("#opensubs").onclick=renderSubs;s.querySelector("#leg").onclick=e=>{e.preventDefault();renderLegend();};
   s.querySelector("#toareas").onclick=e=>{e.preventDefault();show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);};
   s.querySelectorAll(".areas .asi").forEach(b=>b.onclick=()=>renderASI(b.dataset.asi));
   s.querySelectorAll("[data-meas]").forEach(b=>b.onclick=()=>renderMeasure(b.dataset.meas));
@@ -1629,6 +1659,7 @@ function renderMe(){
   const s=document.getElementById("s-me");profile.asis=profile.asis||[];profile.mode=profile.mode||"keep";
   const sec=(id,t,d,body)=>`<section class="set" id="${id}"><h2>${t}</h2>${d?`<p class="lede">${d}</p>`:""}${body}</section>`;
   s.innerHTML=`<h1>Settings.</h1><p class="lede">Facts, not preferences. Change these when life changes and the feed changes with it. Everything here stays on this device.</p>
+  <div class="row" style="margin:0 0 12px"><button class="btn sm" id="subs">📋 What you're signed up to</button></div>
   <div class="setnav">${[["where","Where you live"],["work","Work & situations"],["reading","Reading"],["topics","Topics"],["deep","Go deep"],["gov","Mini government"],["data","Your data"]].map(([k,l])=>`<a href="#${k}">${l}</a>`).join("")}</div>
   ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div></div>
   <div class="field"><label>Your street</label><div>${profile.lat!=null?`${esc(profile.pcfull||profile.postcode)}${profile.ward?" · "+esc(profile.ward)+" ward":""}<span class="lead" style="display:block">Street-level notices are matched on this device against your full postcode. It never leaves the phone.</span>`:`<span class="lead">Add your full postcode (Change council) to see notices by distance from your door.</span>`}</div>
@@ -1663,7 +1694,7 @@ function renderMe(){
   const refreshPick=()=>{s.querySelector("#asipick").innerHTML=asiPickerHTML({openable:true});bindAsiPick(s,refreshPick);renderToday();};bindAsiPick(s,refreshPick);
   bindOcc(s);s.querySelector("#role").onchange=()=>{profile.role=s.querySelector("#role").value;save();renderAll();};
   s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;if(c.lat){profile.lat=c.lat;profile.lng=c.lng;profile.pcfull=c.pcfull||null;profile.ward=c.ward||null;}save();document.getElementById("onb").hidden=true;renderAll();show("me");});
-  s.querySelector("#editcensus").onclick=()=>renderOnb(true);
+  s.querySelector("#editcensus").onclick=()=>renderOnb(true);s.querySelector("#subs").onclick=renderSubs;
   s.querySelector("#reset").onclick=()=>{if(!confirm("Clear everything on this device and start again?"))return;profile=null;done={};quizDone={};game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};try{localStorage.clear()}catch(e){}renderOnb();};
   s.querySelectorAll(".setnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=s.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});
 }
@@ -1938,7 +1969,7 @@ function renderMap(){
   <h2>Where local notices come from</h2><p class="lede" style="margin-bottom:4px">How standard each one is across the UK's 370-odd councils decides how uniform the card can be.</p>
   <div>${LOCAL_SOURCES.map(S=>`<div class="nbrow"><div>${S.ic} <b>${esc(S.l)}</b><span class="lead" style="display:block">${esc(S.who)}</span></div><span class="std ${S.std}">${STD_LABEL[S.std]}</span></div>`).join("")}</div>
   <h2>Neighbouring councils</h2><div>${M.neighbours.map(nb=>`<div class="nbrow"><div>${esc(nb.n)}</div><span class="lead">${nbMode(nb.n)==="off"?"Off":nbMode(nb.n)==="map"?"Map only":"Full updates"}</span></div>`).join("")}</div>`;
-  s.querySelector("#back").onclick=()=>show(prevTab);
+  const bk=s.querySelector("#back");if(bk)bk.onclick=()=>show(prevTab);
   s.querySelectorAll(".nb").forEach(pg=>{const go=()=>{mapSel=mapSel===pg.dataset.nb?null:pg.dataset.nb;again();};pg.onclick=go;pg.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
   bindFollow(s);
   if(MAP_CONFIG.osKey)realMap(s,pins,layerPins,ORDERS.filter(o=>shown.includes(o.council)));
@@ -1968,12 +1999,21 @@ function renderMapTab(){mapTarget="s-map";mapArea==="local"?renderMap():renderZo
 
 // ---------- Real map (Leaflet + OS Maps API) ----------
 let LMAP=null;
+function mapFallback(s,msg){const el=s.querySelector("#realmap");const sch=s.querySelector(".map");if(el)el.innerHTML=`<div class="mapmsg">${esc(msg)}</div>`;if(sch)sch.style.display="";}
 async function realMap(s,pins,layerPins,orders){
-  try{await loadLeaflet();}catch(e){return;}
-  const el=s.querySelector("#realmap");if(!el||!window.L)return;
+  const el=s.querySelector("#realmap");if(!el)return;el.innerHTML=`<div class="mapmsg">Loading the map…</div>`;
+  try{await loadLeaflet();}catch(e){mapFallback(s,"The map library couldn't load (no connection, or cdnjs is blocked). Showing the schematic map instead.");return;}
+  if(!window.L){mapFallback(s,"The map library didn't start. Showing the schematic map instead.");return;}
+  try{
   if(LMAP){LMAP.remove();LMAP=null;}
-  LMAP=L.map(el,{zoomControl:true,attributionControl:true}).setView(MAP_CONFIG.center,MAP_CONFIG.zoom);
-  L.tileLayer(`https://api.os.uk/maps/raster/v1/zxy/${MAP_CONFIG.style}/{z}/{x}/{y}.png?key=${MAP_CONFIG.osKey}`,{maxZoom:20,attribution:"Contains OS data © Crown copyright and database right "+TODAY.getFullYear()}).addTo(LMAP);
+  el.innerHTML="";
+  const centre=(profile&&profile.lat!=null)?[profile.lat,profile.lng]:MAP_CONFIG.center;
+  LMAP=L.map(el,{zoomControl:true,attributionControl:true}).setView(centre,profile&&profile.lat!=null?15:MAP_CONFIG.zoom);
+  let tileErr=0,tileOk=0;
+  const tl=L.tileLayer(`https://api.os.uk/maps/raster/v1/zxy/${MAP_CONFIG.style}/{z}/{x}/{y}.png?key=${MAP_CONFIG.osKey}`,{maxZoom:20,attribution:"Contains OS data © Crown copyright and database right "+TODAY.getFullYear()}).addTo(LMAP);
+  tl.on("tileload",()=>{tileOk++;});
+  tl.on("tileerror",()=>{tileErr++;if(tileErr>=4&&tileOk===0){const n=document.createElement("div");n.className="mapmsg over";n.textContent="Ordnance Survey tiles aren't loading. Usually the API key isn't allowed on this web address, or there's no connection. The pins still work; the schematic map is below.";el.appendChild(n);const sch=s.querySelector(".map");if(sch)sch.style.display="";}});
+  if(profile&&profile.lat!=null){L.circleMarker([profile.lat,profile.lng],{radius:7,color:"#0b0c0c",fillColor:"#ffffff",fillOpacity:1,weight:3}).addTo(LMAP).bindTooltip("Your postcode");if(profile.radius)L.circle([profile.lat,profile.lng],{radius:profile.radius*1609.34,color:"#0b0c0c",weight:1,dashArray:"4 4",fill:false}).addTo(LMAP);}
   // Council boundary: a GeoJSON file in /boundaries/<council>.geojson, cut from ONS Boundary-Line (free). Falls back to nothing.
   try{const r=await fetch("./boundary-"+encodeURIComponent(profile.council.replace(/ /g,"_"))+".geojson");if(r.ok){const gj=await r.json();L.geoJSON(gj,{style:{color:"#0b0c0c",weight:2.5,fill:false}}).addTo(LMAP);}}catch(e){}
   const mk=(ll,cls,ic,title,onclick)=>{const m=L.marker(ll,{icon:L.divIcon({className:"",html:`<div class="pinhtml ${cls}" title="${esc(title)}">${ic}</div>`,iconSize:[28,28],iconAnchor:[14,14]})}).addTo(LMAP);m.on("click",onclick);return m;};
@@ -1988,6 +2028,8 @@ async function realMap(s,pins,layerPins,orders){
     mkq(P.lat?[P.lat,P.lng]:xyToLatLng(P.xy),"",iconFor(P),P.t,()=>{pinSel=i;ordSel=null;again();});});
   LMAP.on("zoomend moveend",drawClusters);drawClusters();
   orders.forEach(o=>{L.polygon(o.poly.split(" ").map(p=>xyToLatLng(p.split(",").map(Number))),{color:o.kind==="s60"?"#d4351c":"#4c2c92",dashArray:"6 4",fillOpacity:.14,weight:2}).addTo(LMAP).on("click",()=>{ordSel=o.id;pinSel=null;again();});});
+  setTimeout(()=>{try{LMAP.invalidateSize();}catch(e){}},200);
+  }catch(e){mapFallback(s,"The map hit an error: "+(e&&e.message||e)+". Showing the schematic map instead.");}
 }
 
 // ---------- Topics ----------
@@ -2162,7 +2204,7 @@ if(profile&&!profile.council)profile=null;
 if(profile){renderAll();}else{renderOnb();}
 function openHash(){const h=decodeURIComponent(location.hash||"");if(!profile)return true;
   if(h.startsWith("#item/")){const id=h.slice(6);const it=ITEMS.find(x=>x.id===id);if(it){renderDetail(id);return true;}return false;}
-  if(h==="#saved"){renderSaved();return true;}if(h==="#legend"){renderLegend();return true;}
+  if(h==="#saved"){renderSaved();return true;}if(h==="#subs"){renderSubs();return true;}if(h==="#legend"){renderLegend();return true;}
   const t=h.slice(1);if(["today","map","horizon","catchup","play","me"].includes(t)){show(t);return true;}return true;}
 let hashPending=!openHash();
 window.addEventListener("hashchange",()=>{if(location.hash.startsWith("#item/")&&!(cur&&"#item/"+encodeURIComponent(cur.id)===location.hash))openHash();});
