@@ -310,6 +310,16 @@ def _fsa_download(authority):
             errors.append(f"{url}: {type(e).__name__} {e}")
     raise RuntimeError("FSA open-data download failed; " + " | ".join(errors))
 
+def _fsa_score(v):
+    """Component scores as whole numbers (the shape the R24 API register used), or None when not published."""
+    try: return int(float(v)) if v not in (None, "") else None
+    except (TypeError, ValueError): return None
+
+def _fsa_snap_key(row):
+    sc = row.get("scores") or {}
+    date = "" if str(row.get("ratingDate") or "").startswith("1901-01-01") else row.get("ratingDate") or ""   # API placeholder = no date
+    return (row.get("rating"), date, tuple(_fsa_score(sc.get(k)) for k in ("hygiene", "structural", "management")))
+
 def _fsa_register(authority):
     """Download and normalise one authority's official nightly open-data XML file."""
     name = authority.get("Name", "unknown")
@@ -351,8 +361,8 @@ def _fsa_register(authority):
             "addr": addr, "postcode": field(e, "PostCode"),
             "lat": num(field(e, "Latitude")), "lng": num(field(e, "Longitude")),
             "pending": pending,
-            "scores": {"hygiene": field(e, "Hygiene") or None, "structural": field(e, "Structural") or None,
-                       "management": field(e, "ConfidenceInManagement") or None},
+            "scores": {"hygiene": _fsa_score(field(e, "Hygiene")), "structural": _fsa_score(field(e, "Structural")),
+                       "management": _fsa_score(field(e, "ConfidenceInManagement"))},
             "right_to_reply": field(e, "RightToReply")
         }
     if declared_count and len(out) != int(declared_count):
@@ -420,9 +430,16 @@ def fetch_fsa(name="Slough", council="Slough Borough Council"):
     history = st.setdefault("fsa_history", {}).setdefault(str(laid), {})
     places = []
     for fid, e in cur.items():
-        snap = {"rating": e["rating"], "ratingDate": e["date"], "recorded": today, "scores": e.get("scores", {})}
+        e["scores"] = {k: _fsa_score(v) for k, v in (e.get("scores") or {}).items()}
+        snap = {"rating": e["rating"], "ratingDate": e["date"], "recorded": today, "scores": e["scores"]}
         rows = history.setdefault(fid, [])
-        if not rows or any(rows[-1].get(k) != snap.get(k) for k in ("rating", "ratingDate", "scores")):
+        # Collapse rows that differ only in number formatting (R24 stored scores as numbers, the first R25 file as text),
+        # so the timeline only shows real changes.
+        tidy = []
+        for r in rows:
+            if not tidy or _fsa_snap_key(tidy[-1]) != _fsa_snap_key(r): tidy.append(r)
+        rows = history[fid] = tidy
+        if not rows or _fsa_snap_key(rows[-1]) != _fsa_snap_key(snap):
             rows.append(snap)
             history[fid] = rows[-25:]
         places.append({
