@@ -607,6 +607,7 @@ def main():
     except Exception:
         pass
     down = []
+    already_down = set(st.get("down") or [])   # sources that were already reported as down on an earlier run
     for s in sources:
         h = st["sources"].setdefault(s["name"], {"url": s["url"], "licence": s["licence"]})
         h["url"] = s["url"]; h["licence"] = s["licence"]; h["last_run"] = NOW.isoformat(); h["ok"] = s["ok"]
@@ -636,8 +637,11 @@ def main():
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(feed, f, ensure_ascii=False, indent=1)
     print(f"wrote {len(out)} items; sources down >{ALERT_AFTER_H}h: {down or 'none'}", file=sys.stderr)
-    if down:
-        sys.exit(f"ALERT: source(s) failing for over {ALERT_AFTER_H} hours: {', '.join(down)}")
+    # Fail the run (GitHub emails the owner) only when a source newly passes the limit, not on every hourly run after.
+    # Ongoing outages stay listed in status.json "down" and on the status page; the alarm re-arms once a source recovers.
+    newly_down = [n for n in down if n not in already_down]
+    if newly_down:
+        sys.exit(f"ALERT: source(s) failing for over {ALERT_AFTER_H} hours: {', '.join(newly_down)}")
 
 if __name__ == "__main__":
     main()
