@@ -75,6 +75,7 @@ def serve(handler):
 
 class T(unittest.TestCase):
     def setUp(self):
+        H.RETRY_WAIT = 0
         self.tmp = tempfile.mkdtemp()
         self.bucket_dir = os.path.join(self.tmp, "bucket"); os.makedirs(self.bucket_dir)
         Bucket.root, Bucket.hits[:] = self.bucket_dir, []
@@ -102,8 +103,15 @@ class T(unittest.TestCase):
         self.put("section_58/2026/09.zip", [{"event_reference": 30, "event_type": "SECTION_58_CREATED", "object_type": "SECTION_58", "object_reference": "S-1", "event_time": instant(-1, "08:00:00"),
                                              "object_data": {"section_58_reference_number": "S-1", "street_name": "High Street", "highway_authority": "Slough Borough Council",
                                                              "section_58_coordinates": "POINT(497500 180000)", "start_date": instant(30), "end_date": instant(400), "section_58_duration": "2 years"}}])
+    def raw(self, key, data, mtime=None):
+        p = os.path.join(self.bucket_dir, key); os.makedirs(os.path.dirname(p), exist_ok=True)
+        with open(p, "wb") as f:
+            f.write(data)
+        if mtime:
+            os.utime(p, (mtime, mtime))
     def seed(self):
         self.archive()
+        self.raw("activity/2026/06.zip", b"<html>not a zip</html>", mtime=1_700_000_000)   # a real archive file turned out not to be a zip
         self.assertEqual(H.main(["seed", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
     def do_run(self, expect=0):
         rc = H.main(["run", "--state", self.state, "--out", self.out, "--zip", self.zip, "--summary", self.summary, "--ack-file", self.ack, "--receiver", self.receiver])
@@ -130,6 +138,24 @@ class T(unittest.TestCase):
         self.assertEqual(recs["P:W-1"]["st"], "approved"); self.assertEqual(recs["P:W-2"]["st"], "started")
         self.assertEqual(meta["archiveAsOf"], d(-1)); self.assertFalse(meta["liveSince"]); self.assertEqual(meta["cursor"], 0)
         self.assertEqual(sorted(meta["archive"]), ["activity/2026/09.zip", "permit/2026/08.zip", "permit/2026/09.zip", "section_58/2026/09.zip"])
+        self.assertEqual(list(meta["skipped"]), ["activity/2026/06.zip"]); self.assertEqual(meta["skipped"]["activity/2026/06.zip"]["bytes"], 22)
+        self.assertEqual(Bucket.hits.count("activity/2026/06.zip"), 2)            # fetched once more, then skipped
+
+    def test_a_file_that_is_not_a_zip_is_skipped_noted_and_read_again_only_when_it_changes(self):
+        self.seed(); self.do_run(); self.assertEqual(self.summary_()["skippedArchive"], {"activity/2026/06.zip": 22})
+        Bucket.hits[:] = []; self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0); self.assertEqual(Bucket.hits, [])
+        self.put("activity/2026/06.zip", [{"event_reference": 40, "event_type": "ACTIVITY_CREATED", "object_type": "ACTIVITY", "object_reference": "A-6", "event_time": instant(-2, "09:00:00"),
+                                           "object_data": {"activity_reference_number": "A-6", "activity_name": "Fete", "street_name": "Green", "highway_authority": "Slough Borough Council",
+                                                           "activity_coordinates": "POINT(497600 180100)", "start_date": instant(8), "end_date": instant(8)}}])
+        os.utime(os.path.join(self.bucket_dir, "activity/2026/06.zip"), (1_800_000_000, 1_800_000_000))   # fixed and republished
+        self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
+        recs, meta = H.load_state(self.state); self.assertIn("A:A-6", recs); self.assertEqual(meta["skipped"], {}); self.assertIn("activity/2026/06.zip", meta["archive"])
+
+    def test_a_file_damaged_part_way_keeps_what_was_read(self):
+        self.archive(); good = zip_bytes([msg(300 + i, "PERMIT_SUBMITTED", "D-%d" % i, 14, 15) for i in range(50)])
+        self.raw("permit/2026/10.zip", good[: len(good) - 40])                      # the end of the zip (its directory) is missing
+        self.assertEqual(H.main(["seed", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
+        recs, meta = H.load_state(self.state); self.assertIn("P:W-1", recs); self.assertIn("permit/2026/10.zip", meta["skipped"]); self.assertNotIn("permit/2026/10.zip", meta["archive"])
 
     def test_run_with_no_messages_publishes_archive_data_labelled_not_live(self):
         self.seed(); self.do_run(); idx = self.index(); s = self.summary_()
