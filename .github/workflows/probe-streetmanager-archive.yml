@@ -1,0 +1,30 @@
+name: Probe Street Manager archive
+# One-off, read-only. Lists what the DfT "Archived notifications" page offers and how recent it is.
+on:
+  workflow_dispatch:
+  push:
+    paths: ["tools/probe_streetmanager_archive.py"]
+permissions:
+  contents: write
+concurrency:
+  group: probe-sm
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Run the probe
+        run: python tools/probe_streetmanager_archive.py
+      - name: Commit the result
+        run: |
+          git config user.name "statute-feed"
+          git config user.email "feed@users.noreply.github.com"
+          git add tools/probe_result.json
+          if git diff --cached --quiet; then echo "no change"; exit 0; fi
+          git commit -q -m "probe: Street Manager archive listing"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && exit 0; sleep 10; done
+          exit 1
