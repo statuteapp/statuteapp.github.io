@@ -2,14 +2,22 @@
 """After a deploy, probe the live receiver and write worker/deploy_check.json.
 
 Sends only harmless requests: a health check, three messages that must be rejected, and an authorised read of the queue
-(limit 1). The drain token is read from the environment and is never written to the result. Standard library only."""
+(limit 1). The checks are sent with the same User-Agent that Amazon's notification service uses, because Cloudflare can
+block unfamiliar request signatures at its edge (error 1010) before the Worker sees them; the health check is also sent
+with Python's default and a browser's User-Agent for comparison. The drain token is read from the environment and is
+never written to the result. Standard library only."""
 import datetime, json, os, re, urllib.error, urllib.request
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "deploy_check.json")
 PERMIT = "arn:aws:sns:eu-west-2:287813576808:prod-permit-topic"
+AMAZON_UA = "Amazon Simple Notification Service Agent"
+BROWSER_UA = "Mozilla/5.0 (Linux; Android 14; SM-X710) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 
-def call(url, method="GET", data=None, headers=None):
-    req = urllib.request.Request(url, data=data, method=method, headers=headers or {})
+def call(url, method="GET", data=None, headers=None, ua=AMAZON_UA):
+    h = dict(headers or {})
+    if ua:
+        h["User-Agent"] = ua
+    req = urllib.request.Request(url, data=data, method=method, headers=h)
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             return r.status, r.read().decode("utf-8", "replace")[:300]
@@ -41,6 +49,7 @@ def main():
             "drain_with_token": call(url + "/drain?limit=1", "GET", None, {"authorization": "Bearer " + token}),
         }
         res["checks"] = {k: {"status": v[0], "body": v[1]} for k, v in c.items()}
+        res["userAgentComparison"] = {"amazon_sns_agent": c["health"][0], "python_default": call(url + "/health", ua=None)[0], "browser": call(url + "/health", ua=BROWSER_UA)[0]}
         res["allPassed"] = (c["health"][0] == 200 and c["wrong_topic_rejected"][0] == 403 and c["unsigned_message_rejected"][0] == 403
                             and c["drain_without_token_rejected"][0] == 401 and c["drain_with_token"][0] == 200)
     with open(OUT, "w", encoding="utf-8") as f:
