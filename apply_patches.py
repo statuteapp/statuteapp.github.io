@@ -50,6 +50,28 @@ PATCHES = [
      'document.addEventListener("click",ev=>{const a=ev.target.closest&&ev.target.closest("a[href]");if(!a)return;let u;try{u=new URL(a.getAttribute("href"),location.href);}catch(_){return;}'
      'if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener";}},true);\n'
      '// ---------- Onboarding ----------'),
+    # Round 28: daily updates first. Items dated in the future (bank holidays to 2028, future events) were treated as the
+    # newest thing, so Today's brief said "Read Boxing Day" and "Last change" pointed at 2028.
+    ("r28-notyet-helper",
+     'function postedToday(it){',
+     'function notYet(it){const t=TODAY,iso=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");return !!it.date&&String(it.date).slice(0,10)>iso;}\n'
+     'function postedToday(it){'),
+    ("r28-brief-today-first",
+     'const top=relevant.filter(it=>it.status!=="past").sort((a,b)=>({must:3,affects:2,notice:1}[tierFor(b).tier]-{must:3,affects:2,notice:1}[tierFor(a).tier]))[0];',
+     'const rk=it=>({must:3,affects:2,notice:1}[tierFor(it).tier]||0),byNew=(a,b)=>rk(b)-rk(a)||new Date(b.date)-new Date(a.date);'
+     'const live=relevant.filter(it=>it.status!=="past"&&!notYet(it));'
+     'const top=live.filter(postedToday).sort(byNew)[0]||live.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)||rk(b)-rk(a))[0];'),
+    ("r28-last-change-not-future",
+     'const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)).sort(',
+     'const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)&&!notYet(it)).sort('),
+    # Round 28 (cont.): a phone app left open in the background never fetched new items, and "today" stayed on the day it opened.
+    ("r28-refresh-on-return",
+     'if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}',
+     'let feedLoadedAt=Date.now();\n'
+     'document.addEventListener("visibilitychange",()=>{if(document.visibilityState!=="visible")return;'
+     'if(new Date().toDateString()!==TODAY.toDateString()){location.reload();return;}'
+     'if(Date.now()-feedLoadedAt>15*60000){feedLoadedAt=Date.now();loadFeed();}});\n'
+     'if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}'),
 ]
 
 def main():
