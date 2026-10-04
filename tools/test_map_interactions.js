@@ -1,4 +1,4 @@
-// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py, r40_map_pins_by_zoom.py, r41_map_real_places_and_layers.py), run in a simulated browser with the real Leaflet.
+// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py, r40_map_pins_by_zoom.py, r41_map_real_places_and_layers.py, r42_crime_points_and_all_layers_on.py), run in a simulated browser with the real Leaflet.
 // Usage (jsdom 27 or newer): npm install jsdom leaflet@1.9.4 && node tools/test_map_interactions.js [path/to/index.html] [path/to/fsa_places.json]
 const {JSDOM,VirtualConsole,requestInterceptor}=require('jsdom');const fs=require('fs');const path=require('path');
 const html=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','index.html'),'utf8');
@@ -30,7 +30,7 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  // 1. every layer chip keeps the Map screen (the blank page bug)
  const keys=[...w.document.querySelectorAll('.chips button[data-layer]')].map(b=>b.dataset.layer);
  let bad=[];for(const k of keys){const b=w.document.querySelector('.chips button[data-layer="'+k+'"]');b.click();await wait(k==="food"?900:500);s=state();if(!(s.active==="s-map"&&s.tab==="map"&&s.len>2000))bad.push(k+" "+JSON.stringify(s));
-   const b2=w.document.querySelector('.chips button[data-layer="'+k+'"]');if(b2&&k!=="food"){b2.click();await wait(400);}}
+   const b2=w.document.querySelector('.chips button[data-layer="'+k+'"]');if(b2){b2.click();await wait(k==="food"?900:400);}}
  T(bad.length===0,"selecting any layer chip keeps the Map screen and its tab ("+keys.length+" chips)"+(bad.length?": "+bad.slice(0,3).join("; "):""));
  // 2. a hygiene pin opens the hygiene report
  await wait(600);
