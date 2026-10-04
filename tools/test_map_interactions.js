@@ -1,4 +1,4 @@
-// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py), run in a simulated browser with the real Leaflet.
+// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py, r40_map_pins_by_zoom.py), run in a simulated browser with the real Leaflet.
 // Usage (jsdom 27 or newer): npm install jsdom leaflet@1.9.4 && node tools/test_map_interactions.js [path/to/index.html] [path/to/fsa_places.json]
 const {JSDOM,VirtualConsole,requestInterceptor}=require('jsdom');const fs=require('fs');const path=require('path');
 const html=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','index.html'),'utf8');
@@ -12,6 +12,7 @@ async function boot(){
   const errs=[];const vc=new VirtualConsole();vc.on("jsdomError",e=>{const m=String(e.message||e).split("\n")[0];if(!/Not implemented/.test(m))errs.push(m.slice(0,200));});
   const dom=new JSDOM(html,{runScripts:"dangerously",resources:{interceptors:[intercept]},pretendToBeVisual:true,url:"https://statuteapp.github.io/",virtualConsole:vc,
     beforeParse(w){w.localStorage.setItem("statute.profile",JSON.stringify(profile));w.matchMedia=w.matchMedia||(()=>({matches:false,addListener(){},removeListener(){}}));
+      const ctx=new Proxy({},{get:(o,k)=>k in o?o[k]:()=>{},set:(o,k,v)=>{o[k]=v;return true;}});w.HTMLCanvasElement.prototype.getContext=function(){return ctx;}; // stand-in drawing surface: the test browser has none
       w.scrollTo=()=>{};w.Element.prototype.scrollIntoView=function(){w.__scrolled=this;};
       Object.defineProperty(w.HTMLElement.prototype,"clientWidth",{get(){return 360}});Object.defineProperty(w.HTMLElement.prototype,"clientHeight",{get(){return 420}});
       w.fetch=async(u)=>{u=String(u);if(u.includes("fsa_places.json"))return{ok:true,status:200,json:async()=>JSON.parse(fsa),text:async()=>fsa};
@@ -32,8 +33,13 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
    const b2=w.document.querySelector('.chips button[data-layer="'+k+'"]');if(b2&&k!=="food"){b2.click();await wait(400);}}
  T(bad.length===0,"selecting any layer chip keeps the Map screen and its tab ("+keys.length+" chips)"+(bad.length?": "+bad.slice(0,3).join("; "):""));
  // 2. a hygiene pin opens the hygiene report
- await wait(600);const fm=markers().filter(l=>/🍽/.test(l.options.icon.options.html));
- T(fm.length>0,"hygiene pins are on the map ("+fm.length+")");
+ await wait(600);
+ // zoomed out the places are dots; zoom in on one and its icon appears
+ const dotsOf=k=>{const out=[];w.eval("LMAP").eachLayer(l=>{if(l.options&&l.options.isPin&&(!k||l.options.k===k))out.push(l);});return out;};
+ const fd=dotsOf("food");T(fd.length>0,"hygiene places are on the map as dots ("+fd.length+")");
+ w.eval("LMAP").setView(fd[0].getLatLng(),16);await wait(500);
+ const fm0=markers().filter(l=>/🍽/.test(l.options.icon.options.html));const fm=[...fm0.filter(m=>m.getLatLng().equals(fd[0].getLatLng())),...fm0];
+ T(fm0.length>0,"close in, hygiene icons are on the map ("+fm0.length+")");
  const tmp=w.document.createElement("div");tmp.innerHTML=fm[0].options.icon.options.html;const tapped=tmp.querySelector(".pinhtml").title;
  let err=null;try{fm[0].fire("click");}catch(e){err=e.message;}
  await wait(900);s=state();
@@ -52,9 +58,9 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  T(s.active==="s-map"&&s.tab==="map"&&s.len>2000,"after tapping a pin the Map screen is still showing "+JSON.stringify(s));
  // 3. the map keeps its position and zoom when it redraws
  w.eval("LMAP").setView([51.5200,-0.6000],14);await wait(300);
- const fm2=markers().filter(l=>/🍽/.test(l.options.icon.options.html));let e2=null;try{(fm2[0]||markers()[0]).fire("click");}catch(e){e2=e.message;}await wait(900);
+ let e2=null;try{dotsOf("food")[0].fire("click");}catch(e){e2=e.message;}await wait(900);
  const c=w.eval("LMAP").getCenter();
- T(w.eval("LMAP").getZoom()===14&&Math.abs(c.lat-51.52)<0.002&&Math.abs(c.lng+0.6)<0.002,"the map keeps its zoom and position after a pin tap (zoom "+w.eval("LMAP").getZoom()+", centre "+c.lat.toFixed(4)+","+c.lng.toFixed(4)+")");
+ T(w.eval("LMAP").getZoom()===14&&Math.abs(c.lat-51.52)<0.002&&Math.abs(c.lng+0.6)<0.002,"the map keeps its zoom and position after a dot tap (zoom "+w.eval("LMAP").getZoom()+", centre "+c.lat.toFixed(4)+","+c.lng.toFixed(4)+")");
  // 4. opening the map from Today still uses the detail screen, and chips there keep it
  w.document.querySelector('nav.tabs button[data-t="today"]').click();await wait(300);
  const mb=w.document.querySelector('button[data-map="local"]');
