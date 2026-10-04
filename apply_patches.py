@@ -12,9 +12,18 @@ FILE = "index.html"
 PATCHES = [
     ("real-info-only",
      'function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}',
-     '// Real information only: drop prototype/sample content before anything renders (feed items are added later by loadFeed).\n'
-     '(function(){for(let i=ITEMS.length-1;i>=0;i--)if(ITEMS[i].sample)ITEMS.splice(i,1);for(const a of [PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES])a.length=0;})();\n'
+     '// Real information only: nothing hand-written is shown. Every card comes from the hourly feed (loadFeed); the prototype items, pins, events, facts and areas below are discarded before anything renders.\n'
+     '(function(){for(const a of [ITEMS,PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES,DYK,ASIS])a.length=0;})();\n'
      'function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}'),
+    ("dyk-guard-today",
+     'const dyk=DYK[TODAY.getDate()%DYK.length];const must',
+     'const dyk=DYK.length?DYK[TODAY.getDate()%DYK.length]:null;const must'),
+    ("dyk-guard-tile",
+     'h+=`<div class="dyk">',
+     'if(dyk)h+=`<div class="dyk">'),
+    ("dyk-guard-brief",
+     'text+=`Still on the books: ${dyk.t} ${dyk.b} ${mantra()}`;',
+     'if(dyk)text+=`Still on the books: ${dyk.t} ${dyk.b} `;text+=mantra();'),
 ]
 
 def main():
