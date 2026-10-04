@@ -1,0 +1,11 @@
+# Receives Street Manager open data (DfT) pushed by Amazon's notification service, checks it, and queues it in a small
+# database until the hourly GitHub job collects it. Deployed by .github/workflows/deploy-receiver.yml.
+name = "statute-streetworks-receiver"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "statute-streetworks"
+database_id = "18cb9e7d-00d1-4447-9eaa-e5befd87a94b"
