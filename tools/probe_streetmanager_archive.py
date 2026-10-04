@@ -57,6 +57,10 @@ def main():
             p["start"] = re.sub(r"\s+", " ", b[:500])
         probes.append(p)
     res["probes"] = probes
+    # Keep the source of the page's own scripts (not the big libraries) so the listing logic can be read.
+    host = urllib.parse.urlparse(PAGE).netloc
+    res["firstPartyScripts"] = {u: corpus[u][:40000] for u in scripts[:10]
+                                if u in corpus and urllib.parse.urlparse(u).netloc == host and "govuk-frontend" not in u}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(res, f, indent=1)
     print("page", res["pageStatus"], "| scripts", len(scripts), "| candidates", len(cands), "| probed", len(probes))
