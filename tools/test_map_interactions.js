@@ -1,4 +1,4 @@
-// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py, r40_map_pins_by_zoom.py), run in a simulated browser with the real Leaflet.
+// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py, r40_map_pins_by_zoom.py, r41_map_real_places_and_layers.py), run in a simulated browser with the real Leaflet.
 // Usage (jsdom 27 or newer): npm install jsdom leaflet@1.9.4 && node tools/test_map_interactions.js [path/to/index.html] [path/to/fsa_places.json]
 const {JSDOM,VirtualConsole,requestInterceptor}=require('jsdom');const fs=require('fs');const path=require('path');
 const html=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','index.html'),'utf8');
@@ -65,7 +65,7 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  w.document.querySelector('nav.tabs button[data-t="today"]').click();await wait(300);
  const mb=w.document.querySelector('button[data-map="local"]');
  if(mb){mb.click();await wait(900);s=state();T(s.active==="s-detail"&&s.len>2000,"opening the map from Today shows the detail screen "+JSON.stringify(s));
-   const chip=w.document.querySelector('#s-detail .chips button[data-layer="schools"]');if(chip){chip.click();await wait(700);s=state();T(s.active==="s-detail"&&s.len>2000,"a chip on the detail-screen map keeps the detail screen "+JSON.stringify(s));}else T(false,"detail map has chips");}
+   const chip=w.document.querySelector('#s-detail .chips button[data-layer]');if(chip){chip.click();await wait(700);s=state();T(s.active==="s-detail"&&s.len>2000,"a chip on the detail-screen map keeps the detail screen "+JSON.stringify(s));}else T(false,"detail map has chips");}
  else T(false,"Today has a Map button");
  T(errs.length===0,"no page errors raised "+JSON.stringify(errs.slice(0,3)));
  console.log(all?"\nALL PASSED":"\nSOME FAILED");process.exit(all?0:1);})();
