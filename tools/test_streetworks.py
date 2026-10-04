@@ -66,6 +66,10 @@ class State(unittest.TestCase):
              "object_data": {"section_58_reference_number": "S58-1", "section_58_coordinates": "LINESTRING(497900 179900,497990 179990)", "end_date": "2028-10-17T16:00:00.000Z"}}
         st = self.run_events([a, c])
         self.assertEqual((st["A:ARN-1"]["st"], st["A:ARN-1"]["name"]), ("planned", "Carnival parade")); self.assertEqual(st["S:S58-1"]["st"], "in_force")
+        self.assertNotIn("len", st["A:ARN-1"])   # a single point has no length
+    def test_permit_keeps_the_kind_of_work(self):
+        st = self.run_events([permit(1, "PERMIT_GRANTED", activity_type="Utility asset works")])
+        self.assertEqual(st["P:W1"]["what"], "Utility asset works"); self.assertNotIn("usrn", st["P:W1"]); self.assertEqual(st["P:W1"]["len"], 112)
 
 class Keep(unittest.TestCase):
     today = "2026-10-04"
@@ -75,6 +79,8 @@ class Keep(unittest.TestCase):
         self.assertTrue(s.keep(self.rec("applied", start="2026-10-20", end="2026-10-22"), self.today))
         self.assertTrue(s.keep(self.rec("started", start="2026-09-20", end="2026-10-01"), self.today))            # overrunning works stay
         self.assertFalse(s.keep(self.rec("approved", start="2026-08-01", end="2026-08-05"), self.today))          # long gone
+        self.assertFalse(s.keep(self.rec("approved", start="2026-10-01", end="2026-10-03"), self.today))          # window ended, never marked started
+        self.assertTrue(s.keep(self.rec("approved", start="2026-10-02", end="2026-10-04"), self.today))           # ends today: still shown
         self.assertFalse(s.keep(self.rec("finished", st_t="2026-09-20T00:00:00Z"), self.today))
         self.assertTrue(s.keep(self.rec("finished", st_t="2026-10-03T00:00:00Z"), self.today))
         self.assertFalse(s.keep(self.rec("refused"), "2026-12-01"))
@@ -98,6 +104,8 @@ class Tiles(unittest.TestCase):
             tile = load(os.path.join(d, "t%s.json" % s.tile_of(*s.bng_to_wgs84(497950, 179920))))
             self.assertEqual([i["street"] for i in tile["items"]], ["CHURCH STREET", "ZED RD"]); self.assertIn("Open Government Licence", tile["source"])
             self.assertEqual(tile["items"][0]["start"], "2026-10-12")
+            s.build_tiles(st, "2026-10-04", d, "2026-10-04T12:00:00Z", extra={"live": False, "asOf": "2026-09-30"})
+            idx = load(os.path.join(d, "index.json")); self.assertEqual((idx["live"], idx["asOf"], idx["total"]), (False, "2026-09-30", 3))
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)
