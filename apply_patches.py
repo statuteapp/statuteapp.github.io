@@ -2,17 +2,20 @@
 """Queued edits to index.html, applied by the feed workflow before each build.
 
 Each patch is (name, old, new). A patch is applied only if `old` is present exactly once and `new` is
-absent, so running this repeatedly is safe. Once an edit is in the file it does nothing.
-
-2026-10-04: index.html is being edited directly elsewhere, so this queue is empty on purpose and the
-workflow step is a no-op. Add patches here only when nobody else is editing index.html, and pull main
-first.
+absent, so running this repeatedly is safe. Once an edit is in the file it does nothing. Pull main
+before editing index.html elsewhere.
 """
 import sys
 
 FILE = "index.html"
 
-PATCHES = []
+PATCHES = [
+    ("real-info-only",
+     'function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}',
+     '// Real information only: drop prototype/sample content before anything renders (feed items are added later by loadFeed).\n'
+     '(function(){for(let i=ITEMS.length-1;i>=0;i--)if(ITEMS[i].sample)ITEMS.splice(i,1);for(const a of [PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES])a.length=0;})();\n'
+     'function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}'),
+]
 
 def main():
     if not PATCHES:
