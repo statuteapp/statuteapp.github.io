@@ -1,6 +1,6 @@
 name: Check Street Manager converter on real archive
-# Read-only check. Downloads the newest monthly archive zips from DfT (about 1 GB for permits), runs the unit tests and
-# the converter over them, and writes a summary to tools/sm_check_result.json. Runs when tools/sm_check.py changes.
+# Read-only check of the converter, plus a small labelled sample of real archive data for squares around Slough, published
+# in ./roadworks so the Roadworks screen can be reviewed before the live feed exists. Runs when tools/sm_check.py changes.
 on:
   workflow_dispatch:
   push:
@@ -21,14 +21,17 @@ jobs:
       - name: Unit tests
         run: python tools/test_streetworks.py
       - name: Run the converter over the real archive
+        env:
+          SM_DEMO_DIR: roadworks
         run: python tools/sm_check.py
-      - name: Commit the summary
+      - name: Commit the summary and the sample
         if: always()
         run: |
           git config user.name "statute-feed"
           git config user.email "feed@users.noreply.github.com"
           git add tools/sm_check_result.json
+          if [ -d roadworks ]; then git add -A roadworks; fi
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
-          git commit -q -m "check: Street Manager converter on real archive"
+          git commit -q -m "check: Street Manager converter on real archive (archive sample for Slough area)"
           for i in 1 2 3; do git pull --rebase -q origin main && git push -q && exit 0; sleep 10; done
           exit 1
