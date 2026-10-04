@@ -2288,8 +2288,8 @@ function renderMap(){
   const zi=s.querySelector("#zin"),zo=s.querySelector("#zout");if(zi)zi.onclick=()=>{mapZoom=Math.min(3,mapZoom+1);again();};if(zo)zo.onclick=()=>{mapZoom=Math.max(1,mapZoom-1);again();};
   s.querySelectorAll(".cl").forEach(g=>{const go=()=>{if(g.dataset.group){GROUPS.forEach(G=>{if(G[0]!==g.dataset.group)G[2].forEach(l=>{if(l!=="law")mapLayers[l]=false;});else G[2].forEach(l=>mapLayers[l]=true);});}mapZoom=Math.min(3,mapZoom+1);if(mapLayers.food&&profile.council==="Slough Borough Council"&&!FSA_DIRECTORY){const pending=loadFsaDirectory();again();pending.then(again);}else again();};g.onclick=go;g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
   s.querySelectorAll(".ord").forEach(g=>{const go=()=>{ordSel=ordSel===g.dataset.ord?null:g.dataset.ord;pinSel=null;award("ord:"+g.dataset.ord,3,"Order");again();};g.onclick=go;g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
-  s.querySelectorAll(".lay").forEach(g=>{const go=()=>{ordSel=null;if(g.dataset.food){fsaSel=fsaSel===g.dataset.food?null:g.dataset.food;pinSel=null;}else{fsaSel=null;pinSel=pinSel===+g.dataset.pin?null:+g.dataset.pin;award("pin:"+g.dataset.pin,2,"Explored");}again();s.querySelector(".pinfo")&&s.querySelector(".pinfo").scrollIntoView({block:"nearest"});};g.onclick=go;g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
-  s.querySelectorAll(".fsa-row").forEach(c=>c.onclick=()=>{fsaSel=c.dataset.fsaId;pinSel=null;again();});
+  s.querySelectorAll(".lay").forEach(g=>{const go=()=>{ordSel=null;if(g.dataset.food){fsaSel=fsaSel===g.dataset.food?null:g.dataset.food;pinSel=null;}else{fsaSel=null;pinSel=pinSel===+g.dataset.pin?null:+g.dataset.pin;award("pin:"+g.dataset.pin,2,"Explored");}again();const pa=s.querySelectorAll(".pinfo"),pi=pa[pa.length-1];if(pi)pi.scrollIntoView({block:"nearest"});};g.onclick=go;g.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
+  s.querySelectorAll(".fsa-row").forEach(c=>c.onclick=()=>{fsaSel=c.dataset.fsaId;pinSel=null;again();const pa=s.querySelectorAll(".pinfo"),pi=pa[pa.length-1];if(pi)pi.scrollIntoView({block:"nearest"});});
   const fsf=s.querySelector("#fsa-search-form");if(fsf)fsf.onsubmit=e=>{e.preventDefault();fsaSearch=s.querySelector("#fsa-q").value.trim();fsaRatingFilter=s.querySelector("#fsa-rating").value;fsaSel=null;again();};
   const fsc=s.querySelector("#fsa-clear");if(fsc)fsc.onclick=()=>{fsaSearch="";fsaRatingFilter="all";fsaSel=null;again();};
   const fsr=s.querySelector("#retry-fsa");if(fsr)fsr.onclick=()=>{const pending=loadFsaDirectory();again();pending.then(again);};
@@ -2392,7 +2392,7 @@ function show(t){
 function padActive(){return !!document.querySelector(".pad-focus");}
 function bindCards(root){
   root.querySelectorAll(".card,.lnk").forEach(c=>c.addEventListener("click",e=>{
-    if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined)return;
+    if(e.target.closest(".tag")||e.target.closest(".bmc")||c.dataset.pin!==undefined||c.dataset.fsaId!==undefined)return;
     e.preventDefault();
     const ctx=root.id==="s-detail"&&root.dataset.detailContext;
     if(ctx&&ctx.startsWith("asi:"))renderDetail(c.dataset.id,{type:"asi",id:ctx.slice(4)});
