@@ -14,18 +14,18 @@
 - Use only official government sources. A third party is allowed only where government has approved it as a route (for example Street Manager for street works). Do not use commercial or volunteer republishers of government data when the government body publishes the data itself.
 - Always name and link the overarching source, not the tool that displays it. Councils use their own street-works software, but the data source is Street Manager (Department for Transport), so that is what Statute attributes. The same applies to any other data that councils or trusts pass on from a national system.
 - Record the licence and coverage of every source before building an adapter. Say plainly where coverage stops.
-- Known breach to fix: the postcode lookup uses postcodes.io, a third-party service. Replace it with the ONS National Statistics Postcode Lookup from the ONS Open Geography Portal once the exact service address and terms are verified. See the private note `chats/2026-10-04-owner-direction-official-sources-location.md`.
+- Postcode lookup: Round 30 (commit 18382f9, 4 October) replaced postcodes.io with the ONS Postcode Directory. `build_postcodes.py` and `.github/workflows/postcodes.yml` build `pc/<OUTWARD>.json` weekly from the newest ONSPD release (August 2026 at the first build: 1,748,230 postcodes in 2,863 files, Open Government Licence v3.0, recorded in `pc/meta.json`). England, Scotland and Wales only; Northern Ireland is left out pending a licence check. The build was confirmed from `pc/meta.json`; the phone-side lookup was not checked by the author of this note. Check that no part of the app still calls postcodes.io.
 - The NHS App cannot be used as a data source. For A&E and urgent care use official NHS England and devolved-nation publications only, and never show a "live wait" unless an NHS body publishes it openly itself.
 
 ## Location model (owner direction, 4 October 2026)
 
 - Onboarding asks for a postcode once, only to identify the council. Do not ask for a more precise location unless the resident chooses street-level news.
-- The ladder is street, town, county, country, UK. Matching happens on the device against a per-council-area file; the street is never sent anywhere. The same order sorts deep-topic lists, nearest first.
-- The ONS keeps no official postcode-to-town lookup, so the "town" rung needs an agreed official basis before it is built.
+- Matching happens on the device against a per-council-area file; nothing precise is sent anywhere. The same ladder sorts deep-topic lists, nearest first.
+- The owner leans (provisionally, 4 October) towards the electoral ward as the main local step instead of street. The `pc/` files already carry ward, parish and built-up area from the ONS, so no extra source is needed. Street stays optional, for roadworks only. Confirm with the owner before building more on this.
 
 ## Privacy and accuracy
 
-- Never send a resident's postcode, household, job, age, interests or other profile answers to the feed builder or public-service source directory. Keep personal matching on the device. The one current exception is the postcode lookup call to the lookup service, which must be described honestly in the privacy wording.
+- Never send a resident's postcode, household, job, age, interests or other profile answers to the feed builder or public-service source directory. Keep personal matching on the device. The phone fetches only the `pc/` file for its postcode district (the first half) from Statute's own site and finds the full postcode on the device; see `PRIVACY.md`.
 - Do not invent an API endpoint, meeting, deadline, law, penalty, or source link. Prefer official public data and record its licence.
 - Keep sample/prototype information visibly labelled. Do not treat a missing feed as evidence that no local event exists.
 - The public app should show information relevant to the resident's selected area. Keep internal source URLs and per-source error diagnostics out of the citizen-facing flow.
@@ -34,7 +34,7 @@
 ## How to make changes
 
 1. Read `statute-notes/HANDOFF.md` and the latest relevant round notes in the private `statute-notes` repository; compare them with current `main` before editing.
-2. Keep each app commit to one connected user outcome. Make related changes in `index.html`, feed files or data as needed, and do not overwrite a newer concurrent change.
+2. Keep each app commit to one connected user outcome. Make related changes in `index.html`, feed files or data as needed, and do not overwrite a newer concurrent change. More than one assistant may be committing to this repo: list recent commits and refetch the file before every edit.
 3. For every app round, add a private note with the issue, before/after behavior, exact verification performed, and plain-language retest steps. The pilot ledger/strategy in `statute-notes` is the wider backlog.
 4. Refetch changed files from `main` before reporting. Distinguish source inspection from feed-workflow success, browser testing and owner phone retest. Never claim a runtime or accessibility result that was not actually checked.
 5. A push to `build_feed.py` triggers the feed workflow; it can update `items.json`, `status.json` and `fsa_places.json` automatically. A push to `index.html` deploys the page. Check the workflow run and generated FSA directory after changing source code.
