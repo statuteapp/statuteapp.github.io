@@ -19,7 +19,8 @@ def call(url, method="GET", data=None, headers=None):
         return None, str(e)[:200]
 
 def main():
-    res = {"checkedAt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "deployOutcome": os.environ.get("DEPLOYED") or "skipped"}
+    res = {"checkedAt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "unitTests": os.environ.get("TESTS") or "unknown",
+           "deployOutcome": os.environ.get("DEPLOYED") or "skipped"}
     url = (os.environ.get("URL") or "").strip()
     if not url:
         m = re.search(r"https://[A-Za-z0-9.-]+\.workers\.dev", os.environ.get("OUT") or "")
@@ -44,7 +45,7 @@ def main():
                             and c["drain_without_token_rejected"][0] == 401 and c["drain_with_token"][0] == 200)
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(res, f, indent=1)
-    print(json.dumps({k: res[k] for k in ("deployOutcome", "allPassed")}))
+    print(json.dumps({k: res[k] for k in ("unitTests", "deployOutcome", "allPassed")}))
 
 if __name__ == "__main__":
     main()
