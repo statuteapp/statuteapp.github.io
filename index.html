@@ -2227,7 +2227,7 @@ function layerPinsSvg(layerPins,pinSel,fsaSel){
 }
 function localItems(){return ITEMS.filter(it=>it.level==="local"&&it.council);}
 function renderMap(){
-  const tgt=mapTarget;const s=document.getElementById(mapTarget);const again=()=>{mapTarget=tgt;renderMap();mapTarget="s-detail";};const M=mapFor(profile.council);
+  const tgt=mapTarget;const s=document.getElementById(mapTarget);const again=()=>{mapTarget=tgt;KEEP_VIEW=true;renderMap();mapTarget="s-detail";};const M=mapFor(profile.council);
   const shown=[profile.council,...M.neighbours.filter(nb=>nbMode(nb.n)!=="off"||mapSel===nb.n).map(nb=>nb.n)];
   const pins=localItems().filter(it=>{if(!it.xy)placeOnMap(it);return it.xy&&shown.includes(it.council)&&tierFor(it);});
   const fsaCovered=profile.council==="Slough Borough Council";
@@ -2280,7 +2280,7 @@ function renderMap(){
   const bk=s.querySelector("#back");if(bk)bk.onclick=()=>show(prevTab);
   s.querySelectorAll(".nb").forEach(pg=>{const go=()=>{mapSel=mapSel===pg.dataset.nb?null:pg.dataset.nb;again();};pg.onclick=go;pg.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
   bindFollow(s);
-  if(MAP_CONFIG.osKey)realMap(s,pins,layerPins,ORDERS.filter(o=>shown.includes(o.council)));
+  if(MAP_CONFIG.osKey)realMap(s,pins,layerPins,ORDERS.filter(o=>shown.includes(o.council)),again);
   s.querySelectorAll(".card[data-pin]").forEach(c=>c.onclick=()=>{pinSel=+c.dataset.pin;again();window.scrollTo({top:0,behavior:"smooth"});});
   s.querySelectorAll(".chips button[data-layer]").forEach(b=>b.onclick=()=>{mapLayers[b.dataset.layer]=!mapLayers[b.dataset.layer];pinSel=null;fsaSel=null;if(b.dataset.layer==="food"&&mapLayers.food&&profile.council==="Slough Borough Council"&&!FSA_DIRECTORY){const pending=loadFsaDirectory();again();pending.then(again);}else again();});
   s.querySelector("#zoomout").onclick=()=>{zoneSel=null;mapTarget=tgt;renderZoneMap("county");mapTarget="s-detail";};
@@ -2296,7 +2296,7 @@ function renderMap(){
   const fs=s.querySelector("#fsal");if(fs){fs.onchange=()=>{jobF.salary=+fs.value||0;again();};s.querySelector("#fpat").onchange=e=>{jobF.pattern=e.target.value;again();};s.querySelector("#fgr").onchange=e=>{jobF.grade=e.target.value;again();};s.querySelector("#fty").onchange=e=>{jobF.type=e.target.value;again();};}
   s.querySelectorAll(".pin").forEach(pn=>{const go=()=>renderDetail(pn.dataset.id);pn.onclick=go;pn.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}};});
   s.querySelectorAll(".confirm .seg button").forEach(b=>b.onclick=()=>{setNb(mapSel,b.dataset.m);award("nb:"+mapSel,5,"Neighbour");renderAll();again();});
-  bindCards(s);show("detail");
+  bindCards(s);if(tgt!=="s-map")show("detail");
 }
 
 // ---------- Map tab: area and coverage picker ----------
@@ -2310,14 +2310,15 @@ function bindMapHead(s){s.querySelectorAll("[data-area]").forEach(b=>b.onclick=(
 function renderMapTab(){mapTarget="s-map";mapArea==="local"?renderMap():renderZoneMap(mapArea);mapTarget="s-detail";}
 
 // ---------- Real map (Leaflet + OS Maps API) ----------
-let LMAP=null;
+let LMAP=null,KEEP_VIEW=false,LVIEW=null;
 function mapFallback(s,msg){const el=s.querySelector("#realmap");const sch=s.querySelector(".map");if(el)el.innerHTML=`<div class="mapmsg">${esc(msg)}</div>`;if(sch)sch.style.display="";}
-async function realMap(s,pins,layerPins,orders){
+async function realMap(s,pins,layerPins,orders,again){
+  const keep=KEEP_VIEW;KEEP_VIEW=false;
   const el=s.querySelector("#realmap");if(!el)return;el.innerHTML=`<div class="mapmsg">Loading the map…</div>`;
   try{await loadLeaflet();}catch(e){mapFallback(s,"The map library couldn't load (no connection, or cdnjs is blocked). Showing the schematic map instead.");return;}
   if(!window.L){mapFallback(s,"The map library didn't start. Showing the schematic map instead.");return;}
   try{
-  if(LMAP){LMAP.remove();LMAP=null;}
+  if(LMAP){try{LVIEW={c:LMAP.getCenter(),z:LMAP.getZoom()};}catch(e){LVIEW=null;}LMAP.remove();LMAP=null;}
   el.innerHTML="";
   const centre=(profile&&profile.lat!=null)?[profile.lat,profile.lng]:MAP_CONFIG.center;
   LMAP=L.map(el,{zoomControl:true,attributionControl:true}).setView(centre,profile&&profile.lat!=null?15:MAP_CONFIG.zoom);
@@ -2337,10 +2338,10 @@ async function realMap(s,pins,layerPins,orders){
   const mkq=(ll,cls,ic,title,onclick)=>{const m=L.marker(ll,{icon:L.divIcon({className:"",html:`<div class="pinhtml ${cls}" title="${esc(title)}">${ic}</div>`,iconSize:[28,28],iconAnchor:[14,14]})});m.on("click",onclick);markers.push(m);return m;};
   pins.forEach(it=>{const r=tierFor(it);const S=LOCAL_SOURCES.find(x=>x.k===it.src)||{ic:"•"};mkq(it.lat?[it.lat,it.lng]:xyToLatLng(it.xy),r.tier,S.ic,it.title,()=>renderDetail(it.id));});
   layerPins.forEach(({P,i})=>{if(P.poly){L.polygon(P.poly.split(" ").map(p=>xyToLatLng(p.split(",").map(Number))),{color:"#f47738",dashArray:"6 4",fillOpacity:.2}).addTo(LMAP);}if(P.line){L.polyline(P.line.split(" ").map(p=>xyToLatLng(p.split(",").map(Number))),{color:"#f47738",dashArray:"8 5",weight:3}).addTo(LMAP);}if(P.r){L.circle(P.lat?[P.lat,P.lng]:xyToLatLng(P.xy),{radius:P.r*90,color:"#d4351c",fillOpacity:.15,weight:1}).addTo(LMAP);}
-    mkq(P.lat?[P.lat,P.lng]:xyToLatLng(P.xy),"",iconFor(P),P.t,()=>{if(P.fsa){fsaSel=P.fsa.id;pinSel=null;}else{pinSel=i;fsaSel=null;}ordSel=null;again();});});
+    mkq(P.lat?[P.lat,P.lng]:xyToLatLng(P.xy),"",iconFor(P),P.t,()=>{if(P.fsa){fsaSel=P.fsa.id;pinSel=null;}else{pinSel=i;fsaSel=null;}ordSel=null;again();const pa=s.querySelectorAll(".pinfo"),pi=pa[pa.length-1];if(pi)pi.scrollIntoView({block:"nearest"});});});
   // Start with every pin and the reader's own postcode in view, then let them zoom in
   try{const ll=[...pins.map(it=>it.lat!=null?[it.lat,it.lng]:xyToLatLng(it.xy)),...layerPins.map(({P})=>P.lat!=null?[P.lat,P.lng]:xyToLatLng(P.xy))];if(profile&&profile.lat!=null)ll.push([profile.lat,profile.lng]);
-    if(ll.length>1)LMAP.fitBounds(L.latLngBounds(ll),{padding:[24,24],maxZoom:15});}catch(e){}
+    if(keep&&LVIEW)LMAP.setView(LVIEW.c,LVIEW.z);else if(ll.length>1)LMAP.fitBounds(L.latLngBounds(ll),{padding:[24,24],maxZoom:15});}catch(e){}
   LMAP.on("zoomend moveend",drawClusters);drawClusters();
   if(!pins.length&&!layerPins.length){const n=document.createElement("div");n.className="mapmsg over";n.textContent="No pins yet for this council: nothing in the feed has coordinates. Hygiene ratings, flood warnings and Gazette notices appear here as the feed fills.";el.appendChild(n);}
   orders.forEach(o=>{L.polygon(o.poly.split(" ").map(p=>xyToLatLng(p.split(",").map(Number))),{color:o.kind==="s60"?"#d4351c":"#4c2c92",dashArray:"6 4",fillOpacity:.14,weight:2}).addTo(LMAP).on("click",()=>{ordSel=o.id;pinSel=null;again();});});
