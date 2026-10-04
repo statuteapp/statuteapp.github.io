@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-10-04T13:47:48Z",
+ "generatedAt": "2026-10-04T14:01:24Z",
  "bucket": "https://opendata.manage-roadworks.service.gov.uk",
  "folders": {
   "permit/": {
    "key": "permit/2026/09.zip",
    "zipMB": 1044.9,
-   "downloadSeconds": 4.9,
-   "parseSeconds": 63.1,
+   "downloadSeconds": 2.3,
+   "parseSeconds": 81.5,
    "messages": 1081996,
    "unusable": 0,
    "eventTypes": {
@@ -166,8 +166,8 @@
   "activity/": {
    "key": "activity/2026/09.zip",
    "zipMB": 12.8,
-   "downloadSeconds": 1.3,
-   "parseSeconds": 1.0,
+   "downloadSeconds": 0.4,
+   "parseSeconds": 1.3,
    "messages": 16531,
    "unusable": 0,
    "eventTypes": {
@@ -269,7 +269,7 @@
   "section_58/": {
    "key": "section_58/2026/09.zip",
    "zipMB": 3.1,
-   "downloadSeconds": 1.0,
+   "downloadSeconds": 0.3,
    "parseSeconds": 0.3,
    "messages": 3764,
    "unusable": 0,
@@ -371,89 +371,103 @@
    "proposed": 517
   },
   "withoutLocation": 0,
-  "kept": 127186,
+  "kept": 104560,
   "keptByKindStatus": {
    "permit/started": 10851,
-   "permit/approved": 87628,
-   "permit/applied": 15363,
-   "activity/planned": 11349,
+   "permit/approved": 69739,
+   "permit/applied": 14566,
+   "activity/planned": 7409,
    "s58/in_force": 1478,
    "s58/proposed": 517
   },
   "keptOutsideUK": 0,
-  "keptWithClosure": 32226,
+  "keptWithClosure": 29407,
   "topAuthorities": [
    [
     "ESSEX COUNTY COUNCIL",
-    3859
+    3283
    ],
    [
     "KENT COUNTY COUNCIL",
-    3301
-   ],
-   [
-    "HAMPSHIRE COUNTY COUNCIL",
-    2905
+    2548
    ],
    [
     "STAFFORDSHIRE COUNTY COUNCIL",
-    2885
+    2533
+   ],
+   [
+    "HAMPSHIRE COUNTY COUNCIL",
+    2446
    ],
    [
     "HERTFORDSHIRE COUNTY COUNCIL",
-    2801
+    2353
    ],
    [
-    "BIRMINGHAM CITY COUNCIL",
-    2580
+    "DEVON COUNTY COUNCIL",
+    2129
    ],
    [
     "LANCASHIRE COUNTY COUNCIL",
-    2565
+    2127
    ],
    [
     "NORFOLK COUNTY COUNCIL",
-    2477
+    2096
    ]
-  ]
+  ],
+  "keptTiming": {
+   "started": 10851,
+   "within_7_days": 22109,
+   "window_begun": 19176,
+   "8_to_30_days": 26793,
+   "later": 23636
+  }
  },
  "tiles": {
-  "count": 1828,
-  "items": 127186,
-  "totalMB": 52.88,
-  "totalGzMB": 7.8,
+  "count": 1819,
+  "items": 104560,
+  "totalMB": 40.97,
+  "totalGzMB": 6.32,
   "fileKB": {
-   "median": 11.9,
-   "p95": 109.4,
-   "max": 1098.2
+   "median": 9.6,
+   "p95": 83.5,
+   "max": 851.0
   },
   "gzKB": {
-   "median": 2.3,
-   "p95": 13.7,
-   "max": 148.8
+   "median": 2.0,
+   "p95": 10.9,
+   "max": 113.2
   },
   "busiest": [
    [
     "25_98",
-    2473
+    2038
    ],
    [
     "25_99",
-    1771
+    1394
    ],
    [
     "24_98",
-    1472
-   ],
-   [
-    "44_70",
-    1354
+    1214
    ],
    [
     "25_97",
-    1351
+    1091
+   ],
+   [
+    "44_70",
+    980
    ]
   ]
+ },
+ "demo": {
+  "dir": "roadworks",
+  "asOf": "2026-09-30",
+  "tiles": 15,
+  "items": 3371,
+  "bytes": 1293955
  },
  "examples": [
   {
@@ -462,14 +476,11 @@
    "sev": 165316300,
    "street": "MIDLAND ROAD",
    "town": "THRAPSTON",
-   "usrn": "12801226",
    "ha": "North Northamptonshire Council",
-   "hac": "2840",
-   "road": "4",
    "who": "Connected Kerb",
+   "what": "Utility asset works",
    "cat": "Standard",
    "tm": "Give and take",
-   "ttro": "No",
    "loc": "Footway, Verge",
    "start": "2026-09-29",
    "end": "2026-10-05",
@@ -483,51 +494,46 @@
   },
   {
    "k": "permit",
-   "ev": 164753289,
-   "sev": 164753289,
-   "street": "SPINNEY ROAD",
-   "town": "WELDON",
-   "usrn": "9300405",
-   "ha": "North Northamptonshire Council",
-   "hac": "2840",
-   "road": "4",
+   "ev": 165513056,
+   "sev": 165513056,
+   "street": "CHURCH STREET",
+   "town": "THEALE",
+   "ha": "WEST BERKSHIRE COUNCIL",
    "who": "Connected Kerb",
+   "what": "Utility asset works",
    "cat": "Minor",
-   "tm": "Give and take",
-   "ttro": "No",
-   "loc": "Footway, Verge",
-   "start": "2026-09-24",
-   "end": "2026-09-28",
-   "lat": 52.49305,
-   "lng": -0.62961,
-   "len": 21,
-   "t": "2026-09-22T07:39:05.067Z",
+   "tm": "Some carriageway incursion",
+   "loc": "Footway, Carriageway",
+   "start": "2026-10-06",
+   "end": "2026-10-08",
+   "lat": 51.43498,
+   "lng": -1.08584,
+   "len": 44,
+   "t": "2026-09-30T14:21:33.503Z",
    "st": "approved",
-   "st_t": "2026-09-22T07:39:05.067Z"
+   "st_t": "2026-09-30T14:21:33.503Z"
   },
   {
    "k": "permit",
-   "ev": 164220189,
-   "sev": 164220189,
-   "street": "WEST END ROAD",
-   "town": "MORTIMER COMMON",
-   "usrn": "26902094",
-   "ha": "WEST BERKSHIRE COUNCIL",
-   "hac": "340",
-   "road": "4",
+   "ev": 165447226,
+   "sev": 165447226,
+   "street": "DALE LANE",
+   "town": "WARRINGTON",
+   "area": "APPLETON",
+   "ha": "WARRINGTON BOROUGH COUNCIL",
    "who": "Connected Kerb",
+   "what": "Utility asset works",
    "cat": "Minor",
    "tm": "Some carriageway incursion",
-   "ttro": "No",
    "loc": "Footway",
-   "start": "2026-09-21",
-   "end": "2026-09-22",
-   "lat": 51.37606,
-   "lng": -1.06611,
-   "len": 52,
-   "t": "2026-09-15T10:15:17.558Z",
+   "start": "2026-10-06",
+   "end": "2026-10-08",
+   "lat": 53.36452,
+   "lng": -2.56728,
+   "len": 49,
+   "t": "2026-09-30T09:09:00.247Z",
    "st": "applied",
-   "st_t": "2026-09-15T10:15:17.558Z"
+   "st_t": "2026-09-30T09:09:00.247Z"
   },
   {
    "k": "activity",
@@ -536,10 +542,7 @@
    "street": "BRANCH ROAD",
    "town": "BATH",
    "area": "HINTON CHARTERHOUSE",
-   "usrn": "47902176",
    "ha": "BATH AND NORTH EAST SOMERSET COUNCIL",
-   "hac": "114",
-   "road": "2",
    "name": "Multi Way Lights Branch Road/Warminster Road A36",
    "what": "Tree Cutting",
    "tm": "multi_way_signals",
@@ -550,7 +553,6 @@
    "end": "2026-11-05",
    "lat": 51.33013,
    "lng": -2.3181,
-   "len": 0,
    "t": "2026-09-15T10:15:09.806Z",
    "st": "planned",
    "st_t": "2026-09-15T10:15:09.806Z"
@@ -562,9 +564,7 @@
    "street": "COTMANHAY ROAD",
    "town": "ILKESTON",
    "area": "COTMANHAY",
-   "usrn": "14000307",
    "ha": "DERBYSHIRE COUNTY COUNCIL",
-   "hac": "1050",
    "extent": "whole_road",
    "dur": "two_years",
    "loc": "Carriageway",
@@ -583,9 +583,7 @@
    "sev": 164256483,
    "street": "HURN LANE",
    "town": "KEYNSHAM",
-   "usrn": "47903012",
    "ha": "BATH AND NORTH EAST SOMERSET COUNCIL",
-   "hac": "114",
    "extent": "part_of_the_road",
    "dur": "three_years",
    "loc": "Footway",
