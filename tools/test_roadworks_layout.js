@@ -1,11 +1,11 @@
-// Tests for the roadworks card layout and the live-data gap note (patches/r37_roadworks_card_layout.py), in a simulated browser.
+// Tests for the roadworks card layout, the nearest-first order of "In progress" and the live-data gap note (patches/r37_roadworks_card_layout.py), in a simulated browser.
 // Usage: npm install jsdom && node tools/test_roadworks_layout.js [path/to/index.html]   (defaults to ../index.html)
 const {JSDOM,VirtualConsole}=require('jsdom');const fs=require('fs');
 const html=fs.readFileSync(process.argv[2]||require('path').join(__dirname,'..','index.html'),'utf8');
 const iso=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
 const base={council:"Slough Borough Council",region:"South East",nation:"England",postcode:"SL1",pcfull:"SL1 1AA",ward:"Slough Central",lat:51.5083,lng:-0.5846,radius:1,sits:[],interests:[],muted:[],nb:{}};
 const item=(o)=>Object.assign({k:"permit",id:"P:"+Math.random(),street:"UXBRIDGE ROAD",town:"IVER",who:"Buckinghamshire Council",what:"Highway improvement works",tm:"Road closure",lat:51.5090,lng:-0.5850},o);
-const items=[item({id:"a",st:"started",start:iso(-30),end:iso(18)}),item({id:"b",st:"approved",start:iso(5),end:iso(6),street:"CHURCH ROAD",tm:"Multi-way signals"}),item({id:"c",k:"s58",st:"in_force",start:iso(-30),end:iso(700),street:"RESURFACED RD",who:undefined,what:undefined})];
+const items=[item({id:"a",st:"started",start:iso(-30),end:iso(18)}),item({id:"n",st:"started",start:iso(-2),end:iso(5),street:"NEAR AND NEW",lat:51.5084}),item({id:"f",st:"started",start:iso(-60),end:iso(9),street:"FAR AND OLD",lat:51.5140}),item({id:"b",st:"approved",start:iso(5),end:iso(6),street:"CHURCH ROAD",tm:"Multi-way signals"}),item({id:"c",k:"s58",st:"in_force",start:iso(-30),end:iso(700),street:"RESURFACED RD",who:undefined,what:undefined})];
 function make(idx){
   const errs=[];const vc=new VirtualConsole();vc.on("jsdomError",e=>errs.push(String(e.message||e).slice(0,100)));
   return new Promise(res=>{
@@ -17,11 +17,13 @@ function make(idx){
 }
 const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
 (async()=>{let all=true;const T=(c,m)=>{all=ok(c,m)&&all};const now=new Date().toISOString();
- const tiles={"25_94":3};
+ const tiles={"25_94":5};
  // card layout
  let r=await make({updated:now,live:true,tiles});
+ const order=[...r.el.querySelectorAll("#s-horizon ul li b")].map(b=>b.textContent.split(",")[0]);
  const cards=[...r.el.querySelectorAll("#s-horizon ul li")];
  T(cards.length>=3,"cards are shown ("+cards.length+")");
+ T(order.indexOf("NEAR AND NEW")>=0&&order.indexOf("NEAR AND NEW")<order.indexOf("UXBRIDGE ROAD")&&order.indexOf("UXBRIDGE ROAD")<order.indexOf("FAR AND OLD"),"in progress is listed nearest first, not oldest first ("+order.slice(0,4).join(" | ")+")");
  T(cards.every(li=>li.querySelector("b").style.display==="block"),"every card's street name is its own block");
  T(cards.every(li=>[...li.querySelectorAll("span.lead")].length===2&&[...li.querySelectorAll("span.lead")].every(s=>s.style.display==="block")),"every card's two detail lines are their own blocks");
  const first=cards.find(li=>li.textContent.includes("UXBRIDGE"));
