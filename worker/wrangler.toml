@@ -2,6 +2,7 @@
 # database until the hourly GitHub job collects it. Deployed by .github/workflows/deploy-receiver.yml.
 # Free-plan limits it was sized against (Cloudflare docs, 4 October 2026): 100,000 Worker requests and 100,000 D1 row
 # writes a day. The national feed is about 37,000 messages a day, one request and one write each.
+# The queue is read with a secret (DRAIN_TOKEN) that the workflow sets on the Worker; it is not stored in this file.
 name = "statute-streetworks-receiver"
 main = "src/index.js"
 compatibility_date = "2026-09-01"
