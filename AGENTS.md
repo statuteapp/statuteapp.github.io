@@ -9,9 +9,23 @@
 - No frontend package manager/build command is configured. The Python feed builder currently uses the Python standard library; inspect imports and workflow before adding dependencies.
 - The sample council is Slough. Coverage is incomplete and must not be described as UK-wide until real source coverage is built and verified.
 
+## Source policy (owner rule, 4 October 2026)
+
+- Use only official government sources. A third party is allowed only where government has approved it as a route (for example Street Manager for street works). Do not use commercial or volunteer republishers of government data when the government body publishes the data itself.
+- Always name and link the overarching source, not the tool that displays it. Councils use their own street-works software, but the data source is Street Manager (Department for Transport), so that is what Statute attributes. The same applies to any other data that councils or trusts pass on from a national system.
+- Record the licence and coverage of every source before building an adapter. Say plainly where coverage stops.
+- Known breach to fix: the postcode lookup uses postcodes.io, a third-party service. Replace it with the ONS National Statistics Postcode Lookup from the ONS Open Geography Portal once the exact service address and terms are verified. See the private note `chats/2026-10-04-owner-direction-official-sources-location.md`.
+- The NHS App cannot be used as a data source. For A&E and urgent care use official NHS England and devolved-nation publications only, and never show a "live wait" unless an NHS body publishes it openly itself.
+
+## Location model (owner direction, 4 October 2026)
+
+- Onboarding asks for a postcode once, only to identify the council. Do not ask for a more precise location unless the resident chooses street-level news.
+- The ladder is street, town, county, country, UK. Matching happens on the device against a per-council-area file; the street is never sent anywhere. The same order sorts deep-topic lists, nearest first.
+- The ONS keeps no official postcode-to-town lookup, so the "town" rung needs an agreed official basis before it is built.
+
 ## Privacy and accuracy
 
-- Never send a resident's postcode, household, job, age, interests or other profile answers to the feed builder or public-service source directory. Keep personal matching on the device.
+- Never send a resident's postcode, household, job, age, interests or other profile answers to the feed builder or public-service source directory. Keep personal matching on the device. The one current exception is the postcode lookup call to the lookup service, which must be described honestly in the privacy wording.
 - Do not invent an API endpoint, meeting, deadline, law, penalty, or source link. Prefer official public data and record its licence.
 - Keep sample/prototype information visibly labelled. Do not treat a missing feed as evidence that no local event exists.
 - The public app should show information relevant to the resident's selected area. Keep internal source URLs and per-source error diagnostics out of the citizen-facing flow.
