@@ -4,8 +4,8 @@ import json, os, sys, tempfile, unittest
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crime_points as C
 
-def crime(cat, lat, lng, sid, street, month="2026-08"):
-    return {"category": cat, "month": month, "location": {"latitude": str(lat), "longitude": str(lng), "street": {"id": sid, "name": street}}}
+def crime(cat, lat, lng, sid, street, month="2026-08", cid=None):
+    return {"id": cid, "category": cat, "month": month, "location": {"latitude": str(lat), "longitude": str(lng), "street": {"id": sid, "name": street}}}
 
 SAMPLE = [crime("anti-social-behaviour", 51.5101, -0.5951, 1, "On or near High Street")] * 7 + \
          [crime("violent-crime", 51.5101, -0.5951, 1, "On or near High Street")] * 5 + \
@@ -15,9 +15,10 @@ SAMPLE = [crime("anti-social-behaviour", 51.5101, -0.5951, 1, "On or near High S
 
 class T(unittest.TestCase):
     def setUp(self):
+        C.time.sleep = lambda s: None                                  # no real pauses between requests in tests
         self.d = tempfile.mkdtemp(); self.out = os.path.join(self.d, "crime_points.json")
     def run_main(self, crimes):
-        return C.main(self.out, C.AREAS, lambda url: crimes)
+        return C.main(self.out, C.AREAS, lambda url: crimes)       # every request, area or circle, gets the same answer
     def load(self):
         with open(self.out, encoding="utf-8") as f:
             return json.load(f)
@@ -60,6 +61,30 @@ class T(unittest.TestCase):
     def test_no_file_and_a_failed_download_writes_nothing(self):
         def boom(url): raise OSError("offline")
         self.assertEqual(C.main(self.out, C.AREAS, boom), 0); self.assertFalse(os.path.exists(self.out))
+
+    def test_the_whole_borough_is_asked_for_in_one_area_request(self):
+        urls = []
+        def get(url): urls.append(url); return SAMPLE
+        C.main(self.out, C.AREAS, get); d = self.load()
+        self.assertEqual(len(urls), 1); self.assertIn("poly=51.545,-0.665:51.545,-0.49:51.47,-0.49:51.47,-0.665", urls[0]); self.assertEqual(d["coverage"], "area")
+        self.assertEqual(d["bbox"], [51.47, -0.665, 51.545, -0.49])
+
+    def test_if_the_area_request_is_refused_overlapping_circles_are_used_and_duplicates_removed(self):
+        urls = []
+        def get(url):
+            urls.append(url)
+            if "poly=" in url: raise OSError("503 too many crimes")
+            return [crime("burglary", 51.5101, -0.5951, 1, "On or near High Street", cid=111),        # the same crime comes back from every circle near it
+                    crime("burglary", 51.52, -0.60, 2, "On or near Park Lane", cid=222)]
+        C.main(self.out, C.AREAS, get); d = self.load()
+        circles = [u for u in urls if "lat=" in u]
+        self.assertGreater(len(circles), 20); self.assertEqual(d["coverage"], "circles")
+        self.assertEqual((d["total"], sum(p["n"] for p in d["points"])), (2, 2))               # 2 crimes, not 2 per circle
+
+    def test_circles_cover_the_whole_box(self):
+        cs = C.circle_centres(C.AREAS[0]["bbox"])
+        self.assertTrue(all(51.47 <= la <= 51.545 + 1e-6 and -0.665 <= ln <= -0.49 + 1e-6 for la, ln in cs))
+        self.assertGreaterEqual(max(ln for _, ln in cs), -0.49 - C.CIRCLE_STEP[1]); self.assertGreaterEqual(max(la for la, _ in cs), 51.545 - C.CIRCLE_STEP[0])
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)
