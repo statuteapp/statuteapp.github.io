@@ -593,17 +593,34 @@ function guessCouncil(pcRaw){
   const letters=out.replace(/[^A-Z]/g,"");
   return COUNCILS.find(c=>c.pc.includes(out))||COUNCILS.find(c=>c.pc.includes(letters))||null;
 }
-// Live lookup: postcodes.io serves the ONS Postcode Directory (OGL). Full postcode -> one council; outward code -> every council it touches.
+// Postcode lookup from the official ONS Postcode Directory (Office for National Statistics, OGL v3), prepared by
+// build_postcodes.py as one small file per outward code on Statute's own site (pc/SL1.json etc). The phone fetches only
+// the file for the first half of the postcode and finds the full postcode inside it, so the full postcode never leaves
+// the device and no third-party lookup service is used. Areas: street (postcode), town, council, county, country, UK.
+function councilKey(n){return String(n||"").toLowerCase().replace(/^(the\s+)?(royal borough of|london borough of|city and county of|city of|county of)\s+/,"").replace(/,\s*(city|county) of$/,"").replace(/\s+(metropolitan borough|borough|city|county|district)?\s*council$/,"").replace(/[^a-z]/g,"");}
+// ONS calls Slough "Slough"; the feeds call it "Slough Borough Council". Use the feeds' name when they mean the same council.
+function knownCouncilName(n){const k=councilKey(n);const c=COUNCILS.find(c=>councilKey(c.n)===k);return c?c.n:n;}
+const PC_FILES={};
+async function pcFile(out){if(out in PC_FILES)return PC_FILES[out];let j=null;try{const r=await fetch("./pc/"+encodeURIComponent(out)+".json");if(r.ok)j=await r.json();}catch(e){}if(j)PC_FILES[out]=j;return j;}
+function pcArea(f,suf){const row=f&&f.p&&f.p[suf];if(!row)return null;const nm=i=>i>=0&&f.c[i]?{code:f.c[i][0],name:f.c[i][1]||""}:null;
+  const[lat,lng,lad,ward,cty,par,ctry,rgn,pcon,pfa,icb,bua]=row;
+  return{lat,lng,lad:nm(lad),ward:nm(ward),county:nm(cty),parish:nm(par),country:nm(ctry),region:nm(rgn),constituency:nm(pcon),police:nm(pfa),icb:nm(icb),bua:nm(bua)};}
+function areaToCouncil(A,extra){const nat=A.country&&A.country.name||"England";const rg=A.region&&A.region.name;
+  return Object.assign({n:knownCouncilName(A.lad.name||A.lad.code),ladCode:A.lad.code,r:REGION_OF[rg]||rg||nat,nat},extra||{});}
+function areaDetail(A){const nm=x=>x&&x.name||null;const par=A.parish&&A.parish.name&&!/unparished/i.test(A.parish.name)?A.parish.name:null;
+  return{town:nm(A.bua)||par,parish:par,county:nm(A.county),constituency:nm(A.constituency),police:nm(A.police),icb:nm(A.icb),
+    codes:{lad:A.lad&&A.lad.code,ward:A.ward&&A.ward.code,county:A.county&&A.county.code,parish:A.parish&&A.parish.code,constituency:A.constituency&&A.constituency.code,police:A.police&&A.police.code,icb:A.icb&&A.icb.code,town:A.bua&&A.bua.code},
+    source:"ONS Postcode Directory"};}
 const REGION_OF={"North East":"North East","North West":"North West","Yorkshire and The Humber":"Yorkshire and the Humber","East Midlands":"East Midlands","West Midlands":"West Midlands","East of England":"East of England","London":"Greater London","South East":"South East","South West":"South West"};
 async function lookupCouncils(pcRaw){
   const pc=(pcRaw||"").toUpperCase().replace(/\s+/g,"");if(pc.length<2)return [];
   const full=/^[A-Z]{1,2}\d[A-Z\d]?\d[A-Z]{2}$/.test(pc);
-  const mk=(n,r,nat,extra)=>Object.assign({n,r:REGION_OF[r]||r||"",nat:nat||"England"},extra||{});
-  try{
-    if(full){const r=await fetch("https://api.postcodes.io/postcodes/"+pc);if(r.ok){const j=await r.json();const d=j.result;if(d&&d.admin_district)return [mk(d.admin_district,d.region||d.country,d.country,{lat:d.latitude,lng:d.longitude,pcfull:d.postcode,ward:d.admin_ward})];}}
-    const out=full?pc.slice(0,-3):pc;
-    const r=await fetch("https://api.postcodes.io/outcodes/"+out);if(r.ok){const j=await r.json();const d=j.result;if(d&&d.admin_district&&d.admin_district.length)return d.admin_district.map((n,i)=>mk(n,(d.region||[])[0]||(d.country||[])[0],(d.country||[])[i]||(d.country||[])[0]));}
-  }catch(e){}
+  const out=full?pc.slice(0,-3):pc;
+  if(/^[A-Z]{1,2}\d[A-Z\d]?$/.test(out)){const f=await pcFile(out);
+    if(f){
+      if(full){const A=pcArea(f,pc.slice(-3));if(A&&A.lad)return [areaToCouncil(A,{lat:A.lat,lng:A.lng,pcfull:out+" "+pc.slice(-3),ward:A.ward&&A.ward.name||null,area:areaDetail(A)})];}
+      const seen={};for(const s in f.p){const A=pcArea(f,s);if(A&&A.lad&&!seen[A.lad.code])seen[A.lad.code]=areaToCouncil(A);}
+      const l=Object.values(seen);if(l.length)return l;}}
   const g=guessCouncil(pc);return g?[{n:g.n,r:g.r,nat:g.nat}]:[];
 }
 
@@ -1531,7 +1548,7 @@ function renderOnb(prefill){
       o.innerHTML=`<div class="onbhead"><span class="lead">Step 1 of ${total}</span><div class="prog" aria-hidden="true"><i style="width:${Math.round(100/total)}%"></i></div></div>
       <h1>What the law asks of you, from when.</h1>
       <p class="lede">Answer the same questions the census asks, and Statute builds your feed from government sources only. Nothing you enter leaves this phone.</p>
-      <div class="field"><label for="pc">Your full postcode</label><input id="pc" inputmode="text" autocomplete="postal-code" placeholder="e.g. SL1 1AA" maxlength="8" value="${esc(a.pc||"")}"><span class="lead">Finds your council and ward, and lets street-level notices be sorted by distance from your door. Stored only on this device.</span></div>
+      <div class="field"><label for="pc">Your full postcode</label><input id="pc" inputmode="text" autocomplete="postal-code" placeholder="e.g. SL1 1AA" maxlength="8" value="${esc(a.pc||"")}"><span class="lead">Finds your council, ward and town from the official ONS Postcode Directory, and lets street-level notices be sorted by distance from your door. Only the first half of your postcode is used, to fetch your area's file from Statute's own site; the full postcode stays on this device.</span></div>
       <div id="pcguess" aria-live="polite"></div>
       <p class="note">We never ask your religion, ethnicity, national identity, sexual orientation or gender identity. No rule depends on them.</p>
       <div class="row"><button class="btn" id="next">Continue</button></div>`;
@@ -1567,11 +1584,11 @@ function renderOnb(prefill){
     const h=o.querySelector("h1");if(h){h.setAttribute("tabindex","-1");h.focus({preventScroll:true});}
   };
   const finish=()=>{
-    const pc=(a.pc||"").trim().toUpperCase();const hits=o._pcHits||[];const g=hits.length===1?hits[0]:(prefill&&profile?{n:profile.council,r:profile.region,nat:profile.nation,lat:profile.lat,lng:profile.lng,pcfull:profile.pcfull,ward:profile.ward}:null);
+    const pc=(a.pc||"").trim().toUpperCase();const hits=o._pcHits||[];const g=hits.length===1?hits[0]:(prefill&&profile?{n:profile.council,r:profile.region,nat:profile.nation,lat:profile.lat,lng:profile.lng,pcfull:profile.pcfull,ward:profile.ward,ladCode:profile.ladCode,area:profile.area}:null);
     const sits=sitsFromCensus(a);const interests=[...new Set(sits.filter(x=>INT_LABEL[x]))];
     confirmCouncil(g,pc,c=>{
       const keep=prefill&&profile?profile:{asis:[],muted:[],radius:1};
-      profile=Object.assign({},keep,{postcode:pc.split(" ")[0]||pc,pcfull:c.pcfull||null,lat:c.lat||null,lng:c.lng||null,ward:c.ward||null,council:c.n,region:c.r,nation:c.nat,
+      profile=Object.assign({},keep,{postcode:pc.split(" ")[0]||pc,pcfull:c.pcfull||null,lat:c.lat||null,lng:c.lng||null,ward:c.ward||null,ladCode:c.ladCode||null,area:c.area||null,council:c.n,region:c.r,nation:c.nat,
         arrived:a.arrived||null,sits:sits.filter(s=>!INT_LABEL[s]),interests,role:a.role||"none",mode:a.mode||"keep",income:a.income||keep.income||0,census:a,radius:keep.radius||1});
       register=a.age==="u16"?"kid":"adult";save();o.hidden=true;renderAll();show("today");},hits);
   };
@@ -1583,8 +1600,8 @@ function confirmCouncil(g,pc,cb,hits){
   ${g?`<div class="confirm"><span class="lead">From ${esc(pc)}</span><div class="big">${esc(g.n)}</div><span class="lead">${esc(g.r)} · ${esc(g.nat)}</span></div><div class="row"><button class="btn" id="yes">Yes, that's my council</button><button class="btn ghost" id="no">It's a different one</button></div>`:`<p>${pc?"We couldn't match "+esc(pc)+" to one council.":"Find your council."} Type a postcode, or part of one, and pick from the list.</p>`}
   <div id="pick" ${g?"hidden":""}><div class="field" style="margin-top:14px"><label for="cq">Postcode or council name</label><input id="cq" autocomplete="off" placeholder="e.g. SL1 1AA, or SL1" value="${g?"":esc(pc)}"><span class="lead">A full postcode gives one answer; the first half lists every council it touches.</span></div><div id="clist"></div>
   <div class="confirm" id="csel" hidden><span class="lead">Selected</span><div class="big" id="cname"></div><span class="lead" id="cmeta"></span></div><button class="btn" id="use" disabled>Use this council</button></div>
-  <p class="note">England only for now. A Scottish, Welsh or Northern Irish postcode will find its council but the feeds behind it aren't built yet, because their courts, bank holidays and street works registers all differ.</p>
-  <p class="note">Lookup uses the ONS Postcode Directory via postcodes.io. The postcode is sent to that service for the match and not stored; the result stays on this device.</p>`;
+  <p class="note">England only for now. A Scottish or Welsh postcode will find its council but the feeds behind it aren't built yet, because their courts, bank holidays and street works registers all differ. Northern Irish postcodes can't be looked up yet.</p>
+  <p class="note">Lookup uses the ONS Postcode Directory (Office for National Statistics, Open Government Licence). Statute fetches the file for the first half of your postcode from its own site and finds your full postcode on this device. It is not sent anywhere.</p>`;
   let chosen=null;const pick=o.querySelector("#pick"),cq=o.querySelector("#cq"),cl=o.querySelector("#clist"),use=o.querySelector("#use");
   const choose=c=>{chosen=c;o.querySelector("#csel").hidden=false;o.querySelector("#cname").textContent=c.n;o.querySelector("#cmeta").textContent=c.r+" · "+c.nat;use.disabled=false;cl.querySelectorAll(".opt").forEach(b=>b.setAttribute("aria-pressed",b.dataset.n===c.n));};
   const list=hs=>{cl.innerHTML=hs.length?hs.map(h=>`<button type="button" class="opt" data-n="${esc(h.n)}" aria-pressed="false">${esc(h.n)}<span class="lead" style="display:block">${esc(h.r)} · ${esc(h.nat)}</span></button>`).join(""):`<div class="lead">Nothing found. Try the first half of your postcode, e.g. SL1.</div>`;
@@ -1801,6 +1818,7 @@ function renderMe(){
   ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div></div>
   <div class="field"><label>Your street</label><div>${profile.lat!=null?`${esc(profile.pcfull||profile.postcode)}${profile.ward?" · "+esc(profile.ward)+" ward":""}<span class="lead" style="display:block">Street-level notices are matched on this device against your full postcode. It never leaves the phone.</span>`:`<span class="lead">Add your full postcode (Change council) to see notices by distance from your door.</span>`}</div>
   <div class="chips" role="group" aria-label="Near you" style="margin-top:8px">${[0.5,1,2,5].map(r=>`<button data-rad="${r}" aria-pressed="${(profile.radius||1)===r}">${r} mi</button>`).join("")}</div></div>
+  <div class="field"><label>Your areas</label>${(()=>{const A=profile.area||{};const rows=[["Street",profile.pcfull?esc(profile.pcfull)+(profile.ward?" · "+esc(profile.ward)+" ward":""):""],["Town",esc(A.town||"")],["Council",esc(profile.council)]].concat(A.county?[["County",esc(A.county)]]:[]).concat(profile.nation==="England"&&profile.region?[["Region",esc(profile.region)]]:[]).concat([["Country",esc(profile.nation||"")],["UK","United Kingdom"]]);return `<div class="tw"><table>${rows.map(([k,v])=>`<tr><th scope="row">${k}</th><td>${v||`<span class="lead">Not known yet</span>`}</td></tr>`).join("")}</table></div><span class="lead" style="display:block">The areas Statute uses to decide what is local to you. From the ONS Postcode Directory (Office for National Statistics, Open Government Licence); worked out on this device.${profile.pcfull&&!profile.area?" Tap Change council and re-enter your postcode if town or county is missing.":""}</span>`;})()}</div>
   <div class="field"><label>Scope</label><div>England<span class="lead" style="display:block">Scotland, Wales and Northern Ireland follow once the England feeds are solid.</span></div></div>`)}
   ${sec("work","Work & situations","Built from your census-style answers. Tick or untick anything; each one carries its own rules.",`<div class="row" style="margin:0 0 10px"><button class="btn ghost sm" id="editcensus">Edit your answers</button></div><div class="field"><label for="occ">Your work</label><div class="lead" style="margin-bottom:4px">Now: <b>${esc(ROLES[profile.role||"none"].title)}</b></div><input id="occ" placeholder="Change: type a job" autocomplete="off"><span class="lead" style="display:block;margin-top:4px">Our job list is still being built: it has ${SOC.length} jobs so far, not the full official list, so yours may be missing.</span><div id="occlist"></div><input type="hidden" id="role" value="${profile.role||"none"}"></div>
   <div class="chkgrid">${SITS.map(([k,l])=>`<label class="chk"><input type="checkbox" value="${k}" ${has(k)?"checked":""}>${SIT_ICON[k]||""} ${l}</label>`).join("")}</div>
@@ -1815,7 +1833,7 @@ function renderMe(){
   <div class="field"><label>Wording</label><div class="seg" role="group" aria-label="Wording"><button data-r="adult" aria-pressed="${register==="adult"}">Standard</button><button data-r="kid" aria-pressed="${register==="kid"}">Simpler words</button></div><span class="lead">Simpler words uses checked shorter explanations where available. Some new items may still show the official summary.</span></div>
   <p class="lead">Also built in: every screen works with a keyboard or game controller (arrows, Enter, Escape, [ and ] for tabs), every item can be read aloud with Listen, the font is Atkinson Hyperlegible, and every abbreviation is tappable.</p>`)}
   ${sec("data","Your data","",`<p style="font-size:15px">Only here, on this device. The feed is public and the same for everyone; your phone does the matching. Nothing about you is sent to a server, so there is no account, no profile held by anyone else, and nothing to request or delete. The app never asks for religion, ethnicity or sexual orientation because no obligation depends on them.</p>
-  <h3>Sources</h3><p class="lead">${esc(feedHealth().txt)}. <a href="./status.html" target="_blank" rel="noopener">Full status page ↗</a></p><div class="tw"><table><tr><th>Source</th><th>Status</th><th>Licence</th></tr>${(window.FEED_META&&window.FEED_META.sources||[]).map(s=>`<tr><td>${esc(s.name)}<span class="lead" style="display:block">${esc((s.url||"").replace(/^https?:\/\//,""))}</span></td><td><span class="dot ${s.ok?"ok":"warn"}"></span>${s.ok?"OK · "+(s.count||0)+" items":"Failing"}${s.error?`<span class="lead" style="display:block">${esc(s.error).slice(0,80)}</span>`:""}</td><td class="lead">${esc(s.licence||"")}</td></tr>`).join("")}<tr><td>postcodes.io<span class="lead" style="display:block">on this device</span></td><td><span class="dot ok"></span>Council and street lookup</td><td class="lead">OGL v3</td></tr></table></div>
+  <h3>Sources</h3><p class="lead">${esc(feedHealth().txt)}. <a href="./status.html" target="_blank" rel="noopener">Full status page ↗</a></p><div class="tw"><table><tr><th>Source</th><th>Status</th><th>Licence</th></tr>${(window.FEED_META&&window.FEED_META.sources||[]).map(s=>`<tr><td>${esc(s.name)}<span class="lead" style="display:block">${esc((s.url||"").replace(/^https?:\/\//,""))}</span></td><td><span class="dot ${s.ok?"ok":"warn"}"></span>${s.ok?"OK · "+(s.count||0)+" items":"Failing"}${s.error?`<span class="lead" style="display:block">${esc(s.error).slice(0,80)}</span>`:""}</td><td class="lead">${esc(s.licence||"")}</td></tr>`).join("")}<tr><td>ONS Postcode Directory<span class="lead" style="display:block">Office for National Statistics · matched on this device</span></td><td><span class="dot ok"></span>Council, ward, town and street lookup</td><td class="lead">OGL v3</td></tr></table></div>
   <div class="row" style="margin-top:12px"><button class="btn ghost" id="reset">Start again</button></div>`)}`;
   s.querySelectorAll("input[type=checkbox]:not([data-int])").forEach(i=>i.onchange=()=>{profile.sits=[...s.querySelectorAll("input[type=checkbox]:not([data-int]):checked")].map(x=>x.value);save();renderAll();});
   s.querySelectorAll("input[data-int]").forEach(i=>i.onchange=()=>{profile.interests=[...s.querySelectorAll("input[data-int]:checked")].map(x=>x.value);save();renderAll();});
@@ -1830,7 +1848,7 @@ function renderMe(){
   s.querySelector("#inc").onchange=e=>{profile.income=+e.target.value||0;save();};
   const refreshPick=()=>{s.querySelector("#asipick").innerHTML=asiPickerHTML({openable:true});bindAsiPick(s,refreshPick);renderToday();};bindAsiPick(s,refreshPick);
   bindOcc(s);s.querySelector("#role").onchange=()=>{profile.role=s.querySelector("#role").value;save();renderAll();};
-  s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;if(c.lat){profile.lat=c.lat;profile.lng=c.lng;profile.pcfull=c.pcfull||null;profile.ward=c.ward||null;}save();document.getElementById("onb").hidden=true;renderAll();show("me");});
+  s.querySelector("#chgc").onclick=()=>confirmCouncil({n:profile.council,r:profile.region,nat:profile.nation},profile.postcode||"",c=>{profile.council=c.n;profile.region=c.r;profile.nation=c.nat;if(c.lat){profile.lat=c.lat;profile.lng=c.lng;profile.pcfull=c.pcfull||null;profile.ward=c.ward||null;profile.ladCode=c.ladCode||null;profile.area=c.area||null;}save();document.getElementById("onb").hidden=true;renderAll();show("me");});
   s.querySelector("#editcensus").onclick=()=>renderOnb(true);s.querySelector("#subs").onclick=renderSubs;
   s.querySelector("#reset").onclick=()=>{if(!confirm("Clear everything on this device and start again?"))return;profile=null;done={};quizDone={};game={xp:0,got:{},badges:{},best:0,day:null,brief:{}};try{localStorage.clear()}catch(e){}renderOnb();};
   s.querySelectorAll(".setnav a").forEach(a=>a.onclick=e=>{e.preventDefault();const t=s.querySelector(a.getAttribute("href"));if(t)t.scrollIntoView({behavior:"smooth",block:"start"});});
@@ -2473,6 +2491,9 @@ if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js")
 loadFeed();
 load();
 if(profile&&!profile.council)profile=null;
+// Round 30: correct council names saved by the old lookup ("Slough" -> "Slough Borough Council") and fill in town/county.
+if(profile){const kn=knownCouncilName(profile.council);if(kn!==profile.council){profile.council=kn;save();}
+  if(profile.pcfull&&!profile.area)lookupCouncils(profile.pcfull).then(h=>{if(h.length===1&&h[0].area&&h[0].n===profile.council){profile.area=h[0].area;profile.ladCode=h[0].ladCode;save();}}).catch(()=>{});}
 if(profile){renderAll();}else{renderOnb();}
 function openHash(){const h=decodeURIComponent(location.hash||"");if(!profile)return true;
   if(h.startsWith("#item/")){const id=h.slice(6);const it=ITEMS.find(x=>x.id===id);if(it){renderDetail(id);return true;}return false;}
