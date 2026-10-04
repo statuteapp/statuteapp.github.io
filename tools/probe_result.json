@@ -1,203 +1,148 @@
 {
- "generatedAt": "2026-10-04T13:15:25Z",
- "page": "https://department-for-transport-streetmanager.github.io/street-manager-docs/archived-notifications/",
- "pageStatus": 200,
- "pageError": null,
- "scripts": [
-  "https://www.googletagmanager.com/gtag/js?id=UA-124523261-3",
-  "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
-  "https://unpkg.com/buefy@0.9.20/dist/buefy.min.js",
-  "https://unpkg.com/moment@2.29.1/min/moment.min.js",
-  "https://department-for-transport-streetmanager.github.io/street-manager-docs/javascript/archived-notifications.js",
-  "https://department-for-transport-streetmanager.github.io/street-manager-docs/javascript/govuk-frontend-6.4.0.min.js"
- ],
- "scriptStatus": {
-  "https://www.googletagmanager.com/gtag/js?id=UA-124523261-3": 200,
-  "https://unpkg.com/vue@2.6.14/dist/vue.min.js": 200,
-  "https://unpkg.com/buefy@0.9.20/dist/buefy.min.js": 200,
-  "https://unpkg.com/moment@2.29.1/min/moment.min.js": 200,
-  "https://department-for-transport-streetmanager.github.io/street-manager-docs/javascript/archived-notifications.js": 200,
-  "https://department-for-transport-streetmanager.github.io/street-manager-docs/javascript/govuk-frontend-6.4.0.min.js": 200
- },
- "candidateCount": 1,
- "candidates": [
-  "https://department-for-transport-streetmanager.github.io/street-manager-docs/assets/manifest.json"
- ],
- "probes": [
-  {
-   "url": "https://department-for-transport-streetmanager.github.io/street-manager-docs/assets/manifest.json",
-   "status": 200,
-   "type": "application/json; charset=utf-8",
-   "length": "800",
-   "modified": "Tue, 29 Sep 2026 15:54:10 GMT",
-   "error": null,
-   "start": "{ \"icons\": [ { \"src\": \"images/favicon.ico\", \"type\": \"image/x-icon\", \"sizes\": \"48x48\" }, { \"src\": \"images/favicon.svg\", \"type\": \"image/svg+xml\", \"sizes\": \"150x150\", \"purpose\": \"any\" }, { \"src\": \"images/govuk-icon-180.png\", \"type\": \"image/png\", \"sizes\": \"180x180\", \"purpose\": \"maskable\" }, { \"src\": \"images/govuk-icon-192.png\", \"type\": \"image/png\", \"sizes\": \"192x192\", \"purpose\": \"m"
-  }
- ],
- "inlineConfig": "));\n    gtag('config', 'UA-124523261-3');\n  </script>\n\n  <meta property=\"og:image\" content=\"/street-manager-docs/assets/images/govuk-opengraph-image.png\">\n\n  <link rel=\"stylesheet\" href=\"/street-manager-docs/stylesheets/archived-notifications.css\" />\n  <script>\n    const config = {\n      title: 'Archived notifications - Plan and manage roadworks information',\n      primaryColor: '#005ea5',\n\n      bucketUrl: 'https://opendata.manage-roadworks.service.gov.uk',\n      rootPrefix: undefined,\n      keyExcludePatterns: [/^index\\.html$/],\n      pageSize: 12,\n\n      bucketMaskUrl: undefined,\n\n      defaultOrder: 'name-asc' // (name|size|dateModified)-(asc|desc)\n    }\n  </script>\n\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"shortcut icon\" />\n\n  <script src=\"https://unpkg.com/vue@2.6.14/dist/vue.min.js\" integrity=\"sha384-ULpZhk1pvhc/UK5ktA9kwb2guy9ovNSTyxPNHANnA35YjBQgdwI+AhLkixDvdlw4\" crossorigin=\"anonymous\"></script>\n  <script>Vue.config.productionTip = false;</script>\n  <style>[v-cloak] {display: none}</style>\n\n  <link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/5.8.55/css/materialdesignicons.min.css\" integrity=\"sha384-mXn03l3egUmSn2pZYz33om5XpEK6GclFj/DZp48zhus7gXuJlYs806Zpmhgy9MKb\" crossorigin=",
- "config": {
-  "bucketUrl": "https://opendata.manage-roadworks.service.gov.uk",
-  "rootPrefix": "",
-  "pageSize": "12",
-  "bucketMaskUrl": ""
- },
- "inlineScripts": [
-  " window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-124523261-3'); ",
-  " const config = { title: 'Archived notifications - Plan and manage roadworks information', primaryColor: '#005ea5', bucketUrl: 'https://opendata.manage-roadworks.service.gov.uk', rootPrefix: undefined, keyExcludePatterns: [/^index\\.html$/], pageSize: 12, bucketMaskUrl: undefined, defaultOrder: 'name-asc' // (name|size|dateModified)-(asc|desc) } ",
-  "Vue.config.productionTip = false;",
-  " document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : ''); ",
-  " import { initAll } from '/street-manager-docs/javascript/govuk-frontend-6.4.0.min.js'; initAll(); "
- ],
- "bucket": {
-  "bucketUrl": "https://opendata.manage-roadworks.service.gov.uk",
-  "rootPrefix": "",
-  "rootStatus": 200,
-  "rootError": null,
-  "rootStart": null,
-  "topPrefixes": [
-   "activity/",
-   "permit/",
-   "section_58/"
-  ],
-  "topFiles": [],
-  "prefixes": {
-   "activity/": {
-    "keys": 73,
-    "moreNotListed": false,
-    "totalMB": 480.5,
-    "firstKeys": [
-     "activity/2020/09.zip",
-     "activity/2020/10.zip",
-     "activity/2020/11.zip"
+ "generatedAt": "2026-10-04T13:25:51Z",
+ "bucket": "https://opendata.manage-roadworks.service.gov.uk",
+ "folders": {
+  "activity/": {
+   "files": 73,
+   "newest": [
+    "activity/2026/09.zip",
+    "2026-10-01T08:02:03.000Z",
+    12800311
+   ],
+   "zip": {
+    "url": "https://opendata.manage-roadworks.service.gov.uk/activity/2026/09.zip",
+    "zipBytes": 12800311,
+    "entries": 16531,
+    "indexBytes": 1909926,
+    "uncompressedMB": 17.2,
+    "firstNames": [
+     "ARN-114-00468769_activity_updated_event_2026-09-15_11-15-09-159.json",
+     "ARN-114-01071230_activity_created_event_2026-09-30_15-45-03-453.json",
+     "ARN-114-01258403_activity_created_event_2026-09-24_12-40-33-4033.json",
+     "ARN-114-01620321_activity_updated_event_2026-09-03_12-22-10-2210.json"
     ],
-    "lastKeys": [
-     "activity/2026/05.zip",
-     "activity/2026/06.zip",
-     "activity/2026/07.zip",
-     "activity/2026/08.zip",
-     "activity/2026/09.zip"
+    "lastNames": [
+     "ARN-738-53920198_activity_created_event_2026-09-22_08-56-37-5637.json",
+     "ARN-738-58824674_activity_created_event_2026-09-21_12-12-50-1250.json",
+     "ARN-738-76508535_activity_created_event_2026-09-10_15-06-28-628.json",
+     "ARN-738-78457510_activity_created_event_2026-09-07_15-34-43-3443.json"
     ],
-    "newestModified": "2026-10-01T08:02:03.000Z",
-    "oldestModified": "2022-08-11T15:06:40.000Z",
-    "lastFiveModified": [
-     [
-      "activity/2026/05.zip",
-      "2026-06-01T08:04:29.000Z",
-      11410435
-     ],
-     [
-      "activity/2026/06.zip",
-      "2026-07-21T07:20:57.000Z",
-      9470846
-     ],
-     [
-      "activity/2026/07.zip",
-      "2026-08-01T08:02:04.000Z",
-      12712029
-     ],
-     [
-      "activity/2026/08.zip",
-      "2026-09-01T08:04:15.000Z",
-      11554687
-     ],
-     [
-      "activity/2026/09.zip",
-      "2026-10-01T08:02:03.000Z",
-      12800311
-     ]
-    ]
-   },
-   "permit/": {
-    "keys": 75,
-    "moreNotListed": false,
-    "totalMB": 70980.8,
-    "firstKeys": [
-     "permit/2020/07.zip",
-     "permit/2020/08.zip",
-     "permit/2020/09.zip"
+    "entrySizeBytes": {
+     "min": 871,
+     "median": 981,
+     "max": 33406
+    },
+    "samples": [
+     {
+      "name": "ARN-114-00468769_activity_updated_event_2026-09-15_11-15-09-159.json",
+      "entryBytes": 1042,
+      "bytesRead": 1042,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":164220159,\"event_type\":\"ACTIVITY_UPDATED\",\"object_data\":{\"activity_reference_number\":\"ARN-114-00468769\",\"usrn\":\"47902176\",\"street_name\":\"BRANCH ROAD\",\"area_name\":\"HINTON CHARTERHOUSE\",\"town\":\"BATH\",\"road_category\":\"2\",\"activity_coordinates\":\"POINT(377934.099700734 159051.291659546)\",\"activity_name\":\"Multi Way Lights Branch Road/Warminster Road A36\",\"activity_type\":\"other\",\"activity_type_details\":\"Tree Cutting\",\"start_date\":\"2026-11-03T00:00:00.000Z\",\"start_time\":null,\"end_date\":\"2026-11-05T00:00:00.000Z\",\"end_time\":null,\"activity_location_type\":\"Carriageway\",\"activity_location_description\":\"Branch Road and Junction with A36 Warminster Road National Highways permit NEM 5175"
+     },
+     {
+      "name": "ARN-4310-52115088_activity_created_event_2026-09-04_14-57-44-5744.json",
+      "entryBytes": 1016,
+      "bytesRead": 1016,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":163451977,\"event_type\":\"ACTIVITY_CREATED\",\"object_data\":{\"activity_reference_number\":\"ARN-4310-52115088\",\"usrn\":\"23603751\",\"street_name\":\"REGENT ROAD\",\"area_name\":\"KIRKDALE\",\"town\":\"LIVERPOOL\",\"road_category\":\"1\",\"activity_coordinates\":\"POINT(333810.394447151 393625.870116422)\",\"activity_name\":\"(8538) S169 - Welfare Unit\",\"activity_type\":\"other\",\"activity_type_details\":\"Section 169 Licence\",\"start_date\":\"2026-08-04T23:00:00.000Z\",\"start_time\":\"2026-08-04T23:00:00.000Z\",\"end_date\":\"2026-09-05T22:59:59.000Z\",\"end_time\":\"2026-09-05T22:59:59.000Z\",\"activity_location_type\":\"Footway\",\"activity_location_description\":\"176 Regent Road, Kirkdale, Liverpool, L20 8DF\",\"traffic_managem"
+     },
+     {
+      "name": "ARN-738-78457510_activity_created_event_2026-09-07_15-34-43-3443.json",
+      "entryBytes": 964,
+      "bytesRead": 964,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":163589613,\"event_type\":\"ACTIVITY_CREATED\",\"object_data\":{\"activity_reference_number\":\"ARN-738-78457510\",\"usrn\":\"38201175\",\"street_name\":\"HUMBER ROAD\",\"area_name\":\"\",\"town\":\"THORNABY\",\"road_category\":\"3\",\"activity_coordinates\":\"LINESTRING(445588.25 516911.87,445595.12 516912.5)\",\"activity_name\":\"Other Obstruction/Breaking out order\",\"activity_type\":\"other\",\"activity_type_details\":\"Driveway crossing installation\",\"start_date\":\"2026-09-09T23:00:00.000Z\",\"start_time\":null,\"end_date\":\"2026-09-10T23:00:00.000Z\",\"end_time\":null,\"activity_location_type\":\"Footway\",\"activity_location_description\":\"o/s 17\",\"traffic_management_required\":\"No\",\"traffic_management_type\":\"some_carriageway"
+     }
     ],
-    "lastKeys": [
-     "permit/2026/05.zip",
-     "permit/2026/06.zip",
-     "permit/2026/07.zip",
-     "permit/2026/08.zip",
-     "permit/2026/09.zip"
+    "estMessagesInZip": 16531,
+    "estMessagesPerDay": 551,
+    "bytesDownloaded": 4411703
+   }
+  },
+  "permit/": {
+   "files": 75,
+   "newest": [
+    "permit/2026/09.zip",
+    "2026-10-01T09:29:58.000Z",
+    1044935949
+   ],
+   "zip": {
+    "url": "https://opendata.manage-roadworks.service.gov.uk/permit/2026/09.zip",
+    "zipBytes": 1044935949,
+    "entries": 1081996,
+    "indexBytes": 125089126,
+    "note": "index too large to read; entry count only"
+   }
+  },
+  "section_58/": {
+   "files": 55,
+   "newest": [
+    "section_58/2026/09.zip",
+    "2026-10-01T08:00:36.000Z",
+    3089473
+   ],
+   "zip": {
+    "url": "https://opendata.manage-roadworks.service.gov.uk/section_58/2026/09.zip",
+    "zipBytes": 3089473,
+    "entries": 3764,
+    "indexBytes": 442246,
+    "uncompressedMB": 4.3,
+    "firstNames": [
+     "S58-1050-22677618_section_58_closed_event_2026-09-13_07-00-17-017.json",
+     "S58-1050-25966232_section_58_closed_event_2026-09-13_07-00-17-017.json",
+     "S58-1050-39136071_section_58_created_event_2026-09-23_13-51-12-5112.json",
+     "S58-1050-39136071_section_58_in_force_event_2026-09-23_13-51-40-5140.json"
     ],
-    "newestModified": "2026-10-01T09:29:58.000Z",
-    "oldestModified": "2022-08-11T13:58:52.000Z",
-    "lastFiveModified": [
-     [
-      "permit/2026/05.zip",
-      "2026-06-01T09:27:41.000Z",
-      955775307
-     ],
-     [
-      "permit/2026/06.zip",
-      "2026-07-21T08:35:57.000Z",
-      846967734
-     ],
-     [
-      "permit/2026/07.zip",
-      "2026-08-01T09:42:32.000Z",
-      1059080616
-     ],
-     [
-      "permit/2026/08.zip",
-      "2026-09-01T09:21:26.000Z",
-      906607941
-     ],
-     [
-      "permit/2026/09.zip",
-      "2026-10-01T09:29:58.000Z",
-      1044935949
-     ]
-    ]
-   },
-   "section_58/": {
-    "keys": 55,
-    "moreNotListed": false,
-    "totalMB": 106.7,
-    "firstKeys": [
-     "section_58/2022/03.zip",
-     "section_58/2022/04.zip",
-     "section_58/2022/05.zip"
+    "lastNames": [
+     "S58-940-67623464_section_58_in_force_event_2026-09-23_09-52-14-5214.json",
+     "S58-940-84870367_section_58_closed_event_2026-09-22_07-00-17-017.json",
+     "S58-940-91738011_section_58_in_force_event_2026-09-15_13-13-08-138.json",
+     "S58-940-92318042_section_58_in_force_event_2026-09-21_14-59-30-5930.json"
     ],
-    "lastKeys": [
-     "section_58/2026/05.zip",
-     "section_58/2026/06.zip",
-     "section_58/2026/07.zip",
-     "section_58/2026/08.zip",
-     "section_58/2026/09.zip"
+    "entrySizeBytes": {
+     "min": 745,
+     "median": 957,
+     "max": 18699
+    },
+    "samples": [
+     {
+      "name": "S58-1050-22677618_section_58_closed_event_2026-09-13_07-00-17-017.json",
+      "entryBytes": 988,
+      "bytesRead": 988,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":164056754,\"event_type\":\"SECTION_58_CLOSED\",\"object_data\":{\"section_58_reference_number\":\"S58-1050-22677618\",\"section_58_coordinates\":\"LINESTRING(407385.926184326 375895.541272384,407376.15831205 375750.488365392,407348.319875457 375578.085414605,407277.991193718 375241.582204758,407253.083118298 375147.322233073,407231.105405071 375073.086401666)\",\"section_58_status\":\"closed\",\"start_date\":\"2024-09-13T23:00:00.000Z\",\"end_date\":\"2026-09-12T23:00:00.000Z\",\"section_58_duration\":\"two_years\",\"section_58_extent\":\"part_of_the_road\",\"section_58_location_type\":\"Carriageway\",\"status_change_date\":\"2026-09-13T06:00:16.950Z\",\"highway_authority_swa_code\":\"1050\",\"highway_authority\":\"DERBY"
+     },
+     {
+      "name": "S58-3700-27322921_section_58_closed_event_2026-09-26_07-00-15-015.json",
+      "entryBytes": 834,
+      "bytesRead": 834,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":165175946,\"event_type\":\"SECTION_58_CLOSED\",\"object_data\":{\"section_58_reference_number\":\"S58-3700-27322921\",\"section_58_coordinates\":\"LINESTRING(423101.233347575 282940.495840454,423146.033347575 282989.962478638,423215.099985758 283051.562478638)\",\"section_58_status\":\"closed\",\"start_date\":\"2023-09-26T23:00:00.000Z\",\"end_date\":\"2026-09-25T23:00:00.000Z\",\"section_58_duration\":\"three_years\",\"section_58_extent\":\"part_of_the_road\",\"section_58_location_type\":\"Carriageway\",\"status_change_date\":\"2026-09-26T06:00:15.648Z\",\"highway_authority_swa_code\":\"3700\",\"highway_authority\":\"WARWICKSHIRE COUNTY COUNCIL\",\"usrn\":\"28400771\",\"street_name\":\"SHEPHERDS LANE\",\"area_name\":\"\",\"town\":\"GRE"
+     },
+     {
+      "name": "S58-940-92318042_section_58_in_force_event_2026-09-21_14-59-30-5930.json",
+      "entryBytes": 914,
+      "bytesRead": 914,
+      "newlines": 0,
+      "messagesSeen": 1,
+      "estMessagesInEntry": 1,
+      "head": "{\"event_reference\":164722501,\"event_type\":\"SECTION_58_IN_FORCE\",\"object_data\":{\"section_58_reference_number\":\"S58-940-92318042\",\"section_58_coordinates\":\"LINESTRING(339054.928805486 557333.872436622,339045.753411084 557323.050940555,339031.166886652 557295.526700558,339002.699637355 557250.593966889,338981.996183322 557219.77622809,338973.291321967 557208.013732365)\",\"section_58_status\":\"in_force\",\"start_date\":\"2026-09-18T16:00:00.000Z\",\"end_date\":\"2028-09-17T16:00:00.000Z\",\"section_58_duration\":\"two_years\",\"section_58_extent\":\"part_of_the_road\",\"section_58_location_type\":\"Carriageway\",\"status_change_date\":\"2026-09-21T13:59:30.685Z\",\"highway_authority_swa_code\":\"940\",\"highway_authority\":\"Cum"
+     }
     ],
-    "newestModified": "2026-10-01T08:00:36.000Z",
-    "oldestModified": "2022-08-18T14:36:44.000Z",
-    "lastFiveModified": [
-     [
-      "section_58/2026/05.zip",
-      "2026-06-01T08:03:12.000Z",
-      3417353
-     ],
-     [
-      "section_58/2026/06.zip",
-      "2026-07-21T07:19:37.000Z",
-      2268076
-     ],
-     [
-      "section_58/2026/07.zip",
-      "2026-08-01T08:00:35.000Z",
-      4180984
-     ],
-     [
-      "section_58/2026/08.zip",
-      "2026-09-01T08:02:59.000Z",
-      2695675
-     ],
-     [
-      "section_58/2026/09.zip",
-      "2026-10-01T08:00:36.000Z",
-      3089473
-     ]
-    ]
+    "estMessagesInZip": 3764,
+    "estMessagesPerDay": 125,
+    "bytesDownloaded": 3089473
    }
   }
  }
