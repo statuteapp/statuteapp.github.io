@@ -1412,6 +1412,8 @@ function isHome(u){try{const x=new URL(u);return x.pathname.replace(/\/+$/,"")==
 function linkHTML(u,label,cls){if(!u||isHome(u))return `<span class="lead nolink">Source page not yet linked</span>`;return `<a class="${cls||"btn sm"}" href="${esc(u)}" target="_blank" rel="noopener">${esc(label||"Open the source")} ↗</a>`;}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function fmt(d){return new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
+// Today tab shows only what is for today: dated today, or (feed items) first picked up by the hourly build today. Everything else lives in Horizon / Catch up.
+function postedToday(it){const k=TODAY.toDateString();if(it.date&&new Date(String(it.date).slice(0,10)+"T12:00:00").toDateString()===k)return true;if(it.first_seen&&new Date(it.first_seen).toDateString()===k)return true;return false;}
 function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}
 function has(s){return profile&&(profile.sits.includes(s)||(profile.interests||[]).includes(s))}
 function tierFor(it){ // highest tier that applies to this profile
@@ -1667,7 +1669,7 @@ function renderToday(){
   h+=`<div class="chips" role="group" aria-label="Show"><button data-f="all" aria-pressed="${todayFilter==="all"}">Everything</button><button data-f="law" aria-pressed="${todayFilter==="law"}">⚖️ Law only</button><button data-f="act" aria-pressed="${todayFilter==="act"}">❗ Needs action</button><button data-f="update" aria-pressed="${todayFilter==="update"}">📰 Just updates</button></div>`;
   const pass=it=>todayFilter==="all"||(todayFilter==="law"&&it.kind==="law")||(todayFilter==="act"&&tierFor(it).tier==="must")||(todayFilter==="update"&&["update","rates","consult","alert"].includes(it.kind));
   for(const L of LEVELS){
-    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&((daysTo(it.date)<=0&&daysTo(it.date)>-30)||(it.kind==='consult'&&daysTo(it.date)>0)||(it.level==="local"&&daysTo(it.date)>0&&daysTo(it.date)<=30))).sort((a,b)=>{if(L.k==="local"){const da=milesTo(a),db=milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
+    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&postedToday(it)).sort((a,b)=>{if(L.k==="local"){const da=milesTo(a),db=milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
     h+=`<div class="band"><div class="band-head"><span class="lvl">${esc(L.lbl(profile))} <button class="btn ghost sm" data-map="${L.k}" style="margin-left:8px;padding:2px 10px;font-size:13px">Map</button></span><span class="cad">${L.k==="local"&&profile.lat!=null?`within ${profile.radius||1} mi of ${esc(profile.pcfull||profile.postcode)}`:L.cad}</span></div>`;
     if(!items.length){
       const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)).sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
