@@ -1,0 +1,27 @@
+{
+ "release": "ONS Postcode Directory (August 2026)",
+ "arcgisItem": "9e5a92a3cfb14dc7ad43d6ea7a7b8c7f",
+ "source": "ONS Postcode Directory, Office for National Statistics (ONS Open Geography Portal)",
+ "sourceUrl": "https://geoportal.statistics.gov.uk/",
+ "licence": "Open Government Licence v3.0",
+ "attribution": "Source: Office for National Statistics licensed under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right. Contains Royal Mail data © Royal Mail copyright and database right.",
+ "coverage": "England, Scotland and Wales. Northern Ireland not yet included (licence check pending).",
+ "postcodes": 1748230,
+ "outwardCodes": 2863,
+ "fields": [
+  "lat",
+  "lng",
+  "lad",
+  "ward",
+  "cty",
+  "par",
+  "ctry",
+  "rgn",
+  "pcon",
+  "pfa",
+  "icb",
+  "bua"
+ ],
+ "codesWithoutName": 0,
+ "builtAt": "2026-10-04T12:31:40Z"
+}
