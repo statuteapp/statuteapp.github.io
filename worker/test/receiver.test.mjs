@@ -28,9 +28,10 @@ function signed(over = {}, version = "1") {
 }
 
 function fakeDB() {
-  const rows = [];
-  return { rows, prepare(sql) { return { bind(...a) { return {
+  const rows = [], subs = [];
+  return { rows, subs, prepare(sql) { return { bind(...a) { return {
     async run() {
+      if (/^INSERT INTO subs/i.test(sql)) { subs.push({ topic: a[0], at: a[1], ok: a[2], note: a[3] }); return { meta: { changes: 1 } }; }
       if (/^INSERT/i.test(sql)) { const id = (rows.length ? Math.max(...rows.map((r) => r.id)) : 0) + 1; rows.push({ id, topic: a[0], at: a[1], body: a[2] }); return { meta: { changes: 1 } }; }
       if (/^DELETE/i.test(sql)) { const max = Math.max(...rows.map((r) => r.id)); const keep = rows.filter((r) => !(r.id <= a[0] && r.id < max)); const n = rows.length - keep.length; rows.length = 0; rows.push(...keep); return { meta: { changes: n } }; }
     },
@@ -102,6 +103,17 @@ test("subscription confirmation: confirmed only for a verified message with an A
   const forged = signed({ Type: "SubscriptionConfirmation", Token: "tok", Message: "m", SubscribeURL: good.SubscribeURL }); forged.Token = "other";
   assert.equal((await handle(post("/permit", forged), env(fakeDB()), d)).status, 403); assert.deepEqual(called, []);
   assert.ok(subscribeUrlOk(good.SubscribeURL) && !subscribeUrlOk("http://sns.eu-west-2.amazonaws.com/"));
+});
+test("a verified confirmation is recorded, a failed one is recorded as failed, and messages are not affected", async () => {
+  const conf = (topic) => signed({ TopicArn: TOPICS[topic], Type: "SubscriptionConfirmation", Token: "t", Message: "m", SubscribeURL: "https://sns.eu-west-2.amazonaws.com/?Action=ConfirmSubscription&Token=t" });
+  const db = fakeDB();
+  assert.equal((await handle(post("/activity", conf("activity")), env(db), deps())).status, 200);
+  assert.equal((await handle(post("/permit", conf("permit")), env(db), deps({ fetch: async () => ({ ok: false, status: 500 }) }))).status, 502);
+  assert.deepEqual(db.subs.map((x) => [x.topic, x.ok, x.note]), [["activity", 1, "status "], ["permit", 0, "status 500"]]); assert.equal(db.rows.length, 0);
+  const broken = { prepare() { throw new Error("db down"); } };   // a logging failure must not stop the confirmation
+  assert.equal((await handle(post("/permit", conf("permit")), { DB: broken, DRAIN_TOKEN: "x" }, deps())).status, 200);
+  const bad = signed({ TopicArn: TOPICS.permit, Type: "SubscriptionConfirmation", Token: "t", Message: "m", SubscribeURL: "https://sns.eu-west-2.amazonaws.com/?x=1" }); bad.Token = "tampered";
+  const before = db.subs.length; assert.equal((await handle(post("/permit", bad), env(db), deps())).status, 403); assert.equal(db.subs.length, before);   // unverified: nothing written
 });
 test("drain and ack need the token; ack keeps the newest row so ids never repeat", async () => {
   const db = fakeDB();
