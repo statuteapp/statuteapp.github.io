@@ -100,6 +100,9 @@ def main():
     cfg = {}
     for m in re.finditer(r'(bucketUrl|rootPrefix|bucketMaskUrl|pageSize)\s*[:=]\s*["\']?([^"\',}\s]*)', html):
         cfg.setdefault(m.group(1), m.group(2))
+    for k, v in list(cfg.items()):
+        if v in ("undefined", "null"):   # the page writes "rootPrefix: undefined" to mean "no prefix"
+            cfg[k] = ""
     res["config"] = cfg
     inline = [re.sub(r"\s+", " ", t)[:1500] for t in re.findall(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S)]
     res["inlineScripts"] = [t for t in inline if t.strip()][:6]
