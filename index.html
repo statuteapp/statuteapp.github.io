@@ -1618,8 +1618,10 @@ function confirmCouncil(g,pc,cb,hits){
 let todayFilter="all";
 let globalSearchReturn={screen:"today",scrollY:0,prevTab:"today",hash:"#today"};
 let globalSearchController=null,globalSearchToken=0;
+function councilShort(n){n=String(n||"").trim();if(/^city of london/i.test(n))return n;
+  const t=n.replace(/^the\s+/i,"").replace(/^(royal borough of|london borough of|city and county of|city of|county of)\s+/i,"").replace(/\s*,?\s*(metropolitan borough|borough|city|county|district|unitary)?\s*council$/i,"").replace(/\s+(metropolitan|borough|city|county|district)$/i,"").trim();return t||n}
 const LEVELS=[
- {k:"local",lbl:p=>p.council,cad:"Hourly",why:"Traffic orders, protection orders, byelaws, licensing."},
+ {k:"local",lbl:p=>councilShort(p.council),cad:"Hourly",why:"Traffic orders, protection orders, byelaws, licensing."},
  {k:"county",lbl:p=>p.region,cad:"Daily",why:"County, combined authority and police area notices."},
  {k:"nation",lbl:p=>p.nation,cad:"Weekly",why:p=>"Rules with "+p.nation+"-only extent."},
  {k:"uk",lbl:()=>"United Kingdom",cad:"Weekly, pushed when it affects you",why:"Acts and regulations with UK-wide extent."}
@@ -1885,7 +1887,7 @@ function renderMe(){
   s.innerHTML=`<h1>Settings.</h1><p class="lede">Facts, not preferences. Change these when life changes and the feed changes with it. Everything here stays on this device.</p>
   <div class="row" style="margin:0 0 12px"><button class="btn sm" id="subs">📋 What you're signed up to</button></div>
   <div class="setnav">${[["where","Where you live"],["work","Work & situations"],["reading","Reading"],["topics","Topics"],["deep","Go deep"],["gov","Mini government"],["data","Your data"]].map(([k,l])=>`<a href="#${k}">${l}</a>`).join("")}</div>
-  ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div></div>
+  ${sec("where","Where you live","",`<div class="field"><label>Your council</label><div>${esc(profile.council)}<span class="lead" style="display:block">${esc(profile.region)} · ${esc(profile.nation)}${profile.postcode?" · from "+esc(profile.postcode):""}</span></div><div class="row" style="margin-top:8px"><button class="btn ghost sm" id="chgc">Change council</button><button class="btn ghost sm" id="omap">Local map</button></div><p class="lead" style="margin:8px 0 0">Not the right council? <a href="https://www.gov.uk/find-local-council" target="_blank" rel="noopener">Check on GOV.UK ↗</a></p></div>
   <div class="field"><label>Near you</label><div>${profile.lat!=null?`${esc(profile.pcfull||profile.postcode)}${profile.ward?" · "+esc(profile.ward)+" ward":""}<span class="lead" style="display:block">Street-level notices are matched on this device against your full postcode. It never leaves the phone.</span>`:`<span class="lead">Add your full postcode (Change council) to see notices by distance from your door.</span>`}</div>
   <div class="chips" role="group" aria-label="Near you" style="margin-top:8px">${[0.5,1,2,5].map(r=>`<button data-rad="${r}" aria-pressed="${(profile.radius||1)===r}">${r} mi</button>`).join("")}</div></div>
   <div class="field"><label>Your areas</label>${(()=>{const A=profile.area||{};const rows=[["Postcode",profile.pcfull?esc(profile.pcfull):""],["Ward",profile.ward?esc(profile.ward):""],["Town",esc(A.town||"")],["Council",esc(profile.council)]].concat(A.county?[["County",esc(A.county)]]:[]).concat(profile.nation==="England"&&profile.region?[["Region",esc(profile.region)]]:[]).concat([["Country",esc(profile.nation||"")],["UK","United Kingdom"]]);return `<div class="tw"><table>${rows.map(([k,v])=>`<tr><th scope="row">${k}</th><td>${v||`<span class="lead">Not known yet</span>`}</td></tr>`).join("")}</table></div><span class="lead" style="display:block">The areas Statute uses to decide what is local to you. From the ONS Postcode Directory (Office for National Statistics, Open Government Licence); worked out on this device.${profile.pcfull&&!profile.area?" Tap Change council and re-enter your postcode if ward, town or county is missing.":""}</span>`;})()}</div>
@@ -2243,7 +2245,7 @@ function renderMap(){
   const STATIC_PINS=PINS.concat(FUND_PINS,MEET_PINS,WORKS_PINS,WORKS_EXTRA,ENFORCE_PINS);
   const pinPool=STATIC_PINS.concat(fsaMapPins);
   const layerPins=pinPool.map((P,i)=>({P,i})).filter(({P})=>P.layer!=="law"&&mapLayers[P.layer]&&shown.includes(P.council)&&jobOk(P));
-  s.innerHTML=`${mapHead("local")}<h1>${esc(profile.council)}, on the map.</h1>
+  s.innerHTML=`${mapHead("local")}<h1>${esc(councilShort(profile.council))}, on the map.</h1>
   <p class="lede">What's happening inside your council's boundary. Tap a neighbouring council to see theirs; then decide whether you want just the map, or their full updates too.</p>
   ${MAP_CONFIG.osKey?`<div class="realmap" id="realmap" aria-label="Ordnance Survey map"></div><p class="lead">Ordnance Survey Maps API, open-data plan. Zoom in for road names; drag to neighbouring councils. Contains OS data © Crown copyright and database right ${TODAY.getFullYear()}.</p>`:`<p class="note">Schematic map. On GitHub Pages with an Ordnance Survey key in MAP_CONFIG this becomes a full OS road map with real boundaries; the published preview here can't load map tiles.</p>`}
   <div class="map" ${MAP_CONFIG.osKey?'style="display:none"':""}><svg viewBox="0 0 100 100" role="img" aria-label="Schematic map of ${esc(profile.council)} and neighbouring councils">
