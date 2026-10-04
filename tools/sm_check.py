@@ -3,7 +3,8 @@
 
 Downloads the newest zip in each folder of DfT's public archive (about 1 GB for permits), feeds every notification
 through tools/streetworks.py, and writes a summary to tools/sm_check_result.json: which event types and fields really
-occur, how many works records result, and how big the per-square files would be. Read-only; uses a temp folder."""
+occur, how many works records result, and how big the per-square files would be. Read-only; uses a temp folder.
+If SM_DEMO_DIR is set it also writes a small sample (map squares around Slough), labelled as archive data and not live."""
 import collections, datetime, gzip, json, os, re, sys, time, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import streetworks as s
@@ -11,6 +12,7 @@ import streetworks as s
 BUCKET = os.environ.get("SM_BUCKET") or "https://opendata.manage-roadworks.service.gov.uk"
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sm_check_result.json")
 WORK = os.environ.get("SM_WORK") or "/tmp/sm_check"
+DEMO = os.environ.get("SM_DEMO_DIR")   # if set, publish a small labelled archive sample of squares around Slough here
 UA = {"User-Agent": "Mozilla/5.0 (compatible; StatuteCheck/1.0; +https://statuteapp.github.io)"}
 
 def get(url, timeout=120):
@@ -81,6 +83,27 @@ def main():
                     "fileKB": {"median": round(pct(files.values(), .5) / 1e3, 1), "p95": round(pct(files.values(), .95) / 1e3, 1), "max": round(max(files.values()) / 1e3, 1)},
                     "gzKB": {"median": round(pct(gz.values(), .5) / 1e3, 1), "p95": round(pct(gz.values(), .95) / 1e3, 1), "max": round(max(gz.values()) / 1e3, 1)},
                     "busiest": sorted(counts.items(), key=lambda kv: -kv[1])[:5]}
+    def days(r):
+        try:
+            return (datetime.date.fromisoformat(r["start"]) - datetime.date.fromisoformat(today)).days
+        except Exception:
+            return None
+    timing = collections.Counter()
+    for r in kept:
+        if r["k"] == "s58":
+            continue
+        d = days(r)
+        timing["started" if r["st"] == "started" else "no_start_date" if d is None else "window_begun" if d <= 0 else "within_7_days" if d <= 7 else "8_to_30_days" if d <= 30 else "later"] += 1
+    res["records"]["keptTiming"] = dict(timing)
+    if DEMO:
+        asof = max((r.get("t") or "")[:10] for r in state.values())
+        def in_box(r):
+            y, x = int((r["lat"] - 49) * 10), int((r["lng"] + 10) * 10)
+            return 24 <= y <= 26 and 92 <= x <= 96
+        sample = {k: r for k, r in state.items() if "lat" in r and in_box(r)}
+        dc = s.build_tiles(sample, today, DEMO, extra={"live": False, "asOf": asof})
+        res["demo"] = {"dir": DEMO, "asOf": asof, "tiles": len(dc), "items": sum(dc.values()),
+                       "bytes": sum(os.path.getsize(os.path.join(DEMO, f)) for f in os.listdir(DEMO))}
     first = {}
     for r in kept:
         first.setdefault("%s/%s" % (r["k"], r["st"]), r)
