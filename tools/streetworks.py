@@ -128,13 +128,12 @@ def key_of(m, kind):
 
 def fields(kind, od):
     pts = parse_wkt(od.get("works_location_coordinates") or od.get("activity_coordinates") or od.get("section_58_coordinates"))
-    r = {"street": od.get("street_name"), "town": od.get("town"), "area": od.get("area_name"), "usrn": od.get("usrn"),
-         "ha": od.get("highway_authority"), "hac": od.get("highway_authority_swa_code"), "road": od.get("road_category")}
+    r = {"street": od.get("street_name"), "town": od.get("town"), "area": od.get("area_name"), "ha": od.get("highway_authority")}
     if kind == "permit":
-        r.update(who=od.get("promoter_organisation"), cat=od.get("work_category"), tm=od.get("traffic_management_type"),
-                 now_tm=od.get("current_traffic_management_type"), ttro=od.get("is_ttro_required"), loc=od.get("works_location_type"),
+        r.update(who=od.get("promoter_organisation"), what=od.get("activity_type"), cat=od.get("work_category"), tm=od.get("traffic_management_type"),
+                 now_tm=od.get("current_traffic_management_type"), loc=od.get("works_location_type"),
                  start=local_date(od.get("proposed_start_date")), end=local_date(od.get("proposed_end_date")),
-                 began=od.get("actual_start_date_time"), ended=od.get("actual_end_date_time"))
+                 began=od.get("actual_start_date_time"))
     elif kind == "activity":
         r.update(name=od.get("activity_name"), what=od.get("activity_type_details") or od.get("activity_type"),
                  tm=od.get("traffic_management_type"), tmreq=od.get("traffic_management_required"), loc=od.get("activity_location_type"),
@@ -144,7 +143,8 @@ def fields(kind, od):
                  start=local_date(od.get("start_date")), end=local_date(od.get("end_date")))
     if pts:
         lat, lng = bng_to_wgs84(*pts[len(pts) // 2])
-        r["lat"], r["lng"], r["len"] = round(lat, 5), round(lng, 5), path_metres(pts)
+        r["lat"], r["lng"] = round(lat, 5), round(lng, 5)
+        r["len"] = path_metres(pts) or None   # a single point has no length
     return {k: v for k, v in r.items() if v not in (None, "")}
 
 def apply(state, raw, seen=None):
@@ -185,10 +185,12 @@ def keep(rec, today):
     ref = end or start
     if not ref:
         return when >= days_ago(today, 30)
-    return ref >= days_ago(today, 30 if st == "started" else 14)
+    if st == "started":
+        return ref >= days_ago(today, 30)   # works that overrun their planned end stay visible
+    return ref >= today                      # applied / approved / planned: only until the planned window has ended
 
 # ---------- state -> files per map square ----------
-def build_tiles(state, today, outdir, now_iso=None):
+def build_tiles(state, today, outdir, now_iso=None, extra=None):
     now_iso = now_iso or datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     tiles = {}
     for key, rec in state.items():
@@ -207,7 +209,7 @@ def build_tiles(state, today, outdir, now_iso=None):
             json.dump({"tile": t, "updated": now_iso, "source": SOURCE, "items": items}, f, separators=(",", ":"), ensure_ascii=False)
         counts[t] = len(items)
     with open(os.path.join(outdir, "index.json"), "w", encoding="utf-8") as f:
-        json.dump({"updated": now_iso, "total": sum(counts.values()), "tiles": counts, "source": SOURCE}, f, separators=(",", ":"))
+        json.dump(dict({"updated": now_iso, "total": sum(counts.values()), "tiles": counts, "source": SOURCE}, **(extra or {})), f, separators=(",", ":"))
     return counts
 
 def read_zip(path):
