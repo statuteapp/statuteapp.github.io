@@ -5,7 +5,7 @@ on:
   # Feed-bot commits are pushed with GITHUB_TOKEN, which never starts a push-triggered workflow.
   # Deploy after every feed run too, so new items (and queued index.html patches) actually go live.
   workflow_run:
-    workflows: ["Build feed", "Build postcode lookup"]
+    workflows: ["Build feed", "Build postcode lookup", "Roadworks hourly"]
     types: [completed]
   workflow_dispatch:
 permissions:
@@ -24,6 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main }
+      - name: Add the latest live roadworks files
+        # Built hourly by "Roadworks hourly" and kept in a release, not in git. If there are none yet (or anything goes wrong
+        # unpacking them), the repository's own roadworks folder is left as it is.
+        run: |
+          if curl -fsSL --retry 3 -o "$RUNNER_TEMP/tiles.zip" "https://github.com/${{ github.repository }}/releases/download/roadworks-data/tiles.zip" \
+             && mkdir -p "$RUNNER_TEMP/rw" && unzip -q -o "$RUNNER_TEMP/tiles.zip" -d "$RUNNER_TEMP/rw" && test -f "$RUNNER_TEMP/rw/index.json"; then
+            rm -rf roadworks && mv "$RUNNER_TEMP/rw" roadworks
+            echo "live roadworks files: $(ls roadworks | wc -l)"
+          else
+            echo "no live roadworks files yet; keeping the repository's roadworks folder"
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: "." }
