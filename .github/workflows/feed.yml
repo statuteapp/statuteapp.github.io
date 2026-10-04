@@ -4,7 +4,7 @@ on:
     - cron: "7 * * * *"
   workflow_dispatch:
   push:
-    paths: ["build_feed.py", "apply_patches.py"]
+    paths: ["build_feed.py", "apply_patches.py", "patches/**"]
 permissions:
   contents: write
 concurrency:
@@ -17,8 +17,10 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - name: Apply queued app patches (apply_patches.py edits index.html in place, idempotent)
-        run: python apply_patches.py
+      - name: Apply queued app patches (apply_patches.py, then one file per round in patches/; idempotent)
+        run: |
+          python apply_patches.py
+          for f in patches/*.py; do [ -f "$f" ] && python "$f"; done
         continue-on-error: true
       - name: Build items.json
         id: build
