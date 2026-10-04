@@ -1,4 +1,4 @@
-// Tests for the Map tab's layer chips and pin taps (patches/r38_map_interactions.py), run in a simulated browser with the real Leaflet.
+// Tests for the Map tab's layer chips, pin taps and list taps (patches/r38_map_interactions.py, r39_map_list_taps.py), run in a simulated browser with the real Leaflet.
 // Usage (jsdom 27 or newer): npm install jsdom leaflet@1.9.4 && node tools/test_map_interactions.js [path/to/index.html] [path/to/fsa_places.json]
 const {JSDOM,VirtualConsole,requestInterceptor}=require('jsdom');const fs=require('fs');const path=require('path');
 const html=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','index.html'),'utf8');
@@ -41,6 +41,14 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  const report=[...w.document.querySelectorAll("#s-map .pinfo")].find(p=>{const l=p.querySelector(".pill.kind.update"),n=p.querySelector(".t");return l&&n&&l.textContent==="Food hygiene rating"&&n.textContent===tapped;});
  T(!!report&&report.querySelector(".lead")&&report.querySelector(".lead").textContent.length>3,"tapping a hygiene pin shows that place's own hygiene report ("+tapped+")"+(report?"":" (its report did not appear)"));
  T(!!report&&w.__scrolled===report,"the tapped place's report is scrolled into view");
+ // 2b. tapping a restaurant in the list shows and scrolls to its report too
+ const rows=[...w.document.querySelectorAll("#s-map .fsa-row")];const row=rows.find(r=>r.dataset.fsaId!==String(w.eval("fsaSel")))||rows[1];
+ T(rows.length>1,"the hygiene list has several restaurants ("+rows.length+")");
+ if(row){const rid=row.dataset.fsaId;const rname=w.eval("FSA_DIRECTORY.places.find(p=>p.id===\""+rid+"\").name");w.__scrolled=null;row.click();await wait(700);
+   const rep2=[...w.document.querySelectorAll("#s-map .pinfo")].find(p=>{const l=p.querySelector(".pill.kind.update"),n=p.querySelector(".t");return l&&n&&l.textContent==="Food hygiene rating"&&n.textContent===rname;});
+   T(!!rep2,"tapping a restaurant in the list shows that restaurant's report ("+rname+")");
+   T(!!rep2&&w.__scrolled===rep2,"tapping a restaurant in the list scrolls to its report");}
+ s=state();
  T(s.active==="s-map"&&s.tab==="map"&&s.len>2000,"after tapping a pin the Map screen is still showing "+JSON.stringify(s));
  // 3. the map keeps its position and zoom when it redraws
  w.eval("LMAP").setView([51.5200,-0.6000],14);await wait(300);
