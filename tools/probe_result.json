@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-04T13:13:43Z",
+ "generatedAt": "2026-10-04T13:15:25Z",
  "page": "https://department-for-transport-streetmanager.github.io/street-manager-docs/archived-notifications/",
  "pageStatus": 200,
  "pageError": null,
@@ -37,9 +37,9 @@
  "inlineConfig": "));\n    gtag('config', 'UA-124523261-3');\n  </script>\n\n  <meta property=\"og:image\" content=\"/street-manager-docs/assets/images/govuk-opengraph-image.png\">\n\n  <link rel=\"stylesheet\" href=\"/street-manager-docs/stylesheets/archived-notifications.css\" />\n  <script>\n    const config = {\n      title: 'Archived notifications - Plan and manage roadworks information',\n      primaryColor: '#005ea5',\n\n      bucketUrl: 'https://opendata.manage-roadworks.service.gov.uk',\n      rootPrefix: undefined,\n      keyExcludePatterns: [/^index\\.html$/],\n      pageSize: 12,\n\n      bucketMaskUrl: undefined,\n\n      defaultOrder: 'name-asc' // (name|size|dateModified)-(asc|desc)\n    }\n  </script>\n\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <link id=\"favicon\" rel=\"shortcut icon\" />\n\n  <script src=\"https://unpkg.com/vue@2.6.14/dist/vue.min.js\" integrity=\"sha384-ULpZhk1pvhc/UK5ktA9kwb2guy9ovNSTyxPNHANnA35YjBQgdwI+AhLkixDvdlw4\" crossorigin=\"anonymous\"></script>\n  <script>Vue.config.productionTip = false;</script>\n  <style>[v-cloak] {display: none}</style>\n\n  <link rel=\"stylesheet\" href=\"https://cdn.materialdesignicons.com/5.8.55/css/materialdesignicons.min.css\" integrity=\"sha384-mXn03l3egUmSn2pZYz33om5XpEK6GclFj/DZp48zhus7gXuJlYs806Zpmhgy9MKb\" crossorigin=",
  "config": {
   "bucketUrl": "https://opendata.manage-roadworks.service.gov.uk",
-  "rootPrefix": "undefined",
+  "rootPrefix": "",
   "pageSize": "12",
-  "bucketMaskUrl": "undefined"
+  "bucketMaskUrl": ""
  },
  "inlineScripts": [
   " window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-124523261-3'); ",
@@ -50,12 +50,155 @@
  ],
  "bucket": {
   "bucketUrl": "https://opendata.manage-roadworks.service.gov.uk",
-  "rootPrefix": "undefined",
+  "rootPrefix": "",
   "rootStatus": 200,
   "rootError": null,
   "rootStart": null,
-  "topPrefixes": [],
+  "topPrefixes": [
+   "activity/",
+   "permit/",
+   "section_58/"
+  ],
   "topFiles": [],
-  "prefixes": {}
+  "prefixes": {
+   "activity/": {
+    "keys": 73,
+    "moreNotListed": false,
+    "totalMB": 480.5,
+    "firstKeys": [
+     "activity/2020/09.zip",
+     "activity/2020/10.zip",
+     "activity/2020/11.zip"
+    ],
+    "lastKeys": [
+     "activity/2026/05.zip",
+     "activity/2026/06.zip",
+     "activity/2026/07.zip",
+     "activity/2026/08.zip",
+     "activity/2026/09.zip"
+    ],
+    "newestModified": "2026-10-01T08:02:03.000Z",
+    "oldestModified": "2022-08-11T15:06:40.000Z",
+    "lastFiveModified": [
+     [
+      "activity/2026/05.zip",
+      "2026-06-01T08:04:29.000Z",
+      11410435
+     ],
+     [
+      "activity/2026/06.zip",
+      "2026-07-21T07:20:57.000Z",
+      9470846
+     ],
+     [
+      "activity/2026/07.zip",
+      "2026-08-01T08:02:04.000Z",
+      12712029
+     ],
+     [
+      "activity/2026/08.zip",
+      "2026-09-01T08:04:15.000Z",
+      11554687
+     ],
+     [
+      "activity/2026/09.zip",
+      "2026-10-01T08:02:03.000Z",
+      12800311
+     ]
+    ]
+   },
+   "permit/": {
+    "keys": 75,
+    "moreNotListed": false,
+    "totalMB": 70980.8,
+    "firstKeys": [
+     "permit/2020/07.zip",
+     "permit/2020/08.zip",
+     "permit/2020/09.zip"
+    ],
+    "lastKeys": [
+     "permit/2026/05.zip",
+     "permit/2026/06.zip",
+     "permit/2026/07.zip",
+     "permit/2026/08.zip",
+     "permit/2026/09.zip"
+    ],
+    "newestModified": "2026-10-01T09:29:58.000Z",
+    "oldestModified": "2022-08-11T13:58:52.000Z",
+    "lastFiveModified": [
+     [
+      "permit/2026/05.zip",
+      "2026-06-01T09:27:41.000Z",
+      955775307
+     ],
+     [
+      "permit/2026/06.zip",
+      "2026-07-21T08:35:57.000Z",
+      846967734
+     ],
+     [
+      "permit/2026/07.zip",
+      "2026-08-01T09:42:32.000Z",
+      1059080616
+     ],
+     [
+      "permit/2026/08.zip",
+      "2026-09-01T09:21:26.000Z",
+      906607941
+     ],
+     [
+      "permit/2026/09.zip",
+      "2026-10-01T09:29:58.000Z",
+      1044935949
+     ]
+    ]
+   },
+   "section_58/": {
+    "keys": 55,
+    "moreNotListed": false,
+    "totalMB": 106.7,
+    "firstKeys": [
+     "section_58/2022/03.zip",
+     "section_58/2022/04.zip",
+     "section_58/2022/05.zip"
+    ],
+    "lastKeys": [
+     "section_58/2026/05.zip",
+     "section_58/2026/06.zip",
+     "section_58/2026/07.zip",
+     "section_58/2026/08.zip",
+     "section_58/2026/09.zip"
+    ],
+    "newestModified": "2026-10-01T08:00:36.000Z",
+    "oldestModified": "2022-08-18T14:36:44.000Z",
+    "lastFiveModified": [
+     [
+      "section_58/2026/05.zip",
+      "2026-06-01T08:03:12.000Z",
+      3417353
+     ],
+     [
+      "section_58/2026/06.zip",
+      "2026-07-21T07:19:37.000Z",
+      2268076
+     ],
+     [
+      "section_58/2026/07.zip",
+      "2026-08-01T08:00:35.000Z",
+      4180984
+     ],
+     [
+      "section_58/2026/08.zip",
+      "2026-09-01T08:02:59.000Z",
+      2695675
+     ],
+     [
+      "section_58/2026/09.zip",
+      "2026-10-01T08:00:36.000Z",
+      3089473
+     ]
+    ]
+   }
+  }
  }
 }
