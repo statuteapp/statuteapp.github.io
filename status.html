@@ -21,7 +21,7 @@ a{color:#1d70b8}
 </style></head><body><div class="wrap">
 <h1>Statute feed status</h1><p class="lede">The public feed behind <a href="./">the app</a>: what was built, when, and whether every government source answered. <span id="when"></span></p>
 <div class="big" id="kpis"></div>
-<h2>Sources</h2><p class="m">Source links show what the server fetches for everyone. They do not change when an individual user selects a different council in onboarding.</p><table id="src"><tr><th>Source</th><th>Status</th><th>Items this run</th><th>Last success</th><th>Licence</th></tr></table>
+<h2>Sources</h2><p class="m" id="scope">Source links show what the server fetches.</p><table id="src"><tr><th>Source</th><th>Status</th><th>Items this run</th><th>Last success</th><th>Licence</th></tr></table>
 <h2>Feed entries by date and level — last 14 days</h2><p class="m">Counts of dated feed entries, including laws, notices, meetings, guidance and other updates. This is not a count of articles.</p><div class="bars" id="bars"></div><div class="days" id="days"></div><div class="leg"><i class="uk" style="background:#1d70b8"></i>UK <i style="background:#4c2c92"></i>England <i style="background:#f47738"></i>County <i style="background:#00703c"></i>Council/street</div>
 <h2>Recent runs</h2><table id="runs"><tr><th>Run</th><th>Items</th><th>Failed sources</th></tr></table>
 <p class="m">Hourly on GitHub Actions. A source that fails for 24 hours fails the workflow, which emails the maintainer. Data: Open Government Licence v3 except where stated.</p>
@@ -31,12 +31,16 @@ const ago=t=>{const m=Math.round((Date.now()-new Date(t))/60000);return m<60?m+"
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 fetch("./status.json",{cache:"no-cache"}).then(r=>r.json()).then(st=>{
   document.getElementById("when").textContent="Last build "+ago(st.generated_at)+".";
-  const srcs=Object.entries(st.sources||{});const okN=srcs.filter(([,s])=>s.ok).length;
+  let me="";try{me=(JSON.parse(localStorage.getItem("statute.profile")||"null")||{}).council||"";}catch(e){}
+  const PILOT="Slough Borough Council",LOCAL=/^(Food Standards Agency|police\.uk|Police neighbourhood|Council meetings|Environment Agency floods|The Gazette)/;
+  const away=!!me&&me!==PILOT,isLocal=n=>LOCAL.test(n);
+  const all=Object.entries(st.sources||{});const srcs=all.filter(([n])=>!(away&&isLocal(n)));const hidden=all.length-srcs.length;const okN=srcs.filter(([,s])=>s.ok).length;
+  document.getElementById("scope").textContent=away?"Showing the sources that apply to everyone. "+hidden+" council-specific source"+(hidden===1?" is":"s are")+" connected only for "+PILOT+" so far (police, council meetings, food hygiene and similar), so they are not shown for "+me+". They will appear here once they are connected for your council.":"Sources marked \"Slough pilot\" are connected for "+PILOT+" only so far. Everyone else sees only the sources that apply to them.";
   const bl=st.by_level||{};
   document.getElementById("kpis").innerHTML=[["Items in feed",st.items],["Sources healthy",okN+" / "+srcs.length],["Council & street",bl.local||0],["England-only",bl.nation||0],["UK-wide",bl.uk||0]].map(([l,v])=>`<div class="k"><div class="v">${esc(v)}</div><div class="l">${esc(l)}</div></div>`).join("");
   const tb=document.getElementById("src");
   srcs.forEach(([n,s])=>{const cls=s.ok?"ok":(s.fails||0)>=24?"bad":"warn";const tr=document.createElement("tr");
-    tr.innerHTML=`<td><b>${esc(n)}</b><div class="m">${esc(s.url)}</div></td><td><span class="dot ${cls}"></span>${s.ok?"OK":"Failing ("+(s.fails||0)+" run"+((s.fails||0)===1?"":"s")+")"}${s.error?`<div class="err">${esc(s.error)}</div>`:""}</td><td>${esc(s.items||0)}</td><td>${s.last_ok?esc(ago(s.last_ok)):"never"}</td><td class="m">${esc(s.licence||"")}</td>`;tb.appendChild(tr);});
+    tr.innerHTML=`<td><b>${esc(n)}</b>${isLocal(n)?' <span class="m">· Slough pilot</span>':""}<div class="m">${esc(s.url)}</div></td><td><span class="dot ${cls}"></span>${s.ok?"OK":"Failing ("+(s.fails||0)+" run"+((s.fails||0)===1?"":"s")+")"}${s.error?`<div class="err">${esc(s.error)}</div>`:""}</td><td>${esc(s.items||0)}</td><td>${s.last_ok?esc(ago(s.last_ok)):"never"}</td><td class="m">${esc(s.licence||"")}</td>`;tb.appendChild(tr);});
   const days=[];for(let i=13;i>=0;i--){const d=new Date();d.setUTCDate(d.getUTCDate()-i);days.push(d.toISOString().slice(0,10));}
   const bd=st.by_day||{};const max=Math.max(1,...days.map(d=>Object.values(bd[d]||{}).reduce((a,b)=>a+b,0)));
   document.getElementById("bars").innerHTML=days.map(d=>{const v=bd[d]||{};return `<div class="bar" title="${d}: ${Object.entries(v).map(([k,n])=>k+" "+n).join(", ")||"none"}">${["uk","nation","county","local"].map(k=>`<i class="${k}" style="height:${Math.round((v[k]||0)/max*118)}px"></i>`).join("")}</div>`;}).join("");
