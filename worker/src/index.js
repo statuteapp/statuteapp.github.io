@@ -27,6 +27,8 @@ async function receive(req, env, topic, deps) {
   if (m.Type === "SubscriptionConfirmation") {
     if (!subscribeUrlOk(m.SubscribeURL)) return json({ error: "bad subscribe address" }, 400);
     const r = await deps.fetch(m.SubscribeURL);
+    // Keep a record that a verified confirmation arrived, so the owner can tell whether DfT has activated the address.
+    try { await env.DB.prepare("INSERT INTO subs (topic, at, ok, note) VALUES (?1, ?2, ?3, ?4)").bind(topic, new Date().toISOString(), r.ok ? 1 : 0, "status " + (r.status || "")).run(); } catch (e) { /* logging must never stop the confirmation */ }
     return json({ confirmed: r.ok }, r.ok ? 200 : 502);
   }
   if (m.Type === "Notification") {
