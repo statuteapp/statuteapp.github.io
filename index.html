@@ -1414,6 +1414,8 @@ function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;","
 function fmt(d){return new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
 // Today tab shows only what is for today: dated today, or (feed items) first picked up by the hourly build today. Everything else lives in Horizon / Catch up.
 function postedToday(it){const k=TODAY.toDateString();if(it.date&&new Date(String(it.date).slice(0,10)+"T12:00:00").toDateString()===k)return true;if(it.first_seen&&new Date(it.first_seen).toDateString()===k)return true;return false;}
+// Real information only: drop prototype/sample content before anything renders (feed items are added later by loadFeed).
+(function(){for(let i=ITEMS.length-1;i>=0;i--)if(ITEMS[i].sample)ITEMS.splice(i,1);for(const a of [PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES])a.length=0;})();
 function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}
 function has(s){return profile&&(profile.sits.includes(s)||(profile.interests||[]).includes(s))}
 function tierFor(it){ // highest tier that applies to this profile
