@@ -26,6 +26,41 @@ def get(url, limit=400_000):
 def text(b):
     return b.decode("utf-8", "replace")
 
+def s3_list(bucket, prefix="", delimiter="/", maxkeys=1000, token=None):
+    q = {"list-type": "2", "prefix": prefix, "max-keys": str(maxkeys)}
+    if delimiter:
+        q["delimiter"] = delimiter
+    if token:
+        q["continuation-token"] = token
+    r = get(bucket + ("&" if "?" in bucket else "?") + urllib.parse.urlencode(q), 3_000_000)
+    b = text(r["body"])
+    return {"status": r.get("status"), "error": r.get("error"),
+            "prefixes": re.findall(r"<CommonPrefixes>\s*<Prefix>([^<]*)</Prefix>", b),
+            "contents": [(k, m, int(z)) for k, m, z in re.findall(r"<Contents>\s*<Key>([^<]*)</Key>\s*<LastModified>([^<]*)</LastModified>.*?<Size>(\d+)</Size>", b, re.S)],
+            "next": (re.findall(r"<NextContinuationToken>([^<]*)</NextContinuationToken>", b) or [None])[0],
+            "start": None if "ListBucketResult" in b else re.sub(r"\s+", " ", b[:300])}
+
+def survey_bucket(bucket, root):
+    out = {"bucketUrl": bucket, "rootPrefix": root}
+    top = s3_list(bucket, root)
+    out["rootStatus"] = top["status"]; out["rootError"] = top["error"]; out["rootStart"] = top["start"]
+    out["topPrefixes"] = top["prefixes"][:30]
+    out["topFiles"] = top["contents"][:20]
+    out["prefixes"] = {}
+    for pre in top["prefixes"][:8]:
+        keys, token, pages = [], None, 0
+        while pages < 12:
+            r = s3_list(bucket, pre, delimiter=None, token=token)
+            keys += r["contents"]; pages += 1; token = r["next"]
+            if not token:
+                break
+        mods = [m for _, m, _ in keys]
+        out["prefixes"][pre] = {"keys": len(keys), "moreNotListed": bool(token), "totalMB": round(sum(z for _, _, z in keys) / 1e6, 1),
+                                "firstKeys": [k for k, _, _ in keys[:3]], "lastKeys": [k for k, _, _ in keys[-5:]],
+                                "newestModified": max(mods) if mods else None, "oldestModified": min(mods) if mods else None,
+                                "lastFiveModified": [(k, m, z) for k, m, z in keys[-5:]]}
+    return out
+
 def main():
     res = {"generatedAt": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "page": PAGE}
     page = get(PAGE, 3_000_000)
@@ -57,10 +92,20 @@ def main():
             p["start"] = re.sub(r"\s+", " ", b[:500])
         probes.append(p)
     res["probes"] = probes
-    # Keep the source of the page's own scripts (not the big libraries) so the listing logic can be read.
-    host = urllib.parse.urlparse(PAGE).netloc
-    res["firstPartyScripts"] = {u: corpus[u][:40000] for u in scripts[:10]
-                                if u in corpus and urllib.parse.urlparse(u).netloc == host and "govuk-frontend" not in u}
+    # The page is a generic S3 bucket browser: its inline config block holds the bucket address. Find it and list the bucket.
+    res["inlineConfig"] = None
+    i = html.find("bucketUrl")
+    if i >= 0:
+        res["inlineConfig"] = html[max(0, i - 400): i + 900]
+    cfg = {}
+    for m in re.finditer(r'(bucketUrl|rootPrefix|bucketMaskUrl|pageSize)\s*[:=]\s*["\']?([^"\',}\s]*)', html):
+        cfg.setdefault(m.group(1), m.group(2))
+    res["config"] = cfg
+    inline = [re.sub(r"\s+", " ", t)[:1500] for t in re.findall(r"<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S)]
+    res["inlineScripts"] = [t for t in inline if t.strip()][:6]
+    bucket = cfg.get("bucketUrl")
+    if bucket:
+        res["bucket"] = survey_bucket(bucket, cfg.get("rootPrefix", ""))
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(res, f, indent=1)
     print("page", res["pageStatus"], "| scripts", len(scripts), "| candidates", len(cands), "| probed", len(probes))
