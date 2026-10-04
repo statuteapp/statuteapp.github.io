@@ -72,6 +72,21 @@ PATCHES = [
      'if(new Date().toDateString()!==TODAY.toDateString()){location.reload();return;}'
      'if(Date.now()-feedLoadedAt>15*60000){feedLoadedAt=Date.now();loadFeed();}});\n'
      'if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}'),
+    # Round 29: catch-up counted every relevant item in the 30-day feed plus bank holidays to 2028 (353 items, "353 min"
+    # for a new Slough profile). "To get current" now means: every unread duty or item that affects you, plus unread
+    # rule changes, alerts, consultations and rate changes published in the past week. General GOV.UK guidance and news
+    # are still shown in Today and the feed, but are optional reading and no longer counted. Bank holidays are never "to read";
+    # a future-dated duty counts once it is within 14 days.
+    ("r29-catchup-past-week",
+     'function toCurrent(){const list=ITEMS.filter(it=>tierFor(it)&&it.status!=="past"&&!game.got["read:"+it.id]).sort(',
+     'function inCatchUp(it){const t=tierFor(it);if(!t||it.status==="past"||it.holiday||game.got["read:"+it.id])return false;'
+     'if(notYet(it))return t.tier==="must"&&daysTo(it.date)<=14;if(t.tier==="must"||t.tier==="affects")return true;'
+     'if(!["law","alert","consult","rates"].includes(it.kind))return false;'
+     'const d=Date.parse(String(it.date||it.first_seen||"").slice(0,10)+"T12:00:00");return !isNaN(d)&&Date.now()-d<=7*864e5;}\n'
+     'function toCurrent(){const list=ITEMS.filter(inCatchUp).sort('),
+    ("r29-catchup-label",
+     '"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"',
+     '"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+" that matter to you, duties first. General news and guidance are optional."'),
 ]
 
 def main():
