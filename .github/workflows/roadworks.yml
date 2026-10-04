@@ -1,0 +1,51 @@
+name: Roadworks hourly
+# Collects Street Manager messages from the receiver on Cloudflare, updates the state kept in a GitHub release, builds the
+# map-square files, and publishes them with the site (pages.yml unpacks tiles.zip from the same release). Needs the
+# DRAIN_TOKEN repository secret. The very first run seeds the state from DfT's monthly archive, which takes several minutes.
+# Nothing is acknowledged to the receiver until the state and files are safely published, and every step is idempotent.
+on:
+  schedule:
+    - cron: "37 * * * *"
+  workflow_dispatch:
+  push:
+    paths: ["tools/sm_hourly.py"]
+permissions:
+  contents: write
+concurrency:
+  group: roadworks
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RECEIVER_URL: https://statute-streetworks-receiver.sohail-s-m.workers.dev
+      DRAIN_TOKEN: ${{ secrets.DRAIN_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Tests
+        run: python tools/test_sm_hourly.py
+      - name: Make sure the data release exists
+        run: |
+          gh release view roadworks-data >/dev/null 2>&1 || gh release create roadworks-data \
+            --title "Roadworks data (rebuilt hourly)" --notes "Working files for the hourly roadworks job. Not a software release." --latest=false
+      - name: Fetch the saved state
+        id: state
+        run: |
+          mkdir -p work
+          if gh release download roadworks-data --pattern state.json.gz --dir work --clobber; then echo "have=true" >> "$GITHUB_OUTPUT"; else echo "have=false" >> "$GITHUB_OUTPUT"; fi
+      - name: Seed from the monthly archive (first run only)
+        if: steps.state.outputs.have != 'true'
+        run: python tools/sm_hourly.py seed
+      - name: Fold in new monthly archive files
+        if: steps.state.outputs.have == 'true'
+        run: python tools/sm_hourly.py reconcile
+      - name: Collect new messages and build the files
+        run: python tools/sm_hourly.py run
+      - name: Publish the state and the files
+        run: gh release upload roadworks-data work/state.json.gz work/tiles.zip work/run.json --clobber
+      - name: Acknowledge the collected messages
+        run: python tools/sm_hourly.py ack
