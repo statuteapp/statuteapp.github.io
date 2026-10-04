@@ -1,4 +1,4 @@
-// Tests for which things the Map shows (patches/r41_map_real_places_and_layers.py): only real places as pins, area information, layers with data. Simulated browser, real Leaflet, fixed example items.
+// Tests for which things the Map shows (patches/r41_map_real_places_and_layers.py, r42_crime_points_and_all_layers_on.py): only real places as pins, area information, layers with data. Simulated browser, real Leaflet, fixed example items.
 // Usage (jsdom 27 or newer): npm install jsdom leaflet@1.9.4 && node tools/test_map_layers.js [path/to/index.html] [path/to/fsa_places.json]
 const {JSDOM,VirtualConsole,requestInterceptor}=require('jsdom');const fs=require('fs');const path=require('path');
 const html=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','index.html'),'utf8');
@@ -40,14 +40,14 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  const dotsOf=k=>{const out=[];L_().eachLayer(l=>{if(l.options&&l.options.isPin&&(!k||l.options.k===k))out.push(l);});return out;};
  const text=()=>doc.getElementById("s-map").textContent.replace(/\s+/g," ");
  const chips=()=>[...doc.querySelectorAll('#s-map .chips button[data-layer]')].map(b=>b.dataset.layer).sort();
- doc.querySelector('nav.tabs button[data-t="map"]').click();await wait(1200);
+ doc.querySelector('nav.tabs button[data-t="map"]').click();await wait(2000);
  L_().setView([51.5112,-0.5390],13);await wait(400);
  // 1. only layers with data get a chip
  T(JSON.stringify(chips())===JSON.stringify(["food","law"]),"only layers with data have a chip: "+chips().join(", "));
  T(/Not connected to the map yet:[^.]*Schools[^.]*Crime/.test(text())&&/Street works are in Horizon, then Roadworks/.test(text()),"one plain line names the layers not connected yet and points to Roadworks");
- T(w.eval("JSON.stringify(mapLayers)")==='{"law":true,"food":false}',"default layers are law on, food hygiene off (no empty street works or crime): "+w.eval("JSON.stringify(mapLayers)"));
+ T(w.eval("JSON.stringify(mapLayers)")==='{"law":true,"food":true,"crime":true}',"every layer that exists is on by default (no empty street works): "+w.eval("JSON.stringify(mapLayers)"));
  // 2. only real places are pins
- const dots=dotsOf();const near=(d,lat,lng)=>Math.abs(d.getLatLng().lat-lat)<0.001&&Math.abs(d.getLatLng().lng-lng)<0.001;
+ const dots=dotsOf("law");const near=(d,lat,lng)=>Math.abs(d.getLatLng().lat-lat)<0.001&&Math.abs(d.getLatLng().lng-lng)<0.001;
  T(dots.length===3,"three real places are pins (two FSA businesses and one item flagged exact): "+dots.length);
  T(!dots.some(d=>near(d,51.5044,-0.589009)),"no pin sits on the police neighbourhood team's centre point");
  T(!dots.some(d=>near(d,51.5105,-0.595)),"no pin sits on the crime count's centre point");
@@ -62,9 +62,12 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  // 4. layer list is honest
  T(/Food hygiene[^]*?Connected\. Source:/.test(text())&&/Schools[^]*?Not connected yet\. Planned source:/.test(text()),"the layer list says Connected or Not connected yet");
  T(!/Funding shows public money/.test(t)&&!/Development and Opportunities are where the map runs ahead/.test(t),"notes describing features that do not exist yet are gone");
- // 5. food hygiene still works and the chips stay
- doc.querySelector('#s-map .chips button[data-layer="food"]').click();await wait(1500);
- T(dotsOf("food").length>50&&JSON.stringify(chips())===JSON.stringify(["food","law"]),"turning food hygiene on adds its places and keeps the same chips ("+dotsOf("food").length+" places)");
+ // 5. food hygiene is on by default, and the chip switches it off and on
+ T(dotsOf("food").length>50,"food hygiene places are on the map by default ("+dotsOf("food").length+")");
+ doc.querySelector('#s-map .chips button[data-layer="food"]').click();await wait(800);
+ T(dotsOf("food").length===0&&JSON.stringify(chips())===JSON.stringify(["food","law"]),"the chip switches food hygiene off and keeps the same chips");
+ doc.querySelector('#s-map .chips button[data-layer="food"]').click();await wait(800);
+ T(dotsOf("food").length>50,"and on again ("+dotsOf("food").length+" places)");
  // 6. opening an area card still opens the article
  const card=[...doc.querySelectorAll("#s-map button.card")].find(b=>/Crime reports/.test(b.textContent));card.click();await wait(500);
  const a=doc.querySelector(".screen.active");T(a&&a.id==="s-detail"&&/Crime reports, Slough centre/.test(a.textContent),"tapping the crime card opens its article");
