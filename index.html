@@ -1413,6 +1413,7 @@ function linkHTML(u,label,cls){if(!u||isHome(u))return `<span class="lead nolink
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function fmt(d){return new Date(d).toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"})}
 // Today tab shows only what is for today: dated today, or (feed items) first picked up by the hourly build today. Everything else lives in Horizon / Catch up.
+function notYet(it){const t=TODAY,iso=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");return !!it.date&&String(it.date).slice(0,10)>iso;}
 function postedToday(it){const k=TODAY.toDateString();if(it.date&&new Date(String(it.date).slice(0,10)+"T12:00:00").toDateString()===k)return true;if(it.first_seen&&new Date(it.first_seen).toDateString()===k)return true;return false;}
 // Real information only: drop prototype/sample content before anything renders (feed items are added later by loadFeed).
 (function(){for(let i=ITEMS.length-1;i>=0;i--)if(ITEMS[i].sample)ITEMS.splice(i,1);for(const a of [PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES])a.length=0;})();
@@ -1678,7 +1679,7 @@ function renderToday(){
     const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&postedToday(it)).sort((a,b)=>{if(L.k==="local"){const da=milesTo(a),db=milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
     h+=`<div class="band"><div class="band-head"><span class="lvl">${esc(L.lbl(profile))} <button class="btn ghost sm" data-map="${L.k}" style="margin-left:8px;padding:2px 10px;font-size:13px">Map</button></span><span class="cad">${L.k==="local"&&profile.lat!=null?`within ${profile.radius||1} mi of ${esc(profile.pcfull||profile.postcode)}`:L.cad}</span></div>`;
     if(!items.length){
-      const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)).sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
+      const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)&&!notYet(it)).sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
       h+=`<div class="allclear"><span class="tick" aria-hidden="true">✓</span><div>Nothing new. ${typeof L.why==="function"?L.why(profile):L.why}${last?` Last change: <a href="#" data-id="${last.id}" class="lnk">${esc(last.title)}</a>, ${fmt(last.date)}.`:""}</div></div>`;
     } else h+=items.map(it=>{let c=card(it);if(it.council&&it.council!==profile.council)c=c.replace('<div class="meta">',`<div class="meta"><span class="lead">${esc(it.council)}</span>`);const nl=L.k==="local"?nearLabel(it):"";if(nl)c=c.replace('<span class="when">',`<span class="pill near">📍 ${esc(nl)}</span><span class="when">`);return c;}).join("");
     h+=`</div>`;
@@ -2346,7 +2347,7 @@ function badge(id){if(game.badges[id])return;game.badges[id]=1;gsave();const b=B
 
 // Daily brief: three missions
 function briefMissions(relevant){
-  const top=relevant.filter(it=>it.status!=="past").sort((a,b)=>({must:3,affects:2,notice:1}[tierFor(b).tier]-{must:3,affects:2,notice:1}[tierFor(a).tier]))[0];
+  const rk=it=>({must:3,affects:2,notice:1}[tierFor(it).tier]||0),byNew=(a,b)=>rk(b)-rk(a)||new Date(b.date)-new Date(a.date);const live=relevant.filter(it=>it.status!=="past"&&!notYet(it));const top=live.filter(postedToday).sort(byNew)[0]||live.slice().sort((a,b)=>new Date(b.date)-new Date(a.date)||rk(b)-rk(a))[0];
   return [
    {id:"read",t:top?`Read "${top.title}"`:"Read one item",x:"+10",done:()=>top?game.got["read:"+top.id]:false,go:()=>top&&renderDetail(top.id,{type:"screen",tab:"today",scrollY:window.scrollY})},
    {id:"tl",t:"Scrub a timeline end to end",x:"+2 a step",done:()=>ITEMS.some(it=>it.timeline.every((_,i)=>game.got["tl:"+it.id+":"+i])),go:()=>top&&renderDetail(top.id)},
@@ -2465,6 +2466,8 @@ const LIVE_FEED_EXPLAINERS={
 // ---------- Live feed: public JSON built by GitHub Actions; merged over the sample data ----------
 async function loadFeed(){try{const r=await fetch("./items.json",{cache:"no-cache"});if(!r.ok)return;const f=await r.json();if(!f.items)return;const ids=new Set(ITEMS.map(i=>i.id));let n=0;f.items.forEach(it=>{if(ids.has(it.id))return;it.tiers=it.tiers||{all:"notice"};const sourceSpine=it.spine||{};const explanation=LIVE_FEED_EXPLAINERS[it.id];it.spine=Object.assign({adult:it.sum,kid:it.sum},sourceSpine);if(explanation){it.spine.adult=explanation.adult;it.spine.kid=explanation.kid;}it._fromLiveFeed=true;it._kidPlainReady=!!((explanation&&explanation.kid)||(sourceSpine.kid&&sourceSpine.kid!==it.sum));it.foryou=it.foryou||{};it.ribs=it.ribs||[];it.timeline=it.timeline||[{d:fmt(it.date),t:it.title,s:it.status==="coming"?"coming":"now",a:it.sum,k:it.sum,src:it.src}];it.quiz=it.quiz||[];placeOnMap(it);ITEMS.push(it);n++;});migrateLegacyLegislationReferences(f.items);
   window.FEED_META={generated:f.generated_at,sources:f.sources||[],added:n};if(profile){renderAll();if(hashPending){hashPending=!openHash();if(hashPending)toast("That item isn't in the feed any more");}}}catch(e){}}
+let feedLoadedAt=Date.now();
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState!=="visible")return;if(new Date().toDateString()!==TODAY.toDateString()){location.reload();return;}if(Date.now()-feedLoadedAt>15*60000){feedLoadedAt=Date.now();loadFeed();}});
 if("serviceWorker" in navigator){try{navigator.serviceWorker.register("./sw.js");}catch(e){}}
 loadFeed();
 load();
