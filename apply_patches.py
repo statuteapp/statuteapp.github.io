@@ -24,6 +24,22 @@ PATCHES = [
     ("dyk-guard-brief",
      'text+=`Still on the books: ${dyk.t} ${dyk.b} ${mantra()}`;',
      'if(dyk)text+=`Still on the books: ${dyk.t} ${dyk.b} `;text+=mantra();'),
+    # Round 26: the occupation list is a 27-job starter list, not the full ONS SOC 2020 list. Say so honestly.
+    ("r26-soc-comment",
+     'The live app carries all ~400 unit groups; each maps to a role with regulated duties.',
+     'STARTER LIST ONLY: these few occupations are NOT the full ONS SOC 2020 list (about 412 unit groups). Never tell residents the list is complete.'),
+    ("r26-soc-nomatch",
+     'No match. Keep typing, or leave blank: the live app searches all SOC groups.',
+     "No match. Statute's job list is not complete yet: it has ${SOC.length} jobs, not the full official list of about 412 job groups. You can leave this blank for now."),
+    ("r26-soc-note-onboarding",
+     'value="${esc(a.jobtitle||"")}"><div id="occlist"></div>',
+     'value="${esc(a.jobtitle||"")}"><span class="lead" style="display:block;margin-top:4px">Our job list is still being built: it has ${SOC.length} jobs so far, not the full official list, so yours may be missing.</span><div id="occlist"></div>'),
+    ("r26-soc-note-settings",
+     'placeholder="Change: type a job" autocomplete="off"><div id="occlist"></div>',
+     'placeholder="Change: type a job" autocomplete="off"><span class="lead" style="display:block;margin-top:4px">Our job list is still being built: it has ${SOC.length} jobs so far, not the full official list, so yours may be missing.</span><div id="occlist"></div>'),
+    ("r26-soc-hint",
+     "Matched to the ONS job classification. Each job carries the rules you're expected to know.",
+     "Matched to the ONS job classification. Where we have checked the rules for a job, we show them; many jobs are not covered yet."),
 ]
 
 def main():
