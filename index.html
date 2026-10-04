@@ -1763,7 +1763,7 @@ function rwCard(it){
   const what=it.k==="s58"?"Restriction on digging up the road after resurfacing":(it.k==="activity"?(it.name||it.what):it.what);
   const where=[it.street,it.area,it.town].filter(Boolean).filter((v,i,a)=>a.indexOf(v)===i).join(", ");
   const when=it.start?(it.end&&it.end!==it.start?rwFmt(it.start)+" to "+rwFmt(it.end):rwFmt(it.start)):"Dates not given";
-  return `<li style="list-style:none;border:1px solid var(--mist);border-radius:var(--radius);padding:10px 12px;margin:0 0 8px"><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:4px"><span class="pill" style="background:${st[1]};color:${st[2]}">${esc(st[0])}</span>${closure?`<span class="pill" style="background:var(--red-bg);color:var(--red)">Road closure</span>`:""}</div><b>${esc(where||"Location not named")}</b><span class="lead">${esc(what||"Works")}${it.who?" · "+esc(it.who):""}</span><span class="lead">${esc(when)} · ${it.mi.toFixed(1)} mi away${tm&&!closure?" · "+esc(tm):""}</span></li>`;
+  return `<li style="list-style:none;border:1px solid var(--mist);border-radius:var(--radius);padding:10px 12px;margin:0 0 8px"><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:4px"><span class="pill" style="background:${st[1]};color:${st[2]}">${esc(st[0])}</span>${closure?`<span class="pill" style="background:var(--red-bg);color:var(--red)">Road closure</span>`:""}</div><b style="display:block">${esc(where||"Location not named")}</b><span class="lead" style="display:block">${esc(what||"Works")}${it.who?" · "+esc(it.who):""}</span><span class="lead" style="display:block">${esc(when)} · ${it.mi.toFixed(1)} mi away${tm&&!closure?" · "+esc(tm):""}</span></li>`;
 }
 function renderRoadworks(){
   const s=document.getElementById("s-horizon");
@@ -1793,7 +1793,7 @@ function renderRoadworks(){
   let h=head;
   if(idx.live===false)h+=`<div class="allclear" style="margin-bottom:14px"><div><b>Archive data, not live.</b> This shows works recorded up to ${esc(rwFmt(idx.asOf)||"an earlier date")}. The live feed isn't switched on yet, so anything applied for or changed since is missing.</div></div>`;
   else if(idx.updated&&Date.now()-new Date(idx.updated)>10800000)h+=`<div class="allclear" style="margin-bottom:14px"><div><b>May be out of date.</b> Last updated ${esc(new Date(idx.updated).toLocaleString("en-GB",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"}))}.</div></div>`;
-  const total=near.length-r58.length;
+  const total=near.length-r58.length,gapShown=idx.live&&idx.gap?(h+=`<div class="allclear" style="margin-bottom:14px"><div><b>Live updates began on ${esc(rwFmt(String(idx.liveSince||"").slice(0,10)))}.</b> Anything applied for or changed between ${esc(rwFmt(idx.gap.from))} and ${esc(rwFmt(idx.gap.to))} may be missing until DfT's next monthly archive is added.</div></div>`,1):0;
   if(!total)h+=`<div class="allclear"><div>No roadworks recorded within ${rad} mile${rad===1?"":"s"} of your postcode in the latest data. Emergency works are only reported once they have started, so a clear list is not a guarantee.</div></div>`;
   titles.forEach(([k,t])=>{const list=sec[k].sort(by);if(!list.length)return;const lim=RW.show[k]||8;
     h+=`<h2>${t} <span class="lead" style="display:inline;font-weight:400">(${list.length})</span></h2><ul style="padding:0;margin:0">${list.slice(0,lim).map(rwCard).join("")}</ul>`+(list.length>lim?`<button class="btn ghost sm" data-more="${k}">Show ${Math.min(12,list.length-lim)} more</button>`:"");});
