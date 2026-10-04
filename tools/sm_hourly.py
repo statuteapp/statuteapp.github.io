@@ -8,7 +8,7 @@
 
 The state is a gzip JSON file of works records (tools/streetworks.py). Everything is idempotent: collecting the same
 message twice, or in a different order, gives the same result. Standard library only."""
-import argparse, datetime, gzip, json, os, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request, zipfile
+import argparse, datetime, gzip, json, os, re, shutil, sys, time, urllib.error, urllib.parse, urllib.request, zipfile, zlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import streetworks as s
 
@@ -18,6 +18,7 @@ FOLDERS = (("permit/", 3), ("activity/", 6), ("section_58/", 12))
 # Cloudflare blocks Python's default User-Agent at its edge (error 1010), so send a normal one.
 UA = "Mozilla/5.0 (compatible; StatuteHourly/1.0; +https://statuteapp.github.io)"
 PAGE = 3000
+RETRY_WAIT = 5   # seconds before re-fetching an archive file that did not arrive as a valid zip
 
 def now_iso():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -68,17 +69,41 @@ def list_keys(bucket, folder):
     return sorted(k for k in keys if k[0].endswith(".zip"))
 
 def absorb(records, meta, bucket, key, modified, work):
-    """Download one monthly archive zip, fold its notifications into the state, and remember it was read."""
+    """Download one monthly archive zip, fold its notifications into the state, and remember it was read.
+    A file that is not a valid zip is fetched once more, then skipped and noted in meta["skipped"] (and not read again
+    until its modified time changes); one odd file must not stop the whole job."""
     path = os.path.join(work, "archive.zip")
-    req = urllib.request.Request(bucket.rstrip("/") + "/" + urllib.parse.quote(key), headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=300) as r, open(path, "wb") as f:
-        shutil.copyfileobj(r, f, 4 << 20)
+    req_url = bucket.rstrip("/") + "/" + urllib.parse.quote(key)
+    skipped = meta.setdefault("skipped", {})
+    for attempt in (1, 2):
+        req = urllib.request.Request(req_url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=300) as r, open(path, "wb") as f:
+            shutil.copyfileobj(r, f, 4 << 20)
+        if zipfile.is_zipfile(path):
+            break
+        print("archive %s: not a zip file (%d bytes)%s" % (key, os.path.getsize(path), "; trying once more" if attempt == 1 else ""))
+        if attempt == 1:
+            time.sleep(RETRY_WAIT)
+    size = os.path.getsize(path)
     n, last = 0, ""
-    for m in s.read_zip(path):
-        if s.apply(records, m) is not None:
-            n += 1
-        last = max(last, (m.get("event_time") or "")[:10])
+    if not zipfile.is_zipfile(path):
+        os.remove(path)
+        skipped[key] = {"modified": modified, "bytes": size}
+        print("archive %s: skipped (will be read again only if the file changes)" % key)
+        return 0
+    try:
+        for m in s.read_zip(path):
+            if s.apply(records, m) is not None:
+                n += 1
+            last = max(last, (m.get("event_time") or "")[:10])
+    except (zipfile.BadZipFile, EOFError, zlib.error) as e:
+        # what was read stays applied (applying is idempotent); the rest of this file is skipped until it changes
+        os.remove(path)
+        skipped[key] = {"modified": modified, "bytes": size, "why": type(e).__name__, "events": n}
+        print("archive %s: damaged part-way (%s) after %d notifications; skipped the rest" % (key, type(e).__name__, n))
+        return n
     os.remove(path)
+    skipped.pop(key, None)
     dropped = prune(records)
     meta.setdefault("archive", {})[key] = {"modified": modified, "events": n, "lastEvent": last}
     meta["archiveAsOf"] = max(meta.get("archiveAsOf") or "", last)
@@ -87,7 +112,7 @@ def absorb(records, meta, bucket, key, modified, work):
 
 def cmd_seed(a):
     os.makedirs(a.work, exist_ok=True)
-    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "archiveAsOf": ""}
+    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "skipped": {}, "archiveAsOf": ""}
     for folder, count in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-count:]:
             absorb(records, meta, a.bucket, key, modified, a.work)
@@ -101,7 +126,8 @@ def cmd_reconcile(a):
     changed = 0
     for folder, _ in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-2:]:
-            if meta.get("archive", {}).get(key, {}).get("modified") != modified:
+            known = (meta.get("archive", {}).get(key, {}).get("modified"), meta.get("skipped", {}).get(key, {}).get("modified"))
+            if modified not in known:
                 absorb(records, meta, a.bucket, key, modified, a.work)
                 changed += 1
     if changed:
@@ -146,13 +172,14 @@ def cmd_run(a):
         f.write(str(max_id if drained else 0))
     summary = {"at": now_iso(), "drained": drained, "applied": applied, "dropped": dropped, "records": len(records), "kept": sum(counts.values()),
                "tiles": len(counts), "live": live, "liveSince": meta.get("liveSince"), "archiveAsOf": meta.get("archiveAsOf"), "gap": extra.get("gap"),
-               "cursor": max_id, "seconds": round(time.time() - t0, 1), "stateBytes": os.path.getsize(a.state), "zipBytes": os.path.getsize(a.zip)}
+               "skippedArchive": {k: v.get("bytes") for k, v in meta.get("skipped", {}).items()}, "cursor": max_id, "seconds": round(time.time() - t0, 1), "stateBytes": os.path.getsize(a.state), "zipBytes": os.path.getsize(a.zip)}
     with open(a.summary, "w") as f:
         json.dump(summary, f, indent=1)
     print(json.dumps(summary))
 
 def cmd_ack(a):
-    upto = int((open(a.ack_file).read().strip() or "0"))
+    with open(a.ack_file) as f:
+        upto = int(f.read().strip() or "0")
     if upto > 0:
         print("ack:", request("%s/ack?upto=%d" % (a.receiver.rstrip("/"), upto), "POST", os.environ.get("DRAIN_TOKEN") or "").decode())
     else:
