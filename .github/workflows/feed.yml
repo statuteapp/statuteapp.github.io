@@ -26,12 +26,16 @@ jobs:
         id: build
         run: python build_feed.py
         continue-on-error: true
+      - name: Build crime points (separate, so a failure here can never stop the feed)
+        run: python tools/crime_points.py
+        continue-on-error: true
       - name: Commit if changed
         run: |
           git config user.name "statute-feed"
           git config user.email "feed@users.noreply.github.com"
           git add items.json status.json index.html
           if [ -f fsa_places.json ]; then git add fsa_places.json; fi
+          if [ -f crime_points.json ]; then git add crime_points.json; fi
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -q -m "feed: $(date -u +%Y-%m-%dT%H:%M)Z"
           # Another commit (a person's push, or the postcode build) can land while this run is working.
