@@ -26,7 +26,7 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  const dotsOf=k=>{const out=[];L_().eachLayer(l=>{if(l.options&&l.options.isPin&&(!k||l.options.k===k))out.push(l);});return out;};
  const icons=()=>{const out=[];L_().eachLayer(l=>{if(l instanceof w.L.Marker&&l.options.icon&&l.options.icon.options.html)out.push(l);});return out;};
  w.document.querySelector('nav.tabs button[data-t="map"]').click();await wait(900);
- w.document.querySelector('.chips button[data-layer="food"]').click();await wait(1200);
+ await wait(1300);
  const zoomTo=async(z,ll)=>{L_().setView(ll||[51.5112,-0.5390],z);await wait(350);};
  // 1. zoomed out: dots only, at true positions
  await zoomTo(13);const total=dotsOf().length;
@@ -67,7 +67,7 @@ const ok=(c,m)=>console.log((c?"PASS ":"FAIL ")+m)||c;
  T(errs.length===0,"no page errors raised "+JSON.stringify(errs.slice(0,3)));
  // 7. the owner's case: hundreds of places (a wide radius), still light
  const big=await boot(50);const BL=()=>big.w.eval("LMAP");
- big.w.document.querySelector('nav.tabs button[data-t="map"]').click();await wait(900);big.w.document.querySelector('.chips button[data-layer="food"]').click();await wait(1500);
+ big.w.document.querySelector('nav.tabs button[data-t="map"]').click();await wait(900);await wait(1700);
  const bigDots=()=>{const o=[];BL().eachLayer(l=>{if(l.options&&l.options.isPin)o.push(l);});return o;};
  const bigIcons=()=>{const o=[];BL().eachLayer(l=>{if(l instanceof big.w.L.Marker&&l.options.icon&&l.options.icon.options.html)o.push(l);});return o;};
  BL().setView([51.5112,-0.5390],13);await wait(400);const n=bigDots().length;
