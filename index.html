@@ -1416,6 +1416,8 @@ function fmt(d){return new Date(d).toLocaleDateString("en-GB",{day:"numeric",mon
 function postedToday(it){const k=TODAY.toDateString();if(it.date&&new Date(String(it.date).slice(0,10)+"T12:00:00").toDateString()===k)return true;if(it.first_seen&&new Date(it.first_seen).toDateString()===k)return true;return false;}
 // Real information only: drop prototype/sample content before anything renders (feed items are added later by loadFeed).
 (function(){for(let i=ITEMS.length-1;i>=0;i--)if(ITEMS[i].sample)ITEMS.splice(i,1);for(const a of [PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES])a.length=0;})();
+// Real information only: nothing hand-written is shown. Every card comes from the hourly feed (loadFeed); the prototype items, pins, events, facts and areas below are discarded before anything renders.
+(function(){for(const a of [ITEMS,PINS,EVENTS,WORKS_PINS,WORKS_EXTRA,FUND_PINS,ENFORCE_PINS,ORDERS,MEASURES,DYK,ASIS])a.length=0;})();
 function daysTo(d){return Math.round((new Date(d)-TODAY)/86400000)}
 function has(s){return profile&&(profile.sits.includes(s)||(profile.interests||[]).includes(s))}
 function tierFor(it){ // highest tier that applies to this profile
@@ -1663,7 +1665,7 @@ function renderToday(){
   const dyk=DYK[TODAY.getDate()%DYK.length];
   h+=`<div class="row" style="margin:0 0 12px"><button class="btn sm" id="brief">▶ Morning briefing</button><span class="lead" id="briefnote">Today's items read aloud, duties first. About ${Math.max(1,Math.round(tc.list.length*0.7))} min.</span></div>`;
   h+=`<div class="meas">${MEASURES.map(m=>`<button data-meas="${m.k}" aria-label="${esc(m.l)}: ${esc(m.v)}"><div class="l">${esc(m.l)}</div><div class="v ${m.ok?"":"warn"}">${esc(m.v)}</div></button>`).join("")}</div>`;
-  h+=`<div class="dyk"><span class="pill kind law" style="margin-bottom:4px">Still on the books</span><div class="t">${esc(dyk.t)}</div><div>${esc(dyk.b)}</div><div class="src">${esc(dyk.src)}</div></div>`;
+  if(dyk)h+=`<div class="dyk"><span class="pill kind law" style="margin-bottom:4px">Still on the books</span><div class="t">${esc(dyk.t)}</div><div>${esc(dyk.b)}</div><div class="src">${esc(dyk.src)}</div></div>`;
   h+=`<div class="clock">${session&&!session.done&&session.end>Date.now()?`<div class="big">Catch-up in progress<small>Time remaining · the original end time is unchanged</small><b id="today-session-left" style="display:block;font-size:24px;margin-top:4px">--:--</b></div><div class="row"><button class="btn sm" id="resume-session">Continue catch-up</button><button class="btn ghost sm" id="cancel-session">End session</button></div>`:`<div class="big">${tc.mins===0?"Current":tc.mins+" min"}<small>${tc.mins===0?"Nothing unread that applies to you.":"to get current: "+tc.list.length+" unread item"+(tc.list.length>1?"s":"")+", duties first"}</small></div><div class="row"><button class="btn sm" data-session="5">5-minute catch-up</button><button class="btn sm ghost" data-session="30">30 minutes</button></div>`}</div>`;
   h+=briefHTML(relevant);
   const myA=(profile.asis||[]).map(id=>ASIS.find(a=>a.id===id)).filter(Boolean);
@@ -2002,10 +2004,10 @@ function briefing(){
   if(!("speechSynthesis" in window)){toast("No speech in this browser");return;}
   const synth=window.speechSynthesis;if(synth.speaking){synth.cancel();document.getElementById("brief").textContent="▶ Morning briefing";return;}
   const tc=toCurrent();const list=tc.list.length?tc.list:ITEMS.filter(it=>tierFor(it)&&it.status!=="past").slice(0,5);
-  const dyk=DYK[TODAY.getDate()%DYK.length];const must=list.filter(it=>tierFor(it).tier==="must").length;
+  const dyk=DYK.length?DYK[TODAY.getDate()%DYK.length]:null;const must=list.filter(it=>tierFor(it).tier==="must").length;
   let text=`Good morning. ${TODAY.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"})}. ${must?must+" item"+(must>1?"s":"")+" place a duty on you.":"Nothing new places a duty on you."} Air quality ${MEASURES[0].v.replace("·","")}. `;
   list.forEach((it,i)=>{const r=tierFor(it);text+=`${i+1}. ${r.tier==="must"?"You must know this. ":""}${it.title}. ${it.spine[register]||it.spine.adult} ${foryou(it)?"For you: "+foryou(it)+" ":""}`;});
-  text+=`Still on the books: ${dyk.t} ${dyk.b} ${mantra()}`;
+  if(dyk)text+=`Still on the books: ${dyk.t} ${dyk.b} `;text+=mantra();
   const u=new SpeechSynthesisUtterance(text);const v=synth.getVoices().find(v=>/en-GB/i.test(v.lang));if(v)u.voice=v;u.lang="en-GB";u.rate=0.95;
   u.onend=()=>{document.getElementById("brief").textContent="▶ Morning briefing";award("brief:"+TODAY.toDateString(),10,"Briefed");list.forEach(it=>award("read:"+it.id,10,"Heard"));renderToday();};
   synth.speak(u);document.getElementById("brief").textContent="■ Stop";
