@@ -356,7 +356,7 @@ h2 a[data-go]{color:inherit;text-decoration:underline dotted;text-underline-offs
 nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:6;background:var(--paper);border-top:1px solid var(--paper-3);padding-bottom:env(safe-area-inset-bottom,0px)}
 nav.tabs .inner{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
 nav.tabs button{background:transparent;border:0;padding:10px 4px 8px;font-size:0.78125rem;font-weight:700;color:var(--slate);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
-nav.tabs button[aria-current="page"]{color:var(--ink)}
+nav.tabs button[aria-current="page"]{color:var(--ink);background:var(--blue-bg);box-shadow:inset 0 3px 0 var(--blue)}nav.tabs button[aria-current="page"] span.ico{background:var(--blue);border-color:var(--blue)}
 nav.tabs button span.ico{width:22px;height:22px;border:2px solid currentColor;border-radius:4px;display:block}
 nav.tabs button[data-t="today"] span.ico{border-radius:50%}
 nav.tabs button[data-t="horizon"] span.ico{border-radius:2px 2px 11px 11px}
@@ -2190,15 +2190,15 @@ function loadFsaDirectory(){
     .finally(()=>{FSA_DIRECTORY_LOADING=false;});
   return FSA_DIRECTORY_PROMISE;
 }
-function fsaRatingText(v){return ({"5":"5 — very good","4":"4 — good","3":"3 — generally satisfactory","2":"2 — improvement necessary","1":"1 — major improvement necessary","0":"0 — urgent improvement necessary","AwaitingInspection":"Awaiting inspection","AwaitingPublication":"Awaiting publication","Exempt":"Exempt"}[String(v)]||String(v||"No published rating"));}
+function fsaRatingText(v){return ({"5":"5 out of 5 — very good","4":"4 out of 5 — good","3":"3 out of 5 — generally satisfactory","2":"2 out of 5 — improvement necessary","1":"1 out of 5 — major improvement necessary","0":"0 out of 5 — urgent improvement necessary","AwaitingInspection":"Awaiting inspection","AwaitingPublication":"Awaiting publication","Exempt":"Exempt"}[String(v)]||String(v||"No published rating"));}
 function fsaCardHTML(F){
   const miles=milesTo(F),distance=miles==null?"":(miles<0.1?" · on your street":" · "+(miles<1?Math.round(miles*10)/10:Math.round(miles))+" mi");
   return '<button class="card notice fsa-row" data-fsa-id="'+esc(F.id)+'" style="border-left-color:var(--slate)"><div class="meta"><span class="pill kind update">'+esc(fsaRatingText(F.rating))+'</span><span class="lead">'+esc(F.type||"Food business")+esc(distance)+'</span></div><p class="ttl">'+esc(F.name)+'</p><p class="sum">'+esc(F.address||"Address not published")+(F.ratingDate?" · inspected "+fmt(F.ratingDate):"")+(F.pending?" · new rating pending":"")+'</p></button>';
 }
 function fsaDetailsHTML(F){
   const S=F.scores||{},H=(F.history||[]).slice().reverse();
-  const scores=[["Hygiene",S.hygiene],["Structure",S.structural],["Food safety management",S.management]].filter(x=>x[1]!==null&&x[1]!==undefined);
-  const scoreRows=scores.map(x=>'<dt>'+esc(x[0])+' score</dt><dd>'+esc(x[1])+'</dd>').join("");
+  const scores=[["Hygienic food handling",S.hygiene,25],["Cleanliness and condition of the premises",S.structural,25],["Management of food safety",S.management,30]].filter(x=>x[1]!==null&&x[1]!==undefined);
+  const scoreRows=scores.map(x=>'<dt>'+esc(x[0])+'</dt><dd><b>'+esc(x[1])+' out of '+x[2]+'</b></dd>').join("")+(scores.length?'<dt>How to read these</dt><dd class="lead">The inspector marks each area from 0 (best) up to 25, or 30 for management. Lower is better. The three marks add up to decide the 0 to 5 rating.</dd>':"");
   const history=H.length?'<ul style="margin:0;padding-left:18px">'+H.map(x=>'<li>'+esc(fsaRatingText(x.rating))+' · FSA inspection '+(x.ratingDate?fmt(x.ratingDate):"date not supplied")+' · captured by Statute '+fmt(x.recorded)+'</li>').join("")+'</ul>':'<p>No rating changes have been recorded yet. The FSA entry shows the current rating; Statute can only show changes captured since '+(FSA_DIRECTORY?fmt(FSA_DIRECTORY.historyTrackedFrom):"tracking began")+'.</p>';
   return '<div class="pinfo"><div class="row" style="justify-content:space-between"><span class="pill kind update">Food hygiene rating</span><span class="lead">'+esc(fsaRatingText(F.rating))+'</span></div><div class="t" style="margin-top:6px">'+esc(F.name)+'</div><div class="m">'+esc(F.type||"Food business")+' · '+esc(F.address||"Address not published")+'</div><dl class="kv"><dt>Inspection date</dt><dd>'+(F.ratingDate?fmt(F.ratingDate):"Not supplied")+(F.pending?" · A newer rating is pending publication":"")+'</dd>'+scoreRows+'</dl>'+(F.rightToReply?'<h3>Business reply</h3><p>'+esc(F.rightToReply.slice(0,800))+'</p>':"")+'<h3>Rating history recorded by Statute</h3>'+history+'<p class="lead">The FSA API gives the current rating and inspection date. Statute history starts '+(FSA_DIRECTORY?fmt(FSA_DIRECTORY.historyTrackedFrom):"when tracking began")+' and is not a complete historic inspection record.</p><p>Contains Food Standards Agency data.</p><a class="btn sm" href="'+esc(F.officialUrl)+'" target="_blank" rel="noopener">Open the official FSA entry ↗</a></div>';
 }
