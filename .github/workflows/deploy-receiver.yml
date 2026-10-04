@@ -2,7 +2,7 @@ name: Deploy roadworks receiver
 # Deploys the Cloudflare Worker in ./worker, which receives Street Manager open data from DfT. Needs three repository
 # secrets (Settings > Secrets and variables > Actions): CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID and DRAIN_TOKEN.
 # Without them the job still runs the tests and records that nothing was deployed. After a deploy it probes the live
-# receiver and commits the result to worker/deploy_check.json.
+# receiver and commits the result (including the unit-test outcome) to worker/deploy_check.json.
 on:
   workflow_dispatch:
   push:
@@ -27,6 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - name: Unit tests
+        id: tests
         run: node --test worker/test/receiver.test.mjs
       - name: Deploy to Cloudflare
         id: deploy
@@ -46,6 +47,7 @@ jobs:
           URL: ${{ steps.deploy.outputs.deployment-url }}
           OUT: ${{ steps.deploy.outputs.command-output }}
           DEPLOYED: ${{ steps.deploy.outcome }}
+          TESTS: ${{ steps.tests.outcome }}
         run: python3 worker/smoke.py
       - name: Commit the result
         if: always()
