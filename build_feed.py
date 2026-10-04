@@ -268,23 +268,53 @@ def _fsa_authority_info(authorities, name, authority_id=None):
     if exact: return exact[0]
     return next((a for a in authorities if str(a.get("Name", "")).strip().casefold().startswith(name.strip().casefold())), None)
 
-def _fsa_open_data_url(authority):
-    """Use the current open-data URL linked by the FSA authority endpoint; do not assemble a guessed URL."""
+FSA_OPEN_DATA_BASE = "https://ratings.food.gov.uk/api/open-data-files/"   # path used by the FSA open-data page
+FSA_FILE_RE = re.compile(r"(FHRS\d+[a-z]{2}-[A-Z]{2}\.(?:xml|json))$")
+
+def _fsa_open_data_urls(authority):
+    """Candidate URLs for this authority's official nightly file, best first.
+    1. a direct open-data link on the authority record, if the FSA provides one;
+    2. the authority's own FileName (documented on GET /Authorities) placed on the official open-data path;
+    3. that FileName as given, upgraded to https.
+    Nothing is hard-coded per council: the file name always comes from the FSA's authority record."""
+    urls = []
     for link in authority.get("links", []) or []:
         href = str(link.get("href", "")).strip()
         rel = str(link.get("rel", "")).casefold()
         path = urllib.parse.urlsplit(href).path.casefold()
         if "/open-data-files/" in path or ("open-data" in rel and path.endswith((".xml", ".json"))):
-            url = urllib.parse.urljoin("https://ratings.food.gov.uk", href)
-            if urllib.parse.urlsplit(url).scheme == "https":
-                return url
-    raise RuntimeError(f"FSA authority {authority.get('Name', '')} did not provide an open-data file link")
+            urls.append(urllib.parse.urljoin("https://ratings.food.gov.uk", href))
+    fname = str(authority.get("FileName") or "").strip()
+    if fname:
+        m = FSA_FILE_RE.search(urllib.parse.urlsplit(fname).path.rsplit("/", 1)[-1])
+        if m and m.group(1).casefold().endswith(".xml"):
+            urls.append(FSA_OPEN_DATA_BASE + m.group(1))
+        if fname.casefold().startswith(("http://", "https://")) and fname.casefold().endswith(".xml"):
+            urls.append("https://" + fname.split("://", 1)[1])
+    seen, out = set(), []
+    for u in urls:
+        if urllib.parse.urlsplit(u).scheme == "https" and u not in seen:
+            seen.add(u); out.append(u)
+    if not out:
+        raise RuntimeError(f"FSA authority {authority.get('Name', '')} has no open-data link or valid FileName "
+                           f"(FileName={fname!r})")
+    return out
+
+def _fsa_download(authority):
+    """Try each candidate URL; return (url, parsed XML root). Errors from every attempt are reported together."""
+    errors = []
+    for url in _fsa_open_data_urls(authority):
+        try:
+            return url, ET.fromstring(get(url, timeout=120))
+        except Exception as e:
+            errors.append(f"{url}: {type(e).__name__} {e}")
+    raise RuntimeError("FSA open-data download failed; " + " | ".join(errors))
 
 def _fsa_register(authority):
     """Download and normalise one authority's official nightly open-data XML file."""
     name = authority.get("Name", "unknown")
-    url = _fsa_open_data_url(authority)
-    root = ET.fromstring(get(url, timeout=120))
+    url, root = _fsa_download(authority)
+    print(f"  FSA {name}: using {url}", file=sys.stderr)
 
     def tag_name(element):
         return str(element.tag).rsplit("}", 1)[-1].casefold()
