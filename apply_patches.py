@@ -40,6 +40,16 @@ PATCHES = [
     ("r26-soc-hint",
      "Matched to the ONS job classification. Each job carries the rules you're expected to know.",
      "Matched to the ONS job classification. Where we have checked the rules for a job, we show them; many jobs are not covered yet."),
+    # Round 27: official sources always open in a new tab, so residents keep their place in Statute.
+    ("r27-newtab-print-link",
+     '<a href="${esc(e.link)}">open source</a>',
+     '<a href="${esc(e.link)}" target="_blank" rel="noopener">open source</a>'),
+    ("r27-newtab-safety-net",
+     '// ---------- Onboarding ----------',
+     '// Any link to another website opens in a new tab, including links added later or inside feed text.\n'
+     'document.addEventListener("click",ev=>{const a=ev.target.closest&&ev.target.closest("a[href]");if(!a)return;let u;try{u=new URL(a.getAttribute("href"),location.href);}catch(_){return;}'
+     'if((u.protocol==="http:"||u.protocol==="https:")&&u.host!==location.host){a.target="_blank";a.rel="noopener";}},true);\n'
+     '// ---------- Onboarding ----------'),
 ]
 
 def main():
