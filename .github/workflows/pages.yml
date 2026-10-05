@@ -5,7 +5,7 @@ on:
   # Feed-bot commits are pushed with GITHUB_TOKEN, which never starts a push-triggered workflow.
   # Deploy after every feed run too, so new items (and queued index.html patches) actually go live.
   workflow_run:
-    workflows: ["Build feed", "Build postcode lookup", "Roadworks hourly"]
+    workflows: ["Build feed", "Build postcode lookup", "Roadworks hourly", "Restore index"]
     types: [completed]
   workflow_dispatch:
 permissions:

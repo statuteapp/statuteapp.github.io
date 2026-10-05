@@ -1,0 +1,36 @@
+name: Restore index
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/restore-index.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: restore-index
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: main, fetch-depth: 0 }
+      - name: Restore working index.html from 372a41a and enable street works layer
+        run: |
+          set -e
+          git checkout 372a41a -- index.html
+          size=$(wc -c < index.html)
+          echo "restored index.html size: $size"
+          test "$size" -gt 400000
+          head -1 index.html | grep -q '<!DOCTYPE html>'
+          sed -i 's/let mapLayers={law:true,food:true,crime:true};/let mapLayers={law:true,food:true,crime:true,works:true};/' index.html
+          grep -q 'let mapLayers={law:true,food:true,crime:true,works:true};' index.html
+          git rm -f --ignore-unmatch test-push.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Restore working index.html (372a41a) + street works on map"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
