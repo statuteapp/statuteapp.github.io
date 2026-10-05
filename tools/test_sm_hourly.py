@@ -200,10 +200,35 @@ class T(unittest.TestCase):
         self.assertEqual(c.exception.code, 403)
         self.seed(); self.do_run()   # would fail if the tool sent Python's default
 
-    def test_old_finished_works_are_dropped_on_each_run(self):
+    def test_finished_works_older_than_a_month_are_dropped_on_each_run(self):
         self.seed(); recs, meta = H.load_state(self.state)
-        recs["P:STALE"] = {"k": "permit", "ev": 5, "sev": 5, "st": "finished", "st_t": instant(-20), "t": instant(-20), "lat": 51.5, "lng": -0.59, "start": d(-30), "end": d(-25)}
+        recs["P:STALE"] = {"k": "permit", "ev": 5, "sev": 5, "st": "finished", "st_t": instant(-40), "t": instant(-40), "lat": 51.5, "lng": -0.59, "start": d(-50), "end": d(-45)}
         H.save_state(self.state, recs, meta); self.do_run(); self.assertEqual(self.summary_()["dropped"], 1); self.assertNotIn("P:STALE", H.load_state(self.state)[0])
+
+    def test_works_finished_in_the_last_month_are_kept_and_shown_but_cancelled_and_refused_ones_are_not(self):
+        self.seed(); recs, meta = H.load_state(self.state)
+        def rec(st, ago): return {"k": "permit", "ev": 5, "sev": 5, "st": st, "st_t": instant(-ago), "t": instant(-ago), "lat": 51.5, "lng": -0.59, "start": d(-ago - 5), "end": d(-ago), "street": "Mill Road"}
+        recs["P:DONE"], recs["P:CANC"], recs["P:REFU"] = rec("finished", 20), rec("cancelled", 20), rec("refused", 20)
+        H.save_state(self.state, recs, meta); self.do_run(); self.assertEqual(self.summary_()["dropped"], 2)
+        recs2 = H.load_state(self.state)[0]; self.assertIn("P:DONE", recs2); self.assertNotIn("P:CANC", recs2); self.assertNotIn("P:REFU", recs2)
+        tiles = [json.loads(self.read(os.path.join(self.out, n))) for n in os.listdir(self.out) if n != "index.json"]
+        shown = {i["id"]: i for t_ in tiles for i in t_["items"]}
+        self.assertEqual(shown["P:DONE"]["st"], "finished"); self.assertEqual(shown["P:DONE"]["st_t"][:10], d(-20))      # the app needs the day it finished
+        self.assertNotIn("P:CANC", shown)
+
+    def test_a_state_seeded_under_older_rules_is_rebuilt_from_the_archives_while_no_live_messages_exist(self):
+        self.seed(); recs, meta = H.load_state(self.state); self.assertEqual(meta["seedVersion"], H.SEED_VERSION)
+        del recs["P:W-1"]; meta["seedVersion"] = 1; H.save_state(self.state, recs, meta)       # as if an old rule had pruned it
+        self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
+        recs2, meta2 = H.load_state(self.state); self.assertIn("P:W-1", recs2); self.assertEqual(meta2["seedVersion"], H.SEED_VERSION)
+        Bucket.hits[:] = []; self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0); self.assertEqual(Bucket.hits, [])   # and only once
+
+    def test_a_state_with_live_messages_in_it_is_never_rebuilt(self):
+        self.seed(); self.post([msg(100, "PERMIT_SUBMITTED", "LIVE-1", 14, 15)]); self.do_run()
+        recs, meta = H.load_state(self.state); self.assertIn("P:LIVE-1", recs); self.assertTrue(meta["liveSince"])
+        meta["seedVersion"] = 1; H.save_state(self.state, recs, meta); Bucket.hits[:] = []
+        self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
+        recs2, meta2 = H.load_state(self.state); self.assertIn("P:LIVE-1", recs2); self.assertEqual(meta2["seedVersion"], 1); self.assertEqual(Bucket.hits, [])
 
     def test_reconcile_reads_only_new_or_changed_archive_files_and_closes_the_gap(self):
         self.seed(); self.post([msg(100, "PERMIT_SUBMITTED", "NEW-1", 14, 15)]); self.do_run(); self.assertIn("gap", self.index())
