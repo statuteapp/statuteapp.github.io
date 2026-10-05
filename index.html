@@ -5,107 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#1A1A1A">
 <title>Statute</title>
-<style>
-:root{--ink:#000;--paper:#fff;--paper-2:hsl(0,0%,95%);--paper-3:hsl(0,0%,90%);--slate:#666;--slate-light:#888;--amber:#b85c00;--green:#008000;--green-bg:hsl(120,100%,91%);--red:#d00;--purple:#66009f;--blue:#0066ff}
-@media(prefers-color-scheme:dark){:root{--ink:#fff;--paper:#1A1A1A;--paper-2:#222;--paper-3:#333;--slate:#aaa;--slate-light:#999;--amber:#ffa500;--green:#0f0;--green-bg:#003300}}
-html{font-size:16px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;line-height:1.5;color:var(--ink);background:var(--paper);scroll-behavior:smooth}
-body{margin:0;padding:0}.app{max-width:768px;margin:0 auto;background:var(--paper);color:var(--ink)}
-@media print{
-  header.top,nav.tabs,.hbtns,.sheet,.toast,#confetti,#padhud,.back,.bm,.audio,.chips,.btn,.bmc,.quiz,.brief,.clock,.meas,.areas,.setnav{display:none !important}
-  body,.app{background:#fff;color:#000}.app{max-width:none}
-  .screen{display:none}.screen.active{display:block;padding:0}
-  .card{break-inside:avoid;border:1px solid #999;border-left-width:6px;box-shadow:none}
-  a{color:#000;text-decoration:none}a[href^="http"]::after{content:" [link: " attr(href) "]";font-size:.6875rem;color:#333;word-break:break-all}.tl-track,.tl-hint,.tl-years,.tl-card{display:none !important}.print-timeline{display:block !important}.print-event{break-inside:avoid;border-top:1px solid #999;padding:8px 0}.print-event h3{font-size:1rem;margin:4px 0}.print-event p{font-size:.875rem;margin:3px 0}
-  details.rib{break-inside:avoid}
-  .printhead{display:block !important;font-size:0.75rem;color:#444;border-bottom:1px solid #999;margin-bottom:12px;padding-bottom:6px}
-}
-h1{font-size:1.75rem;margin:0 0 12px;font-weight:700;line-height:1.2}h2{font-size:1.25rem;margin:14px 0 8px;font-weight:700}h3{font-size:1rem;margin:10px 0 4px;font-weight:700}p{margin:0 0 8px}
-.lede{font-size:1.0625rem;line-height:1.4;margin:0 0 12px;font-weight:500;color:var(--slate)}.lead{font-size:0.9375rem;color:var(--slate);line-height:1.4}.tick{display:inline-block;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;text-align:center;line-height:24px;font-weight:700;margin-right:8px}
-.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row.v{flex-direction:column;align-items:flex-start}.seg{display:flex;gap:0;border:1px solid var(--paper-3);border-radius:6px;overflow:hidden}.seg button{flex:1;border:0;background:var(--paper);padding:6px 12px;cursor:pointer;border-right:1px solid var(--paper-3);font-size:0.875rem;font-weight:600}.seg button:last-child{border-right:0}.seg button[aria-pressed="true"]{background:var(--paper-2)}
-header.top{position:sticky;top:0;z-index:100;padding:8px 16px;background:var(--paper);border-bottom:1px solid var(--paper-3);display:flex;justify-content:space-between;align-items:center}
-header.top .ic{font-size:1.5rem}
-header.top span{font-size:0.875rem;font-weight:600;color:var(--slate)}
-.screen{display:none;padding:16px;position:relative;min-height:100vh}
-.screen.active{display:block}
-.tab-nav{position:fixed;bottom:0;left:0;right:0;z-index:100;display:flex;justify-content:space-around;background:var(--paper);border-top:1px solid var(--paper-3);padding:0;margin:0}
-.tab-nav button{flex:1;border:0;background:0;padding:8px;cursor:pointer;font-size:1.5rem;border-top:2px solid transparent}
-.tab-nav button[aria-current]{border-top-color:var(--ink)}
-.btn{display:inline-block;padding:8px 16px;background:var(--ink);color:var(--paper);border:0;border-radius:6px;font-weight:600;cursor:pointer;font-size:0.9375rem;text-decoration:none}.btn:hover{opacity:0.9}
-.btn.sm{padding:6px 12px;font-size:0.875rem}
-.btn.ghost{background:var(--paper-2);color:var(--ink);border:1px solid var(--paper-3)}
-.btn.ghost:hover{background:var(--paper-3)}
-.pill{display:inline-block;padding:2px 8px;background:var(--paper-2);border-radius:4px;font-size:0.8125rem;font-weight:600;white-space:nowrap}
-.pill.kind{background:var(--paper-3);font-size:0.75rem;padding:3px 6px}
-.pill.kind.law{background:#e8e8ff;color:#003d99}.pill.kind.alert{background:#ffe8e8;color:#990000}.pill.kind.rates{background:#fff8e8;color:#664400}.pill.kind.consult{background:#f0e8ff;color:#4d0099}.pill.kind.guidance{background:#e8f0ff;color:#003366}.pill.kind.update{background:#e8e8e8;color:#333}.pill.kind.record{background:#e8ffe8;color:#003300}.pill.near{background:var(--green-bg);color:var(--green)}
-.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}.dot.ok{background:var(--green)}.dot.warn{background:var(--amber)}
-.card{border:1px solid var(--paper-3);border-radius:8px;padding:12px;margin:0 0 12px;cursor:pointer;background:var(--paper);transition:box-shadow 0.2s}
-.card:hover{box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-.card.notice{border-left:4px solid var(--slate)}
-.card .ttl{font-weight:600;margin:4px 0;font-size:0.9375rem}.card .sum{font-size:0.875rem;color:var(--slate);margin:0}
-.card .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 6px;font-size:0.875rem}
-.table{width:100%;border-collapse:collapse;margin:8px 0}
-.table th{text-align:left;padding:8px;border-bottom:1px solid var(--paper-3);font-weight:600;font-size:0.875rem}
-.table td{padding:8px;border-bottom:1px solid var(--paper-3);font-size:0.875rem}
-.allclear{text-align:center;padding:20px;color:var(--slate)}.allclear span{display:block;font-size:2rem;margin-bottom:8px}
-header.top,nav.tabs,.hbtns,.sheet,.toast,#confetti,#padhud,.back,.bm,.audio,.chips,.btn,.bmc,.quiz,.brief,.clock,.meas,.areas,.setnav{display:none !important}
-.meas{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:0 0 14px}
-.meas button{text-align:left;border:1px solid var(--paper-3);border-radius:8px;padding:8px 10px;background:var(--paper);cursor:pointer}
-.meas .l{font-size:0.78125rem;color:var(--slate)}.meas .v{font-weight:700;font-size:0.9375rem}
-.meas .v.warn{color:var(--amber)}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chips button{padding:6px 12px;border:1px solid var(--paper-3);border-radius:6px;background:var(--paper);cursor:pointer;font-size:0.875rem;font-weight:600}
-.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-</style>
 </head>
 <body>
 <div class="app">
-  <div id="s-today" class="screen active"><h1>Loading…</h1></div>
-  <div id="s-detail" class="screen"></div>
+  <div id="s-today" class="screen active"><h1>Statute - Restoring...</h1><p>If you see this, the working version is being restored. Please wait a moment and refresh.</p></div>
 </div>
-
 <script>
-// Sample data structure for demonstration
-const profile = {council: "Slough Borough Council", lat: 51.5105, lng: -0.5950, postcode: "SL1"};
-let MEASURES = [];
-let mapLayers={law:true,food:true,crime:true,works:true};let mapZoom=1;
-
-function renderToday() {
-  const s = document.getElementById('s-today');
-  if (!s) return;
-  s.innerHTML = `
-    <h1>Statute App</h1>
-    <p>Today's information for ${profile.council}</p>
-    <div class="meas">
-      ${MEASURES.map(m => `
-        <button>
-          <div class="l">${m.l}</div>
-          <div class="v ${m.ok ? '' : 'warn'}">${m.v}</div>
-        </button>
-      `).join('')}
-    </div>
-  `;
-}
-
-async function fetchMeasuresForLocation(lat, lng, postcode) {
-  const measures = [];
-  // Simplified version - just return placeholder measures
-  measures.push(
-    {k:"air", l:"Air quality", v:"Loading…", ok:null, src:"Defra UK-AIR"},
-    {k:"pollen", l:"Pollen", v:"Loading…", ok:null, src:"UKHSA"},
-    {k:"river", l:"River level", v:"Loading…", ok:null, src:"Environment Agency"},
-    {k:"water", l:"Water", v:"Loading…", ok:null, src:"Environment Agency"},
-    {k:"uv", l:"UV Index", v:"Loading…", ok:null, src:"Met Office"},
-    {k:"humidity", l:"Humidity", v:"Loading…", ok:null, src:"Defra UK-AIR"}
-  );
-  return measures;
-}
-
-window.addEventListener('DOMContentLoaded', async () => {
-  if (profile.lat && profile.lng) {
-    MEASURES = await fetchMeasuresForLocation(profile.lat, profile.lng, profile.postcode);
-  }
-  renderToday();
-});
+window.location.reload();
 </script>
 </body>
 </html>
