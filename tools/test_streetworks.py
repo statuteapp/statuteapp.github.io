@@ -81,7 +81,10 @@ class Keep(unittest.TestCase):
         self.assertFalse(s.keep(self.rec("approved", start="2026-08-01", end="2026-08-05"), self.today))          # long gone
         self.assertFalse(s.keep(self.rec("approved", start="2026-10-01", end="2026-10-03"), self.today))          # window ended, never marked started
         self.assertTrue(s.keep(self.rec("approved", start="2026-10-02", end="2026-10-04"), self.today))           # ends today: still shown
-        self.assertFalse(s.keep(self.rec("finished", st_t="2026-09-20T00:00:00Z"), self.today))
+        self.assertTrue(s.keep(self.rec("finished", st_t="2026-09-20T00:00:00Z"), self.today))        # finished within the last month: stays, so residents can see what has just been done
+        self.assertFalse(s.keep(self.rec("finished", st_t="2026-08-20T00:00:00Z"), self.today))       # finished more than a month ago: gone
+        self.assertTrue(s.keep(self.rec("cancelled", st_t="2026-10-04T00:00:00Z"), self.today))       # cancelled and refused ones only for a day or two
+        self.assertFalse(s.keep(self.rec("cancelled", st_t="2026-09-20T00:00:00Z"), self.today))
         self.assertTrue(s.keep(self.rec("finished", st_t="2026-10-03T00:00:00Z"), self.today))
         self.assertFalse(s.keep(self.rec("refused"), "2026-12-01"))
         self.assertFalse(s.keep({"k": "permit", "st": "applied"}, self.today))                                   # no location
