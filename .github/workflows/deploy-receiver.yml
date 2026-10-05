@@ -28,7 +28,7 @@ jobs:
         with: { python-version: "3.12" }
       - name: Unit tests
         id: tests
-        run: node --test worker/test/receiver.test.mjs
+        run: node --test worker/test/*.test.mjs
       - name: Deploy to Cloudflare
         id: deploy
         if: ${{ env.CF_TOKEN != '' && env.CF_ACCOUNT != '' && env.DRAIN != '' }}

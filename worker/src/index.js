@@ -14,6 +14,13 @@ function safeEqual(a, b) {
 }
 const authed = (req, env) => !!env.DRAIN_TOKEN && safeEqual(req.headers.get("authorization") || "", "Bearer " + env.DRAIN_TOKEN);
 
+// Records what happened to a verified subscription message, or a failure after verification, so the owner can see it in the database.
+// Never throws: logging must not stop the answer. Messages that fail verification are never recorded.
+async function logSub(env, topic, ok, note) {
+  try { await env.DB.prepare("INSERT INTO subs (topic, at, ok, note) VALUES (?1, ?2, ?3, ?4)").bind(topic, new Date().toISOString(), ok, String(note).slice(0, 200)).run(); } catch (e) { /* logging must never stop the answer */ }
+}
+const why = (e) => (e && e.message ? e.message : String(e));
+
 async function receive(req, env, topic, deps) {
   const raw = await req.text();
   if (raw.length > MAX_BODY) return json({ error: "too large" }, 413);
@@ -23,12 +30,22 @@ async function receive(req, env, topic, deps) {
   const hdr = req.headers.get("x-amz-sns-message-type");
   if (hdr && hdr !== m.Type) return json({ error: "type mismatch" }, 400);
   if (!(await verifySns(m, deps.getCert))) return json({ error: "bad signature" }, 403);
+  try {
+    return await verified(m, env, topic, deps);
+  } catch (e) {
+    // Anything unexpected after verification is recorded and answered with a 5xx, so Amazon tries again.
+    await logSub(env, topic, 0, "error: " + why(e));
+    return json({ error: "internal error" }, 500);
+  }
+}
 
+async function verified(m, env, topic, deps) {
   if (m.Type === "SubscriptionConfirmation") {
     if (!subscribeUrlOk(m.SubscribeURL)) return json({ error: "bad subscribe address" }, 400);
-    const r = await deps.fetch(m.SubscribeURL);
+    let r;
+    try { r = await deps.fetch(m.SubscribeURL); } catch (e) { await logSub(env, topic, 0, "confirmation call failed: " + why(e)); return json({ error: "confirmation call failed" }, 502); }
     // Keep a record that a verified confirmation arrived, so the owner can tell whether DfT has activated the address.
-    try { await env.DB.prepare("INSERT INTO subs (topic, at, ok, note) VALUES (?1, ?2, ?3, ?4)").bind(topic, new Date().toISOString(), r.ok ? 1 : 0, "status " + (r.status || "")).run(); } catch (e) { /* logging must never stop the confirmation */ }
+    await logSub(env, topic, r.ok ? 1 : 0, "status " + (r.status || ""));
     return json({ confirmed: r.ok }, r.ok ? 200 : 502);
   }
   if (m.Type === "Notification") {
@@ -59,7 +76,8 @@ async function ack(req, env, url) {
   return json({ deleted: r.meta.changes });
 }
 
-export async function handle(req, env, deps = { getCert: fetchCertPem, fetch }) {
+// fetch is wrapped, not handed over as it is: Cloudflare throws "Illegal invocation" if it is later called as deps.fetch(...).
+export async function handle(req, env, deps = { getCert: fetchCertPem, fetch: (u) => fetch(u) }) {
   const url = new URL(req.url);
   const path = url.pathname.replace(/\/+$/, "") || "/";
   if (req.method === "POST" && (path === "/permit" || path === "/activity" || path === "/section58")) return receive(req, env, path.slice(1), deps);

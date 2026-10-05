@@ -19,7 +19,7 @@ for t in tools/test_*.js; do
   if timeout 300 node "$t" "$HTML" "$FSA" >"$out" 2>&1; then echo "PASS  $t"; else echo "FAIL  $t"; grep -E "^(FAIL|TypeError|ReferenceError)" "$out" | head -8; fail=1; fi
 done
 if [ -f worker/test/receiver.test.mjs ]; then
-  if timeout 300 node --test worker/test/receiver.test.mjs >"$out" 2>&1; then echo "PASS  worker/test (receiver)"; else echo "FAIL  worker/test (receiver)"; tail -8 "$out"; fail=1; fi
+  if timeout 300 node --test worker/test/*.test.mjs >"$out" 2>&1; then echo "PASS  worker/test (receiver)"; else echo "FAIL  worker/test (receiver)"; tail -8 "$out"; fail=1; fi
 fi
 rm -f "$out"
 [ "$fail" = 0 ] && echo "ALL SUITES PASSED" || echo "SOME SUITES FAILED"
