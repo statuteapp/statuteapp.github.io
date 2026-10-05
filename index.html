@@ -495,7 +495,7 @@ nav.tabs button[data-t="play"] span.ico{border-radius:4px;transform:rotate(45deg
   <button data-t="map"><span class="ico"></span>Map</button>
   <button data-t="horizon"><span class="ico"></span>Horizon</button>
   <button data-t="catchup"><span class="ico"></span>Catch up</button>
-  <button data-t="play"><span class="ico"></span>Play</button>
+  <!-- Round 49: Play tab removed (owner, 5 Oct 2026) -->
   <button data-t="me"><span class="ico"></span>Settings</button>
 </div></nav>
 <div class="onb" id="onb" hidden></div>
@@ -2274,7 +2274,7 @@ function contactHTML(C){
 // ---------- Local map ----------
 let mapSel=null; // neighbour currently selected on the map
 let mapTarget="s-detail";let mapArea="local";
-let mapLayers={law:true,food:true,crime:true,works:true};let mapZoom=1; // 1 bars, 2 quarters, 3 pins
+let mapLayers={law:true,food:true,crime:true};let mapZoom=1; // 1 bars, 2 quarters, 3 pins
 let clusterMode="count"; // count | weight (must 3, affects 2, notice 1)
 const TW={must:3,affects:2,notice:1};
 const GROUPS=[["est","Establishments",["schools","health","food"]],["jobs","Jobs",["jobs"]],["works","Works and repairs",["works"]],["law","Law, orders and safety",["law","crime","enforce"]],["money","Money and decisions",["funding","meetings","dev","opp"]]];
@@ -2577,7 +2577,7 @@ function briefMissions(relevant){
    {id:"read",t:top?`Read "${top.title}"`:"Read one item",x:"+10",done:()=>top?game.got["read:"+top.id]:false,go:()=>top&&renderDetail(top.id,{type:"screen",tab:"today",scrollY:window.scrollY})},
    {id:"tl",t:"Scrub a timeline end to end",x:"+2 a step",done:()=>ITEMS.some(it=>it.timeline.every((_,i)=>game.got["tl:"+it.id+":"+i])),go:()=>top&&renderDetail(top.id)},
    {id:"asi",t:(profile.asis&&profile.asis.length)?"Climb a rung in "+ASIS.find(a=>a.id===profile.asis[0]).t:"Choose an area of specific interest",x:"+10",done:()=>!!(profile.asis&&profile.asis.length&&Object.keys(game.got).some(k=>k.startsWith("asi:")&&!k.endsWith("chosen"))),go:()=>{if(profile.asis&&profile.asis.length)renderASI(profile.asis[0]);else{show("me");const t=document.getElementById("deep");if(t)setTimeout(()=>t.scrollIntoView({behavior:"smooth",block:"start"}),50);}}},
-   {id:"lol",t:"Play a round of Law or Lore",x:"+10 a hit",done:()=>!!game.brief.lol,go:()=>{show("play");startLoL();}}
+   // Round 49: the Law or Lore mission went with the Play tab
   ];
 }
 function briefHTML(relevant){
@@ -2704,7 +2704,7 @@ if(profile){renderAll();}else{renderOnb();}
 function openHash(){const h=decodeURIComponent(location.hash||"");if(!profile)return true;
   if(h.startsWith("#item/")){const id=h.slice(6);const it=ITEMS.find(x=>x.id===id);if(it){renderDetail(id);return true;}return false;}
   if(h==="#saved"){renderSaved();return true;}if(h==="#subs"){renderSubs();return true;}if(h==="#legend"){renderLegend();return true;}
-  const t=h.slice(1);if(t==="search"){openGlobalSearch(true);return true;}if(["today","map","horizon","catchup","play","me"].includes(t)){show(t);return true;}return true;}
+  const t=h.slice(1);if(t==="search"){openGlobalSearch(true);return true;}if(["today","map","horizon","catchup","me"].includes(t)){show(t);return true;}return true;}
 let hashPending=!openHash();
 window.addEventListener("hashchange",()=>{if(location.hash.startsWith("#item/")&&!(cur&&"#item/"+encodeURIComponent(cur.id)===location.hash))openHash();});
 
@@ -2716,7 +2716,7 @@ window.addEventListener("hashchange",()=>{if(location.hash.startsWith("#item/")&
   document.body.appendChild(hud);
   const style=document.createElement("style");style.textContent=".pad-focus{outline:3px solid #ffdd00 !important;outline-offset:0;box-shadow:0 0 0 6px var(--ink) !important}";document.head.appendChild(style);
   let active=false,prev={},rep={},focusEl=null,lastMove=0;
-  const TABS=["today","map","horizon","catchup","play","me"];
+  const TABS=["today","map","horizon","catchup","me"];
   const tabName={today:"Today",map:"Map",horizon:"Horizon",catchup:"Catch up",play:"Play",me:"Settings"};
   function focusables(){
     const root=document.getElementById("onb").hidden?document.querySelector(".screen.active"):document.getElementById("onb");
