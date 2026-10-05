@@ -104,6 +104,7 @@ STATUS = {  # event type -> plain status; types not listed leave the status unch
     "SECTION_58_CREATED": "proposed", "SECTION_58_IN_FORCE": "in_force", "SECTION_58_CANCELLED": "cancelled", "SECTION_58_CLOSED": "closed",
 }
 TERMINAL = {"finished", "refused", "cancelled", "closed"}
+FINISHED_KEEP_DAYS = 31   # works that have finished stay listed for a month, so a resident can see what has just been done on their roads
 
 def norm_type(s):
     return re.sub(r"[^A-Z0-9]+", "_", str(s or "").upper()).strip("_")
@@ -178,7 +179,7 @@ def keep(rec, today):
         return False
     when = (rec.get("st_t") or rec.get("t") or "")[:10]
     if st in TERMINAL:
-        return when >= days_ago(today, 2)
+        return when >= days_ago(today, FINISHED_KEEP_DAYS if st == "finished" else 2)   # refused, cancelled and closed ones are not worth keeping
     end, start = rec.get("end"), rec.get("start")
     if rec["k"] == "s58":
         return st in ("proposed", "in_force") and (not end or end >= today)
