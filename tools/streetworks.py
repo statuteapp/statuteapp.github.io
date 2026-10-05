@@ -129,12 +129,13 @@ def key_of(m, kind):
 
 def fields(kind, od):
     pts = parse_wkt(od.get("works_location_coordinates") or od.get("activity_coordinates") or od.get("section_58_coordinates"))
-    r = {"street": od.get("street_name"), "town": od.get("town"), "area": od.get("area_name"), "ha": od.get("highway_authority")}
+    r = {"street": od.get("street_name"), "town": od.get("town"), "area": od.get("area_name"), "ha": od.get("highway_authority"),
+         "ha_code": od.get("highway_authority_swa_code"), "usrn": od.get("usrn")}
     if kind == "permit":
         r.update(who=od.get("promoter_organisation"), what=od.get("activity_type"), cat=od.get("work_category"), tm=od.get("traffic_management_type"),
                  now_tm=od.get("current_traffic_management_type"), loc=od.get("works_location_type"),
                  start=local_date(od.get("proposed_start_date")), end=local_date(od.get("proposed_end_date")),
-                 began=od.get("actual_start_date_time"))
+                 began=od.get("actual_start_date_time"), pref=od.get("permit_reference_number"))
     elif kind == "activity":
         r.update(name=od.get("activity_name"), what=od.get("activity_type_details") or od.get("activity_type"),
                  tm=od.get("traffic_management_type"), tmreq=od.get("traffic_management_required"), loc=od.get("activity_location_type"),

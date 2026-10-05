@@ -69,7 +69,8 @@ class State(unittest.TestCase):
         self.assertNotIn("len", st["A:ARN-1"])   # a single point has no length
     def test_permit_keeps_the_kind_of_work(self):
         st = self.run_events([permit(1, "PERMIT_GRANTED", activity_type="Utility asset works")])
-        self.assertEqual(st["P:W1"]["what"], "Utility asset works"); self.assertNotIn("usrn", st["P:W1"]); self.assertEqual(st["P:W1"]["len"], 112)
+        self.assertEqual(st["P:W1"]["what"], "Utility asset works"); self.assertEqual(st["P:W1"]["usrn"], "100")
+        self.assertEqual(st["P:W1"]["ha_code"], "1234"); self.assertEqual(st["P:W1"]["pref"], "W1-01"); self.assertEqual(st["P:W1"]["len"], 112)
 
 class Keep(unittest.TestCase):
     today = "2026-10-04"

@@ -36,7 +36,8 @@ def request(url, method="GET", token=None, timeout=120):
 
 # Bump this to rebuild the saved state from the archives on the next run (done in reconcile, and only while no live messages have been
 # collected, because a rebuild would lose them). 2: finished works are kept for a month (streetworks.FINISHED_KEEP_DAYS).
-SEED_VERSION = 2
+# 3: added USRN, permit_reference_number, and highway_authority_swa_code to all records.
+SEED_VERSION = 3
 
 def load_state(path):
     with gzip.open(path, "rt", encoding="utf-8") as f:
