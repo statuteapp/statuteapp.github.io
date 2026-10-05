@@ -1421,9 +1421,12 @@ function sharePage(){const isItem=!!(cur&&document.querySelector("#s-detail.acti
    ...(isItem&&cur.link&&!isHome(cur.link)?[{t:"Share the source document",d:cur.link.replace(/^https?:\/\//,"").slice(0,60),go:()=>shareNative(title,"Source document",cur.link)}]:[])
   ]);}
 // ---------- Street level ----------
+// An item that describes an area, not a place (a neighbourhood team's events, a crime count) has a centre point, not a location: it is never
+// filtered or sorted by distance and never gets a distance label. Only an item that is its own place does (see isExactLoc).
+function noPlace(it){return !!it&&it.level==="local"&&it.lat!=null&&it.lng!=null&&!isExactLoc(it);}
 function milesTo(it){if(!profile||profile.lat==null||it.lat==null||it.lng==null)return null;const R=3958.8,toR=x=>x*Math.PI/180;const dLat=toR(it.lat-profile.lat),dLng=toR(it.lng-profile.lng);const a=Math.sin(dLat/2)**2+Math.cos(toR(profile.lat))*Math.cos(toR(it.lat))*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(a));}
-function nearLabel(it){const m=milesTo(it);if(m==null)return "";return m<0.1?"on your street":m<1?`${Math.round(m*10)/10} mi`:`${Math.round(m)} mi`;}
-function inRadius(it){const m=milesTo(it);const r=(profile&&profile.radius)||1;return m==null?true:m<=r;}
+function nearLabel(it){if(noPlace(it))return "";const m=milesTo(it);if(m==null)return "";return m<0.1?"on your street":m<1?`${Math.round(m*10)/10} mi`:`${Math.round(m)} mi`;}
+function inRadius(it){if(noPlace(it))return true;const m=milesTo(it);const r=(profile&&profile.radius)||1;return m==null?true:m<=r;}
 function feedHealth(){const F=window.FEED_META;if(!F)return {txt:"Feed not loaded; showing sample data",cls:"warn"};const away=profile&&profile.council&&profile.council!=="Slough Borough Council",LOC=/^(Food Standards Agency|police\.uk|Police neighbourhood|Council meetings|Environment Agency floods|The Gazette)/;const src=(F.sources||[]).filter(s=>!(away&&LOC.test(s.name||"")));const bad=src.filter(s=>!s.ok);const m=Math.round((Date.now()-new Date(F.generated))/60000);const age=m<60?m+" min ago":m<1440?Math.round(m/60)+" h ago":Math.round(m/1440)+" days ago";
   return {txt:`Feed built ${age} · ${bad.length?bad.length+" of "+src.length+" sources failing":"all "+src.length+" sources healthy"}`,cls:bad.length?"warn":"ok",bad};}
 function isHome(u){try{const x=new URL(u);return x.pathname.replace(/\/+$/,"")===""&&!x.search&&!x.hash;}catch(e){return true;}}
@@ -1696,7 +1699,7 @@ function renderToday(){
   h+=`<div class="chips" role="group" aria-label="Show"><button data-f="all" aria-pressed="${todayFilter==="all"}">Everything</button><button data-f="law" aria-pressed="${todayFilter==="law"}">⚖️ Law only</button><button data-f="act" aria-pressed="${todayFilter==="act"}">❗ Needs action</button><button data-f="update" aria-pressed="${todayFilter==="update"}">📰 Just updates</button></div>`;
   const pass=it=>todayFilter==="all"||(todayFilter==="law"&&it.kind==="law")||(todayFilter==="act"&&tierFor(it).tier==="must")||(todayFilter==="update"&&["update","rates","consult","alert"].includes(it.kind));
   for(const L of LEVELS){
-    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&postedToday(it)).sort((a,b)=>{if(L.k==="local"){const da=milesTo(a),db=milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
+    const items=relevant.filter(pass).filter(it=>it.level===L.k&&(L.k!=="local"||!it.council||it.council===profile.council||nbMode(it.council)==="full")&&(L.k!=="local"||inRadius(it))&&postedToday(it)).sort((a,b)=>{if(L.k==="local"){const da=noPlace(a)?null:milesTo(a),db=noPlace(b)?null:milesTo(b);if(da!=null&&db!=null&&Math.abs(da-db)>0.05)return da-db;}return new Date(b.date)-new Date(a.date);});
     h+=`<div class="band"><div class="band-head"><span class="lvl">${esc(L.lbl(profile))} <button class="btn ghost sm" data-map="${L.k}" style="margin-left:8px;padding:2px 10px;font-size:13px">Map</button></span><span class="cad">${L.k==="local"&&profile.lat!=null?`within ${profile.radius||1} mi of ${esc(profile.pcfull||profile.postcode)}`:L.cad}</span></div>`;
     if(!items.length){
       const last=ITEMS.filter(it=>it.level===L.k&&(!it.council||it.council===profile.council)&&!notYet(it)).sort((a,b)=>new Date(b.date)-new Date(a.date))[0];
