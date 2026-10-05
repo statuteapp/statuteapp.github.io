@@ -1,17 +1,1 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#1A1A1A">
-<title>Statute</title>
-</head>
-<body>
-<div class="app">
-  <div id="s-today" class="screen active"><h1>Statute - Restoring...</h1><p>If you see this, the working version is being restored. Please wait a moment and refresh.</p></div>
-</div>
-<script>
-window.location.reload();
-</script>
-</body>
-</html>
+import sys; sys.path.insert(0, '/tmp'); from file_content import CONTENT; print(CONTENT[:100]); __import__('json').dump({'done': True}, open('/tmp/push_done.txt', 'w'))
