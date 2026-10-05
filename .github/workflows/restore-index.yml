@@ -14,21 +14,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { ref: main, fetch-depth: 0 }
-      - name: Restore working index.html from 372a41a and enable street works layer
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Restore real build_feed.py from 92a1798 (replaced by a stub in 372a41a)
         run: |
           set -e
-          git checkout 372a41a -- index.html
-          size=$(wc -c < index.html)
-          echo "restored index.html size: $size"
-          test "$size" -gt 400000
-          head -1 index.html | grep -q '<!DOCTYPE html>'
-          sed -i 's/let mapLayers={law:true,food:true,crime:true};/let mapLayers={law:true,food:true,crime:true,works:true};/' index.html
-          grep -q 'let mapLayers={law:true,food:true,crime:true,works:true};' index.html
-          git rm -f --ignore-unmatch test-push.txt
+          git checkout 92a1798 -- build_feed.py
+          size=$(wc -c < build_feed.py)
+          echo "restored build_feed.py size: $size"
+          test "$size" -gt 30000
+          grep -q '^def main' build_feed.py
+          python -m py_compile build_feed.py
           git config user.name "github-actions[bot]"
           git config user.email "41898273+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Restore working index.html (372a41a) + street works on map"
+          git add build_feed.py
+          git commit -m "Restore real build_feed.py (92a1798); 372a41a had replaced it with a stub"
           for i in 1 2 3; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep 5
