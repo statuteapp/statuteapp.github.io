@@ -34,6 +34,10 @@ def request(url, method="GET", token=None, timeout=120):
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read()
 
+# Bump this to rebuild the saved state from the archives on the next run (done in reconcile, and only while no live messages have been
+# collected, because a rebuild would lose them). 2: finished works are kept for a month (streetworks.FINISHED_KEEP_DAYS).
+SEED_VERSION = 2
+
 def load_state(path):
     with gzip.open(path, "rt", encoding="utf-8") as f:
         d = json.load(f)
@@ -112,7 +116,7 @@ def absorb(records, meta, bucket, key, modified, work):
 
 def cmd_seed(a):
     os.makedirs(a.work, exist_ok=True)
-    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "skipped": {}, "archiveAsOf": ""}
+    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "skipped": {}, "archiveAsOf": "", "seedVersion": SEED_VERSION}
     for folder, count in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-count:]:
             absorb(records, meta, a.bucket, key, modified, a.work)
@@ -123,6 +127,11 @@ def cmd_seed(a):
 def cmd_reconcile(a):
     os.makedirs(a.work, exist_ok=True)
     records, meta = load_state(a.state)
+    if int(meta.get("seedVersion") or 1) < SEED_VERSION:
+        if not meta.get("liveSince"):
+            print("reconcile: the saved state was built under older rules (version %s, now %d); rebuilding it from the archives" % (meta.get("seedVersion") or 1, SEED_VERSION))
+            return cmd_seed(a)
+        print("reconcile: the saved state is from older rules, but live messages have been collected since, so it is not rebuilt (that would lose them)")
     changed = 0
     for folder, _ in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-2:]:
