@@ -12,7 +12,12 @@ setTimeout(()=>{const w=dom.window,d=w.document;
  T(!!icon,"active tab icon is filled");
  const cur=()=>[...d.querySelectorAll("nav.tabs button[aria-current]")].map(b=>b.dataset.t).join();
  T(cur()==="today","starts on Today");
- for(const t of ["map","horizon","catchup","play","me","today"]){d.querySelector('nav.tabs button[data-t="'+t+'"]').click();T(cur()===t,"tapping "+t+" highlights only "+t+" (got '"+cur()+"')");}
+ for(const t of ["map","horizon","catchup","me","today"]){d.querySelector('nav.tabs button[data-t="'+t+'"]').click();T(cur()===t,"tapping "+t+" highlights only "+t+" (got '"+cur()+"')");}
+ // Round 49: the Play tab is gone, and nothing on Today still sends people to it
+ T(!d.querySelector('nav.tabs button[data-t="play"]'),"there is no Play tab");
+ T([...d.querySelectorAll("nav.tabs button[data-t]")].map(b=>b.dataset.t).join()==="today,map,horizon,catchup,me","the tab bar is Today, Map, Horizon, Catch up, Settings");
+ T(!/Law or Lore/.test(d.getElementById("s-today").textContent),"Today's brief no longer offers a Play mission");
+ w.location.hash="#play";w.eval("openHash()");T(cur()==="today"&&!d.querySelector("#s-play.active"),'the old #play address no longer opens the Play screen (tab "'+cur()+'")');w.location.hash="";
  const F={id:"x",name:"Cafe Test",type:"Restaurant",address:"1 High St",rating:"5",ratingDate:"2026-09-01",scores:{hygiene:5,structural:10,management:5},history:[],officialUrl:"https://ratings.food.gov.uk/"};
  const h=w.eval("fsaDetailsHTML("+JSON.stringify(F)+")");
  T(h.includes("5 out of 25")&&h.includes("10 out of 25")&&h.includes("5 out of 30"),"scores show their maximum: 5 out of 25, 10 out of 25, 5 out of 30");
