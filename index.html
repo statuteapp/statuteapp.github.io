@@ -1780,7 +1780,7 @@ function renderRoadworks(){
   if(RW.state==="off"){note("The live roadworks feed isn't switched on yet, so nothing can be shown here. That does not mean there are no roadworks near you.");return;}
   if(RW.state!=="ready"){note("Couldn't load roadworks just now. Try again later.");return;}
   const idx=RW.idx||{};
-  const near=RW.items.map(it=>Object.assign({},it,{mi:milesTo(it)})).filter(it=>it.mi!=null&&it.mi<=rad);
+  const near=RW.items.map(it=>Object.assign({},it,{mi:milesTo(it)})).filter(it=>it.mi!=null&&it.mi<=rad&&it.st!=="finished");
   const by=(a,b)=>String(a.start||"9999").localeCompare(String(b.start||"9999"))||a.mi-b.mi;
   const sec={now:[],due:[],week:[],month:[],later:[]},r58=[];
   near.forEach(it=>{
