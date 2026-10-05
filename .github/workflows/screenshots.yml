@@ -1,0 +1,147 @@
+name: Take Screenshots
+on:
+  workflow_dispatch:
+    inputs:
+      tabs:
+        description: 'Tabs to screenshot (comma-separated: today,map,horizon,catchup,play,settings, or "all")'
+        required: false
+        default: 'all'
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: Take screenshots
+        run: |
+          cat > take-screenshots.js << 'EOF'
+          const { chromium } = require('playwright');
+          const fs = require('fs');
+          const path = require('path');
+          
+          const baseUrl = 'https://statuteapp.github.io/';
+          const tabs = {
+            today: { selector: '[data-tab="today"]', fallback: 'button:has-text("Today")' },
+            map: { selector: '[data-tab="map"]', fallback: 'button:has-text("Map")' },
+            horizon: { selector: '[data-tab="horizon"]', fallback: 'button:has-text("Horizon")' },
+            catchup: { selector: '[data-tab="catchup"]', fallback: 'button:has-text("Catch up")' },
+            play: { selector: '[data-tab="play"]', fallback: 'button:has-text("Play")' },
+            settings: { selector: '[data-tab="settings"]', fallback: 'button:has-text("Settings")' }
+          };
+          
+          const requestedTabs = process.env.TABS === 'all' 
+            ? Object.keys(tabs)
+            : process.env.TABS.split(',').map(t => t.trim().toLowerCase());
+          
+          (async () => {
+            const browser = await chromium.launch();
+            const context = await browser.createBrowserContext({
+              viewport: { width: 375, height: 812 },
+              deviceScaleFactor: 2,
+              userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15'
+            });
+            
+            const page = await context.newPage();
+            
+            // Create screenshots directory
+            const screenshotDir = 'screenshots';
+            if (!fs.existsSync(screenshotDir)) {
+              fs.mkdirSync(screenshotDir, { recursive: true });
+            }
+            
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
+            
+            // Wait for app to load
+            await page.goto(baseUrl, { waitUntil: 'networkidle' });
+            await page.waitForTimeout(2000);
+            
+            for (const tabName of requestedTabs) {
+              if (!tabs[tabName]) {
+                console.log(`⚠️  Unknown tab: ${tabName}`);
+                continue;
+              }
+              
+              try {
+                // Click tab
+                const tabButton = page.locator(tabs[tabName].fallback);
+                if (await tabButton.isVisible({ timeout: 2000 })) {
+                  await tabButton.click();
+                  await page.waitForTimeout(500);
+                } else {
+                  console.log(`⚠️  Tab button not found: ${tabName}`);
+                }
+                
+                // Take screenshot
+                const filename = path.join(screenshotDir, `${timestamp}-${tabName}.png`);
+                await page.screenshot({ path: filename, fullPage: false });
+                console.log(`✓ ${tabName}: ${filename}`);
+              } catch (e) {
+                console.log(`✗ ${tabName}: ${e.message}`);
+              }
+            }
+            
+            // Also take a full-page screenshot of today tab
+            try {
+              const todayButton = page.locator('button:has-text("Today")');
+              if (await todayButton.isVisible()) {
+                await todayButton.click();
+                await page.waitForTimeout(500);
+                const filename = path.join(screenshotDir, `${timestamp}-today-full.png`);
+                await page.screenshot({ path: filename, fullPage: true });
+                console.log(`✓ today (full page): ${filename}`);
+              }
+            } catch (e) {
+              console.log(`⚠️  Full page screenshot failed: ${e.message}`);
+            }
+            
+            await context.close();
+            await browser.close();
+            console.log('\n✅ Screenshots complete');
+          })();
+          EOF
+          
+          node take-screenshots.js
+        env:
+          TABS: ${{ github.event.inputs.tabs || 'all' }}
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: statute-screenshots-${{ github.run_id }}
+          path: screenshots/
+          retention-days: 30
+
+      - name: Commit screenshots
+        if: always() && hashFiles('screenshots/*') != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add screenshots/ 2>/dev/null || true
+          git commit -m "Screenshots: $(date -u +%Y-%m-%dT%H:%M)Z" 2>/dev/null || echo "No changes to commit"
+          git push origin main 2>/dev/null || echo "Push failed (no changes or permissions)"
+
+      - name: Summary
+        run: |
+          echo "## 📸 Screenshots Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Screenshots captured and available as artifact" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Run ID: **${{ github.run_id }}**" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Tabs captured:** ${{ github.event.inputs.tabs || 'all' }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -d "screenshots" ]; then
+            echo "**Files:**" >> $GITHUB_STEP_SUMMARY
+            ls -1 screenshots/ | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY
+          fi
