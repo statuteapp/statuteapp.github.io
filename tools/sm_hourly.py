@@ -38,6 +38,9 @@ def request(url, method="GET", token=None, timeout=120):
 # collected, because a rebuild would lose them). 2: finished works are kept for a month (streetworks.FINISHED_KEEP_DAYS).
 # 3: added USRN, permit_reference_number, and highway_authority_swa_code to all records.
 SEED_VERSION = 3
+# Bump this to give works already in the state their map shapes from the archives on the next reconcile (a backfill: it adds
+# shapes only and changes nothing else, so it is safe after live messages have begun). 1: shapes added 6 October 2026.
+SHAPE_VERSION = 1
 
 def load_state(path):
     with gzip.open(path, "rt", encoding="utf-8") as f:
@@ -72,6 +75,37 @@ def list_keys(bucket, folder):
             break
         token = t[0]
     return sorted(k for k in keys if k[0].endswith(".zip"))
+
+def backfill_shapes(records, meta, bucket, work):
+    """Read the same archive files a seed reads and give each works already in the state its map shape, if it has none.
+    Each file is handled on its own: one that fails is noted and skipped, so the hourly update is never stopped by it."""
+    added, failed = 0, []
+    for folder, count in FOLDERS:
+        try:
+            keys = list_keys(bucket, folder)[-count:]
+        except Exception as e:
+            failed.append(folder); print("shapes: could not list %s (%s)" % (folder, type(e).__name__)); continue
+        for key, _ in keys:
+            path = os.path.join(work, "archive.zip")
+            try:
+                req = urllib.request.Request(bucket.rstrip("/") + "/" + urllib.parse.quote(key), headers={"User-Agent": UA})
+                with urllib.request.urlopen(req, timeout=300) as r, open(path, "wb") as f:
+                    shutil.copyfileobj(r, f, 4 << 20)
+                n = 0
+                for m in s.read_zip(path):
+                    if s.add_shape(records, m):
+                        n += 1
+                added += n
+                print("shapes: %s added %d" % (key, n))
+            except Exception as e:
+                failed.append(key); print("shapes: %s skipped (%s)" % (key, type(e).__name__))
+            finally:
+                if os.path.exists(path):
+                    os.remove(path)
+    meta["shapeVersion"] = SHAPE_VERSION   # done once even if a file failed: new messages bring their own shapes anyway
+    meta["shapeBackfill"] = {"at": now_iso(), "added": added, "failed": failed}
+    print("shapes: %d works given a shape; %d file(s) failed" % (added, len(failed)))
+    return added
 
 def absorb(records, meta, bucket, key, modified, work):
     """Download one monthly archive zip, fold its notifications into the state, and remember it was read.
@@ -117,7 +151,7 @@ def absorb(records, meta, bucket, key, modified, work):
 
 def cmd_seed(a):
     os.makedirs(a.work, exist_ok=True)
-    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "skipped": {}, "archiveAsOf": "", "seedVersion": SEED_VERSION}
+    records, meta = {}, {"liveSince": None, "cursor": 0, "archive": {}, "skipped": {}, "archiveAsOf": "", "seedVersion": SEED_VERSION, "shapeVersion": SHAPE_VERSION}
     for folder, count in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-count:]:
             absorb(records, meta, a.bucket, key, modified, a.work)
@@ -134,6 +168,9 @@ def cmd_reconcile(a):
             return cmd_seed(a)
         print("reconcile: the saved state is from older rules, but live messages have been collected since, so it is not rebuilt (that would lose them)")
     changed = 0
+    if int(meta.get("shapeVersion") or 0) < SHAPE_VERSION:
+        backfill_shapes(records, meta, a.bucket, a.work)
+        changed += 1
     for folder, _ in FOLDERS:
         for key, modified in list_keys(a.bucket, folder)[-2:]:
             known = (meta.get("archive", {}).get(key, {}).get("modified"), meta.get("skipped", {}).get(key, {}).get("modified"))
