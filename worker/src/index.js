@@ -41,11 +41,12 @@ async function receive(req, env, topic, deps) {
 
 // Which permit events are saved (owner's decision, 6 October 2026). Cloudflare's free plan allows 100,000 database writes a
 // day; DfT sends about 58,000 messages a day for all of England and each costs two writes (saved, then cleared after the
-// hourly job collects it). Applications (PERMIT_SUBMITTED), refusals (PERMIT_REFUSED) and the two "reverted" corrections
-// are answered (so Amazon does not resend them) but not saved: about 28% of messages. Activities and Section 58 notices
-// are all kept (about 2% of messages). DfT's docs show event types in two spellings ("WORK_START", "work-start").
+// hourly job collects it). Applications (PERMIT_SUBMITTED) and refusals (PERMIT_REFUSED) are answered (so Amazon does not
+// resend them) but not saved: about 28% of messages. The two "reverted" events are kept: they are DfT correcting a mistaken
+// start or finish (under 1%). Activities and Section 58 notices are all kept (about 2% of messages).
+// DfT's docs show event types in two spellings ("WORK_START", "work-start").
 export const KEEP_PERMIT_EVENTS = new Set(["PERMIT_GRANTED", "PERMIT_ALTERATION_GRANTED", "WORK_START", "WORK_STOP",
-  "PERMIT_CANCELLED", "PERMIT_REVOKED", "CURRENT_TRAFFIC_MANAGEMENT_UPDATED"]);
+  "WORK_START_REVERTED", "WORK_STOP_REVERTED", "PERMIT_CANCELLED", "PERMIT_REVOKED", "CURRENT_TRAFFIC_MANAGEMENT_UPDATED"]);
 const normEvent = (s) => String(s || "").toUpperCase().replace(/[^A-Z0-9]+/g, "_").replace(/^_+|_+$/g, "");
 export const kept = (topic, inner) => topic !== "permit" || KEEP_PERMIT_EVENTS.has(normEvent(inner.event_type));
 

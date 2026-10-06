@@ -3,7 +3,7 @@
 # Free-plan limits it was sized against (Cloudflare docs, 4 October 2026): 100,000 Worker requests and 100,000 D1 row
 # writes a day. Measured 5-6 Oct 2026: the national feed is about 58,000 messages a day (98% permits), one request and two
 # writes each (saved, then cleared after collection), which went over the write limit. Since 6 Oct the receiver saves only
-# the permit events the owner chose (see KEEP_PERMIT_EVENTS in src/index.js): about 72% of messages, ~83,000 writes a day.
+# the permit events the owner chose (see KEEP_PERMIT_EVENTS in src/index.js): about 72% of messages, ~84,000 writes a day.
 # The queue is read with a secret (DRAIN_TOKEN) that the workflow sets on the Worker; it is not stored in this file.
 # The Worker's public address is https://statute-streetworks-receiver.<account subdomain>.workers.dev
 name = "statute-streetworks-receiver"

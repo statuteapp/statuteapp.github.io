@@ -30,10 +30,10 @@ function fakeDB() {
 const post = (path, body) => new Request("https://r.test" + path, { method: "POST", body: JSON.stringify(body) });
 const env = (db) => ({ DB: db, DRAIN_TOKEN: "t" });
 
-const KEEP = ["PERMIT_GRANTED", "PERMIT_ALTERATION_GRANTED", "WORK_START", "WORK_STOP", "PERMIT_CANCELLED", "PERMIT_REVOKED", "CURRENT_TRAFFIC_MANAGEMENT_UPDATED"];
-const SKIP = ["PERMIT_SUBMITTED", "PERMIT_REFUSED", "WORK_START_REVERTED", "WORK_STOP_REVERTED"];
+const KEEP = ["PERMIT_GRANTED", "PERMIT_ALTERATION_GRANTED", "WORK_START", "WORK_STOP", "WORK_START_REVERTED", "WORK_STOP_REVERTED", "PERMIT_CANCELLED", "PERMIT_REVOKED", "CURRENT_TRAFFIC_MANAGEMENT_UPDATED"];
+const SKIP = ["PERMIT_SUBMITTED", "PERMIT_REFUSED"];
 
-test("the kept list is exactly the owner's seven permit events", () => {
+test("the kept list is exactly the owner's nine permit events (seven chosen, plus the two corrections)", () => {
   assert.deepEqual([...KEEP_PERMIT_EVENTS].sort(), [...KEEP].sort());
 });
 
