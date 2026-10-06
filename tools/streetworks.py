@@ -70,6 +70,64 @@ def parse_wkt(wkt):
     """'POINT(x y)' or 'LINESTRING(x y,x y,...)' -> list of (x, y) in British National Grid metres."""
     return [(float(a), float(b)) for a, b in re.findall(r"(-?\d+(?:\.\d+)?)\s+(-?\d+(?:\.\d+)?)", wkt or "")]
 
+# ---------- shapes for the map (owner, 6 October 2026: a works along a stretch of road is drawn as that stretch) ----------
+SHAPE_TOL_M = (2.0, 5.0, 10.0, 25.0)   # simplification tolerances tried in turn, in metres (the coordinates are about 5 m accurate)
+SHAPE_MAX_POINTS = 300                  # a shape with more points than this at the coarsest tolerance is left as a pin
+
+def parse_parts(wkt):
+    """WKT -> (kind, parts): kind is "point", "line" or "area"; parts is a list of point lists in British National Grid metres.
+    Multi-part shapes keep their parts separate, so they are never joined by a stray line."""
+    w = (wkt or "").strip().upper()
+    groups = [parse_wkt(g) for g in re.findall(r"\(([^()]*)\)", w)]
+    groups = [g for g in groups if g]
+    if not groups:
+        return None, []
+    kind = "area" if "POLYGON" in w else "line" if "LINESTRING" in w else "point"
+    return kind, groups
+
+def simplify(pts, tol):
+    """Douglas-Peucker: drop points that lie within tol metres of the line between their neighbours. Keeps both ends."""
+    if len(pts) < 3:
+        return list(pts)
+    keep, stack = {0, len(pts) - 1}, [(0, len(pts) - 1)]
+    while stack:
+        i, j = stack.pop()
+        (x1, y1), (x2, y2) = pts[i], pts[j]
+        dx, dy = x2 - x1, y2 - y1; L = math.hypot(dx, dy)
+        best, at = -1.0, None
+        for k in range(i + 1, j):
+            x, y = pts[k]
+            dist = abs(dy * (x - x1) - dx * (y - y1)) / L if L else math.hypot(x - x1, y - y1)
+            if dist > best:
+                best, at = dist, k
+        if at is not None and best > tol:
+            keep.add(at); stack += [(i, at), (at, j)]
+    return [pts[k] for k in sorted(keep)]
+
+def shape_of(od):
+    """The map shape of a works, from whichever coordinates field it has: {"gt": "l" (line) or "a" (area), "g": [[[lat, lng], ...], ...]},
+    or None for a single spot (drawn as a pin), no coordinates, or a shape too detailed to send to a phone."""
+    kind, parts = parse_parts(od.get("works_location_coordinates") or od.get("activity_coordinates") or od.get("section_58_coordinates"))
+    if kind not in ("line", "area"):
+        return None
+    for tol in SHAPE_TOL_M:
+        simple = [simplify(p, tol) for p in parts]
+        if sum(len(p) for p in simple) <= SHAPE_MAX_POINTS:
+            break
+    else:
+        return None
+    out = []
+    for p in simple:
+        q = []
+        for e, n in p:
+            lat, lng = bng_to_wgs84(e, n)
+            pt = [round(lat, 5), round(lng, 5)]
+            if not q or q[-1] != pt:
+                q.append(pt)
+        if len(q) >= 2:
+            out.append(q)
+    return {"gt": "a" if kind == "area" else "l", "g": out} if out else None
+
 def path_metres(pts):
     return round(sum(math.hypot(pts[i + 1][0] - pts[i][0], pts[i + 1][1] - pts[i][1]) for i in range(len(pts) - 1)))
 
@@ -143,6 +201,9 @@ def fields(kind, od):
     else:
         r.update(extent=od.get("section_58_extent"), dur=od.get("section_58_duration"), loc=od.get("section_58_location_type"),
                  start=local_date(od.get("start_date")), end=local_date(od.get("end_date")))
+    sh = shape_of(od)
+    if sh:
+        r.update(sh)
     if pts:
         lat, lng = bng_to_wgs84(*pts[len(pts) // 2])
         r["lat"], r["lng"] = round(lat, 5), round(lng, 5)
@@ -172,6 +233,22 @@ def apply(state, raw, seen=None):
     if st and ev > rec["sev"]:
         rec["st"] = st; rec["sev"] = ev; rec["st_t"] = m.get("event_time")
     return key
+
+def add_shape(state, raw):
+    """Backfill: give a works already in the state its map shape from an archive notification, changing nothing else (not its
+    status, dates or event number), so live updates are never undone. Returns True if a shape was added."""
+    try:
+        m = unwrap(raw); kind = kind_of(m); key = key_of(m, kind)
+    except Exception:
+        return False
+    rec = state.get(key) if key else None
+    if rec is None or "g" in rec:
+        return False
+    sh = shape_of(m.get("object_data") or {})
+    if not sh:
+        return False
+    rec.update(sh)
+    return True
 
 def keep(rec, today):
     """Should this record still be shown to residents?"""

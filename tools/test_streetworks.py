@@ -24,6 +24,47 @@ class Coordinates(unittest.TestCase):
         self.assertEqual(s.parse_wkt("LINESTRING(0 0,3 4)"), [(0.0, 0.0), (3.0, 4.0)]); self.assertEqual(s.path_metres([(0, 0), (3, 4)]), 5)
         self.assertEqual(s.tile_of(51.51, -0.59), "25_94")
 
+class Shapes(unittest.TestCase):
+    """Works along a stretch of road are drawn as that stretch (owner, 6 October 2026)."""
+    def test_a_line_becomes_a_simplified_stretch(self):
+        straight = "LINESTRING(" + ",".join("%d 180000" % (497000 + 10 * i) for i in range(50)) + ")"   # 50 points in a straight line
+        sh = s.shape_of({"works_location_coordinates": straight})
+        self.assertEqual(sh["gt"], "l"); self.assertEqual(len(sh["g"]), 1); self.assertEqual(len(sh["g"][0]), 2)   # only the two ends are needed
+        lat, lng = sh["g"][0][0]; self.assertAlmostEqual(lat, 51.51, delta=0.02); self.assertAlmostEqual(lng, -0.6, delta=0.03)
+    def test_a_bend_is_kept(self):
+        sh = s.shape_of({"works_location_coordinates": "LINESTRING(497000 180000,497100 180000,497100 180100)"})
+        self.assertEqual(len(sh["g"][0]), 3)
+    def test_a_single_spot_stays_a_pin(self):
+        self.assertIsNone(s.shape_of({"works_location_coordinates": "POINT(497900 179900)"}))
+        st = {}; s.apply(st, permit(1, "PERMIT_GRANTED", works_location_coordinates="POINT(497900 179900)"))
+        self.assertNotIn("g", st["P:W1"]); self.assertIn("lat", st["P:W1"])
+    def test_an_area_is_an_outline(self):
+        sh = s.shape_of({"section_58_coordinates": "POLYGON((497900 179900,497950 179900,497950 179950,497900 179950,497900 179900))"})
+        self.assertEqual(sh["gt"], "a"); self.assertEqual(sh["g"][0][0], sh["g"][0][-1])   # closed
+    def test_parts_are_never_joined(self):
+        sh = s.shape_of({"works_location_coordinates": "MULTILINESTRING((497000 180000,497100 180000),(498000 181000,498100 181000))"})
+        self.assertEqual(len(sh["g"]), 2)
+    def test_a_shape_too_detailed_for_a_phone_stays_a_pin(self):
+        zigzag = "LINESTRING(" + ",".join("%d %d" % (497000 + 10 * i, 180000 + (200 if i % 2 else 0)) for i in range(1000)) + ")"
+        self.assertIsNone(s.shape_of({"works_location_coordinates": zigzag}))
+    def test_apply_stores_the_shape_and_tiles_carry_it(self):
+        st = {}; s.apply(st, permit(1, "PERMIT_GRANTED"))
+        self.assertEqual(st["P:W1"]["gt"], "l")
+        with tempfile.TemporaryDirectory() as out:
+            s.build_tiles(st, "2026-10-05", out, "2026-10-05T00:00:00Z")
+            item = json.load(open(os.path.join(out, "t25_94.json")))["items"][0]
+            self.assertEqual(item["gt"], "l"); self.assertTrue(item["g"])
+    def test_backfill_adds_only_the_shape(self):
+        st = {}; s.apply(st, permit(5, "WORK_START", works_location_coordinates=""))   # no coordinates when first seen
+        before = dict(st["P:W1"]); self.assertNotIn("g", before)
+        self.assertTrue(s.add_shape(st, permit(2, "PERMIT_GRANTED")))                    # an older archive message
+        after = st["P:W1"]
+        self.assertEqual(after["gt"], "l")
+        for k in ("st", "ev", "sev", "start", "end", "street"):
+            self.assertEqual(after.get(k), before.get(k), k)                               # nothing else changed
+        self.assertFalse(s.add_shape(st, permit(3, "PERMIT_GRANTED", works_location_coordinates="LINESTRING(1 1,2 2)")))   # never replaced
+        self.assertFalse(s.add_shape({}, permit(2, "PERMIT_GRANTED")))                      # works no longer kept: nothing added
+
 class Dates(unittest.TestCase):
     def test_uk_local_dates(self):
         if s.LONDON is None:
