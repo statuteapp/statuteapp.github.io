@@ -141,6 +141,31 @@ class T(unittest.TestCase):
         self.assertEqual(list(meta["skipped"]), ["activity/2026/06.zip"]); self.assertEqual(meta["skipped"]["activity/2026/06.zip"]["bytes"], 22)
         self.assertEqual(Bucket.hits.count("activity/2026/06.zip"), 2)            # fetched once more, then skipped
 
+    def test_shape_backfill_adds_shapes_without_undoing_live_updates_and_survives_a_bad_file(self):
+        self.seed()
+        self.post([msg(50, "WORK_START", "W-1", 3, 5, when=0)]); self.do_run()             # live: W-1 has started
+        recs, meta = H.load_state(self.state)
+        self.assertEqual(recs["P:W-1"]["st"], "started"); ev_before = recs["P:W-1"]["ev"]
+        for r in recs.values():
+            r.pop("g", None); r.pop("gt", None)
+        meta["shapeVersion"] = 0; H.save_state(self.state, recs, meta)                       # as the state was before shapes existed
+        self.put("permit/2026/09.zip", [msg(11, "PERMIT_GRANTED", "W-1", 3, 5, coords="LINESTRING(497500 180000,497600 180050)", when=-2)])
+        self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)   # the bad activity file does not stop it
+        recs, meta = H.load_state(self.state)
+        self.assertEqual(recs["P:W-1"]["gt"], "l"); self.assertEqual(recs["P:W-1"]["st"], "started"); self.assertEqual(recs["P:W-1"]["ev"], ev_before)
+        self.assertEqual(meta["shapeVersion"], H.SHAPE_VERSION); self.assertGreaterEqual(meta["shapeBackfill"]["added"], 1)
+        self.assertIn("activity/2026/06.zip", meta["shapeBackfill"]["failed"])
+        Bucket.hits[:] = []
+        self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0)
+        self.assertEqual(Bucket.hits, [])                                                      # done once: not read again
+        self.do_run()
+        item = [i for i in json.loads(self.read(os.path.join(self.out, "t25_94.json")))["items"] if i["id"] == "P:W-1"][0]
+        self.assertEqual(item["gt"], "l")                                                     # and the phone gets it
+
+    def test_a_new_seed_needs_no_shape_backfill(self):
+        self.seed(); recs, meta = H.load_state(self.state)
+        self.assertEqual(meta["shapeVersion"], H.SHAPE_VERSION)
+
     def test_a_file_that_is_not_a_zip_is_skipped_noted_and_read_again_only_when_it_changes(self):
         self.seed(); self.do_run(); self.assertEqual(self.summary_()["skippedArchive"], {"activity/2026/06.zip": 22})
         Bucket.hits[:] = []; self.assertEqual(H.main(["reconcile", "--state", self.state, "--work", self.work, "--bucket", self.bucket]), 0); self.assertEqual(Bucket.hits, [])
