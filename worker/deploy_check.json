@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-10-05T11:54:42Z",
+ "checkedAt": "2026-10-06T16:31:00Z",
  "unitTests": "success",
  "deployOutcome": "success",
  "url": "https://statute-streetworks-receiver.sohail-s-m.workers.dev",
@@ -22,7 +22,7 @@
   },
   "drain_with_token": {
    "status": 200,
-   "body": "{\"count\":0,\"max_id\":0,\"messages\":[]}"
+   "body": "{\"count\":1,\"max_id\":66649,\"messages\":[{\"id\":66649,\"topic\":\"permit\",\"at\":\"2026-10-06T15:26:02.687Z\",\"body\":\"{\\\"event_reference\\\":166025533,\\\"event_type\\\":\\\"WORK_STOP\\\",\\\"object_data\\\":{\\\"work_reference_number\\\":\\\"LQ003SWAT14700308\\\",\\\"permit_reference_number\\\":\\\"LQ003SWAT14700308-01\\\",\\\"promoter_swa_"
   }
  },
  "userAgentComparison": {
