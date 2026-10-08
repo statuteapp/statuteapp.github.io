@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-08T01:47:17.065828+00:00",
+ "generated_at": "2026-10-08T08:48:43.370657+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
-   "count": 18,
+   "count": 20,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 252,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 22,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 502: Bad Gateway",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-08T01:47:17.065828+00:00",
+   "fetched_at": "2026-10-08T08:48:43.370657+00:00",
    "ok": true,
    "count": 47,
    "error": null,
-   "last_ok": "2026-10-08T01:47:17.065828+00:00"
+   "last_ok": "2026-10-08T08:48:43.370657+00:00"
   }
  ],
  "items": [
@@ -2136,6 +2136,940 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "flood:062WAF31AshMidd",
+   "kind": "alert",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Flood alert: River Ash in the Borough of Spelthorne",
+   "sum": "Rising river levels today may lead to flooding.\nFlooding is possible on Thursday 08 October .\nLocations most affected will be low lying land and roads near rivers.\nWe are closely monitoring the situation and monitoring rainfall and river le",
+   "tags": [
+    "47.2"
+   ],
+   "src": "Environment Agency flood warnings",
+   "link": "https://check-for-flooding.service.gov.uk/",
+   "severity": 3,
+   "lat": null,
+   "lng": null,
+   "who": [
+    "household",
+    "council"
+   ],
+   "first_seen": "2026-10-08"
+  },
+  {
+   "id": "govuk:/government/publications/digital-telecare-commissioning-guidelines-alarm-receiving-centres",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Digital telecare commissioning guidelines: alarm receiving centres",
+   "sum": "Guidelines to support commissioners and procurement teams responsible for adult social care telecare services.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/publications/digital-telecare-commissioning-guidelines-alarm-receiving-centres",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/digital-telecare-commissioning-guidelines-personal-alarm-devices",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Digital telecare commissioning guidelines: personal alarm devices",
+   "sum": "Guidelines to support commissioners and procurement teams responsible for adult social care telecare services.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/publications/digital-telecare-commissioning-guidelines-personal-alarm-devices",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/digital-telecare-commissioning-guidelines-grouped-living-alarm-devices",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Digital telecare commissioning guidelines: grouped living alarm devices",
+   "sum": "Guidelines to support commissioners and procurement teams responsible for adult social care telecare services.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/publications/digital-telecare-commissioning-guidelines-grouped-living-alarm-devices",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/ebola-and-marburg-haemorrhagic-fevers-outbreaks-and-case-locations",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Ebola and Marburg haemorrhagic fevers: outbreaks and case locations",
+   "sum": "Information about incidents and outbreaks of Ebola and Marburg, both viral haemorrhagic fevers (VHF).",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/guidance/ebola-and-marburg-haemorrhagic-fevers-outbreaks-and-case-locations",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/user-guide-to-operation-of-police-powers-under-the-terrorism-act-2000-and-subsequent-legislation",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "User guide to operation of police powers under the Terrorism Act 2000 and subsequent legislation",
+   "sum": "The user guide to operation of police powers under terrorism legislation is a useful reference guide with explanatory notes.",
+   "tags": [
+    "16.1",
+    "8.9",
+    "10.1"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/government/publications/user-guide-to-operation-of-police-powers-under-the-terrorism-act-2000-and-subsequent-legislation",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/investigating-and-taking-action-on-serious-failures-in-landlords",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Investigating suspected serious failings and our approach to taking action",
+   "sum": "How we investigate suspected serious failings and how we approach taking action",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/investigating-and-taking-action-on-serious-failures-in-landlords",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/requirements-and-approach-for-different-types-of-landlord",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Requirements and approach for different types of landlord",
+   "sum": "What we require from each different type of landlord and the approach we will take",
+   "tags": [
+    "42.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/requirements-and-approach-for-different-types-of-landlord",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/regular-reviews-between-programmed-inspections",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Regular reviews between programmed inspections",
+   "sum": "How we review the information landlords are required to send to us",
+   "tags": [
+    "42.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/regular-reviews-between-programmed-inspections",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/factors-for-assessing-regulatory-issues",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Factors for assessing regulatory issues",
+   "sum": "How we assess issues of potential regulatory concern",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/factors-for-assessing-regulatory-issues",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/how-we-approach-regulatory-judgements-and-gradings",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "How we approach regulatory judgements and gradings",
+   "sum": "What is involved in regulatory judgements and gradings ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/how-we-approach-regulatory-judgements-and-gradings",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/our-approach-to-inspections",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Our approach to inspections",
+   "sum": "How we carry out inspections of landlords",
+   "tags": [
+    "42.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/our-approach-to-inspections",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/responsive-engagement-with-landlords",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Responsive engagement with landlords",
+   "sum": "How we may engage with landlords where we have concerns.",
+   "tags": [
+    "42.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/responsive-engagement-with-landlords",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/our-role-and-approach-to-regulating-landlords",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Our role and approach to regulating landlords",
+   "sum": "What we do and how we approach regulating landlords.",
+   "tags": [
+    "42.1"
+   ],
+   "src": "GOV.UK · Regulator of Social Housing",
+   "link": "https://www.gov.uk/guidance/our-role-and-approach-to-regulating-landlords",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hepatitis-c-in-the-west-midlands-annual-reports",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Hepatitis C in the West Midlands: annual reports",
+   "sum": "Epidemiology of hepatitis C virus (HCV) in the West Midlands using routinely available surveillance data.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/publications/hepatitis-c-in-the-west-midlands-annual-reports",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/vaccine-in-pregnancy-advice-for-pregnant-women",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Vaccine in pregnancy: advice for pregnant women",
+   "sum": "Guidance for health professionals to share with pregnant women immunised with MMRV, MMR, chickenpox or shingles vaccines.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/publications/vaccine-in-pregnancy-advice-for-pregnant-women",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hepatitis-c-in-yorkshire-and-humber-annual-reports",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Hepatitis C in Yorkshire and Humber: annual reports",
+   "sum": "Reports presenting annual data for hepatitis C in Yorkshire and Humber.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/publications/hepatitis-c-in-yorkshire-and-humber-annual-reports",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hepatitis-c-in-the-south-east-annual-reports",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Hepatitis C in the South East: annual reports",
+   "sum": "These reports describe the epidemiology of hepatitis C in the South East of England.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/publications/hepatitis-c-in-the-south-east-annual-reports",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/telecare-and-the-digital-switchover-guidance-for-housing-providers",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Telecare and the digital switchover: guidance for housing providers",
+   "sum": "Guidance for housing providers in England to provide information to help them safeguard telecare users during the digital phone switchover.",
+   "tags": [
+    "43.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/publications/telecare-and-the-digital-switchover-guidance-for-housing-providers",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/workers-and-temporary-workers-guidance-for-sponsors-part-2-sponsor-a-worker",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Sponsor a worker: sponsor guidance part 2",
+   "sum": "Guidance for sponsors on sponsoring a worker. ",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · UK Visas and Immigration",
+   "link": "https://www.gov.uk/government/publications/workers-and-temporary-workers-guidance-for-sponsors-part-2-sponsor-a-worker",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac6118ad9c21d62c0226814/Sponsor_guidance-part-2-sponsor-a-worker-10-26-v1.0.pdf",
+   "pdf_label": "Workers and Temporary Workers: guidance for sponsors part 2: sponsor a worker (PDF)",
+   "pdf_size": 924546
+  },
+  {
+   "id": "govuk:/government/publications/keep-records-for-sponsorship-appendix-d",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Sponsor guidance appendix D: keeping records for sponsorship",
+   "sum": "Guide to the sponsorship documents that Worker and Temporary Worker sponsors must keep.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · UK Visas and Immigration",
+   "link": "https://www.gov.uk/government/publications/keep-records-for-sponsorship-appendix-d",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac62285e635a394acb92387/Sponsor-guidance-Appendix-D-10-26-v1.0__1_.pdf",
+   "pdf_label": "Workers and Temporary Workers: guidance for sponsors – Appendix D: record-keeping duties (PDF)",
+   "pdf_size": 349374
+  },
+  {
+   "id": "govuk:/government/publications/long-residence",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Long residence: caseworker guidance",
+   "sum": "Immigration staff guidance on how to consider applications from people applying on the basis of long residence in the UK.",
+   "tags": [
+    "28.1",
+    "18.2"
+   ],
+   "src": "GOV.UK · UK Visas and Immigration",
+   "link": "https://www.gov.uk/government/publications/long-residence",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac388121ef3e896de979357/Long_residence.pdf",
+   "pdf_label": "Long residence (PDF)",
+   "pdf_size": 318749
+  },
+  {
+   "id": "govuk:/guidance/lincoln-prison",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Lincoln Prison",
+   "sum": "Lincoln is a prison and young offender institution (YOI) in the East Midlands, for men aged 18 and over. \r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
+   "link": "https://www.gov.uk/guidance/lincoln-prison",
+   "first_seen": "2026-10-06",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hong-kong-british-national-overseas-route",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Hong Kong British National (Overseas) (BNO) route: caseworker guidance",
+   "sum": "Immigration staff guidance on considering applications through the Hong Kong British National (Overseas) (BNO) route.",
+   "tags": [
+    "28.1",
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/government/publications/hong-kong-british-national-overseas-route",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aa3c06b62ec7fe7bedf53bf/Hong_Kong_British_National__Overseas__route__1_.pdf",
+   "pdf_label": "Hong Kong British National (Overseas) route (PDF)",
+   "pdf_size": 605068
+  },
+  {
+   "id": "govuk:/government/news/new-director-joins-government-department",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "New Director joins government department",
+   "sum": "A new Non-Executive Director has joined the Government Property Agency",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Government Property Agency",
+   "link": "https://www.gov.uk/government/news/new-director-joins-government-department",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/trawsfynydd-takes-next-step-towards-reactor-height-reduction",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Trawsfynydd takes next step towards Reactor Height Reduction",
+   "sum": "NRS has handed over responsibility of the reactor buildings area to Costain, paving the way for the next phase of one of the major decommissioning projects.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Nuclear Restoration Services, Nuclear Decommissioning Authority",
+   "link": "https://www.gov.uk/government/news/trawsfynydd-takes-next-step-towards-reactor-height-reduction",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/drought-permit-granted-to-support-wimbleball-reservoir",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Drought permit granted to support Wimbleball Reservoir",
+   "sum": "The Environment Agency has issued a drought permit to South West Water to help secure the public water supply at Wimbleball Reservoir.  ",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/news/drought-permit-granted-to-support-wimbleball-reservoir",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules",
+   "sum": "A collection of the current Immigration Rules.",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-eu-family-permit",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix EU (Family Permit)",
+   "sum": "Appendix EU (Family Permit)",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-eu-family-permit",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-eu",
+     "kind": "update",
+     "title": "Immigration Rules Appendix EU",
+     "src": "GOV.UK · Home Office",
+     "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-eu",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-student",
+     "kind": "update",
+     "title": "Immigration Rules: Appendix Student",
+     "src": "GOV.UK · Home Office",
+     "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-a-attributes",
+     "kind": "update",
+     "title": "Immigration Rules Appendix A: attributes",
+     "src": "GOV.UK · Home Office",
+     "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-a-attributes",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-v-visitor",
+     "kind": "update",
+     "title": "Immigration Rules Appendix V: Visitor",
+     "src": "GOV.UK · Home Office",
+     "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-v-visitor",
+     "date": "2026-10-08"
+    }
+   ]
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-child-relative-sponsors-with-protection",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Child Relative (Sponsors with Protection)",
+   "sum": "Appendix Child Relative (Sponsors with Protection)",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-child-relative-sponsors-with-protection",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-index",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules: Index",
+   "sum": "The rules are divided into different documents. The index page will help you find the part you need.",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-index",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-part-suitability",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules: Part Suitability",
+   "sum": "Part Suitability",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-part-suitability",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/les-lions-farm-limited-npswr047915-and-npswr047917-application-made-to-abstract-water",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Les Lions Farm Limited (NPS/WR/047915 and NPS/WR/047917): application made to abstract water",
+   "sum": "The Environment Agency has received an application from Les Lions Farm Limited to vary a licence to abstract (take) water.",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/les-lions-farm-limited-npswr047915-and-npswr047917-application-made-to-abstract-water",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/the-royal-society-for-the-protection-of-birds-npswr047794-and-npswr047767-application-made-to-abstract-water-and-impound-water",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "The Royal Society for the Protection of Birds (NPS/WR/047794 and NPS/WR/047767): application made to abstract water and impound water",
+   "sum": "The Environment Agency has received an application from The Royal Society for the Protection of Birds for a licence to abstract and impound water.",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/the-royal-society-for-the-protection-of-birds-npswr047794-and-npswr047767-application-made-to-abstract-water-and-impound-water",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/undertaking-tquk",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Undertaking: TQUK",
+   "sum": "Ofqual accepted an Undertaking from TQUK for breaching the General Conditions of Recognition.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Ofqual",
+   "link": "https://www.gov.uk/government/publications/undertaking-tquk",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-skilled-worker",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Skilled Worker",
+   "sum": "The Skilled Worker route is for employers to recruit people to work in the UK, including in UK waters, in a specific job. A Skilled Worker must have a job offer in an eligible skilled occupation from a Home Office-approved sponsor.",
+   "tags": [
+    "28.1",
+    "18.2",
+    "47.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-skilled-worker",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-child-student",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Child Student",
+   "sum": "Immigration Rules for Child Students",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-child-student",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-administrative-review",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Administrative Review",
+   "sum": "Administrative Review",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-administrative-review",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-visitor-permitted-activities",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Visitor: Permitted Activities ",
+   "sum": "Permitted Activities for Visitors",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-visitor-permitted-activities",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-fm-family-members",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix FM: family members",
+   "sum": "Family members",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-fm-family-members",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-part-1-leave-to-enter-or-stay-in-the-uk",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules part 1: leave to enter or stay in the UK",
+   "sum": "General provisions regarding entry clearance, leave to enter or remain in the United Kingdom (paragraphs 7 to 39E).",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-part-1-leave-to-enter-or-stay-in-the-uk",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-private-life",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Private Life",
+   "sum": "The Private Life route is for a person seeking permission to stay in the UK on the basis they have developed a Private Life in the UK. ",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-private-life",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-victim-of-domestic-abuse",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Victim of Domestic Abuse",
+   "sum": "Immigration Rules Appendix Victim of Domestic Abuse",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-victim-of-domestic-abuse",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-long-residence",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Long Residence",
+   "sum": "The Long Residence route is for a person who has lived in the UK lawfully and continuously for 10 years or more. The person can count time with permission on most routes towards the 10 year qualifying period. ",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-long-residence",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-hong-kong-british-national-overseas",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Hong Kong British National (Overseas)",
+   "sum": "There are two Hong Kong British National (Overseas) routes – the BN(O) Status Holder route and the BN(O) Adult Child route. ",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-hong-kong-british-national-overseas",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-appendix-government-authorised-exchange-schemes",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules Appendix Government Authorised Exchange schemes",
+   "sum": "The Temporary Worker – Government Authorised Exchange route is for a person who wishes to come to the UK on one of the approved schemes listed below.",
+   "tags": [
+    "28.1",
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-government-authorised-exchange-schemes",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/immigration-rules/immigration-rules-introduction",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Immigration Rules: introduction",
+   "sum": "This contains an explanation of who’s covered by the Immigration Rules, dates of effect and definitions/interpretations of the terms used.",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Home Office",
+   "link": "https://www.gov.uk/guidance/immigration-rules/immigration-rules-introduction",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/employment-tribunal-decisions/ms-d-hrabal-v-priory-group-ltd-6012944-slash-2024",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Ms D Hrabal v Priory Group Ltd: 6012944/2024",
+   "sum": "Employment Tribunal decision.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
+   "link": "https://www.gov.uk/employment-tribunal-decisions/ms-d-hrabal-v-priory-group-ltd-6012944-slash-2024",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac512c7a4449136071df951/Ms_D_Hrabal_v_Priory_Group_Limited_-_6012944_2024_-_Judgment.pdf",
+   "pdf_label": "Ms D Hrabal v Priory Group Ltd: 6012944/2024 - Reserved Judgment (PDF)"
+  },
+  {
+   "id": "govuk:/employment-tribunal-decisions/l-roberts-v-exquisite-nail-and-beauty-ltd-2406202-slash-2025",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "L Roberts v Exquisite Nail and Beauty Ltd: 2406202/2025",
+   "sum": "Employment Tribunal decision.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
+   "link": "https://www.gov.uk/employment-tribunal-decisions/l-roberts-v-exquisite-nail-and-beauty-ltd-2406202-slash-2025",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac510187fbf55f651b9235d/Louise_Roberts_v_Exquisite_Nail_and_Beauty_Ltd_-_2406202_2025_-_Judgment.pdf",
+   "pdf_label": "L Roberts v Exquisite Nail and Beauty Ltd: 2406202/2025 - Rule 22 (PDF)"
+  },
+  {
+   "id": "govuk:/employment-tribunal-decisions/dr-c-churchill-v-university-of-salford-6011717-slash-2024",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Dr C Churchill v University of Salford: 6011717/2024",
+   "sum": "Employment Tribunal decision. ",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
+   "link": "https://www.gov.uk/employment-tribunal-decisions/dr-c-churchill-v-university-of-salford-6011717-slash-2024",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6a9ff0bc5f6e942efe37eee1/Dr_C_Churchill_v_University_of_Salford_-_6011717_2024_-_Reserved.pdf",
+   "pdf_label": "Dr C Churchill v University of Salford: 6011717/2024 - Reserved Judgment (PDF)",
+   "pdf_more": 1
+  },
+  {
+   "id": "govuk:/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Foreign Secretary statement on the UK's diplomatic presence in Jerusalem",
+   "sum": "Following discussions with the Government of Israel, our Consulate General building will not be closing, and will be known as the UK Mission, Jerusalem from today",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
    "id": "bill:4080",
    "kind": "law",
    "level": "uk",
@@ -2286,11 +3220,11 @@
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-east-of-england",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/695e20f2bd1c076f787e739e/ad_5569_07_January_2026.pdf",
    "pdf_label": "AD - 5569 07 January 2026 (objection deadline 28 January 2026) (PDF)",
    "pdf_size": 325740,
-   "pdf_more": 39
+   "pdf_more": 39,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/applications-and-decisions-for-wales",
@@ -2307,11 +3241,11 @@
    "src": "GOV.UK · Traffic Commissioners for Great Britain",
    "link": "https://www.gov.uk/guidance/applications-and-decisions-for-wales",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/695e22706056a077857e73b5/ad_8939_07_January_2026.pdf",
    "pdf_label": "AD - 8939 07 January 2026 (objection deadline 28 January 2026) (PDF)",
    "pdf_size": 254392,
-   "pdf_more": 39
+   "pdf_more": 39,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/visit-guidance",
@@ -2329,10 +3263,10 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/visit-guidance",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ab66e8ba9c3d267bcccef22/Visit__updated_.pdf",
    "pdf_label": "Visit caseworker guidance (PDF)",
-   "pdf_size": 814372
+   "pdf_size": 814372,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/visitor-visa-guide-to-supporting-documents",
@@ -2366,11 +3300,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/publications/standards-general-product-safety",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac65434ec9d3aba1e0139a9/ds-0141-26-gpsr-notice.pdf",
    "pdf_label": "Referenced standards: general product safety – notice of publication, 08 October 2026 (PDF)",
    "pdf_size": 177570,
-   "pdf_more": 4
+   "pdf_more": 4,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/workers-and-temporary-workers-guidance-for-sponsors-sponsor-a-seasonal-worker",
@@ -2387,10 +3321,10 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/workers-and-temporary-workers-guidance-for-sponsors-sponsor-a-seasonal-worker",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac38660241ecad55a97937d/Sponsor-a-Seasonal-Worker-10-26-v1.0.pdf",
    "pdf_label": "Workers and Temporary Workers: guidance for sponsors: sponsor a seasonal worker (PDF)",
-   "pdf_size": 458585
+   "pdf_size": 458585,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/erasmus-applicants-coming-to-the-uk",
@@ -4246,6 +5180,61 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/consultations/marine-licences-changes-to-fees-exemptions-and-self-service-licences",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "Marine licences: changes to fees, exemptions and self-service licences",
+   "sum": "Seeking views on proposed changes to marine licence fees, exemptions and self-service licences. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
+   "link": "https://www.gov.uk/government/consultations/marine-licences-changes-to-fees-exemptions-and-self-service-licences",
+   "first_seen": "2026-10-07",
+   "pdf_checked": true,
+   "closes": "2025-08-29",
+   "opens": "2025-06-20"
+  },
+  {
+   "id": "govuk:/government/consultations/using-dual-energy-x-ray-absorptiometry-dexa-scans-for-non-medical-purposes-as-a-justified-practice",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "Using dual energy x-ray absorptiometry (DEXA) scans for non-medical purposes as a justified practice",
+   "sum": "We are seeking views on the potential use of DEXA scans outside of a healthcare pathway.",
+   "tags": [
+    "48.6"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/consultations/using-dual-energy-x-ray-absorptiometry-dexa-scans-for-non-medical-purposes-as-a-justified-practice",
+   "first_seen": "2026-10-07",
+   "pdf_checked": true,
+   "closes": "2026-06-01",
+   "opens": "2026-03-30"
+  },
+  {
+   "id": "govuk:/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "Chancellor meeting with Gilt-edged Market Makers: Minutes - October 2026",
+   "sum": "Summary minutes of the Chancellor of the Exchequer’s meeting with the primary dealer firms in the gilt market, on 6 October 2026 in HM Treasury.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Treasury",
+   "link": "https://www.gov.uk/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026",
+   "first_seen": "2026-10-07",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/illegal-animal-medicines-seizures-improvement-notices-and-prosecutions",
    "kind": "update",
    "level": "uk",
@@ -4314,61 +5303,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/consultations/marine-licences-changes-to-fees-exemptions-and-self-service-licences",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "Marine licences: changes to fees, exemptions and self-service licences",
-   "sum": "Seeking views on proposed changes to marine licence fees, exemptions and self-service licences. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
-   "link": "https://www.gov.uk/government/consultations/marine-licences-changes-to-fees-exemptions-and-self-service-licences",
-   "first_seen": "2026-10-07",
-   "pdf_checked": true,
-   "closes": "2025-08-29",
-   "opens": "2025-06-20"
-  },
-  {
-   "id": "govuk:/government/consultations/using-dual-energy-x-ray-absorptiometry-dexa-scans-for-non-medical-purposes-as-a-justified-practice",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "Using dual energy x-ray absorptiometry (DEXA) scans for non-medical purposes as a justified practice",
-   "sum": "We are seeking views on the potential use of DEXA scans outside of a healthcare pathway.",
-   "tags": [
-    "48.6"
-   ],
-   "src": "GOV.UK · Department of Health and Social Care",
-   "link": "https://www.gov.uk/government/consultations/using-dual-energy-x-ray-absorptiometry-dexa-scans-for-non-medical-purposes-as-a-justified-practice",
-   "first_seen": "2026-10-07",
-   "pdf_checked": true,
-   "closes": "2026-06-01",
-   "opens": "2026-03-30"
-  },
-  {
-   "id": "govuk:/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "Chancellor meeting with Gilt-edged Market Makers: Minutes - October 2026",
-   "sum": "Summary minutes of the Chancellor of the Exchequer’s meeting with the primary dealer firms in the gilt market, on 6 October 2026 in HM Treasury.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Treasury",
-   "link": "https://www.gov.uk/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026",
-   "first_seen": "2026-10-07",
-   "pdf_checked": true
-  },
-  {
    "id": "polev:thames-valley:N458:2026-10-07:Have Your Say meeting in Gregg",
    "kind": "update",
    "level": "local",
@@ -4400,6 +5334,14 @@
    "approx": true,
    "first_seen": "2026-10-03",
    "also": [
+    {
+     "id": "polev:thames-valley:N458:2026-10-11:Have Your Say",
+     "kind": "update",
+     "title": "Police event: Have Your Say",
+     "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+     "link": "https://www.thamesvalley.police.uk",
+     "date": "2026-10-11"
+    },
     {
      "id": "polev:thames-valley:N458:2026-10-11:Have Your Say",
      "kind": "update",
@@ -5408,6 +6350,26 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/india-uk-4th-financial-markets-dialogue-joint-statement",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "India-UK 4th Financial Markets Dialogue: Joint Statement",
+   "sum": "This document is a joint statement between HM Treasury and the Indian Ministry of Finance, and is a public record of what was covered at the fourth Financial Markets Dialogue held on Tuesday 29 September 2026.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Treasury",
+   "link": "https://www.gov.uk/government/publications/india-uk-4th-financial-markets-dialogue-joint-statement",
+   "first_seen": "2026-10-07",
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ac60de935adbc27761df95a/Joint_Statement_-_FMD_2026.pdf",
+   "pdf_label": "India-UK 4th Financial Markets Dialogue: Joint Statement (PDF)",
+   "pdf_size": 51353,
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/trade-marks-and-designs-hearing-diaries",
    "kind": "record",
    "level": "uk",
@@ -5443,26 +6405,6 @@
    "pdf_label": "Declaration to authorise someone to travel abroad with your pet - English only (PDF)",
    "pdf_size": 645380,
    "pdf_more": 3,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/india-uk-4th-financial-markets-dialogue-joint-statement",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "India-UK 4th Financial Markets Dialogue: Joint Statement",
-   "sum": "This document is a joint statement between HM Treasury and the Indian Ministry of Finance, and is a public record of what was covered at the fourth Financial Markets Dialogue held on Tuesday 29 September 2026.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Treasury",
-   "link": "https://www.gov.uk/government/publications/india-uk-4th-financial-markets-dialogue-joint-statement",
-   "first_seen": "2026-10-07",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6ac60de935adbc27761df95a/Joint_Statement_-_FMD_2026.pdf",
-   "pdf_label": "India-UK 4th Financial Markets Dialogue: Joint Statement (PDF)",
-   "pdf_size": 51353,
    "pdf_checked": true
   },
   {
@@ -5886,23 +6828,6 @@
    ],
    "src": "GOV.UK · Border Force",
    "link": "https://www.gov.uk/government/publications/getting-through-the-uk-border-faster",
-   "first_seen": "2026-10-06",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/lincoln-prison",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-06",
-   "extent": "UK",
-   "title": "Lincoln Prison",
-   "sum": "Lincoln is a prison and young offender institution (YOI) in the East Midlands, for men aged 18 and over. \r\n",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
-   "link": "https://www.gov.uk/guidance/lincoln-prison",
    "first_seen": "2026-10-06",
    "pdf_checked": true
   },
@@ -6689,7 +7614,17 @@
    "src": "GOV.UK · HM Prison and Probation Service, HM Prison Service",
    "link": "https://www.gov.uk/guidance/hmp-send-families-and-significant-others-strategy",
    "first_seen": "2026-10-06",
-   "pdf_checked": true
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/guidance/hmp-lincoln-families-and-significant-others-strategy",
+     "kind": "guidance",
+     "title": "HMP Lincoln: Families and significant others strategy",
+     "src": "GOV.UK · HM Prison and Probation Service, HM Prison Service",
+     "link": "https://www.gov.uk/guidance/hmp-lincoln-families-and-significant-others-strategy",
+     "date": "2026-10-08"
+    }
+   ]
   },
   {
    "id": "govuk:/government/publications/offender-management-caseworker-guidance",
@@ -6989,24 +7924,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/cma-cases/referral-of-the-proposed-subsidy-to-the-canal-and-river-trust-by-the-department-for-environment-food-and-rural-affairs",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-06",
-   "extent": "UK",
-   "title": "Referral of the proposed subsidy to the Canal & River Trust by the Department for Environment, Food and Rural Affairs",
-   "sum": "The Subsidy Advice Unit (SAU) has accepted a request for a report providing advice to the Department for Environment, Food and Rural Affairs (Defra) concerning its proposed subsidy to the Canal & River Trust (the CRT).",
-   "tags": [
-    "33.5",
-    "46.5"
-   ],
-   "src": "GOV.UK · Competition and Markets Authority",
-   "link": "https://www.gov.uk/cma-cases/referral-of-the-proposed-subsidy-to-the-canal-and-river-trust-by-the-department-for-environment-food-and-rural-affairs",
-   "first_seen": "2026-10-06",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/highways-financing-bill",
    "kind": "update",
    "level": "uk",
@@ -7025,6 +7942,24 @@
    "pdf_label": "Impact assessment: Highways (Financing) Bill (PDF)",
    "pdf_size": 1154879,
    "pdf_more": 1,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/cma-cases/referral-of-the-proposed-subsidy-to-the-canal-and-river-trust-by-the-department-for-environment-food-and-rural-affairs",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-06",
+   "extent": "UK",
+   "title": "Referral of the proposed subsidy to the Canal & River Trust by the Department for Environment, Food and Rural Affairs",
+   "sum": "The Subsidy Advice Unit (SAU) has accepted a request for a report providing advice to the Department for Environment, Food and Rural Affairs (Defra) concerning its proposed subsidy to the Canal & River Trust (the CRT).",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "GOV.UK · Competition and Markets Authority",
+   "link": "https://www.gov.uk/cma-cases/referral-of-the-proposed-subsidy-to-the-canal-and-river-trust-by-the-department-for-environment-food-and-rural-affairs",
+   "first_seen": "2026-10-06",
    "pdf_checked": true
   },
   {
@@ -11636,6 +12571,22 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "bill:4030",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-02",
+   "extent": "UK",
+   "title": "Railways Bill",
+   "sum": "Committee stage · Lords. ",
+   "tags": [
+    "52.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4030",
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "leg:uksi/2026/1062/made",
    "kind": "law",
    "level": "uk",
@@ -11653,22 +12604,6 @@
    "link": "https://www.legislation.gov.uk/uksi/2026/1062/made",
    "pdf": "https://www.legislation.gov.uk/uksi/2026/1062/made/data.pdf",
    "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4030",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-02",
-   "extent": "UK",
-   "title": "Railways Bill",
-   "sum": "Committee stage · Lords. ",
-   "tags": [
-    "52.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4030",
    "first_seen": "2026-10-03"
   },
   {
@@ -12010,6 +12945,22 @@
      "src": "GOV.UK · Traffic Commissioners for Great Britain",
      "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-west-of-england",
      "date": "2026-10-07"
+    },
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-east-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-east-of-england",
+     "date": "2026-10-07"
+    },
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the north west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "date": "2026-10-07"
     }
    ]
   },
@@ -12034,6 +12985,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the north east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "date": "2026-10-07"
+    },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-the-north-east-of-england",
      "kind": "guidance",
@@ -13027,6 +13986,14 @@
    "first_seen": "2026-10-03",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/estonia-information-for-victims-of-rape-and-sexual-assault",
+     "kind": "guidance",
+     "title": "Estonia: information for victims of rape and sexual assault",
+     "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+     "link": "https://www.gov.uk/guidance/estonia-information-for-victims-of-rape-and-sexual-assault",
+     "date": "2026-10-07"
+    },
     {
      "id": "govuk:/guidance/estonia-information-for-victims-of-rape-and-sexual-assault",
      "kind": "guidance",
