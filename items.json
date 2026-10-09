@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-08T21:58:53.717654+00:00",
+ "generated_at": "2026-10-09T01:58:52.263678+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
-   "count": 254,
+   "count": 251,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
-   "count": 0,
+   "count": 35,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 22,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-08T21:58:53.717654+00:00",
+   "fetched_at": "2026-10-09T01:58:52.263678+00:00",
    "ok": true,
-   "count": 47,
+   "count": 49,
    "error": null,
-   "last_ok": "2026-10-08T21:58:53.717654+00:00"
+   "last_ok": "2026-10-09T01:58:52.263678+00:00"
   }
  ],
  "items": [
@@ -861,6 +861,60 @@
      "date": "2026-10-28"
     }
    ]
+  },
+  {
+   "id": "pwo:56563:2026-10-23",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-23",
+   "extent": "UK",
+   "title": "Parliament: House of Lords (Alternative Second Chamber) Bill – second reading",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-23",
+    "time": "10:00",
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "pwo:56564:2026-10-23",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-23",
+   "extent": "UK",
+   "title": "Parliament: British Sovereignty Protection (Chagos Islands) Bill – second reading",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-23",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-09"
   },
   {
    "id": "pwo:56299:2026-10-21",
@@ -2136,6 +2190,871 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "fsa:new:1999552",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: ALTFOOD",
+   "sum": "Mobile caterer · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999552",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999550",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Angel's Cookie Club",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999550",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999540",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Arsham",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999540",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-24:1944609",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Atlantis Lounge and Restaurant",
+   "sum": "Restaurant/Cafe/Canteen · ATLANTIS LOUNGE 556 LONDON ROAD SLOUGH SL3 8QB. Was awaiting inspection; inspected 2026-09-24. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1944609",
+   "lat": 51.488871,
+   "lng": -0.5361814,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999551",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: BADIViTA",
+   "sum": "Distributors/Transporters · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999551",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-29:1291339",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5 kept: Cake Box",
+   "sum": "Retailers - other · 245 FARNHAM ROAD SLOUGH SL2 1DE. Re-inspected 2026-09-29, same rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1291339",
+   "lat": 51.5274047,
+   "lng": -0.6167172,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-25:1949971",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Caramel Spice Bakery",
+   "sum": "Other catering premises · . Was awaiting inspection; inspected 2026-09-25. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1949971",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999538",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Chardikala Tiffan Service",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999538",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999545",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: FLOW FORMULA",
+   "sum": "Retailers - other · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999545",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999543",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: GVANTAGE",
+   "sum": "Retailers - other · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999543",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999554",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Homemade Tiffin",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999554",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-10-07:1986374",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Juices 4 Life",
+   "sum": "Other catering premises · 280 FARNHAM ROAD SLOUGH SL1 4XL. Was awaiting inspection; inspected 2026-10-07. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1986374",
+   "lat": 51.5247702,
+   "lng": -0.6152114,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999548",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: MAMAS CAKES N BAKES",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999548",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999537",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Masala N Munchies",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999537",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999547",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Mimi's Cakes",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999547",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-10-06:1960553",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Popeyes",
+   "sum": "Restaurant/Cafe/Canteen · 226 HIGH STREET SLOUGH SL1 1JS. Was awaiting inspection; inspected 2026-10-06. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1960553",
+   "lat": 51.50765514,
+   "lng": -0.5880959,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-15:1960542",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Riit",
+   "sum": "Restaurant/Cafe/Canteen · 173 BUCKINGHAM AVENUE SLOUGH SL1 4RD. Was awaiting inspection; inspected 2026-09-15. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1960542",
+   "lat": 51.5213506,
+   "lng": -0.6256931,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999544",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Rootedwithu",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999544",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-22:1960548",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Shah's Halal Food",
+   "sum": "Takeaway/sandwich shop · 242 HIGH STREET SLOUGH SL1 1JU. Was awaiting inspection; inspected 2026-09-22. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1960548",
+   "lat": 51.5074991,
+   "lng": -0.5883428,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999546",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Slough Food & Wine",
+   "sum": "Retailers - other · 265A HIGH STREET SLOUGH SL1 1BN. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999546",
+   "lat": 51.5077916,
+   "lng": -0.5879879,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999541",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Sukhman",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999541",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999542",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Tashkent Company Limited",
+   "sum": "Distributors/Transporters · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999542",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-10:1172602",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, 3 → 5: Taste of Karachi",
+   "sum": "Takeaway/sandwich shop · 10 PARK STREET SLOUGH SL1 1PD. Was rating 3; inspected 2026-09-10. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1172602",
+   "lat": 51.5075512,
+   "lng": -0.5911799,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999553",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: TEEFEY AFROMART",
+   "sum": "Other catering premises · 140A WELLINGTON STREET SLOUGH SL1 1RP. Registered with the council, exempt from rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999553",
+   "lat": 51.5084523,
+   "lng": -0.5831256,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-25:1944614",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: The Genuine Dining Company @ Calex",
+   "sum": "Restaurant/Cafe/Canteen · 842 YEOVIL ROAD SLOUGH SL1 4JG. Was awaiting inspection; inspected 2026-09-25. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1944614",
+   "lat": 51.5258045,
+   "lng": -0.6398011,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999539",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: THE HAN",
+   "sum": "Restaurant/Cafe/Canteen · 167 FARNHAM ROAD SLOUGH SL1 4XP. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999539",
+   "lat": 51.5247614,
+   "lng": -0.6159901,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:new:1999549",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: The Pizza District",
+   "sum": "Takeaway/sandwich shop · 235 FARNHAM ROAD SLOUGH SL2 1DE. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1999549",
+   "lat": 51.5275282,
+   "lng": -0.6165393,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:rated:2026-09-10:1944613",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Twenty Nine Matcha",
+   "sum": "Other catering premises · . Was awaiting inspection; inspected 2026-09-10. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1944613",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1755235",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: House of Rakabdar",
+   "sum": "Other catering premises · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1755235",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1375197",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Lovely Food & Wine",
+   "sum": "Retailers - other · 265A HIGH STREET SLOUGH SL1 1BN. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1375197",
+   "lat": 51.5077916,
+   "lng": -0.5879879,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1907607",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Natures Dispensary",
+   "sum": "Retailers - other · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1907607",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1538983",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Noreens_creations",
+   "sum": "Other catering premises · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1538983",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1611223",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Perk",
+   "sum": "Mobile caterer · SLOUGH RAILWAY STATION BRUNEL WAY SLOUGH SL1 1XW. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1611223",
+   "lat": 51.5118319,
+   "lng": -0.5912062,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1498418",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Vivasayi Supermarket",
+   "sum": "Retailers - other · 27-31 ELMSHOTT LANE SLOUGH SL1 5QS. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1498418",
+   "lat": 51.5180227,
+   "lng": -0.6449336,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "fsa:closed:1680112",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-09",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Yao Thai Street Food",
+   "sum": "Other catering premises · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1680112",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
    "id": "leg:uksi/2026/1069/made",
    "kind": "law",
    "level": "uk",
@@ -3397,11 +4316,11 @@
    "src": "GOV.UK · Office of Financial Sanctions Implementation",
    "link": "https://www.gov.uk/government/publications/ofsi-general-licence-int202611080040",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac77912b016250bca013a30/Zarubezhneft_Wind_Down_GL.pdf",
    "pdf_label": "OFSI General Licence INT/2026/11080040 (PDF)",
    "pdf_size": 84526,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/bullingdon-prison",
@@ -3488,11 +4407,11 @@
    "src": "GOV.UK · Immigration Advice Authority, Office of the Immigration Services Commissioner",
    "link": "https://www.gov.uk/government/publications/competence-oisc-guidance-2012",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac77383a57ddfe32196a8ed/Guidance_on_Competence_2026.pdf",
    "pdf_label": "Guidance on Competence 2026 (PDF)",
    "pdf_size": 458119,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/find-out-about-the-loan-charge-settlement-scheme",
@@ -3544,10 +4463,10 @@
    "src": "GOV.UK · Legal Aid Agency",
    "link": "https://www.gov.uk/guidance/approved-training-course-for-inquests",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac759c8e8ef5609e7c9335e/Approved_Training_Course_Criteria.pdf",
    "pdf_label": "Approved Training Course Criteria (PDF)",
    "pdf_size": 132531,
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/news/approved-training-course-for-inquests",
@@ -3592,10 +4511,10 @@
    "src": "GOV.UK · UK Health Security Agency",
    "link": "https://www.gov.uk/government/publications/sexually-transmitted-infections-yorkshire-and-humber-data",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6304df708fa8f5536b2883a3/YH_STI_Spot_2020.pdf",
    "pdf_label": "Spotlight on sexually transmitted infections in Yorkshire and Humber: 2020 data (PDF)",
-   "pdf_size": 912904
+   "pdf_size": 912904,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/pro-worker-ai-adoption-prize",
@@ -3664,11 +4583,11 @@
    "src": "GOV.UK · Office for Product Safety and Standards",
    "link": "https://www.gov.uk/guidance/approved-verification-guidance-application-form-and-stickers",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/641aee0ed3bf7f7ffc140290/approved-verifier-guidance-2023.pdf",
    "pdf_label": "Download the guidance on becoming an approved verifier (PDF)",
    "pdf_size": 328868,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/approved-manufacturers-conformity-assessment",
@@ -4162,6 +5081,57 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6aa3c06b62ec7fe7bedf53bf/Hong_Kong_British_National__Overseas__route__1_.pdf",
    "pdf_label": "Hong Kong British National (Overseas) route (PDF)",
    "pdf_size": 605068
+  },
+  {
+   "id": "govuk:/government/news/independent-research-finds-ofsteds-new-look-inspections-are-more-collaborative-and-respectful",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Independent research finds Ofsted’s new-look inspections are more collaborative and respectful",
+   "sum": "A year after new-look inspections began, most education providers feel generally positive about their experience under Ofsted’s renewed education inspection framework (EIF), according to independent research published today.",
+   "tags": [
+    "37.1"
+   ],
+   "src": "GOV.UK · Ofsted",
+   "link": "https://www.gov.uk/government/news/independent-research-finds-ofsteds-new-look-inspections-are-more-collaborative-and-respectful",
+   "first_seen": "2026-10-09",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/teenagers-back-vocational-reforms-and-defy-outdated-stigma",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Teenagers back vocational reforms and defy outdated stigma",
+   "sum": "Majority of young people support more hands-on learning from age 14.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Education",
+   "link": "https://www.gov.uk/government/news/teenagers-back-vocational-reforms-and-defy-outdated-stigma",
+   "first_seen": "2026-10-09",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/illegal-waste-at-hoads-wood-fully-cleared-as-crackdown-continues",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Illegal waste at Hoad’s Wood fully cleared as crackdown continues",
+   "sum": "Well-loved local beauty spot in Kent cleared of 39,500 tonnes of illegal waste. ",
+   "tags": [
+    "45.2"
+   ],
+   "src": "GOV.UK · Environment Agency, Department for Environment, Food & Rural Affairs",
+   "link": "https://www.gov.uk/government/news/illegal-waste-at-hoads-wood-fully-cleared-as-crackdown-continues",
+   "first_seen": "2026-10-09",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/clampdown-on-dangerous-homes-to-protect-more-tenants-and-families",
@@ -4731,6 +5701,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/foreign-travel-advice/chile",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Chile travel advice",
+   "sum": "FCDO travel advice for Chile. Includes safety and security, insurance, entry requirements and legal differences. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/foreign-travel-advice/chile",
+   "first_seen": "2026-10-09",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/foreign-travel-advice/mexico",
    "kind": "update",
    "level": "uk",
@@ -5203,10 +6190,10 @@
    "src": "GOV.UK · Home Office, Immigration Enforcement",
    "link": "https://www.gov.uk/government/publications/immigration-enforcement-facial-recognition-policy",
    "first_seen": "2026-10-08",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac78c5aa57ddfe32196a917/IE_Facial_Recognition_Policy_Document.pdf",
    "pdf_label": "Immigration Enforcement facial recognition policy (PDF)",
-   "pdf_size": 432248
+   "pdf_size": 432248,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/immigration-and-asylum-bill-2026-factsheets",
@@ -6751,23 +7738,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-08",
-   "extent": "UK",
-   "title": "Foreign Secretary statement on the UK's diplomatic presence in Jerusalem",
-   "sum": "Following discussions with the Government of Israel, our Consulate General building will not be closing, and will be known as the UK Mission, Jerusalem from today",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
-   "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
    "kind": "record",
    "level": "uk",
@@ -6781,6 +7751,23 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Foreign Secretary statement on the UK's diplomatic presence in Jerusalem",
+   "sum": "Following discussions with the Government of Israel, our Consulate General building will not be closing, and will be known as the UK Mission, Jerusalem from today",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/government/news/foreign-secretary-statement-on-the-uks-diplomatic-presence-in-jerusalem",
    "first_seen": "2026-10-08",
    "pdf_checked": true
   },
@@ -6876,6 +7863,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for London and the south east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "date": "2026-10-08"
+    },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
      "kind": "guidance",
@@ -7943,40 +8938,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "Drivers set to save as petrol prices launch on Google Maps",
-   "sum": "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · Department for Energy Security and Net Zero, HM Treasury",
-   "link": "https://www.gov.uk/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps",
-   "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/news/uk-and-germany-launch-joint-partnership-to-counter-sabotage-and-cyber-attacks",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-07",
-   "extent": "UK",
-   "title": "UK and Germany launch joint-partnership to counter sabotage and cyber attacks",
-   "sum": "Prime Minister Andy Burnham will travel to Berlin today for talks with Chancellor Friedrich Merz.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
-   "link": "https://www.gov.uk/government/news/uk-and-germany-launch-joint-partnership-to-counter-sabotage-and-cyber-attacks",
-   "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/consultations/marine-licences-changes-to-fees-exemptions-and-self-service-licences",
    "kind": "update",
    "level": "uk",
@@ -8029,6 +8990,40 @@
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/chancellor-meeting-with-gilt-edged-market-makers-minutes-october-2026",
    "first_seen": "2026-10-07",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "Drivers set to save as petrol prices launch on Google Maps",
+   "sum": "Drivers to save at the pump as near real-time petrol and diesel prices are included on Google Maps for the first time.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Department for Energy Security and Net Zero, HM Treasury",
+   "link": "https://www.gov.uk/government/news/drivers-set-to-save-as-petrol-prices-launch-on-google-maps",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/uk-and-germany-launch-joint-partnership-to-counter-sabotage-and-cyber-attacks",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-07",
+   "extent": "UK",
+   "title": "UK and Germany launch joint-partnership to counter sabotage and cyber attacks",
+   "sum": "Prime Minister Andy Burnham will travel to Berlin today for talks with Chancellor Friedrich Merz.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/uk-and-germany-launch-joint-partnership-to-counter-sabotage-and-cyber-attacks",
+   "first_seen": "2026-10-08",
    "pdf_checked": true
   },
   {
@@ -11076,6 +12071,14 @@
      "title": "HMP Lincoln: Families and significant others strategy",
      "src": "GOV.UK · HM Prison and Probation Service, HM Prison Service",
      "link": "https://www.gov.uk/guidance/hmp-lincoln-families-and-significant-others-strategy",
+     "date": "2026-10-08"
+    },
+    {
+     "id": "govuk:/guidance/hmp-whatton-families-and-significant-others-strategy",
+     "kind": "guidance",
+     "title": "HMP Whatton Families and Significant Others Strategy",
+     "src": "GOV.UK · HM Prison and Probation Service",
+     "link": "https://www.gov.uk/guidance/hmp-whatton-families-and-significant-others-strategy",
      "date": "2026-10-08"
     },
     {
@@ -16421,6 +17424,14 @@
      "src": "GOV.UK · Traffic Commissioners for Great Britain",
      "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
      "date": "2026-10-07"
+    },
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-west-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-west-of-england",
+     "date": "2026-10-08"
     },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-the-west-of-england",
