@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-10T06:56:26.753250+00:00",
+ "generated_at": "2026-10-10T13:32:12.586620+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 254,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 22,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
-   "ok": true,
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable",
    "last_ok": "2026-10-10T06:56:26.753250+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-10T06:56:26.753250+00:00",
+   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "last_ok": "2026-10-10T13:32:12.586620+00:00"
   }
  ],
  "items": [
@@ -2173,6 +2173,81 @@
    ]
   },
   {
+   "id": "govuk:/guidance/river-thames-current-river-conditions",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "River Thames: current river conditions",
+   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "flood:063WAT23West",
+   "kind": "alert",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Warning no longer in force: Tidal Thames riverside from Putney Bridge to Teddington Weir",
+   "sum": "There is no longer a threat of flooding.\nWeather conditions are expected to improve and no further flooding is expected. \nWe will continue to monitor the situation and will issue further alerts or warnings if necessary.  \nContinue to take c",
+   "tags": [
+    "47.2"
+   ],
+   "src": "Environment Agency flood warnings",
+   "link": "https://check-for-flooding.service.gov.uk/",
+   "severity": 4,
+   "lat": null,
+   "lng": null,
+   "who": [
+    "household",
+    "council"
+   ],
+   "first_seen": "2026-10-09"
+  },
+  {
+   "id": "govuk:/guidance/river-thames-restrictions-and-closures",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "River Thames: restrictions and closures",
+   "sum": "Navigation on the River Thames may be restricted or closed in certain areas. Find out where and when these restrictions and closures are.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/guidance/river-thames-restrictions-and-closures",
+   "first_seen": "2026-10-05",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/faster-front-line-delivery-with-new-testing-and-evaluation-programme",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "Faster front-line delivery with new Testing and Evaluation programme",
+   "sum": "MOD and QinetiQ launch Project Safari, a joint programme opening up access to UK test and evaluation facilities for SMEs.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence",
+   "link": "https://www.gov.uk/government/news/faster-front-line-delivery-with-new-testing-and-evaluation-programme",
+   "first_seen": "2026-10-10",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/uk-government-response-to-agreement-between-us-and-russia-9-october",
    "kind": "record",
    "level": "uk",
@@ -2451,47 +2526,6 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac90a44a57ddfe32196aa50/DSI_-_Nova_Biomedical_StatStrip_ketone_test_strips.pdf",
    "pdf_label": "Nova Biomedical StatStrip ketone test strips: risk of disruption to blood ketone testing due to quality-control failures and supply interruption DSI/2026/013 (PDF)",
    "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/river-thames-current-river-conditions",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-09",
-   "extent": "UK",
-   "title": "River Thames: current river conditions",
-   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "flood:063WAT23West",
-   "kind": "alert",
-   "level": "local",
-   "status": "now",
-   "date": "2026-10-09",
-   "extent": "Slough",
-   "council": "Slough Borough Council",
-   "title": "Flood alert: Tidal Thames riverside from Putney Bridge to Teddington Weir",
-   "sum": "High tides overnight may lead to flooding. \nFlooding is possible from 02:15 AM to 04:15 AM on Saturday 10th October. \nThe forecast high tide at Richmond is 4.70 mAOD at 03:15 AM on 10/10/2026.\n\nWe believe there is a possibility of flooding ",
-   "tags": [
-    "47.2"
-   ],
-   "src": "Environment Agency flood warnings",
-   "link": "https://check-for-flooding.service.gov.uk/",
-   "severity": 3,
-   "lat": null,
-   "lng": null,
-   "who": [
-    "household",
-    "council"
-   ],
-   "first_seen": "2026-10-09"
   },
   {
    "id": "fsa:new:1999552",
@@ -3448,23 +3482,6 @@
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
    "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
    "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/river-thames-restrictions-and-closures",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-09",
-   "extent": "UK",
-   "title": "River Thames: restrictions and closures",
-   "sum": "Navigation on the River Thames may be restricted or closed in certain areas. Find out where and when these restrictions and closures are.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/guidance/river-thames-restrictions-and-closures",
-   "first_seen": "2026-10-05",
    "pdf_checked": true
   },
   {
@@ -9773,6 +9790,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018",
+   "sum": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018 which have the force of law.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/employment-tribunal-decisions/a-ball-v-eco-happy-ltd-6012471-slash-2026",
    "kind": "record",
    "level": "uk",
@@ -9789,23 +9823,6 @@
    "first_seen": "2026-10-08",
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac66bd5ab368efeb4c93312/Addison_Ball_v_Eco_Happy_Servicing_Limited_6012471.2026.pdf",
    "pdf_label": "A Ball v Eco Happy Ltd: 6012471/2026 - Rule 22 (PDF)",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-08",
-   "extent": "UK",
-   "title": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018",
-   "sum": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018 which have the force of law.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Revenue & Customs",
-   "link": "https://www.gov.uk/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
-   "first_seen": "2026-10-08",
    "pdf_checked": true
   },
   {
