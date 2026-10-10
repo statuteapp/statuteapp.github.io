@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-10T13:32:12.586620+00:00",
+ "generated_at": "2026-10-10T18:26:33.187153+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 254,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 22,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
-   "ok": false,
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable",
-   "last_ok": "2026-10-10T06:56:26.753250+00:00"
+   "error": null,
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-10T13:32:12.586620+00:00",
+   "fetched_at": "2026-10-10T18:26:33.187153+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-10-10T13:32:12.586620+00:00"
+   "last_ok": "2026-10-10T18:26:33.187153+00:00"
   }
  ],
  "items": [
@@ -2173,6 +2173,25 @@
    ]
   },
   {
+   "id": "govuk:/government/news/the-food-standards-agency-calls-on-businesses-to-withdraw-and-recall-eggs-from-one-ukrainian-food-business-as-investigations-find-salmonella-enteritid",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "The Food Standards Agency calls on businesses to withdraw and recall eggs from one Ukrainian food business as investigations find Salmonella Enteritidis contamination",
+   "sum": "The Food Standards Agency (FSA) has issued a Food Alert for Action to businesses, including caterers, manufacturers, wholesalers and consumers, as ongoing investigations found that eggs from one Ukrainian food business were contaminated wit",
+   "tags": [
+    "33.5",
+    "46.5",
+    "25.3"
+   ],
+   "src": "GOV.UK · Food Standards Agency",
+   "link": "https://www.gov.uk/government/news/the-food-standards-agency-calls-on-businesses-to-withdraw-and-recall-eggs-from-one-ukrainian-food-business-as-investigations-find-salmonella-enteritid",
+   "first_seen": "2026-10-10",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/guidance/river-thames-current-river-conditions",
    "kind": "alert",
    "level": "uk",
@@ -2188,6 +2207,26 @@
    "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
    "first_seen": "2026-10-03",
    "pdf_checked": true
+  },
+  {
+   "id": "fsaalert:FSA-FAFA-03-2026",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "Food alert: Food Alert For Action: To food businesses and consumers who have purchased shell eggs originating from Yasensvit Ltd, Ukraine, stamped with the code",
+   "sum": "Consumers should check the code stamped on the egg; do not eat eggs stamped with 3UA1012066. Instead, dispose of them at home. These eggs are not sold in large retailers, like supermarkets. Most are used Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "25.3"
+   ],
+   "src": "Food Standards Agency alerts",
+   "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-fafa-03-2026",
+   "who": [
+    "household"
+   ],
+   "first_seen": "2026-10-10"
   },
   {
    "id": "flood:063WAT23West",
@@ -2212,6 +2251,23 @@
     "council"
    ],
    "first_seen": "2026-10-09"
+  },
+  {
+   "id": "govuk:/guidance/bluetongue-latest-situation",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "Bluetongue: latest situation",
+   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/river-thames-restrictions-and-closures",
@@ -2244,6 +2300,40 @@
    ],
    "src": "GOV.UK · Ministry of Defence",
    "link": "https://www.gov.uk/government/news/faster-front-line-delivery-with-new-testing-and-evaluation-programme",
+   "first_seen": "2026-10-10",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/foreign-travel-advice/saudi-arabia",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "Saudi Arabia travel advice",
+   "sum": "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences.  ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
+   "first_seen": "2026-10-06",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/pm-call-with-president-volodymyr-zelenskyy-of-ukraine-10-october-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-10",
+   "extent": "UK",
+   "title": "PM call with President Volodymyr Zelenskyy of Ukraine: 10 October 2026",
+   "sum": "The Prime Minister spoke with President Volodymyr Zelenskyy of Ukraine today.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/pm-call-with-president-volodymyr-zelenskyy-of-ukraine-10-october-2026",
    "first_seen": "2026-10-10",
    "pdf_checked": true
   },
@@ -3465,23 +3555,6 @@
    "src": "GOV.UK · HM Passport Office",
    "link": "https://www.gov.uk/government/publications/multiple-british-passports-and-nationality-statuses-caseworker-guidance",
    "first_seen": "2026-10-09",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/bluetongue-latest-situation",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-09",
-   "extent": "UK",
-   "title": "Bluetongue: latest situation",
-   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
-   "tags": [
-    "46.4"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
-   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
@@ -5058,23 +5131,6 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/foreign-travel-advice/panama",
    "first_seen": "2026-10-07",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/foreign-travel-advice/saudi-arabia",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-09",
-   "extent": "UK",
-   "title": "Saudi Arabia travel advice",
-   "sum": "FCDO travel advice for Saudi Arabia. Includes safety and security, insurance, entry requirements and legal differences.  ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
-   "first_seen": "2026-10-06",
    "pdf_checked": true
   },
   {
@@ -9756,6 +9812,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-08",
+   "extent": "UK",
+   "title": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018",
+   "sum": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018 which have the force of law.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/speeches/uk-statement-on-responses-to-questions-regarding-the-agreement-on-e-commerce-interim-arrangements",
    "kind": "record",
    "level": "uk",
@@ -9786,23 +9859,6 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/speeches/wto-reform-statement-by-the-chairperson",
-   "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-08",
-   "extent": "UK",
-   "title": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018",
-   "sum": "Notices made under The Customs (Import Duty) (EU Exit) Regulations 2018 which have the force of law.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Revenue & Customs",
-   "link": "https://www.gov.uk/government/publications/notices-to-be-made-under-the-customs-import-duty-eu-exit-regulations-2018",
    "first_seen": "2026-10-08",
    "pdf_checked": true
   },
@@ -26171,26 +26227,6 @@
    ],
    "src": "Food Standards Agency alerts",
    "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-18-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-PRIN-17-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-04-13",
-   "extent": "E",
-   "title": "Product recall: FNM Bakery Limited recalls various First National Bakery products because of potential rodent contamination",
-   "sum": "If you have bought the above products, do not eat them. Instead, return them to where you bought them from for a full refund. For more information email Caribbean.bakers@yahoo.com or call 0121 553 5117. Contains Food Standards Agency data.",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-prin-17-2026",
    "who": [
     "household"
    ],
