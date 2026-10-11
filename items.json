@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-11T01:47:09.340204+00:00",
+ "generated_at": "2026-10-11T08:40:07.416986+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 254,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
-   "count": 22,
+   "count": 23,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-11T01:47:09.340204+00:00",
+   "fetched_at": "2026-10-11T08:40:07.416986+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-10-11T01:47:09.340204+00:00"
+   "last_ok": "2026-10-11T08:40:07.416986+00:00"
   }
  ],
  "items": [
@@ -1124,6 +1124,38 @@
      "date": "2026-10-21"
     }
    ]
+  },
+  {
+   "id": "polev:thames-valley:N458:2026-10-18:Have your say at Ramgarhia Sik",
+   "kind": "update",
+   "level": "local",
+   "status": "coming",
+   "date": "2026-10-18",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Police event: Have your say at Ramgarhia Sikh Gurdwara, Baylis Road, Slough",
+   "event": {
+    "kind": "police",
+    "date": "2026-10-18",
+    "time": "00:00",
+    "end": "00:00",
+    "where": "Ramgarhia Sikh Gurdwara, Baylis Road, Slough",
+    "access": "public"
+   },
+   "sum": "Officers from the Slough Neighbourhood Team will be at Ramgarhia Sikh Gurdwara, providing an opportunity for local residents to ask questions, raise concerns, and discuss any crime or anti-social behaviour issues affecting the community. \n\n",
+   "tags": [
+    "10.1"
+   ],
+   "src": "Chalvey, Town Centre &amp; Upton neighbourhood team, police.uk",
+   "link": "https://www.thamesvalley.police.uk",
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "lat": 51.5044,
+   "lng": -0.589009,
+   "approx": true,
+   "first_seen": "2026-10-11"
   },
   {
    "id": "polev:thames-valley:N458:2026-10-17:Come and have your say over ay",
@@ -2173,6 +2205,23 @@
    ]
   },
   {
+   "id": "govuk:/guidance/river-thames-current-river-conditions",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-11",
+   "extent": "UK",
+   "title": "River Thames: current river conditions",
+   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/the-food-standards-agency-calls-on-businesses-to-withdraw-and-recall-eggs-from-one-ukrainian-food-business-as-investigations-find-salmonella-enteritid",
    "kind": "alert",
    "level": "uk",
@@ -2189,23 +2238,6 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/news/the-food-standards-agency-calls-on-businesses-to-withdraw-and-recall-eggs-from-one-ukrainian-food-business-as-investigations-find-salmonella-enteritid",
    "first_seen": "2026-10-10",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/river-thames-current-river-conditions",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-10",
-   "extent": "UK",
-   "title": "River Thames: current river conditions",
-   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
