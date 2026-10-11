@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-11T15:33:32.679768+00:00",
+ "generated_at": "2026-10-11T20:10:20.870110+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 254,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
-   "count": 23,
+   "count": 22,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-11T15:33:32.679768+00:00"
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-11T15:33:32.679768+00:00",
-   "ok": false,
-   "count": 0,
-   "error": "TimeoutError: The read operation timed out",
-   "last_ok": "2026-10-11T08:40:07.416986+00:00"
+   "fetched_at": "2026-10-11T20:10:20.870110+00:00",
+   "ok": true,
+   "count": 50,
+   "error": null,
+   "last_ok": "2026-10-11T20:10:20.870110+00:00"
   }
  ],
  "items": [
@@ -2222,6 +2222,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/guidance/bluetongue-latest-situation",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-11",
+   "extent": "UK",
+   "title": "Bluetongue: latest situation",
+   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/the-food-standards-agency-calls-on-businesses-to-withdraw-and-recall-eggs-from-one-ukrainian-food-business-as-investigations-find-salmonella-enteritid",
    "kind": "alert",
    "level": "uk",
@@ -2283,23 +2300,6 @@
     "council"
    ],
    "first_seen": "2026-10-09"
-  },
-  {
-   "id": "govuk:/guidance/bluetongue-latest-situation",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-10",
-   "extent": "UK",
-   "title": "Bluetongue: latest situation",
-   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
-   "tags": [
-    "46.4"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
-   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/river-thames-restrictions-and-closures",
@@ -2630,11 +2630,22 @@
    "title": "Emergency and Life-saving Skills (Schools) Bill",
    "sum": "2nd reading · Commons. ",
    "tags": [
-    "37.1"
+    "37.1",
+    "2.1"
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4165",
-   "first_seen": "2026-10-09"
+   "first_seen": "2026-10-09",
+   "also": [
+    {
+     "id": "pwo:55898:2026-10-16",
+     "kind": "update",
+     "title": "Parliament: Emergency and Life-saving Skills (Schools) Bill: Second Reading",
+     "src": "UK Parliament What's On",
+     "link": "https://whatson.parliament.uk/",
+     "date": "2026-10-16"
+    }
+   ]
   },
   {
    "id": "govuk:/drug-device-alerts/nova-biomedical-statstrip-ketone-test-strips-risk-of-disruption-to-blood-ketone-testing-due-to-quality-control-failures-and-supply-interruption-dsi-slash-2026-slash-013",
