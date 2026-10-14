@@ -3,124 +3,124 @@
   "legislation.gov.uk": {
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 19,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "Bills API": {
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 40,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "GOV.UK": {
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 268,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "Bank holidays": {
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 18,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "Food Standards Agency": {
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
-   "items": 0,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "items": 2,
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0,
    "last_fail": "2026-10-04T05:46:05.359160+00:00"
   },
   "police.uk": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 1,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "FSA food alerts": {
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 51,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "Environment Agency floods": {
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "Police neighbourhood": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 21,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0
   },
   "The Gazette": {
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0,
    "last_fail": "2026-10-10T13:32:12.586620+00:00"
   },
   "Council meetings (Modern.Gov)": {
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": false,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 0,
-   "last_fail": "2026-10-14T20:34:37.288414+00:00",
+   "last_fail": "2026-10-14T23:52:05.212447+00:00",
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
-   "fails": 82
+   "fails": 83
   },
   "Parliament What's On": {
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-10-14T20:34:37.288414+00:00",
+   "last_run": "2026-10-14T23:52:05.212447+00:00",
    "ok": true,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 47,
-   "last_ok": "2026-10-14T20:34:37.288414+00:00",
+   "last_ok": "2026-10-14T23:52:05.212447+00:00",
    "fails": 0,
    "last_fail": "2026-10-11T15:33:32.679768+00:00"
   }
@@ -719,14 +719,21 @@
    "failed": [
     "Council meetings (Modern.Gov)"
    ]
+  },
+  {
+   "at": "2026-10-14T23:52:05.212447+00:00",
+   "items": 1914,
+   "failed": [
+    "Council meetings (Modern.Gov)"
+   ]
   }
  ],
- "generated_at": "2026-10-14T20:34:37.288414+00:00",
- "items": 1907,
+ "generated_at": "2026-10-14T23:52:05.212447+00:00",
+ "items": 1914,
  "by_level": {
   "nation": 21,
-  "local": 57,
-  "uk": 1829
+  "local": 59,
+  "uk": 1834
  },
  "by_day": {
   "2028-12-26": {
@@ -847,14 +854,15 @@
    "uk": 26
   },
   "2026-10-15": {
-   "uk": 2
+   "uk": 3
   },
   "2026-10-14": {
    "nation": 1,
-   "uk": 245
+   "uk": 250,
+   "local": 2
   },
   "2026-10-13": {
-   "uk": 181,
+   "uk": 180,
    "nation": 1
   },
   "2026-10-12": {
@@ -1421,17 +1429,17 @@
    "1737855": {
     "name": "AL HYDERABADI NAWAABS",
     "type": "Restaurant/Cafe/Canteen",
-    "rating": "4",
-    "date": "2026-03-04",
+    "rating": "0",
+    "date": "2026-09-09",
     "addr": "BAYLIS HOUSE BAYLIS BUSINESS CENTRE STOKE POGES LANE SLOUGH SL1 3PB",
     "postcode": "SL1 3PB",
     "lat": 51.5184162,
     "lng": -0.6041477,
-    "pending": true,
+    "pending": false,
     "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 10
+     "hygiene": 15,
+     "structural": 20,
+     "management": 20
     },
     "right_to_reply": ""
    },
@@ -1506,17 +1514,17 @@
    "656382": {
     "name": "Ali's Kebabs",
     "type": "Mobile caterer",
-    "rating": "1",
-    "date": "2025-09-18",
+    "rating": "4",
+    "date": "2026-09-09",
     "addr": "Street Record Poyle Road Poyle Slough",
     "postcode": "",
     "lat": null,
     "lng": null,
-    "pending": true,
+    "pending": false,
     "scores": {
      "hygiene": 10,
-     "structural": 10,
-     "management": 20
+     "structural": 5,
+     "management": 5
     },
     "right_to_reply": ""
    },
@@ -15375,23 +15383,6 @@
     },
     "right_to_reply": ""
    },
-   "1845752": {
-    "name": "Stackzys",
-    "type": "Takeaway/sandwich shop",
-    "rating": "4",
-    "date": "2025-09-18",
-    "addr": "163D FARNHAM ROAD SLOUGH SL1 4XP",
-    "postcode": "SL1 4XP",
-    "lat": 51.5245899,
-    "lng": -0.6159377,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 10
-    },
-    "right_to_reply": ""
-   },
    "1920138": {
     "name": "Stackzys",
     "type": "Takeaway/sandwich shop",
@@ -15406,6 +15397,23 @@
      "hygiene": 10,
      "structural": 5,
      "management": 5
+    },
+    "right_to_reply": ""
+   },
+   "1845752": {
+    "name": "Stackzys",
+    "type": "Takeaway/sandwich shop",
+    "rating": "4",
+    "date": "2025-09-18",
+    "addr": "163D FARNHAM ROAD SLOUGH SL1 4XP",
+    "postcode": "SL1 4XP",
+    "lat": 51.5245899,
+    "lng": -0.6159377,
+    "pending": false,
+    "scores": {
+     "hygiene": 5,
+     "structural": 5,
+     "management": 10
     },
     "right_to_reply": ""
    },
@@ -18407,7 +18415,7 @@
   "slough": 292
  },
  "fsa_last_fetched": {
-  "292": "2026-10-09"
+  "292": "2026-10-14"
  },
  "fsa_history_started": {
   "292": "2026-10-03"
@@ -24962,6 +24970,16 @@
       "structural": 5,
       "management": 10
      }
+    },
+    {
+     "rating": "0",
+     "ratingDate": "2026-09-09",
+     "recorded": "2026-10-14",
+     "scores": {
+      "hygiene": 15,
+      "structural": 20,
+      "management": 20
+     }
     }
    ],
    "1944608": [
@@ -28836,6 +28854,16 @@
       "structural": 10,
       "management": 20
      }
+    },
+    {
+     "rating": "4",
+     "ratingDate": "2026-09-09",
+     "recorded": "2026-10-14",
+     "scores": {
+      "hygiene": 10,
+      "structural": 5,
+      "management": 5
+     }
     }
    ],
    "1783427": [
@@ -30949,9 +30977,9 @@
   }
  },
  "fsa_source_published": {
-  "292": "2026-10-09T00:41:39.18"
+  "292": "2026-10-15T00:42:50.553"
  },
  "fsa_source_extract_dates": {
-  "292": "2026-10-08"
+  "292": "2026-10-14"
  }
 }
