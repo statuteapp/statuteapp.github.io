@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-14T23:52:05.212447+00:00",
+ "generated_at": "2026-10-15T04:23:43.192757+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
-   "count": 19,
+   "count": 18,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
-   "count": 268,
+   "count": 259,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
-   "count": 2,
+   "count": 0,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 21,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-14T23:52:05.212447+00:00",
+   "fetched_at": "2026-10-15T04:23:43.192757+00:00",
    "ok": true,
    "count": 47,
    "error": null,
-   "last_ok": "2026-10-14T23:52:05.212447+00:00"
+   "last_ok": "2026-10-15T04:23:43.192757+00:00"
   }
  ],
  "items": [
@@ -787,6 +787,33 @@
      "date": "2026-11-08"
     }
    ]
+  },
+  {
+   "id": "pwo:56698:2026-10-29",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-10-29",
+   "extent": "UK",
+   "title": "Parliament: Special Report from the Select Committee on the Malvern Hills Bill",
+   "sum": "Lords · Debate",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-10-29",
+    "time": "12:15",
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-15"
   },
   {
    "id": "polev:thames-valley:N458:2026-10-28:Come and meet your local PCSO ",
@@ -2153,6 +2180,23 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "govuk:/government/speeches/we-are-witnessing-an-industrial-scale-assault-by-hostile-actors-like-russia-on-the-information-environment-in-the-uk-uk-statement-at-the-un-first-comm",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "We are witnessing an industrial-scale assault by hostile actors like Russia on the information environment in the UK: UK Statement at the UN First Committee",
+   "sum": "Statement by David Riley, Ambassador and Permanent Representative to the Conference on Disarmament in Geneva.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/government/speeches/we-are-witnessing-an-industrial-scale-assault-by-hostile-actors-like-russia-on-the-information-environment-in-the-uk-uk-statement-at-the-un-first-comm",
+   "first_seen": "2026-10-15",
+   "pdf_checked": true
+  },
+  {
    "id": "leg:uksi/2026/1085/made",
    "kind": "law",
    "level": "nation",
@@ -2699,10 +2743,10 @@
    "src": "GOV.UK · UK Space Agency",
    "link": "https://www.gov.uk/government/publications/active-debris-naming-competition",
    "first_seen": "2026-10-14",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6accb085a57ddfe32196aabf/What_is_Active_Debris_Removal.pdf",
    "pdf_label": "What is Active Debris Removal (PDF)",
-   "pdf_size": 5829997
+   "pdf_size": 5829997,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/designated-standards-ppe",
@@ -2719,11 +2763,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Business and Trade",
    "link": "https://www.gov.uk/government/publications/designated-standards-ppe",
    "first_seen": "2026-10-14",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ac7a754b016250bca013a88/ds-0142-26-ppe-notice.pdf",
    "pdf_label": "Designated standards: PPE – notice of publication, 15 October 2026 (PDF)",
    "pdf_size": 251621,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/applications-and-decisions-for-wales",
@@ -4812,23 +4856,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/emerging-defence-capabilities-get-a-heads-up-from-dstl-trial",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-14",
-   "extent": "UK",
-   "title": "Emerging defence capabilities get a HEADS UP from Dstl trial",
-   "sum": "Taking a human-centred approach to designing head-mounted equipment will increase the performance and effectiveness of warfighters and reduce the risk of injury.",
-   "tags": [
-    "15.1"
-   ],
-   "src": "GOV.UK · Defence Science and Technology Laboratory",
-   "link": "https://www.gov.uk/government/news/emerging-defence-capabilities-get-a-heads-up-from-dstl-trial",
-   "first_seen": "2026-10-14",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/foreign-travel-advice/mauritius",
    "kind": "update",
    "level": "uk",
@@ -5339,6 +5366,23 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6ace1246c84c8ff1bc8b8019/Organic_Action_Plan_for_England.pdf",
    "pdf_label": "Organic Action Plan for England  (PDF)",
    "pdf_size": 1160837,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/emerging-defence-capabilities-get-a-heads-up-from-dstl-trial",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-14",
+   "extent": "UK",
+   "title": "Emerging defence capabilities get a HEADS UP from Dstl trial",
+   "sum": "Taking a human-centred approach to designing head-mounted equipment will increase the performance and effectiveness of warfighters and reduce the risk of injury.",
+   "tags": [
+    "15.1"
+   ],
+   "src": "GOV.UK · Defence Science and Technology Laboratory",
+   "link": "https://www.gov.uk/government/news/emerging-defence-capabilities-get-a-heads-up-from-dstl-trial",
+   "first_seen": "2026-10-14",
    "pdf_checked": true
   },
   {
@@ -15785,6 +15829,14 @@
      "src": "GOV.UK · Traffic Commissioners for Great Britain",
      "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
      "date": "2026-10-14"
+    },
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the north east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "date": "2026-10-14"
     }
    ]
   },
@@ -15809,6 +15861,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-east-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-east-of-england",
+     "date": "2026-10-14"
+    },
     {
      "id": "govuk:/guidance/notices-and-proceedings-for-the-east-of-england",
      "kind": "guidance",
@@ -18540,6 +18600,14 @@
    "pdf_more": 40,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the north west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "date": "2026-10-14"
+    },
     {
      "id": "govuk:/guidance/notices-and-proceedings-for-the-north-west-of-england",
      "kind": "guidance",
@@ -23334,6 +23402,14 @@
      "src": "GOV.UK · Department for Education",
      "link": "https://www.gov.uk/government/publications/high-needs-funding-arrangements-2026-to-2027",
      "date": "2026-10-14"
+    },
+    {
+     "id": "govuk:/government/publications/high-needs-funding-arrangements-2026-to-2027",
+     "kind": "guidance",
+     "title": "High needs funding arrangements: 2026 to 2027",
+     "src": "GOV.UK · Department for Education",
+     "link": "https://www.gov.uk/government/publications/high-needs-funding-arrangements-2026-to-2027",
+     "date": "2026-10-14"
     }
    ]
   },
@@ -23824,6 +23900,14 @@
    "first_seen": "2026-10-07",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/government/publications/dfe-update-14-october-2026",
+     "kind": "update",
+     "title": "DfE Update 14 October 2026",
+     "src": "GOV.UK · Department for Education",
+     "link": "https://www.gov.uk/government/publications/dfe-update-14-october-2026",
+     "date": "2026-10-14"
+    },
     {
      "id": "govuk:/government/publications/dfe-update-14-october-2026",
      "kind": "update",
@@ -35842,263 +35926,6 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4297",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4271",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Sale and Supply of Glue Traps (Prohibition) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4271",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4186",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Multi-Storey Car Parks (Safety) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4186",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4167",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Northern Ireland Troubles (Criminal Investigations etc) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4167",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4276",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Home Cooling Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4276",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4181",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "In-Person Banking Services Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4181",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4258",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Controlled Drugs (Procedure for Specification) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4258",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4246",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Lobular Breast Cancer Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4246",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4242",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "European Convention on Human Rights (Notification of Withdrawal) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4242",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4227",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Covid-19 Vaccine Damage Payments Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4227",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4214",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Meat (Information About Method of Killing) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4214",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4206",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Sporting and Physical Education Services (Value Added Tax Exemption) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "20.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4206",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4205",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Hospitality Services (Value Added Tax Exemption) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "32.1",
-    "20.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4205",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4183",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Gaza (Independent Public Inquiry) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4183",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4157",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Terminally Ill Adults (End of Life) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4157",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4142",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Creative Education Access Bill [HL]",
-   "sum": "Committee stage · Lords. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4142",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4145",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-14",
-   "extent": "UK",
-   "title": "Youth Justice Board for England and Wales (Restoration of Powers and Responsibilities) Bill [HL]",
-   "sum": "Committee stage · Lords. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4145",
    "first_seen": "2026-10-03"
   },
   {
