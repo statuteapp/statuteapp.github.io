@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-19T01:03:26.753709+00:00",
+ "generated_at": "2026-10-19T06:01:54.147401+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
-   "count": 19,
+   "count": 16,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 265,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-19T01:03:26.753709+00:00",
+   "fetched_at": "2026-10-19T06:01:54.147401+00:00",
    "ok": true,
    "count": 24,
    "error": null,
-   "last_ok": "2026-10-19T01:03:26.753709+00:00"
+   "last_ok": "2026-10-19T06:01:54.147401+00:00"
   }
  ],
  "items": [
@@ -1374,6 +1374,61 @@
    ]
   },
   {
+   "id": "leg:uksi/2026/1074/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "The Green Hill Solar Farm Order 2026",
+   "sum": "This Order authorises Green Hill Solar Farm Limited (referred to in this Order as the undertaker) to construct, operate, maintain and decommission a ground mounted solar photovoltaic generating station with a gross electrical output capacit",
+   "tags": [
+    "43.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1074/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1074/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "leg:uksi/2026/1086/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "The Steeple Renewables Project Order 2026",
+   "sum": "This Order grants development consent for, and authorises the construction, operation and maintenance of a solar generating station and battery energy storage facility together with associated development. This Order imposes requirements in",
+   "tags": [
+    "42.1",
+    "43.1",
+    "48.6"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1086/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1086/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "govuk:/government/publications/applications-in-connection-with-court-proceedings-insolvency-and-tax-liability",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "Investigation or enforcement proceedings (court, insolvency, tax): applications (PG43)",
+   "sum": "Advice on obtaining information held by HM Land Registry regarding court proceedings, insolvency and tax liability (practice guide 43).",
+   "tags": [
+    "20.1"
+   ],
+   "src": "GOV.UK · HM Land Registry",
+   "link": "https://www.gov.uk/government/publications/applications-in-connection-with-court-proceedings-insolvency-and-tax-liability",
+   "first_seen": "2026-10-19",
+   "pdf_checked": true
+  },
+  {
    "id": "pwo:56580:2026-10-19",
    "kind": "update",
    "level": "uk",
@@ -1463,6 +1518,40 @@
      "date": "2026-10-21"
     }
    ]
+  },
+  {
+   "id": "govuk:/government/publications/local-land-charges-pg79",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "Local land charges (PG79)",
+   "sum": "This guide gives advice about the Local Land Charges service provided by HM Land Registry.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Land Registry",
+   "link": "https://www.gov.uk/government/publications/local-land-charges-pg79",
+   "first_seen": "2026-10-19",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "Driving test appointments: release dates and finding earlier tests",
+   "sum": "Find out when driving test appointments are released, when to search for earlier tests, and how long people wait to take the test.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Driver and Vehicle Standards Agency",
+   "link": "https://www.gov.uk/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
+   "first_seen": "2026-10-05",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/river-thames-current-river-conditions",
@@ -3534,7 +3623,7 @@
    "date": "2026-10-16",
    "extent": "UK",
    "title": "£1.6m fine for Anglian Water's pollution of Essex river",
-   "sum": "Anglian Water has been fined £1.6m after repeated sewage pollution of the River Brain over six weeks in 2022. ",
+   "sum": "'Organisational failure' at water company behind pollution",
    "tags": [
     "47.2"
    ],
@@ -4277,23 +4366,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/publications/skanska-construction-uk-limited-npswr047618-application-made-to-abstract-water",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-16",
-   "extent": "UK",
-   "title": "Skanska Construction UK Limited (NPS/WR/047618): application made to abstract water",
-   "sum": "The Environment Agency has received an application from Skanska Construction UK Limited for a licence to abstract (take) water.",
-   "tags": [
-    "47.2"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/government/publications/skanska-construction-uk-limited-npswr047618-application-made-to-abstract-water",
-   "first_seen": "2026-10-16",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/consultations/supported-housing-regulation-consultation",
    "kind": "update",
    "level": "uk",
@@ -4451,6 +4523,23 @@
    "pdf_label": "Standards for stalking and domestic abuse perpetrator interventions (PDF)",
    "pdf_size": 864640,
    "pdf_more": 1,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/skanska-construction-uk-limited-npswr047618-application-made-to-abstract-water",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Skanska Construction UK Limited (NPS/WR/047618): application made to abstract water",
+   "sum": "The Environment Agency has received an application from Skanska Construction UK Limited for a licence to abstract (take) water.",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/skanska-construction-uk-limited-npswr047618-application-made-to-abstract-water",
+   "first_seen": "2026-10-16",
    "pdf_checked": true
   },
   {
@@ -6355,80 +6444,6 @@
    "first_seen": "2026-10-15"
   },
   {
-   "id": "leg:uksi/2026/1093/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-15",
-   "extent": "UK",
-   "title": "The Air Navigation (Restriction of Flying) (Yorkshire Wildlife Park, South Yorkshire) (Emergency) (Revocation) Regulations 2026",
-   "sum": "New instrument on legislation.gov.uk.",
-   "tags": [
-    "52.4",
-    "16.4"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1093/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1093/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-15"
-  },
-  {
-   "id": "leg:uksi/2026/1089/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-15",
-   "extent": "UK",
-   "title": "The Global Human Rights and International Humanitarian Law Sanctions (Overseas Territories) Order 2026",
-   "sum": "This Order extends with modifications the Global Human Rights and International Humanitarian Law Sanctions Regulations 2026 (S.I. 2026/1071) (“the GHRIHLS Regulations”) as amended from time to time to all British overseas territories except",
-   "tags": [
-    "23.7",
-    "7.4"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1089/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1089/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-15"
-  },
-  {
-   "id": "leg:uksi/2026/1087/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-15",
-   "extent": "UK",
-   "title": "The Inspectors of Education, Children’s Services and Skills (No. 3) Order 2026",
-   "sum": "This Order appoints the persons named in the Schedule as His Majesty’s Inspectors of Education, Children’s Services and Skills.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1087/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1087/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-15"
-  },
-  {
-   "id": "leg:uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-15",
-   "extent": "UK",
-   "title": "Correction Slip",
-   "sum": "These Regulations amend the Education (Student Loans) (Repayment) Regulations 2009 (S.I. 2009/470) (“the 2009 Regulations”) to facilitate the introduction of the plan 5 Lifelong Learning Entitlement (“LLE”) loan paid under the Lifelong Lear",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
-   "pdf_label": "official document (PDF)",
-   "first_seen": "2026-10-15"
-  },
-  {
    "id": "bill:4305",
    "kind": "law",
    "level": "uk",
@@ -6566,6 +6581,80 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4280",
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "leg:uksi/2026/1093/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Yorkshire Wildlife Park, South Yorkshire) (Emergency) (Revocation) Regulations 2026",
+   "sum": "New instrument on legislation.gov.uk.",
+   "tags": [
+    "52.4",
+    "16.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1093/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1093/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-15"
+  },
+  {
+   "id": "leg:uksi/2026/1089/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "The Global Human Rights and International Humanitarian Law Sanctions (Overseas Territories) Order 2026",
+   "sum": "This Order extends with modifications the Global Human Rights and International Humanitarian Law Sanctions Regulations 2026 (S.I. 2026/1071) (“the GHRIHLS Regulations”) as amended from time to time to all British overseas territories except",
+   "tags": [
+    "23.7",
+    "7.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1089/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1089/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-15"
+  },
+  {
+   "id": "leg:uksi/2026/1087/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "The Inspectors of Education, Children’s Services and Skills (No. 3) Order 2026",
+   "sum": "This Order appoints the persons named in the Schedule as His Majesty’s Inspectors of Education, Children’s Services and Skills.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1087/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1087/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-15"
+  },
+  {
+   "id": "leg:uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-15",
+   "extent": "UK",
+   "title": "Correction Slip",
+   "sum": "These Regulations amend the Education (Student Loans) (Repayment) Regulations 2009 (S.I. 2009/470) (“the 2009 Regulations”) to facilitate the introduction of the plan 5 Lifelong Learning Entitlement (“LLE”) loan paid under the Lifelong Lear",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/857/pdfs/uksics_20260857_en_001.pdf",
+   "pdf_label": "official document (PDF)",
+   "first_seen": "2026-10-15"
   },
   {
    "id": "leg:uksi/2026/1085/made",
@@ -22393,23 +22482,6 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6a6090ee47af652afa0c89dc/Mr_R_Ullah_v_Fortnum_and_Mason_PLC_3302461.2024_FMH_Reserved_Judgment.pdf",
    "pdf_label": "Mr R Ullah v Fortnum and Mason plc: 3302461/2024 - Reserved Judgment (PDF)",
    "pdf_more": 1
-  },
-  {
-   "id": "govuk:/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-12",
-   "extent": "UK",
-   "title": "Driving test appointments: release dates and finding earlier tests",
-   "sum": "Find out when driving test appointments are released, when to search for earlier tests, and how long people wait to take the test.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · Driver and Vehicle Standards Agency",
-   "link": "https://www.gov.uk/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
-   "first_seen": "2026-10-05",
-   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/new-one-stop-shop-for-flood-preparedness-launched-as-we-approach-more-weather-whiplash",
