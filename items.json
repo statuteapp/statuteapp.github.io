@@ -1,126 +1,126 @@
 {
- "generated_at": "2026-10-20T23:07:09.122427+00:00",
+ "generated_at": "2026-10-21T04:29:41.384367+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 16,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
-   "count": 286,
+   "count": 283,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
-   "count": 0,
+   "count": 2,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": false,
    "count": 0,
-   "error": "TimeoutError: The read operation timed out",
+   "error": "HTTPError: HTTP Error 500: Internal Server Error",
    "last_ok": null
   },
   {
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-20T23:07:09.122427+00:00",
+   "fetched_at": "2026-10-21T04:29:41.384367+00:00",
    "ok": true,
-   "count": 22,
+   "count": 20,
    "error": null,
-   "last_ok": "2026-10-20T23:07:09.122427+00:00"
+   "last_ok": "2026-10-21T04:29:41.384367+00:00"
   }
  ],
  "items": [
@@ -822,6 +822,14 @@
      "src": "UK Parliament What's On",
      "link": "https://whatson.parliament.uk/",
      "date": "2026-11-03"
+    },
+    {
+     "id": "pwo:56851:2026-11-04",
+     "kind": "update",
+     "title": "Parliament: That leave be given to bring in a Bill under SO No. 23 [details to be provided].",
+     "src": "UK Parliament What's On",
+     "link": "https://whatson.parliament.uk/",
+     "date": "2026-11-04"
     }
    ]
   },
@@ -877,7 +885,17 @@
    "who": [
     "government"
    ],
-   "first_seen": "2026-10-19"
+   "first_seen": "2026-10-19",
+   "also": [
+    {
+     "id": "pwo:56803:2026-11-04",
+     "kind": "update",
+     "title": "Parliament: Representation of the People Bill – committee (day 2)",
+     "src": "UK Parliament What's On",
+     "link": "https://whatson.parliament.uk/",
+     "date": "2026-11-04"
+    }
+   ]
   },
   {
    "id": "pwo:56698:2026-10-29",
@@ -1180,6 +1198,105 @@
    "first_seen": "2026-10-09"
   },
   {
+   "id": "leg:uksi/2026/1104/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "The Employment Protection Code of Practice (Time Off for Trade Union Duties and Activities) Order 2026",
+   "sum": "This Order appoints 30th October 2026 as the day upon which the revised Code of Practice on Time Off for Trade Union Duties and Activities will come into effect. The Code of Practice, which includes guidance on time off for trade union repr",
+   "tags": [
+    "28.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1104/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1104/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "bill:4126",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Social Housing Bill [HL]",
+   "sum": "Committee stage · Commons. ",
+   "tags": [
+    "43.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4126",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:rated:2026-09-15:1960540",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 4: Chocoberry slough",
+   "sum": "Restaurant/Cafe/Canteen · 404 FARNHAM ROAD SLOUGH SL2 1JD. Was awaiting inspection; inspected 2026-09-15. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1960540",
+   "lat": 51.5287408,
+   "lng": -0.6164028,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "fsa:rated:2026-09-15:1804546",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, 5 → 3: Haveli Bar and Grill",
+   "sum": "Restaurant/Cafe/Canteen · THE URBAN BUILDING 3-9 ALBERT STREET SLOUGH SL1 2BE. Was rating 5; inspected 2026-09-15. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1804546",
+   "lat": 51.506095,
+   "lng": -0.5964698,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "govuk:/government/publications/patent-journal-special-notices-7170",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Patent Journal special notices: 7170",
+   "sum": "Publication date 21 October 2026.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Intellectual Property Office",
+   "link": "https://www.gov.uk/government/publications/patent-journal-special-notices-7170",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
    "id": "pwo:56299:2026-10-21",
    "kind": "update",
    "level": "uk",
@@ -1381,22 +1498,6 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4035",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4126",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "Social Housing Bill [HL]",
-   "sum": "Committee stage · Commons. ",
-   "tags": [
-    "43.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4126",
    "first_seen": "2026-10-03"
   },
   {
@@ -1655,6 +1756,23 @@
    "pdf_checked": true,
    "closes": "2026-11-17",
    "opens": "2026-10-20"
+  },
+  {
+   "id": "govuk:/guidance/working-out-the-vat-value-using-the-customs-value-of-the-imported-goods",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-20",
+   "extent": "UK",
+   "title": "Working out the VAT value using the customs value of the imported goods",
+   "sum": "How to use the customs value to calculate VAT for imported goods if you’re an importer or clearing agent.",
+   "tags": [
+    "20.1"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/guidance/working-out-the-vat-value-using-the-customs-value-of-the-imported-goods",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/universal-credit-and-families-with-more-than-2-children-information-for-claimants",
@@ -7067,25 +7185,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/hmrc-internal-manuals/holding-and-movements-assurance-guidance",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-19",
-   "extent": "UK",
-   "title": "Holding and Movements Assurance Guidance",
-   "sum": "General guidance for anyone who's involved in the holding or movement of alcohol, tobacco, or energy products for a commercial purpose.",
-   "tags": [
-    "33.4",
-    "21.2",
-    "48.6"
-   ],
-   "src": "GOV.UK · HM Revenue & Customs",
-   "link": "https://www.gov.uk/hmrc-internal-manuals/holding-and-movements-assurance-guidance",
-   "first_seen": "2026-10-19",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/dvla-strategic-ambition-2026-to-2030",
    "kind": "update",
    "level": "uk",
@@ -7344,6 +7443,25 @@
    "pdf_label": "HMP Bure inspection response letter - September 2026 (PDF)",
    "pdf_size": 197697,
    "pdf_more": 1,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/hmrc-internal-manuals/holding-and-movements-assurance-guidance",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "Holding and Movements Assurance Guidance",
+   "sum": "General guidance for anyone who's involved in the holding or movement of alcohol, tobacco, or energy products for a commercial purpose.",
+   "tags": [
+    "33.4",
+    "21.2",
+    "48.6"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/hmrc-internal-manuals/holding-and-movements-assurance-guidance",
+   "first_seen": "2026-10-19",
    "pdf_checked": true
   },
   {
@@ -8741,6 +8859,22 @@
    "pdf_checked": true
   },
   {
+   "id": "bill:4083",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-16",
+   "extent": "UK",
+   "title": "Courts and Tribunals Bill",
+   "sum": "2nd reading · Lords. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4083",
+   "first_seen": "2026-10-03"
+  },
+  {
    "id": "leg:uksi/2026/1096/made",
    "kind": "law",
    "level": "nation",
@@ -8758,22 +8892,6 @@
    "pdf": "https://www.legislation.gov.uk/uksi/2026/1096/made/data.pdf",
    "pdf_label": "the instrument as made (PDF)",
    "first_seen": "2026-10-16"
-  },
-  {
-   "id": "bill:4083",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-16",
-   "extent": "UK",
-   "title": "Courts and Tribunals Bill",
-   "sum": "2nd reading · Lords. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4083",
-   "first_seen": "2026-10-03"
   },
   {
    "id": "leg:uksi/2026/1084/made",
@@ -12854,6 +12972,14 @@
    "link": "https://bills.parliament.uk/bills/4308",
    "first_seen": "2026-10-15",
    "also": [
+    {
+     "id": "govuk:/guidance/apply-for-armed-forces-compensation-or-a-war-pension",
+     "kind": "guidance",
+     "title": "Apply for Armed Forces Compensation or a War Pension",
+     "src": "GOV.UK · Veterans UK, Ministry of Defence",
+     "link": "https://www.gov.uk/guidance/apply-for-armed-forces-compensation-or-a-war-pension",
+     "date": "2026-10-19"
+    },
     {
      "id": "govuk:/guidance/apply-for-armed-forces-compensation-or-a-war-pension",
      "kind": "guidance",
