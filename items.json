@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-21T15:03:17.152743+00:00",
+ "generated_at": "2026-10-21T19:14:28.375970+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 16,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
-   "count": 292,
+   "count": 295,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-21T15:03:17.152743+00:00",
+   "fetched_at": "2026-10-21T19:14:28.375970+00:00",
    "ok": true,
    "count": 21,
    "error": null,
-   "last_ok": "2026-10-21T15:03:17.152743+00:00"
+   "last_ok": "2026-10-21T19:14:28.375970+00:00"
   }
  ],
  "items": [
@@ -1198,6 +1198,25 @@
    "first_seen": "2026-10-09"
   },
   {
+   "id": "leg:uksi/2026/1112/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Plymouth, Devon) (Emergency) Regulations 2026",
+   "sum": "New instrument on legislation.gov.uk.",
+   "tags": [
+    "52.4",
+    "16.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1112/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1112/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-21"
+  },
+  {
    "id": "leg:uksi/2026/1104/made",
    "kind": "law",
    "level": "uk",
@@ -1251,6 +1270,118 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4125",
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4296",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Church Appointments (Repeal of Discriminatory Provision) Bill",
+   "sum": "2nd reading · Commons. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4296",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4035",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
+   "sum": "Report stage · Lords. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4035",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4128",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Commercial Payments Bill [HL]",
+   "sum": "2nd reading · Commons. ",
+   "tags": [
+    "27.2"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4128",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4080",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Representation of the People Bill",
+   "sum": "Committee stage · Lords. ",
+   "tags": [
+    "2.2"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4080",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4022",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Northern Ireland Troubles Bill",
+   "sum": "1st reading · Lords. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4022",
+   "first_seen": "2026-10-08"
+  },
+  {
+   "id": "bill:4254",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Immigration and Asylum Bill",
+   "sum": "Committee stage · Commons. ",
+   "tags": [
+    "18.2"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4254",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4127",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Sporting Events Bill [HL]",
+   "sum": "Committee stage · Commons. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4127",
+   "first_seen": "2026-10-08"
   },
   {
    "id": "bill:4145",
@@ -1318,38 +1449,6 @@
    "first_seen": "2026-10-03"
   },
   {
-   "id": "bill:4022",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Northern Ireland Troubles Bill",
-   "sum": "3rd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4022",
-   "first_seen": "2026-10-08"
-  },
-  {
-   "id": "bill:4127",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Sporting Events Bill [HL]",
-   "sum": "Committee stage · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4127",
-   "first_seen": "2026-10-08"
-  },
-  {
    "id": "bill:4310",
    "kind": "law",
    "level": "uk",
@@ -1414,38 +1513,6 @@
    "first_seen": "2026-10-21"
   },
   {
-   "id": "bill:4254",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Immigration and Asylum Bill",
-   "sum": "Committee stage · Commons. ",
-   "tags": [
-    "18.2"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4254",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4296",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Church Appointments (Repeal of Discriminatory Provision) Bill",
-   "sum": "2nd reading · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4296",
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "bill:4146",
    "kind": "law",
    "level": "uk",
@@ -1460,22 +1527,6 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4146",
    "first_seen": "2026-10-14"
-  },
-  {
-   "id": "bill:4128",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Commercial Payments Bill [HL]",
-   "sum": "3rd reading · Lords. ",
-   "tags": [
-    "27.2"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4128",
-   "first_seen": "2026-10-03"
   },
   {
    "id": "bill:4126",
@@ -1654,6 +1705,228 @@
    "opens": "2026-10-21"
   },
   {
+   "id": "govuk:/government/publications/immigration-providers-south-west-support-directory",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Immigration providers south west support directory",
+   "sum": "List of providers able to carry out legal aid immigration work in the South West of England.",
+   "tags": [
+    "18.2"
+   ],
+   "src": "GOV.UK · Legal Aid Agency",
+   "link": "https://www.gov.uk/government/publications/immigration-providers-south-west-support-directory",
+   "first_seen": "2026-10-08",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/your-finances-when-travelling-abroad",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Your finances when travelling abroad",
+   "sum": "How to avoid getting into financial difficulties abroad or get financial help abroad if something goes wrong.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/guidance/your-finances-when-travelling-abroad",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/bluetongue",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Bluetongue: how to spot and report it",
+   "sum": "The signs of bluetongue virus, how you must report it and what happens when you do.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bluetongue",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/taking-part-in-the-uk-emissions-trading-scheme-markets",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Taking part in the UK Emissions Trading Scheme markets",
+   "sum": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Energy Security and Net Zero",
+   "link": "https://www.gov.uk/government/publications/taking-part-in-the-uk-emissions-trading-scheme-markets",
+   "first_seen": "2026-10-12",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/intellectual-property-office-service-availability-and-issues",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Intellectual Property Office: service availability and issues",
+   "sum": "Check the availability of, and any issues affecting, our services.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Intellectual Property Office",
+   "link": "https://www.gov.uk/guidance/intellectual-property-office-service-availability-and-issues",
+   "first_seen": "2026-10-06",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/applications-and-decisions-for-the-east-of-england",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Goods vehicle applications and decisions for the east of England",
+   "sum": "Applications for goods vehicle operator licences to, and decisions made by, the Traffic Commissioner for the east of England.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Traffic Commissioners for Great Britain",
+   "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-east-of-england",
+   "first_seen": "2026-10-08",
+   "pdf": "https://assets.publishing.service.gov.uk/media/695e20f2bd1c076f787e739e/ad_5569_07_January_2026.pdf",
+   "pdf_label": "AD - 5569 07 January 2026 (objection deadline 28 January 2026) (PDF)",
+   "pdf_size": 325740,
+   "pdf_more": 39,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/applications-and-decisions-for-wales",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Goods vehicle applications and decisions for Wales",
+   "sum": "Applications for goods vehicle operator licences to, and decisions made by, the Traffic Commissioner for Wales.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Traffic Commissioners for Great Britain",
+   "link": "https://www.gov.uk/guidance/applications-and-decisions-for-wales",
+   "first_seen": "2026-10-08",
+   "pdf": "https://assets.publishing.service.gov.uk/media/695e22706056a077857e73b5/ad_8939_07_January_2026.pdf",
+   "pdf_label": "AD - 8939 07 January 2026 (objection deadline 28 January 2026) (PDF)",
+   "pdf_size": 254392,
+   "pdf_more": 39,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hm-land-registry-local-land-charges-programme",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "HM Land Registry: Local Land Charges Programme",
+   "sum": "We are working with local authorities to create a national local land charges service that will speed up searches and reduce their cost.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · HM Land Registry",
+   "link": "https://www.gov.uk/government/publications/hm-land-registry-local-land-charges-programme",
+   "first_seen": "2026-10-14",
+   "pdf": "https://assets.publishing.service.gov.uk/media/693991f033c7ace9c4a41f57/Joint_listed_building_data_specification.pdf",
+   "pdf_label": "Joint listed building data specification (PDF)",
+   "pdf_size": 153132,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/update-your-kept-bird-record",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Update your kept bird record",
+   "sum": "Use this service to tell the Animal and Plant Health Agency (APHA) about a change to your kept bird record or to confirm your details every 12 months.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Animal and Plant Health Agency, Department for Environment, Food & Rural Affairs",
+   "link": "https://www.gov.uk/guidance/update-your-kept-bird-record",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/recognising-fraudulent-identity-documents",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Examining identity documents",
+   "sum": "How to detect basic forgeries in identity documents.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Home Office, UK Visas and Immigration",
+   "link": "https://www.gov.uk/government/publications/recognising-fraudulent-identity-documents",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ad882624e6a61c502e89ed7/2026_Guidance_on_examining_identity_documents.pdf",
+   "pdf_label": "Guidance on examining identity documents (PDF)",
+   "pdf_size": 4297769
+  },
+  {
+   "id": "govuk:/guidance/bluetongue-latest-situation",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Bluetongue: latest situation",
+   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/united-kingdom-single-issuing-authority-uksia",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "United Kingdom Single Issuing Authority (UKSIA)",
+   "sum": "The UKSIA manages UK domestic fishing vessel access to non-UK waters and foreign vessel access to UK waters.",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Marine Management Organisation",
+   "link": "https://www.gov.uk/guidance/united-kingdom-single-issuing-authority-uksia",
+   "first_seen": "2026-10-03",
+   "pdf": "https://assets.publishing.service.gov.uk/media/675c2c260fb02bbe4853eefe/SIA_Application_to_fish_in_Third_Country_Waters_EU_20241213.pdf",
+   "pdf_label": "SIA Application to fish in European Union Waters (PDF)",
+   "pdf_size": 401322,
+   "pdf_more": 177,
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/procurement-act-2023-short-guides",
    "kind": "guidance",
    "level": "uk",
@@ -1668,11 +1941,11 @@
    "src": "GOV.UK · Government Commercial Function",
    "link": "https://www.gov.uk/government/publications/procurement-act-2023-short-guides",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69ccf0a29b2e6e135502d024/New_legislative_requirements_under_the_Procurement_Act_2023_v4.pdf",
    "pdf_label": "New legislative requirements under the Procurement Act 2023 (PDF)",
    "pdf_size": 841584,
-   "pdf_more": 15
+   "pdf_more": 15,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/public-sector-emissions-measurement-and-reporting-guidance",
@@ -1689,10 +1962,10 @@
    "src": "GOV.UK · Department for Energy Security and Net Zero",
    "link": "https://www.gov.uk/government/publications/public-sector-emissions-measurement-and-reporting-guidance",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad8740e6ac759576e3bd33d/ghg-emissions-measurement-reporting-public-sector.pdf",
    "pdf_label": "Emissions measurement and reporting: Technical report and insights for the public sector in England (PDF)",
-   "pdf_size": 354803
+   "pdf_size": 354803,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/apply-for-a-felling-licence",
@@ -1745,11 +2018,11 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/ukvi-identity-standards-caseworker-guidance",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a216d9b2cdcfdb7436abf3b/UKVI_Identity_Standards__1_.pdf",
    "pdf_label": "UKVI identity standards (PDF)",
    "pdf_size": 342629,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/the-artes-advanced-research-in-telecommunications-systems-programme",
@@ -1817,11 +2090,11 @@
    "src": "GOV.UK · UK Visas and Immigration",
    "link": "https://www.gov.uk/government/publications/iran-country-policy-and-information-notes",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad727270f7b53973e026952/IRN_Country_Medical_Note__1_.pdf",
    "pdf_label": "Country medical note, Iran, October 2026 (PDF)",
    "pdf_size": 1257154,
-   "pdf_more": 13
+   "pdf_more": 13,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/support-for-learners-undertaking-an-apprenticeship-or-an-apprenticeship-unit-with-learning-difficulties-and-disabilities",
@@ -1992,11 +2265,11 @@
    "src": "GOV.UK · Department for Work and Pensions",
    "link": "https://www.gov.uk/government/publications/jobs-guarantee",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a26c1e88e85b4e5346ac0b6/National-Jobs-Guarantee-Scheme-Draft-Grant-Funding-Agreement.pdf",
    "pdf_label": "National Rollout: Draft Grant Funding Agreement [PDF] (PDF)",
    "pdf_size": 947558,
-   "pdf_more": 5
+   "pdf_more": 5,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/provider-guide-to-delivering-high-quality-apprenticeships",
@@ -2201,11 +2474,11 @@
    "src": "GOV.UK · Department for Digital, Culture, Media and Sport, Office for Digital Identities and Attributes",
    "link": "https://www.gov.uk/government/publications/draft-code-of-practice-for-public-authorities-sharing-information-with-digital-verification-services",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad72beba89985bb97026943/Code_Accessible.pdf",
    "pdf_label": "Draft code of practice for public authorities sharing information with digital verification services (PDF)",
    "pdf_size": 272989,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/claiming-benefits-for-2-or-more-children",
@@ -2375,10 +2648,10 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/publications/condition-improvement-fund-guidance-for-schools",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad883636bae3f806ae89eed/Condition_Improvement_Fund_-_Information_for_Applicants_2027_to_2028.pdf",
    "pdf_label": "Information for applicants (PDF)",
-   "pdf_size": 1116001
+   "pdf_size": 1116001,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/check-genuine-hmrc-contact-that-uses-more-than-one-communication-method",
@@ -3692,23 +3965,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/guidance/intellectual-property-office-service-availability-and-issues",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Intellectual Property Office: service availability and issues",
-   "sum": "Check the availability of, and any issues affecting, our services.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Intellectual Property Office",
-   "link": "https://www.gov.uk/guidance/intellectual-property-office-service-availability-and-issues",
-   "first_seen": "2026-10-06",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/guidance/prepare-for-the-fe-data-collection-dry-run-2026-to-2027",
    "kind": "guidance",
    "level": "uk",
@@ -3728,6 +3984,91 @@
    "pdf_label": "chart of accounts guidance for the dry run (PDF)",
    "pdf_size": 521390,
    "pdf_more": 1
+  },
+  {
+   "id": "govuk:/government/news/pm-meeting-with-the-sultan-of-oman-21-october-2026",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "PM meeting with the Sultan of Oman: 21 October 2026",
+   "sum": "This afternoon the Prime Minister welcomed the Sultan of Oman to Downing Street.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/pm-meeting-with-the-sultan-of-oman-21-october-2026",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/international-experts-convene-in-london-to-tackle-evolving-chemical-weapons-threats",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "International experts convene in London to tackle evolving chemical weapons threats",
+   "sum": "International experts gathered in London for the 28th Chemical Weapons Demilitarisation Conference, bringing together policy, scientific and technical expertise to address current and future chemical weapons challenges.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence, Defence Science and Technology Laboratory",
+   "link": "https://www.gov.uk/government/news/international-experts-convene-in-london-to-tackle-evolving-chemical-weapons-threats",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/gad-modelling-supports-pandemic-preparedness-work",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "GAD modelling supports pandemic preparedness work",
+   "sum": "GAD worked with UKHSA to test how actuarial modelling can help assess uncertainty and risk in pandemic preparedness.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Government Actuary's Department",
+   "link": "https://www.gov.uk/government/news/gad-modelling-supports-pandemic-preparedness-work",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/nuclear-collaboration-completes-its-mission",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Nuclear collaboration completes its mission",
+   "sum": "Cross-industry programme set up to safeguard skills has concluded its work\r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Sellafield Ltd, Nuclear Decommissioning Authority",
+   "link": "https://www.gov.uk/government/news/nuclear-collaboration-completes-its-mission",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/world-first-taskforce-to-protect-communities-from-climate-change",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "World-first taskforce to protect communities from climate change",
+   "sum": "Communities across the UK will be better protected against the growing threats of climate change and nature loss.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Energy Security and Net Zero",
+   "link": "https://www.gov.uk/government/news/world-first-taskforce-to-protect-communities-from-climate-change",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/generational-moment-as-government-acts-on-landmark-antisemitism-review",
@@ -3917,9 +4258,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Upper Tribunal (Tax and Chancery Chamber)",
    "link": "https://www.gov.uk/tax-and-chancery-tribunal-decisions/2026-ukut-00404-tcc-ut-2026-000108-keene-distribution-ltd-slash-mohammed-naseemdost-v-hmrc",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad89785e19609e5aea108aa/Keene_UT_PTA_144087610.1_.pdf",
-   "pdf_label": "[2026] UKUT 00404 (TCC) UT-2026-000108 Keene Distribution Ltd/Mohammed Naseemdost v HMRC (PDF)"
+   "pdf_label": "[2026] UKUT 00404 (TCC) UT-2026-000108 Keene Distribution Ltd/Mohammed Naseemdost v HMRC (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/consultation-opens-on-fornax-permit-draft-decision",
@@ -3970,10 +4311,10 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/cma-cases/nrg-fleet-services-slash-specialist-fleet-services-merger-inquiry",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a79edbf29aec7cd59ccc0c6/Initial_enforcement_order_10_August_2026.pdf",
    "pdf_label": "Initial enforcement order (10 August 2026) (PDF, 235KB) (PDF)",
-   "pdf_more": 5
+   "pdf_more": 5,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/september-2026-transaction-data",
@@ -4096,6 +4437,134 @@
    ],
    "src": "GOV.UK · Department for Energy Security and Net Zero, HM Treasury",
    "link": "https://www.gov.uk/government/news/jackdaw-gas-field-gets-green-light",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/foreign-travel-advice/nigeria",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Nigeria travel advice",
+   "sum": "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/foreign-travel-advice/nigeria",
+   "first_seen": "2026-10-16",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/nr11-7ew-michael-hubbard-environmental-permit-application-advertisement-eprlp3023uda001",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "NR11 7EW, Michael Hubbard: environmental: permit application advertisement EPR/LP3023UD/A001",
+   "sum": "View the application submitted by Michael Hubbard: Mulberry Cottage, Rectory Road, Norwich, NR11 7EW",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/nr11-7ew-michael-hubbard-environmental-permit-application-advertisement-eprlp3023uda001",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-eprrp3621msa001",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "SG18 8UZ, Tritax Symmetry Biggleswade 4 Ltd: environmental: permit application advertisement EPR/RP3621MS/A001",
+   "sum": "View the application submitted by Tritax Symmetry Biggleswade 4 Ltd: Symmetry Park Biggleswade Phase 4, Unit 14, Biggleswade, SG18 8UZ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-eprrp3621msa001",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-eprrp3121mva001",
+     "kind": "update",
+     "title": "SG18 8UZ, Tritax Symmetry Biggleswade 4 Ltd: environmental: permit application advertisement EPR/RP3121MV/A001",
+     "src": "GOV.UK · Environment Agency",
+     "link": "https://www.gov.uk/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-eprrp3121mva001",
+     "date": "2026-10-21"
+    },
+    {
+     "id": "govuk:/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-epryp3821mza001",
+     "kind": "update",
+     "title": "SG18 8UZ, Tritax Symmetry Biggleswade 4 Ltd: environmental: permit application advertisement EPR/YP3821MZ/A001",
+     "src": "GOV.UK · Environment Agency",
+     "link": "https://www.gov.uk/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-epryp3821mza001",
+     "date": "2026-10-21"
+    },
+    {
+     "id": "govuk:/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-epryp3121mqa001",
+     "kind": "update",
+     "title": "SG18 8UZ, Tritax Symmetry Biggleswade 4 Ltd: environmental: permit application advertisement EPR/YP3121MQ/A001",
+     "src": "GOV.UK · Environment Agency",
+     "link": "https://www.gov.uk/government/publications/sg18-8uz-tritax-symmetry-biggleswade-4-ltd-environmental-permit-application-advertisement-epryp3121mqa001",
+     "date": "2026-10-21"
+    }
+   ]
+  },
+  {
+   "id": "govuk:/government/publications/nr11-7ly-original-holding-company-limited-environmental-permit-application-advertisement-eprlp3720uma001",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "NR11 7LY, Original Holding Company Limited: environmental: permit application advertisement EPR/LP3720UM/A001",
+   "sum": "View the application submitted by Original Holding Company Limited: Wolterton Park, Wolterton Hall, Norwich, NR11 7LY",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/nr11-7ly-original-holding-company-limited-environmental-permit-application-advertisement-eprlp3720uma001",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/so20-6qn-victor-planter-and-janice-planter-environmental-permit-application-advertisement-eprnp3820uka001",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "SO20 6QN, Victor Planter and Janice Planter: environmental: permit application advertisement EPR/NP3820UK/A001",
+   "sum": "View the application submitted by Victor Planter and Janice Planter: Sun House, Eldon Road, Stockbridge, SO20 6QN",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/so20-6qn-victor-planter-and-janice-planter-environmental-permit-application-advertisement-eprnp3820uka001",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/cyber-security-of-connected-products-privacy-notice",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Cyber security of connected products: privacy notice",
+   "sum": "Privacy notice explaining how we will use personal data when organisations respond to research on the cyber security of connected products.\r\n",
+   "tags": [
+    "39.1"
+   ],
+   "src": "GOV.UK · Department for Digital, Culture, Media and Sport",
+   "link": "https://www.gov.uk/government/publications/cyber-security-of-connected-products-privacy-notice",
    "first_seen": "2026-10-21",
    "pdf_checked": true
   },
@@ -4374,21 +4843,59 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/publications/coletta-tyson-limited-npswr048029-npswr048032-and-npswr048033-application-made-to-abstract-water",
+   "id": "govuk:/government/publications/uk-emissions-trading-scheme-uk-ets-policy-overview",
    "kind": "update",
    "level": "uk",
    "status": "now",
    "date": "2026-10-21",
    "extent": "UK",
-   "title": "Coletta & Tyson Limited (NPS/WR/048029, NPS/WR/048032 and NPS/WR/048033): application made to abstract water",
-   "sum": "The Environment Agency has received an application from Coletta & Tyson Limited to vary a licence to abstract (take) water.",
+   "title": "UK Emissions Trading Scheme (UK ETS): policy overview",
+   "sum": "The role of the UK Emissions Trading Scheme in UK decarbonisation and how the UK ETS Authority is developing the scheme.",
    "tags": [
-    "47.2"
+    "55.1"
    ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/government/publications/coletta-tyson-limited-npswr048029-npswr048032-and-npswr048033-application-made-to-abstract-water",
+   "src": "GOV.UK · Department for Energy Security and Net Zero",
+   "link": "https://www.gov.uk/government/publications/uk-emissions-trading-scheme-uk-ets-policy-overview",
    "first_seen": "2026-10-21",
    "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/women-in-defence-charter",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Women in Defence Charter",
+   "sum": "A commitment to improving gender balance in Defence.",
+   "tags": [
+    "15.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence",
+   "link": "https://www.gov.uk/government/publications/women-in-defence-charter",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/hillsborough-law-bill",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Hillsborough Law Bill",
+   "sum": "The government has introduced the Public Office (Accountability) Bill, known as the Hillsborough Law, into Parliament.",
+   "tags": [
+    "4.2"
+   ],
+   "src": "GOV.UK · Ministry of Justice",
+   "link": "https://www.gov.uk/government/publications/hillsborough-law-bill",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/69c3fd574a06660f085441cd/POA_Bill_-_Duty_of_Candour_Fact_Sheet.pdf",
+   "pdf_label": "Duty of Candour fact sheet (PDF)",
+   "pdf_size": 124641,
+   "pdf_more": 8
   },
   {
    "id": "govuk:/government/calls-for-evidence/independent-review-into-antisemitism",
@@ -4405,13 +4912,13 @@
    "src": "GOV.UK · Department for Education",
    "link": "https://www.gov.uk/government/calls-for-evidence/independent-review-into-antisemitism",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
-   "closes": "2026-07-01",
-   "opens": "2026-04-29",
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad789916ac759576e3bd302/Independent_review_antisemitism_in_schools_and_colleges_government_response_.pdf",
    "pdf_label": "Independent review – antisemitism in schools and colleges: government response (web-accessible version) (PDF)",
    "pdf_size": 2253478,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true,
+   "closes": "2026-07-01",
+   "opens": "2026-04-29"
   },
   {
    "id": "govuk:/government/publications/leyhill-prison-action-plan",
@@ -4428,10 +4935,10 @@
    "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/leyhill-prison-action-plan",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad8b0ae6ac759576e3bd3a3/HMP_Leyhill_action_plan_-_October_2026.pdf",
    "pdf_label": "HMP Leyhill action plan - October 2026 (PDF)",
-   "pdf_size": 208232
+   "pdf_size": 208232,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/industrial-strategy-jobs-plans",
@@ -4619,6 +5126,23 @@
    "first_seen": "2026-10-15"
   },
   {
+   "id": "govuk:/government/publications/coletta-tyson-limited-npswr048029-npswr048032-and-npswr048033-application-made-to-abstract-water",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Coletta & Tyson Limited (NPS/WR/048029, NPS/WR/048032 and NPS/WR/048033): application made to abstract water",
+   "sum": "The Environment Agency has received an application from Coletta & Tyson Limited to vary a licence to abstract (take) water.",
+   "tags": [
+    "47.2"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/coletta-tyson-limited-npswr048029-npswr048032-and-npswr048033-application-made-to-abstract-water",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/abbots-ripton-farming-company-limited-npswr047970-application-made-to-abstract-water",
    "kind": "update",
    "level": "uk",
@@ -4754,10 +5278,10 @@
    "src": "GOV.UK · Certification Officer",
    "link": "https://www.gov.uk/government/publications/breach-of-union-rules-decision-dabrowski-and-whitehouse-v-communication-workers-union",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad8b40b6bae3f806ae89f70/08_10_26_Final_decision.pdf",
    "pdf_label": "Breach of union rules decision: Dabrowski & Whitehouse v Communication Workers Union (PDF)",
-   "pdf_size": 132333
+   "pdf_size": 132333,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/russias-recruitment-of-foreign-fighters-is-exploitative-uk-statement-to-the-osce",
@@ -4791,10 +5315,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-melissa-witter-v-mahmoud-azin-and-arca-trading-ltd-in-voluntary-members-liquidation-1304433-2017",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/5c629d22ed915d04538f1242/Miss_M_Witter_v_mohmaud_azin_-_1304033_2017_-_Preliminary_.pdf",
    "pdf_label": "Miss M Witter v M Azin and Arca Trading Ltd (in voluntary members liquidation): 1304433/2017 - Judgment (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-p-lindsay-v-yucca-recruitment-agency-ltd-6002248-slash-2025",
@@ -4811,10 +5335,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-p-lindsay-v-yucca-recruitment-agency-ltd-6002248-slash-2025",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/695bb858a2fb6c15f98d197f/Mr_P_Lindsay_v_Yucca_Recruitment_Agency_Limited_6002248-2025_Reconsideration_Judgment___Reasons.pdf",
    "pdf_label": "Mr P Lindsay v Yucca Recruitment Agency Ltd: 6002248/2025 - Reconsideration (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-j-grant-v-glasgow-city-council-4112120-slash-2018",
@@ -4831,10 +5355,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-j-grant-v-glasgow-city-council-4112120-slash-2018",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/66b3350d0808eaf43b50de1f/Ms_J_Grant_v_Glasgow_City_Council_4112129.2018_-_R37_-_30.07.2024.pdf",
    "pdf_label": "Ms J Grant v Glasgow City Council: 4112120/2018 - Strike Out (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/s-garven-v-aberdeenshire-council-102693-slash-2010",
@@ -4851,9 +5375,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/s-garven-v-aberdeenshire-council-102693-slash-2010",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad618ccdfa45fcb6753cbf7/S_Garven_v_Aberdenshire_Council_102693.2010.judgement.pdf",
-   "pdf_label": "S Garven v Aberdeenshire Council: 102693/2010 - Strike Out (PDF)"
+   "pdf_label": "S Garven v Aberdeenshire Council: 102693/2010 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/l-duncan-v-aberdeenshire-council-102643-slash-2010",
@@ -4870,9 +5394,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/l-duncan-v-aberdeenshire-council-102643-slash-2010",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad6251367af5c09d0479831/L_Duncan_v_Aberdeenshire_Council_102643.2010.judgement.pdf",
-   "pdf_label": "L Duncan v Aberdeenshire Council: 102643/2010 - Strike Out (PDF)"
+   "pdf_label": "L Duncan v Aberdeenshire Council: 102643/2010 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/s-christie-v-aberdeenshire-council-102630-slash-2010",
@@ -4889,9 +5413,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/s-christie-v-aberdeenshire-council-102630-slash-2010",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad61ec067af5c09d0479827/S_Christie_v_Aberdeenshire_Council_102630.2010.judgement.pdf",
-   "pdf_label": "S Christie v Aberdeenshire Council: 102630/2010 - Strike Out (PDF)"
+   "pdf_label": "S Christie v Aberdeenshire Council: 102630/2010 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/two-new-appointments-to-the-marine-management-organisation-board",
@@ -4926,10 +5450,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-c-bridle-v-nhs-west-yorkshire-integrated-care-board-6004775-slash-2024-and-6015280-slash-2024",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/67ab15e71a116437c7ed88c4/6004775.20245_Chris_Bridle_v_NHS_West_Yorkshire_Integrated_Care_Board.pdf",
    "pdf_label": "Mr C Bridle v NHS West Yorkshire Integrated Care Board: 6004775/2024 and 6015280/2024 - Preliminary (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/unite-the-union-and-others-v-communisis-ltd-in-administration-and-others-1802507-slash-2024-and-others",
@@ -4946,9 +5470,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/unite-the-union-and-others-v-communisis-ltd-in-administration-and-others-1802507-slash-2024-and-others",
    "first_seen": "2026-10-21",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad0c8910f7b53973e026737/1._Unite_the_Union_and_2._S_Begum_and_others_v_Communisis_Ltd__in_administration__and_others_-_1802507.2024_and_others.pdf",
-   "pdf_label": "Unite the Union and Others v Communisis Ltd (in administration) and Others: 1802507/2024 and Others - Rule 22 (PDF)"
+   "pdf_label": "Unite the Union and Others v Communisis Ltd (in administration) and Others: 1802507/2024 and Others - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-o-mcgill-v-bilfinger-uk-ltd-8001197-slash-2026",
@@ -5645,22 +6169,6 @@
    "first_seen": "2026-10-20"
   },
   {
-   "id": "bill:4035",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
-   "sum": "Report stage · Lords. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4035",
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "bill:4124",
    "kind": "law",
    "level": "uk",
@@ -5674,22 +6182,6 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4124",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4080",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "Representation of the People Bill",
-   "sum": "Committee stage · Lords. ",
-   "tags": [
-    "2.2"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4080",
    "first_seen": "2026-10-03"
   },
   {
@@ -5908,6 +6400,14 @@
      "src": "GOV.UK · Department for Work and Pensions",
      "link": "https://www.gov.uk/government/publications/universal-credit-and-families-with-more-than-2-children-information-for-stakeholders",
      "date": "2026-10-21"
+    },
+    {
+     "id": "govuk:/government/publications/universal-credit-and-families-with-more-than-2-children-information-for-stakeholders",
+     "kind": "guidance",
+     "title": "Universal Credit payments for more than 2 children before 6 April 2026: information for stakeholders",
+     "src": "GOV.UK · Department for Work and Pensions",
+     "link": "https://www.gov.uk/government/publications/universal-credit-and-families-with-more-than-2-children-information-for-stakeholders",
+     "date": "2026-10-21"
     }
    ]
   },
@@ -6011,23 +6511,6 @@
    "src": "GOV.UK · Maritime and Coastguard Agency",
    "link": "https://www.gov.uk/government/publications/mca-approved-doctors-uk-based",
    "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/bluetongue-latest-situation",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "Bluetongue: latest situation",
-   "sum": "Overview of current bluetongue cases, risk level, vaccinations and restrictions.",
-   "tags": [
-    "46.4"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
-   "link": "https://www.gov.uk/guidance/bluetongue-latest-situation",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
@@ -7979,6 +8462,26 @@
    ]
   },
   {
+   "id": "govuk:/government/publications/worthing-high-school-21-october-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-20",
+   "extent": "UK",
+   "title": "Worthing High School: 21 October 2026",
+   "sum": "The schools adjudicator’s admission objection decision about Worthing High School.",
+   "tags": [
+    "37.1"
+   ],
+   "src": "GOV.UK · Office of the Schools Adjudicator",
+   "link": "https://www.gov.uk/government/publications/worthing-high-school-21-october-2026",
+   "first_seen": "2026-10-21",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ad8d1836ac759576e3bd462/ADA4649_Worthing_High_School_West_Sussex_21_October_2026.pdf",
+   "pdf_label": "ADA4649: Worthing High School (PDF)",
+   "pdf_size": 171820
+  },
+  {
    "id": "govuk:/government/speeches/normalisation-of-relations-between-kosovo-and-serbia-remains-essential-to-long-term-stability-uk-statement-at-the-un-security-council",
    "kind": "record",
    "level": "uk",
@@ -8415,6 +8918,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/11th-uk-singapore-financial-dialogue-october-2026-joint-statement",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-20",
+   "extent": "UK",
+   "title": "11th UK-Singapore Financial Dialogue October 2026: Joint Statement",
+   "sum": "Joint statement between HM Treasury and the Monetary Authority of Singapore on the Eleventh Financial Dialogue, held Tuesday 20th October 2026.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Treasury",
+   "link": "https://www.gov.uk/government/publications/11th-uk-singapore-financial-dialogue-october-2026-joint-statement",
+   "first_seen": "2026-10-20",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/employment-tribunal-decisions/a-zorila-v-iconic-united-uk-ltd-3314280-slash-2023",
    "kind": "record",
    "level": "uk",
@@ -8526,23 +9046,6 @@
    "src": "GOV.UK · Company Names Tribunal",
    "link": "https://www.gov.uk/government/publications/company-names-tribunal-undefended-decisions-and-orders",
    "first_seen": "2026-10-06",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/11th-uk-singapore-financial-dialogue-october-2026-joint-statement",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "11th UK-Singapore Financial Dialogue October 2026: Joint Statement",
-   "sum": "Joint statement between HM Treasury and the Monetary Authority of Singapore on the Eleventh Financial Dialogue, held Tuesday 20th October 2026.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Treasury",
-   "link": "https://www.gov.uk/government/publications/11th-uk-singapore-financial-dialogue-october-2026-joint-statement",
-   "first_seen": "2026-10-20",
    "pdf_checked": true
   },
   {
@@ -9039,24 +9542,6 @@
    "first_seen": "2026-10-19"
   },
   {
-   "id": "leg:uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-19",
-   "extent": "UK",
-   "title": "Correction Slip",
-   "sum": "These Regulations make provision in relation to the recovery of debt under Schedules 3ZA and 3ZB to the Social Security Administration Act 1992 (c. 5) (“the Act”), as inserted by the Public Authorities (Fraud, Error and Recovery) Act 2025 (",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
-   "pdf_label": "official document (PDF)",
-   "first_seen": "2026-10-19"
-  },
-  {
    "id": "bill:4298",
    "kind": "law",
    "level": "uk",
@@ -9295,6 +9780,24 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4198",
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "leg:uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-19",
+   "extent": "UK",
+   "title": "Correction Slip",
+   "sum": "These Regulations make provision in relation to the recovery of debt under Schedules 3ZA and 3ZB to the Social Security Administration Act 1992 (c. 5) (“the Act”), as inserted by the Public Authorities (Fraud, Error and Recovery) Act 2025 (",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1069/pdfs/uksics_20261069_en_001.pdf",
+   "pdf_label": "official document (PDF)",
    "first_seen": "2026-10-19"
   },
   {
@@ -13250,27 +13753,6 @@
    ]
   },
   {
-   "id": "govuk:/guidance/united-kingdom-single-issuing-authority-uksia",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-16",
-   "extent": "UK",
-   "title": "United Kingdom Single Issuing Authority (UKSIA)",
-   "sum": "The UKSIA manages UK domestic fishing vessel access to non-UK waters and foreign vessel access to UK waters.",
-   "tags": [
-    "47.2"
-   ],
-   "src": "GOV.UK · Marine Management Organisation",
-   "link": "https://www.gov.uk/guidance/united-kingdom-single-issuing-authority-uksia",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/675c2c260fb02bbe4853eefe/SIA_Application_to_fish_in_Third_Country_Waters_EU_20241213.pdf",
-   "pdf_label": "SIA Application to fish in European Union Waters (PDF)",
-   "pdf_size": 401322,
-   "pdf_more": 177,
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/guidance/herbal-smoking-products",
    "kind": "guidance",
    "level": "uk",
@@ -13880,7 +14362,17 @@
    "pdf_label": "NP - 2717 02 January 2026 (objection deadline 23 January 2026) (PDF)",
    "pdf_size": 233607,
    "pdf_more": 39,
-   "pdf_checked": true
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-east-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-east-of-england",
+     "date": "2026-10-21"
+    }
+   ]
   },
   {
    "id": "govuk:/guidance/mental-health-support-for-british-nationals-in-georgia",
@@ -13918,7 +14410,17 @@
    "pdf_label": "AD - 7137 02 January 2026 (objection deadline 23 January 2026) (PDF)",
    "pdf_size": 245429,
    "pdf_more": 39,
-   "pdf_checked": true
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the north east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "date": "2026-10-21"
+    }
+   ]
   },
   {
    "id": "govuk:/guidance/find-payroll-software-that-is-recognised-by-hmrc",
@@ -14054,26 +14556,6 @@
    "first_seen": "2026-10-03",
    "pdf": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.pdf",
    "pdf_label": "PDF format UK Sanctions List (PDF)",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/hm-land-registry-local-land-charges-programme",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-16",
-   "extent": "UK",
-   "title": "HM Land Registry: Local Land Charges Programme",
-   "sum": "We are working with local authorities to create a national local land charges service that will speed up searches and reduce their cost.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · HM Land Registry",
-   "link": "https://www.gov.uk/government/publications/hm-land-registry-local-land-charges-programme",
-   "first_seen": "2026-10-14",
-   "pdf": "https://assets.publishing.service.gov.uk/media/693991f033c7ace9c4a41f57/Joint_listed_building_data_specification.pdf",
-   "pdf_label": "Joint listed building data specification (PDF)",
-   "pdf_size": 153132,
    "pdf_checked": true
   },
   {
@@ -14709,6 +15191,14 @@
      "src": "GOV.UK · Certification Officer",
      "link": "https://www.gov.uk/government/news/certification-officer-announcements--2",
      "date": "2026-10-21"
+    },
+    {
+     "id": "govuk:/government/news/certification-officer-announcements--2",
+     "kind": "update",
+     "title": "Certification Officer: Announcements",
+     "src": "GOV.UK · Certification Officer",
+     "link": "https://www.gov.uk/government/news/certification-officer-announcements--2",
+     "date": "2026-10-21"
     }
    ]
   },
@@ -14760,23 +15250,6 @@
    ],
    "src": "GOV.UK · Ministry of Defence",
    "link": "https://www.gov.uk/government/news/uk-and-germany-strengthen-defence-ties-in-london-talks",
-   "first_seen": "2026-10-16",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/foreign-travel-advice/nigeria",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-16",
-   "extent": "UK",
-   "title": "Nigeria travel advice",
-   "sum": "FCDO travel advice for Nigeria. Includes safety and security, insurance, entry requirements and legal differences. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/foreign-travel-advice/nigeria",
    "first_seen": "2026-10-16",
    "pdf_checked": true
   },
@@ -17252,7 +17725,17 @@
    "pdf_label": "NP - 3045 01 January 2026 (objection deadline 22 January 2026) (PDF)",
    "pdf_size": 247917,
    "pdf_more": 40,
-   "pdf_checked": true
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the north west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "date": "2026-10-21"
+    }
+   ]
   },
   {
    "id": "govuk:/guidance/notices-and-proceedings-for-wales",
@@ -21816,90 +22299,6 @@
    "pdf_size": 251621,
    "pdf_more": 2,
    "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/applications-and-decisions-for-wales",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-14",
-   "extent": "UK",
-   "title": "Goods vehicle applications and decisions for Wales",
-   "sum": "Applications for goods vehicle operator licences to, and decisions made by, the Traffic Commissioner for Wales.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · Traffic Commissioners for Great Britain",
-   "link": "https://www.gov.uk/guidance/applications-and-decisions-for-wales",
-   "first_seen": "2026-10-08",
-   "pdf": "https://assets.publishing.service.gov.uk/media/695e22706056a077857e73b5/ad_8939_07_January_2026.pdf",
-   "pdf_label": "AD - 8939 07 January 2026 (objection deadline 28 January 2026) (PDF)",
-   "pdf_size": 254392,
-   "pdf_more": 39,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/applications-and-decisions-for-the-east-of-england",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-14",
-   "extent": "UK",
-   "title": "Goods vehicle applications and decisions for the east of England",
-   "sum": "Applications for goods vehicle operator licences to, and decisions made by, the Traffic Commissioner for the east of England.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · Traffic Commissioners for Great Britain",
-   "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-east-of-england",
-   "first_seen": "2026-10-08",
-   "pdf": "https://assets.publishing.service.gov.uk/media/695e20f2bd1c076f787e739e/ad_5569_07_January_2026.pdf",
-   "pdf_label": "AD - 5569 07 January 2026 (objection deadline 28 January 2026) (PDF)",
-   "pdf_size": 325740,
-   "pdf_more": 39,
-   "pdf_checked": true,
-   "also": [
-    {
-     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "kind": "guidance",
-     "title": "Goods vehicle applications and decisions for London and the south east of England",
-     "src": "GOV.UK · Traffic Commissioners for Great Britain",
-     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "date": "2026-10-15"
-    },
-    {
-     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "kind": "guidance",
-     "title": "Goods vehicle applications and decisions for London and the south east of England",
-     "src": "GOV.UK · Traffic Commissioners for Great Britain",
-     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "date": "2026-10-15"
-    },
-    {
-     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "kind": "guidance",
-     "title": "Goods vehicle applications and decisions for London and the south east of England",
-     "src": "GOV.UK · Traffic Commissioners for Great Britain",
-     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "date": "2026-10-15"
-    },
-    {
-     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "kind": "guidance",
-     "title": "Goods vehicle applications and decisions for London and the south east of England",
-     "src": "GOV.UK · Traffic Commissioners for Great Britain",
-     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "date": "2026-10-15"
-    },
-    {
-     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "kind": "guidance",
-     "title": "Goods vehicle applications and decisions for London and the south east of England",
-     "src": "GOV.UK · Traffic Commissioners for Great Britain",
-     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
-     "date": "2026-10-15"
-    }
-   ]
   },
   {
    "id": "govuk:/guidance/access-new-active-substance-nas-work-sharing-initiative",
@@ -28585,23 +28984,6 @@
    ],
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade, Department for Science, Innovation and Technology",
    "link": "https://www.gov.uk/guidance/data-use-and-access-act-2025-plans-for-commencement",
-   "first_seen": "2026-10-12",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/taking-part-in-the-uk-emissions-trading-scheme-markets",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-12",
-   "extent": "UK",
-   "title": "Taking part in the UK Emissions Trading Scheme markets",
-   "sum": "This guidance explains the operation of the UK ETS markets and how to take part in auctions and in trading on the secondary market.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Energy Security and Net Zero",
-   "link": "https://www.gov.uk/government/publications/taking-part-in-the-uk-emissions-trading-scheme-markets",
    "first_seen": "2026-10-12",
    "pdf_checked": true
   },
@@ -36573,23 +36955,6 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/guidance/change-your-vaping-duty-stamps-approval-as-a-customs-warehousekeeper-or-uk-representative",
-   "first_seen": "2026-10-08",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/immigration-providers-south-west-support-directory",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-08",
-   "extent": "UK",
-   "title": "Immigration providers south west support directory",
-   "sum": "List of providers able to carry out legal aid immigration work in the South West of England.",
-   "tags": [
-    "18.2"
-   ],
-   "src": "GOV.UK · Legal Aid Agency",
-   "link": "https://www.gov.uk/government/publications/immigration-providers-south-west-support-directory",
    "first_seen": "2026-10-08",
    "pdf_checked": true
   },
@@ -48784,23 +49149,6 @@
    "pdf_label": "Treasury Minutes – August 2026 (Web) (PDF)",
    "pdf_size": 637507,
    "pdf_more": 1,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/women-in-defence-charter",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-02",
-   "extent": "UK",
-   "title": "Women in Defence Charter",
-   "sum": "A commitment to improving gender balance in Defence.",
-   "tags": [
-    "15.1"
-   ],
-   "src": "GOV.UK · Ministry of Defence",
-   "link": "https://www.gov.uk/government/publications/women-in-defence-charter",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
