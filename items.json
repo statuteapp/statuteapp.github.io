@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-23T19:04:18.260148+00:00",
+ "generated_at": "2026-10-23T22:01:26.772443+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
-   "ok": true,
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "TimeoutError: The read operation timed out",
    "last_ok": "2026-10-23T19:04:18.260148+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 17,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-23T19:04:18.260148+00:00",
+   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
    "ok": true,
    "count": 17,
    "error": null,
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "last_ok": "2026-10-23T22:01:26.772443+00:00"
   }
  ],
  "items": [
@@ -1601,10 +1601,10 @@
    "src": "GOV.UK · Forestry Commission",
    "link": "https://www.gov.uk/government/publications/tree-production-innovation-fund-how-to-make-a-claim",
    "first_seen": "2026-10-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6adb815cb62d80a107bc5c9a/TPIF-5-XXX_Claim_Form_-_Oct_26.pdf",
    "pdf_label": "Claim form: TPIF (PDF version) (PDF)",
-   "pdf_size": 407707
+   "pdf_size": 407707,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cuba-apply-for-a-uk-visa",
@@ -3043,6 +3043,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/news/uk-france-deepen-nuclear-defence-ties-in-first-joint-exercise",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-23",
+   "extent": "UK",
+   "title": "UK-France deepen nuclear defence ties in first joint exercise",
+   "sum": "UK deepens nuclear defence ties with France in historic first joint air exercise as RAF Typhoon fighters join French Rafale jets in a French nuclear exercise.",
+   "tags": [
+    "15.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence",
+   "link": "https://www.gov.uk/government/news/uk-france-deepen-nuclear-defence-ties-in-first-joint-exercise",
+   "first_seen": "2026-10-23",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/pm-call-with-president-kast-of-chile-23-october-2026",
    "kind": "update",
    "level": "uk",
@@ -3125,11 +3142,11 @@
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/publications/southend-on-sea-city-council-local-plan-intervention-letter",
    "first_seen": "2026-10-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a9ae7fe9a177a1decf97e6f/Southend-on-Sea_City_Council_Local_Plan_Intervention_letter.pdf",
    "pdf_label": "Southend-on-Sea City Council: Local Plan Intervention letter (4 September 2026) (PDF)",
    "pdf_size": 238380,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/joint-ministerial-statement-on-the-risk-of-famine-in-sudan",
@@ -3471,6 +3488,23 @@
    ],
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/news/government-slashes-red-tape-and-tariffs-to-give-businesses-breathing-space",
+   "first_seen": "2026-10-23",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/hmrc-internal-manuals/sharepoint-tax-manuals-test-site",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-23",
+   "extent": "UK",
+   "title": "SharePoint Tax Manuals Test Site",
+   "sum": "this is test body",
+   "tags": [
+    "20.1"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/hmrc-internal-manuals/sharepoint-tax-manuals-test-site",
    "first_seen": "2026-10-23",
    "pdf_checked": true
   },
@@ -4835,11 +4869,11 @@
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/publications/fisheries-consultations-between-the-uk-and-the-eu-for-2026",
    "first_seen": "2026-10-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6adb536ad798ae11e9bc5c38/UK-EU_Written_Record_of_fisheries_consultations_about_Norway_pout_for_01_November_2026_to_31_October_2027.pdf",
    "pdf_label": "23 October 2026: fisheries consultations between the UK and the EU about Norway pout for November 2026 to October 2027 (PDF)",
    "pdf_size": 249294,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "leg:uksi/2026/1110/made",
@@ -5448,6 +5482,14 @@
    "pdf_more": 5,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/government/publications/vapc-south-east-england-meeting-minutes",
+     "kind": "guidance",
+     "title": "VAPC south east England: meeting minutes",
+     "src": "GOV.UK · Veterans Advisory and Pensions Committees",
+     "link": "https://www.gov.uk/government/publications/vapc-south-east-england-meeting-minutes",
+     "date": "2026-10-23"
+    },
     {
      "id": "govuk:/government/publications/vapc-south-east-england-meeting-minutes",
      "kind": "guidance",
@@ -7146,23 +7188,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/ukhsa-publishes-latest-cold-mortality-monitoring-report",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-22",
-   "extent": "UK",
-   "title": "UKHSA publishes latest Cold mortality monitoring report",
-   "sum": "Findings from the report show that 2,200 deaths were associated with cold weather in England during winter 2025 to 2026.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · UK Health Security Agency",
-   "link": "https://www.gov.uk/government/news/ukhsa-publishes-latest-cold-mortality-monitoring-report",
-   "first_seen": "2026-10-22",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/health-bill-patient-safety-fact-sheet",
    "kind": "update",
    "level": "uk",
@@ -7457,6 +7482,23 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad72c56a89985bb97026946/IE_Live_Facial_Recognition_Technology_Procurement_-_DPIA_-_URN184.26.pdf",
    "pdf_label": "Live facial recognition hardware, software and deployment processing: data protection impact assessment (PDF)",
    "pdf_size": 721666,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/ukhsa-publishes-latest-cold-mortality-monitoring-report",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-22",
+   "extent": "UK",
+   "title": "UKHSA publishes latest Cold mortality monitoring report",
+   "sum": "Findings from the report show that 2,200 deaths were associated with cold weather in England during winter 2025 to 2026.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/news/ukhsa-publishes-latest-cold-mortality-monitoring-report",
+   "first_seen": "2026-10-22",
    "pdf_checked": true
   },
   {
@@ -14439,6 +14481,14 @@
      "src": "legislation.gov.uk",
      "link": "https://www.legislation.gov.uk/uksi/2026/1102/made",
      "date": "2026-10-22"
+    },
+    {
+     "id": "leg:uksi/2026/1102/made",
+     "kind": "law",
+     "title": "The Air Navigation (Restriction of Flying) (Helicopter Flight) (No. 8) Regulations 2026",
+     "src": "legislation.gov.uk",
+     "link": "https://www.legislation.gov.uk/uksi/2026/1102/made",
+     "date": "2026-10-22"
     }
    ]
   },
@@ -19282,6 +19332,14 @@
    "first_seen": "2026-10-19",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/project-gigabit-network-build-contract-new-forest",
+     "kind": "guidance",
+     "title": "Project Gigabit network build contract - New Forest",
+     "src": "GOV.UK · Building Digital UK, Department for Science, Innovation and Technology",
+     "link": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-new-forest",
+     "date": "2026-10-23"
+    },
     {
      "id": "govuk:/guidance/project-gigabit-network-build-contract-new-forest",
      "kind": "guidance",
