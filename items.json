@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-23T22:01:26.772443+00:00",
+ "generated_at": "2026-10-24T00:28:38.537772+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
-   "count": 300,
+   "count": 299,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
-   "ok": false,
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
+   "ok": true,
    "count": 0,
-   "error": "TimeoutError: The read operation timed out",
-   "last_ok": "2026-10-23T19:04:18.260148+00:00"
+   "error": null,
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 17,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-23T22:01:26.772443+00:00",
+   "fetched_at": "2026-10-24T00:28:38.537772+00:00",
    "ok": true,
-   "count": 17,
+   "count": 15,
    "error": null,
-   "last_ok": "2026-10-23T22:01:26.772443+00:00"
+   "last_ok": "2026-10-24T00:28:38.537772+00:00"
   }
  ],
  "items": [
@@ -3043,6 +3043,23 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/news/introducing-the-ai-biosecurity-lab",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-23",
+   "extent": "UK",
+   "title": "Introducing the AI Biosecurity Lab",
+   "sum": "Backed by up to £300mn of government funding and company commitments, the AI Biosecurity Lab will use AI to strengthen UK resilience to biological threats.\r\n",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Cabinet Office",
+   "link": "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab",
+   "first_seen": "2026-10-24",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/uk-france-deepen-nuclear-defence-ties-in-first-joint-exercise",
    "kind": "update",
    "level": "uk",
@@ -5513,6 +5530,14 @@
      "src": "GOV.UK · Veterans Advisory and Pensions Committees",
      "link": "https://www.gov.uk/government/publications/vapc-south-east-england-meeting-minutes",
      "date": "2026-10-23"
+    },
+    {
+     "id": "govuk:/government/publications/vapc-south-east-england-meeting-minutes",
+     "kind": "guidance",
+     "title": "VAPC south east England: meeting minutes",
+     "src": "GOV.UK · Veterans Advisory and Pensions Committees",
+     "link": "https://www.gov.uk/government/publications/vapc-south-east-england-meeting-minutes",
+     "date": "2026-10-23"
     }
    ]
   },
@@ -7171,23 +7196,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/british-jobs-boost-as-tank-barrel-production-returns-to-the-uk-for-first-time-in-20-years",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-22",
-   "extent": "UK",
-   "title": "British jobs boost as tank barrel production returns to the UK for first time in 20 years",
-   "sum": "Rheinmetall UK's Telford gun hall begins production, creating 100 skilled jobs and returning large-calibre weapon manufacturing to UK soil for the first time in decades.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Ministry of Defence",
-   "link": "https://www.gov.uk/government/news/british-jobs-boost-as-tank-barrel-production-returns-to-the-uk-for-first-time-in-20-years",
-   "first_seen": "2026-10-22",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/health-bill-patient-safety-fact-sheet",
    "kind": "update",
    "level": "uk",
@@ -7482,6 +7490,23 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad72c56a89985bb97026946/IE_Live_Facial_Recognition_Technology_Procurement_-_DPIA_-_URN184.26.pdf",
    "pdf_label": "Live facial recognition hardware, software and deployment processing: data protection impact assessment (PDF)",
    "pdf_size": 721666,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/british-jobs-boost-as-tank-barrel-production-returns-to-the-uk-for-first-time-in-20-years",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-22",
+   "extent": "UK",
+   "title": "British jobs boost as tank barrel production returns to the UK for first time in 20 years",
+   "sum": "Rheinmetall UK's Telford gun hall begins production, creating 100 skilled jobs and returning large-calibre weapon manufacturing to UK soil for the first time in decades.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence",
+   "link": "https://www.gov.uk/government/news/british-jobs-boost-as-tank-barrel-production-returns-to-the-uk-for-first-time-in-20-years",
+   "first_seen": "2026-10-22",
    "pdf_checked": true
   },
   {
@@ -19332,6 +19357,14 @@
    "first_seen": "2026-10-19",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/project-gigabit-network-build-contract-new-forest",
+     "kind": "guidance",
+     "title": "Project Gigabit network build contract - New Forest",
+     "src": "GOV.UK · Building Digital UK, Department for Science, Innovation and Technology",
+     "link": "https://www.gov.uk/guidance/project-gigabit-network-build-contract-new-forest",
+     "date": "2026-10-23"
+    },
     {
      "id": "govuk:/guidance/project-gigabit-network-build-contract-new-forest",
      "kind": "guidance",
@@ -59374,123 +59407,6 @@
     "household"
    ],
    "first_seen": "2026-10-03"
-  },
-  {
-   "id": "govuk:/government/consultations/consultation-on-prohibiting-third-party-betting-on-powerball",
-   "kind": "consult",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "Consultation on prohibiting third party betting on Powerball",
-   "sum": "Consultation on the proposal to prohibit third party operators licensed under the Gambling Act 2005 from offering bets on Powerball. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Digital, Culture, Media and Sport",
-   "link": "https://www.gov.uk/government/consultations/consultation-on-prohibiting-third-party-betting-on-powerball",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
-   "kind": "consult",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "Google’s general search services: proposed user choice conduct requirement",
-   "sum": "The Competition and Markets Authority (CMA) invites comments on updated proposals for a user choice conduct requirement in relation to Google’s general search services.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Competition and Markets Authority",
-   "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6ab29c76fe72ed1e2b02eebe/consultation_user_choice_conduct_requirement.pdf",
-   "pdf_label": "Consultation: User choice conduct requirement (PDF)",
-   "pdf_size": 632397,
-   "pdf_more": 1,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
-   "kind": "consult",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "Revision of guidance for reducing the risk of vulnerable groups contracting listeriosis",
-   "sum": "We are seeking views on the clarity of the revisions made to the listeriosis guidance for health and social care settings, and on our assessment of their impact.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Food Standards Agency",
-   "link": "https://www.gov.uk/government/consultations/revision-of-guidance-for-reducing-the-risk-of-vulnerable-groups-contracting-listeriosis",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6aaa71b1f1f8d2a39605f89c/Revised_guidance_-_reducing_the_risk_of_vulnerable_groups_contracting_listeriosis.pdf",
-   "pdf_label": "Revised guidance: reducing the risk of vulnerable groups contracting listeriosis (PDF)",
-   "pdf_size": 525236,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/consultations/bus-services-act-2025-improving-information-about-local-services",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "Bus Services Act 2025: improving information about local services",
-   "sum": "Seeks views on using new powers to request and publish bus operators' data and develop a fully digital system for providing local bus service information.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Transport",
-   "link": "https://www.gov.uk/government/consultations/bus-services-act-2025-improving-information-about-local-services",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/high-down-prison-action-plan",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "High Down Prison: action plan",
-   "sum": "HM Prison and Probation Service action plans for High Down Prison in response to HM Inspectorate of Prisons inspections.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
-   "link": "https://www.gov.uk/government/publications/high-down-prison-action-plan",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6ab3c110fe72ed1e2b02ef2a/HMP_High_Down_action_plan_-_Sep_2026.pdf",
-   "pdf_label": "HMP High Down action plan - Sep 2026 (PDF)",
-   "pdf_size": 197106,
-   "pdf_more": 1,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/consultations/googles-general-search-services-proposed-conduct-requirements",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-23",
-   "extent": "UK",
-   "title": "Google’s general search services: proposed conduct requirements",
-   "sum": "The Competition and Markets Authority (CMA) is inviting comments on proposals for conduct requirements (CRs): rules applying to Google’s general search services.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Competition and Markets Authority",
-   "link": "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-conduct-requirements",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6979ce781c24881f40a4d6dc/Introduction_to_the_consultation.pdf",
-   "pdf_label": "Introduction to the consultation (PDF)",
-   "pdf_size": 284883,
-   "pdf_more": 89,
-   "pdf_checked": true
   },
   {
    "id": "fsaalert:FSA-PRIN-45-2026",
