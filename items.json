@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-25T05:56:09.387876+00:00",
+ "generated_at": "2026-10-25T11:12:46.832965+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 299,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
-   "ok": false,
-   "count": 0,
-   "error": "TimeoutError: The read operation timed out",
-   "last_ok": "2026-10-25T01:02:48.567087+00:00"
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
+   "ok": true,
+   "count": 2,
+   "error": null,
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 17,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-25T05:56:09.387876+00:00",
+   "fetched_at": "2026-10-25T11:12:46.832965+00:00",
    "ok": true,
    "count": 15,
    "error": null,
-   "last_ok": "2026-10-25T05:56:09.387876+00:00"
+   "last_ok": "2026-10-25T11:12:46.832965+00:00"
   }
  ],
  "items": [
@@ -1213,6 +1213,54 @@
    "first_seen": "2026-10-23"
   },
   {
+   "id": "flood:062WAF28UpColne",
+   "kind": "alert",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-25",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Warning no longer in force: Upper River Colne and Radlett Brook",
+   "sum": "There is no longer a threat of flooding, though standing water and debris may still remain.\nWeather conditions are expected to improve. Further light rainfall is expected on Monday 26 October but no flooding is expected.\nWe will continue to",
+   "tags": [
+    "47.2"
+   ],
+   "src": "Environment Agency flood warnings",
+   "link": "https://check-for-flooding.service.gov.uk/",
+   "severity": 4,
+   "lat": null,
+   "lng": null,
+   "who": [
+    "household",
+    "council"
+   ],
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "flood:062WAF38BrentBks",
+   "kind": "alert",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-25",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Warning no longer in force: Silk Stream and the Deans, Edgware, Dollis, Mutton, Wembley and Wealdstone Brooks",
+   "sum": "There is no longer a threat of flooding, though standing water and debris may still remain.\nWeather conditions are expected to improve. Further light rainfall is expected on Monday 26 October but no flooding is expected.\nWe will continue to",
+   "tags": [
+    "47.2"
+   ],
+   "src": "Environment Agency flood warnings",
+   "link": "https://check-for-flooding.service.gov.uk/",
+   "severity": 4,
+   "lat": null,
+   "lng": null,
+   "who": [
+    "household",
+    "council"
+   ],
+   "first_seen": "2026-10-24"
+  },
+  {
    "id": "govuk:/guidance/river-thames-current-river-conditions",
    "kind": "alert",
    "level": "uk",
@@ -1246,54 +1294,6 @@
    "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-aa-49-2026",
    "who": [
     "household"
-   ],
-   "first_seen": "2026-10-24"
-  },
-  {
-   "id": "flood:062WAF28UpColne",
-   "kind": "alert",
-   "level": "local",
-   "status": "now",
-   "date": "2026-10-24",
-   "extent": "Slough",
-   "council": "Slough Borough Council",
-   "title": "Flood alert: Upper River Colne and Radlett Brook",
-   "sum": "Rising river levels this evening may lead to flooding.\nFlooding is possible from the evening of Saturday 24 October due to heavy rainfall from Storm Austen and Boelo.\nLocations most affected will be low lying land and roads near rivers. Fur",
-   "tags": [
-    "47.2"
-   ],
-   "src": "Environment Agency flood warnings",
-   "link": "https://check-for-flooding.service.gov.uk/",
-   "severity": 3,
-   "lat": null,
-   "lng": null,
-   "who": [
-    "household",
-    "council"
-   ],
-   "first_seen": "2026-10-24"
-  },
-  {
-   "id": "flood:062WAF38BrentBks",
-   "kind": "alert",
-   "level": "local",
-   "status": "now",
-   "date": "2026-10-24",
-   "extent": "Slough",
-   "council": "Slough Borough Council",
-   "title": "Flood alert: Silk Stream and the Deans, Edgware, Dollis, Mutton, Wembley and Wealdstone Brooks",
-   "sum": "Rising river levels this evening may lead to flooding.\nFlooding is possible from the evening of Saturday 24 October due to heavy rainfall from Storm Austen and Boelo.\nLocations most affected will be low lying land and roads near rivers. Fur",
-   "tags": [
-    "47.2"
-   ],
-   "src": "Environment Agency flood warnings",
-   "link": "https://check-for-flooding.service.gov.uk/",
-   "severity": 3,
-   "lat": null,
-   "lng": null,
-   "who": [
-    "household",
-    "council"
    ],
    "first_seen": "2026-10-24"
   },
