@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-26T00:06:20.053267+00:00",
+ "generated_at": "2026-10-26T04:36:54.689057+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
-   "count": 18,
+   "count": 17,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 3,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 17,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-26T00:06:20.053267+00:00",
+   "fetched_at": "2026-10-26T04:36:54.689057+00:00",
    "ok": true,
    "count": 16,
    "error": null,
-   "last_ok": "2026-10-26T00:06:20.053267+00:00"
+   "last_ok": "2026-10-26T04:36:54.689057+00:00"
   }
  ],
  "items": [
@@ -1151,6 +1151,24 @@
     "government"
    ],
    "first_seen": "2026-10-13"
+  },
+  {
+   "id": "leg:uksi/2026/1118/made",
+   "kind": "law",
+   "level": "nation",
+   "status": "now",
+   "date": "2026-10-26",
+   "extent": "E",
+   "title": "The English Devolution and Community Empowerment Act 2026 (Consequential Amendments) (Precepts) (England) Regulations 2026",
+   "sum": "The English Devolution and Community Empowerment Act 2026 (c. 23) (“the 2026 Act”) amends the arrangements for the issuing of precepts by mayoral combined authorities and mayoral combined county authorities. Section 12 of the 2026 Act remov",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1118/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1118/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-26"
   },
   {
    "id": "govuk:/government/publications/civil-procedure-rules-court-forms",
@@ -9812,43 +9830,6 @@
    "first_seen": "2026-10-21"
   },
   {
-   "id": "leg:uksi/2026/1104/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "The Employment Protection Code of Practice (Time Off for Trade Union Duties and Activities) Order 2026",
-   "sum": "This Order appoints 30th October 2026 as the day upon which the revised Code of Practice on Time Off for Trade Union Duties and Activities will come into effect. The Code of Practice, which includes guidance on time off for trade union repr",
-   "tags": [
-    "28.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1104/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1104/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-21"
-  },
-  {
-   "id": "leg:ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-21",
-   "extent": "UK",
-   "title": "Correction slip",
-   "sum": "An Act to make provision to amend the law relating to employment rights; to make provision about procedure for handling redundancies; to make provision about the treatment of workers involved in the supply of services under certain public c",
-   "tags": [
-    "28.1",
-    "37.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
-   "pdf": "https://www.legislation.gov.uk/ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
-   "pdf_label": "official document (PDF)",
-   "first_seen": "2026-10-21"
-  },
-  {
    "id": "bill:4128",
    "kind": "law",
    "level": "uk",
@@ -9993,6 +9974,43 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4146",
    "first_seen": "2026-10-14"
+  },
+  {
+   "id": "leg:uksi/2026/1104/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "The Employment Protection Code of Practice (Time Off for Trade Union Duties and Activities) Order 2026",
+   "sum": "This Order appoints 30th October 2026 as the day upon which the revised Code of Practice on Time Off for Trade Union Duties and Activities will come into effect. The Code of Practice, which includes guidance on time off for trade union repr",
+   "tags": [
+    "28.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1104/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1104/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "leg:ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-21",
+   "extent": "UK",
+   "title": "Correction slip",
+   "sum": "An Act to make provision to amend the law relating to employment rights; to make provision about procedure for handling redundancies; to make provision about the treatment of workers involved in the supply of services under certain public c",
+   "tags": [
+    "28.1",
+    "37.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
+   "pdf": "https://www.legislation.gov.uk/ukpga/2025/36/pdfs/ukpgacs_20250036_en_001.pdf",
+   "pdf_label": "official document (PDF)",
+   "first_seen": "2026-10-21"
   },
   {
    "id": "fsaalert:FSA-AA-48-2026",
@@ -14596,25 +14614,6 @@
    "pdf_checked": true
   },
   {
-   "id": "leg:uksi/2026/1058/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-20",
-   "extent": "UK",
-   "title": "The Air Navigation (Restriction of Flying) (Aberfan, Merthyr Tydfil) Regulations 2026",
-   "sum": "New instrument on legislation.gov.uk.",
-   "tags": [
-    "52.4",
-    "16.4"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1058/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1058/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-20"
-  },
-  {
    "id": "bill:4174",
    "kind": "law",
    "level": "uk",
@@ -14677,6 +14676,25 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4290",
    "first_seen": "2026-10-12"
+  },
+  {
+   "id": "leg:uksi/2026/1058/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-20",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Aberfan, Merthyr Tydfil) Regulations 2026",
+   "sum": "New instrument on legislation.gov.uk.",
+   "tags": [
+    "52.4",
+    "16.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1058/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1058/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-20"
   },
   {
    "id": "leg:uksi/2026/1101/made",
