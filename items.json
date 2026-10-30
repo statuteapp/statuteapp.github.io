@@ -1,126 +1,126 @@
 {
- "generated_at": "2026-10-30T01:51:18.954628+00:00",
+ "generated_at": "2026-10-30T08:29:47.469614+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
-   "ok": true,
-   "count": 20,
-   "error": null,
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
+   "ok": false,
+   "count": 0,
+   "error": "ParseError: no element found: line 1, column 0",
    "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
-   "count": 1,
+   "count": 0,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 14,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
-   "ok": true,
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "ParseError: no element found: line 1, column 0",
    "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": false,
    "count": 0,
-   "error": "HTTPError: HTTP Error 500: Internal Server Error",
+   "error": "HTTPError: HTTP Error 403: Forbidden",
    "last_ok": null
   },
   {
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
+   "fetched_at": "2026-10-30T08:29:47.469614+00:00",
    "ok": true,
    "count": 44,
    "error": null,
-   "last_ok": "2026-10-30T01:51:18.954628+00:00"
+   "last_ok": "2026-10-30T08:29:47.469614+00:00"
   }
  ],
  "items": [
@@ -1975,6 +1975,57 @@
    "first_seen": "2026-10-30"
   },
   {
+   "id": "govuk:/government/publications/student-loans-a-guide-to-terms-and-conditions",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Student loans: a guide to terms and conditions",
+   "sum": "A guide describing terms and conditions for students taking out a student loan in academic years 2026 to 2027 and 2025 to 2026.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Student Loans Company",
+   "link": "https://www.gov.uk/government/publications/student-loans-a-guide-to-terms-and-conditions",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/lifelong-learning-entitlement-lle-overview",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Lifelong learning entitlement (LLE): overview",
+   "sum": "Find out what the LLE is and how this new post-18 student-finance system will work for courses and modules starting from January 2027.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Education",
+   "link": "https://www.gov.uk/government/publications/lifelong-learning-entitlement-lle-overview",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/lifelong-learning-entitlement-lle-guidance-for-providers",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Lifelong learning entitlement (LLE): guidance for providers",
+   "sum": "How providers can prepare for the lifelong learning entitlement (LLE).",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Education",
+   "link": "https://www.gov.uk/government/publications/lifelong-learning-entitlement-lle-guidance-for-providers",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/individual-vehicle-approval-inspection-fees",
    "kind": "guidance",
    "level": "uk",
@@ -1988,6 +2039,23 @@
    ],
    "src": "GOV.UK · Driver and Vehicle Standards Agency",
    "link": "https://www.gov.uk/government/publications/individual-vehicle-approval-inspection-fees",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/applications-for-the-lifelong-learning-entitlement-lle-are-now-open",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Applications for the Lifelong Learning Entitlement (LLE) are now open",
+   "sum": "Students in England who are studying undergraduate and certain postgraduate courses starting on or after 1 January 2027 to 31 August 2027 can now apply for the Lifelong Learning Entitlement (LLE) to fund their studies.\r\n\r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Student Loans Company",
+   "link": "https://www.gov.uk/government/news/applications-for-the-lifelong-learning-entitlement-lle-are-now-open",
    "first_seen": "2026-10-30",
    "pdf_checked": true
   },
@@ -2044,6 +2112,44 @@
    "pdf_checked": true
   },
   {
+   "id": "govuk:/government/publications/ca6-4bj-seletia-hw-limited-environmental-permit-application-advertisement-eprbm6026ibv017",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "CA6 4BJ, Seletia (HW) Limited: environmental permit application advertisement - EPR/BM6026IB/V017",
+   "sum": "View the application submitted by Seletia (HW) Limited for Hespin Wood Landfill, Carlisle.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/government/publications/ca6-4bj-seletia-hw-limited-environmental-permit-application-advertisement-eprbm6026ibv017",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/lle-communication-assets-for-education-providers",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "LLE communication assets for education providers",
+   "sum": "Resources to help education providers communicate and explain Lifelong Learning Entitlement (LLE) funding to prospective learners.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Education",
+   "link": "https://www.gov.uk/government/publications/lle-communication-assets-for-education-providers",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6ae0b2d8ee0b648ce3606218/4._LLE_Asset_Pack_Guidance_Final_October_2026.pdf",
+   "pdf_label": "LLE provider asset pack: guidance (PDF)",
+   "pdf_size": 4141206,
+   "pdf_more": 4
+  },
+  {
    "id": "govuk:/foreign-travel-advice/colombia",
    "kind": "update",
    "level": "uk",
@@ -2079,77 +2185,21 @@
    "pdf_checked": true
   },
   {
-   "id": "leg:uksi/2026/1139/made",
-   "kind": "law",
+   "id": "govuk:/government/publications/china-ip-newsletter",
+   "kind": "record",
    "level": "uk",
    "status": "now",
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "extent": "UK",
-   "title": "The Education (Student Support for Postgraduate and Lifelong Learning Provision) (Amendment) Regulations 2026",
-   "sum": "These Regulations make amendments to the Lifelong Learning (Student Support) (Amendment of Fees and Awards etc.) Regulations 2026 (S.I. 2026/858) (“the Lifelong Learning Regulations”), the Education (Postgraduate Master’s Degree Loans) Regu",
+   "title": "UK-China Intellectual Property newsletter",
+   "sum": "At the end of every month we publish a newsletter covering recent intellectual property (IP) developments in China.",
    "tags": [
-    "55.1"
+    "43.1"
    ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1139/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1139/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-29"
-  },
-  {
-   "id": "leg:uksi/2026/1142/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-29",
-   "extent": "UK",
-   "title": "The Sea Fisheries (Amendment and Transitional Provision) Regulations 2026",
-   "sum": "These Regulations make amendments to assimilated law in the field of sea fisheries. They also make a transitional provision.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1142/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1142/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-29"
-  },
-  {
-   "id": "leg:uksi/2026/1134/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-29",
-   "extent": "UK",
-   "title": "The Central Counterparties (Equivalence) (Indonesia and the People’s Republic of China) Regulations 2026",
-   "sum": "These Regulations set out the Treasury’s equivalence determinations in respect of the regulatory framework that applies to certain central counterparties (CCPs) that are established in Indonesia and the People’s Republic of China.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1134/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1134/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-29"
-  },
-  {
-   "id": "leg:uksi/2026/1138/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-29",
-   "extent": "UK",
-   "title": "The English Devolution and Community Empowerment Act 2026 (Consequential Amendments) Regulations 2026",
-   "sum": "These Regulations amend the Local Government Pension Scheme Regulations 2013 (S.I. 2013/2356) (“the 2013 Regulations”).",
-   "tags": [
-    "29.1",
-    "5.3"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1138/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1138/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-29"
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office, Department for Business, Innovation, Science and Trade",
+   "link": "https://www.gov.uk/government/publications/china-ip-newsletter",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
   },
   {
    "id": "bill:4127",
@@ -2408,6 +2458,79 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4065",
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "leg:uksi/2026/1139/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-29",
+   "extent": "UK",
+   "title": "The Education (Student Support for Postgraduate and Lifelong Learning Provision) (Amendment) Regulations 2026",
+   "sum": "These Regulations make amendments to the Lifelong Learning (Student Support) (Amendment of Fees and Awards etc.) Regulations 2026 (S.I. 2026/858) (“the Lifelong Learning Regulations”), the Education (Postgraduate Master’s Degree Loans) Regu",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1139/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1139/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-29"
+  },
+  {
+   "id": "leg:uksi/2026/1142/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-29",
+   "extent": "UK",
+   "title": "The Sea Fisheries (Amendment and Transitional Provision) Regulations 2026",
+   "sum": "These Regulations make amendments to assimilated law in the field of sea fisheries. They also make a transitional provision.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1142/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1142/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-29"
+  },
+  {
+   "id": "leg:uksi/2026/1134/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-29",
+   "extent": "UK",
+   "title": "The Central Counterparties (Equivalence) (Indonesia and the People’s Republic of China) Regulations 2026",
+   "sum": "These Regulations set out the Treasury’s equivalence determinations in respect of the regulatory framework that applies to certain central counterparties (CCPs) that are established in Indonesia and the People’s Republic of China.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1134/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1134/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-29"
+  },
+  {
+   "id": "leg:uksi/2026/1138/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-29",
+   "extent": "UK",
+   "title": "The English Devolution and Community Empowerment Act 2026 (Consequential Amendments) Regulations 2026",
+   "sum": "These Regulations amend the Local Government Pension Scheme Regulations 2013 (S.I. 2013/2356) (“the 2013 Regulations”).",
+   "tags": [
+    "29.1",
+    "5.3"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1138/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1138/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-10-29"
   },
   {
    "id": "leg:uksi/2026/1135/made",
@@ -7501,6 +7624,14 @@
      "src": "GOV.UK · HM Revenue & Customs",
      "link": "https://www.gov.uk/government/publications/lifetime-isa-withdrawal-charge",
      "date": "2026-10-28"
+    },
+    {
+     "id": "govuk:/government/publications/lifetime-isa-withdrawal-charge",
+     "kind": "update",
+     "title": "Lifetime ISA withdrawal charge",
+     "src": "GOV.UK · HM Revenue & Customs",
+     "link": "https://www.gov.uk/government/publications/lifetime-isa-withdrawal-charge",
+     "date": "2026-10-28"
     }
    ]
   },
@@ -7666,6 +7797,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for London and the south east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "date": "2026-10-29"
+    },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
      "kind": "guidance",
@@ -14118,6 +14257,14 @@
      "src": "GOV.UK · Rural Payments Agency",
      "link": "https://www.gov.uk/government/publications/notice-to-traders-8226-imports-of-cereals-under-statutory-instrument-2020-no-1432",
      "date": "2026-10-27"
+    },
+    {
+     "id": "govuk:/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
+     "kind": "guidance",
+     "title": "Notice to Traders 84/26 - Imports of Sugar under Statutory Instrument 2020 No. 1432",
+     "src": "GOV.UK · Rural Payments Agency",
+     "link": "https://www.gov.uk/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
+     "date": "2026-10-29"
     },
     {
      "id": "govuk:/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
