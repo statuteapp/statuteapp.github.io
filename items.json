@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-29T21:43:35.342787+00:00",
+ "generated_at": "2026-10-30T01:51:18.954628+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
-   "count": 0,
+   "count": 1,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 14,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-29T21:43:35.342787+00:00",
+   "fetched_at": "2026-10-30T01:51:18.954628+00:00",
    "ok": true,
-   "count": 16,
+   "count": 44,
    "error": null,
-   "last_ok": "2026-10-29T21:43:35.342787+00:00"
+   "last_ok": "2026-10-30T01:51:18.954628+00:00"
   }
  ],
  "items": [
@@ -747,6 +747,762 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "pwo:55685:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Homes and Planning Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": "09:30",
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:55900:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Cancer (Reporting and Strategy) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:55901:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Coastal Communities (Health) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56009:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Gambling Act 2005 (Mandatory Conditions of Lottery Operating Licences) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56010:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Debt Relief (Developing Countries) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56011:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Tax Reliefs Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56012:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Statutory Instruments Act 1946 (Amendment) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56013:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Arm’s-Length Bodies (Accountability to Parliament) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56014:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Bailiffs (Warrants of Possession) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56015:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Bank of England (Inflation Targets) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56349:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Freedom of Information Act 2000 (Amendment) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56615:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Artificial Superintelligence Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56616:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Personal data (Digital Twins) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56853:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Non-domestic rating (retail, Hospitality and Leisure) bill: Second reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56856:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Wet Wipes (Labelling, Sale and Marketing) bill: Second reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56491:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Road Safety Plans Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56004:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Public Sector Exit Payments (Limitation) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56005:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: BBC Licence Fee Non-Payment (Decriminalisation for Over-75s) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56006:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: British Broadcasting Corporation (Privatisation) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56007:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Dangerous Dogs Act 1991 (Amendment) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56668:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Hospitality Services (Value Added Tax Exemption) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56669:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Sporting and Physical Education Services (Value Added Tax Exemption) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56670:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Meat (Information About Method of Killing) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56671:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Covid-19 Vaccine Damage Payments Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56678:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Multi-Storey Car Parks (Safety) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56679:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Sale and Supply of Glue Traps (Prohibition) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56906:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Perinatal Mental Health Assessments Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "pwo:56907:2026-11-13",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Parliament: Social security (marriage) Bill: Second Reading",
+   "sum": "Commons · Private Members' Bills",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-11-13",
+    "time": null,
+    "end": null,
+    "where": "Commons",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
    "id": "pwo:56919:2026-11-11",
    "kind": "update",
    "level": "uk",
@@ -1193,6 +1949,134 @@
      "date": "2026-11-03"
     }
    ]
+  },
+  {
+   "id": "fsa:rated:2026-09-24:1858916",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, 4 → 3: SHOC",
+   "sum": "Hospitals/Childcare/Caring Premises · 323 HIGH STREET SLOUGH SL1 1TX. Was rating 4; inspected 2026-09-24. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1858916",
+   "lat": 51.5074497,
+   "lng": -0.5849868,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-30"
+  },
+  {
+   "id": "govuk:/government/publications/individual-vehicle-approval-inspection-fees",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Vehicle approval test costs",
+   "sum": "Fees and test lengths for car, motorcycle, lorry, trailer, bus and coach approval tests.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Driver and Vehicle Standards Agency",
+   "link": "https://www.gov.uk/government/publications/individual-vehicle-approval-inspection-fees",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/government-steps-up-action-on-breast-cancer",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Government steps up action on breast cancer",
+   "sum": "More than 1,000 people join trial testing shorter radiotherapy treatment, potentially saving patients 10 hospital trips.",
+   "tags": [
+    "32.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/news/government-steps-up-action-on-breast-cancer",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/defence-contracts-to-prioritise-british-jobs-and-skills",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Defence contracts to prioritise British jobs and skills",
+   "sum": "Overseas firms winning UK defence contracts to be required to invest benefits back into the UK under new Offsets policy.",
+   "tags": [
+    "30.1",
+    "15.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence, HM Treasury",
+   "link": "https://www.gov.uk/government/news/defence-contracts-to-prioritise-british-jobs-and-skills",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/pms-message-to-devolved-governments-work-with-me-to-empower-every-single-part-of-the-uk",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "PM’s message to Devolved Governments: “Work with me to empower every single part of the UK”",
+   "sum": "Prime Minister Andy Burnham makes new offer to work with each nation to place more decision-making in the hands of regions and cities at a meeting with the First Ministers of Scotland and Wales in Glasgow today.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/pms-message-to-devolved-governments-work-with-me-to-empower-every-single-part-of-the-uk",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/foreign-travel-advice/colombia",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "Colombia travel advice",
+   "sum": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/foreign-travel-advice/colombia",
+   "first_seen": "2026-10-06",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/uk-offset-policy",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-30",
+   "extent": "UK",
+   "title": "UK Offset Policy",
+   "sum": "Securing additional UK industrial, capability, and economic benefit from selected overseas defence and security procurements.",
+   "tags": [
+    "30.1",
+    "15.1"
+   ],
+   "src": "GOV.UK · Ministry of Defence",
+   "link": "https://www.gov.uk/government/publications/uk-offset-policy",
+   "first_seen": "2026-10-30",
+   "pdf_checked": true
   },
   {
    "id": "leg:uksi/2026/1139/made",
@@ -1789,10 +2673,10 @@
    "src": "GOV.UK · Attorney General's Office",
    "link": "https://www.gov.uk/government/publications/guidance-attorney-generals-guidance-on-legal-risk--2",
    "first_seen": "2026-10-29",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aa017a862ec7fe7bedf5179/AGO_Legal_Risk_Guidance_-_8_September_2026.pdf",
    "pdf_label": "Attorney General's Legal Guidance - 8 September 2026 (PDF)",
-   "pdf_size": 186910
+   "pdf_size": 186910,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/dcms-framework-documents",
@@ -6151,23 +7035,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/leeds-station-set-for-biggest-transformation-in-a-generation-as-government-backs-citys-growth-with-a-303-million-upgrade",
-   "kind": "rates",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-28",
-   "extent": "UK",
-   "title": "Leeds station set for biggest transformation in a generation as government backs city’s growth with a £303 million upgrade",
-   "sum": "Upgrades include the construction of a new central overbridge, 3 new entrances, nearly 40% more rail ticket barriers and increased lift capacity to make journeys quicker and easier.",
-   "tags": [
-    "52.1"
-   ],
-   "src": "GOV.UK · Department for Transport",
-   "link": "https://www.gov.uk/government/news/leeds-station-set-for-biggest-transformation-in-a-generation-as-government-backs-citys-growth-with-a-303-million-upgrade",
-   "first_seen": "2026-10-28",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/revenue-and-customs-brief-12-2026-vat-zero-rate-on-donated-medicines",
    "kind": "rates",
    "level": "uk",
@@ -6237,6 +7104,23 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6a4f6fa6f79c9db2eb438f99/Soft_Drinks_Industry_Levy_changes.pdf",
    "pdf_label": "Draft legislation (PDF)",
    "pdf_size": 199290,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/leeds-station-set-for-biggest-transformation-in-a-generation-as-government-backs-citys-growth-with-a-303-million-upgrade",
+   "kind": "rates",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-28",
+   "extent": "UK",
+   "title": "Leeds station set for biggest transformation in a generation as government backs city’s growth with a £303 million upgrade",
+   "sum": "Upgrades include the construction of a new central overbridge, 3 new entrances, nearly 40% more rail ticket barriers and increased lift capacity to make journeys quicker and easier.",
+   "tags": [
+    "52.1"
+   ],
+   "src": "GOV.UK · Department for Transport",
+   "link": "https://www.gov.uk/government/news/leeds-station-set-for-biggest-transformation-in-a-generation-as-government-backs-citys-growth-with-a-303-million-upgrade",
+   "first_seen": "2026-10-28",
    "pdf_checked": true
   },
   {
@@ -6609,6 +7493,14 @@
      "src": "GOV.UK · HM Revenue & Customs",
      "link": "https://www.gov.uk/government/publications/lifetime-isa-withdrawal-charge",
      "date": "2026-10-28"
+    },
+    {
+     "id": "govuk:/government/publications/lifetime-isa-withdrawal-charge",
+     "kind": "update",
+     "title": "Lifetime ISA withdrawal charge",
+     "src": "GOV.UK · HM Revenue & Customs",
+     "link": "https://www.gov.uk/government/publications/lifetime-isa-withdrawal-charge",
+     "date": "2026-10-28"
     }
    ]
   },
@@ -6774,6 +7666,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for London and the south east of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
+     "date": "2026-10-29"
+    },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-london-and-the-south-east-of-england",
      "kind": "guidance",
@@ -8055,23 +8955,6 @@
    "pdf": "https://assets.publishing.service.gov.uk/media/6ae0d423e4367e5c8b0467c4/apar-application-guidance.pdf",
    "pdf_label": "APAR application guidance (PDF)",
    "pdf_size": 443514
-  },
-  {
-   "id": "govuk:/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-28",
-   "extent": "UK",
-   "title": "What the Autumn Budget 2026 means for your energy bills",
-   "sum": "The Autumn Budget will create breathing space for families with the cost of living.",
-   "tags": [
-    "48.6"
-   ],
-   "src": "GOV.UK · Department for Energy Security and Net Zero",
-   "link": "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills",
-   "first_seen": "2026-10-28",
-   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/revenue-and-customs-brief-13-2026-vat-and-climate-change-levy-on-electric-vehicle-charging-for-non-domestic-use",
@@ -9406,6 +10289,23 @@
    "pdf_checked": true,
    "closes": "2026-08-10",
    "opens": "2026-05-18"
+  },
+  {
+   "id": "govuk:/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-10-28",
+   "extent": "UK",
+   "title": "What the Autumn Budget 2026 means for your energy bills",
+   "sum": "The Autumn Budget will create breathing space for families with the cost of living.",
+   "tags": [
+    "48.6"
+   ],
+   "src": "GOV.UK · Department for Energy Security and Net Zero",
+   "link": "https://www.gov.uk/government/news/what-the-autumn-budget-2026-means-for-your-energy-bills",
+   "first_seen": "2026-10-28",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/government-and-rolls-royce-agree-25bn-to-build-jet-engines-in-the-uk-and-create-tens-of-thousands-of-jobs",
@@ -13218,6 +14118,14 @@
      "src": "GOV.UK · Rural Payments Agency",
      "link": "https://www.gov.uk/government/publications/notice-to-traders-8226-imports-of-cereals-under-statutory-instrument-2020-no-1432",
      "date": "2026-10-27"
+    },
+    {
+     "id": "govuk:/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
+     "kind": "guidance",
+     "title": "Notice to Traders 84/26 - Imports of Sugar under Statutory Instrument 2020 No. 1432",
+     "src": "GOV.UK · Rural Payments Agency",
+     "link": "https://www.gov.uk/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
+     "date": "2026-10-29"
     },
     {
      "id": "govuk:/government/publications/notice-to-traders-8426-imports-of-sugar-under-statutory-instrument-2020-no-1432",
@@ -42932,23 +43840,6 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade",
    "link": "https://www.gov.uk/business-finance-support/skills-for-life-service",
    "first_seen": "2026-10-15",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/foreign-travel-advice/colombia",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-15",
-   "extent": "UK",
-   "title": "Colombia travel advice",
-   "sum": "FCDO travel advice for Colombia. Includes safety and security, insurance, entry requirements and legal differences.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/foreign-travel-advice/colombia",
-   "first_seen": "2026-10-06",
    "pdf_checked": true
   },
   {
@@ -73890,137 +74781,6 @@
    ],
    "src": "GOV.UK · Home Office, Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/crime-and-policing-act-2026-factsheets",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "leg:uksi/2026/1057/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "The M25 Junction 10/A3 Wisley Interchange Development Consent (Amendment) Order 2026",
-   "sum": "This Order amends the M25 Junction 10/A3 Wisley Interchange Development Consent Order 2022 (“the 2022 Order”), a development consent order under the Planning Act 2008 (“the Act”).",
-   "tags": [
-    "43.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1057/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1057/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "leg:uksi/2026/1055/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "The Gatwick Airport (Northern Runway Project) Development Consent (Correction) Order 2026",
-   "sum": "This Order corrects errors and omissions in the Gatwick Airport (Northern Runway Project) Development Consent Order 2025 (S.I. 2025/1054), a development consent order under the Planning Act 2008, following a request under paragraph 1(5)(a) ",
-   "tags": [
-    "52.3",
-    "43.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1055/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1055/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "leg:uksi/2026/1050/pdfs/uksics_20261050_en_001.pdf",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "Correction Slip",
-   "sum": "These Rules make amendments to the Firearms Rules 1998 (S.I. 1998/1941) (“the 1998 Rules”).",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1050/pdfs/uksics_20261050_en_001.pdf",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1050/pdfs/uksics_20261050_en_001.pdf",
-   "pdf_label": "official document (PDF)",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "govuk:/government/publications/risley-prison-action-plan--2",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "Risley Prison: action plan",
-   "sum": "HM Prison and Probation Service action plans for Risley Prison in response to HM Inspectorate of Prisons (HMIP) inspections.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
-   "link": "https://www.gov.uk/government/publications/risley-prison-action-plan--2",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6aba2111a9c3d267bcccef5d/HMP_Risley_action_plan_-_September_2026.pdf",
-   "pdf_label": "HMP Risley action plan - September 2026 (PDF)",
-   "pdf_size": 227696,
-   "pdf_more": 1,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/somerset-levels-and-moors-reducing-the-risk-of-flooding",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "Somerset Levels and Moors: reducing the risk of flooding",
-   "sum": "What the Environment Agency is doing to reduce the risk of flooding on the Somerset Levels and Moors.",
-   "tags": [
-    "47.2"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/government/publications/somerset-levels-and-moors-reducing-the-risk-of-flooding",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/lindholme-prison-action-plan",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "Lindholme Prison: action plan",
-   "sum": "HM Prison and Probation Service action plans for Lindholme Prison in response to HM Inspectorate of Prisons (HMIP) inspections.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Prison and Probation Service, Ministry of Justice",
-   "link": "https://www.gov.uk/government/publications/lindholme-prison-action-plan",
-   "first_seen": "2026-10-03",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6aba26028cb3c0580e50122e/HMP_Lindholme_action_plan_-_September_2026.pdf",
-   "pdf_label": "HMP Lindholme action plan - September 2026 (PDF)",
-   "pdf_size": 242684,
-   "pdf_more": 1,
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/publications/solar-radiation-modification-approaches-the-governments-view",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-09-29",
-   "extent": "UK",
-   "title": "Solar radiation modification approaches - the government's view",
-   "sum": "The UK Government does not support the deployment of solar radiation modification and does not plan to do so.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Energy Security and Net Zero",
-   "link": "https://www.gov.uk/government/publications/solar-radiation-modification-approaches-the-governments-view",
    "first_seen": "2026-10-03",
    "pdf_checked": true
   },
