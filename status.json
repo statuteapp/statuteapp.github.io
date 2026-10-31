@@ -3,127 +3,127 @@
   "legislation.gov.uk": {
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 20,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-30T08:29:47.469614+00:00"
   },
   "Bills API": {
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 40,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-23T09:55:34.366072+00:00"
   },
   "GOV.UK": {
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 300,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0
   },
   "Bank holidays": {
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 18,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0
   },
   "Food Standards Agency": {
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
-   "items": 27,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "items": 0,
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-04T05:46:05.359160+00:00"
   },
   "police.uk": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 1,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0
   },
   "FSA food alerts": {
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 49,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0
   },
   "Environment Agency floods": {
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-27T14:20:39.864448+00:00"
   },
   "Police neighbourhood": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 14,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0
   },
   "The Gazette": {
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-30T08:29:47.469614+00:00"
   },
   "Council meetings (Modern.Gov)": {
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": false,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 0,
-   "last_fail": "2026-10-31T06:53:46.173283+00:00",
+   "last_fail": "2026-10-31T13:33:40.067451+00:00",
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
-   "fails": 169
+   "fails": 170
   },
   "Parliament What's On": {
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-10-31T06:53:46.173283+00:00",
+   "last_run": "2026-10-31T13:33:40.067451+00:00",
    "ok": true,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 45,
-   "last_ok": "2026-10-31T06:53:46.173283+00:00",
+   "last_ok": "2026-10-31T13:33:40.067451+00:00",
    "fails": 0,
    "last_fail": "2026-10-11T15:33:32.679768+00:00"
   }
@@ -1339,14 +1339,21 @@
    "failed": [
     "Council meetings (Modern.Gov)"
    ]
+  },
+  {
+   "at": "2026-10-31T13:33:40.067451+00:00",
+   "items": 4156,
+   "failed": [
+    "Council meetings (Modern.Gov)"
+   ]
   }
  ],
- "generated_at": "2026-10-31T06:53:46.173283+00:00",
- "items": 4155,
+ "generated_at": "2026-10-31T13:33:40.067451+00:00",
+ "items": 4156,
  "by_level": {
   "nation": 25,
   "local": 88,
-  "uk": 4042
+  "uk": 4043
  },
  "by_day": {
   "2028-12-26": {
@@ -1448,11 +1455,11 @@
    "uk": 4
   },
   "2026-10-31": {
-   "local": 27,
-   "uk": 3
+   "uk": 5,
+   "local": 27
   },
   "2026-10-30": {
-   "uk": 249,
+   "uk": 248,
    "local": 1
   },
   "2026-10-29": {
