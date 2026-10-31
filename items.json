@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-10-31T00:40:16.985688+00:00",
+ "generated_at": "2026-10-31T06:53:46.173283+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
-   "count": 0,
+   "count": 27,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 49,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 14,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-10-31T00:40:16.985688+00:00",
+   "fetched_at": "2026-10-31T06:53:46.173283+00:00",
    "ok": true,
    "count": 45,
    "error": null,
-   "last_ok": "2026-10-31T00:40:16.985688+00:00"
+   "last_ok": "2026-10-31T06:53:46.173283+00:00"
   }
  ],
  "items": [
@@ -1978,6 +1978,678 @@
    ]
   },
   {
+   "id": "fsa:new:2009407",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: 360 Montem Wraparound",
+   "sum": "School/college/university · MONTEM PRIMARY SCHOOL CHALVEY GROVE SLOUGH SL1 2TE. Registered with the council, exempt from rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009407",
+   "lat": 51.507086,
+   "lng": -0.6193213,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009400",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Anjana Bhog Slough",
+   "sum": "Retailers - other · 5 Station Road Slough SL1 6JJ. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009400",
+   "lat": 51.52074,
+   "lng": -0.64542,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009412",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Boma Coffee Company",
+   "sum": "Mobile caterer · 21A WILLOW ROAD POYLE SLOUGH SL3 0BS. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009412",
+   "lat": 51.4760233,
+   "lng": -0.5131388,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009406",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: BUTTERFRY CAFE",
+   "sum": "Restaurant/Cafe/Canteen · PARLIAMENT HOUSE ST LAURENCE WAY SLOUGH SL1 2BW. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009406",
+   "lat": 51.5054265,
+   "lng": -0.5887239,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009405",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Cliveden Foods Limited",
+   "sum": "Distributors/Transporters · 89 WHITBY ROAD SLOUGH SL1 3DR. Registered with the council, exempt from rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009405",
+   "lat": 51.5168114,
+   "lng": -0.6121237,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:rated:2026-10-28:1046343",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5 kept: Costa Coffee",
+   "sum": "Restaurant/Cafe/Canteen · 40 LIVERPOOL ROAD SLOUGH SL1 4QZ. Re-inspected 2026-10-28, same rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1046343",
+   "lat": 51.52092,
+   "lng": -0.6242503,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009402",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Crust & Crunch",
+   "sum": "Takeaway/sandwich shop · THE LODGE HIGH STREET COLNBROOK SLOUGH SL3 0LX. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009402",
+   "lat": 51.4837343,
+   "lng": -0.5220336,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009398",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Dee's Kitchen",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009398",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009399",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Foodies",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009399",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009404",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Fruity Bliss",
+   "sum": "Retailers - other · 35 THE OBSERVATORY HIGH STREET SLOUGH SL1 1LE. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009404",
+   "lat": 51.5086195,
+   "lng": -0.589533,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009401",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Gourmet Grill Mr. Cod",
+   "sum": "Takeaway/sandwich shop · 228 TRELAWNEY AVENUE SLOUGH SL3 7UD. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009401",
+   "lat": 51.5018251,
+   "lng": -0.554371,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009408",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Grill Street",
+   "sum": "Takeaway/sandwich shop · 273 HIGH STREET SLOUGH SL1 1BN. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009408",
+   "lat": 51.5078152,
+   "lng": -0.5877134,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009397",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: GRND COFFEE",
+   "sum": "Restaurant/Cafe/Canteen · 3 The Grove Slough. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009397",
+   "lat": 51.5072174,
+   "lng": -0.5873573,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009396",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Khaas Zaiqa",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009396",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009411",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Monsta Munch (The Jerk Hut)",
+   "sum": "Other catering premises · 234-236 HIGH STREET SLOUGH SL1 1JU. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009411",
+   "lat": 51.5076018,
+   "lng": -0.5886567,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009409",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: New Pak",
+   "sum": "Mobile caterer · 287 HIGH STREET SLOUGH SL1 1BD. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009409",
+   "lat": 51.5077865,
+   "lng": -0.5868209,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009410",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Nyam & Ting",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009410",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009395",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Pavilion Supermarket",
+   "sum": "Retailers - other · 1 THE PAVILIONS STOKE GARDENS SLOUGH SL1 3QD. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009395",
+   "lat": 51.513708,
+   "lng": -0.596178,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009413",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Polski Smak",
+   "sum": "Retailers - other · 6 UPTON LEA PARADE SLOUGH SL2 5JU. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009413",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:new:2009403",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Post Office - Shukran",
+   "sum": "Restaurant/Cafe/Canteen · 39 THE OBSERVATORY HIGH STREET SLOUGH SL1 1LD. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2009403",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:rated:2026-10-09:1970474",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Slough Foodbank",
+   "sum": "Distributors/Transporters · 388 SYKES ROAD SLOUGH SL1 4SP. Was awaiting inspection; inspected 2026-10-09. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1970474",
+   "lat": 51.5247123,
+   "lng": -0.6209791,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:rated:2026-10-19:1970476",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: Zaiqa House Slough",
+   "sum": "Other catering premises · . Was awaiting inspection; inspected 2026-10-19. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1970476",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:closed:1875808",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: ANK International Limited",
+   "sum": "Retailers - other · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1875808",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:closed:1828026",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Kofi Mukaase Restaurant",
+   "sum": "Restaurant/Cafe/Canteen · THE BRICKHOUSE 230-236 HIGH STREET SLOUGH United Kingdom SL1 1JU. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agenc",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1828026",
+   "lat": 51.5074701,
+   "lng": -0.5889201,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:closed:920539",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Marwa Halal Centre",
+   "sum": "Retailers - other · 281 HIGH STREET SLOUGH SL1 1BD. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/920539",
+   "lat": 51.5079156,
+   "lng": -0.5870907,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:closed:1617331",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Masood Halal Meat",
+   "sum": "Retailers - other · 281 HIGH STREET SLOUGH SL1 1BD. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1617331",
+   "lat": 51.5079156,
+   "lng": -0.5870907,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
+   "id": "fsa:closed:802696",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-10-31",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Slough FoodBank",
+   "sum": "Distributors/Transporters · 411 MONTROSE AVENUE SLOUGH SL1 4TJ. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/802696",
+   "lat": 51.5239229,
+   "lng": -0.6203832,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-10-31"
+  },
+  {
    "id": "govuk:/government/news/asbestos-compensation-injustice-ended-for-bereaved-families",
    "kind": "update",
    "level": "uk",
@@ -2036,11 +2708,11 @@
    "src": "GOV.UK · Infected Blood Compensation Authority, Cabinet Office",
    "link": "https://www.gov.uk/government/publications/infected-blood-compensation-scheme",
    "first_seen": "2026-10-31",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a4e0e7eed5ddb5c8626f4a9/Case_Study_Calculation_Explainer.pdf",
    "pdf_label": "Explainer: Infected Blood Compensation Scheme (PDF)",
    "pdf_size": 1135869,
-   "pdf_more": 5
+   "pdf_more": 5,
+   "pdf_checked": true
   },
   {
    "id": "leg:uksi/2026/1146/made",
@@ -7513,6 +8185,14 @@
    "first_seen": "2026-10-29",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/hmp-leicester-families-and-significant-others-strategy",
+     "kind": "guidance",
+     "title": "HMP Leicester Families and Significant Others Strategy",
+     "src": "GOV.UK · HM Prison and Probation Service",
+     "link": "https://www.gov.uk/guidance/hmp-leicester-families-and-significant-others-strategy",
+     "date": "2026-10-30"
+    },
     {
      "id": "govuk:/guidance/hmp-leicester-families-and-significant-others-strategy",
      "kind": "guidance",
@@ -20452,6 +21132,14 @@
    "pdf_label": "the instrument as made (PDF)",
    "first_seen": "2026-10-26",
    "also": [
+    {
+     "id": "leg:uksi/2026/1141/made",
+     "kind": "law",
+     "title": "The English Devolution and Community Empowerment Act 2026 (Commencement No. 4) Regulations 2026",
+     "src": "legislation.gov.uk",
+     "link": "https://www.legislation.gov.uk/uksi/2026/1141/made",
+     "date": "2026-10-30"
+    },
     {
      "id": "leg:uksi/2026/1141/made",
      "kind": "law",
