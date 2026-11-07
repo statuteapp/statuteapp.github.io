@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-07T13:54:10.586835+00:00",
+ "generated_at": "2026-11-07T18:39:19.560087+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
-   "ok": true,
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "TimeoutError: The read operation timed out",
    "last_ok": "2026-11-07T13:54:10.586835+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 13,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-07T13:54:10.586835+00:00",
+   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
    "ok": true,
    "count": 44,
    "error": null,
-   "last_ok": "2026-11-07T13:54:10.586835+00:00"
+   "last_ok": "2026-11-07T18:39:19.560087+00:00"
   }
  ],
  "items": [
@@ -1972,6 +1972,23 @@
    ],
    "src": "GOV.UK · Ministry of Defence",
    "link": "https://www.gov.uk/government/news/uk-military-satellite-titania-launches-into-orbit-following-3bn-space-investment-into-defence-of-space",
+   "first_seen": "2026-11-07",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/foreign-travel-advice/poland",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-07",
+   "extent": "UK",
+   "title": "Poland travel advice",
+   "sum": "FCDO travel advice for Poland. Includes safety and security, insurance, entry requirements and legal differences.  ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/foreign-travel-advice/poland",
    "first_seen": "2026-11-07",
    "pdf_checked": true
   },
@@ -25009,6 +25026,14 @@
    "first_seen": "2026-10-30",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/government/news/major-boost-for-young-people-in-luton-as-youth-hub-opens-to-support-them-towards-work",
+     "kind": "update",
+     "title": "Major boost for young people in Luton as Youth Hub opens to support them towards work",
+     "src": "GOV.UK · Department for Work and Pensions",
+     "link": "https://www.gov.uk/government/news/major-boost-for-young-people-in-luton-as-youth-hub-opens-to-support-them-towards-work",
+     "date": "2026-11-06"
+    },
     {
      "id": "govuk:/government/news/major-boost-for-young-people-in-luton-as-youth-hub-opens-to-support-them-towards-work",
      "kind": "update",
