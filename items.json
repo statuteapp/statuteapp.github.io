@@ -1,82 +1,82 @@
 {
- "generated_at": "2026-11-07T18:39:19.560087+00:00",
+ "generated_at": "2026-11-07T22:38:58.937789+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": false,
    "count": 0,
    "error": "TimeoutError: The read operation timed out",
@@ -86,27 +86,27 @@
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 13,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-07T18:39:19.560087+00:00",
+   "fetched_at": "2026-11-07T22:38:58.937789+00:00",
    "ok": true,
    "count": 44,
    "error": null,
-   "last_ok": "2026-11-07T18:39:19.560087+00:00"
+   "last_ok": "2026-11-07T22:38:58.937789+00:00"
   }
  ],
  "items": [
@@ -1938,6 +1938,40 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
    "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-07",
+   "extent": "UK",
+   "title": "Bird flu (avian influenza): latest situation in England",
+   "sum": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/no-one-who-has-served-our-country-should-sleep-rough-on-our-streets",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-07",
+   "extent": "UK",
+   "title": "No one who has served our country should sleep rough on our streets",
+   "sum": "The Prime Minister will write personally to councils in England on Armistice Day asking them to develop a specific plan to offer accommodation to any veterans sleeping rough ahead of the Christmas period.",
+   "tags": [
+    "15.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/no-one-who-has-served-our-country-should-sleep-rough-on-our-streets",
+   "first_seen": "2026-11-07",
    "pdf_checked": true
   },
   {
@@ -8911,23 +8945,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/speeches/joint-statement-by-the-informal-group-of-friends-of-safety-of-journalists-november-2026",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-05",
-   "extent": "UK",
-   "title": "Joint Statement by the Informal Group of Friends of Safety of Journalists, November 2026",
-   "sum": "Outi Hyvärinen, Permanent Representative of Finland to the OSCE, delivers the Joint Statement by the Informal Group of Friends on the Safety of Journalists on the November 2026 Report by the OSCE Representative on Freedom of the Media.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/government/speeches/joint-statement-by-the-informal-group-of-friends-of-safety-of-journalists-november-2026",
-   "first_seen": "2026-11-05",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/consultations/consultation-on-the-proposed-update-and-consolidation-of-northern-irelands-domestic-legislative-framework-for-food-contact-materials",
    "kind": "record",
    "level": "uk",
@@ -8950,6 +8967,23 @@
    "pdf_checked": true,
    "closes": "2027-01-29",
    "opens": "2026-11-05"
+  },
+  {
+   "id": "govuk:/government/speeches/joint-statement-by-the-informal-group-of-friends-of-safety-of-journalists-november-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-05",
+   "extent": "UK",
+   "title": "Joint Statement by the Informal Group of Friends of Safety of Journalists, November 2026",
+   "sum": "Outi Hyvärinen, Permanent Representative of Finland to the OSCE, delivers the Joint Statement by the Informal Group of Friends on the Safety of Journalists on the November 2026 Report by the OSCE Representative on Freedom of the Media.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/government/speeches/joint-statement-by-the-informal-group-of-friends-of-safety-of-journalists-november-2026",
+   "first_seen": "2026-11-05",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-j-a-summers-v-brj-support-services-2601005-slash-2025",
@@ -10534,23 +10568,6 @@
    "pdf_checked": true,
    "closes": "2026-12-29",
    "opens": "2026-11-04"
-  },
-  {
-   "id": "govuk:/guidance/bird-flu-avian-influenza-latest-situation-in-england",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-04",
-   "extent": "UK",
-   "title": "Bird flu (avian influenza): latest situation in England",
-   "sum": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
-   "tags": [
-    "46.4"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
-   "link": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/full-sutton-prison",
