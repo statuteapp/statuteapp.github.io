@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-13T00:06:39.344700+00:00",
+ "generated_at": "2026-11-13T06:30:37.902920+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
-   "count": 0,
+   "count": 5,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 15,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-13T00:06:39.344700+00:00",
+   "fetched_at": "2026-11-13T06:30:37.902920+00:00",
    "ok": true,
    "count": 62,
    "error": null,
-   "last_ok": "2026-11-13T00:06:39.344700+00:00"
+   "last_ok": "2026-11-13T06:30:37.902920+00:00"
   }
  ],
  "items": [
@@ -1788,6 +1788,126 @@
     "government"
    ],
    "first_seen": "2026-11-12"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1571078",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 3 kept: A to Z Food and Wine",
+   "sum": "Retailers - other · 406 FARNHAM ROAD SLOUGH SL2 1JA. Re-inspected 2026-10-08, same rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1571078",
+   "lat": 51.5288414,
+   "lng": -0.6165439,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:511904",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, 3 → 2: Kopernik",
+   "sum": "Retailers - other · 216-218 FARNHAM ROAD SLOUGH SL1 4XE. Was rating 3; inspected 2026-10-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/511904",
+   "lat": 51.5226162,
+   "lng": -0.6148011,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1087159",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 4 kept: Maharaja Sweets",
+   "sum": "Takeaway/sandwich shop · 8 GRASMERE PARADE SLOUGH SL2 5HZ. Re-inspected 2026-10-08, same rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1087159",
+   "lat": 51.5182817,
+   "lng": -0.5787266,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1986382",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 2: Mirza's Kitchen and Catering",
+   "sum": "Takeaway/sandwich shop · 10 ANSLOW PLACE SLOUGH SL1 6EA. Was awaiting inspection; inspected 2026-10-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1986382",
+   "lat": 51.5259198,
+   "lng": -0.6592004,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-13"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1932557",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 2: Teefey Afromart",
+   "sum": "Retailers - other · 1 SITE OF THE VILLAGE SHOPPING CENTRE HIGH STREET SLOUGH SL1 1HS. Was awaiting inspection; inspected 2026-10-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1932557",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-13"
   },
   {
    "id": "govuk:/government/publications/youth-matters-local-authority-grants",
@@ -19814,6 +19934,14 @@
      "src": "GOV.UK · Traffic Commissioners for Great Britain",
      "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-east-of-england",
      "date": "2026-11-12"
+    },
+    {
+     "id": "govuk:/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "kind": "guidance",
+     "title": "PSV notices and proceedings for the north west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/notices-and-proceedings-for-the-north-west-of-england",
+     "date": "2026-11-12"
     }
    ]
   },
@@ -19919,6 +20047,14 @@
      "title": "Goods vehicle applications and decisions for the north east of England",
      "src": "GOV.UK · Traffic Commissioners for Great Britain",
      "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-north-east-of-england",
+     "date": "2026-11-12"
+    },
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-west-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-west-of-england",
      "date": "2026-11-12"
     }
    ]
@@ -39326,6 +39462,14 @@
      "src": "GOV.UK · Infected Blood Compensation Authority",
      "link": "https://www.gov.uk/government/publications/government-update-on-further-interim-compensation-payments-for-estates",
      "date": "2026-11-05"
+    },
+    {
+     "id": "govuk:/government/publications/government-update-on-further-interim-compensation-payments-for-estates",
+     "kind": "update",
+     "title": "Further Interim Compensation Payments for Estates",
+     "src": "GOV.UK · Infected Blood Compensation Authority",
+     "link": "https://www.gov.uk/government/publications/government-update-on-further-interim-compensation-payments-for-estates",
+     "date": "2026-11-05"
     }
    ]
   },
@@ -45190,6 +45334,14 @@
    "closes": "2026-08-20",
    "opens": "2026-07-20",
    "also": [
+    {
+     "id": "govuk:/government/publications/better-use-of-new-and-improved-third-party-data-interest-income-and-card-sales",
+     "kind": "update",
+     "title": "Better use of new and improved third-party data (interest income and card sales)",
+     "src": "GOV.UK · HM Revenue & Customs",
+     "link": "https://www.gov.uk/government/publications/better-use-of-new-and-improved-third-party-data-interest-income-and-card-sales",
+     "date": "2026-11-03"
+    },
     {
      "id": "govuk:/government/publications/better-use-of-new-and-improved-third-party-data-interest-income-and-card-sales",
      "kind": "update",
