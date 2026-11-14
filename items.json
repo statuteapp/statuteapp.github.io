@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-14T10:05:23.752093+00:00",
+ "generated_at": "2026-11-14T16:33:25.212241+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 20,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 51,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 14,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-14T10:05:23.752093+00:00",
+   "fetched_at": "2026-11-14T16:33:25.212241+00:00",
    "ok": true,
    "count": 36,
    "error": null,
-   "last_ok": "2026-11-14T10:05:23.752093+00:00"
+   "last_ok": "2026-11-14T16:33:25.212241+00:00"
   }
  ],
  "items": [
@@ -1780,6 +1780,57 @@
    "first_seen": "2026-11-12"
   },
   {
+   "id": "govuk:/guidance/river-thames-current-river-conditions",
+   "kind": "alert",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-14",
+   "extent": "UK",
+   "title": "River Thames: current river conditions",
+   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Environment Agency",
+   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-14",
+   "extent": "UK",
+   "title": "UKHSA cold-health alerts winter 2026/27",
+   "sum": "Updates on latest cold health alerts.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · UK Health Security Agency",
+   "link": "https://www.gov.uk/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
+   "first_seen": "2026-11-10",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/stronger-savings-for-hundreds-of-thousands-of-workers",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-14",
+   "extent": "UK",
+   "title": "Stronger savings for hundreds of thousands of workers",
+   "sum": "Workers can join schemes where a proportion of their salary, chosen by them, automatically goes into their own savings pot.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Treasury, Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/stronger-savings-for-hundreds-of-thousands-of-workers",
+   "first_seen": "2026-11-14",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/kings-award-for-voluntary-service-honour-250-volunteer-groups",
    "kind": "update",
    "level": "uk",
@@ -2011,23 +2062,6 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4327",
    "first_seen": "2026-11-13"
-  },
-  {
-   "id": "govuk:/guidance/river-thames-current-river-conditions",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-13",
-   "extent": "UK",
-   "title": "River Thames: current river conditions",
-   "sum": "The current conditions affecting boaters on the River Thames and what the warnings mean.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Environment Agency",
-   "link": "https://www.gov.uk/guidance/river-thames-current-river-conditions",
-   "first_seen": "2026-10-03",
-   "pdf_checked": true
   },
   {
    "id": "fsaalert:FSA-AA-53-2026",
@@ -3873,23 +3907,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/microsoft-outage-affecting-mca-email-services",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-13",
-   "extent": "UK",
-   "title": "Microsoft outage affecting MCA email services",
-   "sum": "Search and rescue operations not impacted by issues with Microsoft services.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Maritime and Coastguard Agency",
-   "link": "https://www.gov.uk/government/news/microsoft-outage-affecting-mca-email-services",
-   "first_seen": "2026-11-13",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/news/sia-service-update-licensing-continues-despite-global-microsoft-outage",
    "kind": "update",
    "level": "uk",
@@ -4351,6 +4368,23 @@
    "pdf_label": "Ancient Woodland Summary Report (November 2026) (PDF)",
    "pdf_size": 213640,
    "pdf_more": 8,
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/microsoft-outage-affecting-mca-email-services",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-13",
+   "extent": "UK",
+   "title": "Microsoft outage affecting MCA email services",
+   "sum": "Search and rescue operations not impacted by issues with Microsoft services.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Maritime and Coastguard Agency",
+   "link": "https://www.gov.uk/government/news/microsoft-outage-affecting-mca-email-services",
+   "first_seen": "2026-11-13",
    "pdf_checked": true
   },
   {
@@ -16245,6 +16279,14 @@
      "src": "GOV.UK · HM Revenue & Customs",
      "link": "https://www.gov.uk/guidance/pay-money-laundering-regulations-fees-and-penalty-charges",
      "date": "2026-11-13"
+    },
+    {
+     "id": "govuk:/guidance/pay-money-laundering-regulations-fees-and-penalty-charges",
+     "kind": "guidance",
+     "title": "Pay money laundering regulations fees",
+     "src": "GOV.UK · HM Revenue & Customs",
+     "link": "https://www.gov.uk/guidance/pay-money-laundering-regulations-fees-and-penalty-charges",
+     "date": "2026-11-13"
     }
    ]
   },
@@ -17112,23 +17154,6 @@
    ],
    "src": "GOV.UK · Independent Chief Inspector of Borders and Immigration ",
    "link": "https://www.gov.uk/government/news/inspection-report-published-an-inspection-of-the-uk-france-agreement-on-the-prevention-of-dangerous-journeys-operation-hillmore-march-june-2026",
-   "first_seen": "2026-11-10",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-10",
-   "extent": "UK",
-   "title": "UKHSA issues first cold-health alert of winter 2026/27",
-   "sum": "A yellow cold-health alert has been issued for the North West and West Midlands regions.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · UK Health Security Agency",
-   "link": "https://www.gov.uk/government/news/ukhsa-issues-first-cold-health-alert-of-winter-202627",
    "first_seen": "2026-11-10",
    "pdf_checked": true
   },
