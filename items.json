@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-21T17:19:48.642437+00:00",
+ "generated_at": "2026-11-21T23:01:52.654070+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
-   "count": 51,
+   "count": 50,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 12,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-21T17:19:48.642437+00:00",
+   "fetched_at": "2026-11-21T23:01:52.654070+00:00",
    "ok": true,
    "count": 53,
    "error": null,
-   "last_ok": "2026-11-21T17:19:48.642437+00:00"
+   "last_ok": "2026-11-21T23:01:52.654070+00:00"
   }
  ],
  "items": [
@@ -2122,6 +2122,40 @@
    "first_seen": "2026-11-21"
   },
   {
+   "id": "govuk:/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-21",
+   "extent": "UK",
+   "title": "Bird flu (avian influenza): latest situation in England",
+   "sum": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
+   "tags": [
+    "46.4"
+   ],
+   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
+   "link": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
+   "first_seen": "2026-10-03",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/pm-meeting-with-prime-minister-jetten-of-the-netherlands-21-november-2026",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-21",
+   "extent": "UK",
+   "title": "PM meeting with Prime Minister Jetten of the Netherlands: 21 November 2026",
+   "sum": "The Prime Minister met Rob Jetten, the Prime Minister of the Netherlands, today in Amsterdam.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Prime Minister's Office, 10 Downing Street",
+   "link": "https://www.gov.uk/government/news/pm-meeting-with-prime-minister-jetten-of-the-netherlands-21-november-2026",
+   "first_seen": "2026-11-21",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/defence-secretary-meets-president-zelensky-and-minister-khmara-in-kyiv-as-uk-deepens-industrial-support-for-ukraine",
    "kind": "record",
    "level": "uk",
@@ -2548,23 +2582,6 @@
    "src": "GOV.UK · Intellectual Property Office",
    "link": "https://www.gov.uk/guidance/intellectual-property-office-service-availability-and-issues",
    "first_seen": "2026-10-06",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/bird-flu-avian-influenza-latest-situation-in-england",
-   "kind": "guidance",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-20",
-   "extent": "UK",
-   "title": "Bird flu (avian influenza): latest situation in England",
-   "sum": "Find out about the latest bird flu situation in England and guidance for bird keepers and the public.",
-   "tags": [
-    "46.4"
-   ],
-   "src": "GOV.UK · Department for Environment, Food & Rural Affairs, Animal and Plant Health Agency",
-   "link": "https://www.gov.uk/guidance/bird-flu-avian-influenza-latest-situation-in-england",
-   "first_seen": "2026-10-03",
    "pdf_checked": true
   },
   {
@@ -8907,23 +8924,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/nuclear-power-site-transfer-programme-wins-national-award",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-19",
-   "extent": "UK",
-   "title": "Nuclear power site transfer programme wins national award",
-   "sum": "Award-winning team recognised for successful AGR site transfer to the NDA group.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Nuclear Restoration Services, Nuclear Decommissioning Authority",
-   "link": "https://www.gov.uk/government/news/nuclear-power-site-transfer-programme-wins-national-award",
-   "first_seen": "2026-11-19",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/consultations/legislative-proposals-to-address-broadband-rollout-in-leasehold-flats",
    "kind": "update",
    "level": "uk",
@@ -9230,6 +9230,23 @@
    ],
    "src": "GOV.UK · Companies House",
    "link": "https://www.gov.uk/government/publications/companies-house-approach-to-non-compliance-with-mandatory-identity-verification",
+   "first_seen": "2026-11-19",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/nuclear-power-site-transfer-programme-wins-national-award",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-19",
+   "extent": "UK",
+   "title": "Nuclear power site transfer programme wins national award",
+   "sum": "Award-winning team recognised for successful AGR site transfer to the NDA group.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Nuclear Restoration Services, Nuclear Decommissioning Authority",
+   "link": "https://www.gov.uk/government/news/nuclear-power-site-transfer-programme-wins-national-award",
    "first_seen": "2026-11-19",
    "pdf_checked": true
   },
@@ -12123,6 +12140,14 @@
    "first_seen": "2026-11-18",
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/government/publications/declaration-of-maritime-labour-compliance-part-ii-and-guidance",
+     "kind": "guidance",
+     "title": "Declaration of maritime labour compliance part II and guidance",
+     "src": "GOV.UK · Maritime and Coastguard Agency",
+     "link": "https://www.gov.uk/government/publications/declaration-of-maritime-labour-compliance-part-ii-and-guidance",
+     "date": "2026-11-20"
+    },
     {
      "id": "govuk:/government/publications/declaration-of-maritime-labour-compliance-part-ii-and-guidance",
      "kind": "guidance",
@@ -85507,26 +85532,6 @@
    ],
    "src": "Food Standards Agency alerts",
    "link": "https://alerts.food.gov.uk/news-alerts/alert/fsa-fafa-01-2026",
-   "who": [
-    "household"
-   ],
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "fsaalert:FSA-AA-28-2026",
-   "kind": "alert",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-05-28",
-   "extent": "E",
-   "title": "Allergy alert: Gü recalls Gü Double Sea Salted Caramel Frozen Dessert because of undeclared hazelnuts (nuts) and soya",
-   "sum": "If you have bought the above product and have an allergy to hazelnuts (nuts) and/or soya do not eat it. Instead return it to the store from where it was bought for a full refund. No receipt required. For Contains Food Standards Agency data.",
-   "tags": [
-    "33.5",
-    "25.3"
-   ],
-   "src": "Food Standards Agency alerts",
-   "link": "https://www.food.gov.uk/news-alerts/alert/fsa-aa-28-2026",
    "who": [
     "household"
    ],
