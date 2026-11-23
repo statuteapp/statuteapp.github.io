@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-23T00:10:18.719255+00:00",
+ "generated_at": "2026-11-23T08:52:55.907073+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
-   "count": 18,
+   "count": 19,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 12,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-23T00:10:18.719255+00:00",
+   "fetched_at": "2026-11-23T08:52:55.907073+00:00",
    "ok": true,
    "count": 55,
    "error": null,
-   "last_ok": "2026-11-23T00:10:18.719255+00:00"
+   "last_ok": "2026-11-23T08:52:55.907073+00:00"
   }
  ],
  "items": [
@@ -1975,6 +1975,154 @@
    ]
   },
   {
+   "id": "leg:uksi/2026/1220/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Spring Park, Wiltshire) Regulations 2026",
+   "sum": "The Secretary of State for Transport has decided that it is necessary in the public interest for reasons of national defence to restrict the flying of unmanned aircraft in the vicinity of Corsham, Wiltshire.",
+   "tags": [
+    "52.4",
+    "16.4",
+    "15.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1220/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1220/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "leg:uksi/2026/1199/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "The Sussex and Brighton Combined County Authority (Transfer of Fire and Rescue Functions) Order 2026",
+   "sum": "This Order provides for the conferral of the functions of the East Sussex Fire Authority (“the ESFA”) and the West Sussex County Council as a fire and rescue Authority (“the WSFRA”) (together “the existing FRAs”) on the Sussex and Brighton ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1199/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1199/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "leg:uksi/2026/1214/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "The Surrey Fire and Rescue Authority (Combination Scheme) Order 2026",
+   "sum": "This Order makes a scheme which combines the areas of the East Surrey and West Surrey Councils (“the Councils”) into a combined area and creates a fire and rescue authority for that area. Under the Fire and Rescue Services Act 2004, the Cou",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1214/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1214/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "leg:uksi/2026/1198/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "The Cumbria Combined Authority (Transfer of Fire and Rescue Functions) Order 2026",
+   "sum": "This Order provides for the conferral of the functions of the Cumbria Commissioner Fire and Rescue Authority (“the CCFRA”) on the Cumbria Combined Authority (“the Combined Authority”).",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1198/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1198/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "govuk:/government/consultations/proposed-merchant-shipping-fees-regulations-2028",
+   "kind": "consult",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Proposed Merchant Shipping (Fees) Regulations 2028",
+   "sum": "This consultation seeks your views on a new statutory instrument (SI) titled the Merchant Shipping (Fees) Regulations 2028 (“the 2028 Regulations”). \r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Maritime and Coastguard Agency",
+   "link": "https://www.gov.uk/government/consultations/proposed-merchant-shipping-fees-regulations-2028",
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2027-01-24",
+   "opens": "2026-11-23",
+   "pdf": "https://assets.publishing.service.gov.uk/media/6b00108accc4c5f2cd424083/draft_merchant__shipping_fees_regulations_2028.pdf",
+   "pdf_label": "Draft Merchant Shipping (Fees) Regulations 2028 (PDF)",
+   "pdf_size": 2854754
+  },
+  {
+   "id": "govuk:/government/publications/check-the-statutory-market-values-for-oil",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Check the statutory market values for oil",
+   "sum": "Find statutory market values for disposal of category 1 oil from a UK field, which has not been sold at arm's length.\r\n\r\n",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · HM Revenue & Customs",
+   "link": "https://www.gov.uk/government/publications/check-the-statutory-market-values-for-oil",
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/forestry-nursery-directory",
+   "kind": "guidance",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Tree nursery directories",
+   "sum": "Find forestry and tree nurseries in your local area and in Great Britain using the forestry nurseries directory and tree nurseries directory (agroforestry). ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Forestry Commission",
+   "link": "https://www.gov.uk/government/publications/forestry-nursery-directory",
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/sovereign-ai-and-national-security-strategic-investment-fund-backing-british-autonomous-defence-systems-firm",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Sovereign AI and National Security Strategic Investment Fund backing British autonomous defence systems firm",
+   "sum": "UK Government’s Sovereign AI Fund and the National Security Strategic Investment Fund (NSSIF) invest in AI defence firm Agon",
+   "tags": [
+    "16.1",
+    "15.1"
+   ],
+   "src": "GOV.UK · Cabinet Office",
+   "link": "https://www.gov.uk/government/news/sovereign-ai-and-national-security-strategic-investment-fund-backing-british-autonomous-defence-systems-firm",
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/dont-turn-a-blind-eye-kent-communities-urged-to-trust-their-instincts-and-report-waste-criminals",
    "kind": "update",
    "level": "uk",
@@ -2135,6 +2283,23 @@
     "government"
    ],
    "first_seen": "2026-11-11"
+  },
+  {
+   "id": "govuk:/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Driving test appointments: release dates and finding earlier tests",
+   "sum": "Find out when driving test appointments are released, when to search for earlier tests, and how long people wait to take the test.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "GOV.UK · Driver and Vehicle Standards Agency",
+   "link": "https://www.gov.uk/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
+   "first_seen": "2026-10-05",
+   "pdf_checked": true
   },
   {
    "id": "bill:4144",
@@ -2452,25 +2617,6 @@
    "first_seen": "2026-11-19"
   },
   {
-   "id": "leg:uksi/2026/1202/made",
-   "kind": "law",
-   "level": "nation",
-   "status": "now",
-   "date": "2026-11-20",
-   "extent": "E",
-   "title": "The Traffic Orders and Notices (Provision of Digital Information) (England) Regulations 2026",
-   "sum": "These Regulations make provision to require traffic regulation authorities in England to provide information to the Secretary of State about the traffic regulation measures that they make. The Secretary of State will, in turn, publish that ",
-   "tags": [
-    "51.3",
-    "51.4"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1202/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1202/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-19"
-  },
-  {
    "id": "bill:4080",
    "kind": "law",
    "level": "uk",
@@ -2715,6 +2861,25 @@
    ],
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4331",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "id": "leg:uksi/2026/1202/made",
+   "kind": "law",
+   "level": "nation",
+   "status": "now",
+   "date": "2026-11-20",
+   "extent": "E",
+   "title": "The Traffic Orders and Notices (Provision of Digital Information) (England) Regulations 2026",
+   "sum": "These Regulations make provision to require traffic regulation authorities in England to provide information to the Secretary of State about the traffic regulation measures that they make. The Secretary of State will, in turn, publish that ",
+   "tags": [
+    "51.3",
+    "51.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1202/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1202/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
    "first_seen": "2026-11-19"
   },
   {
@@ -3722,22 +3887,6 @@
      "title": "Bats: survey or research level 2 licence (CL18)",
      "src": "GOV.UK · Natural England",
      "link": "https://www.gov.uk/government/publications/bats-survey-or-research-licence-level-2",
-     "date": "2026-11-20"
-    },
-    {
-     "id": "govuk:/government/publications/bats-survey-or-research-licence-level-3",
-     "kind": "guidance",
-     "title": "Bats: survey or research level 3 licence (CL19)",
-     "src": "GOV.UK · Natural England",
-     "link": "https://www.gov.uk/government/publications/bats-survey-or-research-licence-level-3",
-     "date": "2026-11-20"
-    },
-    {
-     "id": "govuk:/government/publications/bats-survey-or-research-licence-level-4",
-     "kind": "guidance",
-     "title": "Bats: survey or research level 4 licence (CL20)",
-     "src": "GOV.UK · Natural England",
-     "link": "https://www.gov.uk/government/publications/bats-survey-or-research-licence-level-4",
      "date": "2026-11-20"
     }
    ]
@@ -6555,62 +6704,6 @@
    "pdf_checked": true
   },
   {
-   "id": "leg:uksi/2026/1209/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-19",
-   "extent": "UK",
-   "title": "The Armed Forces (Amendment of Service Courts Rules) Rules 2026",
-   "sum": "Under section 253A(2) of the Armed Forces Act 2006 (c. 52), inserted by section 6 of the Sentencing Act 2026 (c. 2), the court or commanding officer has a duty to make a statement in open court when passing sentence for a service offence if",
-   "tags": [
-    "15.1",
-    "8.9",
-    "10.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1209/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1209/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-19"
-  },
-  {
-   "id": "leg:uksi/2026/1215/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-19",
-   "extent": "UK",
-   "title": "The Financial Services and Markets Act 2023 (Addition of Relevant Enactments) Regulations 2026",
-   "sum": "These Regulations add to the list of “relevant enactments” for the purposes of sections 13 to 17 of the Financial Services and Markets Act 2023 (c. 29) (“the Act”). Under section 13 of the Act, the Treasury may make regulations (an “FMI san",
-   "tags": [
-    "23.2"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1215/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1215/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-19"
-  },
-  {
-   "id": "leg:uksi/2026/1208/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-19",
-   "extent": "UK",
-   "title": "The Planning and Infrastructure Act 2025 (Commencement No. 5 and Transitional Provisions) Regulations 2026",
-   "sum": "These Regulations bring into force two provisions in the Planning and Infrastructure Act 2025 (“the 2025 Act”). Regulation 2 brings into force sections 40(3) and 43 on 20th November 2026. Both provisions make amendments to the Transport and",
-   "tags": [
-    "43.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1208/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1208/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-19"
-  },
-  {
    "id": "bill:4124",
    "kind": "law",
    "level": "uk",
@@ -6850,6 +6943,62 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4127",
    "first_seen": "2026-10-08"
+  },
+  {
+   "id": "leg:uksi/2026/1209/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-19",
+   "extent": "UK",
+   "title": "The Armed Forces (Amendment of Service Courts Rules) Rules 2026",
+   "sum": "Under section 253A(2) of the Armed Forces Act 2006 (c. 52), inserted by section 6 of the Sentencing Act 2026 (c. 2), the court or commanding officer has a duty to make a statement in open court when passing sentence for a service offence if",
+   "tags": [
+    "15.1",
+    "8.9",
+    "10.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1209/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1209/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "id": "leg:uksi/2026/1215/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-19",
+   "extent": "UK",
+   "title": "The Financial Services and Markets Act 2023 (Addition of Relevant Enactments) Regulations 2026",
+   "sum": "These Regulations add to the list of “relevant enactments” for the purposes of sections 13 to 17 of the Financial Services and Markets Act 2023 (c. 29) (“the Act”). Under section 13 of the Act, the Treasury may make regulations (an “FMI san",
+   "tags": [
+    "23.2"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1215/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1215/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "id": "leg:uksi/2026/1208/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-19",
+   "extent": "UK",
+   "title": "The Planning and Infrastructure Act 2025 (Commencement No. 5 and Transitional Provisions) Regulations 2026",
+   "sum": "These Regulations bring into force two provisions in the Planning and Infrastructure Act 2025 (“the 2025 Act”). Regulation 2 brings into force sections 40(3) and 43 on 20th November 2026. Both provisions make amendments to the Transport and",
+   "tags": [
+    "43.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1208/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1208/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-19"
   },
   {
    "id": "govuk:/government/news/flood-warning-service-expanded-in-wolston-near-coventry",
@@ -9057,23 +9206,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/government/news/new-measure-imposed-on-hot-rolled-steel-plate-from-south-korea",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-19",
-   "extent": "UK",
-   "title": "New measure imposed on hot-rolled steel plate from South Korea",
-   "sum": "Following a TRA investigation, the Secretary of State has decided to apply a new anti-dumping measure on imports of hot-rolled steel plate from South Korea.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Trade Remedies Authority",
-   "link": "https://www.gov.uk/government/news/new-measure-imposed-on-hot-rolled-steel-plate-from-south-korea",
-   "first_seen": "2026-11-19",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/consultations/legislative-proposals-to-address-broadband-rollout-in-leasehold-flats",
    "kind": "update",
    "level": "uk",
@@ -9380,6 +9512,23 @@
    ],
    "src": "GOV.UK · Companies House",
    "link": "https://www.gov.uk/government/publications/companies-house-approach-to-non-compliance-with-mandatory-identity-verification",
+   "first_seen": "2026-11-19",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/news/new-measure-imposed-on-hot-rolled-steel-plate-from-south-korea",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-19",
+   "extent": "UK",
+   "title": "New measure imposed on hot-rolled steel plate from South Korea",
+   "sum": "Following a TRA investigation, the Secretary of State has decided to apply a new anti-dumping measure on imports of hot-rolled steel plate from South Korea.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Trade Remedies Authority",
+   "link": "https://www.gov.uk/government/news/new-measure-imposed-on-hot-rolled-steel-plate-from-south-korea",
    "first_seen": "2026-11-19",
    "pdf_checked": true
   },
@@ -14842,7 +14991,17 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/bs11-0yu-viridor-avonmouth-waste-services-limited-environmental-permit-application-advertisement-eprsp3301lav009",
    "first_seen": "2026-11-18",
-   "pdf_checked": true
+   "pdf_checked": true,
+   "also": [
+    {
+     "id": "govuk:/government/publications/bs11-0yu-viridor-avonmouth-waste-services-ltd-environmental-permit-application-advertisement-eprsp3301lav009",
+     "kind": "update",
+     "title": "BS11 0YU, Viridor Avonmouth Waste Services Ltd: environmental permit application advertisement - EPR/SP3301LA/V009",
+     "src": "GOV.UK · Environment Agency",
+     "link": "https://www.gov.uk/government/publications/bs11-0yu-viridor-avonmouth-waste-services-ltd-environmental-permit-application-advertisement-eprsp3301lav009",
+     "date": "2026-11-23"
+    }
+   ]
   },
   {
    "id": "govuk:/guidance/tax-agents-handbook",
@@ -22811,23 +22970,6 @@
    "src": "GOV.UK · Ministry of Justice, Parole Board",
    "link": "https://www.gov.uk/government/news/reappointment-of-a-member-to-the-parole-board--2",
    "first_seen": "2026-11-16",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-16",
-   "extent": "UK",
-   "title": "Driving test appointments: release dates and finding earlier tests",
-   "sum": "Find out when driving test appointments are released, when to search for earlier tests, and how long people wait to take the test.",
-   "tags": [
-    "51.3"
-   ],
-   "src": "GOV.UK · Driver and Vehicle Standards Agency",
-   "link": "https://www.gov.uk/guidance/driving-test-appointments-release-dates-and-finding-earlier-tests",
-   "first_seen": "2026-10-05",
    "pdf_checked": true
   },
   {
