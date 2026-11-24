@@ -3,128 +3,127 @@
   "legislation.gov.uk": {
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 19,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0,
    "last_fail": "2026-10-30T08:29:47.469614+00:00"
   },
   "Bills API": {
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 40,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0,
    "last_fail": "2026-10-23T09:55:34.366072+00:00"
   },
   "GOV.UK": {
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 300,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0
   },
   "Bank holidays": {
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 18,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0
   },
   "Food Standards Agency": {
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
-   "items": 0,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "items": 33,
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0,
    "last_fail": "2026-10-04T05:46:05.359160+00:00"
   },
   "police.uk": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 1,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0
   },
   "FSA food alerts": {
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 50,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0
   },
   "Environment Agency floods": {
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
-   "ok": false,
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
+   "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-11-23T08:52:55.907073+00:00",
-   "fails": 1,
-   "last_fail": "2026-11-23T21:11:32.864678+00:00",
-   "error": "HTTPError: HTTP Error 429: Too Many Requests"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
+   "fails": 0,
+   "last_fail": "2026-11-23T21:11:32.864678+00:00"
   },
   "Police neighbourhood": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 9,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0
   },
   "The Gazette": {
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0,
    "last_fail": "2026-11-13T15:17:21.143069+00:00"
   },
   "Council meetings (Modern.Gov)": {
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": false,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 0,
-   "last_fail": "2026-11-23T21:11:32.864678+00:00",
+   "last_fail": "2026-11-24T05:53:28.371244+00:00",
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
-   "fails": 252
+   "fails": 253
   },
   "Parliament What's On": {
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-11-23T21:11:32.864678+00:00",
+   "last_run": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
-   "items": 53,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00",
+   "items": 52,
+   "last_ok": "2026-11-24T05:53:28.371244+00:00",
    "fails": 0,
    "last_fail": "2026-11-04T14:18:42.627727+00:00"
   }
@@ -1926,14 +1925,21 @@
     "Environment Agency floods",
     "Council meetings (Modern.Gov)"
    ]
+  },
+  {
+   "at": "2026-11-24T05:53:28.371244+00:00",
+   "items": 4357,
+   "failed": [
+    "Council meetings (Modern.Gov)"
+   ]
   }
  ],
- "generated_at": "2026-11-23T21:11:32.864678+00:00",
- "items": 4318,
+ "generated_at": "2026-11-24T05:53:28.371244+00:00",
+ "items": 4357,
  "by_level": {
   "nation": 29,
-  "local": 59,
-  "uk": 4230
+  "local": 92,
+  "uk": 4236
  },
  "by_day": {
   "2028-12-26": {
@@ -2005,6 +2011,9 @@
   "2026-12-16": {
    "local": 1
   },
+  "2026-12-08": {
+   "uk": 2
+  },
   "2026-12-07": {
    "uk": 2
   },
@@ -2034,10 +2043,11 @@
    "uk": 1
   },
   "2026-11-24": {
-   "uk": 3
+   "uk": 15,
+   "local": 33
   },
   "2026-11-23": {
-   "uk": 245,
+   "uk": 241,
    "local": 2
   },
   "2026-11-22": {
@@ -2059,7 +2069,7 @@
    "local": 1
   },
   "2026-11-17": {
-   "uk": 189,
+   "uk": 188,
    "nation": 2,
    "local": 2
   },
@@ -2088,9 +2098,6 @@
   },
   "2026-11-10": {
    "uk": 140
-  },
-  "2026-11-09": {
-   "uk": 144
   }
  },
  "down": [
@@ -2430,7 +2437,7 @@
     "postcode": "SL1 1BD",
     "lat": 51.5079156,
     "lng": -0.5870907,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": 10,
      "structural": 10,
@@ -2571,23 +2578,6 @@
      "hygiene": 5,
      "structural": 5,
      "management": 5
-    },
-    "right_to_reply": ""
-   },
-   "1939721": {
-    "name": "AKS Butchers",
-    "type": "Retailers - other",
-    "rating": "AwaitingInspection",
-    "date": "",
-    "addr": "283 HIGH STREET SLOUGH SL1 1BD",
-    "postcode": "SL1 1BD",
-    "lat": 51.5077884,
-    "lng": -0.5869793,
-    "pending": false,
-    "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
     },
     "right_to_reply": ""
    },
@@ -2999,6 +2989,23 @@
     },
     "right_to_reply": ""
    },
+   "2018197": {
+    "name": "Angel Hill Food Co.",
+    "type": "Restaurant/Cafe/Canteen",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "UNIT 1 BLACKTHORNE CRESCENT POYLE SLOUGH SL3 0QP",
+    "postcode": "SL3 0QP",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1999550": {
     "name": "Angel's Cookie Club",
     "type": "Other catering premises",
@@ -3021,10 +3028,10 @@
     "type": "Retailers - other",
     "rating": "AwaitingInspection",
     "date": "",
-    "addr": "5 Station Road Slough SL1 6JJ",
+    "addr": "5 Station Road Cippenham Slough SL1 6JJ",
     "postcode": "SL1 6JJ",
-    "lat": 51.52074,
-    "lng": -0.64542,
+    "lat": 51.52083201,
+    "lng": -0.64530861,
     "pending": false,
     "scores": {
      "hygiene": null,
@@ -3336,23 +3343,6 @@
      "hygiene": 5,
      "structural": 5,
      "management": 10
-    },
-    "right_to_reply": ""
-   },
-   "1911210": {
-    "name": "Asian Foodco",
-    "type": "Importers/Exporters",
-    "rating": "AwaitingInspection",
-    "date": "",
-    "addr": "",
-    "postcode": "",
-    "lat": null,
-    "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
     },
     "right_to_reply": ""
    },
@@ -3756,23 +3746,6 @@
     "postcode": "",
     "lat": null,
     "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
-    },
-    "right_to_reply": ""
-   },
-   "1949976": {
-    "name": "Bargain Buddy",
-    "type": "Retailers - other",
-    "rating": "AwaitingInspection",
-    "date": "",
-    "addr": "9 MARKET PLACE HIGH STREET COLNBROOK SLOUGH SL3 0NF",
-    "postcode": "SL3 0NF",
-    "lat": 51.4845179,
-    "lng": -0.5278557,
     "pending": false,
     "scores": {
      "hygiene": null,
@@ -4920,23 +4893,6 @@
     },
     "right_to_reply": ""
    },
-   "1960554": {
-    "name": "Cakes & Cakes",
-    "type": "Other catering premises",
-    "rating": "AwaitingInspection",
-    "date": "",
-    "addr": "",
-    "postcode": "",
-    "lat": null,
-    "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
-    },
-    "right_to_reply": ""
-   },
    "1657205": {
     "name": "Cakes and Crumbs Ltd",
     "type": "Other catering premises",
@@ -5124,23 +5080,6 @@
     },
     "right_to_reply": ""
    },
-   "1732032": {
-    "name": "Casa Bene",
-    "type": "Other catering premises",
-    "rating": "4",
-    "date": "2024-09-11",
-    "addr": "",
-    "postcode": "",
-    "lat": null,
-    "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 10
-    },
-    "right_to_reply": ""
-   },
    "1979745": {
     "name": "Casco Food & Wine",
     "type": "Retailers - other",
@@ -5172,23 +5111,6 @@
      "hygiene": 5,
      "structural": 5,
      "management": 10
-    },
-    "right_to_reply": ""
-   },
-   "1928187": {
-    "name": "Castleview Coffee",
-    "type": "Mobile caterer",
-    "rating": "AwaitingInspection",
-    "date": "",
-    "addr": "",
-    "postcode": "",
-    "lat": null,
-    "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
     },
     "right_to_reply": ""
    },
@@ -5341,23 +5263,6 @@
     "scores": {
      "hygiene": 5,
      "structural": 5,
-     "management": 10
-    },
-    "right_to_reply": ""
-   },
-   "1713141": {
-    "name": "Chai Stories",
-    "type": "Restaurant/Cafe/Canteen",
-    "rating": "2",
-    "date": "2025-10-17",
-    "addr": "5 Station Road Cippenham Slough SL1 6JJ",
-    "postcode": "SL1 6JJ",
-    "lat": 51.52083201,
-    "lng": -0.64530861,
-    "pending": false,
-    "scores": {
-     "hygiene": 10,
-     "structural": 15,
      "management": 10
     },
     "right_to_reply": ""
@@ -5533,7 +5438,7 @@
     "right_to_reply": ""
    },
    "1999538": {
-    "name": "Chardi Kala Rasoi",
+    "name": "Chardikala Tiffan service",
     "type": "Other catering premises",
     "rating": "AwaitingInspection",
     "date": "",
@@ -6110,23 +6015,6 @@
     },
     "right_to_reply": ""
    },
-   "511980": {
-    "name": "Colnbrook Fish & Chips",
-    "type": "Takeaway/sandwich shop",
-    "rating": "4",
-    "date": "2025-08-14",
-    "addr": "63 COLERIDGE CRESCENT COLNBROOK SLOUGH SL3 0QD",
-    "postcode": "SL3 0QD",
-    "lat": 51.4819138,
-    "lng": -0.5160149,
-    "pending": false,
-    "scores": {
-     "hygiene": 10,
-     "structural": 5,
-     "management": 5
-    },
-    "right_to_reply": ""
-   },
    "1698364": {
     "name": "Colnbrook Food and Wine",
     "type": "Retailers - other",
@@ -6583,23 +6471,6 @@
      "hygiene": 5,
      "structural": 5,
      "management": 5
-    },
-    "right_to_reply": ""
-   },
-   "1881631": {
-    "name": "Curious Bites",
-    "type": "Takeaway/sandwich shop",
-    "rating": "4",
-    "date": "2026-01-08",
-    "addr": "74 HIGH STREET SLOUGH SL1 1EL",
-    "postcode": "SL1 1EL",
-    "lat": 51.5097084,
-    "lng": -0.5963443,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 10
     },
     "right_to_reply": ""
    },
@@ -7572,23 +7443,6 @@
     },
     "right_to_reply": ""
    },
-   "1793451": {
-    "name": "Famelico",
-    "type": "Restaurant/Cafe/Canteen",
-    "rating": "4",
-    "date": "2025-03-18",
-    "addr": "",
-    "postcode": "",
-    "lat": null,
-    "lng": null,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 10
-    },
-    "right_to_reply": ""
-   },
    "511518": {
     "name": "Faraday Social Club",
     "type": "Pub/bar/nightclub",
@@ -7929,6 +7783,23 @@
     },
     "right_to_reply": ""
    },
+   "2018186": {
+    "name": "FLOAGORAGLOBALLTD LTD",
+    "type": "Importers/Exporters",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1999545": {
     "name": "FLOW FORMULA",
     "type": "Retailers - other",
@@ -8074,7 +7945,7 @@
     "postcode": "SL1 1LE",
     "lat": 51.5086195,
     "lng": -0.589533,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": null,
      "structural": null,
@@ -8085,6 +7956,23 @@
    "1970468": {
     "name": "Funjan",
     "type": "Mobile caterer",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
+   "2018187": {
+    "name": "Fussy Brews",
+    "type": "Retailers - other",
     "rating": "AwaitingInspection",
     "date": "",
     "addr": "",
@@ -8533,7 +8421,7 @@
     "postcode": "SL1 1JQ",
     "lat": 51.5089905,
     "lng": -0.5942192,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": null,
      "structural": null,
@@ -9425,6 +9313,23 @@
     },
     "right_to_reply": ""
    },
+   "2018192": {
+    "name": "Hortela Limited",
+    "type": "Distributors/Transporters",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1986378": {
     "name": "Hot karahi & kebab",
     "type": "Takeaway/sandwich shop",
@@ -9587,7 +9492,7 @@
     "postcode": "SL1 1JS",
     "lat": 51.5077318,
     "lng": -0.5897478,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": 0,
      "structural": 0,
@@ -10411,6 +10316,23 @@
     },
     "right_to_reply": ""
    },
+   "2018190": {
+    "name": "Kaz Foods",
+    "type": "Other catering premises",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "834024": {
     "name": "Kebab House",
     "type": "Mobile caterer",
@@ -10683,23 +10605,6 @@
     },
     "right_to_reply": ""
    },
-   "511687": {
-    "name": "King 786",
-    "type": "Takeaway/sandwich shop",
-    "rating": "3",
-    "date": "2026-06-03",
-    "addr": "14 CHALVEY ROAD EAST SLOUGH SL1 2LU",
-    "postcode": "SL1 2LU",
-    "lat": 51.5061694,
-    "lng": -0.6026922,
-    "pending": false,
-    "scores": {
-     "hygiene": 10,
-     "structural": 10,
-     "management": 10
-    },
-    "right_to_reply": ""
-   },
    "1812607": {
     "name": "King Cod Fish and Chips",
     "type": "Other catering premises",
@@ -10930,23 +10835,6 @@
     "postcode": "SL1 5QS",
     "lat": 51.5185528,
     "lng": -0.6448886,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 5
-    },
-    "right_to_reply": ""
-   },
-   "1831407": {
-    "name": "La Bursucu",
-    "type": "Restaurant/Cafe/Canteen",
-    "rating": "5",
-    "date": "2025-06-25",
-    "addr": "2 WINSFORD PARADE ALBERT STREET SLOUGH SL1 2BD",
-    "postcode": "SL1 2BD",
-    "lat": 51.5045258,
-    "lng": -0.5915903,
     "pending": false,
     "scores": {
      "hygiene": 5,
@@ -11355,7 +11243,7 @@
     "postcode": "SL1 5AD",
     "lat": 51.5127745,
     "lng": -0.6236023,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": 0,
      "structural": 5,
@@ -11572,7 +11460,7 @@
     "type": "Retailers - other",
     "rating": "4",
     "date": "2025-12-22",
-    "addr": "54 Herschel Street Slough United Kingdom SL1 1PB",
+    "addr": "54 Herschel Street Slough SL1 1PB",
     "postcode": "SL1 1PB",
     "lat": 51.5076273,
     "lng": -0.5934157,
@@ -12094,6 +11982,23 @@
     },
     "right_to_reply": ""
    },
+   "2018195": {
+    "name": "MAS",
+    "type": "Other catering premises",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1999537": {
     "name": "Masala N Munchies",
     "type": "Other catering premises",
@@ -12505,17 +12410,17 @@
    "1949978": {
     "name": "Mirza Fruit & Veg",
     "type": "Retailers - other",
-    "rating": "AwaitingInspection",
-    "date": "",
+    "rating": "3",
+    "date": "2026-10-08",
     "addr": "12 ANSLOW PLACE SLOUGH SL1 6EA",
     "postcode": "SL1 6EA",
     "lat": 51.5258652,
     "lng": -0.6591443,
     "pending": false,
     "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
+     "hygiene": 10,
+     "structural": 10,
+     "management": 10
     },
     "right_to_reply": ""
    },
@@ -12539,17 +12444,17 @@
    "1975306": {
     "name": "Mishals",
     "type": "Restaurant/Cafe/Canteen",
-    "rating": "AwaitingInspection",
-    "date": "",
+    "rating": "2",
+    "date": "2026-10-08",
     "addr": "116 CANTERBURY AVENUE SLOUGH SL2 1DZ",
     "postcode": "SL2 1DZ",
     "lat": 51.5300379,
     "lng": -0.6105102,
     "pending": false,
     "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
+     "hygiene": 10,
+     "structural": 15,
+     "management": 10
     },
     "right_to_reply": ""
    },
@@ -12749,7 +12654,7 @@
     "postcode": "SL2 1TZ",
     "lat": 51.528004,
     "lng": -0.6348486,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": 5,
      "structural": 5,
@@ -13140,7 +13045,7 @@
     "postcode": "SL1 1BD",
     "lat": 51.5077865,
     "lng": -0.5868209,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": null,
      "structural": null,
@@ -13423,17 +13328,17 @@
    "1787271": {
     "name": "Olive Catering Lonza",
     "type": "Restaurant/Cafe/Canteen",
-    "rating": "5",
-    "date": "2026-07-03",
+    "rating": "AwaitingInspection",
+    "date": "",
     "addr": "640 AJAX AVENUE SLOUGH",
     "postcode": "",
     "lat": 51.51798973,
     "lng": -0.6229529,
     "pending": false,
     "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 5
+     "hygiene": null,
+     "structural": null,
+     "management": null
     },
     "right_to_reply": ""
    },
@@ -13442,10 +13347,10 @@
     "type": "Distributors/Transporters",
     "rating": "Exempt",
     "date": "",
-    "addr": "Units 1 & 2 Langley Connect 3 Langley Park Road Slough SL3 6EG",
+    "addr": "1-2 LANGLEY CONNECT STATION ROAD LANGLEY SLOUGH SL3 6EG",
     "postcode": "SL3 6EG",
-    "lat": null,
-    "lng": null,
+    "lat": 51.5090773,
+    "lng": -0.5416472,
     "pending": false,
     "scores": {
      "hygiene": null,
@@ -13560,14 +13465,14 @@
     "name": "Pabulum limited at James Elliman Academy",
     "type": "School/college/university",
     "rating": "5",
-    "date": "2024-05-09",
+    "date": "2026-11-03",
     "addr": "JAMES ELLIMAN ACADEMY ELLIMAN AVENUE SLOUGH SL2 5BA",
     "postcode": "SL2 5BA",
     "lat": null,
     "lng": null,
     "pending": false,
     "scores": {
-     "hygiene": 0,
+     "hygiene": 5,
      "structural": 0,
      "management": 0
     },
@@ -14066,23 +13971,6 @@
     },
     "right_to_reply": ""
    },
-   "1670705": {
-    "name": "Phat Buns",
-    "type": "Takeaway/sandwich shop",
-    "rating": "5",
-    "date": "2025-07-30",
-    "addr": "242 HIGH STREET SLOUGH SL1 1JU",
-    "postcode": "SL1 1JU",
-    "lat": 51.5074991,
-    "lng": -0.5883428,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
-     "structural": 5,
-     "management": 5
-    },
-    "right_to_reply": ""
-   },
    "866018": {
     "name": "Pioneer Education Trust at Foxborough Primary School",
     "type": "School/college/university",
@@ -14250,6 +14138,23 @@
      "hygiene": 0,
      "structural": 0,
      "management": 0
+    },
+    "right_to_reply": ""
+   },
+   "2018193": {
+    "name": "Plov & Co",
+    "type": "Other catering premises",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
     },
     "right_to_reply": ""
    },
@@ -14933,6 +14838,23 @@
     },
     "right_to_reply": ""
    },
+   "2018188": {
+    "name": "Reckitt",
+    "type": "Retailers - other",
+    "rating": "Exempt",
+    "date": "",
+    "addr": "TURNER HOUSE 103-105 BATH ROAD SLOUGH SL1 3UH",
+    "postcode": "SL1 3UH",
+    "lat": 51.5117907,
+    "lng": -0.6103453,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1538982": {
     "name": "Red Lion Supermarket Ltd",
     "type": "Retailers - other",
@@ -15251,23 +15173,6 @@
     "pending": false,
     "scores": {
      "hygiene": 10,
-     "structural": 5,
-     "management": 5
-    },
-    "right_to_reply": ""
-   },
-   "1787278": {
-    "name": "Rotinaanwala Express",
-    "type": "Takeaway/sandwich shop",
-    "rating": "5",
-    "date": "2025-03-06",
-    "addr": "74 HIGH STREET SLOUGH SL1 1EL",
-    "postcode": "SL1 1EL",
-    "lat": 51.5097084,
-    "lng": -0.5963443,
-    "pending": false,
-    "scores": {
-     "hygiene": 5,
      "structural": 5,
      "management": 5
     },
@@ -15803,17 +15708,17 @@
    "1970478": {
     "name": "Sarahz Soghaat",
     "type": "Other catering premises",
-    "rating": "AwaitingInspection",
-    "date": "",
+    "rating": "2",
+    "date": "2026-10-19",
     "addr": "WEXHAM ROAD SLOUGH SL2 5HS",
     "postcode": "SL2 5HS",
     "lat": null,
     "lng": null,
-    "pending": true,
+    "pending": false,
     "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
+     "hygiene": 10,
+     "structural": 15,
+     "management": 10
     },
     "right_to_reply": ""
    },
@@ -16310,6 +16215,23 @@
     },
     "right_to_reply": ""
    },
+   "2018194": {
+    "name": "Slough Doner & Grill",
+    "type": "Takeaway/sandwich shop",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "74 HIGH STREET SLOUGH SL1 1EL",
+    "postcode": "SL1 1EL",
+    "lat": 51.5097084,
+    "lng": -0.5963443,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1999546": {
     "name": "Slough Food & Wine",
     "type": "Retailers - other",
@@ -16319,7 +16241,7 @@
     "postcode": "SL1 1BN",
     "lat": 51.5077916,
     "lng": -0.5879879,
-    "pending": false,
+    "pending": true,
     "scores": {
      "hygiene": null,
      "structural": null,
@@ -17313,6 +17235,23 @@
     },
     "right_to_reply": ""
    },
+   "2018191": {
+    "name": "Sweet & Jar",
+    "type": "Other catering premises",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1800231": {
     "name": "Sweet Bite",
     "type": "Other catering premises",
@@ -17435,6 +17374,23 @@
    "1999542": {
     "name": "Tashkent Company Limited",
     "type": "Distributors/Transporters",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
+   "2018196": {
+    "name": "Taste of Home Kitchen",
+    "type": "Other catering premises",
     "rating": "AwaitingInspection",
     "date": "",
     "addr": "",
@@ -18268,17 +18224,17 @@
    "1979741": {
     "name": "The Nourish Nest",
     "type": "Other catering premises",
-    "rating": "AwaitingInspection",
-    "date": "",
+    "rating": "5",
+    "date": "2026-11-04",
     "addr": "",
     "postcode": "",
     "lat": null,
     "lng": null,
     "pending": false,
     "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
+     "hygiene": 5,
+     "structural": 0,
+     "management": 0
     },
     "right_to_reply": ""
    },
@@ -18421,16 +18377,16 @@
    "929906": {
     "name": "The Range",
     "type": "Retailers - other",
-    "rating": "4",
-    "date": "2024-12-09",
+    "rating": "5",
+    "date": "2026-11-03",
     "addr": "8 TWINCHES LANE SLOUGH SL1 5AL",
     "postcode": "SL1 5AL",
     "lat": 51.5128255,
     "lng": -0.6218282,
     "pending": false,
     "scores": {
-     "hygiene": 5,
-     "structural": 10,
+     "hygiene": 0,
+     "structural": 5,
      "management": 5
     },
     "right_to_reply": ""
@@ -19285,6 +19241,23 @@
     },
     "right_to_reply": ""
    },
+   "2018189": {
+    "name": "Wafflogy and T/A Boba4u",
+    "type": "Mobile caterer",
+    "rating": "AwaitingInspection",
+    "date": "",
+    "addr": "",
+    "postcode": "",
+    "lat": null,
+    "lng": null,
+    "pending": false,
+    "scores": {
+     "hygiene": null,
+     "structural": null,
+     "management": null
+    },
+    "right_to_reply": ""
+   },
    "1787274": {
     "name": "Warrens Bakery",
     "type": "Other catering premises",
@@ -19835,7 +19808,7 @@
   "slough": 292
  },
  "fsa_last_fetched": {
-  "292": "2026-11-17"
+  "292": "2026-11-24"
  },
  "fsa_history_started": {
   "292": "2026-10-03"
@@ -24118,6 +24091,16 @@
       "structural": 5,
       "management": 5
      }
+    },
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
     }
    ],
    "511792": [
@@ -24187,6 +24170,16 @@
      "recorded": "2026-10-03",
      "scores": {
       "hygiene": 0,
+      "structural": 0,
+      "management": 0
+     }
+    },
+    {
+     "rating": "5",
+     "ratingDate": "2026-11-03",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 5,
       "structural": 0,
       "management": 0
      }
@@ -28738,6 +28731,16 @@
       "structural": 10,
       "management": 5
      }
+    },
+    {
+     "rating": "5",
+     "ratingDate": "2026-11-03",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 0,
+      "structural": 5,
+      "management": 5
+     }
     }
    ],
    "511514": [
@@ -31202,6 +31205,16 @@
       "structural": null,
       "management": null
      }
+    },
+    {
+     "rating": "3",
+     "ratingDate": "2026-10-08",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 10,
+      "structural": 10,
+      "management": 10
+     }
     }
    ],
    "1986382": [
@@ -31235,6 +31248,16 @@
       "hygiene": null,
       "structural": null,
       "management": null
+     }
+    },
+    {
+     "rating": "2",
+     "ratingDate": "2026-10-08",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 10,
+      "structural": 15,
+      "management": 10
      }
     }
    ],
@@ -31447,6 +31470,16 @@
       "hygiene": null,
       "structural": null,
       "management": null
+     }
+    },
+    {
+     "rating": "2",
+     "ratingDate": "2026-10-19",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 10,
+      "structural": 15,
+      "management": 10
      }
     }
    ],
@@ -31735,6 +31768,16 @@
       "hygiene": null,
       "structural": null,
       "management": null
+     }
+    },
+    {
+     "rating": "5",
+     "ratingDate": "2026-11-04",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": 5,
+      "structural": 0,
+      "management": 0
      }
     }
    ],
@@ -32801,13 +32844,157 @@
       "management": null
      }
     }
+   ],
+   "2018197": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018186": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018187": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018192": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018190": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018195": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018193": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018188": [
+    {
+     "rating": "Exempt",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018194": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018191": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018196": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
+   ],
+   "2018189": [
+    {
+     "rating": "AwaitingInspection",
+     "ratingDate": "",
+     "recorded": "2026-11-24",
+     "scores": {
+      "hygiene": null,
+      "structural": null,
+      "management": null
+     }
+    }
    ]
   }
  },
  "fsa_source_published": {
-  "292": "2026-11-17T00:42:06.243"
+  "292": "2026-11-24T00:41:56.267"
  },
  "fsa_source_extract_dates": {
-  "292": "2026-11-17"
+  "292": "2026-11-24"
  }
 }

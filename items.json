@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-23T21:11:32.864678+00:00",
+ "generated_at": "2026-11-24T05:53:28.371244+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 19,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
-   "count": 0,
+   "count": 33,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
-   "ok": false,
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
+   "ok": true,
    "count": 0,
-   "error": "HTTPError: HTTP Error 429: Too Many Requests",
-   "last_ok": "2026-11-23T08:52:55.907073+00:00"
+   "error": null,
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 9,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-23T21:11:32.864678+00:00",
+   "fetched_at": "2026-11-24T05:53:28.371244+00:00",
    "ok": true,
-   "count": 53,
+   "count": 52,
    "error": null,
-   "last_ok": "2026-11-23T21:11:32.864678+00:00"
+   "last_ok": "2026-11-24T05:53:28.371244+00:00"
   }
  ],
  "items": [
@@ -607,6 +607,60 @@
    "lng": -0.589009,
    "approx": true,
    "first_seen": "2026-10-03"
+  },
+  {
+   "id": "pwo:57002:2026-12-08",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-12-08",
+   "extent": "UK",
+   "title": "Parliament: Railways Bill - report stage (day 2)",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-12-08",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "pwo:57322:2026-12-08",
+   "kind": "update",
+   "level": "uk",
+   "status": "coming",
+   "date": "2026-12-08",
+   "extent": "UK",
+   "title": "Parliament: Health Bill - report day (final day)",
+   "sum": "Lords · Legislation",
+   "tags": [
+    "2.1"
+   ],
+   "src": "UK Parliament What's On",
+   "link": "https://whatson.parliament.uk/",
+   "event": {
+    "kind": "parliament",
+    "date": "2026-12-08",
+    "time": null,
+    "end": null,
+    "where": "Lords",
+    "access": "online"
+   },
+   "who": [
+    "government"
+   ],
+   "first_seen": "2026-11-24"
   },
   {
    "id": "pwo:57313:2026-12-07",
@@ -1247,7 +1301,17 @@
    "who": [
     "government"
    ],
-   "first_seen": "2026-11-17"
+   "first_seen": "2026-11-17",
+   "also": [
+    {
+     "id": "pwo:57293:2026-12-08",
+     "kind": "update",
+     "title": "Parliament: That leave be given to bring in a Bill under SO No. 23 [details to be provided]",
+     "src": "UK Parliament What's On",
+     "link": "https://whatson.parliament.uk/",
+     "date": "2026-12-08"
+    }
+   ]
   },
   {
    "id": "pwo:57190:2026-12-01",
@@ -1874,6 +1938,1034 @@
    ]
   },
   {
+   "id": "leg:uksi/2026/1222/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "The Electricity (Individual Exemption from the Requirement for a Transmission Licence) (Dogger Bank A) (Amendment) Order 2026",
+   "sum": "The Electricity (Individual Exemption from the Requirement of a Transmission Licence) (Dogger Bank A) Order 2025 and The Electricity (Individual Exemption from the Requirement of a Transmission Licence) (Dogger Bank A) (Amendment) Order 202",
+   "tags": [
+    "48.6"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1222/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1222/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "leg:uksi/2026/1223/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Edinburgh) (No. 3) Regulations 2026",
+   "sum": "These Regulations impose restrictions on the flying of unmanned aircraft in the vicinity of Edinburgh, where the gathering of a large number of persons is due to take place for the Torchlight Parade and Hogmanay celebrations. The Civil Avia",
+   "tags": [
+    "52.4",
+    "16.4",
+    "52.3",
+    "52.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1223/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1223/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "leg:uksi/2026/1227/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "The Cambourne to Cambridge Order 2026",
+   "sum": "This Order authorises Cambridgeshire County Council to construct and operate a new guided busway system between Sterling Way in Cambourne and Grange Road in Cambridge and carry out all associated works.",
+   "tags": [
+    "51.3"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1227/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1227/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "leg:uksi/2026/1221/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (New Year Celebrations, London) Regulations 2026",
+   "sum": "New instrument on legislation.gov.uk.",
+   "tags": [
+    "52.4",
+    "16.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1221/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1221/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "leg:uksi/2026/1220/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Spring Park, Wiltshire) Regulations 2026",
+   "sum": "The Secretary of State for Transport has decided that it is necessary in the public interest for reasons of national defence to restrict the flying of unmanned aircraft in the vicinity of Corsham, Wiltshire.",
+   "tags": [
+    "52.4",
+    "16.4",
+    "15.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1220/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1220/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-23"
+  },
+  {
+   "id": "bill:4126",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Social Housing Bill [HL]",
+   "sum": "Report stage · Commons. ",
+   "tags": [
+    "43.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4126",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4305",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Building Safety (Remediation of Unsafe Cladding etc) Bill",
+   "sum": "Committee stage · Commons. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4305",
+   "first_seen": "2026-10-16"
+  },
+  {
+   "id": "bill:4035",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
+   "sum": "Programme motion · Commons. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4035",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4065",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Armed Forces Bill",
+   "sum": "Programme motion · Commons. ",
+   "tags": [
+    "15.1"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4065",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "bill:4129",
+   "kind": "law",
+   "level": "uk",
+   "status": "proposed",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Financial Services and Markets Bill [HL]",
+   "sum": "Committee stage · Commons. ",
+   "tags": [
+    "23.2"
+   ],
+   "src": "bills.parliament.uk",
+   "link": "https://bills.parliament.uk/bills/4129",
+   "first_seen": "2026-10-03"
+  },
+  {
+   "id": "fsa:new:2018197",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Angel Hill Food Co.",
+   "sum": "Restaurant/Cafe/Canteen · UNIT 1 BLACKTHORNE CRESCENT POYLE SLOUGH SL3 0QP. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018197",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018186",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: FLOAGORAGLOBALLTD LTD",
+   "sum": "Importers/Exporters · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018186",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018187",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Fussy Brews",
+   "sum": "Retailers - other · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018187",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018192",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Hortela Limited",
+   "sum": "Distributors/Transporters · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018192",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018190",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Kaz Foods",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018190",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018195",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: MAS",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018195",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1949978",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 3: Mirza Fruit & Veg",
+   "sum": "Retailers - other · 12 ANSLOW PLACE SLOUGH SL1 6EA. Was awaiting inspection; inspected 2026-10-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1949978",
+   "lat": 51.5258652,
+   "lng": -0.6591443,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-10-08:1975306",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 2: Mishals",
+   "sum": "Restaurant/Cafe/Canteen · 116 CANTERBURY AVENUE SLOUGH SL2 1DZ. Was awaiting inspection; inspected 2026-10-08. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1975306",
+   "lat": 51.5300379,
+   "lng": -0.6105102,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated::1787271",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, awaiting inspection: Olive Catering Lonza",
+   "sum": "Restaurant/Cafe/Canteen · 640 AJAX AVENUE SLOUGH. Was rating 5; inspected . Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1787271",
+   "lat": 51.51798973,
+   "lng": -0.6229529,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-11-03:844263",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating 5 kept: Pabulum limited at James Elliman Academy",
+   "sum": "School/college/university · JAMES ELLIMAN ACADEMY ELLIMAN AVENUE SLOUGH SL2 5BA. Re-inspected 2026-11-03, same rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/844263",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018193",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Plov & Co",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018193",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018188",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Reckitt",
+   "sum": "Retailers - other · TURNER HOUSE 103-105 BATH ROAD SLOUGH SL1 3UH. Registered with the council, exempt from rating. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018188",
+   "lat": 51.5117907,
+   "lng": -0.6103453,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-10-19:1970478",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 2: Sarahz Soghaat",
+   "sum": "Other catering premises · WEXHAM ROAD SLOUGH SL2 5HS. Was awaiting inspection; inspected 2026-10-19. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1970478",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018194",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Slough Doner & Grill",
+   "sum": "Takeaway/sandwich shop · 74 HIGH STREET SLOUGH SL1 1EL. Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018194",
+   "lat": 51.5097084,
+   "lng": -0.5963443,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018191",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Sweet & Jar",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018191",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018196",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Taste of Home Kitchen",
+   "sum": "Other catering premises · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018196",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-11-04:1979741",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, rating 5: The Nourish Nest",
+   "sum": "Other catering premises · . Was awaiting inspection; inspected 2026-11-04. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1979741",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:rated:2026-11-03:929906",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Hygiene rating changed, 4 → 5: The Range",
+   "sum": "Retailers - other · 8 TWINCHES LANE SLOUGH SL1 5AL. Was rating 4; inspected 2026-11-03. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/929906",
+   "lat": 51.5128255,
+   "lng": -0.6218282,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:new:2018189",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "New food business: Wafflogy and T/A Boba4u",
+   "sum": "Mobile caterer · . Registered with the council, awaiting inspection. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/2018189",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1939721",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: AKS Butchers",
+   "sum": "Retailers - other · 283 HIGH STREET SLOUGH SL1 1BD. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1939721",
+   "lat": 51.5077884,
+   "lng": -0.5869793,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1911210",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Asian Foodco",
+   "sum": "Importers/Exporters · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1911210",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1949976",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Bargain Buddy",
+   "sum": "Retailers - other · 9 MARKET PLACE HIGH STREET COLNBROOK SLOUGH SL3 0NF. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1949976",
+   "lat": 51.4845179,
+   "lng": -0.5278557,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1960554",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Cakes & Cakes",
+   "sum": "Other catering premises · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1960554",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1732032",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Casa Bene",
+   "sum": "Other catering premises · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1732032",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1928187",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Castleview Coffee",
+   "sum": "Mobile caterer · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1928187",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1713141",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Chai Stories",
+   "sum": "Restaurant/Cafe/Canteen · 5 Station Road Cippenham Slough SL1 6JJ. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1713141",
+   "lat": 51.52083201,
+   "lng": -0.64530861,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:511980",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Colnbrook Fish & Chips",
+   "sum": "Takeaway/sandwich shop · 63 COLERIDGE CRESCENT COLNBROOK SLOUGH SL3 0QD. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/511980",
+   "lat": 51.4819138,
+   "lng": -0.5160149,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1881631",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Curious Bites",
+   "sum": "Takeaway/sandwich shop · 74 HIGH STREET SLOUGH SL1 1EL. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1881631",
+   "lat": 51.5097084,
+   "lng": -0.5963443,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1793451",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Famelico",
+   "sum": "Restaurant/Cafe/Canteen · . No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1793451",
+   "lat": null,
+   "lng": null,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:511687",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: King 786",
+   "sum": "Takeaway/sandwich shop · 14 CHALVEY ROAD EAST SLOUGH SL1 2LU. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/511687",
+   "lat": 51.5061694,
+   "lng": -0.6026922,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1831407",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: La Bursucu",
+   "sum": "Restaurant/Cafe/Canteen · 2 WINSFORD PARADE ALBERT STREET SLOUGH SL1 2BD. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1831407",
+   "lat": 51.5045258,
+   "lng": -0.5915903,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1670705",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Phat Buns",
+   "sum": "Takeaway/sandwich shop · 242 HIGH STREET SLOUGH SL1 1JU. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1670705",
+   "lat": 51.5074991,
+   "lng": -0.5883428,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "fsa:closed:1787278",
+   "kind": "rates",
+   "level": "local",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "Slough",
+   "council": "Slough Borough Council",
+   "title": "Closed or removed from the food register: Rotinaanwala Express",
+   "sum": "Takeaway/sandwich shop · 74 HIGH STREET SLOUGH SL1 1EL. No longer listed by the Food Standards Agency, which usually means it has closed, changed hands or been re-registered. Contains Food Standards Agency data.",
+   "tags": [
+    "33.5",
+    "46.5",
+    "24.1"
+   ],
+   "src": "Food Standards Agency",
+   "link": "https://ratings.food.gov.uk/business/1787278",
+   "lat": 51.5097084,
+   "lng": -0.5963443,
+   "who": [
+    "you",
+    "everyone"
+   ],
+   "first_seen": "2026-11-24"
+  },
+  {
+   "id": "govuk:/government/news/mooove-over-poor-signal-50-government-funded-4g-upgrades-help-dog-walkers-steer-clear-of-cattle",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Mooove over, poor signal: 50 government-funded 4G upgrades help dog walkers steer clear of cattle",
+   "sum": "50 government-funded 4G mast upgrades switched on across rural England through the Shared Rural Network, improving mobile coverage in Yorkshire, Cumbria, the West Country and beyond.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Digital, Culture, Media and Sport",
+   "link": "https://www.gov.uk/government/news/mooove-over-poor-signal-50-government-funded-4g-upgrades-help-dog-walkers-steer-clear-of-cattle",
+   "first_seen": "2026-11-24",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/government/publications/digital-inclusion-innovation-fund-evaluation-report",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-24",
+   "extent": "UK",
+   "title": "Digital Inclusion Innovation Fund: evaluation report",
+   "sum": "An evaluation report of the Digital Inclusion Innovation Fund assessing the process, impact and value for money. ",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Science, Innovation and Technology",
+   "link": "https://www.gov.uk/government/publications/digital-inclusion-innovation-fund-evaluation-report",
+   "first_seen": "2026-11-24",
+   "pdf_checked": true
+  },
+  {
    "id": "pwo:57222:2026-11-24",
    "kind": "update",
    "level": "uk",
@@ -1994,26 +3086,6 @@
    "first_seen": "2026-11-23"
   },
   {
-   "id": "leg:uksi/2026/1220/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "The Air Navigation (Restriction of Flying) (Spring Park, Wiltshire) Regulations 2026",
-   "sum": "The Secretary of State for Transport has decided that it is necessary in the public interest for reasons of national defence to restrict the flying of unmanned aircraft in the vicinity of Corsham, Wiltshire.",
-   "tags": [
-    "52.4",
-    "16.4",
-    "15.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1220/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1220/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-23"
-  },
-  {
    "id": "leg:uksi/2026/1199/made",
    "kind": "law",
    "level": "uk",
@@ -2068,40 +3140,6 @@
    "first_seen": "2026-11-23"
   },
   {
-   "id": "leg:uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Correction Slip",
-   "sum": "These Regulations introduce charges for or in connection with the carrying out by the Secretary of State of the Secretary of State’s functions under Part 4 of the Petroleum Act 1998 (c. 17) (“the 1998 Act”).",
-   "tags": [
-    "55.1"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
-   "pdf_label": "official document (PDF)",
-   "first_seen": "2026-11-23"
-  },
-  {
-   "id": "bill:4065",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Armed Forces Bill",
-   "sum": "Programme motion · Commons. ",
-   "tags": [
-    "15.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4065",
-   "first_seen": "2026-10-03"
-  },
-  {
    "id": "bill:4308",
    "kind": "law",
    "level": "uk",
@@ -2128,38 +3166,6 @@
      "date": "2026-11-27"
     }
    ]
-  },
-  {
-   "id": "bill:4035",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
-   "sum": "Programme motion · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4035",
-   "first_seen": "2026-10-03"
-  },
-  {
-   "id": "bill:4129",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Financial Services and Markets Bill [HL]",
-   "sum": "Committee stage · Commons. ",
-   "tags": [
-    "23.2"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4129",
-   "first_seen": "2026-10-03"
   },
   {
    "id": "bill:4083",
@@ -2258,22 +3264,6 @@
    "first_seen": "2026-11-23"
   },
   {
-   "id": "bill:4305",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Building Safety (Remediation of Unsafe Cladding etc) Bill",
-   "sum": "Committee stage · Commons. ",
-   "tags": [
-    "55.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4305",
-   "first_seen": "2026-10-16"
-  },
-  {
    "id": "bill:4295",
    "kind": "law",
    "level": "uk",
@@ -2288,6 +3278,24 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4295",
    "first_seen": "2026-10-27"
+  },
+  {
+   "id": "leg:uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Correction Slip",
+   "sum": "These Regulations introduce charges for or in connection with the carrying out by the Secretary of State of the Secretary of State’s functions under Part 4 of the Petroleum Act 1998 (c. 17) (“the 1998 Act”).",
+   "tags": [
+    "55.1"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/853/pdfs/uksics_20260853_en_001.pdf",
+   "pdf_label": "official document (PDF)",
+   "first_seen": "2026-11-23"
   },
   {
    "id": "govuk:/government/publications/rapid-detection-of-toxic-gases-phase-2",
@@ -2341,7 +3349,13 @@
    ],
    "src": "GOV.UK · Immigration Advice Authority",
    "link": "https://www.gov.uk/government/consultations/iaa-consultation-on-new-financial-penalty-powers",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2027-01-18",
+   "opens": "2026-11-23",
+   "pdf": "https://assets.publishing.service.gov.uk/media/6b042b518b4db97a73db97f1/Financial_penalties_consultation_document.pdf",
+   "pdf_label": "Border Security, Asylum and Immigration Act 2025: financial penalties consultation (PDF)",
+   "pdf_size": 276726
   },
   {
    "id": "govuk:/government/consultations/warm-home-discount-insulation-and-microgeneration-measures",
@@ -2357,7 +3371,13 @@
    ],
    "src": "GOV.UK · Department for Energy Security and Net Zero",
    "link": "https://www.gov.uk/government/consultations/warm-home-discount-insulation-and-microgeneration-measures",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-20",
+   "opens": "2026-11-23",
+   "pdf": "https://assets.publishing.service.gov.uk/media/6afee6fbb42780af16207832/whd-insulation-microgeneration-consultation-document.pdf",
+   "pdf_label": "Warm Home Discount industry initiatives: insulation and microgeneration measures – consultation (PDF)",
+   "pdf_size": 201818
   },
   {
    "id": "govuk:/government/consultations/procedures-for-geographical-indications-and-spirit-drinks-in-northern-ireland-consultation",
@@ -2373,7 +3393,10 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/consultations/procedures-for-geographical-indications-and-spirit-drinks-in-northern-ireland-consultation",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2027-01-04",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/consultations/proposed-merchant-shipping-fees-regulations-2028",
@@ -2430,11 +3453,11 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/guidance-for-primary-producers-and-food-business-operators-on-the-hygienic-production-of-wild-game",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69bc1c944c478213a823ce84/Wild_Game_Guidance__1.pdf",
    "pdf_label": "Wild Game Guidance PDF  (PDF)",
    "pdf_size": 464740,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/general-food-law",
@@ -2453,11 +3476,11 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/general-food-law",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69aafe97d620c14fa183ee43/Food-and-feed-law-guide.pdf",
    "pdf_label": "Food and Feed Law Guide (PDF)",
    "pdf_size": 852874,
-   "pdf_more": 3
+   "pdf_more": 3,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/starting-an-animal-feed-business",
@@ -2491,10 +3514,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/transportation-of-above-temperature-meat-from-red-meat-slaughterhouses",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69e626893e3b4e9340cc92d6/transport-of-over-temperature-red-meat-guidance.pdf",
    "pdf_label": "Transport of over temperature red meat guidance (PDF)",
-   "pdf_size": 1074289
+   "pdf_size": 1074289,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/on-farm-slaughter-facility-authorisation",
@@ -2546,10 +3569,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/shellfish-classification",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69e624573e3b4e9340cc92d4/LAG_guide_-_March_2026_1.pdf",
    "pdf_label": "LAG guide - March 2026 (PDF)",
-   "pdf_size": 552691
+   "pdf_size": 552691,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/allergen-information-for-pre-packed-and-loose-foods",
@@ -2585,11 +3608,11 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/allergen-guidance-for-food-businesses",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69b02dae95b74651603495be/PDF_-_Allergy_and_intolerance_sign__Colour_as_PDF_Open_in_a_new_window___90.12_KB_.pdf",
    "pdf_label": "Allergy and intolerance sign (Colour) as PDF (90.12 KB) (PDF)",
    "pdf_size": 92286,
-   "pdf_more": 6
+   "pdf_more": 6,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/polycyclic-aromatic-hydrocarbons",
@@ -2606,10 +3629,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/polycyclic-aromatic-hydrocarbons",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6995c3149f2f510ba1d0b8b6/Code_of_practice_for_the_reduction_of_food_contaminationas_PDF_Open_in_a_new_window_.pdf",
    "pdf_label": "Code of practice for the reduction of food contamination (PDF)",
-   "pdf_size": 177666
+   "pdf_size": 177666,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/persistent-organic-pollutants",
@@ -2644,11 +3667,11 @@
    "src": "GOV.UK · Department for Business, Innovation, Science and Trade",
    "link": "https://www.gov.uk/government/publications/british-industrial-competitiveness-scheme-funding-information",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b04706ada1531561296bcc6/bics-funding-guidance-policy-information-and-publication-timetable.pdf",
    "pdf_label": "BICS funding: policy information and publication timetable (PDF)",
    "pdf_size": 465893,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/food-and-drink-businesses-supplying-into-the-animal-feed-chain",
@@ -2666,10 +3689,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/food-and-drink-businesses-supplying-into-the-animal-feed-chain",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69a9b6e798da555143be931e/feed-guidance-food-and-drink-businesses.pdf",
    "pdf_label": "Requirements of EC Regulation 183/2005 on feed hygiene for food and drink businesses which supply material for animal feed  (PDF)",
-   "pdf_size": 434350
+   "pdf_size": 434350,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/farmers-producing-animal-feed",
@@ -2687,11 +3710,11 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/farmers-producing-animal-feed",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69a9b4eb1f59a04b996e783d/on-farm-mixinf-guidance-farmers.pdf",
    "pdf_label": "Guidance on HACCP-related requirements for farmers (PDF)",
    "pdf_size": 36702,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/slaughter-licensing",
@@ -2805,10 +3828,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/pet-food",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69a9ba2c98da555143be931f/fsa-guidance-for-the-co-location-of-food-and-pet-food-production.pdf",
    "pdf_label": "Guidance on co-location of food and pet food production (PDF)",
-   "pdf_size": 290946
+   "pdf_size": 290946,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/shellfish-controls-information",
@@ -2859,11 +3882,11 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/shellfish-production-area-assessments",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aa91f39086ce7c57b818482/Bigbury_and_Avon_Sanitary_Survey_2023.pdf",
    "pdf_label": "Bigbury and Avon Sanitary Survey 2023 (PDF)",
    "pdf_size": 4171541,
-   "pdf_more": 56
+   "pdf_more": 56,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/youth-jobs-grant",
@@ -2880,10 +3903,10 @@
    "src": "GOV.UK · Department for Work and Pensions",
    "link": "https://www.gov.uk/government/publications/youth-jobs-grant",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a42a0b35b6406df58c13fac/Find-a-Job-Service-Terms-and-Conditions-for-Youth_Jobs_Grant.pdf",
    "pdf_label": "Find a Job Service Terms and Conditions for Youth Jobs Grant (PDF)",
-   "pdf_size": 348821
+   "pdf_size": 348821,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/intellectual-property-office-service-availability-and-issues",
@@ -2917,10 +3940,10 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/government/publications/apply-for-the-ai-in-mental-health-airlock",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff2726ccc4c5f2cd42404f/AI_in_mental_health_Airlock_application_supporting_information.pdf",
    "pdf_label": "AI in mental health Airlock - supporting information (PDF)",
-   "pdf_size": 190172
+   "pdf_size": 190172,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/government-commercial-agency-suppliers-what-you-need-to-know",
@@ -2957,10 +3980,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/home-slaughter-of-livestock-a-guide-to-the-law-in-england-and-wales",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69d60874758ba8b7b13b27cc/homeslaughterlivestockni.pdf",
    "pdf_label": "Home slaughter of livestock: A guide to the law in Northern Ireland (PDF)",
-   "pdf_size": 339415
+   "pdf_size": 339415,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/approved-food-establishments",
@@ -3030,10 +4053,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/milk-hygiene-and-antibiotic-residues",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69a047953e672177d0bc7723/testmilkantibioticres.pdf",
    "pdf_label": "Information and guidance on the testing of milk for antibiotic residues (PDF)",
-   "pdf_size": 154700
+   "pdf_size": 154700,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt",
@@ -3103,11 +4126,11 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/guidance/myanmar-list-of-designations-and-sanctions-notices",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/698b5ee4235b57593bc1be92/Sanctions_Notice__Myanmar__10_February_2026.pdf",
    "pdf_label": "Sanctions Notice, Myanmar: 10 February 2026 (PDF)",
    "pdf_size": 141468,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/global-human-rights-and-international-humanitarian-law-list-of-designations-and-sanctions-notices",
@@ -3203,10 +4226,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/hazard-analysis-and-critical-control-point-system-in-meat-plants",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/699733a29f2f510ba1d0b984/food-safety-diary-meat.pdf",
    "pdf_label": "Food Safety Management Diary for Meat Producers (PDF)",
-   "pdf_size": 783824
+   "pdf_size": 783824,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/dairy-registration-and-inspections",
@@ -3310,10 +4333,10 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/water-guidance-for-wales-and-northern-ireland",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a217a0b56e988a798b3865d/waterguide.pdf",
    "pdf_label": "Guidance on natural mineral water, spring water and bottled drinking water regulations in Wales and Northern Ireland (PDF)",
-   "pdf_size": 298858
+   "pdf_size": 298858,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/local-area-send-inspections-information-for-families",
@@ -3351,11 +4374,11 @@
    "src": "GOV.UK · Maritime and Coastguard Agency",
    "link": "https://www.gov.uk/guidance/boatmasters-approved-training-providers-atp",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b04614b5d1e916c0914592e/BML_First_Aid_10.09.26.pdf",
    "pdf_label": "BML First Aid (PDF)",
    "pdf_size": 35120,
-   "pdf_more": 6
+   "pdf_more": 6,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/rye-harbour-passage-pilot-and-mooring-information-for-boaters",
@@ -3406,10 +4429,10 @@
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/check-and-challenge-your-central-rating-list-business-rates-valuation-register-to-use-the-service",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/67dd33db4fed20c7f559f3f8/T048_Register_to_use_this_service__form_.pdf",
    "pdf_label": "T048 register to use this service — Central List (PDF)",
-   "pdf_size": 279435
+   "pdf_size": 279435,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/developers-get-environmental-advice-on-your-planning-proposals",
@@ -3955,7 +4978,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/importing-salt-or-low-sodium-salt-alternatives",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/apply-for-business-rates-for-a-self-catering-property-in-england",
@@ -3971,7 +4995,11 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/guidance/apply-for-business-rates-for-a-self-catering-property-in-england",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/69cbd749a60a12ca3913c651/apply-for-business-rates-for-self-catering-properties-england.pdf",
+   "pdf_label": "Apply for business rates for a self-catering property in England (PDF)",
+   "pdf_size": 294671
   },
   {
    "id": "govuk:/government/publications/importing-herbs-and-spices",
@@ -3987,7 +5015,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/importing-herbs-and-spices",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/border-notifications",
@@ -4005,7 +5034,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/border-notifications",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/importing-fruit-and-vegetables",
@@ -4021,7 +5051,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/importing-fruit-and-vegetables",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/importing-fishery-products-or-bivalve-molluscs",
@@ -4037,7 +5068,8 @@
    ],
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/government/publications/importing-fishery-products-or-bivalve-molluscs",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/importing-nuts",
@@ -4122,11 +5154,11 @@
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/publications/rochford-district-council-local-plan-intervention-letters",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b04639387fd9efe822cc27d/Rochford_District_Council_Intervention_Plan_letter.pdf",
    "pdf_label": "Rochford District Council: Local Plan Intervention Letter (23 November 2026) (PDF)",
    "pdf_size": 265623,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/uk-and-saudi-arabia-deepen-defence-industrial-co-operation-at-lancaster-house",
@@ -4194,11 +5226,11 @@
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/publications/local-government-reorganisation-letters-on-november-2026-representations-process",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b04622de676615eab145933/Local_government_reorganisation_-_representations_letter_to_East_Sussex_and_Brighton_and_Hove_leaders.pdf",
    "pdf_label": "Local government reorganisation: representations letter to East Sussex and Brighton and Hove leaders (PDF)",
    "pdf_size": 212603,
-   "pdf_more": 4
+   "pdf_more": 4,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/tax-and-chancery-tribunal-decisions/2026-ukut-00452-tcc-taj-exchange-limited-v-the-financial-conduct-authority",
@@ -4215,9 +5247,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Upper Tribunal (Tax and Chancery Chamber)",
    "link": "https://www.gov.uk/tax-and-chancery-tribunal-decisions/2026-ukut-00452-tcc-taj-exchange-limited-v-the-financial-conduct-authority",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b045fc4992d28898996bc97/Taj_Exchange_Decision_19112026.pdf",
-   "pdf_label": "[2026] UKUT 00452 (TCC) TAJ EXCHANGE LIMITED v THE FINANCIAL CONDUCT AUTHORITY (PDF)"
+   "pdf_label": "[2026] UKUT 00452 (TCC) TAJ EXCHANGE LIMITED v THE FINANCIAL CONDUCT AUTHORITY (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/british-week-2026-celebrates-uk-cameroon-partnership",
@@ -4342,10 +5374,10 @@
    "src": "GOV.UK · Competition and Markets Authority",
    "link": "https://www.gov.uk/cma-cases/bae-systems-undertakings-review-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6ad0c26edfa45fcb6753ca32/BAE_Systems_letter.pdf",
    "pdf_label": "BAE Systems letter (PDF, 383KB) (PDF)",
    "pdf_more": 1,
+   "pdf_checked": true,
    "also": [
     {
      "id": "govuk:/government/consultations/bae-systems-undertakings-review",
@@ -4373,9 +5405,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Appeal Tribunal",
    "link": "https://www.gov.uk/employment-appeal-tribunal-decisions/mr-b-dybowski-v-1-the-bishop-of-llandaff-church-in-wales-high-school-2-staffroom-education-ltd-2026-eat-182",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b04217d8b4db97a73db97e8/Mr_B_Dybowski_v_1__The_Bishop_of_Llandaff_Church_in_Wales_High_School_2__Staffroom_Education_Ltd__2026__EAT_182.pdf",
-   "pdf_label": "Mr B Dybowski v 1) The Bishop of Llandaff Church in Wales High School 2) Staffroom Education Ltd [2026] EAT 182 (PDF)"
+   "pdf_label": "Mr B Dybowski v 1) The Bishop of Llandaff Church in Wales High School 2) Staffroom Education Ltd [2026] EAT 182 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/service-standard-reports/dwp-apply-for-pension-credit-and-housing-benefit",
@@ -4428,11 +5460,11 @@
    "src": "GOV.UK · Medicines and Healthcare products Regulatory Agency",
    "link": "https://www.gov.uk/government/publications/improving-patient-information",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/69ba952d7c81ce194cd125d6/The_Role_of_Patient_Information_Leaflets_in_Meeting_the_Information_Needs_of_Patients_-_Final_Report_BRAND.pdf",
    "pdf_label": "Research on the Role of Patient Information Leaflets in Meeting the Information Needs of Patients  (PDF)",
    "pdf_size": 1903830,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/foreign-travel-advice/ethiopia",
@@ -4499,7 +5531,8 @@
    ],
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/third-uk-mexico-multilateral-and-human-rights-dialogue-joint-press-statement-2026",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/uk-emissions-trading-scheme-uk-ets-policy-overview",
@@ -4532,7 +5565,8 @@
    ],
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/guildford-flood-alleviation-scheme",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
@@ -4548,7 +5582,11 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/draft-legislation-exemption-for-eu-eea-and-swiss-origin-goods-from-cbam",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6aff1b1eb42780af162078b5/Draft_legislation_-_exemption_for_E__EEA_and_Swiss-origin_goods_from_CBAM.pdf",
+   "pdf_label": "Draft legislation (PDF)",
+   "pdf_size": 107378
   },
   {
    "id": "govuk:/government/publications/carbon-border-adjustment-mechanism-cbam-policy-summary",
@@ -4581,7 +5619,10 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/calls-for-evidence/local-government-reorganisation-in-worcestershire-further-representations",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-14",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/calls-for-evidence/local-government-reorganisation-in-warwickshire-further-representations",
@@ -4597,7 +5638,10 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/calls-for-evidence/local-government-reorganisation-in-warwickshire-further-representations",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-14",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/calls-for-evidence/local-government-reorganisation-in-east-sussex-and-brighton-and-hove-further-representations",
@@ -4613,7 +5657,10 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/calls-for-evidence/local-government-reorganisation-in-east-sussex-and-brighton-and-hove-further-representations",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-14",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/calls-for-evidence/local-government-reorganisation-in-gloucestershire-further-representations",
@@ -4629,7 +5676,10 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/calls-for-evidence/local-government-reorganisation-in-gloucestershire-further-representations",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-14",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/calls-for-evidence/local-government-reorganisation-in-oxfordshire-further-representations",
@@ -4645,7 +5695,10 @@
    ],
    "src": "GOV.UK · Ministry of Housing, Communities and Local Government",
    "link": "https://www.gov.uk/government/calls-for-evidence/local-government-reorganisation-in-oxfordshire-further-representations",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-14",
+   "opens": "2026-11-23"
   },
   {
    "id": "govuk:/government/publications/offshore-wind-environmental-standards-impact-assessment",
@@ -4661,7 +5714,11 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/publications/offshore-wind-environmental-standards-impact-assessment",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6af597560fe4c168337404d3/Offshore_Wind_Environmental_Standards_Impact_Assessment.pdf",
+   "pdf_label": "Offshore Wind Environmental Standards Impact Assessment (PDF)",
+   "pdf_size": 902713
   },
   {
    "id": "govuk:/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement",
@@ -4700,7 +5757,11 @@
    ],
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/national-risk-assessment-of-proliferation-financing-2026",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6b0062667851d12bf3b24607/National_risk_assessment_of_proliferation_financing_2026.pdf",
+   "pdf_label": "National Risk Assessment of Proliferation Financing (PDF)",
+   "pdf_size": 521825
   },
   {
    "id": "govuk:/government/consultations/land-drainage-draft-statutory-instrument",
@@ -4716,7 +5777,10 @@
    ],
    "src": "GOV.UK · Department for Environment, Food & Rural Affairs",
    "link": "https://www.gov.uk/government/consultations/land-drainage-draft-statutory-instrument",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2024-04-19",
+   "opens": "2024-03-07"
   },
   {
    "id": "govuk:/government/publications/low-earners-pension-payment-tax-relief-for-net-pay-arrangements",
@@ -4733,7 +5797,8 @@
    ],
    "src": "GOV.UK · HM Revenue & Customs",
    "link": "https://www.gov.uk/government/publications/low-earners-pension-payment-tax-relief-for-net-pay-arrangements",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/calls-for-evidence/the-pensions-regulator-future-review-call-for-evidence",
@@ -4749,7 +5814,10 @@
    ],
    "src": "GOV.UK · Department for Work and Pensions",
    "link": "https://www.gov.uk/government/calls-for-evidence/the-pensions-regulator-future-review-call-for-evidence",
-   "first_seen": "2026-11-23"
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "closes": "2026-12-21",
+   "opens": "2026-11-23"
   },
   {
    "id": "pwo:57221:2026-11-23",
@@ -4932,6 +6000,23 @@
    "first_seen": "2026-11-11"
   },
   {
+   "id": "govuk:/government/speeches/foreign-secretary-statement-to-the-house-of-commons-23-november-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Foreign Secretary Statement to the House of Commons: 23 November 2026",
+   "sum": "Foreign Secretary statement on Myanmar.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
+   "link": "https://www.gov.uk/government/speeches/foreign-secretary-statement-to-the-house-of-commons-23-november-2026",
+   "first_seen": "2026-11-24",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/publications/orphan-registered-medicinal-products",
    "kind": "record",
    "level": "uk",
@@ -4982,9 +6067,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-g-sandhu-v-kp-snacks-ltd-2600391-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b042a6b13d2d60fe05e3c99/2600391.2026_-_Gurmit_Sandhu_-v-_KP_Snacks_Limited_-Judgment.pdf",
-   "pdf_label": "Mr G Sandhu v KP Snacks Ltd: 2600391/2026 - Dismissal (PDF)"
+   "pdf_label": "Mr G Sandhu v KP Snacks Ltd: 2600391/2026 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/l-barber-v-the-family-chemist-ltd-6038531-slash-2025",
@@ -5001,9 +6086,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/l-barber-v-the-family-chemist-ltd-6038531-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b0428d98b4db97a73db97f0/Lauren_Barber_v_The_Family_Chemist_Limited_6038531.2025_Part_Strike_Out_Judgment.pdf",
-   "pdf_label": "L Barber v The Family Chemist Ltd: 6038531/2025 - Partial Strike Out (PDF)"
+   "pdf_label": "L Barber v The Family Chemist Ltd: 6038531/2025 - Partial Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cac-outcome-ucu-ravensbourne-university-london",
@@ -5037,9 +6122,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/a-ladak-v-mauricare-homes-lrsnh-6022027-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aecb59f27aaaf89d901b805/Azra_Ladak_v_Mauricare_Homes_LRSNH_6022027.2026_Reconsideration_Judgment.pdf",
-   "pdf_label": "A Ladak v Mauricare Homes LRSNH: 6022027/2026 - Reconsideration (PDF)"
+   "pdf_label": "A Ladak v Mauricare Homes LRSNH: 6022027/2026 - Reconsideration (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-l-mouhoubi-v-grant-thornton-2600542-slash-2024",
@@ -5056,10 +6141,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-l-mouhoubi-v-grant-thornton-2600542-slash-2024",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/67ed1a4153fa8521c3248bb4/Miss_Lilia_Mouhoubi_v_Grant_Thornton_2600542.2024_Judgment.pdf",
    "pdf_label": "Miss L Mouhoubi v Grant Thornton: 2600542/2024 - Preliminary (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/j-syrett-v-sdi-displays-6016449-slash-2026",
@@ -5076,9 +6161,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/j-syrett-v-sdi-displays-6016449-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aecaf807114b585be743582/Jason_Syrett_v_SDI_Displays_6016449.2026_UDL_Strike_Out_Judgment.pdf",
-   "pdf_label": "J Syrett v SDI Displays: 6016449/2026 - Strike Out (PDF)"
+   "pdf_label": "J Syrett v SDI Displays: 6016449/2026 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-s-newell-v-castle-agencies-ltd-6006169-slash-2026",
@@ -5095,9 +6180,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-s-newell-v-castle-agencies-ltd-6006169-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aecadff73a815e62a01b809/6006169_2026_-_Sarah_Newell_-v-_Castle_Agencies_Ltd_-_Judgment.pdf",
-   "pdf_label": "Ms S Newell v Castle Agencies Ltd: 6006169/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "Ms S Newell v Castle Agencies Ltd: 6006169/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/d-v-north-east-lincolnshire-council-6026504-slash-2025",
@@ -5114,9 +6199,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/d-v-north-east-lincolnshire-council-6026504-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aecaa7b27aaaf89d901b7ff/6026504.2025_-_D_-v-_North_East_Lincolnshire_Council_-.pdf",
-   "pdf_label": "D v North East Lincolnshire Council: 6026504/2025 - Judgment (PDF)"
+   "pdf_label": "D v North East Lincolnshire Council: 6026504/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/c-gregory-v-boots-uk-ltd-6017450-slash-2024",
@@ -5133,9 +6218,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/c-gregory-v-boots-uk-ltd-6017450-slash-2024",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aeca8447114b585be743579/Caroline_Gregory_v_Boots_UK_Ltd_6017450.2024_Strike_Out_Judgment.pdf",
-   "pdf_label": "C Gregory v Boots UK Ltd: 6017450/2024 - Strike Out (PDF)"
+   "pdf_label": "C Gregory v Boots UK Ltd: 6017450/2024 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/i-barrowcliffe-v-custompak-ltd-in-creditors-voluntary-liquidation-and-the-secretary-of-state-for-business-and-trade-6047727-slash-2025",
@@ -5152,9 +6237,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/i-barrowcliffe-v-custompak-ltd-in-creditors-voluntary-liquidation-and-the-secretary-of-state-for-business-and-trade-6047727-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aeca6ef92ed9cc41b7bd070/I_Barrowcliffe_v_Custompak_Ld__In_Creditors_Voluntary_Liquidation____SOSB_6047727.2025_S.O.pdf",
-   "pdf_label": "I Barrowcliffe v Custompak Ltd (In Creditors Voluntary Liquidation) and The Secretary of State for Business and Trade: 6047727/2025 - Strike Out (PDF)"
+   "pdf_label": "I Barrowcliffe v Custompak Ltd (In Creditors Voluntary Liquidation) and The Secretary of State for Business and Trade: 6047727/2025 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/k-underdown-v-greene-king-retail-services-ltd-6016076-slash-2026",
@@ -5171,9 +6256,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/k-underdown-v-greene-king-retail-services-ltd-6016076-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aeca57ebdbbd2ef07a2551c/Kevin_Underdown_v_Greene_King_Retail_Services_Ltd_60160762026__SOJ_UDL.pdf",
-   "pdf_label": "K Underdown v Greene King Retail Services Ltd: 6016076/2026 - Strike Out (PDF)"
+   "pdf_label": "K Underdown v Greene King Retail Services Ltd: 6016076/2026 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-l-valentine-and-ms-e-smith-v-cwm-taf-morgannwg-university-local-health-board-1600657-slash-2026-and-1600658-slash-2026",
@@ -5190,9 +6275,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-l-valentine-and-ms-e-smith-v-cwm-taf-morgannwg-university-local-health-board-1600657-slash-2026-and-1600658-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afed5202c7ef31e8b207800/1600657.2026___Others_L_Valentine___Others_v_Cwm_Taf_Morgannwg_University_Local_Health_Board_R47_Judgment.pdf",
-   "pdf_label": "Ms L Valentine and Ms E Smith v Cwm Taf Morgannwg University Local Health Board: 1600657/2026 and 1600658/2026 - Preliminary (PDF)"
+   "pdf_label": "Ms L Valentine and Ms E Smith v Cwm Taf Morgannwg University Local Health Board: 1600657/2026 and 1600658/2026 - Preliminary (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-m-patel-v-vita-health-group-ltd-2601339-slash-2025",
@@ -5209,9 +6294,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-m-patel-v-vita-health-group-ltd-2601339-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aeca22005bab4df5458aeed/Manishaben_Patel_v_Vita_Health_Group_Limited_2601339.2025_Judgment_and_reasons.pdf",
-   "pdf_label": "Ms M Patel v Vita Health Group Ltd: 2601339/2025 - Judgment with Reasons (PDF)"
+   "pdf_label": "Ms M Patel v Vita Health Group Ltd: 2601339/2025 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/dr-s-tanna-v-yew-tree-medical-centre-a-partnership-2404404-slash-2025-and-2404405-slash-2025",
@@ -5248,9 +6333,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-t-ashford-v-5star-hospitality-ltd-6008250-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeeaead367b3459e423f97/Mr_T_Ashford_v_5Star_Hospitality_Limited_-_6008250_2026_-_Judgment.pdf",
-   "pdf_label": "Mr T Ashford v 5Star Hospitality Ltd: 6008250/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "Mr T Ashford v 5Star Hospitality Ltd: 6008250/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-h-crompton-v-made-catering-ltd-6014615-slash-2025",
@@ -5267,9 +6352,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-h-crompton-v-made-catering-ltd-6014615-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afee9f8ccc4c5f2cd423fa1/Ms_Helen_Crompton_v_Made_Catering_Limited_-_6014615_2025_-_Judgment.pdf",
-   "pdf_label": "Ms H Crompton v Made Catering Ltd: 6014615/2025 - Judgment (PDF)"
+   "pdf_label": "Ms H Crompton v Made Catering Ltd: 6014615/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/acquisition-by-simcomm-science-technology-co-limited-and-hytera-communications-uk-corporation-limited-of-rights-related-to-ttg-global-solutions-limite",
@@ -5320,9 +6405,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-w-wrethman-v-west-dunbartonshire-council-4101597-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff224fe715e1cb9d5d503b/Mr_W_Wrethman_v_West_Dunbartonshire_Council_4101597.2015.judgement.pdf",
-   "pdf_label": "Mr W Wrethman v West Dunbartonshire Council: 4101597/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr W Wrethman v West Dunbartonshire Council: 4101597/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-w-scott-v-city-building-glasgow-llp-4102299-slash-2015",
@@ -5339,9 +6424,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-w-scott-v-city-building-glasgow-llp-4102299-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff21b82c7ef31e8b2078ab/Mr_W_Scott_v_City_Building_Glasgow_LLP4102299.2015.judgement.pdf",
-   "pdf_label": "Mr W Scott v City Building (Glasgow) LLP: 4102299/2015 - Strike Out  (PDF)"
+   "pdf_label": "Mr W Scott v City Building (Glasgow) LLP: 4102299/2015 - Strike Out  (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-w-macallister-v-argyll-and-bute-council-4117882-slash-2014",
@@ -5358,9 +6443,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-w-macallister-v-argyll-and-bute-council-4117882-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff20182c7ef31e8b2078a8/Mr_W_MacAllister_v_Argyll_and_Bute_Council_4117882.2014.judgement.pdf",
-   "pdf_label": "Mr W MacAllister v Argyll and Bute Council: 4117882/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr W MacAllister v Argyll and Bute Council: 4117882/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-t-r-brown-v-argyll-and-bute-council-4117871-slash-2014",
@@ -5377,9 +6462,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-t-r-brown-v-argyll-and-bute-council-4117871-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1f66e715e1cb9d5d5038/Mr_T_R_Brown_v_Argyll_and_Bute_Council_4117871.2014.judgement.pdf",
-   "pdf_label": "Mr T R Brown v Argyll and Bute Council: 4117871/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr T R Brown v Argyll and Bute Council: 4117871/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/m-bethel-v-oaklands-school-comm-and-the-west-brook-trust-2305306-slash-2020",
@@ -5397,9 +6482,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/m-bethel-v-oaklands-school-comm-and-the-west-brook-trust-2305306-slash-2020",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afecaead367b3459e423f55/M_Bethel_v_1._Oaklands_School__Comm____2._The_West_Brook_Trust_Judgment_2_2305306-2020.pdf",
-   "pdf_label": "M Bethel v Oaklands School (Comm) and The West Brook Trust: 2305306/2020 - Strike Out (PDF)"
+   "pdf_label": "M Bethel v Oaklands School (Comm) and The West Brook Trust: 2305306/2020 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-d-keen-v-richard-irvine-fm-ltd-4107239-slash-2023",
@@ -5416,10 +6501,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-d-keen-v-richard-irvine-fm-ltd-4107239-slash-2023",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/673f248d59aab43310b95a77/Mr_D_Keen_v_Richard_Irvin_FM_Limited__-_4107239.2023_-_Judgment_-_2810.pdf",
    "pdf_label": "Mr D Keen v Richard Irvine FM Ltd: 4107239/2023 - Preliminary  (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/joint-statement-on-the-international-court-of-justice-decision-on-myanmar",
@@ -5453,9 +6538,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-i-gabrysiak-v-simply-solutions-europe-ltd-8000043-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afef2f27139d256bd5d4fce/Mrs_I_Gabrysiak_v_Simply_Solutions__Europe__Ltd_-_8000043.2026_-_Judgment.pdf",
-   "pdf_label": "Ms I Gabrysiak v Simply Solutions (Europe) Ltd: 8000043/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "Ms I Gabrysiak v Simply Solutions (Europe) Ltd: 8000043/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-k-swanepoel-v-biffa-treatment-services-ltd-8002794-slash-2025",
@@ -5472,9 +6557,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-k-swanepoel-v-biffa-treatment-services-ltd-8002794-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afef246d367b3459e423fab/Miss_K_Swanepoel_v_Biffa_Treatment_Services_Limited_-_8002794.2025_-_Judgment.pdf",
-   "pdf_label": "Miss K Swanepoel v Biffa Treatment Services Ltd: 8002794/2025 - Strike Out (PDF)"
+   "pdf_label": "Miss K Swanepoel v Biffa Treatment Services Ltd: 8002794/2025 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/teacher-misconduct-panel-outcome-mr-asif-pandor",
@@ -5491,10 +6576,10 @@
    "src": "GOV.UK · Teaching Regulation Agency",
    "link": "https://www.gov.uk/government/publications/teacher-misconduct-panel-outcome-mr-asif-pandor",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b044d70992d28898996bc79/TRATMPO_Pandor_Asif_SoS_Decision.pdf",
    "pdf_label": "Prohibition order: Mr Asif Pandor (PDF)",
-   "pdf_size": 271152
+   "pdf_size": 271152,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mrs-s-noreen-v-polo-foods-ltd-8000793-slash-2026",
@@ -5513,9 +6598,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mrs-s-noreen-v-polo-foods-ltd-8000793-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afef13bd367b3459e423fa4/Mrs_S_NOREEN_v_POLO_FOODS_LIMITED_-_8000793.2026_-_Judgment.pdf",
-   "pdf_label": "Mrs S Noreen v Polo Foods Ltd: 8000793/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "Mrs S Noreen v Polo Foods Ltd: 8000793/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/company-names-tribunal-undefended-decisions-and-orders",
@@ -5634,9 +6719,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-r-strachan-v-city-building-glasgow-llp-4102304-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1ee8ccc4c5f2cd42403a/Mr_R_Strachan_v_City_Building_Glasgow_LLP4102304.2015.judgement.pdf",
-   "pdf_label": "Mr R Strachan v City Building (Glasgow) LLP: 4102304/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr R Strachan v City Building (Glasgow) LLP: 4102304/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-r-masters-v-dumfries-and-galloway-canine-rescue-centre-8001385-slash-2026",
@@ -5653,9 +6738,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-r-masters-v-dumfries-and-galloway-canine-rescue-centre-8001385-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afef0a3ccc4c5f2cd423fb1/Mr_R_Masters_v_Dumfries_and_Galloway_Canine_Rescue_Centre_-_8001385.2026_-_Interim_Relief_Judgment.pdf",
-   "pdf_label": "Mr R Masters v Dumfries and Galloway Canine Rescue Centre: 8001385/2026 - Interim Relief (PDF)"
+   "pdf_label": "Mr R Masters v Dumfries and Galloway Canine Rescue Centre: 8001385/2026 - Interim Relief (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-t-morrison-v-the-city-of-edinburgh-council-4114962-slash-2014",
@@ -5672,9 +6757,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-t-morrison-v-the-city-of-edinburgh-council-4114962-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1e4fb42780af162078c5/Mr_T_Morrison_v_City_of_Edinburgh_Council_4114962.2014.judgement.pdf",
-   "pdf_label": "Mr T Morrison v The City of Edinburgh Council: 4114962/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr T Morrison v The City of Edinburgh Council: 4114962/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-c-rathuwadu-v-amazon-uk-services-ltd-8000381-slash-2026",
@@ -5691,9 +6776,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-c-rathuwadu-v-amazon-uk-services-ltd-8000381-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeeffcb42780af16207845/Mr_C_Rathuwadu_v_AMAZON_UK_SERVICES_LTD_-_8000381.2026_-_Judgment.pdf",
-   "pdf_label": "Mr C Rathuwadu v Amazon UK Services Ltd: 8000381/2026 - Dismissal (PDF)"
+   "pdf_label": "Mr C Rathuwadu v Amazon UK Services Ltd: 8000381/2026 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-r-patton-v-west-dunbartonshire-council-4111150-slash-2014",
@@ -5710,9 +6795,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-r-patton-v-west-dunbartonshire-council-4111150-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1dbee715e1cb9d5d5035/Mr_R_Patton_v_West_Dunbartonshire_Council_4111150.2014.judgment.pdf",
-   "pdf_label": "Mr R Patton v West Dunbartonshire Council: 4111150/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr R Patton v West Dunbartonshire Council: 4111150/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-m-taylor-v-the-state-hospitals-board-for-scotland-4109255-slash-2015",
@@ -5730,9 +6815,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-m-taylor-v-the-state-hospitals-board-for-scotland-4109255-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1d1ce715e1cb9d5d5028/Mr_M_Taylor_v_The_State_Hospitals_Board_for_Scotland_4109255.2015.judgement.pdf",
-   "pdf_label": "Mr M Taylor v The State Hospitals Board for Scotland: 4109255/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr M Taylor v The State Hospitals Board for Scotland: 4109255/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-m-mcleod-v-city-building-glasgow-llp-4102265-slash-2015",
@@ -5749,9 +6834,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-m-mcleod-v-city-building-glasgow-llp-4102265-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1c9bb42780af162078ba/Mr_M_McLeod_v_City_Building_Glasgow_LLP4102265.2015.judgement.pdf",
-   "pdf_label": "Mr M McLeod v City Building (Glasgow) LLP: 4102265/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr M McLeod v City Building (Glasgow) LLP: 4102265/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/dr-r-zakharenko-v-university-court-of-the-university-of-glasgow-8000824-slash-2026",
@@ -5768,9 +6853,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/dr-r-zakharenko-v-university-court-of-the-university-of-glasgow-8000824-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeef61b42780af16207841/DR_R_Zakharenko_v_University_Court_of_the_University_of_Glasgow_-_8000824.2026_-_Judgment.pdf",
-   "pdf_label": "Dr R Zakharenko v University Court of the University of Glasgow: 8000824/2026 - Judgment with Reasons (PDF)"
+   "pdf_label": "Dr R Zakharenko v University Court of the University of Glasgow: 8000824/2026 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/speeches/cbi-keynote-speech-the-business-case-for-public-control",
@@ -5804,10 +6889,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-a-d-vere-v-tennent-caledonian-breweries-uk-ltd-8002387-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a2026d4730aece621f09884/8002387.2025_-_Ms_A_de_Vere_v_Tennent_Caledonian_Breweries_UK_Limited_-_Judgment_Issued_01.05.2026.pdf",
    "pdf_label": "Ms A D Vere v Tennent Caledonian Breweries UK Ltd: 8002387/2025 - Judgment with Reasons (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-m-fairley-v-the-city-of-edinburgh-council-4114877-slash-2014",
@@ -5824,9 +6909,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-m-fairley-v-the-city-of-edinburgh-council-4114877-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff1553d367b3459e424001/Mr_M_Fairley_v_City_of_Edinburgh_Council_4114877.2014.judgement.pdf",
-   "pdf_label": "Mr M Fairley v The City of Edinburgh Council: 4114877/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr M Fairley v The City of Edinburgh Council: 4114877/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-money-v-city-building-glasgow-llp-4102272-slash-2015",
@@ -5843,9 +6928,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-money-v-city-building-glasgow-llp-4102272-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff14bdccc4c5f2cd424015/Mr_J_Money_v_City_Building_Glasgow_LLP4102272.2015.judgement.pdf",
-   "pdf_label": "Mr J Money v City Building (Glasgow) LLP: 4102272/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr J Money v City Building (Glasgow) LLP: 4102272/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-lind-v-argyll-and-bute-council-4117880-slash-2014",
@@ -5862,9 +6947,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-lind-v-argyll-and-bute-council-4117880-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff143d7139d256bd5d5027/Mr_J_Lind_v_Argyll_and_Bute_Council_4117880.2014.judgement.pdf",
-   "pdf_label": "Mr J Lind v Argyll and Bute Council: 4117880/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr J Lind v Argyll and Bute Council: 4117880/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/d-masson-v-the-scottish-police-authority-8000251-slash-2026",
@@ -5883,9 +6968,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/d-masson-v-the-scottish-police-authority-8000251-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeedfab42780af16207840/D_Masson_v_The_Scottish_Police_Authority_-_8000251.2026_-_Judgment.pdf",
-   "pdf_label": "D Masson v The Scottish Police Authority: 8000251/2026 - Dismissal (PDF)"
+   "pdf_label": "D Masson v The Scottish Police Authority: 8000251/2026 - Dismissal (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-h-toole-v-west-dunbartonshire-council-4111178-slash-2014",
@@ -5902,9 +6987,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-h-toole-v-west-dunbartonshire-council-4111178-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff13abccc4c5f2cd424013/Mr_H_Toole_v_West_Dunbartonshire_Council_4111178.2014.judgement.pdf",
-   "pdf_label": "Mr H Toole v West Dunbartonshire Council: 4111178/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr H Toole v West Dunbartonshire Council: 4111178/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-howieson-v-city-building-glasgow-llp-4102236-slash-2015",
@@ -5921,9 +7006,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-howieson-v-city-building-glasgow-llp-4102236-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff13252c7ef31e8b20788b/Mr_J_Howieson_v_City_Building_Glasgow_LLP_4102236.2015.judgment.pdf",
-   "pdf_label": "Mr J Howieson v City Building (Glasgow) LLP: 4102236/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr J Howieson v City Building (Glasgow) LLP: 4102236/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-gillan-v-city-building-glasgow-llp-4102225-slash-2015",
@@ -5940,9 +7025,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-gillan-v-city-building-glasgow-llp-4102225-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff124cccc4c5f2cd424009/Mr_J_Gillan_v_City_Building_Glasgow_LLP_4102225.2015.judgement.pdf",
-   "pdf_label": "Mr J Gillan v City Building (Glasgow) LLP: 4102225/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr J Gillan v City Building (Glasgow) LLP: 4102225/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-flood-v-glasgow-city-council-4107157-slash-2015",
@@ -5960,9 +7045,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-flood-v-glasgow-city-council-4107157-slash-2015",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff11c0ccc4c5f2cd424008/Mr_J_Flood_v_Glasgow_City_Council_4107157.2015.judgement.pdf",
-   "pdf_label": "Mr J Flood v Glasgow City Council: 4107157/2015 - Strike Out (PDF)"
+   "pdf_label": "Mr J Flood v Glasgow City Council: 4107157/2015 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-i-mcphillips-v-the-city-of-edinburgh-council-4114951-slash-2014",
@@ -5979,9 +7064,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-i-mcphillips-v-the-city-of-edinburgh-council-4114951-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff112fb42780af1620788f/Mr_I_McPhillips_v_City_of_Edinburgh_Council_4114951.2014.judgement.pdf",
-   "pdf_label": "Mr I McPhillips v The City of Edinburgh Council: 4114951/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr I McPhillips v The City of Edinburgh Council: 4114951/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-j-jozefklawiter-v-the-city-of-edinburgh-council-4114918-slash-2014",
@@ -5998,9 +7083,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-jozefklawiter-v-the-city-of-edinburgh-council-4114918-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff109c7139d256bd5d501a/Mr_J_Jozefklawiter_v_City_of_Edinburgh_Council_4114918.2014.judgement.pdf",
-   "pdf_label": "Mr J Jozefklawiter v The City of Edinburgh Council: 4114918/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr J Jozefklawiter v The City of Edinburgh Council: 4114918/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-hepburn-v-tradeteam-ltd-4110905-slash-2014",
@@ -6017,9 +7102,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-hepburn-v-tradeteam-ltd-4110905-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff0e4d7139d256bd5d5017/4110905.2014_Mr_A_Hepburn_v_Tradeteam_Limited_4110905.2014.judgement.pdf",
-   "pdf_label": "Mr A Hepburn v Tradeteam Ltd: 4110905/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr A Hepburn v Tradeteam Ltd: 4110905/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-dempsey-v-tradeteam-ltd-4110894-slash-2014",
@@ -6036,9 +7121,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-dempsey-v-tradeteam-ltd-4110894-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff0bd1ccc4c5f2cd423ffe/Mr_A_Dempsey_v_Tradeteam_Limited_4110894.2014.judgement.pdf",
-   "pdf_label": "Mr A Dempsey v Tradeteam Ltd: 4110894/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr A Dempsey v Tradeteam Ltd: 4110894/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/cac-outcome-iwgb-influence-map-cic",
@@ -6072,9 +7157,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-m-d-carter-v-am-transport-campbeltown-ltd-8003077-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeed68ccc4c5f2cd423fa3/Mr_M_D_Carter_v_A_M_Transport__Campbeltown__Ltd_-8003077.2025_-_Judgment.pdf",
-   "pdf_label": "Mr M D Carter v AM Transport (Campbeltown) Ltd: 8003077/2025 - Judgment with Reasons (PDF)"
+   "pdf_label": "Mr M D Carter v AM Transport (Campbeltown) Ltd: 8003077/2025 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-mccaig-v-tradeteam-ltd-4110923-slash-2014",
@@ -6091,9 +7176,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-mccaig-v-tradeteam-ltd-4110923-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff0a0a7139d256bd5d500a/Mr_A_McCaig_v_Tradeteam_Limited_4110923.2014.judgement.pdf",
-   "pdf_label": "Mr A McCaig v Tradeteam Ltd: 4110923/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr A McCaig v Tradeteam Ltd: 4110923/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-p-opara-v-lloyds-bank-plc-8002674-slash-2025",
@@ -6110,9 +7195,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-p-opara-v-lloyds-bank-plc-8002674-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeecb7d367b3459e423f98/Ms_P_Opara_v_Lloyds_Bank_PLC_-_8002674.2025_-_Judgment.pdf",
-   "pdf_label": "Ms P Opara v Lloyds Bank plc: 8002674/2025 - Judgment with Reasons (PDF)"
+   "pdf_label": "Ms P Opara v Lloyds Bank plc: 8002674/2025 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-a-macgregor-v-argyll-and-bute-council-4117883-slash-2014",
@@ -6129,9 +7214,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-a-macgregor-v-argyll-and-bute-council-4117883-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff095cb42780af16207881/Mr_A_MacGregor_v_Argyll_and_Bute_Council_4117883.2014.judgement.pdf",
-   "pdf_label": "Mr A MacGregor v Argyll and Bute Council: 4117883/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr A MacGregor v Argyll and Bute Council: 4117883/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-g-temple-v-west-dunbartonshire-council-4111174-slash-2014",
@@ -6148,9 +7233,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-g-temple-v-west-dunbartonshire-council-4111174-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff08cdd367b3459e423feb/Mr_G_Temple_v_West_Dunbartonshire_Council_4111174.2014.judgement.pdf",
-   "pdf_label": "Mr G Temple v West Dunbartonshire Council: 4111174/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr G Temple v West Dunbartonshire Council: 4111174/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-d-innes-v-the-city-of-edinburgh-council-4114913-slash-2014",
@@ -6167,9 +7252,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-d-innes-v-the-city-of-edinburgh-council-4114913-slash-2014",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff084db42780af1620787f/Mr_D_Innes_v_City_of_Edinburgh_Council_4114913.2014_judgement.pdf",
-   "pdf_label": "Mr D Innes v The City of Edinburgh Council: 4114913/2014 - Strike Out (PDF)"
+   "pdf_label": "Mr D Innes v The City of Edinburgh Council: 4114913/2014 - Strike Out (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ab-v-cd-and-mphasis-ltd-6026653-slash-2025-and-6013944-slash-2026",
@@ -6186,9 +7271,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ab-v-cd-and-mphasis-ltd-6026653-slash-2025-and-6013944-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afedc662c7ef31e8b20780e/AB_v_CD___Mphasis_Limited_-_6026653.2025___6013944.2026__Reserved_Judgment_and_Reasons_.pdf",
-   "pdf_label": "AB v CD and Mphasis Ltd: 6026653/2025 and 6013944/2026 - Reserved Judgment (PDF)"
+   "pdf_label": "AB v CD and Mphasis Ltd: 6026653/2025 and 6013944/2026 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/miss-c-taylor-v-london-borough-of-waltham-forest-3200512-slash-2025",
@@ -6205,9 +7290,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/miss-c-taylor-v-london-borough-of-waltham-forest-3200512-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afedb91b42780af1620781b/Miss_C_Taylor_v_London_Borough_of_Waltham_Forest_-_3200512_2025_-_Judgment.pdf",
-   "pdf_label": "Miss C Taylor v London Borough of Waltham Forest: 3200512/2025 - Judgment (PDF)"
+   "pdf_label": "Miss C Taylor v London Borough of Waltham Forest: 3200512/2025 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-c-popaj-v-ivory-group-real-estate-ltd-6045282-slash-2025",
@@ -6224,9 +7309,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-c-popaj-v-ivory-group-real-estate-ltd-6045282-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afedafd2c7ef31e8b20780b/Mrs_C_Popaj_v_Ivory_Group_Real_Estate_Limited_-_6045282_2025_.pdf",
-   "pdf_label": "Ms C Popaj v Ivory Group Real Estate Ltd: 6045282/2025 - Rule 22 (PDF)"
+   "pdf_label": "Ms C Popaj v Ivory Group Real Estate Ltd: 6045282/2025 - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-i-yaremchuk-v-gb-services-ltd-in-liquidation-3200629-slash-2026",
@@ -6243,9 +7328,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-i-yaremchuk-v-gb-services-ltd-in-liquidation-3200629-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeda7fe715e1cb9d5d4f9c/Mr_Ihor_Yaremcuk_v_GB_Cargo_Services_LTD_-_3200629_2026_.pdf",
-   "pdf_label": "Mr I Yaremchuk v GB Services Ltd (In liquidation): 3200629/2026 - Rule 22 (PDF)"
+   "pdf_label": "Mr I Yaremchuk v GB Services Ltd (In liquidation): 3200629/2026 - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-s-lambert-v-roof-maker-ltd-6043540-slash-2025",
@@ -6262,10 +7347,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-s-lambert-v-roof-maker-ltd-6043540-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6a54af3f2467584757371da3/Stuart_Lambert_v_Roof-Maker_Ltd_6043540.2025_Reserved_Judgment_and_Reasons.pdf",
    "pdf_label": "Mr S Lambert v Roof-Maker Ltd: 6043540/2025 - Reserved Judgment (PDF)",
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-r-hovell-v-svella-connect-ltd-6005826-slash-2024",
@@ -6282,9 +7367,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-r-hovell-v-svella-connect-ltd-6005826-slash-2024",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6aff00477139d256bd5d4feb/Mr_Robert_Hovell_v_Svella_Connect_Limited_6005826.2024_Judgment.pdf",
-   "pdf_label": "Mr R Hovell v Svella Connect Ltd: 6005826/2024 - Judgment (PDF)"
+   "pdf_label": "Mr R Hovell v Svella Connect Ltd: 6005826/2024 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/a-jenkins-v-creative-education-trust-6027335-slash-2025",
@@ -6301,9 +7386,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/a-jenkins-v-creative-education-trust-6027335-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afefc232c7ef31e8b207847/Amanda_Jenkins_v_Creative_Education_Trust_6027335.2025_Reserved_Judgment.pdf",
-   "pdf_label": "A Jenkins v Creative Education Trust: 6027335/2025 - Reserved Judgment (PDF)"
+   "pdf_label": "A Jenkins v Creative Education Trust: 6027335/2025 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/news/the-kings-birthday-party-at-the-british-embassy-in-argentina",
@@ -6337,9 +7422,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-d-studholme-v-g-soutar-8001369-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afeeb1e7139d256bd5d4fbc/Mr_D_Studholme_v_G_Soutar_-_8001369.2026_-_R22_Judgment.pdf",
-   "pdf_label": "Mr D Studholme v G Soutar: 8001369/2026 - Rule 22 (PDF)"
+   "pdf_label": "Mr D Studholme v G Soutar: 8001369/2026 - Rule 22 (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/c-roberts-v-chesterfield-borough-council-6018773-slash-2025",
@@ -6356,9 +7441,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/c-roberts-v-chesterfield-borough-council-6018773-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afefae6e715e1cb9d5d4fdf/Claire_Roberts_v_Chesterfield_Borough_Council_6018773.2025_Judgment.pdf",
-   "pdf_label": "C Roberts v Chesterfield Borough Council: 6018773/2025 - Reserved Judgment (PDF)"
+   "pdf_label": "C Roberts v Chesterfield Borough Council: 6018773/2025 - Reserved Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-c-reilly-v-the-university-of-dundee-8002185-slash-2025",
@@ -6375,9 +7460,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-c-reilly-v-the-university-of-dundee-8002185-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afed9f87139d256bd5d4f94/Mr_C_Reilly_v_The_University_of_Dundee_-_8002185.2025_-_Judgment.pdf",
-   "pdf_label": "Mr C Reilly v The University of Dundee: 8002185/2025 - Judgment with Reasons (PDF)"
+   "pdf_label": "Mr C Reilly v The University of Dundee: 8002185/2025 - Judgment with Reasons (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-s-robinson-v-severn-trent-green-power-6032531-slash-2026",
@@ -6394,10 +7479,10 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-s-robinson-v-severn-trent-green-power-6032531-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6abe72ea55bc01d752a7f263/Steven_Robinson_v_Severn_Trent_Green_Power_6032531.2026_Interim_Relief_Judgment.pdf",
    "pdf_label": "Mr S Robinson v Severn Trent Green Power: 6032531/2026 - Preliminary (PDF)",
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/ms-n-mumporeze-v-care-quality-commission-4103574-slash-2025",
@@ -6414,9 +7499,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/ms-n-mumporeze-v-care-quality-commission-4103574-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afed92b7139d256bd5d4f93/Ms_N_Mumporeze_v_Care_Quality_Commission_-_4103574.2025_-_Decision_-_15.10.26.pdf",
-   "pdf_label": "Ms N Mumporeze v Care Quality Commission: 4103574/2025 - Preliminary (PDF)"
+   "pdf_label": "Ms N Mumporeze v Care Quality Commission: 4103574/2025 - Preliminary (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/publications/ex32-7qn-higher-meadows-poultry-ltd-environmental-permit-issued-eprfp3722maa001",
@@ -6433,11 +7518,11 @@
    "src": "GOV.UK · Environment Agency",
    "link": "https://www.gov.uk/government/publications/ex32-7qn-higher-meadows-poultry-ltd-environmental-permit-issued-eprfp3722maa001",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b0417f913d2d60fe05e3c86/Permit_EPR_FP3722MA_A001.pdf",
    "pdf_label": "Permit: Higher Meadows Poultry Ltd (PDF)",
    "pdf_size": 411717,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mr-k-mcnaughton-v-ac-gold-electrical-services-ltd-8001339-slash-2026",
@@ -6454,9 +7539,9 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mr-k-mcnaughton-v-ac-gold-electrical-services-ltd-8001339-slash-2026",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afed6e0d367b3459e423f6b/Mr_K_Mcnaughton_v_AC_GOLD__Electrical_Services__Limited_-_8001339.2026_-__Judgment_15.10.2026.pdf",
-   "pdf_label": "Mr K Mcnaughton v AC GOLD (Electrical Services) Ltd: 8001339/2026 - Judgment (PDF)"
+   "pdf_label": "Mr K Mcnaughton v AC GOLD (Electrical Services) Ltd: 8001339/2026 - Judgment (PDF)",
+   "pdf_checked": true
   },
   {
    "id": "govuk:/employment-tribunal-decisions/mrs-d-hales-v-borders-health-board-4104183-slash-2025",
@@ -6474,44 +7559,8 @@
    "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
    "link": "https://www.gov.uk/employment-tribunal-decisions/mrs-d-hales-v-borders-health-board-4104183-slash-2025",
    "first_seen": "2026-11-23",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6afed1b2ccc4c5f2cd423f6b/Mrs_D_Hales_v_Borders_Health_Board_-_4104183.2025_-_Corrected_Judgment_14.10.2026.pdf",
-   "pdf_label": "Mrs D Hales v Borders Health Board: 4104183/2025 - Judgment with Reasons (PDF)"
-  },
-  {
-   "id": "govuk:/employment-tribunal-decisions/mr-j-kinghorn-v-santander-uk-plc-8000093-slash-2026",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Mr J Kinghorn v Santander UK plc: 8000093/2026",
-   "sum": "Employment Tribunal decision.",
-   "tags": [
-    "28.1"
-   ],
-   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
-   "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-kinghorn-v-santander-uk-plc-8000093-slash-2026",
-   "first_seen": "2026-11-23",
-   "pdf_checked": true,
-   "pdf": "https://assets.publishing.service.gov.uk/media/6afed4392c7ef31e8b2077fe/Mr_J_Kinghorn_v_Santander_UK_Plc_-_8000093.2026_-_In-Chambers_Judgment_-_15.10.2026.pdf",
-   "pdf_label": "Mr J Kinghorn v Santander UK plc: 8000093/2026 - Judgment with Reasons (PDF)"
-  },
-  {
-   "id": "govuk:/government/news/tracy-westall-obe-appointed-as-dvla-chair",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-23",
-   "extent": "UK",
-   "title": "Tracy Westall OBE appointed as DVLA Chair",
-   "sum": "Tracy Westall has been appointed as Chair of the DVLA.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Department for Transport, Driver and Vehicle Licensing Agency",
-   "link": "https://www.gov.uk/government/news/tracy-westall-obe-appointed-as-dvla-chair",
-   "first_seen": "2026-11-23",
+   "pdf_label": "Mrs D Hales v Borders Health Board: 4104183/2025 - Judgment with Reasons (PDF)",
    "pdf_checked": true
   },
   {
@@ -6564,6 +7613,42 @@
    "src": "GOV.UK · Food Standards Agency",
    "link": "https://www.gov.uk/guidance/traditional-foods-notifications-and-applications",
    "first_seen": "2026-11-19",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/employment-tribunal-decisions/mr-j-kinghorn-v-santander-uk-plc-8000093-slash-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Mr J Kinghorn v Santander UK plc: 8000093/2026",
+   "sum": "Employment Tribunal decision.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
+   "link": "https://www.gov.uk/employment-tribunal-decisions/mr-j-kinghorn-v-santander-uk-plc-8000093-slash-2026",
+   "first_seen": "2026-11-23",
+   "pdf_checked": true,
+   "pdf": "https://assets.publishing.service.gov.uk/media/6afed4392c7ef31e8b2077fe/Mr_J_Kinghorn_v_Santander_UK_Plc_-_8000093.2026_-_In-Chambers_Judgment_-_15.10.2026.pdf",
+   "pdf_label": "Mr J Kinghorn v Santander UK plc: 8000093/2026 - Judgment with Reasons (PDF)"
+  },
+  {
+   "id": "govuk:/government/news/tracy-westall-obe-appointed-as-dvla-chair",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-23",
+   "extent": "UK",
+   "title": "Tracy Westall OBE appointed as DVLA Chair",
+   "sum": "Tracy Westall has been appointed as Chair of the DVLA.",
+   "tags": [
+    "55.1"
+   ],
+   "src": "GOV.UK · Department for Transport, Driver and Vehicle Licensing Agency",
+   "link": "https://www.gov.uk/government/news/tracy-westall-obe-appointed-as-dvla-chair",
+   "first_seen": "2026-11-23",
    "pdf_checked": true
   },
   {
@@ -6777,43 +7862,6 @@
    "pdf_checked": true
   },
   {
-   "id": "leg:uksi/2026/1224/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-20",
-   "extent": "UK",
-   "title": "The Air Navigation (Restriction of Flying) (Portmoak, Perth and Kinross) (Emergency) Regulations 2026",
-   "sum": "These Regulations impose restrictions of an emergency nature on flying in the area specified in the Schedule. They are intended to be of temporary duration and will be revoked as soon as the emergency in question has passed.",
-   "tags": [
-    "52.4",
-    "16.4"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1224/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1224/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-20"
-  },
-  {
-   "id": "leg:uksi/2026/1219/made",
-   "kind": "law",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-20",
-   "extent": "UK",
-   "title": "The Financial Services and Markets Act 2000 (Cryptoassets) (Miscellaneous Amendments) Regulations 2026",
-   "sum": "These Regulations amend and add to the regulatory regime for certain cryptoasset activities pursuant to powers conferred by the Financial Services and Markets Act 2000 (c. 8) (“the Act”).",
-   "tags": [
-    "23.2"
-   ],
-   "src": "legislation.gov.uk",
-   "link": "https://www.legislation.gov.uk/uksi/2026/1219/made",
-   "pdf": "https://www.legislation.gov.uk/uksi/2026/1219/made/data.pdf",
-   "pdf_label": "the instrument as made (PDF)",
-   "first_seen": "2026-11-20"
-  },
-  {
    "id": "bill:4080",
    "kind": "law",
    "level": "uk",
@@ -6967,6 +8015,43 @@
    "src": "bills.parliament.uk",
    "link": "https://bills.parliament.uk/bills/4331",
    "first_seen": "2026-11-19"
+  },
+  {
+   "id": "leg:uksi/2026/1224/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-20",
+   "extent": "UK",
+   "title": "The Air Navigation (Restriction of Flying) (Portmoak, Perth and Kinross) (Emergency) Regulations 2026",
+   "sum": "These Regulations impose restrictions of an emergency nature on flying in the area specified in the Schedule. They are intended to be of temporary duration and will be revoked as soon as the emergency in question has passed.",
+   "tags": [
+    "52.4",
+    "16.4"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1224/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1224/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-20"
+  },
+  {
+   "id": "leg:uksi/2026/1219/made",
+   "kind": "law",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-20",
+   "extent": "UK",
+   "title": "The Financial Services and Markets Act 2000 (Cryptoassets) (Miscellaneous Amendments) Regulations 2026",
+   "sum": "These Regulations amend and add to the regulatory regime for certain cryptoasset activities pursuant to powers conferred by the Financial Services and Markets Act 2000 (c. 8) (“the Act”).",
+   "tags": [
+    "23.2"
+   ],
+   "src": "legislation.gov.uk",
+   "link": "https://www.legislation.gov.uk/uksi/2026/1219/made",
+   "pdf": "https://www.legislation.gov.uk/uksi/2026/1219/made/data.pdf",
+   "pdf_label": "the instrument as made (PDF)",
+   "first_seen": "2026-11-20"
   },
   {
    "id": "leg:uksi/2026/1217/made",
@@ -20282,22 +21367,6 @@
    "link": "https://www.gov.uk/guidance/annual-tax-on-enveloped-dwellings-the-basics",
    "first_seen": "2026-11-18",
    "pdf_checked": true
-  },
-  {
-   "id": "bill:4126",
-   "kind": "law",
-   "level": "uk",
-   "status": "proposed",
-   "date": "2026-11-17",
-   "extent": "UK",
-   "title": "Social Housing Bill [HL]",
-   "sum": "Report stage · Commons. ",
-   "tags": [
-    "43.1"
-   ],
-   "src": "bills.parliament.uk",
-   "link": "https://bills.parliament.uk/bills/4126",
-   "first_seen": "2026-10-03"
   },
   {
    "id": "bill:4022",
@@ -81337,57 +82406,6 @@
     "household"
    ],
    "first_seen": "2026-10-24"
-  },
-  {
-   "id": "govuk:/government/news/joint-press-release-on-the-r4-ministerial-meeting-in-istanbul",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-24",
-   "extent": "UK",
-   "title": "Joint Press Release on the R4 Ministerial Meeting in Istanbul",
-   "sum": "Joint Press Release on the R4 Ministerial Meeting with Counterparts from France, Germany, Italy and United Kingdom, Istanbul, 23 October 2026.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · Foreign, Commonwealth & Development Office",
-   "link": "https://www.gov.uk/government/news/joint-press-release-on-the-r4-ministerial-meeting-in-istanbul",
-   "first_seen": "2026-10-24",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/government/news/chancellor-unveils-britains-ambitious-plan-for-ai",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-24",
-   "extent": "UK",
-   "title": "Chancellor unveils Britain’s ambitious plan for AI",
-   "sum": "Major package to unlock the opportunities of AI in every postcode, scale up home grown AI firms, and keep UK safe from threats announced by the Chancellor.",
-   "tags": [
-    "55.1"
-   ],
-   "src": "GOV.UK · HM Treasury",
-   "link": "https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai",
-   "first_seen": "2026-10-24",
-   "pdf_checked": true
-  },
-  {
-   "id": "govuk:/hmrc-internal-manuals/sharepoint-tax-manuals-test-site",
-   "kind": "update",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-10-24",
-   "extent": "UK",
-   "title": "SharePoint Tax Manuals Test Site",
-   "sum": "this is test body",
-   "tags": [
-    "20.1"
-   ],
-   "src": "GOV.UK · HM Revenue & Customs",
-   "link": "https://www.gov.uk/hmrc-internal-manuals/sharepoint-tax-manuals-test-site",
-   "first_seen": "2026-10-23",
-   "pdf_checked": true
   },
   {
    "id": "fsaalert:FSA-PRIN-51-2026",
