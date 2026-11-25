@@ -3,127 +3,127 @@
   "legislation.gov.uk": {
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 19,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-10-30T08:29:47.469614+00:00"
   },
   "Bills API": {
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 40,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-10-23T09:55:34.366072+00:00"
   },
   "GOV.UK": {
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 300,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0
   },
   "Bank holidays": {
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 18,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0
   },
   "Food Standards Agency": {
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
-   "items": 0,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "items": 3,
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-10-04T05:46:05.359160+00:00"
   },
   "police.uk": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 1,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0
   },
   "FSA food alerts": {
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 50,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0
   },
   "Environment Agency floods": {
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-11-23T21:11:32.864678+00:00"
   },
   "Police neighbourhood": {
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 9,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0
   },
   "The Gazette": {
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T02:25:58.880616+00:00",
    "items": 0,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-11-13T15:17:21.143069+00:00"
   },
   "Council meetings (Modern.Gov)": {
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": false,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
    "items": 0,
-   "last_fail": "2026-11-24T17:28:34.917519+00:00",
+   "last_fail": "2026-11-25T02:14:36.457176+00:00",
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
-   "fails": 254
+   "fails": 255
   },
   "Parliament What's On": {
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "last_run": "2026-11-24T17:28:34.917519+00:00",
+   "last_run": "2026-11-25T02:14:36.457176+00:00",
    "ok": true,
    "first_run": "2026-10-03T09:04:29.078714+00:00",
-   "items": 50,
-   "last_ok": "2026-11-24T17:28:34.917519+00:00",
+   "items": 47,
+   "last_ok": "2026-11-25T02:14:36.457176+00:00",
    "fails": 0,
    "last_fail": "2026-11-04T14:18:42.627727+00:00"
   }
@@ -1939,14 +1939,21 @@
    "failed": [
     "Council meetings (Modern.Gov)"
    ]
+  },
+  {
+   "at": "2026-11-25T02:14:36.457176+00:00",
+   "items": 4540,
+   "failed": [
+    "Council meetings (Modern.Gov)"
+   ]
   }
  ],
- "generated_at": "2026-11-24T17:28:34.917519+00:00",
- "items": 4505,
+ "generated_at": "2026-11-25T02:14:36.457176+00:00",
+ "items": 4540,
  "by_level": {
   "nation": 29,
-  "local": 92,
-  "uk": 4384
+  "local": 94,
+  "uk": 4417
  },
  "by_day": {
   "2028-12-26": {
@@ -2018,6 +2025,9 @@
   "2026-12-16": {
    "local": 1
   },
+  "2026-12-09": {
+   "uk": 1
+  },
   "2026-12-08": {
    "uk": 2
   },
@@ -2047,14 +2057,15 @@
    "uk": 19
   },
   "2026-11-25": {
-   "uk": 1
+   "local": 3,
+   "uk": 23
   },
   "2026-11-24": {
-   "uk": 208,
+   "uk": 225,
    "local": 33
   },
   "2026-11-23": {
-   "uk": 234,
+   "uk": 233,
    "local": 2
   },
   "2026-11-22": {
@@ -2064,7 +2075,7 @@
    "uk": 5
   },
   "2026-11-20": {
-   "uk": 215,
+   "uk": 214,
    "nation": 1
   },
   "2026-11-19": {
@@ -2102,9 +2113,6 @@
   "2026-11-11": {
    "uk": 251,
    "local": 4
-  },
-  "2026-11-10": {
-   "uk": 140
   }
  },
  "down": [
@@ -5260,16 +5268,16 @@
    "1800237": {
     "name": "Chai kitchen",
     "type": "Restaurant/Cafe/Canteen",
-    "rating": "4",
-    "date": "2025-04-30",
+    "rating": "3",
+    "date": "2026-10-20",
     "addr": "127 BATH ROAD SLOUGH SL1 3UW",
     "postcode": "SL1 3UW",
     "lat": 51.5124647,
     "lng": -0.6133511,
-    "pending": true,
+    "pending": false,
     "scores": {
-     "hygiene": 5,
-     "structural": 5,
+     "hygiene": 10,
+     "structural": 10,
      "management": 10
     },
     "right_to_reply": ""
@@ -7946,17 +7954,17 @@
    "2009404": {
     "name": "Fruity Bliss",
     "type": "Retailers - other",
-    "rating": "AwaitingInspection",
-    "date": "",
+    "rating": "2",
+    "date": "2026-10-20",
     "addr": "35 THE OBSERVATORY HIGH STREET SLOUGH SL1 1LE",
     "postcode": "SL1 1LE",
     "lat": 51.5086195,
     "lng": -0.589533,
-    "pending": true,
+    "pending": false,
     "scores": {
-     "hygiene": null,
-     "structural": null,
-     "management": null
+     "hygiene": 15,
+     "structural": 15,
+     "management": 10
     },
     "right_to_reply": ""
    },
@@ -16732,23 +16740,6 @@
     },
     "right_to_reply": ""
    },
-   "1920138": {
-    "name": "Stackzys",
-    "type": "Takeaway/sandwich shop",
-    "rating": "4",
-    "date": "2026-05-28",
-    "addr": "163D FARNHAM ROAD SLOUGH SL1 4XP",
-    "postcode": "SL1 4XP",
-    "lat": 51.5245899,
-    "lng": -0.6159377,
-    "pending": false,
-    "scores": {
-     "hygiene": 10,
-     "structural": 5,
-     "management": 5
-    },
-    "right_to_reply": ""
-   },
    "1845752": {
     "name": "Stackzys",
     "type": "Takeaway/sandwich shop",
@@ -16763,6 +16754,23 @@
      "hygiene": 5,
      "structural": 5,
      "management": 10
+    },
+    "right_to_reply": ""
+   },
+   "1920138": {
+    "name": "Stackzys",
+    "type": "Takeaway/sandwich shop",
+    "rating": "4",
+    "date": "2026-05-28",
+    "addr": "163D FARNHAM ROAD SLOUGH SL1 4XP",
+    "postcode": "SL1 4XP",
+    "lat": 51.5245899,
+    "lng": -0.6159377,
+    "pending": false,
+    "scores": {
+     "hygiene": 10,
+     "structural": 5,
+     "management": 5
     },
     "right_to_reply": ""
    },
@@ -19217,15 +19225,15 @@
    "1127448": {
     "name": "Virk Winestore",
     "type": "Retailers - other",
-    "rating": "4",
-    "date": "2019-03-25",
+    "rating": "3",
+    "date": "2026-10-20",
     "addr": "249 WEXHAM ROAD SLOUGH SL2 5JT",
     "postcode": "SL2 5JT",
     "lat": 51.5177051,
     "lng": -0.5786437,
-    "pending": true,
+    "pending": false,
     "scores": {
-     "hygiene": 5,
+     "hygiene": 10,
      "structural": 10,
      "management": 5
     },
@@ -19815,7 +19823,7 @@
   "slough": 292
  },
  "fsa_last_fetched": {
-  "292": "2026-11-24"
+  "292": "2026-11-25"
  },
  "fsa_history_started": {
   "292": "2026-10-03"
@@ -26792,6 +26800,16 @@
       "structural": 5,
       "management": 10
      }
+    },
+    {
+     "rating": "3",
+     "ratingDate": "2026-10-20",
+     "recorded": "2026-11-25",
+     "scores": {
+      "hygiene": 10,
+      "structural": 10,
+      "management": 10
+     }
     }
    ],
    "1646961": [
@@ -28913,6 +28931,16 @@
      "recorded": "2026-10-03",
      "scores": {
       "hygiene": 5,
+      "structural": 10,
+      "management": 5
+     }
+    },
+    {
+     "rating": "3",
+     "ratingDate": "2026-10-20",
+     "recorded": "2026-11-25",
+     "scores": {
+      "hygiene": 10,
       "structural": 10,
       "management": 5
      }
@@ -32730,6 +32758,16 @@
       "structural": null,
       "management": null
      }
+    },
+    {
+     "rating": "2",
+     "ratingDate": "2026-10-20",
+     "recorded": "2026-11-25",
+     "scores": {
+      "hygiene": 15,
+      "structural": 15,
+      "management": 10
+     }
     }
    ],
    "2009401": [
@@ -32999,9 +33037,9 @@
   }
  },
  "fsa_source_published": {
-  "292": "2026-11-24T00:41:56.267"
+  "292": "2026-11-25T00:43:02.76"
  },
  "fsa_source_extract_dates": {
-  "292": "2026-11-24"
+  "292": "2026-11-25"
  }
 }
