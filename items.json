@@ -1,112 +1,112 @@
 {
- "generated_at": "2026-11-28T01:24:44.875154+00:00",
+ "generated_at": "2026-11-28T10:10:32.151555+00:00",
  "scope": "England",
  "sources": [
   {
    "name": "legislation.gov.uk",
    "url": "https://www.legislation.gov.uk/new/data.feed",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 16,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "Bills API",
    "url": "https://bills-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 40,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "GOV.UK",
    "url": "https://www.gov.uk/api/search.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 300,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "Bank holidays",
    "url": "https://www.gov.uk/bank-holidays.json",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 18,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "Food Standards Agency",
    "url": "https://api.ratings.food.gov.uk",
    "licence": "OGL v3, attribution",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "police.uk",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 1,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "FSA food alerts",
    "url": "https://data.food.gov.uk/food-alerts",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 50,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "Environment Agency floods",
    "url": "https://environment.data.gov.uk/flood-monitoring",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 0,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "Police neighbourhood",
    "url": "https://data.police.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 9,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   },
   {
    "name": "The Gazette",
    "url": "https://www.thegazette.co.uk",
    "licence": "OGL v3",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
-   "ok": true,
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
+   "ok": false,
    "count": 0,
-   "error": null,
+   "error": "HTTPError: HTTP Error 504: Gateway Time-out",
    "last_ok": "2026-11-28T01:24:44.875154+00:00"
   },
   {
    "name": "Council meetings (Modern.Gov)",
    "url": "https://democracy.slough.gov.uk",
    "licence": "Council open data",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": false,
    "count": 0,
    "error": "HTTPError: HTTP Error 500: Internal Server Error",
@@ -116,11 +116,11 @@
    "name": "Parliament What's On",
    "url": "https://whatson-api.parliament.uk",
    "licence": "Open Parliament Licence",
-   "fetched_at": "2026-11-28T01:24:44.875154+00:00",
+   "fetched_at": "2026-11-28T10:10:32.151555+00:00",
    "ok": true,
    "count": 48,
    "error": null,
-   "last_ok": "2026-11-28T01:24:44.875154+00:00"
+   "last_ok": "2026-11-28T10:10:32.151555+00:00"
   }
  ],
  "items": [
@@ -1951,6 +1951,23 @@
    ]
   },
   {
+   "id": "govuk:/government/news/pharmacy-shake-up-to-save-patients-repeat-trips-for-medicines",
+   "kind": "update",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-28",
+   "extent": "UK",
+   "title": "Pharmacy shake-up to save patients repeat trips for medicines",
+   "sum": "Everyday fix for patients as pharmacists able to supply alternative strength or form of medicine if stocks are short",
+   "tags": [
+    "32.1"
+   ],
+   "src": "GOV.UK · Department of Health and Social Care",
+   "link": "https://www.gov.uk/government/news/pharmacy-shake-up-to-save-patients-repeat-trips-for-medicines",
+   "first_seen": "2026-11-28",
+   "pdf_checked": true
+  },
+  {
    "id": "govuk:/government/news/millions-in-water-company-fines-to-go-to-water-clean-up-projects-across-the-country",
    "kind": "update",
    "level": "uk",
@@ -2254,7 +2271,7 @@
    "date": "2026-11-27",
    "extent": "UK",
    "title": "Arup Employee Trust Bill",
-   "sum": "Petition to introduce a Private Bill presented to Parliament · Unassigned. ",
+   "sum": "Examination for compliance with Standing Orders · Unassigned. ",
    "tags": [
     "28.1"
    ],
@@ -2380,12 +2397,12 @@
    "src": "GOV.UK · Department for Transport",
    "link": "https://www.gov.uk/government/consultations/extending-rtfo-eligibility-to-new-development-fuels-and-seeking-evidence-on-low-carbon-fuels-policy",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
-   "closes": "2027-02-07",
-   "opens": "2026-11-27",
    "pdf": "https://assets.publishing.service.gov.uk/media/6b087a79091d49d03c56c15a/extending-rtfo-eligibility-to-new-development-fuels-and-seeking-evidence-on-low-carbon-fuels_policy.pdf",
    "pdf_label": "Extending RTFO eligibility to new development fuels and seeking evidence on low carbon fuels policy (PDF)",
-   "pdf_size": 450218
+   "pdf_size": 450218,
+   "pdf_checked": true,
+   "closes": "2027-02-07",
+   "opens": "2026-11-27"
   },
   {
    "id": "govuk:/guidance/river-thames-restrictions-and-closures",
@@ -3332,11 +3349,11 @@
    "src": "GOV.UK · Legal Aid Agency",
    "link": "https://www.gov.uk/guidance/claim-back-costs-from-cases-in-the-criminal-courts",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/5a7e209fe5274a2e87dafb99/NTT_Guide_2014-December_2014-5.pdf",
    "pdf_label": "National Taxing Team Guide (PDF)",
    "pdf_size": 434901,
-   "pdf_more": 2
+   "pdf_more": 2,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/guidance/oil-and-gas-decommissioning-of-offshore-installations-and-pipelines",
@@ -4514,10 +4531,10 @@
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/publications/economic-evidence-to-the-pay-review-bodies-2027-28-pay-round",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b0947e0c29db7468056c166/2027-28_HMT_Economic_Evidence.pdf",
    "pdf_label": "Economic Evidence to the Pay Review Bodies 2027-28 Pay Round (PDF)",
-   "pdf_size": 714866
+   "pdf_size": 714866,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/ifrs-18-presentation-and-disclosure-in-financial-statements-exposure-draft",
@@ -4534,12 +4551,12 @@
    "src": "GOV.UK · HM Treasury",
    "link": "https://www.gov.uk/government/consultations/ifrs-18-presentation-and-disclosure-in-financial-statements-exposure-draft",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
-   "closes": "2026-09-11",
-   "opens": "2026-07-23",
    "pdf": "https://assets.publishing.service.gov.uk/media/6a6890cfcc35a9471da4c197/IFRS_18_Exposure_Draft.pdf",
    "pdf_label": "IFRS 18 Exposure Draft (PDF)",
-   "pdf_size": 219197
+   "pdf_size": 219197,
+   "pdf_checked": true,
+   "closes": "2026-09-11",
+   "opens": "2026-07-23"
   },
   {
    "id": "govuk:/government/publications/disability-confident-reform",
@@ -4611,10 +4628,10 @@
    "src": "GOV.UK · Ministry of Justice",
    "link": "https://www.gov.uk/government/publications/responding-to-human-rights-judgments-2025-to-2026",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
    "pdf": "https://assets.publishing.service.gov.uk/media/6b0013087139d256bd5d5084/47.38_Responding_to_human_rights_judgments_2025-2026_FINAL_WEB.pdf",
    "pdf_label": "Responding to human rights judgments: 2025 to 2026 (PDF)",
-   "pdf_size": 635889
+   "pdf_size": 635889,
+   "pdf_checked": true
   },
   {
    "id": "govuk:/government/consultations/assurance-of-sustainability-reporting",
@@ -4631,13 +4648,13 @@
    "src": "GOV.UK · Department for Business and Trade",
    "link": "https://www.gov.uk/government/consultations/assurance-of-sustainability-reporting",
    "first_seen": "2026-11-27",
-   "pdf_checked": true,
-   "closes": "2025-09-17",
-   "opens": "2025-06-25",
    "pdf": "https://assets.publishing.service.gov.uk/media/69fb0fdeaeee237d75269a49/consultation-on-developing-an-oversight-regime-for-assurance-of-sustainability-related-financial-disclosures.pdf",
    "pdf_label": "Developing an oversight regime for assurance of sustainability-related financial disclosures (PDF version) (PDF)",
    "pdf_size": 247812,
-   "pdf_more": 1
+   "pdf_more": 1,
+   "pdf_checked": true,
+   "closes": "2025-09-17",
+   "opens": "2025-06-25"
   },
   {
    "id": "govuk:/government/consultations/consultation-on-market-authorisation-of-one-traditional-food",
@@ -4848,6 +4865,14 @@
    ],
    "first_seen": "2026-11-13",
    "also": [
+    {
+     "id": "pwo:57195:2026-12-02",
+     "kind": "update",
+     "title": "Parliament: Northern Ireland Troubles Bill – second reading",
+     "src": "UK Parliament What's On",
+     "link": "https://whatson.parliament.uk/",
+     "date": "2026-12-02"
+    },
     {
      "id": "pwo:57195:2026-12-02",
      "kind": "update",
@@ -6643,25 +6668,6 @@
    "pdf_checked": true
   },
   {
-   "id": "govuk:/employment-tribunal-decisions/a-winters-v-quality-life-care-uk-6040485-slash-2026",
-   "kind": "record",
-   "level": "uk",
-   "status": "now",
-   "date": "2026-11-27",
-   "extent": "UK",
-   "title": "A Winters v Quality Life Care UK: 6040485/2026",
-   "sum": "Employment Tribunal decision.",
-   "tags": [
-    "28.1"
-   ],
-   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
-   "link": "https://www.gov.uk/employment-tribunal-decisions/a-winters-v-quality-life-care-uk-6040485-slash-2026",
-   "first_seen": "2026-11-27",
-   "pdf": "https://assets.publishing.service.gov.uk/media/6b0806c1c29db7468056c0b2/Aether_Winters_v_Quality_Life_Care_UK_-_6040485_2026.pdf",
-   "pdf_label": "A Winters v Quality Life Care UK: 6040485/2026 - Partial Strike Out (PDF)",
-   "pdf_checked": true
-  },
-  {
    "id": "govuk:/government/publications/cptpp-eu-supply-chain-early-warning-network-terms-of-reference",
    "kind": "record",
    "level": "uk",
@@ -6693,6 +6699,25 @@
    "src": "GOV.UK · Foreign, Commonwealth & Development Office",
    "link": "https://www.gov.uk/government/publications/uk-and-overseas-territories-joint-ministerial-council-2026-communique",
    "first_seen": "2026-11-27",
+   "pdf_checked": true
+  },
+  {
+   "id": "govuk:/employment-tribunal-decisions/a-winters-v-quality-life-care-uk-6040485-slash-2026",
+   "kind": "record",
+   "level": "uk",
+   "status": "now",
+   "date": "2026-11-27",
+   "extent": "UK",
+   "title": "A Winters v Quality Life Care UK: 6040485/2026",
+   "sum": "Employment Tribunal decision.",
+   "tags": [
+    "28.1"
+   ],
+   "src": "GOV.UK · HM Courts & Tribunals Service, Employment Tribunal",
+   "link": "https://www.gov.uk/employment-tribunal-decisions/a-winters-v-quality-life-care-uk-6040485-slash-2026",
+   "first_seen": "2026-11-27",
+   "pdf": "https://assets.publishing.service.gov.uk/media/6b0806c1c29db7468056c0b2/Aether_Winters_v_Quality_Life_Care_UK_-_6040485_2026.pdf",
+   "pdf_label": "A Winters v Quality Life Care UK: 6040485/2026 - Partial Strike Out (PDF)",
    "pdf_checked": true
   },
   {
@@ -22842,6 +22867,14 @@
    "pdf_more": 39,
    "pdf_checked": true,
    "also": [
+    {
+     "id": "govuk:/guidance/applications-and-decisions-for-the-west-of-england",
+     "kind": "guidance",
+     "title": "Goods vehicle applications and decisions for the west of England",
+     "src": "GOV.UK · Traffic Commissioners for Great Britain",
+     "link": "https://www.gov.uk/guidance/applications-and-decisions-for-the-west-of-england",
+     "date": "2026-11-27"
+    },
     {
      "id": "govuk:/guidance/applications-and-decisions-for-the-west-of-england",
      "kind": "guidance",
